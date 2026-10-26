@@ -101,6 +101,13 @@ async function runAudit() {
     `Status: ${unauthAdmin.status}`
   );
 
+  const unauthSyllabus = await makeRequest("/coe-admin/syllabus");
+  assert(
+    unauthSyllabus.status === 307 || unauthSyllabus.status === 302,
+    "Unauthenticated /coe-admin/syllabus blocked with 307 redirect (no backdoor)",
+    `Status: ${unauthSyllabus.status}`
+  );
+
   const unauthApiAdmin = await makeRequest("/api/admin/exams");
   assert(
     unauthApiAdmin.status === 403 || unauthApiAdmin.status === 401,
@@ -127,30 +134,30 @@ async function runAudit() {
   // -------------------------------------------------------------------
   console.log("\n▶ TEST SUITE 3: Authentication & Encrypted JWT Cookie Handshake");
 
-  // Login as Brother
-  const brotherLogin = await makeRequest("/api/auth/login-student", {
+  // Login as Student 1 (Class 10)
+  const student1Login = await makeRequest("/api/auth/login-student", {
     method: "POST",
     body: { rollNo: "TN2026-0901", dob: "2011-05-14" },
   });
-  assert(brotherLogin.status === 200, "Brother login successful", `Status: ${brotherLogin.status}`);
-  assert(brotherLogin.sessionCookie !== null, "Encrypted JWT session cookie issued for Brother");
-  const brotherCookie = brotherLogin.sessionCookie;
+  assert(student1Login.status === 200, "Class 10 student login successful", `Status: ${student1Login.status}`);
+  assert(student1Login.sessionCookie !== null, "Encrypted JWT session cookie issued for Class 10 student");
+  const brotherCookie = student1Login.sessionCookie;
 
-  // Login as Sister
-  const sisterLogin = await makeRequest("/api/auth/login-student", {
+  // Login as Student 2 (Class 12)
+  const student2Login = await makeRequest("/api/auth/login-student", {
     method: "POST",
     body: { rollNo: "TN2026-1102", dob: "2009-08-22" },
   });
-  assert(sisterLogin.status === 200, "Sister login successful", `Status: ${sisterLogin.status}`);
-  assert(sisterLogin.sessionCookie !== null, "Encrypted JWT session cookie issued for Sister");
-  const sisterCookie = sisterLogin.sessionCookie;
+  assert(student2Login.status === 200, "Class 12 student login successful", `Status: ${student2Login.status}`);
+  assert(student2Login.sessionCookie !== null, "Encrypted JWT session cookie issued for Class 12 student");
+  const sisterCookie = student2Login.sessionCookie;
 
-  // Login as Admin
+  // Login as Admin with Username 1 and Password 1
   const adminLogin = await makeRequest("/api/auth/login-admin", {
     method: "POST",
-    body: { username: "coe.admin", password: "Admin@COE2026!" },
+    body: { username: "1", password: "1" },
   });
-  assert(adminLogin.status === 200, "COE Admin login successful", `Status: ${adminLogin.status}`);
+  assert(adminLogin.status === 200, "COE Admin login with username 1 and pass 1 successful", `Status: ${adminLogin.status}`);
   assert(adminLogin.sessionCookie !== null, "Encrypted JWT session cookie issued for COE Admin");
   const adminCookie = adminLogin.sessionCookie;
 
