@@ -1,0 +1,112 @@
+import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
+import { db } from "@/lib/db";
+import { signSession, getSessionCookieOptions } from "@/lib/auth";
+import { checkRateLimit, resetRateLimit } from "@/lib/rateLimit";
+
+export async function POST(request) {
+  try {
+    const body = await request.json();
+    const { rollNo, dob } = body;
+
+    if (!rollNo || !dob) {
+      return NextResponse.json(
+        { error: "Roll Number and Date of Birth are both required." },
+        { status: 400 }
+      );
+    }
+
+    const cleanRollNo = rollNo.trim().toUpperCase();
+    const cleanDob = dob.trim(); // Format: YYYY-MM-DD
+
+    // 1. Rate limiting check (max 5 failed attempts per roll number)
+    const rateLimit = checkRateLimit(`student_${cleanRollNo}`);
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        {
+          error: `Too many failed login attempts. Please wait ${rateLimit.retryAfterSeconds} seconds before trying again.`,
+        },
+        { status: 429 }
+      );
+    }
+
+    // 2. Fetch user (any role — we'll check role after)
+    const user = await db.user.findFirst({
+      where: { username: cleanRollNo },
+      include: { profile: true },
+    });
+
+    if (!user || !user.profile) {
+      return NextResponse.json(
+        { error: "Invalid Roll Number or credentials." },
+        { status: 401 }
+      );
+    }
+
+    // 2a. Block PENDING accounts with a clear message
+    if (user.role === "PENDING") {
+      return NextResponse.json(
+        {
+          error:
+            "Your registration is pending COE approval. You will be notified once your account is activated.",
+        },
+        { status: 403 }
+      );
+    }
+
+    // 2b. Ensure only STUDENT role can use this endpoint
+    if (user.role !== "STUDENT") {
+      return NextResponse.json(
+        { error: "Invalid Roll Number or credentials." },
+        { status: 401 }
+      );
+    }
+
+    // 3. Compare DOB against bcrypt passwordHash
+    const isMatch = await bcrypt.compare(cleanDob, user.passwordHash);
+    if (!isMatch) {
+      return NextResponse.json(
+        {
+          error: `Incorrect Date of Birth. ${rateLimit.remainingAttempts} attempts remaining.`,
+        },
+        { status: 401 }
+      );
+    }
+
+    // 4. Reset rate limiter on successful match
+    resetRateLimit(`student_${cleanRollNo}`);
+
+    // 5. Sign session token
+    const sessionPayload = {
+      userId: user.id,
+      username: user.username,
+      role: "STUDENT",
+      profileId: user.profile.id,
+      fullName: user.profile.fullName,
+      currentClass: user.profile.currentClass,
+      examPrepClass: user.profile.examPrepClass,
+      board: user.profile.board,
+      medium: user.profile.medium,
+    };
+
+    const token = await signSession(sessionPayload);
+
+    // 6. Return response with HTTP-only cookie
+    const response = NextResponse.json({
+      success: true,
+      message: `Welcome, ${user.profile.fullName}!`,
+      user: sessionPayload,
+    });
+
+    const cookieOptions = getSessionCookieOptions();
+    response.cookies.set(cookieOptions.name, token, cookieOptions);
+
+    return response;
+  } catch (error) {
+    console.error("Student login error:", error);
+    return NextResponse.json(
+      { error: "Internal server error during authentication." },
+      { status: 500 }
+    );
+  }
+}

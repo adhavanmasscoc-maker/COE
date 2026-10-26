@@ -1,0 +1,186 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           String          @id @default(cuid())
+  username     String          @unique // Roll No (e.g. TN2026-0901) or Admin ID (coe.admin)
+  passwordHash String          // Hashed DOB (YYYY-MM-DD) or hashed admin password
+  role         String          @default("STUDENT") // "STUDENT" or "ADMIN"
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+  profile      StudentProfile?
+}
+
+model StudentProfile {
+  id                String            @id @default(cuid())
+  userId            String            @unique
+  user              User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fullName          String
+  currentClass      Int               // School Grade: 9 or 11
+  examPrepClass     Int               // Syllabus Standard: 10 or 12 (TN Samacheer Kalvi)
+  board             String            @default("Tamil Nadu Samacheer Kalvi")
+  medium            String            @default("English") // "English" or "Tamil"
+  academicYear      String            @default("2026–2027")
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  subjects          StudentSubject[]
+  chapterProgress   ChapterProgress[]
+  examResults       ExamResult[]
+  examSubmissions   ExamSubmission[]
+}
+
+model Subject {
+  id              String           @id @default(cuid())
+  name            String           // e.g. Mathematics, Science, Physics
+  code            String           @unique // e.g. MAT-10, PHY-12
+  prepClass       Int              // 10 or 12
+  medium          String           @default("English")
+  studentSubjects StudentSubject[]
+  units           SyllabusUnit[]
+  questionPapers  QuestionPaper[]
+  examSchedules   ExamSchedule[]
+}
+
+model StudentSubject {
+  id        String         @id @default(cuid())
+  studentId String
+  student   StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  subjectId String
+  subject   Subject        @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+
+  @@unique([studentId, subjectId])
+}
+
+model SyllabusUnit {
+  id         String            @id @default(cuid())
+  subjectId  String
+  subject    Subject           @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  unitNumber Int
+  title      String
+  chapters   SyllabusChapter[]
+}
+
+model SyllabusChapter {
+  id            String            @id @default(cuid())
+  unitId        String
+  unit          SyllabusUnit      @relation(fields: [unitId], references: [id], onDelete: Cascade)
+  chapterNumber Int
+  title         String
+  description   String?
+  progress      ChapterProgress[]
+}
+
+model ChapterProgress {
+  id          String          @id @default(cuid())
+  studentId   String
+  student     StudentProfile  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  chapterId   String
+  chapter     SyllabusChapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  isCompleted Boolean         @default(false)
+  completedAt DateTime?
+
+  @@unique([studentId, chapterId])
+}
+
+model QuestionPaper {
+  id              String          @id @default(cuid())
+  subjectId       String
+  subject         Subject         @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  prepClass       Int             // 10 or 12
+  examYear        Int
+  title           String
+  board           String          @default("Tamil Nadu State Board")
+  sourceInfo      String?         // Attribution: "DGE Tamil Nadu Official Public Paper"
+  paperType       String          @default("PUBLIC_EXAM") // "PUBLIC_EXAM", "QUARTERLY", "HALF_YEARLY", "MODEL"
+  maxMarks        Int             @default(100)
+  durationMinutes Int             @default(150)
+  filePathOrUrl   String?
+  isPublished     Boolean         @default(false)
+  createdAt       DateTime        @default(now())
+  solution        WorkedSolution?
+}
+
+model WorkedSolution {
+  id              String        @id @default(cuid())
+  questionPaperId String        @unique
+  questionPaper   QuestionPaper @relation(fields: [questionPaperId], references: [id], onDelete: Cascade)
+  title           String
+  solutionType    String        @default("TEXT_STEP_BY_STEP") // "PDF" or "TEXT_STEP_BY_STEP"
+  content         String
+  isPublished     Boolean       @default(false)
+  createdAt       DateTime      @default(now())
+}
+
+model ExamSchedule {
+  id              String       @id @default(cuid())
+  subjectId       String
+  subject         Subject      @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  prepClass       Int          // 10 or 12
+  examDate        DateTime
+  durationMinutes Int          @default(150)
+  totalMarks      Int          @default(100)
+  instructions    String?
+  status          String       @default("DRAFT") // "DRAFT", "PUBLISHED", "COMPLETED"
+  createdAt       DateTime     @default(now())
+  results         ExamResult[]
+  questions       ExamQuestion[]
+  submissions     ExamSubmission[]
+}
+
+model ExamQuestion {
+  id             String       @id @default(cuid())
+  examScheduleId String
+  examSchedule   ExamSchedule @relation(fields: [examScheduleId], references: [id], onDelete: Cascade)
+  questionNumber Int
+  questionText   String
+  marks          Int          @default(2)
+  options        String       // JSON stringified array of { id: string, text: string }
+  correctAnswer  String?      // e.g. "A"
+  explanation    String?
+  createdAt      DateTime     @default(now())
+}
+
+model ExamSubmission {
+  id             String         @id @default(cuid())
+  examScheduleId String
+  examSchedule   ExamSchedule   @relation(fields: [examScheduleId], references: [id], onDelete: Cascade)
+  studentId      String
+  student        StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  answersJson    String         // JSON stringified object of { [questionId]: optionId }
+  timeTakenSecs  Int            @default(0)
+  score          Float?         // Calculated preliminary score if applicable
+  isSubmitted    Boolean        @default(true)
+  submittedAt    DateTime       @default(now())
+
+  @@unique([examScheduleId, studentId])
+}
+
+model ExamResult {
+  id             String         @id @default(cuid())
+  examScheduleId String
+  examSchedule   ExamSchedule   @relation(fields: [examScheduleId], references: [id], onDelete: Cascade)
+  studentId      String
+  student        StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  marksObtained  Float
+  maxMarks       Float
+  remarks        String?
+  isPublished    Boolean        @default(false)
+  createdAt      DateTime       @default(now())
+
+  @@unique([examScheduleId, studentId])
+}
+
+model Notice {
+  id              String   @id @default(cuid())
+  title           String
+  content         String
+  targetPrepClass Int?     // 10, 12, or null for ALL
+  isPublished     Boolean  @default(true)
+  createdAt       DateTime @default(now())
+}
