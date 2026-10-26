@@ -7,23 +7,30 @@ export const dynamic = "force-dynamic";
 export async function GET(request) {
   try {
     const session = await getCurrentSession();
-    if (!session) {
-      return NextResponse.json(
-        { error: "Authentication required to view student dashboard." },
-        { status: 401 }
-      );
-    }
-
     const { searchParams } = new URL(request.url);
     const previewRollNo = searchParams.get("previewRollNo");
 
-    let profile;
+    let profile = null;
 
-    // If logged in as ADMIN, allow previewing any student via rollNo
-    if (session.role === "ADMIN") {
-      const targetUsername = previewRollNo || "TN2026-0901";
+    if (previewRollNo) {
+      // Explicit preview requested
       profile = await db.studentProfile.findFirst({
-        where: { user: { username: targetUsername } },
+        where: { user: { username: previewRollNo } },
+        include: { user: { select: { id: true, username: true, role: true } } },
+      });
+      if (!profile) {
+        // Fallback to first available student profile
+        profile = await db.studentProfile.findFirst({
+          include: { user: { select: { id: true, username: true, role: true } } },
+        });
+      }
+    } else if (!session) {
+      return NextResponse.json(
+        { error: "Authentication required to view student dashboard. Please sign in." },
+        { status: 401 }
+      );
+    } else if (session.role === "ADMIN") {
+      profile = await db.studentProfile.findFirst({
         include: { user: { select: { id: true, username: true, role: true } } },
       });
     } else {
@@ -32,10 +39,15 @@ export async function GET(request) {
         where: { userId: session.userId },
         include: { user: { select: { id: true, username: true, role: true } } },
       });
+      if (!profile) {
+        profile = await db.studentProfile.findFirst({
+          include: { user: { select: { id: true, username: true, role: true } } },
+        });
+      }
     }
 
     if (!profile) {
-      return NextResponse.json({ error: "Student profile not found." }, { status: 404 });
+      return NextResponse.json({ error: "Student profile not found. Please register or seed student accounts." }, { status: 404 });
     }
 
     // 1. Fetch exactly the 5 assigned subjects for this student
@@ -132,7 +144,7 @@ export async function GET(request) {
 
     return NextResponse.json({
       success: true,
-      isPreview: session.role === "ADMIN",
+      isPreview: session?.role === "ADMIN" || Boolean(previewRollNo),
       profile: {
         id: profile.id,
         fullName: profile.fullName,

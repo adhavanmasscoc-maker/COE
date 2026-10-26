@@ -11,8 +11,8 @@ function sanitizeString(str) {
 }
 
 function isValidRollNo(rollNo) {
-  // Format: TN followed by 4 digits, dash, 4 digits e.g. TN2026-0901
-  return /^TN\d{4}-\d{4}$/.test(rollNo);
+  // Allow 4 to 16 alphanumeric characters, hyphens, and underscores
+  return typeof rollNo === "string" && /^[A-Z0-9_-]{4,16}$/i.test(rollNo);
 }
 
 function isValidDate(dateStr) {
@@ -41,7 +41,7 @@ export async function POST(request) {
 
     if (!isValidRollNo(rollNo)) {
       return NextResponse.json(
-        { error: "Invalid Roll Number format. Expected format: TN2026-0901" },
+        { error: "Invalid Roll Number. Roll Number must be between 4 and 16 characters (numbers or letters e.g. TN2026-0901, ADHA2026, or 1001)." },
         { status: 400 }
       );
     }

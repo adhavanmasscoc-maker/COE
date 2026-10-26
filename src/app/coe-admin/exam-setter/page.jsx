@@ -517,7 +517,11 @@ export default function ExamSetterPage() {
             <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
               <span className="text-xs text-[#5c5c8a]">
                 Questions in payload:{" "}
-                <strong className="text-[#f0f0ff]">{parsedExam?.questions?.length || 0}</strong>
+                <strong className="text-[#f0f0ff]">
+                  {Array.isArray(parsedExam)
+                    ? `${parsedExam.reduce((acc, curr) => acc + (curr.questions?.length || 0), 0)} (${parsedExam.length} Exams)`
+                    : parsedExam?.questions?.length || 0}
+                </strong>
               </span>
 
               <div className="flex items-center gap-2">
@@ -561,6 +565,40 @@ export default function ExamSetterPage() {
                 <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/25 text-rose-300 text-xs">
                   <p className="font-bold mb-1">JSON Syntax Error</p>
                   <p className="font-mono text-[11px]">{parseError}</p>
+                </div>
+              ) : Array.isArray(parsedExam) ? (
+                <div className="space-y-3 text-xs">
+                  <div className="flex items-center justify-between pb-1 border-b border-[rgba(124,58,237,0.15)]">
+                    <span className="text-[10px] text-[#5c5c8a] uppercase font-bold block">Batch Mode</span>
+                    <span className="badge badge-emerald">{parsedExam.length} Examination Sets</span>
+                  </div>
+
+                  <div className="max-h-72 overflow-y-auto space-y-2 pr-1">
+                    {parsedExam.map((ex, idx) => (
+                      <div key={idx} className="p-3 glass-sm rounded-xl border border-violet-500/20 space-y-1.5 text-xs">
+                        <div className="flex items-center justify-between">
+                          <span className="font-bold text-[#f0f0ff]">
+                            {ex.subjectCode} — Class {ex.prepClass || 12}
+                          </span>
+                          <span className="badge badge-violet text-[10px]">
+                            {ex.questions?.length || 0} Questions
+                          </span>
+                        </div>
+                        <div className="flex items-center justify-between text-[11px] text-[#5c5c8a]">
+                          <span>
+                            Date: {new Date(ex.examDate || Date.now()).toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" })}
+                          </span>
+                          <span className="text-amber-300 font-semibold">
+                            {ex.durationMinutes || 60}m · {ex.totalMarks || 15}M
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-200">
+                    All {parsedExam.length} examinations will be deployed to SQLite and automatically mapped to Class {parsedExam[0]?.prepClass || 12} students upon publishing.
+                  </div>
                 </div>
               ) : (
                 <div className="space-y-3 text-xs">

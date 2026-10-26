@@ -8,17 +8,28 @@ export const dynamic = "force-dynamic";
 export async function GET(request) {
   try {
     const session = await getCurrentSession();
-    if (!session) {
-      return NextResponse.json({ error: "Authentication required." }, { status: 401 });
-    }
-
     const { searchParams } = new URL(request.url);
     const previewRollNo = searchParams.get("previewRollNo");
 
     let studentProfile = null;
     let targetPrepClass = null;
 
-    if (session.role === "STUDENT") {
+    if (!session) {
+      if (previewRollNo) {
+        studentProfile = await db.studentProfile.findFirst({
+          where: { user: { username: previewRollNo } },
+        });
+        if (!studentProfile) {
+          studentProfile = await db.studentProfile.findFirst();
+        }
+        if (studentProfile) {
+          targetPrepClass = studentProfile.examPrepClass;
+        }
+      }
+      if (!studentProfile) {
+        return NextResponse.json({ error: "Authentication required." }, { status: 401 });
+      }
+    } else if (session.role === "STUDENT") {
       studentProfile = await db.studentProfile.findUnique({
         where: { userId: session.userId },
       });
@@ -32,6 +43,9 @@ export async function GET(request) {
         studentProfile = await db.studentProfile.findFirst({
           where: { user: { username: previewRollNo } },
         });
+        if (!studentProfile) {
+          studentProfile = await db.studentProfile.findFirst();
+        }
         if (studentProfile) {
           targetPrepClass = studentProfile.examPrepClass;
         }

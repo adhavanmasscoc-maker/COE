@@ -33,9 +33,9 @@ const features = [
 ];
 
 // ─── Register Form ──────────────────────────────────────────────────
-function RegisterForm({ onBack }) {
+function RegisterForm({ onBack, initialRollNo = "" }) {
   const [name, setName] = useState("");
-  const [rollNo, setRollNo] = useState("");
+  const [rollNo, setRollNo] = useState(initialRollNo);
   const [dob, setDob] = useState("");
   const [currentClass, setCurrentClass] = useState("10");
   const [examPrepClass, setExamPrepClass] = useState("10");
@@ -143,9 +143,9 @@ function RegisterForm({ onBack }) {
 
       {[
         { id: "reg-name", label: "Full Name", type: "text", value: name, set: setName, icon: User, placeholder: "e.g. Adhavan S" },
-        { id: "reg-roll", label: "Roll Number", type: "text", value: rollNo, set: (v) => setRollNo(v.toUpperCase()), icon: Hash, placeholder: "e.g. TN2026-0901", mono: true },
+        { id: "reg-roll", label: "Roll Number (4–16 Characters)", type: "text", value: rollNo, set: (v) => setRollNo(v.toUpperCase()), icon: Hash, placeholder: "e.g. TN2026-0901, 1001, or ADHA2026", mono: true, minLength: 4, maxLength: 16 },
         { id: "reg-dob", label: "Date of Birth (YYYY-MM-DD)", type: "date", value: dob, set: setDob, icon: Calendar, mono: true },
-      ].map(({ id, label, type, value, set, icon: Icon, placeholder, mono }) => (
+      ].map(({ id, label, type, value, set, icon: Icon, placeholder, mono, minLength, maxLength }) => (
         <div key={id}>
           <label htmlFor={id} className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1">
             <Icon className="w-3.5 h-3.5 text-violet-400" />{label}
@@ -156,6 +156,8 @@ function RegisterForm({ onBack }) {
             value={value}
             onChange={(e) => set(e.target.value)}
             required
+            minLength={minLength}
+            maxLength={maxLength}
             placeholder={placeholder}
             className={`input-field ${mono ? "font-mono text-xs" : "text-xs"}`}
           />
@@ -298,6 +300,8 @@ function LoginPanel() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [isUnregisteredCandidate, setIsUnregisteredCandidate] = useState(false);
+  const [registerRollNo, setRegisterRollNo] = useState("");
 
   useEffect(() => {
     const reason = searchParams.get("reason");
@@ -310,14 +314,25 @@ function LoginPanel() {
 
   const handleStudentLogin = async (e) => {
     e.preventDefault();
-    setLoading(true); setError(""); setSuccess("");
+    setLoading(true); setError(""); setSuccess(""); setIsUnregisteredCandidate(false);
     try {
       const res = await fetch("/api/auth/login-student", {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ rollNo, dob }),
       });
       const data = await res.json();
-      if (!res.ok) { setError(data.error || "Sign in failed."); setLoading(false); return; }
+      if (!res.ok) {
+        if (data.isUnregistered) {
+          setError(data.error);
+          setIsUnregisteredCandidate(true);
+          setRegisterRollNo(rollNo);
+        } else {
+          setError(data.error || "Sign in failed.");
+          setIsUnregisteredCandidate(false);
+        }
+        setLoading(false);
+        return;
+      }
       setSuccess("Authenticated! Redirecting…");
       setTimeout(() => { router.push("/student/dashboard"); router.refresh(); }, 600);
     } catch { setError("Network error. Try again."); setLoading(false); }
@@ -325,7 +340,7 @@ function LoginPanel() {
 
   const handleAdminLogin = async (e) => {
     e.preventDefault();
-    setLoading(true); setError(""); setSuccess("");
+    setLoading(true); setError(""); setSuccess(""); setIsUnregisteredCandidate(false);
     try {
       const res = await fetch("/api/auth/login-admin", {
         method: "POST", headers: { "Content-Type": "application/json" },
@@ -339,7 +354,16 @@ function LoginPanel() {
   };
 
   if (tab === "register") {
-    return <RegisterForm onBack={() => { setTab("student"); setError(""); }} />;
+    return (
+      <RegisterForm
+        initialRollNo={registerRollNo}
+        onBack={() => {
+          setTab("student");
+          setError("");
+          setIsUnregisteredCandidate(false);
+        }}
+      />
+    );
   }
 
   return (
@@ -369,6 +393,33 @@ function LoginPanel() {
           <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" /><span>{error}</span>
         </div>
       )}
+
+      {/* Unregistered Candidate Recommendation Banner */}
+      {isUnregisteredCandidate && (
+        <div className="p-3.5 mb-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs space-y-2.5 animate-scale-in">
+          <div className="flex items-center gap-2 font-bold text-xs text-amber-300">
+            <Sparkles className="w-4 h-4 text-amber-400" />
+            Recommended: Register Candidate Account First
+          </div>
+          <p className="text-[11px] text-[#a8a8d0] leading-relaxed">
+            Roll Number <strong>{registerRollNo}</strong> is not yet enrolled in the COE database. To ensure examinations, syllabus, and results reach you, please register as a student first.
+          </p>
+          <Button
+            type="button"
+            size="sm"
+            variant="warning"
+            onClick={() => {
+              setTab("register");
+              setError("");
+              setIsUnregisteredCandidate(false);
+            }}
+            className="w-full justify-center gap-1.5 font-bold shadow-md shadow-amber-500/20"
+          >
+            <UserPlus className="w-3.5 h-3.5" /> Register This Candidate Now →
+          </Button>
+        </div>
+      )}
+
       {success && (
         <div className="flex items-center gap-2 p-3 mb-4 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs text-emerald-300 font-medium animate-scale-in">
           <CheckCircle2 className="w-4 h-4" /><span>{success}</span>

@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
+import fs from "fs";
+import path from "path";
 import { db } from "@/lib/db";
 import { signSession, getSessionCookieOptions } from "@/lib/auth";
 import { checkRateLimit, resetRateLimit } from "@/lib/rateLimit";
@@ -37,9 +39,27 @@ export async function POST(request) {
     });
 
     if (!user || !user.profile) {
+      // Save unregistered login attempt to separate script text file
+      try {
+        const timestamp = new Date().toISOString();
+        const logEntry = `[${timestamp}] UNREGISTERED_STUDENT_LOGIN_ATTEMPT: RollNo="${cleanRollNo}", AttemptedDOB="${cleanDob}"\n`;
+        const logPath1 = path.join(process.cwd(), "unregistered_login_attempts.txt");
+        const logPath2 = path.join(process.cwd(), "scripts", "unregistered_login_attempts.txt");
+        fs.appendFileSync(logPath1, logEntry, "utf8");
+        if (fs.existsSync(path.join(process.cwd(), "scripts"))) {
+          fs.appendFileSync(logPath2, logEntry, "utf8");
+        }
+      } catch (logErr) {
+        console.warn("Could not write to login attempts log file:", logErr.message);
+      }
+
       return NextResponse.json(
-        { error: "Invalid Roll Number or credentials." },
-        { status: 401 }
+        {
+          error: `Roll Number "${cleanRollNo}" is not registered in the examination portal. Please register as a candidate first under "Register Candidate" before signing in.`,
+          isUnregistered: true,
+          rollNo: cleanRollNo,
+        },
+        { status: 404 }
       );
     }
 

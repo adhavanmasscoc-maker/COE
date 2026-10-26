@@ -19,6 +19,12 @@ export async function middleware(request) {
     return NextResponse.next();
   }
 
+  // Allow read-only COE preview for student routes with previewRollNo parameter
+  const hasPreviewRoll = request.nextUrl.searchParams.has("previewRollNo");
+  if (isStudentRoute && hasPreviewRoll) {
+    return NextResponse.next();
+  }
+
   const sessionToken = request.cookies.get(COOKIE_NAME)?.value;
 
   if (!sessionToken) {

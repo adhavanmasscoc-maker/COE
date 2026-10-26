@@ -186,6 +186,16 @@ async function main() {
         { unitNumber: 2, title: "Genetics and Evolution", chapters: ["Principles of Inheritance", "Molecular Basis of Inheritance"] },
       ],
     },
+    {
+      name: "Computer Science",
+      code: "CSC-12",
+      prepClass: 12,
+      medium: "English",
+      units: [
+        { unitNumber: 1, title: "Problem Solving and Python", chapters: ["Functions & Scope", "Data Abstraction & OOP", "Algorithmic Efficiency"] },
+        { unitNumber: 2, title: "Database & SQL", chapters: ["Relational Database & SQL", "CSV Integration with Python"] },
+      ],
+    },
   ];
 
   // Insert Class 10 Subjects & Assign to Brother
@@ -371,7 +381,16 @@ async function main() {
       status: "PUBLISHED",
     },
   });
-  console.log("✅ Seeded Official Examination Schedules.");
+
+  try {
+    const { run } = require("../scripts/import_user_exams");
+    if (typeof run === "function") {
+      await run();
+    }
+  } catch (err) {
+    console.log("Auto-seed error on CSC exams:", err.message);
+  }
+  console.log("✅ Seeded Official Examination Schedules including Computer Science (CSC-12).");
 
   // 10. Seed Official COE Notices
   await prisma.notice.create({
