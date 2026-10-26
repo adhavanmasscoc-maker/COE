@@ -277,11 +277,25 @@ const SAMPLE_180M_CS12 = {
   ]
 };
 
+function parseDisplayDuration(val) {
+  if (typeof val === "number" && !isNaN(val)) return val;
+  if (typeof val === "string") {
+    const trimmed = val.trim();
+    const hMatch = trimmed.match(/^(\d+(?:\.\d+)?)\s*(?:h|hr|hrs|hours)$/i);
+    if (hMatch) return Math.round(parseFloat(hMatch[1]) * 60);
+    const mMatch = trimmed.match(/^(\d+)\s*(?:m|min|mins|minutes)?$/i);
+    if (mMatch) return parseInt(mMatch[1], 10);
+  }
+  return 180;
+}
+
 export default function ExamSetterPage() {
   const [jsonInput, setJsonInput] = useState(JSON.stringify(SAMPLE_180M_MAT10, null, 2));
   const [copiedPrompt, setCopiedPrompt] = useState(false);
   const [parsedExam, setParsedExam] = useState(SAMPLE_180M_MAT10);
   const [parseError, setParseError] = useState("");
+  const [publishSchedule, setPublishSchedule] = useState(true);
+  const [publishSyllabus, setPublishSyllabus] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [successReceipt, setSuccessReceipt] = useState(null);
 
@@ -318,6 +332,8 @@ export default function ExamSetterPage() {
       if (overrideStatus) {
         payload.status = overrideStatus;
       }
+      payload.publishSchedule = overrideStatus ? (overrideStatus === "PUBLISHED") : publishSchedule;
+      payload.publishSyllabus = publishSyllabus;
 
       const res = await fetch("/api/admin/exam-setter", {
         method: "POST",
@@ -470,6 +486,33 @@ export default function ExamSetterPage() {
               placeholder="Paste the JSON from NotebookLLM here..."
             />
 
+            {/* Ingestion & Publishing Options */}
+            <div className="p-3.5 rounded-xl glass-sm border border-violet-500/20 space-y-2">
+              <span className="text-[11px] font-bold text-[#f0f0ff] uppercase tracking-wider block">
+                Ingestion & Publishing Options:
+              </span>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-xs">
+                <label className="flex items-center gap-2 cursor-pointer text-[#a8a8d0] hover:text-white">
+                  <input
+                    type="checkbox"
+                    checked={publishSchedule}
+                    onChange={(e) => setPublishSchedule(e.target.checked)}
+                    className="rounded border-violet-500/40 text-violet-600 focus:ring-0"
+                  />
+                  <span>Publish Schedule to Student Portal immediately</span>
+                </label>
+                <label className="flex items-center gap-2 cursor-pointer text-[#a8a8d0] hover:text-white">
+                  <input
+                    type="checkbox"
+                    checked={publishSyllabus}
+                    onChange={(e) => setPublishSyllabus(e.target.checked)}
+                    className="rounded border-violet-500/40 text-violet-600 focus:ring-0"
+                  />
+                  <span>Import & Publish Syllabus Units & Chapters</span>
+                </label>
+              </div>
+            </div>
+
             {/* Action Bar */}
             <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
               <span className="text-xs text-[#5c5c8a]">
@@ -541,10 +584,17 @@ export default function ExamSetterPage() {
                   <div className="grid grid-cols-2 gap-2 p-3 glass-sm rounded-xl">
                     <div>
                       <span className="text-[10px] text-[#5c5c8a] block">Duration</span>
-                      <span className="font-bold text-amber-300 flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5" />
-                        {parsedExam?.durationMinutes || 180} mins ({(parsedExam?.durationMinutes || 180) / 60} hrs)
-                      </span>
+                      {(() => {
+                        const dur = parseDisplayDuration(
+                          parsedExam?.durationMinutes ?? parsedExam?.time ?? parsedExam?.duration ?? 180
+                        );
+                        return (
+                          <span className="font-bold text-amber-300 flex items-center gap-1">
+                            <Clock className="w-3.5 h-3.5" />
+                            {dur} mins ({(dur / 60).toFixed(1).replace(/\.0$/, '')} hrs)
+                          </span>
+                        );
+                      })()}
                     </div>
                     <div>
                       <span className="text-[10px] text-[#5c5c8a] block">Total Marks</span>
@@ -554,6 +604,28 @@ export default function ExamSetterPage() {
                       </span>
                     </div>
                   </div>
+
+                  {/* Syllabus Units Preview */}
+                  {parsedExam?.syllabusUnits?.length > 0 && (
+                    <div className="p-3 glass-sm rounded-xl space-y-1.5">
+                      <span className="text-[10px] text-cyan-400 font-bold flex items-center gap-1">
+                        <Layers className="w-3.5 h-3.5" />
+                        Syllabus Units ({parsedExam.syllabusUnits.length})
+                      </span>
+                      <div className="space-y-1">
+                        {parsedExam.syllabusUnits.map((u, i) => (
+                          <div key={i} className="text-[11px] text-[#f0f0ff]">
+                            <span className="font-semibold text-cyan-300">Unit {u.unitNumber}:</span> {u.title}
+                            {u.chapters?.length > 0 && (
+                              <span className="text-[10px] text-[#5c5c8a] ml-1">
+                                ({u.chapters.length} chapter{u.chapters.length > 1 ? "s" : ""})
+                              </span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   <div className="p-3 glass-sm rounded-xl space-y-1">
                     <span className="text-[10px] text-[#5c5c8a] block">Scheduled Conducting Time</span>

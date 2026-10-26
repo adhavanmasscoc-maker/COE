@@ -19,7 +19,10 @@ import {
   Layers,
   Calendar,
   Award,
-  Users
+  Users,
+  FileJson,
+  Eye,
+  Sparkles
 } from "lucide-react";
 
 export function Navbar() {
@@ -66,19 +69,36 @@ export function Navbar() {
     return null;
   }
 
-  const navLinks = [
-    { href: "/", label: "Portal Home", icon: GraduationCap },
-    { href: "/student/dashboard", label: "Dashboard", icon: LayoutDashboard },
-    { href: "/student/syllabus", label: "Syllabus", icon: BookOpen },
-    { href: "/student/papers", label: "Question Papers", icon: FileText },
-    { href: "/student/results", label: "Marksheet", icon: Award },
-    { href: "/coe-admin/dashboard", label: "COE Control", icon: ShieldCheck },
-    { href: "/coe-admin/students", label: "Students", icon: Users },
-    { href: "/coe-admin/exams", label: "Exam Schedules", icon: Calendar },
-    { href: "/coe-admin/results", label: "Marks Entry", icon: Award },
-    { href: "/coe-admin/syllabus", label: "Syllabus Mgr", icon: Layers },
-    { href: "/coe-admin/papers", label: "Papers Mgr", icon: FileText },
-  ];
+  const getNavLinks = () => {
+    if (currentUser?.role === "ADMIN") {
+      return [
+        { href: "/coe-admin/dashboard", label: "COE Control", icon: ShieldCheck },
+        { href: "/coe-admin/exam-setter", label: "Exam Setter (JSON)", icon: Sparkles },
+        { href: "/coe-admin/student-preview", label: "Student Preview", icon: Eye },
+        { href: "/coe-admin/students", label: "Students", icon: Users },
+        { href: "/coe-admin/exams", label: "Exams", icon: Calendar },
+        { href: "/coe-admin/results", label: "Marks Entry", icon: Award },
+        { href: "/coe-admin/syllabus", label: "Syllabus", icon: Layers },
+        { href: "/coe-admin/papers", label: "Papers", icon: FileText },
+      ];
+    }
+    if (currentUser?.role === "STUDENT") {
+      return [
+        { href: "/student/dashboard", label: "Dashboard", icon: LayoutDashboard },
+        { href: "/student/syllabus", label: "Syllabus & Practice", icon: BookOpen },
+        { href: "/student/papers", label: "Question Papers", icon: FileText },
+        { href: "/student/results", label: "Marksheet", icon: Award },
+      ];
+    }
+    return [
+      { href: "/", label: "Portal Home", icon: GraduationCap },
+      { href: "/student/dashboard", label: "Student Login", icon: LayoutDashboard },
+      { href: "/student/syllabus", label: "Syllabus & Practice", icon: BookOpen },
+      { href: "/coe-admin/dashboard", label: "COE Control", icon: ShieldCheck },
+    ];
+  };
+
+  const navLinks = getNavLinks();
 
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-background/85 border-b border-border transition-colors">

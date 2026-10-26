@@ -9,7 +9,7 @@ import { StatCard } from "@/components/ui/Card";
 import {
   ShieldCheck, Users, Calendar, FileText, CheckCircle, PlusCircle,
   Eye, Award, Sparkles, RefreshCw, Loader2, AlertCircle,
-  Layers, Bell, BarChart3, ClipboardList, UserCheck, Clock,
+  Layers, Bell, BarChart3, ClipboardList, UserCheck, Clock, FileJson
 } from "lucide-react";
 
 export default function COEAdminDashboardPage() {
@@ -94,6 +94,16 @@ export default function COEAdminDashboardPage() {
 
         {/* Quick action buttons */}
         <div className="flex flex-wrap gap-2">
+          <Link href="/coe-admin/exam-setter">
+            <Button variant="emerald" size="sm" className="gap-1.5 shadow-md shadow-emerald-500/20">
+              <Sparkles className="w-4 h-4 text-amber-300" />Exam Setter (JSON)
+            </Button>
+          </Link>
+          <Link href="/coe-admin/student-preview">
+            <Button variant="secondary" size="sm" className="gap-1.5">
+              <Eye className="w-4 h-4 text-cyan-400" />Student Preview
+            </Button>
+          </Link>
           <Link href="/coe-admin/students">
             <Button variant="secondary" size="sm" className="gap-1.5 relative">
               <Users className="w-4 h-4" />Students
@@ -161,15 +171,17 @@ export default function COEAdminDashboardPage() {
       </div>
 
       {/* Quick navigation cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         {[
+          { href: "/coe-admin/exam-setter", label: "Exam Setter", desc: "JSON Ingestion", icon: FileJson, color: "emerald" },
+          { href: "/coe-admin/student-preview", label: "Student Preview", desc: "Live portal check", icon: Eye, color: "cyan" },
           { href: "/coe-admin/students", label: "Students", desc: "Manage & approve", icon: Users, color: "violet" },
-          { href: "/coe-admin/syllabus", label: "Syllabus", desc: "Chapters & units", icon: Layers, color: "cyan" },
+          { href: "/coe-admin/syllabus", label: "Syllabus", desc: "Chapters & units", icon: Layers, color: "purple" },
           { href: "/coe-admin/papers", label: "Papers", desc: "PYQ & solutions", icon: ClipboardList, color: "amber" },
-          { href: "/coe-admin/results", label: "Marks", desc: "Entry & publish", icon: Award, color: "emerald" },
+          { href: "/coe-admin/results", label: "Marks", desc: "Entry & publish", icon: Award, color: "rose" },
         ].map(({ href, label, desc, icon: Icon, color }) => (
           <Link key={href} href={href}>
-            <div className={`glass rounded-2xl p-4 border border-${color}-500/20 card-glow cursor-pointer group`}>
+            <div className={`glass rounded-2xl p-4 border border-${color}-500/20 card-glow cursor-pointer group h-full transition-all hover:scale-[1.02]`}>
               <div className={`w-9 h-9 rounded-xl bg-${color}-500/15 flex items-center justify-center mb-3`}>
                 <Icon className={`w-5 h-5 text-${color}-400`} />
               </div>
@@ -257,7 +269,7 @@ export default function COEAdminDashboardPage() {
                 </div>
 
                 <div className="flex items-center justify-end pt-2 border-t border-[rgba(124,58,237,0.1)]">
-                  <Link href={`/student/dashboard?previewRollNo=${student.rollNo}`}
+                  <Link href={`/coe-admin/student-preview?rollNo=${student.rollNo}`}
                     className="flex items-center gap-1 text-xs text-violet-400 hover:text-violet-300 font-semibold transition-colors">
                     Preview Portal <Eye className="w-3.5 h-3.5" />
                   </Link>

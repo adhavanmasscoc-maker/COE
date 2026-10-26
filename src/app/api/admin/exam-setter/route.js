@@ -27,6 +27,18 @@ function parseDateTime12h(dateStr, timeStr) {
   }
 }
 
+function parseFlexibleDuration(val) {
+  if (typeof val === "number" && !isNaN(val)) return val;
+  if (typeof val === "string") {
+    const trimmed = val.trim();
+    const hMatch = trimmed.match(/^(\d+(?:\.\d+)?)\s*(?:h|hr|hrs|hours)$/i);
+    if (hMatch) return Math.round(parseFloat(hMatch[1]) * 60);
+    const mMatch = trimmed.match(/^(\d+)\s*(?:m|min|mins|minutes)?$/i);
+    if (mMatch) return parseInt(mMatch[1], 10);
+  }
+  return 180;
+}
+
 export async function POST(request) {
   try {
     const session = await getCurrentSession();
@@ -46,14 +58,16 @@ export async function POST(request) {
       );
     }
 
-    // Required fields validation
+    // Required fields validation with flexible duration parsing (e.g. 180, "180m", "3h")
     const subjectCode = (payload.subjectCode || "GEN-10").toUpperCase().trim();
     const prepClass = parseInt(payload.prepClass, 10) || 10;
-    const durationMinutes = parseInt(payload.durationMinutes, 10) || 180;
+    const rawDuration = payload.durationMinutes ?? payload.time ?? payload.duration ?? 180;
+    const durationMinutes = parseFlexibleDuration(rawDuration) || 180;
     const totalMarks = parseInt(payload.totalMarks, 10) || 100;
     const examDateStr = payload.examDate || new Date().toISOString().split("T")[0];
     const startTimeStr = payload.startTime || "09:30 AM";
-    const status = payload.status === "DRAFT" ? "DRAFT" : "PUBLISHED";
+    const status = (payload.status === "DRAFT" || payload.publishSchedule === false) ? "DRAFT" : "PUBLISHED";
+    const publishSyllabus = payload.publishSyllabus !== false; // defaults to true
     const instructions =
       payload.instructions ||
       "Dear candidate, take a deep breath. Read each question carefully and calmly. Manage your time with confidence. Best wishes for your success!";
