@@ -254,7 +254,49 @@ async function main() {
   }
   console.log("✅ Seeded 5 Class 12 subjects and mapped to Sister.");
 
-  // 8. Seed Sample Question Papers with Source Attribution
+  // 7b. Seed Full TN DGE Subject Catalog for Classes 9, 10, 11, 12
+  const extraSubjects = [
+    // Class 12 Science & Voc
+    { code: "CS-12",  name: "Computer Science", prepClass: 12, medium: "English" },
+    { code: "BOT-12", name: "Botany", prepClass: 12, medium: "English" },
+    { code: "ZOO-12", name: "Zoology", prepClass: 12, medium: "English" },
+    // Class 12 Commerce & Arts
+    { code: "ACC-12", name: "Accountancy", prepClass: 12, medium: "English" },
+    { code: "COM-12", name: "Commerce", prepClass: 12, medium: "English" },
+    { code: "ECO-12", name: "Economics", prepClass: 12, medium: "English" },
+    { code: "BMS-12", name: "Business Mathematics & Statistics", prepClass: 12, medium: "English" },
+    { code: "CA-12",  name: "Computer Applications", prepClass: 12, medium: "English" },
+    { code: "HIS-12", name: "History", prepClass: 12, medium: "English" },
+    { code: "GEO-12", name: "Geography", prepClass: 12, medium: "English" },
+    { code: "POL-12", name: "Political Science", prepClass: 12, medium: "English" },
+    // Class 11 Subjects
+    { code: "TAM-11", name: "Language (Tamil)", prepClass: 11, medium: "Tamil" },
+    { code: "ENG-11", name: "English", prepClass: 11, medium: "English" },
+    { code: "MAT-11", name: "Mathematics", prepClass: 11, medium: "English" },
+    { code: "PHY-11", name: "Physics", prepClass: 11, medium: "English" },
+    { code: "CHE-11", name: "Chemistry", prepClass: 11, medium: "English" },
+    { code: "BIO-11", name: "Biology", prepClass: 11, medium: "English" },
+    { code: "CS-11",  name: "Computer Science", prepClass: 11, medium: "English" },
+    { code: "ACC-11", name: "Accountancy", prepClass: 11, medium: "English" },
+    { code: "COM-11", name: "Commerce", prepClass: 11, medium: "English" },
+    { code: "ECO-11", name: "Economics", prepClass: 11, medium: "English" },
+    // Class 9 Subjects
+    { code: "TAM-09", name: "Language (Tamil)", prepClass: 9, medium: "Tamil" },
+    { code: "ENG-09", name: "English", prepClass: 9, medium: "English" },
+    { code: "MAT-09", name: "Mathematics", prepClass: 9, medium: "English" },
+    { code: "SCI-09", name: "Science", prepClass: 9, medium: "English" },
+    { code: "SOC-09", name: "Social Science", prepClass: 9, medium: "English" },
+  ];
+
+  for (const s of extraSubjects) {
+    await prisma.subject.upsert({
+      where: { code: s.code },
+      update: { name: s.name, prepClass: s.prepClass, medium: s.medium },
+      create: s,
+    });
+  }
+  console.log("✅ Seeded additional TN DGE Subjects across streams.");
+
   const math10 = await prisma.subject.findUnique({ where: { code: "MAT-10" } });
   const phy12 = await prisma.subject.findUnique({ where: { code: "PHY-12" } });
 
