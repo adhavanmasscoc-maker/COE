@@ -37,8 +37,8 @@ async function apiPost(url, body) {
 
 // ── Approval row ─────────────────────────────────────────────────────
 function PendingRow({ p, onApprove, onReject, busy }) {
-  const [currentClass, setCurrentClass] = useState("9");
-  const [examPrepClass, setExamPrepClass] = useState("10");
+  const [currentClass, setCurrentClass] = useState(String(p.currentClass && p.currentClass > 0 ? p.currentClass : "10"));
+  const [examPrepClass, setExamPrepClass] = useState(String(p.examPrepClass && p.examPrepClass > 0 ? p.examPrepClass : "10"));
 
   return (
     <tr className={busy ? "opacity-60 pointer-events-none" : ""}>
@@ -60,22 +60,20 @@ function PendingRow({ p, onApprove, onReject, busy }) {
         <div className="flex items-center gap-2">
           <div>
             <label className="text-[10px] text-[#5c5c8a] block mb-0.5">Current Class</label>
-            <select value={currentClass} onChange={(e) => {
-                const v = e.target.value;
-                setCurrentClass(v);
-                setExamPrepClass(v === "9" ? "10" : "12");
-              }}
+            <select value={currentClass} onChange={(e) => setCurrentClass(e.target.value)}
               className="bg-[rgba(13,13,26,0.8)] border border-[rgba(124,58,237,0.3)] text-[#f0f0ff] text-xs rounded-lg px-2 py-1 focus:outline-none focus:border-violet-400">
-              <option value="9">Class 9</option>
-              <option value="11">Class 11</option>
+              {Array.from({ length: 12 }, (_, i) => i + 1).map((cls) => (
+                <option key={cls} value={cls}>Class {cls}</option>
+              ))}
             </select>
           </div>
           <div>
             <label className="text-[10px] text-[#5c5c8a] block mb-0.5">Prep Level</label>
             <select value={examPrepClass} onChange={(e) => setExamPrepClass(e.target.value)}
               className="bg-[rgba(13,13,26,0.8)] border border-[rgba(124,58,237,0.3)] text-[#f0f0ff] text-xs rounded-lg px-2 py-1 focus:outline-none focus:border-violet-400">
-              <option value="10">Class 10</option>
-              <option value="12">Class 12</option>
+              {Array.from({ length: 12 }, (_, i) => i + 1).map((cls) => (
+                <option key={cls} value={cls}>Class {cls}</option>
+              ))}
             </select>
           </div>
         </div>
@@ -181,9 +179,16 @@ function COEStudentsContent() {
             <p className="text-xs text-[#5c5c8a]">Approve registrations, manage accounts & subjects</p>
           </div>
         </div>
-        <Button variant="secondary" size="sm" onClick={fetchAll} className="gap-1.5">
-          <RefreshCw className="w-3.5 h-3.5" />Refresh
-        </Button>
+        <div className="flex items-center gap-2">
+          <Link href="/coe-admin/student-preview">
+            <Button variant="amber" size="sm" className="gap-1.5 text-xs">
+              <Eye className="w-3.5 h-3.5" />Student Previewer
+            </Button>
+          </Link>
+          <Button variant="secondary" size="sm" onClick={fetchAll} className="gap-1.5 text-xs">
+            <RefreshCw className="w-3.5 h-3.5" />Refresh
+          </Button>
+        </div>
       </div>
 
       {/* Toast */}

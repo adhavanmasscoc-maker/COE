@@ -77,11 +77,16 @@ export async function POST(request) {
       );
     }
 
+    // Extract class assignments (Classes 1 to 12)
+    const currentClass = Math.min(12, Math.max(1, parseInt(body.currentClass, 10) || 10));
+    const examPrepClass = Math.min(12, Math.max(1, parseInt(body.examPrepClass, 10) || (currentClass === 9 ? 10 : currentClass === 11 ? 12 : currentClass)));
+    const selectedSubjectCodes = Array.isArray(body.selectedSubjectCodes) ? body.selectedSubjectCodes : [];
+
     // --- Hash the DOB as password ---
     const passwordHash = await bcrypt.hash(dob, 12);
 
-    // --- Create pending user (no profile yet — COE must approve) ---
-    await prisma.user.create({
+    // --- Create pending user and profile with requested subjects ---
+    const newUser = await prisma.user.create({
       data: {
         username: rollNo,
         passwordHash,
@@ -89,15 +94,34 @@ export async function POST(request) {
         profile: {
           create: {
             fullName: name,
-            currentClass: 0,       // Placeholder — COE assigns actual class
-            examPrepClass: 0,      // Placeholder — COE assigns prep class
+            currentClass: currentClass,
+            examPrepClass: examPrepClass,
             medium: language,
             board: "Tamil Nadu Samacheer Kalvi",
             academicYear: "2026–2027",
           },
         },
       },
+      include: { profile: true },
     });
+
+    // Automatically link selected subjects if provided
+    if (selectedSubjectCodes.length > 0 && newUser.profile) {
+      const matchedSubjects = await prisma.subject.findMany({
+        where: {
+          code: { in: selectedSubjectCodes },
+        },
+      });
+
+      for (const sub of matchedSubjects) {
+        await prisma.studentSubject.create({
+          data: {
+            studentId: newUser.profile.id,
+            subjectId: sub.id,
+          },
+        }).catch(() => {});
+      }
+    }
 
     return NextResponse.json(
       {

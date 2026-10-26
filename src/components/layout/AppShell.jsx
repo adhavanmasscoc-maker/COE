@@ -37,13 +37,14 @@ const studentNav = [
 ];
 
 const adminNav = [
-  { href: "/coe-admin/dashboard", label: "Overview",    icon: LayoutDashboard },
-  { href: "/coe-admin/students",  label: "Students",    icon: Users },
-  { href: "/coe-admin/exams",     label: "Exams",       icon: CalendarDays },
-  { href: "/coe-admin/syllabus",  label: "Syllabus",    icon: Layers },
-  { href: "/coe-admin/papers",    label: "Papers",      icon: ClipboardList },
-  { href: "/coe-admin/results",   label: "Marks",       icon: Award },
-  { href: "/coe-admin/import",    label: "JSON Import", icon: FileJson },
+  { href: "/coe-admin/dashboard",   label: "Overview",    icon: LayoutDashboard },
+  { href: "/coe-admin/students",    label: "Students",    icon: Users },
+  { href: "/coe-admin/exams",       label: "Exams",       icon: CalendarDays },
+  { href: "/coe-admin/exam-setter", label: "Exam Setter", icon: Zap },
+  { href: "/coe-admin/syllabus",    label: "Syllabus",    icon: Layers },
+  { href: "/coe-admin/papers",      label: "Papers",      icon: ClipboardList },
+  { href: "/coe-admin/results",     label: "Marks",       icon: Award },
+  { href: "/coe-admin/import",      label: "JSON Import", icon: FileJson },
 ];
 
 // ─── Sidebar ──────────────────────────────────────────────────────────

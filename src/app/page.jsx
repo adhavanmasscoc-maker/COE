@@ -37,10 +37,45 @@ function RegisterForm({ onBack }) {
   const [name, setName] = useState("");
   const [rollNo, setRollNo] = useState("");
   const [dob, setDob] = useState("");
+  const [currentClass, setCurrentClass] = useState("10");
+  const [examPrepClass, setExamPrepClass] = useState("10");
   const [language, setLanguage] = useState("English");
+  const [availableSubjects, setAvailableSubjects] = useState([]);
+  const [selectedSubjects, setSelectedSubjects] = useState([]);
+  const [loadingSubjects, setLoadingSubjects] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
+
+  // Fetch subjects whenever examPrepClass changes
+  useEffect(() => {
+    let ignore = false;
+    setLoadingSubjects(true);
+    fetch(`/api/subjects?prepClass=${examPrepClass}`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (ignore) return;
+        if (data?.subjects) {
+          setAvailableSubjects(data.subjects);
+          // By default, pre-select default core subjects (up to 5 or 6)
+          const defaultCodes = data.subjects.slice(0, 6).map((s) => s.code);
+          setSelectedSubjects(defaultCodes);
+        } else {
+          setAvailableSubjects([]);
+          setSelectedSubjects([]);
+        }
+      })
+      .catch(() => {})
+      .finally(() => { if (!ignore) setLoadingSubjects(false); });
+
+    return () => { ignore = true; };
+  }, [examPrepClass]);
+
+  const toggleSubject = (code) => {
+    setSelectedSubjects((prev) =>
+      prev.includes(code) ? prev.filter((c) => c !== code) : [...prev, code]
+    );
+  };
 
   if (done) {
     return (
@@ -51,7 +86,7 @@ function RegisterForm({ onBack }) {
         <div>
           <h3 className="text-lg font-bold text-[#f0f0ff] mb-1">Registration Submitted</h3>
           <p className="text-sm text-[#5c5c8a] leading-relaxed">
-            Your application is under COE review. You&apos;ll be able to sign in once your account is approved.
+            Your candidate application is under COE review with {selectedSubjects.length} selected subjects. You&apos;ll be able to sign in once your account is approved.
           </p>
         </div>
         <Button variant="outline" onClick={onBack}>← Back to Sign In</Button>
@@ -61,13 +96,25 @@ function RegisterForm({ onBack }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (selectedSubjects.length === 0) {
+      setError("Please select at least 1 subject for your syllabus.");
+      return;
+    }
     setLoading(true);
     setError("");
     try {
       const res = await fetch("/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, rollNo, dob, language }),
+        body: JSON.stringify({
+          name,
+          rollNo,
+          dob,
+          language,
+          currentClass: parseInt(currentClass, 10),
+          examPrepClass: parseInt(examPrepClass, 10),
+          selectedSubjectCodes: selectedSubjects,
+        }),
       });
       const data = await res.json();
       if (!res.ok) { setError(data.error || "Registration failed."); setLoading(false); return; }
@@ -79,13 +126,13 @@ function RegisterForm({ onBack }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 animate-float-up">
-      <div className="text-center mb-6">
-        <div className="w-12 h-12 rounded-2xl bg-violet-500/15 border border-violet-500/25 flex items-center justify-center mx-auto mb-3">
-          <UserPlus className="w-6 h-6 text-violet-400" />
+    <form onSubmit={handleSubmit} className="space-y-4 animate-float-up max-h-[80vh] overflow-y-auto pr-1">
+      <div className="text-center mb-4">
+        <div className="w-10 h-10 rounded-2xl bg-violet-500/15 border border-violet-500/25 flex items-center justify-center mx-auto mb-2">
+          <UserPlus className="w-5 h-5 text-violet-400" />
         </div>
-        <h2 className="text-xl font-bold text-[#f0f0ff]">New Student Registration</h2>
-        <p className="text-xs text-[#5c5c8a] mt-1">Your request will be reviewed by the COE before activation</p>
+        <h2 className="text-lg font-bold text-[#f0f0ff]">Candidate Registration</h2>
+        <p className="text-xs text-[#5c5c8a]">Tamil Nadu Samacheer Kalvi · Institutional Examination</p>
       </div>
 
       {error && (
@@ -97,10 +144,10 @@ function RegisterForm({ onBack }) {
       {[
         { id: "reg-name", label: "Full Name", type: "text", value: name, set: setName, icon: User, placeholder: "e.g. Adhavan S" },
         { id: "reg-roll", label: "Roll Number", type: "text", value: rollNo, set: (v) => setRollNo(v.toUpperCase()), icon: Hash, placeholder: "e.g. TN2026-0901", mono: true },
-        { id: "reg-dob", label: "Date of Birth (login credential)", type: "date", value: dob, set: setDob, icon: Calendar, mono: true },
+        { id: "reg-dob", label: "Date of Birth (YYYY-MM-DD)", type: "date", value: dob, set: setDob, icon: Calendar, mono: true },
       ].map(({ id, label, type, value, set, icon: Icon, placeholder, mono }) => (
         <div key={id}>
-          <label htmlFor={id} className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1.5">
+          <label htmlFor={id} className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1">
             <Icon className="w-3.5 h-3.5 text-violet-400" />{label}
           </label>
           <input
@@ -110,19 +157,105 @@ function RegisterForm({ onBack }) {
             onChange={(e) => set(e.target.value)}
             required
             placeholder={placeholder}
-            className={`input-field ${mono ? "font-mono" : ""}`}
+            className={`input-field ${mono ? "font-mono text-xs" : "text-xs"}`}
           />
         </div>
       ))}
 
+      {/* Class Level Pickers: 1 to 12 */}
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="text-xs font-semibold text-[#a8a8d0] block mb-1">Current Class</label>
+          <select
+            value={currentClass}
+            onChange={(e) => {
+              const v = e.target.value;
+              setCurrentClass(v);
+              // Smart auto-advance suggestion: 9->10, 11->12
+              if (v === "9") setExamPrepClass("10");
+              else if (v === "11") setExamPrepClass("12");
+              else setExamPrepClass(v);
+            }}
+            className="input-field text-xs cursor-pointer"
+          >
+            {Array.from({ length: 12 }, (_, i) => i + 1).map((cls) => (
+              <option key={cls} value={cls}>Class {cls}</option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label className="text-xs font-semibold text-[#a8a8d0] block mb-1">Exam Prep Level</label>
+          <select
+            value={examPrepClass}
+            onChange={(e) => setExamPrepClass(e.target.value)}
+            className="input-field text-xs cursor-pointer"
+          >
+            {Array.from({ length: 12 }, (_, i) => i + 1).map((cls) => (
+              <option key={cls} value={cls}>Class {cls}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {/* Subject Selection (Official TN DGE) */}
+      <div className="p-3 rounded-2xl glass-sm border border-violet-500/20 space-y-2">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-bold text-[#f0f0ff] flex items-center gap-1.5">
+            <BookOpen className="w-3.5 h-3.5 text-violet-400" />
+            Class {examPrepClass} Subjects
+          </span>
+          <span className="badge badge-violet text-[10px]">{selectedSubjects.length} Selected</span>
+        </div>
+        <p className="text-[11px] text-[#5c5c8a]">
+          Select the official Tamil Nadu DGE curriculum subjects you are appearing for:
+        </p>
+
+        {loadingSubjects ? (
+          <div className="py-3 text-center text-xs text-[#5c5c8a]">
+            <Loader2 className="w-4 h-4 animate-spin text-violet-400 mx-auto mb-1" />
+            Loading official subjects...
+          </div>
+        ) : availableSubjects.length === 0 ? (
+          <p className="text-[11px] text-[#5c5c8a] italic">Standard subjects will be mapped upon COE approval.</p>
+        ) : (
+          <div className="max-h-36 overflow-y-auto space-y-1.5 pr-1">
+            {availableSubjects.map((sub) => {
+              const isChecked = selectedSubjects.includes(sub.code);
+              return (
+                <label
+                  key={sub.code}
+                  className={`flex items-center justify-between p-2 rounded-xl text-xs cursor-pointer transition-all border ${
+                    isChecked
+                      ? "bg-violet-500/15 border-violet-500/30 text-violet-200"
+                      : "bg-white/[0.02] border-transparent text-[#5c5c8a] hover:bg-white/[0.05]"
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={() => toggleSubject(sub.code)}
+                      className="rounded border-violet-500/40 text-violet-600 focus:ring-0"
+                    />
+                    <span className="font-medium text-[#f0f0ff]">{sub.name}</span>
+                  </div>
+                  <span className="font-mono text-[10px] text-[#5c5c8a]">{sub.code}</span>
+                </label>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
       <div>
-        <label className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1.5">
+        <label className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1">
           <Languages className="w-3.5 h-3.5 text-violet-400" />Preferred Exam Language
         </label>
         <div className="grid grid-cols-2 gap-2">
           {["English", "Tamil"].map((lang) => (
             <button key={lang} type="button" onClick={() => setLanguage(lang)}
-              className={`py-2.5 text-sm font-semibold rounded-xl border transition-all ${
+              className={`py-2 text-xs font-semibold rounded-xl border transition-all ${
                 language === lang
                   ? "bg-violet-500/20 border-violet-400/50 text-violet-200"
                   : "glass-sm text-[#5c5c8a] hover:text-[#a8a8d0]"
@@ -134,8 +267,8 @@ function RegisterForm({ onBack }) {
         </div>
       </div>
 
-      <p className="text-[11px] text-[#5c5c8a] flex items-center gap-1">
-        <Lock className="w-3 h-3 text-emerald-400" /> Your DOB is hashed with bcrypt — never stored as plaintext
+      <p className="text-[10px] text-[#5c5c8a] flex items-center gap-1">
+        <Lock className="w-3 h-3 text-emerald-400 flex-shrink-0" /> Encrypted credential storage via salted bcrypt
       </p>
 
       <Button type="submit" disabled={loading} className="w-full justify-center !py-2.5">
