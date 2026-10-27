@@ -22,7 +22,9 @@ import {
   ClipboardList,
   Zap,
   FileJson,
+  Activity,
 } from "lucide-react";
+import { ActivityTracker } from "@/components/telemetry/ActivityTracker";
 
 // ─── Auth Context ──────────────────────────────────────────────────────
 const AuthContext = createContext(null);
@@ -37,14 +39,15 @@ const studentNav = [
 ];
 
 const adminNav = [
-  { href: "/coe-admin/dashboard",   label: "Overview",    icon: LayoutDashboard },
-  { href: "/coe-admin/students",    label: "Students",    icon: Users },
-  { href: "/coe-admin/exams",       label: "Exams",       icon: CalendarDays },
-  { href: "/coe-admin/exam-setter", label: "Exam Setter", icon: Zap },
-  { href: "/coe-admin/syllabus",    label: "Syllabus",    icon: Layers },
-  { href: "/coe-admin/papers",      label: "Papers",      icon: ClipboardList },
-  { href: "/coe-admin/results",     label: "Marks",       icon: Award },
-  { href: "/coe-admin/import",      label: "JSON Import", icon: FileJson },
+  { href: "/coe-admin/dashboard",   label: "Overview",        icon: LayoutDashboard },
+  { href: "/coe-admin/history",     label: "History & Clicks", icon: Activity },
+  { href: "/coe-admin/students",    label: "Students",        icon: Users },
+  { href: "/coe-admin/exams",       label: "Exams",           icon: CalendarDays },
+  { href: "/coe-admin/exam-setter", label: "Exam Setter",     icon: Zap },
+  { href: "/coe-admin/syllabus",    label: "Syllabus",        icon: Layers },
+  { href: "/coe-admin/papers",      label: "Papers",          icon: ClipboardList },
+  { href: "/coe-admin/results",     label: "Marks",           icon: Award },
+  { href: "/coe-admin/import",      label: "JSON Import",     icon: FileJson },
 ];
 
 // ─── Sidebar ──────────────────────────────────────────────────────────
@@ -276,6 +279,9 @@ export function AppShell({ children }) {
   if (isExamMode) {
     return (
       <AuthContext.Provider value={user}>
+        {user?.role === "STUDENT" && (
+          <ActivityTracker studentRollNo={user.username} studentName={user.fullName} />
+        )}
         <div className="min-h-screen">{children}</div>
       </AuthContext.Provider>
     );
@@ -293,6 +299,9 @@ export function AppShell({ children }) {
   // Authenticated layout with sidebar
   return (
     <AuthContext.Provider value={user}>
+      {user?.role === "STUDENT" && (
+        <ActivityTracker studentRollNo={user.username} studentName={user.fullName} />
+      )}
       <div className="app-layout">
         <Sidebar
           user={user}

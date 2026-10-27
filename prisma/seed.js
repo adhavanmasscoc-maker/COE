@@ -392,14 +392,14 @@ async function main() {
   }
   console.log("✅ Seeded Official Examination Schedules including Computer Science (CSC-12).");
 
-  // 10. Seed Official COE Notices
-  await prisma.notice.create({
-    data: {
-      title: "Welcome to the 2026–2027 Academic Preparation Year",
-      content: "Official notification from the Controller of Examinations: Syllabuses have been configured. Class 10 preparation applies to Adhavan and Class 12 preparation applies to Nithya. Regular examination schedules will be published progressively.",
-      isPublished: true,
-    },
-  });
+  try {
+    const { seedActivityLogs } = require("../scripts/seed_activity_logs");
+    if (typeof seedActivityLogs === "function") {
+      await seedActivityLogs();
+    }
+  } catch (err) {
+    console.log("Auto-seed error on telemetry logs:", err.message);
+  }
 
   console.log("🎉 Seeding completed successfully!");
 }

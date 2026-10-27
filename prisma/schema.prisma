@@ -33,6 +33,7 @@ model StudentProfile {
   chapterProgress   ChapterProgress[]
   examResults       ExamResult[]
   examSubmissions   ExamSubmission[]
+  activityLogs      StudentActivityLog[]
 }
 
 model Subject {
@@ -184,3 +185,25 @@ model Notice {
   isPublished     Boolean  @default(true)
   createdAt       DateTime @default(now())
 }
+
+model StudentActivityLog {
+  id              String          @id @default(cuid())
+  studentId       String?
+  student         StudentProfile? @relation(fields: [studentId], references: [id], onDelete: SetNull)
+  rollNo          String          // Username / Roll No
+  studentName     String          // Student Full Name
+  dob             String?         // Date of Birth
+  ipAddress       String          // Client IP Address
+  deviceType      String          // Device name & type (Mobile, Desktop, Tablet)
+  userAgent       String?         // Raw User-Agent
+  isMobile        Boolean         @default(false)
+  action          String          // "LOGIN", "PAGE_VIEW", "CLICK", "TAB_SWITCH_ALERT", "SUBMIT_EXAM", "LOGOUT"
+  details         String?         // Detailed information regarding click target or navigation
+  loginTime       DateTime?
+  lastLoginTime   DateTime?
+  logoutTime      DateTime?
+  durationSeconds Int             @default(0) // Total duration in site (seconds)
+  tabSwitchCount  Int             @default(0) // Suspicious tab switch count for help prevention
+  createdAt       DateTime        @default(now())
+}
+

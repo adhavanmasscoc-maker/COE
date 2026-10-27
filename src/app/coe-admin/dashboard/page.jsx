@@ -9,7 +9,8 @@ import { StatCard } from "@/components/ui/Card";
 import {
   ShieldCheck, Users, Calendar, FileText, CheckCircle, PlusCircle,
   Eye, Award, Sparkles, RefreshCw, Loader2, AlertCircle,
-  Layers, Bell, BarChart3, ClipboardList, UserCheck, Clock, FileJson
+  Layers, Bell, BarChart3, ClipboardList, UserCheck, Clock, FileJson,
+  Activity, Smartphone
 } from "lucide-react";
 
 export default function COEAdminDashboardPage() {
@@ -114,6 +115,11 @@ export default function COEAdminDashboardPage() {
               )}
             </Button>
           </Link>
+          <Link href="/coe-admin/history">
+            <Button variant="secondary" size="sm" className="gap-1.5 border-amber-500/30 text-amber-300 hover:bg-amber-500/10">
+              <Activity className="w-4 h-4 text-amber-400" />Device & Click History
+            </Button>
+          </Link>
           <Link href="/coe-admin/exams">
             <Button variant="secondary" size="sm" className="gap-1.5"><Calendar className="w-4 h-4" />Exams</Button>
           </Link>
@@ -121,6 +127,29 @@ export default function COEAdminDashboardPage() {
             <Button variant="amber" size="sm" className="gap-1.5"><Award className="w-4 h-4" />Marks Entry</Button>
           </Link>
         </div>
+      </div>
+
+      {/* COE Live Device IP & Click Telemetry Notice Banner */}
+      <div className="p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-violet-500/10 to-indigo-500/10 border border-amber-500/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-float-up">
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+            <Smartphone className="w-5 h-5 text-amber-300" />
+          </div>
+          <div>
+            <div className="text-xs font-bold text-amber-300 flex items-center gap-2">
+              <span>Notice: Student Device IP & Telemetry Monitoring Active</span>
+              <span className="badge badge-emerald text-[9px] py-0">LIVE</span>
+            </div>
+            <p className="text-[11px] text-[#a8a8d0] mt-0.5">
+              Tracking student device IPs, browser hardware signatures, interactive clicks, and anti-cheat window focus to guarantee independent mobile attendance.
+            </p>
+          </div>
+        </div>
+        <Link href="/coe-admin/history" className="flex-shrink-0">
+          <Button variant="warning" size="sm" className="gap-1 text-xs font-bold">
+            <Activity className="w-3.5 h-3.5" /> View Live History & Table →
+          </Button>
+        </Link>
       </div>
 
       {/* Toast notification */}

@@ -5,6 +5,7 @@ import path from "path";
 import { db } from "@/lib/db";
 import { signSession, getSessionCookieOptions } from "@/lib/auth";
 import { checkRateLimit, resetRateLimit } from "@/lib/rateLimit";
+import { extractClientIp, parseDevice } from "@/lib/deviceTracker";
 
 export async function POST(request) {
   try {
@@ -111,7 +112,43 @@ export async function POST(request) {
 
     const token = await signSession(sessionPayload);
 
-    // 6. Return response with HTTP-only cookie
+    // 6. Record student login telemetry in SQLite database
+    try {
+      const ip = extractClientIp(request);
+      const userAgent = request.headers.get("user-agent") || "";
+      const device = parseDevice(userAgent);
+
+      // Find previous login to record lastLoginTime
+      const prevLogin = await db.studentActivityLog.findFirst({
+        where: { rollNo: cleanRollNo, action: "LOGIN" },
+        orderBy: { createdAt: "desc" },
+      });
+
+      await db.studentActivityLog.create({
+        data: {
+          studentId: user.profile.id,
+          rollNo: cleanRollNo,
+          studentName: user.profile.fullName,
+          dob: cleanDob,
+          ipAddress: ip,
+          deviceType: device.deviceType,
+          userAgent: userAgent,
+          isMobile: device.isMobile,
+          action: "LOGIN",
+          details: device.isMobile
+            ? "Candidate successfully authenticated via Mobile Device."
+            : "Candidate logged in via Desktop device.",
+          loginTime: new Date(),
+          lastLoginTime: prevLogin ? prevLogin.createdAt : null,
+          durationSeconds: 0,
+          tabSwitchCount: 0,
+        },
+      });
+    } catch (telemetryErr) {
+      console.warn("Could not log student login telemetry:", telemetryErr.message);
+    }
+
+    // 7. Return response with HTTP-only cookie
     const response = NextResponse.json({
       success: true,
       message: `Welcome, ${user.profile.fullName}!`,
