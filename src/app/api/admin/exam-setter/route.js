@@ -60,7 +60,7 @@ const DEFAULT_SUBJECT_NAMES = {
 
 async function processSingleExam(payload) {
   const subjectCode = (payload.subjectCode || "GEN-10").toUpperCase().trim();
-  const prepClass = parseInt(payload.prepClass, 10) || 10;
+  const prepClass = parseInt(payload.prepClass ?? payload.standard, 10) || 10;
   const rawDuration = payload.durationMinutes ?? payload.time ?? payload.duration ?? 180;
   const durationMinutes = parseFlexibleDuration(rawDuration) || 180;
   const totalMarks = parseInt(payload.totalMarks, 10) || 100;
@@ -165,19 +165,40 @@ async function processSingleExam(payload) {
     },
   });
 
-  // 4. Create Questions if provided
-  const questions = Array.isArray(payload.questions) ? payload.questions : [];
+  // 4. Create Questions if provided (support direct questions or questions nested in sections)
+  let questions = Array.isArray(payload.questions) ? [...payload.questions] : [];
+  if (questions.length === 0 && Array.isArray(payload.sections)) {
+    for (const sec of payload.sections) {
+      if (Array.isArray(sec.questions)) {
+        questions.push(...sec.questions);
+      }
+    }
+  }
+
+  const evalKey = payload.postExamEvaluationKey || {};
   let createdQuestionsCount = 0;
   let workedSolutionSteps = [];
 
   for (let i = 0; i < questions.length; i++) {
     const q = questions[i];
-    const qNum = q.questionNumber || i + 1;
-    const qText = q.questionText || `Question ${qNum}`;
+    const rawNum = typeof q.questionNumber === "number" ? q.questionNumber : parseInt(String(q.questionNumber || "").replace(/\D/g, ""), 10);
+    const qNum = (!isNaN(rawNum) && rawNum > 0) ? rawNum : (i + 1);
+    let qText = q.questionText || `Question ${qNum}`;
+    if (typeof q.questionNumber === "string" && !qText.startsWith(q.questionNumber)) {
+      qText = `[Q.${q.questionNumber}] ${qText}`;
+    }
     const qMarks = parseInt(q.marks, 10) || 1;
-    const qCorrect = q.correctAnswer ? String(q.correctAnswer).toUpperCase() : "A";
+    
+    // Check direct answer or lookup from postExamEvaluationKey
+    const keyInfo = (q.questionId && evalKey[q.questionId]) ? evalKey[q.questionId] : {};
+    const qCorrect = q.correctAnswer
+      ? String(q.correctAnswer).toUpperCase()
+      : (keyInfo.correctOption ? String(keyInfo.correctOption).toUpperCase() : "A");
+
     const qExplanation =
-      q.explanation || `Correct Answer: Option ${qCorrect}. Verified by COE Examination Board.`;
+      q.explanation ||
+      keyInfo.explanation ||
+      (keyInfo.modelAnswer ? keyInfo.modelAnswer : `Correct Answer: Option ${qCorrect}. Verified by COE Examination Board.`);
 
     // Standardize options
     let formattedOptions = [];

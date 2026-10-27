@@ -1,0 +1,26 @@
+================================================================================
+             DYNAMIC EXAM SITE - COMPLETE CONVERSATION ARCHIVE                  
+================================================================================
+
+This folder contains human-readable text exports of all AI pair-programming
+sessions related to the Aknex COE Examination Portal (d:\DYNAMIC EXAM SITE).
+
+ARCHIVED SESSIONS:
+--------------------------------------------------------------------------------
+1. 1_MAIN_EXAM_PORTAL_SESSION_884387c4.txt
+   Title:   Aknex COE Examination Portal - Main Full Implementation
+   UUID:    884387c4-bbff-4b94-a621-f26ee7ea4f09
+
+2. 2_RECOVERY_SESSION_1_46c4922a.txt
+   Title:   Lost Chat History Investigation & Diagnostic Recovery
+   UUID:    46c4922a-f93e-49fa-9921-49ef209f0c25
+
+3. 3_RECOVERY_SESSION_2_eaeb9fa7.txt
+   Title:   Lost IDE Session & WAL Database Inspection
+   UUID:    eaeb9fa7-c618-4cde-81f2-eff6aaa71973
+
+4. 4_CURRENT_RECOVERY_SESSION_dc7cb673.txt
+   Title:   Method 3 Database Recovery & URI Bug Normalization
+   UUID:    dc7cb673-ddfa-4f10-92d3-2bd106aeaf60
+
+================================================================================

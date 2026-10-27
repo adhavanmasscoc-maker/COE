@@ -31,7 +31,7 @@ export async function POST(request) {
     if (type === "exams") {
       for (const item of data) {
         const subjectCode = (item.subjectCode || "CSC-12").toUpperCase().trim();
-        const prepClass = parseInt(item.prepClass, 10) || 12;
+        const prepClass = parseInt(item.prepClass ?? item.standard, 10) || 12;
         const examDate = item.examDate ? new Date(item.examDate) : new Date();
         const durationMinutes = parseInt(item.durationMinutes, 10) || 60;
         const totalMarks = parseInt(item.totalMarks, 10) || 15;
@@ -100,16 +100,37 @@ export async function POST(request) {
           },
         });
 
-        // Create Questions
-        if (Array.isArray(item.questions)) {
-          for (let i = 0; i < item.questions.length; i++) {
-            const q = item.questions[i];
-            const qNum = q.questionNumber || i + 1;
-            const qText = q.questionText || `Question ${qNum}`;
+        // Create Questions (support direct questions or questions nested in sections)
+        let questionsToImport = Array.isArray(item.questions) ? [...item.questions] : [];
+        if (questionsToImport.length === 0 && Array.isArray(item.sections)) {
+          for (const sec of item.sections) {
+            if (Array.isArray(sec.questions)) {
+              questionsToImport.push(...sec.questions);
+            }
+          }
+        }
+
+        const evalKey = item.postExamEvaluationKey || {};
+        if (questionsToImport.length > 0) {
+          for (let i = 0; i < questionsToImport.length; i++) {
+            const q = questionsToImport[i];
+            const rawNum = typeof q.questionNumber === "number" ? q.questionNumber : parseInt(String(q.questionNumber || "").replace(/\D/g, ""), 10);
+            const qNum = (!isNaN(rawNum) && rawNum > 0) ? rawNum : (i + 1);
+            let qText = q.questionText || `Question ${qNum}`;
+            if (typeof q.questionNumber === "string" && !qText.startsWith(q.questionNumber)) {
+              qText = `[Q.${q.questionNumber}] ${qText}`;
+            }
             const qMarks = parseInt(q.marks, 10) || 1;
-            const qCorrect = q.correctAnswer ? String(q.correctAnswer).toUpperCase() : "A";
+            
+            const keyInfo = (q.questionId && evalKey[q.questionId]) ? evalKey[q.questionId] : {};
+            const qCorrect = q.correctAnswer
+              ? String(q.correctAnswer).toUpperCase()
+              : (keyInfo.correctOption ? String(keyInfo.correctOption).toUpperCase() : "A");
+
             const qExplanation =
-              q.explanation || `Correct Answer: Option ${qCorrect}. Verified by COE Examiner.`;
+              q.explanation ||
+              keyInfo.explanation ||
+              (keyInfo.modelAnswer ? keyInfo.modelAnswer : `Correct Answer: Option ${qCorrect}. Verified by COE Examiner.`);
 
             let formattedOptions = [];
             if (Array.isArray(q.options)) {

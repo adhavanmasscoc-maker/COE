@@ -358,7 +358,7 @@ async function main() {
   console.log("✅ Seeded Official Question Papers & COE Worked Solutions with DGE source attribution.");
 
   // 9. Seed Examination Schedules (Draft & Published)
-  await prisma.examSchedule.create({
+  const math10Schedule = await prisma.examSchedule.create({
     data: {
       subjectId: math10.id,
       prepClass: 10,
@@ -367,6 +367,48 @@ async function main() {
       totalMarks: 100,
       instructions: "Calculators are strictly prohibited. Formula sheets must not be brought into the hall.",
       status: "PUBLISHED",
+      questions: {
+        create: [
+          {
+            questionNumber: 1,
+            questionText: "If n(A x B) = 6 and A = {1, 3}, then the cardinal number n(B) is:",
+            marks: 1,
+            options: JSON.stringify([
+              { id: "A", text: "1" },
+              { id: "B", text: "2" },
+              { id: "C", text: "3" },
+              { id: "D", text: "6" }
+            ]),
+            correctAnswer: "C",
+            explanation: "n(A x B) = n(A) x n(B) => 6 = 2 x n(B) => n(B) = 3."
+          },
+          {
+            questionNumber: 2,
+            questionText: "The least common multiple of all integers from 1 to 10 inclusive is:",
+            marks: 1,
+            options: JSON.stringify([
+              { id: "A", text: "2025" },
+              { id: "B", text: "2520" },
+              { id: "C", text: "5040" },
+              { id: "D", text: "1000" }
+            ]),
+            correctAnswer: "B",
+            explanation: "Prime factorization: 2^3 x 3^2 x 5 x 7 = 2520."
+          }
+        ]
+      }
+    },
+  });
+
+  // Seed Brother's published Mathematics exam result
+  await prisma.examResult.create({
+    data: {
+      studentId: brotherProfile.id,
+      examScheduleId: math10Schedule.id,
+      marksObtained: 94.0,
+      maxMarks: 100.0,
+      remarks: "Outstanding Performance in Mathematics",
+      isPublished: true,
     },
   });
 

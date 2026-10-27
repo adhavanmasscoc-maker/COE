@@ -1,0 +1,528 @@
+{
+  "systemModule": "PRACTICE_EXAM_ENGINE",
+  "version": "2.0",
+  "feedbackMode": "IMMEDIATE_POST_SUBMIT_OR_PER_QUESTION",
+  "purpose": "Interactive self-assessment and continuous curriculum revision with real-time worked solutions.",
+  "practiceModules": [
+    {
+      "practiceId": "PRAC-10-MAT-01",
+      "standard": 10,
+      "subjectCode": "MAT-10",
+      "subjectName": "Mathematics",
+      "topic": "Relations, Functions & Modular Arithmetic",
+      "unitNumber": 1,
+      "totalQuestions": 5,
+      "questions": [
+        {
+          "questionId": "PQ-10M-01",
+          "questionNumber": 1,
+          "questionText": "If n(A × B) = 6 and A = {1, 3}, then the cardinal number n(B) is:",
+          "options": [
+            {
+              "id": "A",
+              "text": "1"
+            },
+            {
+              "id": "B",
+              "text": "2"
+            },
+            {
+              "id": "C",
+              "text": "3"
+            },
+            {
+              "id": "D",
+              "text": "6"
+            }
+          ],
+          "correctAnswer": "C",
+          "instantExplanation": "n(A × B) = n(A) × n(B). Given n(A) = 2 and n(A × B) = 6, 6 = 2 × n(B) => n(B) = 3.",
+          "conceptTag": "Cartesian Products & Cardinality",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-10M-02",
+          "questionNumber": 2,
+          "questionText": "What is the least common multiple (LCM) of all integers from 1 to 10 inclusive?",
+          "options": [
+            {
+              "id": "A",
+              "text": "2025"
+            },
+            {
+              "id": "B",
+              "text": "2520"
+            },
+            {
+              "id": "C",
+              "text": "5040"
+            },
+            {
+              "id": "D",
+              "text": "1000"
+            }
+          ],
+          "correctAnswer": "B",
+          "instantExplanation": "Prime factorization: 2^3 × 3^2 × 5 × 7 = 8 × 9 × 5 × 7 = 2520.",
+          "conceptTag": "Fundamental Theorem of Arithmetic",
+          "difficultyLevel": "Medium",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-10M-03",
+          "questionNumber": 3,
+          "questionText": "In an Arithmetic Progression, if the 3rd term is 16 and the 7th term is 32, what is the common difference d?",
+          "options": [
+            {
+              "id": "A",
+              "text": "2"
+            },
+            {
+              "id": "B",
+              "text": "4"
+            },
+            {
+              "id": "C",
+              "text": "6"
+            },
+            {
+              "id": "D",
+              "text": "8"
+            }
+          ],
+          "correctAnswer": "B",
+          "instantExplanation": "t7 - t3 = 4d => 32 - 16 = 16 => 4d = 16 => d = 4.",
+          "conceptTag": "Arithmetic Progressions",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-10M-04",
+          "questionNumber": 4,
+          "questionText": "What is the remainder when 3^2026 is divided by 5?",
+          "options": [
+            {
+              "id": "A",
+              "text": "1"
+            },
+            {
+              "id": "B",
+              "text": "2"
+            },
+            {
+              "id": "C",
+              "text": "3"
+            },
+            {
+              "id": "D",
+              "text": "4"
+            }
+          ],
+          "correctAnswer": "D",
+          "instantExplanation": "Powers of 3 modulo 5 cycle every 4 powers: 3^1=3, 3^2=4, 3^3=2, 3^4=1. 2026 mod 4 = 2. Hence 3^2026 ≡ 3^2 = 4 (mod 5).",
+          "conceptTag": "Modular Arithmetic & Congruence",
+          "difficultyLevel": "Challenging",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-10M-05",
+          "questionNumber": 5,
+          "questionText": "If the discriminant Δ = b^2 - 4ac > 0 and is not a perfect square, the roots of the quadratic equation are:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Real, rational and equal"
+            },
+            {
+              "id": "B",
+              "text": "Real, irrational and unequal"
+            },
+            {
+              "id": "C",
+              "text": "Real, rational and unequal"
+            },
+            {
+              "id": "D",
+              "text": "Non-real complex roots"
+            }
+          ],
+          "correctAnswer": "B",
+          "instantExplanation": "When Δ > 0 and not a square, the square root √Δ remains irrational, giving conjugate irrational roots.",
+          "conceptTag": "Nature of Quadratic Roots",
+          "difficultyLevel": "Medium",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "practiceId": "PRAC-10-SCI-01",
+      "standard": 10,
+      "subjectCode": "SCI-10",
+      "subjectName": "Science",
+      "topic": "Laws of Motion, Electricity & Periodic Classification",
+      "unitNumber": 1,
+      "totalQuestions": 5,
+      "questions": [
+        {
+          "questionId": "PQ-10S-01",
+          "questionNumber": 1,
+          "questionText": "The linear momentum of a body of mass 5 kg moving with a uniform velocity of 10 m/s is:",
+          "options": [
+            {
+              "id": "A",
+              "text": "2 N s"
+            },
+            {
+              "id": "B",
+              "text": "50 N s"
+            },
+            {
+              "id": "C",
+              "text": "0.5 N s"
+            },
+            {
+              "id": "D",
+              "text": "500 N s"
+            }
+          ],
+          "correctAnswer": "B",
+          "instantExplanation": "Linear momentum p = m * v = 5 kg * 10 m/s = 50 kg·m/s = 50 N·s.",
+          "conceptTag": "Newton's Second Law & Momentum",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-10S-02",
+          "questionNumber": 2,
+          "questionText": "According to Ohm's Law, the graph plotted between current (I) on x-axis and potential difference (V) on y-axis is a:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Parabola curving upward"
+            },
+            {
+              "id": "B",
+              "text": "Hyperbola"
+            },
+            {
+              "id": "C",
+              "text": "Straight line passing through the origin"
+            },
+            {
+              "id": "D",
+              "text": "Circular curve"
+            }
+          ],
+          "correctAnswer": "C",
+          "instantExplanation": "Since V = I * R with R constant, V is directly proportional to I, yielding a linear straight line through origin with slope = R.",
+          "conceptTag": "Ohm's Law & Electric Circuits",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-10S-03",
+          "questionNumber": 3,
+          "questionText": "Which gas is released during photosynthesis in the light-dependent reaction by photolysis of water?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Carbon Dioxide"
+            },
+            {
+              "id": "B",
+              "text": "Oxygen"
+            },
+            {
+              "id": "C",
+              "text": "Nitrogen"
+            },
+            {
+              "id": "D",
+              "text": "Methane"
+            }
+          ],
+          "correctAnswer": "B",
+          "instantExplanation": "Photolysis splits water: 2H2O -> 4H+ + 4e- + O2↑, releasing oxygen gas into the atmosphere.",
+          "conceptTag": "Plant Physiology & Photosynthesis",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-10S-04",
+          "questionNumber": 4,
+          "questionText": "What is the pH value of pure distilled water at 25°C?",
+          "options": [
+            {
+              "id": "A",
+              "text": "0"
+            },
+            {
+              "id": "B",
+              "text": "7"
+            },
+            {
+              "id": "C",
+              "text": "14"
+            },
+            {
+              "id": "D",
+              "text": "1"
+            }
+          ],
+          "correctAnswer": "B",
+          "instantExplanation": "Pure water auto-ionizes with [H+] = 10^-7 M, giving pH = -log(10^-7) = 7 (neutral).",
+          "conceptTag": "Acids, Bases and Salts - pH Scale",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-10S-05",
+          "questionNumber": 5,
+          "questionText": "Which group in the modern periodic table contains the Halogens?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Group 1"
+            },
+            {
+              "id": "B",
+              "text": "Group 16"
+            },
+            {
+              "id": "C",
+              "text": "Group 17"
+            },
+            {
+              "id": "D",
+              "text": "Group 18"
+            }
+          ],
+          "correctAnswer": "C",
+          "instantExplanation": "Group 17 elements (F, Cl, Br, I, At) have 7 valence electrons and are known as Halogens (salt-formers).",
+          "conceptTag": "Periodic Classification of Elements",
+          "difficultyLevel": "Medium",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "practiceId": "PRAC-12-CSC-01",
+      "standard": 12,
+      "subjectCode": "CSC-12",
+      "subjectName": "Computer Science",
+      "topic": "Python Core, Data Structures & Relational SQL",
+      "unitNumber": 1,
+      "totalQuestions": 5,
+      "questions": [
+        {
+          "questionId": "PQ-12C-01",
+          "questionNumber": 1,
+          "questionText": "What will be the output of the Python expression: str1 = 'COMPUTER'; print(str1[2:6])?",
+          "options": [
+            {
+              "id": "A",
+              "text": "MPUT"
+            },
+            {
+              "id": "B",
+              "text": "MPUTE"
+            },
+            {
+              "id": "C",
+              "text": "OMPU"
+            },
+            {
+              "id": "D",
+              "text": "COMP"
+            }
+          ],
+          "correctAnswer": "A",
+          "instantExplanation": "str1[2:6] extracts slice indices 2, 3, 4, 5: str1[2]='M', str1[3]='P', str1[4]='U', str1[5]='T' -> 'MPUT'.",
+          "conceptTag": "Python String Slicing",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-12C-02",
+          "questionNumber": 2,
+          "questionText": "Which SQL command permanently removes a table along with its schema structure from the database?",
+          "options": [
+            {
+              "id": "A",
+              "text": "DELETE"
+            },
+            {
+              "id": "B",
+              "text": "TRUNCATE"
+            },
+            {
+              "id": "C",
+              "text": "DROP TABLE"
+            },
+            {
+              "id": "D",
+              "text": "REMOVE"
+            }
+          ],
+          "correctAnswer": "C",
+          "instantExplanation": "DROP TABLE drops the complete table definition and all rows permanently. TRUNCATE deletes rows but keeps the table structure.",
+          "conceptTag": "SQL DDL Commands",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-12C-03",
+          "questionNumber": 3,
+          "questionText": "In Python, which built-in function returns a list containing all the attributes and methods of an object?",
+          "options": [
+            {
+              "id": "A",
+              "text": "type()"
+            },
+            {
+              "id": "B",
+              "text": "dir()"
+            },
+            {
+              "id": "C",
+              "text": "help()"
+            },
+            {
+              "id": "D",
+              "text": "id()"
+            }
+          ],
+          "correctAnswer": "B",
+          "instantExplanation": "dir(object) introspects and lists all valid attributes, properties, and methods associated with the object.",
+          "conceptTag": "Python Object Introspection",
+          "difficultyLevel": "Medium",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-12C-04",
+          "questionNumber": 4,
+          "questionText": "What is the best-case time complexity of the Binary Search algorithm?",
+          "options": [
+            {
+              "id": "A",
+              "text": "O(n)"
+            },
+            {
+              "id": "B",
+              "text": "O(log n)"
+            },
+            {
+              "id": "C",
+              "text": "O(1)"
+            },
+            {
+              "id": "D",
+              "text": "O(n log n)"
+            }
+          ],
+          "correctAnswer": "C",
+          "instantExplanation": "In best case, the target element is located at the exact middle index in the very first comparison, taking O(1) constant time.",
+          "conceptTag": "Algorithm Complexity - Binary Search",
+          "difficultyLevel": "Medium",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-12C-05",
+          "questionNumber": 5,
+          "questionText": "Which clause in SQL is used in conjunction with aggregate functions (SUM, AVG, COUNT) to apply filter criteria on grouped results?",
+          "options": [
+            {
+              "id": "A",
+              "text": "WHERE"
+            },
+            {
+              "id": "B",
+              "text": "HAVING"
+            },
+            {
+              "id": "C",
+              "text": "ORDER BY"
+            },
+            {
+              "id": "D",
+              "text": "LIMIT"
+            }
+          ],
+          "correctAnswer": "B",
+          "instantExplanation": "WHERE filters rows before aggregation; HAVING filters aggregate groups after the GROUP BY clause is evaluated.",
+          "conceptTag": "SQL Aggregate Functions & Filtering",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "practiceId": "PRAC-12-PHY-01",
+      "standard": 12,
+      "subjectCode": "PHY-12",
+      "subjectName": "Physics",
+      "topic": "Electrostatics, Capacitors & Current Electricity",
+      "unitNumber": 1,
+      "totalQuestions": 4,
+      "questions": [
+        {
+          "questionId": "PQ-12P-01",
+          "questionNumber": 1,
+          "questionText": "When three capacitors of capacitances C1, C2, C3 are connected in series, the equivalent capacitance C_s is given by:",
+          "options": [
+            {
+              "id": "A",
+              "text": "C1 + C2 + C3"
+            },
+            {
+              "id": "B",
+              "text": "1/C1 + 1/C2 + 1/C3"
+            },
+            {
+              "id": "C",
+              "text": "1 / (1/C1 + 1/C2 + 1/C3)"
+            },
+            {
+              "id": "D",
+              "text": "(C1 * C2 * C3) / (C1 + C2 + C3)"
+            }
+          ],
+          "correctAnswer": "C",
+          "instantExplanation": "In series connection, 1/C_s = 1/C1 + 1/C2 + 1/C3 => C_s = 1 / (1/C1 + 1/C2 + 1/C3).",
+          "conceptTag": "Capacitors in Series & Parallel",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        },
+        {
+          "questionId": "PQ-12P-02",
+          "questionNumber": 2,
+          "questionText": "Kirchhoff's First Law (Junction Rule) is a direct consequence of the conservation of:",
+          "options": [
+            {
+              "id": "A",
+              "text": "Energy"
+            },
+            {
+              "id": "B",
+              "text": "Electric Charge"
+            },
+            {
+              "id": "C",
+              "text": "Linear Momentum"
+            },
+            {
+              "id": "D",
+              "text": "Angular Momentum"
+            }
+          ],
+          "correctAnswer": "B",
+          "instantExplanation": "Kirchhoff's Current Law states net charge cannot accumulate at a junction: sum of entering currents = sum of leaving currents.",
+          "conceptTag": "Kirchhoff's Laws & Circuits",
+          "difficultyLevel": "Easy",
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}

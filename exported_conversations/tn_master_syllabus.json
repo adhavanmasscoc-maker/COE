@@ -1,0 +1,1598 @@
+{
+  "systemModule": "TN_MASTER_CURRICULUM_SYLLABUS",
+  "version": "2.0",
+  "stateBoard": "Tamil Nadu State Board of School Examination (DGE)",
+  "unifiedCodingStandard": {
+    "rule": "SUB-STD where SUB is 3-letter uppercase subject mnemonic and STD is 10 or 12.",
+    "standard10Codes": [
+      "TAM-10",
+      "ENG-10",
+      "MAT-10",
+      "SCI-10",
+      "SOC-10"
+    ],
+    "standard12Codes": [
+      "TAM-12",
+      "ENG-12",
+      "MAT-12",
+      "PHY-12",
+      "CHE-12",
+      "CSC-12",
+      "BIO-12",
+      "BOT-12",
+      "ZOO-12",
+      "COM-12",
+      "ACC-12",
+      "ECO-12",
+      "BMT-12"
+    ]
+  },
+  "standards": [
+    {
+      "standard": 10,
+      "label": "10th Standard (SSLC)",
+      "totalSubjects": 5,
+      "subjects": [
+        {
+          "subjectCode": "TAM-10",
+          "name": "Language (Tamil)",
+          "medium": "Tamil",
+          "unitsCount": 9,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "மொழி - அமிழ்தே ஊற்றே",
+              "coreConcepts": [
+                "அன்னை மொழியே",
+                "தமிழ்ச் சொல் வளம்",
+                "இரட்டுற மொழிதல்",
+                "எழுத்து, சொல் இலக்கணம்"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "இயற்கை - உயிரின் வேர்",
+              "coreConcepts": [
+                "காற்றே வா",
+                "முல்லைப் பாட்டு",
+                "புயலிலே ஒரு தோணி",
+                "தொகைநிலைத் தொடர்கள்"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "பண்பாடு - கூட்டாஞ்சோறு",
+              "coreConcepts": [
+                "விருந்தோம்பல்",
+                "காசிக் காண்டம்",
+                "மலைபடுகடாம்",
+                "தொகாநிலைத் தொடர்கள்"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "அறிவியல், தொழில்நுட்பம் - நான்காம் தொழில்",
+              "coreConcepts": [
+                "செயற்கை நுண்ணறிவு",
+                "பெருமாள் திருமொழி",
+                "பரிபாடல்",
+                "வழு, வழாநிலை, வழுவமைதி"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "கல்வி - மணற்கேணி",
+              "coreConcepts": [
+                "மொழிபெயர்ப்புக் கல்வி",
+                "நீதி வெண்பா",
+                "திருக்குறள்",
+                "வினா, விடை வகைகள்"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "கலை - நிலா முற்றம்",
+              "coreConcepts": [
+                "நிகழ்கலை",
+                "பூத்தொடுத்தல்",
+                "முத்துக்குமாரசாமி பிள்ளைத்தமிழ்",
+                "அகப்பொருள் இலக்கணம்"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "நாகரிகம், தொழில் - விதைநெல்",
+              "coreConcepts": [
+                "சிற்றகல் ஒளி",
+                "ஏர் புதிதா",
+                "மெய்க்கீர்த்தி",
+                "புறப்பொருள் வெண்பாமாலை"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "அறம், தத்துவம் - பெருவழி",
+              "coreConcepts": [
+                "சங்க இலக்கியத்தில் அறம்",
+                "ஞானம்",
+                "காலக்கணிதம்",
+                "யாப்பிலக்கணம்"
+              ]
+            },
+            {
+              "unitNumber": 9,
+              "title": "மனிதம் - அன்பின் மொழி",
+              "coreConcepts": [
+                "ஜெயகாந்தன் நினைவுகள்",
+                "சித்தாள்",
+                "தேம்பாவணி",
+                "அணியிலக்கணம்"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "ENG-10",
+          "name": "English",
+          "medium": "English",
+          "unitsCount": 7,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Courage and Perseverance",
+              "coreConcepts": [
+                "His First Flight (Prose)",
+                "Life (Poem)",
+                "The Tempest (Supplementary)",
+                "Tenses and Modals"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Family and Humor",
+              "coreConcepts": [
+                "The Night the Ghost Got In",
+                "The Grumble Family",
+                "Zigzag",
+                "Articles and Prepositions"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Women Empowerment and Valour",
+              "coreConcepts": [
+                "Empowered Women Navigating the World",
+                "I am Every Woman",
+                "The Story of Mulan",
+                "Active and Passive Voice"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Science, Tech and Space",
+              "coreConcepts": [
+                "The Attic",
+                "The Ant and the Cricket",
+                "The Aged Mother",
+                "Conditionals (If-clauses)"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Social Awareness and Inclusion",
+              "coreConcepts": [
+                "Tech Bloomers",
+                "The Secret of the Machines",
+                "A Dilemma",
+                "Degrees of Comparison"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "Art and Human Values",
+              "coreConcepts": [
+                "The Last Lesson",
+                "No Men Are Foreign",
+                "The Little Hero of Haarlem",
+                "Simple, Compound, Complex Sentences"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "Mystery and Courage",
+              "coreConcepts": [
+                "The Dying Detective",
+                "The House on Elm Street",
+                "A Close Encounter",
+                "Direct and Indirect Speech"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "MAT-10",
+          "name": "Mathematics",
+          "medium": "English",
+          "unitsCount": 8,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Relations and Functions",
+              "coreConcepts": [
+                "Cartesian Product",
+                "Relations and Representations",
+                "Functions, Domain, Codomain",
+                "Composition of Functions"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Numbers and Sequences",
+              "coreConcepts": [
+                "Euclid's Division Lemma & Algorithm",
+                "Fundamental Theorem of Arithmetic",
+                "Modular Arithmetic",
+                "Arithmetic and Geometric Progressions (AP/GP)"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Algebra",
+              "coreConcepts": [
+                "Simultaneous Linear Equations in 3 Variables",
+                "GCD and LCM of Polynomials",
+                "Square Root of Polynomials",
+                "Quadratic Equations and Graphs",
+                "Matrices and Operations"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Geometry",
+              "coreConcepts": [
+                "Similarity of Triangles",
+                "Basic Proportionality Theorem (Thales)",
+                "Angle Bisector Theorem",
+                "Pythagoras Theorem",
+                "Circles and Tangents"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Coordinate Geometry",
+              "coreConcepts": [
+                "Area of Triangle and Quadrilateral",
+                "Slope of Straight Line",
+                "Equations of Straight Lines",
+                "Parallel and Perpendicular Lines"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "Trigonometry",
+              "coreConcepts": [
+                "Trigonometric Identities",
+                "Heights and Distances",
+                "Angle of Elevation and Depression",
+                "Problems with Multi-Observer Sightings"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "Mensuration",
+              "coreConcepts": [
+                "Surface Area of Cylinder, Cone, Sphere",
+                "Volume of Solids",
+                "Volume and Surface Area of Frustum",
+                "Melting and Recasting of Solids"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "Statistics and Probability",
+              "coreConcepts": [
+                "Measures of Dispersion (Range, Standard Deviation, Variance)",
+                "Coefficient of Variation",
+                "Classical Probability",
+                "Addition Theorem of Probability"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "SCI-10",
+          "name": "Science",
+          "medium": "English",
+          "unitsCount": 23,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Laws of Motion (Physics)",
+              "coreConcepts": [
+                "Inertia and Types",
+                "Newton's Three Laws of Motion",
+                "Linear Momentum & Impulse",
+                "Principle of Conservation of Momentum"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Optics (Physics)",
+              "coreConcepts": [
+                "Refraction of Light",
+                "Lenses and Lens Formula",
+                "Human Eye & Optical Defects",
+                "Microscopes and Telescopes"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Thermal Physics (Physics)",
+              "coreConcepts": [
+                "Temperature Scales",
+                "Thermal Energy Transfer",
+                "Boyle's, Charles's, and Avogadro's Laws",
+                "Ideal Gas Equation"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Electricity (Physics)",
+              "coreConcepts": [
+                "Electric Current & Potential Difference",
+                "Ohm's Law & Resistance",
+                "Resistors in Series and Parallel",
+                "Joule's Law of Heating & Electric Power"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Acoustics (Physics)",
+              "coreConcepts": [
+                "Sound Waves & Velocity",
+                "Reflection of Sound & Echoes",
+                "Doppler Effect & Applications"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "Nuclear Physics (Physics)",
+              "coreConcepts": [
+                "Radioactivity (Alpha, Beta, Gamma)",
+                "Nuclear Fission & Fusion",
+                "Nuclear Reactor Components",
+                "Radiation Safety & Dosages"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "Atoms and Molecules (Chemistry)",
+              "coreConcepts": [
+                "Relative Atomic and Molecular Mass",
+                "Mole Concept & Avogadro's Number",
+                "Molar Volume & Percentage Composition"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "Periodic Classification of Elements (Chemistry)",
+              "coreConcepts": [
+                "Modern Periodic Law",
+                "Groups and Periods",
+                "Periodic Trends (Atomic Radius, Ionization Energy, Electronegativity)",
+                "Metallurgy & Alloys"
+              ]
+            },
+            {
+              "unitNumber": 9,
+              "title": "Solutions (Chemistry)",
+              "coreConcepts": [
+                "Solute, Solvent & Solution Types",
+                "Solubility Factors",
+                "Mass and Volume Percentage"
+              ]
+            },
+            {
+              "unitNumber": 10,
+              "title": "Types of Chemical Reactions (Chemistry)",
+              "coreConcepts": [
+                "Combination, Decomposition, Displacement Reactions",
+                "Reversible & Irreversible Reactions",
+                "Rate of Reaction",
+                "pH Scale and Applications"
+              ]
+            },
+            {
+              "unitNumber": 11,
+              "title": "Carbon and its Compounds (Chemistry)",
+              "coreConcepts": [
+                "Covalent Bonding & Catenation",
+                "Functional Groups & Homologous Series",
+                "IUPAC Nomenclature of Organic Compounds",
+                "Ethanol and Ethanoic Acid Properties"
+              ]
+            },
+            {
+              "unitNumber": 12,
+              "title": "Plant Anatomy and Plant Physiology (Biology)",
+              "coreConcepts": [
+                "Plant Tissue Systems",
+                "Internal Structure of Dicot and Monocot Root & Stem",
+                "Plastids & Photosynthesis",
+                "Respiration in Plants"
+              ]
+            },
+            {
+              "unitNumber": 13,
+              "title": "Structural Organisation of Animals (Biology)",
+              "coreConcepts": [
+                "Morphology of Leech & Rabbit",
+                "Digestive and Circulatory Systems"
+              ]
+            },
+            {
+              "unitNumber": 14,
+              "title": "Transportation in Plants and Circulation in Animals (Biology)",
+              "coreConcepts": [
+                "Ascent of Sap & Transpiration",
+                "Blood Composition & Human Heart",
+                "Blood Pressure & ECG"
+              ]
+            },
+            {
+              "unitNumber": 15,
+              "title": "Nervous System (Biology)",
+              "coreConcepts": [
+                "Neuron Structure & Nerve Impulse",
+                "Central and Peripheral Nervous System",
+                "Reflex Arc"
+              ]
+            },
+            {
+              "unitNumber": 16,
+              "title": "Plant and Animal Hormones (Biology)",
+              "coreConcepts": [
+                "Auxins, Gibberellins, Cytokinins, Abscisic Acid",
+                "Pituitary, Thyroid, Pancreas, Adrenal Hormones"
+              ]
+            },
+            {
+              "unitNumber": 17,
+              "title": "Reproduction in Plants and Animals (Biology)",
+              "coreConcepts": [
+                "Vegetative Propagation & Pollination",
+                "Fertilization in Plants",
+                "Human Male and Female Reproductive Systems",
+                "Menstrual Cycle & Contraception"
+              ]
+            },
+            {
+              "unitNumber": 18,
+              "title": "Heredity (Biology)",
+              "coreConcepts": [
+                "Mendel's Monohybrid and Dihybrid Crosses",
+                "Chromosomes & DNA Structure",
+                "DNA Replication & Mutations"
+              ]
+            },
+            {
+              "unitNumber": 19,
+              "title": "Origin and Evolution of Life (Biology)",
+              "coreConcepts": [
+                "Theories of Evolution (Lamarckism, Darwinism)",
+                "Evidences of Evolution",
+                "Fossils & Paleontology"
+              ]
+            },
+            {
+              "unitNumber": 20,
+              "title": "Breeding and Biotechnology (Biology)",
+              "coreConcepts": [
+                "Plant and Animal Breeding Methods",
+                "Genetic Engineering & Recombinant DNA",
+                "DNA Fingerprinting"
+              ]
+            },
+            {
+              "unitNumber": 21,
+              "title": "Health and Diseases (Biology)",
+              "coreConcepts": [
+                "Communicable Diseases & Pathogens",
+                "Immunity & Immunization Schedule",
+                "Non-communicable Diseases (Diabetes, Cancer, AIDS)"
+              ]
+            },
+            {
+              "unitNumber": 22,
+              "title": "Environmental Management (Biology)",
+              "coreConcepts": [
+                "Renewable & Non-renewable Energy Resources",
+                "Conservation of Wildlife & Forests",
+                "Waste Water Management"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "SOC-10",
+          "name": "Social Science",
+          "medium": "English",
+          "unitsCount": 15,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Outbreak of World War I and Its Aftermath (History)",
+              "coreConcepts": [
+                "Imperialism & Scramble for Africa",
+                "Alliances & Causes of WWI",
+                "Treaty of Versailles",
+                "League of Nations"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "The World between Two World Wars (History)",
+              "coreConcepts": [
+                "The Great Depression of 1929",
+                "Rise of Fascism in Italy (Mussolini)",
+                "Rise of Nazism in Germany (Hitler)"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "World War II (History)",
+              "coreConcepts": [
+                "Causes & Major Battles of WWII",
+                "The Holocaust",
+                "Atomic Bombing of Hiroshima & Nagasaki",
+                "Establishment of the United Nations (UN)"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Anti-Colonial Movements and Decolonisation (History)",
+              "coreConcepts": [
+                "Nationalism in Indo-China",
+                "Decolonisation in Africa"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Social and Religious Reform Movements in the 19th Century (History)",
+              "coreConcepts": [
+                "Brahmo Samaj & Raja Ram Mohan Roy",
+                "Arya Samaj, Ramakrishna Mission",
+                "Reform Movements in Tamil Nadu (Periyar, Ramalingar, Ayothidhasar)"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "India - Location, Relief and Drainage (Geography)",
+              "coreConcepts": [
+                "Major Physiographic Divisions of India",
+                "Himalayas, Northern Plains, Peninsular Plateau",
+                "Himalayan and Peninsular River Systems"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "Climate and Natural Vegetation of India (Geography)",
+              "coreConcepts": [
+                "Factors affecting India's Climate",
+                "Southwest and Northeast Monsoons",
+                "Forest Types of India & Conservation"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "India - Agriculture (Geography)",
+              "coreConcepts": [
+                "Soil Types in India",
+                "Irrigation Methods",
+                "Major Food and Cash Crops",
+                "Green Revolution"
+              ]
+            },
+            {
+              "unitNumber": 9,
+              "title": "Indian Constitution (Civics)",
+              "coreConcepts": [
+                "Making of the Constitution",
+                "Preamble & Salient Features",
+                "Fundamental Rights and Duties",
+                "Directive Principles of State Policy",
+                "Writ Jurisdiction"
+              ]
+            },
+            {
+              "unitNumber": 10,
+              "title": "Central Government (Civics)",
+              "coreConcepts": [
+                "President, Vice-President, Prime Minister",
+                "Lok Sabha and Rajya Sabha Functions",
+                "Supreme Court of India & Judicial Review"
+              ]
+            },
+            {
+              "unitNumber": 11,
+              "title": "State Government (Civics)",
+              "coreConcepts": [
+                "Governor & Chief Minister",
+                "State Legislative Assembly",
+                "High Courts in India"
+              ]
+            },
+            {
+              "unitNumber": 12,
+              "title": "Gross Domestic Product and its Growth: An Introduction (Economics)",
+              "coreConcepts": [
+                "GDP Definition and Methods of Calculation",
+                "Sectors of Economy (Primary, Secondary, Tertiary)",
+                "Purchasing Power Parity (PPP)"
+              ]
+            },
+            {
+              "unitNumber": 13,
+              "title": "Globalization and Trade (Economics)",
+              "coreConcepts": [
+                "Historical Background of Trade",
+                "Multinational Corporations (MNCs)",
+                "World Trade Organization (WTO)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "standard": 12,
+      "label": "12th Standard (Higher Secondary)",
+      "totalSubjects": 12,
+      "subjects": [
+        {
+          "subjectCode": "TAM-12",
+          "name": "Language (Tamil)",
+          "medium": "Tamil",
+          "unitsCount": 8,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "உயிரினும் சிறந்தன்று (மொழி)",
+              "coreConcepts": [
+                "இளந்தமிழே",
+                "தமிழ்மொழியின் நடை அழகியல்",
+                "தன்னேர் இலாத தமிழ்",
+                "நால்வகைச் சொற்கள்"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "பெய்யெனப் பெய்யும் மழை (இயற்கை)",
+              "coreConcepts": [
+                "பிறகொரு நாள் கோடை",
+                "நெடுநல்வாடை",
+                "முதல் கல்",
+                "நால்வகை அணிகள்"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "சுற்றத்தார் கண்ணே உள (பண்பாடு)",
+              "coreConcepts": [
+                "விருந்தினர் இல்லம்",
+                "கம்பராமாயணம்",
+                "உரிமைத்தாகம்",
+                "பொருள்கோள் வகைகள்"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "செல்வத்துள் செல்வம் (கல்வி)",
+              "coreConcepts": [
+                "படைப்புக்கலை",
+                "திருக்குறள்",
+                "பா இயற்றப் பழகலாம்"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "நாடென்ப நாடா வளத்தன (நாடு, சமூகம்)",
+              "coreConcepts": [
+                "தெய்வமணிமாலை",
+                "தேவாரம்",
+                "அகநானூறு",
+                "தலைக்குளம்"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "சிறுகை அளாவிய கூழ் (கலை, அழகியல்)",
+              "coreConcepts": [
+                "சிற்பக்கலை",
+                "சிலப்பதிகாரம்",
+                "மெய்ப்பாட்டியல்"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "சான்றோர் மெய்ம்மறை (ஆளுமை)",
+              "coreConcepts": [
+                "இலக்கியத்தில் மேலாண்மை",
+                "புறநானூறு",
+                "குறைஒன்றுமில்லை"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "எல்லார்க்கும் எல்லாம் (வாழ்வியல்)",
+              "coreConcepts": [
+                "கோடைமழை",
+                "ரட்சணிய யாத்திரிகம்",
+                "சிறுபாணாற்றுப்படை"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "ENG-12",
+          "name": "English",
+          "medium": "English",
+          "unitsCount": 6,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Human Spirit and Dedication",
+              "coreConcepts": [
+                "Two Gentlemen of Verona (Prose)",
+                "The Castle (Poem)",
+                "God Sees the Truth, But Waits",
+                "Tenses and Modals"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Humor and Everyday Life",
+              "coreConcepts": [
+                "A Nice Cup of Tea",
+                "Our Casuarina Tree",
+                "Life of Pi",
+                "Prepositional Phrases"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Determination and Courage",
+              "coreConcepts": [
+                "In Celebration of Being Alive",
+                "All the World's a Stage",
+                "The Hour of Truth",
+                "Direct and Reported Speech"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Science and Environment",
+              "coreConcepts": [
+                "The Summit",
+                "Ulysses",
+                "The Midnight Visitor",
+                "Conditionals and Inversion"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Art and Literature",
+              "coreConcepts": [
+                "The Chair",
+                "A Father to his Son",
+                "All Summer in a Day",
+                "Concord and Relative Clauses"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "Values and Social Issues",
+              "coreConcepts": [
+                "On the Rule of the Road",
+                "Incident of the French Camp",
+                "A Man who had No Eyes",
+                "Question Tags and Idioms"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "MAT-12",
+          "name": "Mathematics",
+          "medium": "English",
+          "unitsCount": 12,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Applications of Matrices and Determinants",
+              "coreConcepts": [
+                "Adjoint and Inverse of a Matrix",
+                "Rank of a Matrix & Elementary Row Operations",
+                "Cramer's Rule, Matrix Inversion Method, Gaussian Elimination Method",
+                "Consistency of Linear Equations"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Complex Numbers",
+              "coreConcepts": [
+                "Algebraic Operations & Geometric Representation",
+                "Modulus, Argument & Polar Form",
+                "Euler's Form & De Moivre's Theorem",
+                "nth Roots of Unity"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Theory of Equations",
+              "coreConcepts": [
+                "Vieta's Formulas for Polynomials",
+                "Descartes' Rule of Signs",
+                "Roots of Real and Complex Polynomials"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Inverse Trigonometric Functions",
+              "coreConcepts": [
+                "Principal Domains and Ranges",
+                "Properties of Inverse Trigonometric Functions"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Two Dimensional Analytical Geometry-II",
+              "coreConcepts": [
+                "Parabola, Ellipse, Hyperbola Equations & Tangents",
+                "Applications in Real Life"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "Applications of Vector Algebra",
+              "coreConcepts": [
+                "Scalar and Vector Triple Products",
+                "Vector and Cartesian Equations of Lines and Planes",
+                "Skew Lines & Shortest Distance"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "Applications of Differential Calculus",
+              "coreConcepts": [
+                "Meaning of Derivative & Rates of Change",
+                "Rolle's Theorem & Mean Value Theorem",
+                "Taylor and Maclaurin Series",
+                "Maxima and Minima & Concavity"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "Differentials and Partial Derivatives",
+              "coreConcepts": [
+                "Linear Approximation",
+                "Euler's Theorem for Homogeneous Functions"
+              ]
+            },
+            {
+              "unitNumber": 9,
+              "title": "Applications of Integration",
+              "coreConcepts": [
+                "Definite Integrals & Properties",
+                "Bernoulli's Formula & Reduction Formulas",
+                "Area between Curves & Volume of Revolution"
+              ]
+            },
+            {
+              "unitNumber": 10,
+              "title": "Ordinary Differential Equations",
+              "coreConcepts": [
+                "Formation of Differential Equations",
+                "Variable Separable, Homogeneous and Linear Differential Equations"
+              ]
+            },
+            {
+              "unitNumber": 11,
+              "title": "Probability Distributions",
+              "coreConcepts": [
+                "Discrete and Continuous Random Variables",
+                "Probability Mass & Density Functions",
+                "Binomial Distribution & Bernoulli Trials"
+              ]
+            },
+            {
+              "unitNumber": 12,
+              "title": "Discrete Mathematics",
+              "coreConcepts": [
+                "Binary Operations & Properties",
+                "Truth Tables & Logical Equivalences",
+                "Tautology and Contradiction"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "PHY-12",
+          "name": "Physics",
+          "medium": "English",
+          "unitsCount": 11,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Electrostatics",
+              "coreConcepts": [
+                "Coulomb's Law & Principle of Superposition",
+                "Electric Field & Electric Dipole",
+                "Gauss's Law & Applications",
+                "Electrostatic Potential & Capacitors",
+                "Van de Graaff Generator"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Current Electricity",
+              "coreConcepts": [
+                "Ohm's Law, Drift Velocity & Mobility",
+                "Resistors & Temperature Dependence",
+                "Kirchhoff's Rules & Wheatstone's Bridge",
+                "Potentiometer Principles"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Magnetism and Magnetic Effects of Electric Current",
+              "coreConcepts": [
+                "Earth's Magnetism & Magnetic Materials",
+                "Biot-Savart Law & Ampere's Circuital Law",
+                "Force on Moving Charge & Cyclotron",
+                "Moving Coil Galvanometer"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Electromagnetic Induction and Alternating Current",
+              "coreConcepts": [
+                "Faraday's Laws & Lenz's Law",
+                "Self and Mutual Induction",
+                "AC Generator & Transformer",
+                "LCR Series Resonance Circuit"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Electromagnetic Waves",
+              "coreConcepts": [
+                "Displacement Current & Maxwell's Equations",
+                "Electromagnetic Spectrum & Characteristics"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "Optics",
+              "coreConcepts": [
+                "Ray Optics (Refraction, Total Internal Reflection, Prisms)",
+                "Wave Optics (Huygens' Principle, Interference, Young's Double Slit, Diffraction, Polarization)"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "Dual Nature of Radiation and Matter",
+              "coreConcepts": [
+                "Photoelectric Effect & Einstein's Photoelectric Equation",
+                "de Broglie Hypothesis & Davisson-Germer Experiment",
+                "Electron Microscope"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "Atomic and Nuclear Physics",
+              "coreConcepts": [
+                "Bohr Atom Model & Hydrogen Spectrum",
+                "Nuclear Binding Energy & Packing Fraction",
+                "Radioactive Decay Law (Half-life)",
+                "Nuclear Fission and Fusion"
+              ]
+            },
+            {
+              "unitNumber": 9,
+              "title": "Semiconductor Electronics",
+              "coreConcepts": [
+                "Energy Bands in Solids",
+                "p-n Junction Diode, Rectifiers & Zener Diode",
+                "Transistors (CE Configuration & Amplifier)",
+                "Logic Gates & De Morgan's Theorems"
+              ]
+            },
+            {
+              "unitNumber": 10,
+              "title": "Communication Systems",
+              "coreConcepts": [
+                "Modulation (AM, FM, PM)",
+                "Propagation of EM Waves (Ground, Sky, Space)",
+                "Fiber Optics & Satellite Communication"
+              ]
+            },
+            {
+              "unitNumber": 11,
+              "title": "Recent Developments in Physics",
+              "coreConcepts": [
+                "Nanoscience & Nanomaterials",
+                "Robotics, AI & Space Applications"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "CHE-12",
+          "name": "Chemistry",
+          "medium": "English",
+          "unitsCount": 15,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Metallurgy",
+              "coreConcepts": [
+                "Ores and Minerals",
+                "Concentration Methods (Froth Floatation, Leaching)",
+                "Thermodynamic Principles & Ellingham Diagram",
+                "Electrochemical Principles & Refining Methods"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "p-Block Elements - I",
+              "coreConcepts": [
+                "General Trends in Group 13 and 14",
+                "Borax, Boric Acid, Diborane",
+                "Allotropes of Carbon, Silicones and Silicates"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "p-Block Elements - II",
+              "coreConcepts": [
+                "Nitrogen and Phosphorus Compounds",
+                "Oxygen, Ozone and Oxides of Sulphur",
+                "Halogens and Interhalogen Compounds",
+                "Noble Gases & Xenon Fluorides"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Transition and Inner Transition Elements",
+              "coreConcepts": [
+                "Electronic Configurations & Variable Oxidation States",
+                "Magnetic Properties & Catalytic Behavior",
+                "Potassium Dichromate & Potassium Permanganate",
+                "Lanthanoid Contraction"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Coordination Chemistry",
+              "coreConcepts": [
+                "Werner's Theory & IUPAC Nomenclature",
+                "Isomerism in Coordination Compounds",
+                "Valence Bond Theory & Crystal Field Theory"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "Solid State",
+              "coreConcepts": [
+                "Classification of Solids (Crystalline & Amorphous)",
+                "Unit Cells (SC, BCC, FCC)",
+                "Bragg's Equation & Packing Efficiency",
+                "Crystal Defects (Schottky, Frenkel)"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "Chemical Kinetics",
+              "coreConcepts": [
+                "Rate of Reaction & Rate Law",
+                "Order and Molecularity",
+                "Integrated Rate Law (First & Zero Order)",
+                "Arrhenius Equation & Activation Energy"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "Ionic Equilibrium",
+              "coreConcepts": [
+                "Arrhenius, Bronsted-Lowry, Lewis Concepts",
+                "Ostwald's Dilution Law & Common Ion Effect",
+                "pH and pOH Calculations",
+                "Buffer Solutions & Henderson-Hasselbalch Equation",
+                "Solubility Product"
+              ]
+            },
+            {
+              "unitNumber": 9,
+              "title": "Electrochemistry",
+              "coreConcepts": [
+                "Specific, Equivalent and Molar Conductivity",
+                "Kohlrausch's Law & Applications",
+                "Galvanic Cells & Nernst Equation",
+                "Batteries & Corrosion"
+              ]
+            },
+            {
+              "unitNumber": 10,
+              "title": "Surface Chemistry",
+              "coreConcepts": [
+                "Physisorption and Chemisorption",
+                "Catalysis & Enzyme Catalysis",
+                "Colloids & Tyndall Effect"
+              ]
+            },
+            {
+              "unitNumber": 11,
+              "title": "Hydroxy Compounds and Ethers",
+              "coreConcepts": [
+                "Classification and Preparation of Alcohols & Phenols",
+                "Lucas Test, Victor Meyer Test",
+                "Mechanism of Kolbe's & Reimer-Tiemann Reactions",
+                "Williamson Ether Synthesis"
+              ]
+            },
+            {
+              "unitNumber": 12,
+              "title": "Carbonyl Compounds and Carboxylic Acids",
+              "coreConcepts": [
+                "Nomenclature & Preparation of Aldehydes & Ketones",
+                "Nucleophilic Addition Reactions",
+                "Aldol Condensation & Cannizzaro Reaction",
+                "Acidity of Carboxylic Acids"
+              ]
+            },
+            {
+              "unitNumber": 13,
+              "title": "Organic Nitrogen Compounds",
+              "coreConcepts": [
+                "Amines Preparation & Basicity",
+                "Carbylamine Reaction & Diazotization",
+                "Cyanides and Isocyanides"
+              ]
+            },
+            {
+              "unitNumber": 14,
+              "title": "Biomolecules",
+              "coreConcepts": [
+                "Carbohydrates (Glucose, Fructose Structure)",
+                "Amino Acids & Peptide Bonds",
+                "Proteins (Primary, Secondary, Tertiary Structure)",
+                "Nucleic Acids (DNA, RNA)",
+                "Vitamins & Hormones"
+              ]
+            },
+            {
+              "unitNumber": 15,
+              "title": "Chemistry in Everyday Life",
+              "coreConcepts": [
+                "Drugs and Classification",
+                "Antipyretics, Analgesics, Antibiotics",
+                "Food Additives & Polymers"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "CSC-12",
+          "name": "Computer Science",
+          "medium": "English",
+          "unitsCount": 16,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Function",
+              "coreConcepts": [
+                "Function Definition & Specification",
+                "Parameters vs Arguments",
+                "Pure and Impure Functions"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Data Abstraction",
+              "coreConcepts": [
+                "Abstract Data Types (ADT)",
+                "Constructors and Selectors",
+                "Pairs, Lists and Tuples Abstraction"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Scoping",
+              "coreConcepts": [
+                "Variable Scope Definition",
+                "LEGB Scoping Rule",
+                "Module Scope & Namespace"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Algorithmic Strategies",
+              "coreConcepts": [
+                "Characteristics of Algorithms",
+                "Time and Space Complexity (Big-O)",
+                "Linear Search, Binary Search, Bubble Sort, Selection Sort, Insertion Sort",
+                "Dynamic Programming & Memoization"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Python - Variables and Operators",
+              "coreConcepts": [
+                "Python Tokens & Keywords",
+                "Data Types & Expressions",
+                "Input and Output Statements"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "Control Structures",
+              "coreConcepts": [
+                "Sequential Statements",
+                "Alternative / Branching (if, if-else, if-elif-else)",
+                "Iterative Loops (while, for, range)",
+                "Jump Statements (break, continue, pass)"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "Python Functions",
+              "coreConcepts": [
+                "Built-in Functions",
+                "User Defined Functions",
+                "Arguments (Positional, Keyword, Default, Variable-length)",
+                "Anonymous Lambda Functions",
+                "Recursion"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "Strings and String Manipulations",
+              "coreConcepts": [
+                "String Creation & Immutability",
+                "Indexing and Negative Slicing",
+                "String Formatting Operators (%)",
+                "Built-in String Methods"
+              ]
+            },
+            {
+              "unitNumber": 9,
+              "title": "Lists, Tuples, Sets and Dictionary",
+              "coreConcepts": [
+                "List Operations, Slicing & Comprehensions",
+                "Tuples Immutability & Packing/Unpacking",
+                "Set Operations (Union, Intersection, Difference)",
+                "Dictionary Key-Value Mapping"
+              ]
+            },
+            {
+              "unitNumber": 10,
+              "title": "Python Classes and Objects",
+              "coreConcepts": [
+                "Class Definition & Instance Creation",
+                "The self Parameter & __init__() Constructor",
+                "Class vs Instance Variables",
+                "Public and Private Data Members"
+              ]
+            },
+            {
+              "unitNumber": 11,
+              "title": "Database Concepts",
+              "coreConcepts": [
+                "DBMS Architecture & Advantages",
+                "Relational Data Model Components (Attributes, Tuples, Tables)",
+                "Keys (Primary, Foreign, Super, Candidate Keys)"
+              ]
+            },
+            {
+              "unitNumber": 12,
+              "title": "Structured Query Language (SQL)",
+              "coreConcepts": [
+                "DDL (CREATE, ALTER, DROP, TRUNCATE)",
+                "DML (INSERT, UPDATE, DELETE)",
+                "DQL (SELECT with WHERE, ORDER BY, GROUP BY, HAVING)"
+              ]
+            },
+            {
+              "unitNumber": 13,
+              "title": "Python and CSV Files",
+              "coreConcepts": [
+                "CSV Dialects & Delimiters",
+                "csv.reader() and csv.DictReader()",
+                "csv.writer() and writerow()"
+              ]
+            },
+            {
+              "unitNumber": 14,
+              "title": "Importing C++ Programs in Python",
+              "coreConcepts": [
+                "Wrapping C++ with Python MinGW",
+                "getopt module & command-line arguments"
+              ]
+            },
+            {
+              "unitNumber": 15,
+              "title": "Data Manipulation through SQL",
+              "coreConcepts": [
+                "sqlite3 module in Python",
+                "Connection, Cursor & execute()",
+                "fetchone(), fetchall(), fetchmany()"
+              ]
+            },
+            {
+              "unitNumber": 16,
+              "title": "Data Visualization using Pyplot",
+              "coreConcepts": [
+                "Matplotlib Installation & Pyplot",
+                "Line Charts, Bar Charts, Histograms, Pie Charts",
+                "Plot Styling (Labels, Titles, Legends)"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "BIO-12",
+          "name": "Biology",
+          "medium": "English",
+          "unitsCount": 10,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Asexual and Sexual Reproduction in Plants (Bio-Botany)",
+              "coreConcepts": [
+                "Vegetative Propagation",
+                "Microsporogenesis & Megasporogenesis",
+                "Double Fertilization & Endosperm Types"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Classical Genetics (Bio-Botany)",
+              "coreConcepts": [
+                "Mendel's Laws of Inheritance",
+                "Incomplete Dominance & Codominance",
+                "Polygenic Inheritance & Pleiotropy"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Chromosomal Basis of Inheritance (Bio-Botany)",
+              "coreConcepts": [
+                "Linkage and Crossing Over",
+                "Gene Mapping",
+                "Sex Determination in Plants",
+                "Mutation Types"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Principles and Processes of Biotechnology (Bio-Botany)",
+              "coreConcepts": [
+                "Tools of Recombinant DNA Technology",
+                "Restriction Enzymes & DNA Ligase",
+                "Vectors (Plasmids, Bacteriophages)",
+                "Polymerase Chain Reaction (PCR) & Electrophoresis"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Plant Tissue Culture (Bio-Botany)",
+              "coreConcepts": [
+                "Totipotency & Callus Induction",
+                "Micropropagation & Somatic Embryogenesis",
+                "Cryopreservation & Intellectual Property Rights"
+              ]
+            },
+            {
+              "unitNumber": 6,
+              "title": "Reproduction in Organisms (Bio-Zoology)",
+              "coreConcepts": [
+                "Modes of Asexual Reproduction (Fission, Budding, Regeneration)",
+                "Parthenogenesis"
+              ]
+            },
+            {
+              "unitNumber": 7,
+              "title": "Human Reproduction (Bio-Zoology)",
+              "coreConcepts": [
+                "Gametogenesis (Spermatogenesis & Oogenesis)",
+                "Menstrual Cycle & Hormonal Control",
+                "Fertilization, Implantation, Pregnancy & Parturition"
+              ]
+            },
+            {
+              "unitNumber": 8,
+              "title": "Reproductive Health (Bio-Zoology)",
+              "coreConcepts": [
+                "Population Explosion & Contraception Methods",
+                "Sexually Transmitted Infections (STIs)",
+                "Assisted Reproductive Technologies (IVF, ZIFT, ICSI)"
+              ]
+            },
+            {
+              "unitNumber": 9,
+              "title": "Principles of Inheritance and Variation (Bio-Zoology)",
+              "coreConcepts": [
+                "Sex Determination in Humans (XX-XY)",
+                "Sex-linked Inheritance (Haemophilia, Colour Blindness)",
+                "Mendelian & Chromosomal Disorders (Down, Turner, Klinefelter Syndrome)"
+              ]
+            },
+            {
+              "unitNumber": 10,
+              "title": "Molecular Genetics (Bio-Zoology)",
+              "coreConcepts": [
+                "DNA as Genetic Material (Griffith, Hershey-Chase)",
+                "Central Dogma & DNA Replication",
+                "Transcription, Genetic Code & Translation",
+                "Operon Model (lac operon)",
+                "Human Genome Project (HGP)"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "COM-12",
+          "name": "Commerce",
+          "medium": "English",
+          "unitsCount": 10,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Management Process",
+              "coreConcepts": [
+                "Principles of Scientific Management (F.W. Taylor)",
+                "Administrative Management (Henry Fayol)"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Financial Markets - I",
+              "coreConcepts": [
+                "Money Market vs Capital Market",
+                "Debt and Equity Markets"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Financial Markets - II",
+              "coreConcepts": [
+                "Stock Exchange Functions (NSE, BSE)",
+                "SEBI Regulatory Role"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Human Resource Management",
+              "coreConcepts": [
+                "Recruitment, Selection, Training & Development"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Elements of Marketing",
+              "coreConcepts": [
+                "Marketing Mix (4 Ps)",
+                "Consumer Protection Act & Consumer Rights"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "ACC-12",
+          "name": "Accountancy",
+          "medium": "English",
+          "unitsCount": 9,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Accounts from Incomplete Records",
+              "coreConcepts": [
+                "Single Entry System Limitations",
+                "Statement of Affairs Method",
+                "Conversion to Double Entry"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "Accounts of Not-for-Profit Organisations",
+              "coreConcepts": [
+                "Receipts and Payments Account",
+                "Income and Expenditure Account",
+                "Balance Sheet of Non-Profit Entities"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Accounts of Partnership Firms - Fundamentals",
+              "coreConcepts": [
+                "Partnership Deed",
+                "Profit and Loss Appropriation Account",
+                "Fixed and Fluctuating Capital Methods",
+                "Goodwill Valuation"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Admission and Retirement of a Partner",
+              "coreConcepts": [
+                "Revaluation Account",
+                "Sacrificing and Gaining Ratio",
+                "Capital Adjustments"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Company Accounts",
+              "coreConcepts": [
+                "Issue of Shares at Par, Premium, Discount",
+                "Forfeiture and Reissue of Shares"
+              ]
+            }
+          ]
+        },
+        {
+          "subjectCode": "ECO-12",
+          "name": "Economics",
+          "medium": "English",
+          "unitsCount": 12,
+          "units": [
+            {
+              "unitNumber": 1,
+              "title": "Introduction to Macro Economics",
+              "coreConcepts": [
+                "Scope and Importance of Macro Economics",
+                "Economic Systems (Capitalism, Socialism, Mixed)"
+              ]
+            },
+            {
+              "unitNumber": 2,
+              "title": "National Income",
+              "coreConcepts": [
+                "GNP, GDP, NNP, Per Capita Income",
+                "Methods of Measuring National Income",
+                "Difficulties in Measurement"
+              ]
+            },
+            {
+              "unitNumber": 3,
+              "title": "Theories of Employment and Income",
+              "coreConcepts": [
+                "Classical Theory of Employment (Say's Law)",
+                "Keynesian Theory of Effective Demand",
+                "Consumption and Investment Functions"
+              ]
+            },
+            {
+              "unitNumber": 4,
+              "title": "Monetary Economics",
+              "coreConcepts": [
+                "Functions of Money",
+                "Inflation (Demand-pull, Cost-push)",
+                "Trade Cycles & Deflation"
+              ]
+            },
+            {
+              "unitNumber": 5,
+              "title": "Banking",
+              "coreConcepts": [
+                "Commercial Banks & Credit Creation",
+                "Central Bank (RBI) & Monetary Policy Instruments"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

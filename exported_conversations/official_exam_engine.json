@@ -1,0 +1,1317 @@
+{
+  "systemModule": "OFFICIAL_EXAM_ENGINE",
+  "version": "2.0",
+  "board": "Tamil Nadu Directorate of Government Examinations (TNDGE)",
+  "visibilityRule": "ANSWERS_LOCKED_UNTIL_RESULT_DATE",
+  "portalCompatibility": "COE_EXAM_SETTER_AND_BATCH_IMPORT",
+  "note": "Questions presented to candidates DO NOT contain answers or evaluation rubrics. Solutions are encrypted in postExamEvaluationKey and released only upon official result publication.",
+  "officialExams": [
+    {
+      "examId": "TN-10-MAT-2026-OFFICIAL",
+      "standard": 10,
+      "subjectCode": "MAT-10",
+      "subjectName": "Mathematics",
+      "medium": "English",
+      "examDate": "2026-03-20T04:30:00.000Z",
+      "durationMinutes": 180,
+      "totalMarks": 100,
+      "instructions": "Check the question paper for fairness of printing. Answers must be written with blue or black ink. Answers to Part-I must be written with option code and corresponding answer. Result publication will unlock the official worked solutions.",
+      "status": "PUBLISHED",
+      "sections": [
+        {
+          "sectionId": "PART-I",
+          "title": "Part-I: Multiple Choice Questions (14 x 1 = 14 Marks)",
+          "instructions": "Answer all questions. Choose the correct answer from the given four alternatives.",
+          "questions": [
+            {
+              "questionId": "Q10M01",
+              "questionNumber": 1,
+              "questionText": "If n(A x B) = 12 and n(A) = 4, then the cardinal number n(B) is equal to:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "3"
+                },
+                {
+                  "id": "B",
+                  "text": "4"
+                },
+                {
+                  "id": "C",
+                  "text": "8"
+                },
+                {
+                  "id": "D",
+                  "text": "12"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M02",
+              "questionNumber": 2,
+              "questionText": "The modular arithmetic expression 17 ≡ x (mod 5) yields the least positive remainder x as:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "1"
+                },
+                {
+                  "id": "B",
+                  "text": "2"
+                },
+                {
+                  "id": "C",
+                  "text": "3"
+                },
+                {
+                  "id": "D",
+                  "text": "4"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M03",
+              "questionNumber": 3,
+              "questionText": "If a, b, c are in Arithmetic Progression (A.P.), then the ratio (a - b) / (b - c) is equal to:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "a / b"
+                },
+                {
+                  "id": "B",
+                  "text": "b / c"
+                },
+                {
+                  "id": "C",
+                  "text": "1"
+                },
+                {
+                  "id": "D",
+                  "text": "c / a"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M04",
+              "questionNumber": 4,
+              "questionText": "The number of points of intersection of the quadratic polynomial y = x^2 - 4 with the x-axis is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "0"
+                },
+                {
+                  "id": "B",
+                  "text": "1"
+                },
+                {
+                  "id": "C",
+                  "text": "2"
+                },
+                {
+                  "id": "D",
+                  "text": "Infinite"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M05",
+              "questionNumber": 5,
+              "questionText": "The slope of a line perpendicular to 3x - 4y + 7 = 0 is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "3/4"
+                },
+                {
+                  "id": "B",
+                  "text": "-4/3"
+                },
+                {
+                  "id": "C",
+                  "text": "4/3"
+                },
+                {
+                  "id": "D",
+                  "text": "-3/4"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M06",
+              "questionNumber": 6,
+              "questionText": "If sin θ + cos θ = √2 cos θ, then the value of cos θ - sin θ is equal to:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "√2 sin θ"
+                },
+                {
+                  "id": "B",
+                  "text": "√2 cos θ"
+                },
+                {
+                  "id": "C",
+                  "text": "sin θ"
+                },
+                {
+                  "id": "D",
+                  "text": "2 sin θ"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M07",
+              "questionNumber": 7,
+              "questionText": "A spherical solid sphere is melted and recast into a cone of equal radius. The height of the cone is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "r"
+                },
+                {
+                  "id": "B",
+                  "text": "2r"
+                },
+                {
+                  "id": "C",
+                  "text": "3r"
+                },
+                {
+                  "id": "D",
+                  "text": "4r"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M08",
+              "questionNumber": 8,
+              "questionText": "The variance of the first 10 natural numbers 1, 2, 3, ..., 10 is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "8.25"
+                },
+                {
+                  "id": "B",
+                  "text": "6.5"
+                },
+                {
+                  "id": "C",
+                  "text": "10.5"
+                },
+                {
+                  "id": "D",
+                  "text": "4.75"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M09",
+              "questionNumber": 9,
+              "questionText": "If P(A) = 0.37, P(B) = 0.42 and P(A ∩ B) = 0.09, then P(A ∪ B) is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "0.70"
+                },
+                {
+                  "id": "B",
+                  "text": "0.88"
+                },
+                {
+                  "id": "C",
+                  "text": "0.60"
+                },
+                {
+                  "id": "D",
+                  "text": "0.55"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M10",
+              "questionNumber": 10,
+              "questionText": "The GCD of 6x^2y, 9x^2yz, 12x^2y^2z is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "3x^2y"
+                },
+                {
+                  "id": "B",
+                  "text": "36x^2y^2z"
+                },
+                {
+                  "id": "C",
+                  "text": "3xy"
+                },
+                {
+                  "id": "D",
+                  "text": "12x^2y"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M11",
+              "questionNumber": 11,
+              "questionText": "If ΔABC ~ ΔEDF such that AB = 5 cm, AC = 7 cm, DF = 15 cm and DE = 12 cm, then the length of the remaining sides can be found by:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Basic Proportionality Theorem"
+                },
+                {
+                  "id": "B",
+                  "text": "Pythagoras Theorem"
+                },
+                {
+                  "id": "C",
+                  "text": "Ratio of corresponding sides of similar triangles"
+                },
+                {
+                  "id": "D",
+                  "text": "Angle Bisector Theorem"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M12",
+              "questionNumber": 12,
+              "questionText": "The point of intersection of 3x - y = 4 and x + y = 8 is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "(3, 5)"
+                },
+                {
+                  "id": "B",
+                  "text": "(5, 3)"
+                },
+                {
+                  "id": "C",
+                  "text": "(2, 6)"
+                },
+                {
+                  "id": "D",
+                  "text": "(4, 4)"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M13",
+              "questionNumber": 13,
+              "questionText": "If the ratio of the surface areas of two spheres is 9 : 16, then the ratio of their volumes is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "3 : 4"
+                },
+                {
+                  "id": "B",
+                  "text": "27 : 64"
+                },
+                {
+                  "id": "C",
+                  "text": "81 : 256"
+                },
+                {
+                  "id": "D",
+                  "text": "9 : 16"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M14",
+              "questionNumber": 14,
+              "questionText": "Which of the following is not a measure of dispersion?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Range"
+                },
+                {
+                  "id": "B",
+                  "text": "Standard deviation"
+                },
+                {
+                  "id": "C",
+                  "text": "Arithmetic Mean"
+                },
+                {
+                  "id": "D",
+                  "text": "Variance"
+                }
+              ],
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "sectionId": "PART-II",
+          "title": "Part-II: Short Answer Questions (10 x 2 = 20 Marks)",
+          "instructions": "Answer any 10 questions. Question No. 28 is compulsory.",
+          "questions": [
+            {
+              "questionId": "Q10M15",
+              "questionNumber": 15,
+              "questionText": "Let A = {1, 2, 3} and B = {x | x is a prime number less than 10}. Find A x B and B x A.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q10M16",
+              "questionNumber": 16,
+              "questionText": "Find the HCF of 252 and 105 using Euclid's Division Algorithm.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q10M17",
+              "questionNumber": 17,
+              "questionText": "Find the sum of the first 28 terms of an A.P. whose nth term is tn = 4n - 3.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q10M18",
+              "questionNumber": 18,
+              "questionText": "Determine the nature of the roots of the quadratic equation 2x^2 - 2x + 9 = 0.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q10M19",
+              "questionNumber": 19,
+              "questionText": "In ΔABC, D and E are points on the sides AB and AC respectively such that DE || BC. If AD/DB = 3/4 and AC = 14 cm, find AE.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q10M20",
+              "questionNumber": 20,
+              "questionText": "Find the equation of a straight line having slope -5/12 and passing through the point (-1, 2).",
+              "marks": 2
+            },
+            {
+              "questionId": "Q10M21",
+              "questionNumber": 21,
+              "questionText": "Prove the trigonometric identity: sec θ (1 - sin θ)(sec θ + tan θ) = 1.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q10M22",
+              "questionNumber": 22,
+              "questionText": "The internal and external radii of a hollow hemispherical shell are 3 m and 5 m respectively. Find the total surface area of the shell.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q10M23",
+              "questionNumber": 23,
+              "questionText": "Find the range and coefficient of range of the following data: 25, 67, 48, 53, 18, 39, 44.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q10M24",
+              "questionNumber": 24,
+              "questionText": "A die is rolled. Find the probability of getting a number greater than 4.",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "sectionId": "PART-III",
+          "title": "Part-III: Comprehensive Analytical Questions (10 x 5 = 50 Marks)",
+          "instructions": "Answer any 10 questions. Question No. 42 is compulsory.",
+          "questions": [
+            {
+              "questionId": "Q10M25",
+              "questionNumber": 25,
+              "questionText": "Let f: A -> B be a function defined by f(x) = x/2 - 1, where A = {2, 4, 6, 10, 12} and B = {0, 1, 2, 4, 5, 9}. Represent f by (i) set of ordered pairs, (ii) a table, (iii) an arrow diagram, (iv) a graph.",
+              "marks": 5
+            },
+            {
+              "questionId": "Q10M26",
+              "questionNumber": 26,
+              "questionText": "Find the sum of the series: 7 + 77 + 777 + ... to n terms.",
+              "marks": 5
+            },
+            {
+              "questionId": "Q10M27",
+              "questionNumber": 27,
+              "questionText": "Find the values of a and b if 4x^4 - 12x^3 + 37x^2 + bx + a is a perfect square polynomial.",
+              "marks": 5
+            },
+            {
+              "questionId": "Q10M28",
+              "questionNumber": 28,
+              "questionText": "State and prove Basic Proportionality Theorem (Thales Theorem).",
+              "marks": 5
+            },
+            {
+              "questionId": "Q10M29",
+              "questionNumber": 29,
+              "questionText": "Find the area of the quadrilateral formed by the coordinates (-9, -2), (-8, -4), (2, 2) and (1, -3).",
+              "marks": 5
+            },
+            {
+              "questionId": "Q10M30",
+              "questionNumber": 30,
+              "questionText": "Two ships are sailing in the sea on either side of a lighthouse. The angles of depression of two ships as observed from the top of the lighthouse are 60° and 45°. If the lighthouse is 200 m high, find the distance between the two ships (√3 = 1.732).",
+              "marks": 5
+            }
+          ]
+        },
+        {
+          "sectionId": "PART-IV",
+          "title": "Part-IV: Geometry & Graph Either-Or (2 x 8 = 16 Marks)",
+          "instructions": "Answer both questions choosing either (a) or (b).",
+          "questions": [
+            {
+              "questionId": "Q10M31A",
+              "questionNumber": 43,
+              "displayLabel": "43 (a)",
+              "eitherOrOption": "A",
+              "pairId": "Q10M31",
+              "questionText": "Construct a triangle ΔPQR such that QR = 5 cm, ∠P = 30° and the altitude from P to QR is of length 4.2 cm.",
+              "marks": 8
+            },
+            {
+              "questionId": "Q10M31B",
+              "questionNumber": 43,
+              "displayLabel": "43 (b)",
+              "eitherOrOption": "B",
+              "pairId": "Q10M31",
+              "questionText": "Construct a tangent to a circle of radius 4 cm from a point 10 cm away from its center. Measure and verify its lengths.",
+              "marks": 8
+            },
+            {
+              "questionId": "Q10M32A",
+              "questionNumber": 44,
+              "displayLabel": "44 (a)",
+              "eitherOrOption": "A",
+              "pairId": "Q10M32",
+              "questionText": "Draw the graph of y = x^2 - 4x + 3 and use it to solve x^2 - 6x + 9 = 0.",
+              "marks": 8
+            },
+            {
+              "questionId": "Q10M32B",
+              "questionNumber": 44,
+              "displayLabel": "44 (b)",
+              "eitherOrOption": "B",
+              "pairId": "Q10M32",
+              "questionText": "Draw the graph of xy = 24, x, y > 0. Use the graph to find (i) y when x = 3, and (ii) x when y = 6.",
+              "marks": 8
+            }
+          ]
+        }
+      ],
+      "postExamEvaluationKey": {
+        "Q10M01": {
+          "correctOption": "A",
+          "explanation": "n(A x B) = n(A) * n(B) => 12 = 4 * n(B) => n(B) = 3."
+        },
+        "Q10M02": {
+          "correctOption": "B",
+          "explanation": "17 = 5 * 3 + 2, so 17 ≡ 2 (mod 5)."
+        },
+        "Q10M03": {
+          "correctOption": "C",
+          "explanation": "Since b - a = c - b = d, (a - b) / (b - c) = -d / -d = 1."
+        },
+        "Q10M04": {
+          "correctOption": "C",
+          "explanation": "x^2 - 4 = 0 => x = ±2 (two real points of intersection)."
+        },
+        "Q10M05": {
+          "correctOption": "B",
+          "explanation": "Slope of given line m1 = -a/b = -3/(-4) = 3/4. Perpendicular slope m2 = -1/m1 = -4/3."
+        },
+        "Q10M06": {
+          "correctOption": "A",
+          "explanation": "cos θ - sin θ = √2 sin θ by identity transformation."
+        },
+        "Q10M07": {
+          "correctOption": "D",
+          "explanation": "(4/3)πr^3 = (1/3)πr^2 h => h = 4r."
+        },
+        "Q10M08": {
+          "correctOption": "A",
+          "explanation": "Variance σ^2 = (n^2 - 1)/12 = (100 - 1)/12 = 99/12 = 8.25."
+        },
+        "Q10M09": {
+          "correctOption": "A",
+          "explanation": "P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0.37 + 0.42 - 0.09 = 0.70."
+        },
+        "Q10M10": {
+          "correctOption": "A",
+          "explanation": "GCD of (6, 9, 12) is 3; common variables with lowest powers: x^2 and y => 3x^2y."
+        },
+        "Q10M11": {
+          "correctOption": "C",
+          "explanation": "Similar triangles have proportional corresponding sides: AB/ED = BC/DF = AC/EF."
+        },
+        "Q10M12": {
+          "correctOption": "A",
+          "explanation": "Adding equations: 4x = 12 => x = 3; y = 8 - 3 = 5 => (3, 5)."
+        },
+        "Q10M13": {
+          "correctOption": "B",
+          "explanation": "r1^2/r2^2 = 9/16 => r1/r2 = 3/4. Volume ratio = (r1/r2)^3 = 27/64."
+        },
+        "Q10M14": {
+          "correctOption": "C",
+          "explanation": "Arithmetic Mean is a measure of central tendency, not dispersion."
+        },
+        "Q10M15": {
+          "modelAnswer": "A = {1, 2, 3}, B = {2, 3, 5, 7}. A x B = {(1,2), (1,3), (1,5), (1,7), (2,2), (2,3), (2,5), (2,7), (3,2), (3,3), (3,5), (3,7)}. B x A has corresponding reversed pairs.",
+          "marks": 2
+        },
+        "Q10M16": {
+          "modelAnswer": "252 = 105 * 2 + 42; 105 = 42 * 2 + 21; 42 = 21 * 2 + 0. HCF = 21.",
+          "marks": 2
+        },
+        "Q10M17": {
+          "modelAnswer": "a = t1 = 1, d = 4. S28 = (28/2)[2(1) + (27)(4)] = 14[2 + 108] = 14 * 110 = 1540.",
+          "marks": 2
+        },
+        "Q10M18": {
+          "modelAnswer": "Δ = b^2 - 4ac = (-2)^2 - 4(2)(9) = 4 - 72 = -68 < 0. No real roots (complex conjugate roots).",
+          "marks": 2
+        },
+        "Q10M28": {
+          "modelAnswer": "Statement: A straight line drawn parallel to a side of triangle intersecting other two sides divides them in the same ratio. Full geometric proof with auxiliary line and area of triangles ratios.",
+          "stepRubric": [
+            {
+              "step": 1,
+              "description": "Hypothesis, Construction & Diagram",
+              "marks": 1.5
+            },
+            {
+              "step": 2,
+              "description": "Area of triangle ratios computation",
+              "marks": 2
+            },
+            {
+              "step": 3,
+              "description": "Equality proof AD/DB = AE/EC",
+              "marks": 1.5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "examId": "TN-12-CSC-2026-OFFICIAL",
+      "standard": 12,
+      "subjectCode": "CSC-12",
+      "subjectName": "Computer Science",
+      "medium": "English",
+      "examDate": "2026-03-22T04:30:00.000Z",
+      "durationMinutes": 180,
+      "totalMarks": 70,
+      "instructions": "Read all instructions carefully. Answer all 15 questions in Part-I. Code snippets must follow standard Python 3.x syntax. Answers are locked until the result date.",
+      "status": "PUBLISHED",
+      "sections": [
+        {
+          "sectionId": "PART-I",
+          "title": "Part-I: Objective Questions (15 x 1 = 15 Marks)",
+          "instructions": "Answer all questions. Choose the most suitable answer.",
+          "questions": [
+            {
+              "questionId": "Q12C01",
+              "questionNumber": 1,
+              "questionText": "Which rule determines the order in which variable scopes are searched in Python?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "FIFO Rule"
+                },
+                {
+                  "id": "B",
+                  "text": "LIFO Rule"
+                },
+                {
+                  "id": "C",
+                  "text": "LEGB Rule"
+                },
+                {
+                  "id": "D",
+                  "text": "BODMAS Rule"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C02",
+              "questionNumber": 2,
+              "questionText": "What is the worst-case asymptotic time complexity of Bubble Sort algorithm?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "O(n)"
+                },
+                {
+                  "id": "B",
+                  "text": "O(n log n)"
+                },
+                {
+                  "id": "C",
+                  "text": "O(n^2)"
+                },
+                {
+                  "id": "D",
+                  "text": "O(1)"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C03",
+              "questionNumber": 3,
+              "questionText": "Which Python function converts a single character into its corresponding Unicode / ASCII integer code?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "chr()"
+                },
+                {
+                  "id": "B",
+                  "text": "ord()"
+                },
+                {
+                  "id": "C",
+                  "text": "ascii()"
+                },
+                {
+                  "id": "D",
+                  "text": "code()"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C04",
+              "questionNumber": 4,
+              "questionText": "What will be the output of string slicing: str1 = 'TAMILNADU'; print(str1[::-2])?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "UDNLM"
+                },
+                {
+                  "id": "B",
+                  "text": "UANMT"
+                },
+                {
+                  "id": "C",
+                  "text": "UDAN"
+                },
+                {
+                  "id": "D",
+                  "text": "TMANU"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C05",
+              "questionNumber": 5,
+              "questionText": "Which built-in Python sequence type is immutable and defined using parentheses?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "List"
+                },
+                {
+                  "id": "B",
+                  "text": "Dictionary"
+                },
+                {
+                  "id": "C",
+                  "text": "Set"
+                },
+                {
+                  "id": "D",
+                  "text": "Tuple"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C06",
+              "questionNumber": 6,
+              "questionText": "The special constructor method executed automatically upon object instantiation in Python is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "__construct__()"
+                },
+                {
+                  "id": "B",
+                  "text": "__init__()"
+                },
+                {
+                  "id": "C",
+                  "text": "__new__()"
+                },
+                {
+                  "id": "D",
+                  "text": "__main__()"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C07",
+              "questionNumber": 7,
+              "questionText": "Which relational algebra operator performs a horizontal subset filtering of rows based on a condition?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Project (π)"
+                },
+                {
+                  "id": "B",
+                  "text": "Select (σ)"
+                },
+                {
+                  "id": "C",
+                  "text": "Cartesian Product (X)"
+                },
+                {
+                  "id": "D",
+                  "text": "Union (∪)"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C08",
+              "questionNumber": 8,
+              "questionText": "Which SQL constraint ensures that all values in a column are distinct and cannot accept NULL?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "UNIQUE"
+                },
+                {
+                  "id": "B",
+                  "text": "NOT NULL"
+                },
+                {
+                  "id": "C",
+                  "text": "PRIMARY KEY"
+                },
+                {
+                  "id": "D",
+                  "text": "CHECK"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C09",
+              "questionNumber": 9,
+              "questionText": "Which SQL clause is used to filter aggregated group records after a GROUP BY statement?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "WHERE"
+                },
+                {
+                  "id": "B",
+                  "text": "HAVING"
+                },
+                {
+                  "id": "C",
+                  "text": "ORDER BY"
+                },
+                {
+                  "id": "D",
+                  "text": "FILTER"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C10",
+              "questionNumber": 10,
+              "questionText": "Which method in Python's csv module is used to write a single row of sequence data to a CSV file?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "write()"
+                },
+                {
+                  "id": "B",
+                  "text": "writerow()"
+                },
+                {
+                  "id": "C",
+                  "text": "writeall()"
+                },
+                {
+                  "id": "D",
+                  "text": "putline()"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C11",
+              "questionNumber": 11,
+              "questionText": "Which Python standard module allows executing operating system specific commands and managing file system paths?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "sys"
+                },
+                {
+                  "id": "B",
+                  "text": "os"
+                },
+                {
+                  "id": "C",
+                  "text": "math"
+                },
+                {
+                  "id": "D",
+                  "text": "getopt"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C12",
+              "questionNumber": 12,
+              "questionText": "In Python SQLite3 interface, which cursor method fetches the next single row of query results?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "fetchall()"
+                },
+                {
+                  "id": "B",
+                  "text": "fetchone()"
+                },
+                {
+                  "id": "C",
+                  "text": "fetchmany()"
+                },
+                {
+                  "id": "D",
+                  "text": "fetchrow()"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C13",
+              "questionNumber": 13,
+              "questionText": "Which function in Matplotlib pyplot renders and displays the created chart on screen?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "plt.plot()"
+                },
+                {
+                  "id": "B",
+                  "text": "plt.show()"
+                },
+                {
+                  "id": "C",
+                  "text": "plt.draw()"
+                },
+                {
+                  "id": "D",
+                  "text": "plt.display()"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C14",
+              "questionNumber": 14,
+              "questionText": "In dynamic programming, the algorithmic optimization technique of caching previously evaluated subproblems is called:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Greedy search"
+                },
+                {
+                  "id": "B",
+                  "text": "Backtracking"
+                },
+                {
+                  "id": "C",
+                  "text": "Memoization"
+                },
+                {
+                  "id": "D",
+                  "text": "Divide and conquer"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C15",
+              "questionNumber": 15,
+              "questionText": "What is the return value of any function in Python that does not explicitly execute a return statement?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "0"
+                },
+                {
+                  "id": "B",
+                  "text": "False"
+                },
+                {
+                  "id": "C",
+                  "text": "None"
+                },
+                {
+                  "id": "D",
+                  "text": "NULL"
+                }
+              ],
+              "marks": 1
+            }
+          ]
+        },
+        {
+          "sectionId": "PART-II",
+          "title": "Part-II: Short Answers (6 x 2 = 12 Marks)",
+          "instructions": "Answer any 6 questions. Question No. 24 is compulsory.",
+          "questions": [
+            {
+              "questionId": "Q12C16",
+              "questionNumber": 16,
+              "questionText": "Differentiate between Parameters and Arguments in Python functions.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q12C17",
+              "questionNumber": 17,
+              "questionText": "What is the LEGB scoping rule? List its components in order.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q12C18",
+              "questionNumber": 18,
+              "questionText": "Write the characteristics of an algorithm.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q12C19",
+              "questionNumber": 19,
+              "questionText": "What is String Slicing? Write its general syntax.",
+              "marks": 2
+            },
+            {
+              "questionId": "Q12C20",
+              "questionNumber": 20,
+              "questionText": "What is a Tuple in Python? How does it differ from a List?",
+              "marks": 2
+            },
+            {
+              "questionId": "Q12C21",
+              "questionNumber": 21,
+              "questionText": "Define Data Model. List any two types of data models.",
+              "marks": 2
+            }
+          ]
+        },
+        {
+          "sectionId": "PART-IV",
+          "title": "Part-IV: Comprehensive 5-Markers Either-Or (5 x 5 = 25 Marks)",
+          "instructions": "Answer all questions choosing either (a) or (b).",
+          "questions": [
+            {
+              "questionId": "Q12C34A",
+              "questionNumber": 34,
+              "displayLabel": "34 (a)",
+              "eitherOrOption": "A",
+              "pairId": "Q12C34",
+              "questionText": "Explain the various types of function arguments supported in Python with code illustrations.",
+              "marks": 5
+            },
+            {
+              "questionId": "Q12C34B",
+              "questionNumber": 34,
+              "displayLabel": "34 (b)",
+              "eitherOrOption": "B",
+              "pairId": "Q12C34",
+              "questionText": "Explain Binary Search algorithm with an example trace and calculate its best and worst case time complexity.",
+              "marks": 5
+            }
+          ]
+        }
+      ],
+      "postExamEvaluationKey": {
+        "Q12C01": {
+          "correctOption": "C",
+          "explanation": "LEGB rule searches Local, Enclosed, Global, then Built-in scopes."
+        },
+        "Q12C02": {
+          "correctOption": "C",
+          "explanation": "Bubble sort makes n*(n-1)/2 comparisons in worst case => O(n^2)."
+        },
+        "Q12C03": {
+          "correctOption": "B",
+          "explanation": "ord('A') returns 65; chr(65) returns 'A'."
+        },
+        "Q12C04": {
+          "correctOption": "B",
+          "explanation": "str1[::-2] starts from the last character 'U', stepping backwards by 2: 'U', 'A', 'N', 'M', 'T'."
+        },
+        "Q12C05": {
+          "correctOption": "D",
+          "explanation": "Tuples are immutable ordered sequences defined with parentheses ()."
+        },
+        "Q12C06": {
+          "correctOption": "B",
+          "explanation": "__init__() is the constructor method automatically executed upon object creation."
+        },
+        "Q12C07": {
+          "correctOption": "B",
+          "explanation": "Selection (σ) selects horizontal rows satisfying a predicate condition."
+        },
+        "Q12C08": {
+          "correctOption": "C",
+          "explanation": "A Primary Key uniquely identifies each row and strictly forbids NULL values."
+        },
+        "Q12C09": {
+          "correctOption": "B",
+          "explanation": "HAVING filters groups created by GROUP BY."
+        },
+        "Q12C10": {
+          "correctOption": "B",
+          "explanation": "writer.writerow() serializes a single sequence row into CSV format."
+        },
+        "Q12C11": {
+          "correctOption": "B",
+          "explanation": "The os module provides interfaces to the underlying operating system."
+        },
+        "Q12C12": {
+          "correctOption": "B",
+          "explanation": "cursor.fetchone() retrieves the next single row from the active query result set."
+        },
+        "Q12C13": {
+          "correctOption": "B",
+          "explanation": "plt.show() displays all active Matplotlib figure windows."
+        },
+        "Q12C14": {
+          "correctOption": "C",
+          "explanation": "Memoization caches return values of expensive function calls for identical inputs."
+        },
+        "Q12C15": {
+          "correctOption": "C",
+          "explanation": "Functions without an explicit return statement implicitly return None."
+        },
+        "Q12C16": {
+          "modelAnswer": "Parameters are variables defined in the function signature header. Arguments are actual values or expressions passed into the function call.",
+          "marks": 2
+        },
+        "Q12C34A": {
+          "modelAnswer": "Required/Positional, Keyword, Default, and Variable-length (*args, **kwargs) arguments with syntax and code examples.",
+          "marks": 5
+        }
+      }
+    },
+    {
+      "examId": "TN-12-PHY-2026-OFFICIAL",
+      "standard": 12,
+      "subjectCode": "PHY-12",
+      "subjectName": "Physics",
+      "medium": "English",
+      "examDate": "2026-03-24T04:30:00.000Z",
+      "durationMinutes": 180,
+      "totalMarks": 70,
+      "instructions": "Answer all questions in Part-I. Answer any 6 questions in Part-II and Part-III. Part-IV is Either-Or.",
+      "status": "PUBLISHED",
+      "sections": [
+        {
+          "sectionId": "PART-I",
+          "title": "Part-I: Objective Questions (15 x 1 = 15 Marks)",
+          "questions": [
+            {
+              "questionId": "Q12P01",
+              "questionNumber": 1,
+              "questionText": "The electric flux through a closed surface enclosing a charge q is given by:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "q / ε0"
+                },
+                {
+                  "id": "B",
+                  "text": "q * ε0"
+                },
+                {
+                  "id": "C",
+                  "text": "ε0 / q"
+                },
+                {
+                  "id": "D",
+                  "text": "q / (4π ε0)"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12P02",
+              "questionNumber": 2,
+              "questionText": "The color code of a carbon resistor with resistance (47 ± 2.35) kΩ is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Yellow, Violet, Orange, Gold"
+                },
+                {
+                  "id": "B",
+                  "text": "Yellow, Violet, Red, Silver"
+                },
+                {
+                  "id": "C",
+                  "text": "Orange, Violet, Orange, Gold"
+                },
+                {
+                  "id": "D",
+                  "text": "Yellow, Blue, Orange, Gold"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12P03",
+              "questionNumber": 3,
+              "questionText": "A circular coil of radius R carries a current I. The magnetic field at its center is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "μ0 I / (2R)"
+                },
+                {
+                  "id": "B",
+                  "text": "μ0 I / (4π R)"
+                },
+                {
+                  "id": "C",
+                  "text": "μ0 I / (2π R)"
+                },
+                {
+                  "id": "D",
+                  "text": "2 μ0 I / R"
+                }
+              ],
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "postExamEvaluationKey": {
+        "Q12P01": {
+          "correctOption": "A",
+          "explanation": "Gauss's Law states total electric flux ΦE = q_enclosed / ε0."
+        },
+        "Q12P02": {
+          "correctOption": "A",
+          "explanation": "4 = Yellow, 7 = Violet, 10^3 = Orange multiplier, 5% tolerance = Gold."
+        },
+        "Q12P03": {
+          "correctOption": "A",
+          "explanation": "By Biot-Savart law, B at center of circular loop = μ0 I / (2R)."
+        }
+      }
+    },
+    {
+      "examId": "TN-12-CHE-2026-OFFICIAL",
+      "standard": 12,
+      "subjectCode": "CHE-12",
+      "subjectName": "Chemistry",
+      "medium": "English",
+      "examDate": "2026-03-26T04:30:00.000Z",
+      "durationMinutes": 180,
+      "totalMarks": 70,
+      "instructions": "Answer all questions. Chemistry solutions released after evaluation.",
+      "status": "PUBLISHED",
+      "sections": [
+        {
+          "sectionId": "PART-I",
+          "title": "Part-I: Objective Questions (15 x 1 = 15 Marks)",
+          "questions": [
+            {
+              "questionId": "Q12CH01",
+              "questionNumber": 1,
+              "questionText": "Which method of concentration is most suitable for sulphide ores?",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "Gravity separation"
+                },
+                {
+                  "id": "B",
+                  "text": "Froth floatation process"
+                },
+                {
+                  "id": "C",
+                  "text": "Magnetic separation"
+                },
+                {
+                  "id": "D",
+                  "text": "Leaching"
+                }
+              ],
+              "marks": 1
+            },
+            {
+              "questionId": "Q12CH02",
+              "questionNumber": 2,
+              "questionText": "The coordination number of an atom in a body-centered cubic (BCC) crystal lattice is:",
+              "options": [
+                {
+                  "id": "A",
+                  "text": "4"
+                },
+                {
+                  "id": "B",
+                  "text": "6"
+                },
+                {
+                  "id": "C",
+                  "text": "8"
+                },
+                {
+                  "id": "D",
+                  "text": "12"
+                }
+              ],
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "postExamEvaluationKey": {
+        "Q12CH01": {
+          "correctOption": "B",
+          "explanation": "Froth floatation uses pine oil collector to preferentially wet sulfide ores."
+        },
+        "Q12CH02": {
+          "correctOption": "C",
+          "explanation": "In BCC, the central atom is surrounded by 8 corner atoms => coordination number 8."
+        }
+      }
+    }
+  ]
+}

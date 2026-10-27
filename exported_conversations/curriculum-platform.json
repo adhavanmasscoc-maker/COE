@@ -1,0 +1,3669 @@
+{
+  "curriculumPlatform": {
+    "system": "COE_INTEGRATED_CURRICULUM_PLATFORM",
+    "version": "2.0",
+    "board": "Tamil Nadu State Board (Samacheer Kalvi)",
+    "compatibleWithPrismaSchema": true,
+    "standards": [
+      {
+        "standard": 10,
+        "label": "10th Standard (SSLC)",
+        "subjects": [
+          {
+            "subjectCode": "TAM-10",
+            "name": "Language (Tamil)",
+            "medium": "Tamil",
+            "prepClass": 10,
+            "unitsCount": 9,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "மொழி - அமிழ்தே ஊற்றே",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "அன்னை மொழியே",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: மொழி - அமிழ்தே ஊற்றே. Covers அன்னை மொழியே."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "தமிழ்ச் சொல் வளம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: மொழி - அமிழ்தே ஊற்றே. Covers தமிழ்ச் சொல் வளம்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "இரட்டுற மொழிதல்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: மொழி - அமிழ்தே ஊற்றே. Covers இரட்டுற மொழிதல்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "எழுத்து, சொல் இலக்கணம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: மொழி - அமிழ்தே ஊற்றே. Covers எழுத்து, சொல் இலக்கணம்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "இயற்கை - உயிரின் வேர்",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "காற்றே வா",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: இயற்கை - உயிரின் வேர். Covers காற்றே வா."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "முல்லைப் பாட்டு",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: இயற்கை - உயிரின் வேர். Covers முல்லைப் பாட்டு."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "புயலிலே ஒரு தோணி",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: இயற்கை - உயிரின் வேர். Covers புயலிலே ஒரு தோணி."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "தொகைநிலைத் தொடர்கள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: இயற்கை - உயிரின் வேர். Covers தொகைநிலைத் தொடர்கள்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "பண்பாடு - கூட்டாஞ்சோறு",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "விருந்தோம்பல்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: பண்பாடு - கூட்டாஞ்சோறு. Covers விருந்தோம்பல்."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "காசிக் காண்டம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: பண்பாடு - கூட்டாஞ்சோறு. Covers காசிக் காண்டம்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "மலைபடுகடாம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: பண்பாடு - கூட்டாஞ்சோறு. Covers மலைபடுகடாம்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "தொகாநிலைத் தொடர்கள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: பண்பாடு - கூட்டாஞ்சோறு. Covers தொகாநிலைத் தொடர்கள்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "அறிவியல், தொழில்நுட்பம் - நான்காம் தொழில்",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "செயற்கை நுண்ணறிவு",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: அறிவியல், தொழில்நுட்பம் - நான்காம் தொழில். Covers செயற்கை நுண்ணறிவு."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "பெருமாள் திருமொழி",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: அறிவியல், தொழில்நுட்பம் - நான்காம் தொழில். Covers பெருமாள் திருமொழி."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "பரிபாடல்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: அறிவியல், தொழில்நுட்பம் - நான்காம் தொழில். Covers பரிபாடல்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "வழு, வழாநிலை, வழுவமைதி",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: அறிவியல், தொழில்நுட்பம் - நான்காம் தொழில். Covers வழு, வழாநிலை, வழுவமைதி."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "கல்வி - மணற்கேணி",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "மொழிபெயர்ப்புக் கல்வி",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: கல்வி - மணற்கேணி. Covers மொழிபெயர்ப்புக் கல்வி."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "நீதி வெண்பா",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: கல்வி - மணற்கேணி. Covers நீதி வெண்பா."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "திருக்குறள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: கல்வி - மணற்கேணி. Covers திருக்குறள்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "வினா, விடை வகைகள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: கல்வி - மணற்கேணி. Covers வினா, விடை வகைகள்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "கலை - நிலா முற்றம்",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "நிகழ்கலை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: கலை - நிலா முற்றம். Covers நிகழ்கலை."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "பூத்தொடுத்தல்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: கலை - நிலா முற்றம். Covers பூத்தொடுத்தல்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "முத்துக்குமாரசாமி பிள்ளைத்தமிழ்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: கலை - நிலா முற்றம். Covers முத்துக்குமாரசாமி பிள்ளைத்தமிழ்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "அகப்பொருள் இலக்கணம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: கலை - நிலா முற்றம். Covers அகப்பொருள் இலக்கணம்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "நாகரிகம், தொழில் - விதைநெல்",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "சிற்றகல் ஒளி",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: நாகரிகம், தொழில் - விதைநெல். Covers சிற்றகல் ஒளி."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "ஏர் புதிதா",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: நாகரிகம், தொழில் - விதைநெல். Covers ஏர் புதிதா."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "மெய்க்கீர்த்தி",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: நாகரிகம், தொழில் - விதைநெல். Covers மெய்க்கீர்த்தி."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "புறப்பொருள் வெண்பாமாலை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: நாகரிகம், தொழில் - விதைநெல். Covers புறப்பொருள் வெண்பாமாலை."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "அறம், தத்துவம் - பெருவழி",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "சங்க இலக்கியத்தில் அறம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: அறம், தத்துவம் - பெருவழி. Covers சங்க இலக்கியத்தில் அறம்."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "ஞானம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: அறம், தத்துவம் - பெருவழி. Covers ஞானம்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "காலக்கணிதம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: அறம், தத்துவம் - பெருவழி. Covers காலக்கணிதம்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "யாப்பிலக்கணம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: அறம், தத்துவம் - பெருவழி. Covers யாப்பிலக்கணம்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 9,
+                "title": "மனிதம் - அன்பின் மொழி",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "ஜெயகாந்தன் நினைவுகள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: மனிதம் - அன்பின் மொழி. Covers ஜெயகாந்தன் நினைவுகள்."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "சித்தாள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: மனிதம் - அன்பின் மொழி. Covers சித்தாள்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "தேம்பாவணி",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: மனிதம் - அன்பின் மொழி. Covers தேம்பாவணி."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "அணியிலக்கணம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: மனிதம் - அன்பின் மொழி. Covers அணியிலக்கணம்."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "ENG-10",
+            "name": "English",
+            "medium": "English",
+            "prepClass": 10,
+            "unitsCount": 7,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Courage and Perseverance",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "His First Flight (Prose)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Courage and Perseverance. Covers His First Flight (Prose)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Life (Poem)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Courage and Perseverance. Covers Life (Poem)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "The Tempest (Supplementary)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Courage and Perseverance. Covers The Tempest (Supplementary)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Tenses and Modals",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Courage and Perseverance. Covers Tenses and Modals."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Family and Humor",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "The Night the Ghost Got In",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Family and Humor. Covers The Night the Ghost Got In."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "The Grumble Family",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Family and Humor. Covers The Grumble Family."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Zigzag",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Family and Humor. Covers Zigzag."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Articles and Prepositions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Family and Humor. Covers Articles and Prepositions."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Women Empowerment and Valour",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Empowered Women Navigating the World",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Women Empowerment and Valour. Covers Empowered Women Navigating the World."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "I am Every Woman",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Women Empowerment and Valour. Covers I am Every Woman."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "The Story of Mulan",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Women Empowerment and Valour. Covers The Story of Mulan."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Active and Passive Voice",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Women Empowerment and Valour. Covers Active and Passive Voice."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Science, Tech and Space",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "The Attic",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Science, Tech and Space. Covers The Attic."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "The Ant and the Cricket",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Science, Tech and Space. Covers The Ant and the Cricket."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "The Aged Mother",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Science, Tech and Space. Covers The Aged Mother."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Conditionals (If-clauses)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Science, Tech and Space. Covers Conditionals (If-clauses)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Social Awareness and Inclusion",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Tech Bloomers",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Social Awareness and Inclusion. Covers Tech Bloomers."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "The Secret of the Machines",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Social Awareness and Inclusion. Covers The Secret of the Machines."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "A Dilemma",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Social Awareness and Inclusion. Covers A Dilemma."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Degrees of Comparison",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Social Awareness and Inclusion. Covers Degrees of Comparison."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "Art and Human Values",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "The Last Lesson",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Art and Human Values. Covers The Last Lesson."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "No Men Are Foreign",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Art and Human Values. Covers No Men Are Foreign."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "The Little Hero of Haarlem",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Art and Human Values. Covers The Little Hero of Haarlem."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Simple, Compound, Complex Sentences",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Art and Human Values. Covers Simple, Compound, Complex Sentences."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "Mystery and Courage",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "The Dying Detective",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Mystery and Courage. Covers The Dying Detective."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "The House on Elm Street",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Mystery and Courage. Covers The House on Elm Street."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "A Close Encounter",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Mystery and Courage. Covers A Close Encounter."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Direct and Indirect Speech",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Mystery and Courage. Covers Direct and Indirect Speech."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "MAT-10",
+            "name": "Mathematics",
+            "medium": "English",
+            "prepClass": 10,
+            "unitsCount": 8,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Relations and Functions",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Cartesian Product",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Relations and Functions. Covers Cartesian Product."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Relations and Representations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Relations and Functions. Covers Relations and Representations."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Functions, Domain, Codomain",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Relations and Functions. Covers Functions, Domain, Codomain."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Composition of Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Relations and Functions. Covers Composition of Functions."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Numbers and Sequences",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Euclid's Division Lemma & Algorithm",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Numbers and Sequences. Covers Euclid's Division Lemma & Algorithm."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Fundamental Theorem of Arithmetic",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Numbers and Sequences. Covers Fundamental Theorem of Arithmetic."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Modular Arithmetic",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Numbers and Sequences. Covers Modular Arithmetic."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Arithmetic and Geometric Progressions (AP/GP)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Numbers and Sequences. Covers Arithmetic and Geometric Progressions (AP/GP)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Algebra",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Simultaneous Linear Equations in 3 Variables",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Algebra. Covers Simultaneous Linear Equations in 3 Variables."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "GCD and LCM of Polynomials",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Algebra. Covers GCD and LCM of Polynomials."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Square Root of Polynomials",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Algebra. Covers Square Root of Polynomials."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Quadratic Equations and Graphs",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Algebra. Covers Quadratic Equations and Graphs."
+                  },
+                  {
+                    "chapterNumber": 5,
+                    "title": "Matrices and Operations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Algebra. Covers Matrices and Operations."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Geometry",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Similarity of Triangles",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Geometry. Covers Similarity of Triangles."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Basic Proportionality Theorem (Thales)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Geometry. Covers Basic Proportionality Theorem (Thales)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Angle Bisector Theorem",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Geometry. Covers Angle Bisector Theorem."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Pythagoras Theorem",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Geometry. Covers Pythagoras Theorem."
+                  },
+                  {
+                    "chapterNumber": 5,
+                    "title": "Circles and Tangents",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Geometry. Covers Circles and Tangents."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Coordinate Geometry",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Area of Triangle and Quadrilateral",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Coordinate Geometry. Covers Area of Triangle and Quadrilateral."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Slope of Straight Line",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Coordinate Geometry. Covers Slope of Straight Line."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Equations of Straight Lines",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Coordinate Geometry. Covers Equations of Straight Lines."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Parallel and Perpendicular Lines",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Coordinate Geometry. Covers Parallel and Perpendicular Lines."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "Trigonometry",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Trigonometric Identities",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Trigonometry. Covers Trigonometric Identities."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Heights and Distances",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Trigonometry. Covers Heights and Distances."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Angle of Elevation and Depression",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Trigonometry. Covers Angle of Elevation and Depression."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Problems with Multi-Observer Sightings",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Trigonometry. Covers Problems with Multi-Observer Sightings."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "Mensuration",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Surface Area of Cylinder, Cone, Sphere",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Mensuration. Covers Surface Area of Cylinder, Cone, Sphere."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Volume of Solids",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Mensuration. Covers Volume of Solids."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Volume and Surface Area of Frustum",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Mensuration. Covers Volume and Surface Area of Frustum."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Melting and Recasting of Solids",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Mensuration. Covers Melting and Recasting of Solids."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "Statistics and Probability",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Measures of Dispersion (Range, Standard Deviation, Variance)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Statistics and Probability. Covers Measures of Dispersion (Range, Standard Deviation, Variance)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Coefficient of Variation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Statistics and Probability. Covers Coefficient of Variation."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Classical Probability",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Statistics and Probability. Covers Classical Probability."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Addition Theorem of Probability",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Statistics and Probability. Covers Addition Theorem of Probability."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "SCI-10",
+            "name": "Science",
+            "medium": "English",
+            "prepClass": 10,
+            "unitsCount": 23,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Laws of Motion (Physics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Inertia and Types",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Laws of Motion (Physics). Covers Inertia and Types."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Newton's Three Laws of Motion",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Laws of Motion (Physics). Covers Newton's Three Laws of Motion."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Linear Momentum & Impulse",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Laws of Motion (Physics). Covers Linear Momentum & Impulse."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Principle of Conservation of Momentum",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Laws of Motion (Physics). Covers Principle of Conservation of Momentum."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Optics (Physics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Refraction of Light",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Optics (Physics). Covers Refraction of Light."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Lenses and Lens Formula",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Optics (Physics). Covers Lenses and Lens Formula."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Human Eye & Optical Defects",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Optics (Physics). Covers Human Eye & Optical Defects."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Microscopes and Telescopes",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Optics (Physics). Covers Microscopes and Telescopes."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Thermal Physics (Physics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Temperature Scales",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Thermal Physics (Physics). Covers Temperature Scales."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Thermal Energy Transfer",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Thermal Physics (Physics). Covers Thermal Energy Transfer."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Boyle's, Charles's, and Avogadro's Laws",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Thermal Physics (Physics). Covers Boyle's, Charles's, and Avogadro's Laws."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Ideal Gas Equation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Thermal Physics (Physics). Covers Ideal Gas Equation."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Electricity (Physics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Electric Current & Potential Difference",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Electricity (Physics). Covers Electric Current & Potential Difference."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Ohm's Law & Resistance",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Electricity (Physics). Covers Ohm's Law & Resistance."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Resistors in Series and Parallel",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Electricity (Physics). Covers Resistors in Series and Parallel."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Joule's Law of Heating & Electric Power",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Electricity (Physics). Covers Joule's Law of Heating & Electric Power."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Acoustics (Physics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Sound Waves & Velocity",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Acoustics (Physics). Covers Sound Waves & Velocity."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Reflection of Sound & Echoes",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Acoustics (Physics). Covers Reflection of Sound & Echoes."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Doppler Effect & Applications",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Acoustics (Physics). Covers Doppler Effect & Applications."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "Nuclear Physics (Physics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Radioactivity (Alpha, Beta, Gamma)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Nuclear Physics (Physics). Covers Radioactivity (Alpha, Beta, Gamma)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Nuclear Fission & Fusion",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Nuclear Physics (Physics). Covers Nuclear Fission & Fusion."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Nuclear Reactor Components",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Nuclear Physics (Physics). Covers Nuclear Reactor Components."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Radiation Safety & Dosages",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Nuclear Physics (Physics). Covers Radiation Safety & Dosages."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "Atoms and Molecules (Chemistry)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Relative Atomic and Molecular Mass",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Atoms and Molecules (Chemistry). Covers Relative Atomic and Molecular Mass."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Mole Concept & Avogadro's Number",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Atoms and Molecules (Chemistry). Covers Mole Concept & Avogadro's Number."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Molar Volume & Percentage Composition",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Atoms and Molecules (Chemistry). Covers Molar Volume & Percentage Composition."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "Periodic Classification of Elements (Chemistry)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Modern Periodic Law",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Periodic Classification of Elements (Chemistry). Covers Modern Periodic Law."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Groups and Periods",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Periodic Classification of Elements (Chemistry). Covers Groups and Periods."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Periodic Trends (Atomic Radius, Ionization Energy, Electronegativity)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Periodic Classification of Elements (Chemistry). Covers Periodic Trends (Atomic Radius, Ionization Energy, Electronegativity)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Metallurgy & Alloys",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Periodic Classification of Elements (Chemistry). Covers Metallurgy & Alloys."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 9,
+                "title": "Solutions (Chemistry)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Solute, Solvent & Solution Types",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Solutions (Chemistry). Covers Solute, Solvent & Solution Types."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Solubility Factors",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Solutions (Chemistry). Covers Solubility Factors."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Mass and Volume Percentage",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Solutions (Chemistry). Covers Mass and Volume Percentage."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 10,
+                "title": "Types of Chemical Reactions (Chemistry)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Combination, Decomposition, Displacement Reactions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Types of Chemical Reactions (Chemistry). Covers Combination, Decomposition, Displacement Reactions."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Reversible & Irreversible Reactions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Types of Chemical Reactions (Chemistry). Covers Reversible & Irreversible Reactions."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Rate of Reaction",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Types of Chemical Reactions (Chemistry). Covers Rate of Reaction."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "pH Scale and Applications",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Types of Chemical Reactions (Chemistry). Covers pH Scale and Applications."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 11,
+                "title": "Carbon and its Compounds (Chemistry)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Covalent Bonding & Catenation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Carbon and its Compounds (Chemistry). Covers Covalent Bonding & Catenation."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Functional Groups & Homologous Series",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Carbon and its Compounds (Chemistry). Covers Functional Groups & Homologous Series."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "IUPAC Nomenclature of Organic Compounds",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Carbon and its Compounds (Chemistry). Covers IUPAC Nomenclature of Organic Compounds."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Ethanol and Ethanoic Acid Properties",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Carbon and its Compounds (Chemistry). Covers Ethanol and Ethanoic Acid Properties."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 12,
+                "title": "Plant Anatomy and Plant Physiology (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Plant Tissue Systems",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Plant Anatomy and Plant Physiology (Biology). Covers Plant Tissue Systems."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Internal Structure of Dicot and Monocot Root & Stem",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Plant Anatomy and Plant Physiology (Biology). Covers Internal Structure of Dicot and Monocot Root & Stem."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Plastids & Photosynthesis",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Plant Anatomy and Plant Physiology (Biology). Covers Plastids & Photosynthesis."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Respiration in Plants",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Plant Anatomy and Plant Physiology (Biology). Covers Respiration in Plants."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 13,
+                "title": "Structural Organisation of Animals (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Morphology of Leech & Rabbit",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Structural Organisation of Animals (Biology). Covers Morphology of Leech & Rabbit."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Digestive and Circulatory Systems",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Structural Organisation of Animals (Biology). Covers Digestive and Circulatory Systems."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 14,
+                "title": "Transportation in Plants and Circulation in Animals (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Ascent of Sap & Transpiration",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Transportation in Plants and Circulation in Animals (Biology). Covers Ascent of Sap & Transpiration."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Blood Composition & Human Heart",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Transportation in Plants and Circulation in Animals (Biology). Covers Blood Composition & Human Heart."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Blood Pressure & ECG",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Transportation in Plants and Circulation in Animals (Biology). Covers Blood Pressure & ECG."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 15,
+                "title": "Nervous System (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Neuron Structure & Nerve Impulse",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 15: Nervous System (Biology). Covers Neuron Structure & Nerve Impulse."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Central and Peripheral Nervous System",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 15: Nervous System (Biology). Covers Central and Peripheral Nervous System."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Reflex Arc",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 15: Nervous System (Biology). Covers Reflex Arc."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 16,
+                "title": "Plant and Animal Hormones (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Auxins, Gibberellins, Cytokinins, Abscisic Acid",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 16: Plant and Animal Hormones (Biology). Covers Auxins, Gibberellins, Cytokinins, Abscisic Acid."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Pituitary, Thyroid, Pancreas, Adrenal Hormones",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 16: Plant and Animal Hormones (Biology). Covers Pituitary, Thyroid, Pancreas, Adrenal Hormones."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 17,
+                "title": "Reproduction in Plants and Animals (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Vegetative Propagation & Pollination",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 17: Reproduction in Plants and Animals (Biology). Covers Vegetative Propagation & Pollination."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Fertilization in Plants",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 17: Reproduction in Plants and Animals (Biology). Covers Fertilization in Plants."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Human Male and Female Reproductive Systems",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 17: Reproduction in Plants and Animals (Biology). Covers Human Male and Female Reproductive Systems."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Menstrual Cycle & Contraception",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 17: Reproduction in Plants and Animals (Biology). Covers Menstrual Cycle & Contraception."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 18,
+                "title": "Heredity (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Mendel's Monohybrid and Dihybrid Crosses",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 18: Heredity (Biology). Covers Mendel's Monohybrid and Dihybrid Crosses."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Chromosomes & DNA Structure",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 18: Heredity (Biology). Covers Chromosomes & DNA Structure."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "DNA Replication & Mutations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 18: Heredity (Biology). Covers DNA Replication & Mutations."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 19,
+                "title": "Origin and Evolution of Life (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Theories of Evolution (Lamarckism, Darwinism)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 19: Origin and Evolution of Life (Biology). Covers Theories of Evolution (Lamarckism, Darwinism)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Evidences of Evolution",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 19: Origin and Evolution of Life (Biology). Covers Evidences of Evolution."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Fossils & Paleontology",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 19: Origin and Evolution of Life (Biology). Covers Fossils & Paleontology."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 20,
+                "title": "Breeding and Biotechnology (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Plant and Animal Breeding Methods",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 20: Breeding and Biotechnology (Biology). Covers Plant and Animal Breeding Methods."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Genetic Engineering & Recombinant DNA",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 20: Breeding and Biotechnology (Biology). Covers Genetic Engineering & Recombinant DNA."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "DNA Fingerprinting",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 20: Breeding and Biotechnology (Biology). Covers DNA Fingerprinting."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 21,
+                "title": "Health and Diseases (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Communicable Diseases & Pathogens",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 21: Health and Diseases (Biology). Covers Communicable Diseases & Pathogens."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Immunity & Immunization Schedule",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 21: Health and Diseases (Biology). Covers Immunity & Immunization Schedule."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Non-communicable Diseases (Diabetes, Cancer, AIDS)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 21: Health and Diseases (Biology). Covers Non-communicable Diseases (Diabetes, Cancer, AIDS)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 22,
+                "title": "Environmental Management (Biology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Renewable & Non-renewable Energy Resources",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 22: Environmental Management (Biology). Covers Renewable & Non-renewable Energy Resources."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Conservation of Wildlife & Forests",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 22: Environmental Management (Biology). Covers Conservation of Wildlife & Forests."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Waste Water Management",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 22: Environmental Management (Biology). Covers Waste Water Management."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "SOC-10",
+            "name": "Social Science",
+            "medium": "English",
+            "prepClass": 10,
+            "unitsCount": 15,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Outbreak of World War I and Its Aftermath (History)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Imperialism & Scramble for Africa",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Outbreak of World War I and Its Aftermath (History). Covers Imperialism & Scramble for Africa."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Alliances & Causes of WWI",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Outbreak of World War I and Its Aftermath (History). Covers Alliances & Causes of WWI."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Treaty of Versailles",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Outbreak of World War I and Its Aftermath (History). Covers Treaty of Versailles."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "League of Nations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Outbreak of World War I and Its Aftermath (History). Covers League of Nations."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "The World between Two World Wars (History)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "The Great Depression of 1929",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: The World between Two World Wars (History). Covers The Great Depression of 1929."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Rise of Fascism in Italy (Mussolini)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: The World between Two World Wars (History). Covers Rise of Fascism in Italy (Mussolini)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Rise of Nazism in Germany (Hitler)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: The World between Two World Wars (History). Covers Rise of Nazism in Germany (Hitler)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "World War II (History)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Causes & Major Battles of WWII",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: World War II (History). Covers Causes & Major Battles of WWII."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "The Holocaust",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: World War II (History). Covers The Holocaust."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Atomic Bombing of Hiroshima & Nagasaki",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: World War II (History). Covers Atomic Bombing of Hiroshima & Nagasaki."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Establishment of the United Nations (UN)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: World War II (History). Covers Establishment of the United Nations (UN)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Anti-Colonial Movements and Decolonisation (History)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Nationalism in Indo-China",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Anti-Colonial Movements and Decolonisation (History). Covers Nationalism in Indo-China."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Decolonisation in Africa",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Anti-Colonial Movements and Decolonisation (History). Covers Decolonisation in Africa."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Social and Religious Reform Movements in the 19th Century (History)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Brahmo Samaj & Raja Ram Mohan Roy",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Social and Religious Reform Movements in the 19th Century (History). Covers Brahmo Samaj & Raja Ram Mohan Roy."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Arya Samaj, Ramakrishna Mission",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Social and Religious Reform Movements in the 19th Century (History). Covers Arya Samaj, Ramakrishna Mission."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Reform Movements in Tamil Nadu (Periyar, Ramalingar, Ayothidhasar)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Social and Religious Reform Movements in the 19th Century (History). Covers Reform Movements in Tamil Nadu (Periyar, Ramalingar, Ayothidhasar)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "India - Location, Relief and Drainage (Geography)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Major Physiographic Divisions of India",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: India - Location, Relief and Drainage (Geography). Covers Major Physiographic Divisions of India."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Himalayas, Northern Plains, Peninsular Plateau",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: India - Location, Relief and Drainage (Geography). Covers Himalayas, Northern Plains, Peninsular Plateau."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Himalayan and Peninsular River Systems",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: India - Location, Relief and Drainage (Geography). Covers Himalayan and Peninsular River Systems."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "Climate and Natural Vegetation of India (Geography)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Factors affecting India's Climate",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Climate and Natural Vegetation of India (Geography). Covers Factors affecting India's Climate."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Southwest and Northeast Monsoons",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Climate and Natural Vegetation of India (Geography). Covers Southwest and Northeast Monsoons."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Forest Types of India & Conservation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Climate and Natural Vegetation of India (Geography). Covers Forest Types of India & Conservation."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "India - Agriculture (Geography)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Soil Types in India",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: India - Agriculture (Geography). Covers Soil Types in India."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Irrigation Methods",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: India - Agriculture (Geography). Covers Irrigation Methods."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Major Food and Cash Crops",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: India - Agriculture (Geography). Covers Major Food and Cash Crops."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Green Revolution",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: India - Agriculture (Geography). Covers Green Revolution."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 9,
+                "title": "Indian Constitution (Civics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Making of the Constitution",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Indian Constitution (Civics). Covers Making of the Constitution."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Preamble & Salient Features",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Indian Constitution (Civics). Covers Preamble & Salient Features."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Fundamental Rights and Duties",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Indian Constitution (Civics). Covers Fundamental Rights and Duties."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Directive Principles of State Policy",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Indian Constitution (Civics). Covers Directive Principles of State Policy."
+                  },
+                  {
+                    "chapterNumber": 5,
+                    "title": "Writ Jurisdiction",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Indian Constitution (Civics). Covers Writ Jurisdiction."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 10,
+                "title": "Central Government (Civics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "President, Vice-President, Prime Minister",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Central Government (Civics). Covers President, Vice-President, Prime Minister."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Lok Sabha and Rajya Sabha Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Central Government (Civics). Covers Lok Sabha and Rajya Sabha Functions."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Supreme Court of India & Judicial Review",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Central Government (Civics). Covers Supreme Court of India & Judicial Review."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 11,
+                "title": "State Government (Civics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Governor & Chief Minister",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: State Government (Civics). Covers Governor & Chief Minister."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "State Legislative Assembly",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: State Government (Civics). Covers State Legislative Assembly."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "High Courts in India",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: State Government (Civics). Covers High Courts in India."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 12,
+                "title": "Gross Domestic Product and its Growth: An Introduction (Economics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "GDP Definition and Methods of Calculation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Gross Domestic Product and its Growth: An Introduction (Economics). Covers GDP Definition and Methods of Calculation."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Sectors of Economy (Primary, Secondary, Tertiary)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Gross Domestic Product and its Growth: An Introduction (Economics). Covers Sectors of Economy (Primary, Secondary, Tertiary)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Purchasing Power Parity (PPP)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Gross Domestic Product and its Growth: An Introduction (Economics). Covers Purchasing Power Parity (PPP)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 13,
+                "title": "Globalization and Trade (Economics)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Historical Background of Trade",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Globalization and Trade (Economics). Covers Historical Background of Trade."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Multinational Corporations (MNCs)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Globalization and Trade (Economics). Covers Multinational Corporations (MNCs)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "World Trade Organization (WTO)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Globalization and Trade (Economics). Covers World Trade Organization (WTO)."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "standard": 12,
+        "label": "12th Standard (Higher Secondary)",
+        "subjects": [
+          {
+            "subjectCode": "TAM-12",
+            "name": "Language (Tamil)",
+            "medium": "Tamil",
+            "prepClass": 12,
+            "unitsCount": 8,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "உயிரினும் சிறந்தன்று (மொழி)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "இளந்தமிழே",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: உயிரினும் சிறந்தன்று (மொழி). Covers இளந்தமிழே."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "தமிழ்மொழியின் நடை அழகியல்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: உயிரினும் சிறந்தன்று (மொழி). Covers தமிழ்மொழியின் நடை அழகியல்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "தன்னேர் இலாத தமிழ்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: உயிரினும் சிறந்தன்று (மொழி). Covers தன்னேர் இலாத தமிழ்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "நால்வகைச் சொற்கள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: உயிரினும் சிறந்தன்று (மொழி). Covers நால்வகைச் சொற்கள்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "பெய்யெனப் பெய்யும் மழை (இயற்கை)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "பிறகொரு நாள் கோடை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: பெய்யெனப் பெய்யும் மழை (இயற்கை). Covers பிறகொரு நாள் கோடை."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "நெடுநல்வாடை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: பெய்யெனப் பெய்யும் மழை (இயற்கை). Covers நெடுநல்வாடை."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "முதல் கல்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: பெய்யெனப் பெய்யும் மழை (இயற்கை). Covers முதல் கல்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "நால்வகை அணிகள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: பெய்யெனப் பெய்யும் மழை (இயற்கை). Covers நால்வகை அணிகள்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "சுற்றத்தார் கண்ணே உள (பண்பாடு)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "விருந்தினர் இல்லம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: சுற்றத்தார் கண்ணே உள (பண்பாடு). Covers விருந்தினர் இல்லம்."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "கம்பராமாயணம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: சுற்றத்தார் கண்ணே உள (பண்பாடு). Covers கம்பராமாயணம்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "உரிமைத்தாகம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: சுற்றத்தார் கண்ணே உள (பண்பாடு). Covers உரிமைத்தாகம்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "பொருள்கோள் வகைகள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: சுற்றத்தார் கண்ணே உள (பண்பாடு). Covers பொருள்கோள் வகைகள்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "செல்வத்துள் செல்வம் (கல்வி)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "படைப்புக்கலை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: செல்வத்துள் செல்வம் (கல்வி). Covers படைப்புக்கலை."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "திருக்குறள்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: செல்வத்துள் செல்வம் (கல்வி). Covers திருக்குறள்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "பா இயற்றப் பழகலாம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: செல்வத்துள் செல்வம் (கல்வி). Covers பா இயற்றப் பழகலாம்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "நாடென்ப நாடா வளத்தன (நாடு, சமூகம்)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "தெய்வமணிமாலை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: நாடென்ப நாடா வளத்தன (நாடு, சமூகம்). Covers தெய்வமணிமாலை."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "தேவாரம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: நாடென்ப நாடா வளத்தன (நாடு, சமூகம்). Covers தேவாரம்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "அகநானூறு",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: நாடென்ப நாடா வளத்தன (நாடு, சமூகம்). Covers அகநானூறு."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "தலைக்குளம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: நாடென்ப நாடா வளத்தன (நாடு, சமூகம்). Covers தலைக்குளம்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "சிறுகை அளாவிய கூழ் (கலை, அழகியல்)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "சிற்பக்கலை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: சிறுகை அளாவிய கூழ் (கலை, அழகியல்). Covers சிற்பக்கலை."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "சிலப்பதிகாரம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: சிறுகை அளாவிய கூழ் (கலை, அழகியல்). Covers சிலப்பதிகாரம்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "மெய்ப்பாட்டியல்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: சிறுகை அளாவிய கூழ் (கலை, அழகியல்). Covers மெய்ப்பாட்டியல்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "சான்றோர் மெய்ம்மறை (ஆளுமை)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "இலக்கியத்தில் மேலாண்மை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: சான்றோர் மெய்ம்மறை (ஆளுமை). Covers இலக்கியத்தில் மேலாண்மை."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "புறநானூறு",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: சான்றோர் மெய்ம்மறை (ஆளுமை). Covers புறநானூறு."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "குறைஒன்றுமில்லை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: சான்றோர் மெய்ம்மறை (ஆளுமை). Covers குறைஒன்றுமில்லை."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "எல்லார்க்கும் எல்லாம் (வாழ்வியல்)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "கோடைமழை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: எல்லார்க்கும் எல்லாம் (வாழ்வியல்). Covers கோடைமழை."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "ரட்சணிய யாத்திரிகம்",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: எல்லார்க்கும் எல்லாம் (வாழ்வியல்). Covers ரட்சணிய யாத்திரிகம்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "சிறுபாணாற்றுப்படை",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: எல்லார்க்கும் எல்லாம் (வாழ்வியல்). Covers சிறுபாணாற்றுப்படை."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "ENG-12",
+            "name": "English",
+            "medium": "English",
+            "prepClass": 12,
+            "unitsCount": 6,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Human Spirit and Dedication",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Two Gentlemen of Verona (Prose)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Human Spirit and Dedication. Covers Two Gentlemen of Verona (Prose)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "The Castle (Poem)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Human Spirit and Dedication. Covers The Castle (Poem)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "God Sees the Truth, But Waits",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Human Spirit and Dedication. Covers God Sees the Truth, But Waits."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Tenses and Modals",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Human Spirit and Dedication. Covers Tenses and Modals."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Humor and Everyday Life",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "A Nice Cup of Tea",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Humor and Everyday Life. Covers A Nice Cup of Tea."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Our Casuarina Tree",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Humor and Everyday Life. Covers Our Casuarina Tree."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Life of Pi",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Humor and Everyday Life. Covers Life of Pi."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Prepositional Phrases",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Humor and Everyday Life. Covers Prepositional Phrases."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Determination and Courage",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "In Celebration of Being Alive",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Determination and Courage. Covers In Celebration of Being Alive."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "All the World's a Stage",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Determination and Courage. Covers All the World's a Stage."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "The Hour of Truth",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Determination and Courage. Covers The Hour of Truth."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Direct and Reported Speech",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Determination and Courage. Covers Direct and Reported Speech."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Science and Environment",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "The Summit",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Science and Environment. Covers The Summit."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Ulysses",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Science and Environment. Covers Ulysses."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "The Midnight Visitor",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Science and Environment. Covers The Midnight Visitor."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Conditionals and Inversion",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Science and Environment. Covers Conditionals and Inversion."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Art and Literature",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "The Chair",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Art and Literature. Covers The Chair."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "A Father to his Son",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Art and Literature. Covers A Father to his Son."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "All Summer in a Day",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Art and Literature. Covers All Summer in a Day."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Concord and Relative Clauses",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Art and Literature. Covers Concord and Relative Clauses."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "Values and Social Issues",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "On the Rule of the Road",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Values and Social Issues. Covers On the Rule of the Road."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Incident of the French Camp",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Values and Social Issues. Covers Incident of the French Camp."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "A Man who had No Eyes",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Values and Social Issues. Covers A Man who had No Eyes."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Question Tags and Idioms",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Values and Social Issues. Covers Question Tags and Idioms."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "MAT-12",
+            "name": "Mathematics",
+            "medium": "English",
+            "prepClass": 12,
+            "unitsCount": 12,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Applications of Matrices and Determinants",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Adjoint and Inverse of a Matrix",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Applications of Matrices and Determinants. Covers Adjoint and Inverse of a Matrix."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Rank of a Matrix & Elementary Row Operations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Applications of Matrices and Determinants. Covers Rank of a Matrix & Elementary Row Operations."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Cramer's Rule, Matrix Inversion Method, Gaussian Elimination Method",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Applications of Matrices and Determinants. Covers Cramer's Rule, Matrix Inversion Method, Gaussian Elimination Method."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Consistency of Linear Equations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Applications of Matrices and Determinants. Covers Consistency of Linear Equations."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Complex Numbers",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Algebraic Operations & Geometric Representation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Complex Numbers. Covers Algebraic Operations & Geometric Representation."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Modulus, Argument & Polar Form",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Complex Numbers. Covers Modulus, Argument & Polar Form."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Euler's Form & De Moivre's Theorem",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Complex Numbers. Covers Euler's Form & De Moivre's Theorem."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "nth Roots of Unity",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Complex Numbers. Covers nth Roots of Unity."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Theory of Equations",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Vieta's Formulas for Polynomials",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Theory of Equations. Covers Vieta's Formulas for Polynomials."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Descartes' Rule of Signs",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Theory of Equations. Covers Descartes' Rule of Signs."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Roots of Real and Complex Polynomials",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Theory of Equations. Covers Roots of Real and Complex Polynomials."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Inverse Trigonometric Functions",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Principal Domains and Ranges",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Inverse Trigonometric Functions. Covers Principal Domains and Ranges."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Properties of Inverse Trigonometric Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Inverse Trigonometric Functions. Covers Properties of Inverse Trigonometric Functions."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Two Dimensional Analytical Geometry-II",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Parabola, Ellipse, Hyperbola Equations & Tangents",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Two Dimensional Analytical Geometry-II. Covers Parabola, Ellipse, Hyperbola Equations & Tangents."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Applications in Real Life",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Two Dimensional Analytical Geometry-II. Covers Applications in Real Life."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "Applications of Vector Algebra",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Scalar and Vector Triple Products",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Applications of Vector Algebra. Covers Scalar and Vector Triple Products."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Vector and Cartesian Equations of Lines and Planes",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Applications of Vector Algebra. Covers Vector and Cartesian Equations of Lines and Planes."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Skew Lines & Shortest Distance",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Applications of Vector Algebra. Covers Skew Lines & Shortest Distance."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "Applications of Differential Calculus",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Meaning of Derivative & Rates of Change",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Applications of Differential Calculus. Covers Meaning of Derivative & Rates of Change."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Rolle's Theorem & Mean Value Theorem",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Applications of Differential Calculus. Covers Rolle's Theorem & Mean Value Theorem."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Taylor and Maclaurin Series",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Applications of Differential Calculus. Covers Taylor and Maclaurin Series."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Maxima and Minima & Concavity",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Applications of Differential Calculus. Covers Maxima and Minima & Concavity."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "Differentials and Partial Derivatives",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Linear Approximation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Differentials and Partial Derivatives. Covers Linear Approximation."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Euler's Theorem for Homogeneous Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Differentials and Partial Derivatives. Covers Euler's Theorem for Homogeneous Functions."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 9,
+                "title": "Applications of Integration",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Definite Integrals & Properties",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Applications of Integration. Covers Definite Integrals & Properties."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Bernoulli's Formula & Reduction Formulas",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Applications of Integration. Covers Bernoulli's Formula & Reduction Formulas."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Area between Curves & Volume of Revolution",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Applications of Integration. Covers Area between Curves & Volume of Revolution."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 10,
+                "title": "Ordinary Differential Equations",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Formation of Differential Equations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Ordinary Differential Equations. Covers Formation of Differential Equations."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Variable Separable, Homogeneous and Linear Differential Equations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Ordinary Differential Equations. Covers Variable Separable, Homogeneous and Linear Differential Equations."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 11,
+                "title": "Probability Distributions",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Discrete and Continuous Random Variables",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Probability Distributions. Covers Discrete and Continuous Random Variables."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Probability Mass & Density Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Probability Distributions. Covers Probability Mass & Density Functions."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Binomial Distribution & Bernoulli Trials",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Probability Distributions. Covers Binomial Distribution & Bernoulli Trials."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 12,
+                "title": "Discrete Mathematics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Binary Operations & Properties",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Discrete Mathematics. Covers Binary Operations & Properties."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Truth Tables & Logical Equivalences",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Discrete Mathematics. Covers Truth Tables & Logical Equivalences."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Tautology and Contradiction",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Discrete Mathematics. Covers Tautology and Contradiction."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "PHY-12",
+            "name": "Physics",
+            "medium": "English",
+            "prepClass": 12,
+            "unitsCount": 11,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Electrostatics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Coulomb's Law & Principle of Superposition",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Electrostatics. Covers Coulomb's Law & Principle of Superposition."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Electric Field & Electric Dipole",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Electrostatics. Covers Electric Field & Electric Dipole."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Gauss's Law & Applications",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Electrostatics. Covers Gauss's Law & Applications."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Electrostatic Potential & Capacitors",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Electrostatics. Covers Electrostatic Potential & Capacitors."
+                  },
+                  {
+                    "chapterNumber": 5,
+                    "title": "Van de Graaff Generator",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Electrostatics. Covers Van de Graaff Generator."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Current Electricity",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Ohm's Law, Drift Velocity & Mobility",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Current Electricity. Covers Ohm's Law, Drift Velocity & Mobility."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Resistors & Temperature Dependence",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Current Electricity. Covers Resistors & Temperature Dependence."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Kirchhoff's Rules & Wheatstone's Bridge",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Current Electricity. Covers Kirchhoff's Rules & Wheatstone's Bridge."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Potentiometer Principles",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Current Electricity. Covers Potentiometer Principles."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Magnetism and Magnetic Effects of Electric Current",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Earth's Magnetism & Magnetic Materials",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Magnetism and Magnetic Effects of Electric Current. Covers Earth's Magnetism & Magnetic Materials."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Biot-Savart Law & Ampere's Circuital Law",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Magnetism and Magnetic Effects of Electric Current. Covers Biot-Savart Law & Ampere's Circuital Law."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Force on Moving Charge & Cyclotron",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Magnetism and Magnetic Effects of Electric Current. Covers Force on Moving Charge & Cyclotron."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Moving Coil Galvanometer",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Magnetism and Magnetic Effects of Electric Current. Covers Moving Coil Galvanometer."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Electromagnetic Induction and Alternating Current",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Faraday's Laws & Lenz's Law",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Electromagnetic Induction and Alternating Current. Covers Faraday's Laws & Lenz's Law."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Self and Mutual Induction",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Electromagnetic Induction and Alternating Current. Covers Self and Mutual Induction."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "AC Generator & Transformer",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Electromagnetic Induction and Alternating Current. Covers AC Generator & Transformer."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "LCR Series Resonance Circuit",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Electromagnetic Induction and Alternating Current. Covers LCR Series Resonance Circuit."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Electromagnetic Waves",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Displacement Current & Maxwell's Equations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Electromagnetic Waves. Covers Displacement Current & Maxwell's Equations."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Electromagnetic Spectrum & Characteristics",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Electromagnetic Waves. Covers Electromagnetic Spectrum & Characteristics."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "Optics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Ray Optics (Refraction, Total Internal Reflection, Prisms)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Optics. Covers Ray Optics (Refraction, Total Internal Reflection, Prisms)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Wave Optics (Huygens' Principle, Interference, Young's Double Slit, Diffraction, Polarization)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Optics. Covers Wave Optics (Huygens' Principle, Interference, Young's Double Slit, Diffraction, Polarization)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "Dual Nature of Radiation and Matter",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Photoelectric Effect & Einstein's Photoelectric Equation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Dual Nature of Radiation and Matter. Covers Photoelectric Effect & Einstein's Photoelectric Equation."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "de Broglie Hypothesis & Davisson-Germer Experiment",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Dual Nature of Radiation and Matter. Covers de Broglie Hypothesis & Davisson-Germer Experiment."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Electron Microscope",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Dual Nature of Radiation and Matter. Covers Electron Microscope."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "Atomic and Nuclear Physics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Bohr Atom Model & Hydrogen Spectrum",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Atomic and Nuclear Physics. Covers Bohr Atom Model & Hydrogen Spectrum."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Nuclear Binding Energy & Packing Fraction",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Atomic and Nuclear Physics. Covers Nuclear Binding Energy & Packing Fraction."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Radioactive Decay Law (Half-life)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Atomic and Nuclear Physics. Covers Radioactive Decay Law (Half-life)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Nuclear Fission and Fusion",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Atomic and Nuclear Physics. Covers Nuclear Fission and Fusion."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 9,
+                "title": "Semiconductor Electronics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Energy Bands in Solids",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Semiconductor Electronics. Covers Energy Bands in Solids."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "p-n Junction Diode, Rectifiers & Zener Diode",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Semiconductor Electronics. Covers p-n Junction Diode, Rectifiers & Zener Diode."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Transistors (CE Configuration & Amplifier)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Semiconductor Electronics. Covers Transistors (CE Configuration & Amplifier)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Logic Gates & De Morgan's Theorems",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Semiconductor Electronics. Covers Logic Gates & De Morgan's Theorems."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 10,
+                "title": "Communication Systems",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Modulation (AM, FM, PM)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Communication Systems. Covers Modulation (AM, FM, PM)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Propagation of EM Waves (Ground, Sky, Space)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Communication Systems. Covers Propagation of EM Waves (Ground, Sky, Space)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Fiber Optics & Satellite Communication",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Communication Systems. Covers Fiber Optics & Satellite Communication."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 11,
+                "title": "Recent Developments in Physics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Nanoscience & Nanomaterials",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Recent Developments in Physics. Covers Nanoscience & Nanomaterials."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Robotics, AI & Space Applications",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Recent Developments in Physics. Covers Robotics, AI & Space Applications."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "CHE-12",
+            "name": "Chemistry",
+            "medium": "English",
+            "prepClass": 12,
+            "unitsCount": 15,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Metallurgy",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Ores and Minerals",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Metallurgy. Covers Ores and Minerals."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Concentration Methods (Froth Floatation, Leaching)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Metallurgy. Covers Concentration Methods (Froth Floatation, Leaching)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Thermodynamic Principles & Ellingham Diagram",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Metallurgy. Covers Thermodynamic Principles & Ellingham Diagram."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Electrochemical Principles & Refining Methods",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Metallurgy. Covers Electrochemical Principles & Refining Methods."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "p-Block Elements - I",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "General Trends in Group 13 and 14",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: p-Block Elements - I. Covers General Trends in Group 13 and 14."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Borax, Boric Acid, Diborane",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: p-Block Elements - I. Covers Borax, Boric Acid, Diborane."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Allotropes of Carbon, Silicones and Silicates",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: p-Block Elements - I. Covers Allotropes of Carbon, Silicones and Silicates."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "p-Block Elements - II",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Nitrogen and Phosphorus Compounds",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: p-Block Elements - II. Covers Nitrogen and Phosphorus Compounds."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Oxygen, Ozone and Oxides of Sulphur",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: p-Block Elements - II. Covers Oxygen, Ozone and Oxides of Sulphur."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Halogens and Interhalogen Compounds",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: p-Block Elements - II. Covers Halogens and Interhalogen Compounds."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Noble Gases & Xenon Fluorides",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: p-Block Elements - II. Covers Noble Gases & Xenon Fluorides."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Transition and Inner Transition Elements",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Electronic Configurations & Variable Oxidation States",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Transition and Inner Transition Elements. Covers Electronic Configurations & Variable Oxidation States."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Magnetic Properties & Catalytic Behavior",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Transition and Inner Transition Elements. Covers Magnetic Properties & Catalytic Behavior."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Potassium Dichromate & Potassium Permanganate",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Transition and Inner Transition Elements. Covers Potassium Dichromate & Potassium Permanganate."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Lanthanoid Contraction",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Transition and Inner Transition Elements. Covers Lanthanoid Contraction."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Coordination Chemistry",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Werner's Theory & IUPAC Nomenclature",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Coordination Chemistry. Covers Werner's Theory & IUPAC Nomenclature."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Isomerism in Coordination Compounds",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Coordination Chemistry. Covers Isomerism in Coordination Compounds."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Valence Bond Theory & Crystal Field Theory",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Coordination Chemistry. Covers Valence Bond Theory & Crystal Field Theory."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "Solid State",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Classification of Solids (Crystalline & Amorphous)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Solid State. Covers Classification of Solids (Crystalline & Amorphous)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Unit Cells (SC, BCC, FCC)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Solid State. Covers Unit Cells (SC, BCC, FCC)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Bragg's Equation & Packing Efficiency",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Solid State. Covers Bragg's Equation & Packing Efficiency."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Crystal Defects (Schottky, Frenkel)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Solid State. Covers Crystal Defects (Schottky, Frenkel)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "Chemical Kinetics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Rate of Reaction & Rate Law",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Chemical Kinetics. Covers Rate of Reaction & Rate Law."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Order and Molecularity",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Chemical Kinetics. Covers Order and Molecularity."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Integrated Rate Law (First & Zero Order)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Chemical Kinetics. Covers Integrated Rate Law (First & Zero Order)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Arrhenius Equation & Activation Energy",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Chemical Kinetics. Covers Arrhenius Equation & Activation Energy."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "Ionic Equilibrium",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Arrhenius, Bronsted-Lowry, Lewis Concepts",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Ionic Equilibrium. Covers Arrhenius, Bronsted-Lowry, Lewis Concepts."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Ostwald's Dilution Law & Common Ion Effect",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Ionic Equilibrium. Covers Ostwald's Dilution Law & Common Ion Effect."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "pH and pOH Calculations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Ionic Equilibrium. Covers pH and pOH Calculations."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Buffer Solutions & Henderson-Hasselbalch Equation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Ionic Equilibrium. Covers Buffer Solutions & Henderson-Hasselbalch Equation."
+                  },
+                  {
+                    "chapterNumber": 5,
+                    "title": "Solubility Product",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Ionic Equilibrium. Covers Solubility Product."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 9,
+                "title": "Electrochemistry",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Specific, Equivalent and Molar Conductivity",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Electrochemistry. Covers Specific, Equivalent and Molar Conductivity."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Kohlrausch's Law & Applications",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Electrochemistry. Covers Kohlrausch's Law & Applications."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Galvanic Cells & Nernst Equation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Electrochemistry. Covers Galvanic Cells & Nernst Equation."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Batteries & Corrosion",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Electrochemistry. Covers Batteries & Corrosion."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 10,
+                "title": "Surface Chemistry",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Physisorption and Chemisorption",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Surface Chemistry. Covers Physisorption and Chemisorption."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Catalysis & Enzyme Catalysis",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Surface Chemistry. Covers Catalysis & Enzyme Catalysis."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Colloids & Tyndall Effect",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Surface Chemistry. Covers Colloids & Tyndall Effect."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 11,
+                "title": "Hydroxy Compounds and Ethers",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Classification and Preparation of Alcohols & Phenols",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Hydroxy Compounds and Ethers. Covers Classification and Preparation of Alcohols & Phenols."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Lucas Test, Victor Meyer Test",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Hydroxy Compounds and Ethers. Covers Lucas Test, Victor Meyer Test."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Mechanism of Kolbe's & Reimer-Tiemann Reactions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Hydroxy Compounds and Ethers. Covers Mechanism of Kolbe's & Reimer-Tiemann Reactions."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Williamson Ether Synthesis",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Hydroxy Compounds and Ethers. Covers Williamson Ether Synthesis."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 12,
+                "title": "Carbonyl Compounds and Carboxylic Acids",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Nomenclature & Preparation of Aldehydes & Ketones",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Carbonyl Compounds and Carboxylic Acids. Covers Nomenclature & Preparation of Aldehydes & Ketones."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Nucleophilic Addition Reactions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Carbonyl Compounds and Carboxylic Acids. Covers Nucleophilic Addition Reactions."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Aldol Condensation & Cannizzaro Reaction",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Carbonyl Compounds and Carboxylic Acids. Covers Aldol Condensation & Cannizzaro Reaction."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Acidity of Carboxylic Acids",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Carbonyl Compounds and Carboxylic Acids. Covers Acidity of Carboxylic Acids."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 13,
+                "title": "Organic Nitrogen Compounds",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Amines Preparation & Basicity",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Organic Nitrogen Compounds. Covers Amines Preparation & Basicity."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Carbylamine Reaction & Diazotization",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Organic Nitrogen Compounds. Covers Carbylamine Reaction & Diazotization."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Cyanides and Isocyanides",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Organic Nitrogen Compounds. Covers Cyanides and Isocyanides."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 14,
+                "title": "Biomolecules",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Carbohydrates (Glucose, Fructose Structure)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Biomolecules. Covers Carbohydrates (Glucose, Fructose Structure)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Amino Acids & Peptide Bonds",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Biomolecules. Covers Amino Acids & Peptide Bonds."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Proteins (Primary, Secondary, Tertiary Structure)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Biomolecules. Covers Proteins (Primary, Secondary, Tertiary Structure)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Nucleic Acids (DNA, RNA)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Biomolecules. Covers Nucleic Acids (DNA, RNA)."
+                  },
+                  {
+                    "chapterNumber": 5,
+                    "title": "Vitamins & Hormones",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Biomolecules. Covers Vitamins & Hormones."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 15,
+                "title": "Chemistry in Everyday Life",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Drugs and Classification",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 15: Chemistry in Everyday Life. Covers Drugs and Classification."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Antipyretics, Analgesics, Antibiotics",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 15: Chemistry in Everyday Life. Covers Antipyretics, Analgesics, Antibiotics."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Food Additives & Polymers",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 15: Chemistry in Everyday Life. Covers Food Additives & Polymers."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "CSC-12",
+            "name": "Computer Science",
+            "medium": "English",
+            "prepClass": 12,
+            "unitsCount": 16,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Function",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Function Definition & Specification",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Function. Covers Function Definition & Specification."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Parameters vs Arguments",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Function. Covers Parameters vs Arguments."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Pure and Impure Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Function. Covers Pure and Impure Functions."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Data Abstraction",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Abstract Data Types (ADT)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Data Abstraction. Covers Abstract Data Types (ADT)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Constructors and Selectors",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Data Abstraction. Covers Constructors and Selectors."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Pairs, Lists and Tuples Abstraction",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Data Abstraction. Covers Pairs, Lists and Tuples Abstraction."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Scoping",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Variable Scope Definition",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Scoping. Covers Variable Scope Definition."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "LEGB Scoping Rule",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Scoping. Covers LEGB Scoping Rule."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Module Scope & Namespace",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Scoping. Covers Module Scope & Namespace."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Algorithmic Strategies",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Characteristics of Algorithms",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Algorithmic Strategies. Covers Characteristics of Algorithms."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Time and Space Complexity (Big-O)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Algorithmic Strategies. Covers Time and Space Complexity (Big-O)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Linear Search, Binary Search, Bubble Sort, Selection Sort, Insertion Sort",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Algorithmic Strategies. Covers Linear Search, Binary Search, Bubble Sort, Selection Sort, Insertion Sort."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Dynamic Programming & Memoization",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Algorithmic Strategies. Covers Dynamic Programming & Memoization."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Python - Variables and Operators",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Python Tokens & Keywords",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Python - Variables and Operators. Covers Python Tokens & Keywords."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Data Types & Expressions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Python - Variables and Operators. Covers Data Types & Expressions."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Input and Output Statements",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Python - Variables and Operators. Covers Input and Output Statements."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "Control Structures",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Sequential Statements",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Control Structures. Covers Sequential Statements."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Alternative / Branching (if, if-else, if-elif-else)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Control Structures. Covers Alternative / Branching (if, if-else, if-elif-else)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Iterative Loops (while, for, range)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Control Structures. Covers Iterative Loops (while, for, range)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Jump Statements (break, continue, pass)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Control Structures. Covers Jump Statements (break, continue, pass)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "Python Functions",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Built-in Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Python Functions. Covers Built-in Functions."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "User Defined Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Python Functions. Covers User Defined Functions."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Arguments (Positional, Keyword, Default, Variable-length)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Python Functions. Covers Arguments (Positional, Keyword, Default, Variable-length)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Anonymous Lambda Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Python Functions. Covers Anonymous Lambda Functions."
+                  },
+                  {
+                    "chapterNumber": 5,
+                    "title": "Recursion",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Python Functions. Covers Recursion."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "Strings and String Manipulations",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "String Creation & Immutability",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Strings and String Manipulations. Covers String Creation & Immutability."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Indexing and Negative Slicing",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Strings and String Manipulations. Covers Indexing and Negative Slicing."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "String Formatting Operators (%)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Strings and String Manipulations. Covers String Formatting Operators (%)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Built-in String Methods",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Strings and String Manipulations. Covers Built-in String Methods."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 9,
+                "title": "Lists, Tuples, Sets and Dictionary",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "List Operations, Slicing & Comprehensions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Lists, Tuples, Sets and Dictionary. Covers List Operations, Slicing & Comprehensions."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Tuples Immutability & Packing/Unpacking",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Lists, Tuples, Sets and Dictionary. Covers Tuples Immutability & Packing/Unpacking."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Set Operations (Union, Intersection, Difference)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Lists, Tuples, Sets and Dictionary. Covers Set Operations (Union, Intersection, Difference)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Dictionary Key-Value Mapping",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Lists, Tuples, Sets and Dictionary. Covers Dictionary Key-Value Mapping."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 10,
+                "title": "Python Classes and Objects",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Class Definition & Instance Creation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Python Classes and Objects. Covers Class Definition & Instance Creation."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "The self Parameter & __init__() Constructor",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Python Classes and Objects. Covers The self Parameter & __init__() Constructor."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Class vs Instance Variables",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Python Classes and Objects. Covers Class vs Instance Variables."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Public and Private Data Members",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Python Classes and Objects. Covers Public and Private Data Members."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 11,
+                "title": "Database Concepts",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "DBMS Architecture & Advantages",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Database Concepts. Covers DBMS Architecture & Advantages."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Relational Data Model Components (Attributes, Tuples, Tables)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Database Concepts. Covers Relational Data Model Components (Attributes, Tuples, Tables)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Keys (Primary, Foreign, Super, Candidate Keys)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 11: Database Concepts. Covers Keys (Primary, Foreign, Super, Candidate Keys)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 12,
+                "title": "Structured Query Language (SQL)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "DDL (CREATE, ALTER, DROP, TRUNCATE)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Structured Query Language (SQL). Covers DDL (CREATE, ALTER, DROP, TRUNCATE)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "DML (INSERT, UPDATE, DELETE)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Structured Query Language (SQL). Covers DML (INSERT, UPDATE, DELETE)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "DQL (SELECT with WHERE, ORDER BY, GROUP BY, HAVING)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 12: Structured Query Language (SQL). Covers DQL (SELECT with WHERE, ORDER BY, GROUP BY, HAVING)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 13,
+                "title": "Python and CSV Files",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "CSV Dialects & Delimiters",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Python and CSV Files. Covers CSV Dialects & Delimiters."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "csv.reader() and csv.DictReader()",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Python and CSV Files. Covers csv.reader() and csv.DictReader()."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "csv.writer() and writerow()",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 13: Python and CSV Files. Covers csv.writer() and writerow()."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 14,
+                "title": "Importing C++ Programs in Python",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Wrapping C++ with Python MinGW",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Importing C++ Programs in Python. Covers Wrapping C++ with Python MinGW."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "getopt module & command-line arguments",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 14: Importing C++ Programs in Python. Covers getopt module & command-line arguments."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 15,
+                "title": "Data Manipulation through SQL",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "sqlite3 module in Python",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 15: Data Manipulation through SQL. Covers sqlite3 module in Python."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Connection, Cursor & execute()",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 15: Data Manipulation through SQL. Covers Connection, Cursor & execute()."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "fetchone(), fetchall(), fetchmany()",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 15: Data Manipulation through SQL. Covers fetchone(), fetchall(), fetchmany()."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 16,
+                "title": "Data Visualization using Pyplot",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Matplotlib Installation & Pyplot",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 16: Data Visualization using Pyplot. Covers Matplotlib Installation & Pyplot."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Line Charts, Bar Charts, Histograms, Pie Charts",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 16: Data Visualization using Pyplot. Covers Line Charts, Bar Charts, Histograms, Pie Charts."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Plot Styling (Labels, Titles, Legends)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 16: Data Visualization using Pyplot. Covers Plot Styling (Labels, Titles, Legends)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "BIO-12",
+            "name": "Biology",
+            "medium": "English",
+            "prepClass": 12,
+            "unitsCount": 10,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Asexual and Sexual Reproduction in Plants (Bio-Botany)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Vegetative Propagation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Asexual and Sexual Reproduction in Plants (Bio-Botany). Covers Vegetative Propagation."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Microsporogenesis & Megasporogenesis",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Asexual and Sexual Reproduction in Plants (Bio-Botany). Covers Microsporogenesis & Megasporogenesis."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Double Fertilization & Endosperm Types",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Asexual and Sexual Reproduction in Plants (Bio-Botany). Covers Double Fertilization & Endosperm Types."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Classical Genetics (Bio-Botany)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Mendel's Laws of Inheritance",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Classical Genetics (Bio-Botany). Covers Mendel's Laws of Inheritance."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Incomplete Dominance & Codominance",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Classical Genetics (Bio-Botany). Covers Incomplete Dominance & Codominance."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Polygenic Inheritance & Pleiotropy",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Classical Genetics (Bio-Botany). Covers Polygenic Inheritance & Pleiotropy."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Chromosomal Basis of Inheritance (Bio-Botany)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Linkage and Crossing Over",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Chromosomal Basis of Inheritance (Bio-Botany). Covers Linkage and Crossing Over."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Gene Mapping",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Chromosomal Basis of Inheritance (Bio-Botany). Covers Gene Mapping."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Sex Determination in Plants",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Chromosomal Basis of Inheritance (Bio-Botany). Covers Sex Determination in Plants."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Mutation Types",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Chromosomal Basis of Inheritance (Bio-Botany). Covers Mutation Types."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Principles and Processes of Biotechnology (Bio-Botany)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Tools of Recombinant DNA Technology",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Principles and Processes of Biotechnology (Bio-Botany). Covers Tools of Recombinant DNA Technology."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Restriction Enzymes & DNA Ligase",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Principles and Processes of Biotechnology (Bio-Botany). Covers Restriction Enzymes & DNA Ligase."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Vectors (Plasmids, Bacteriophages)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Principles and Processes of Biotechnology (Bio-Botany). Covers Vectors (Plasmids, Bacteriophages)."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Polymerase Chain Reaction (PCR) & Electrophoresis",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Principles and Processes of Biotechnology (Bio-Botany). Covers Polymerase Chain Reaction (PCR) & Electrophoresis."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Plant Tissue Culture (Bio-Botany)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Totipotency & Callus Induction",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Plant Tissue Culture (Bio-Botany). Covers Totipotency & Callus Induction."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Micropropagation & Somatic Embryogenesis",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Plant Tissue Culture (Bio-Botany). Covers Micropropagation & Somatic Embryogenesis."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Cryopreservation & Intellectual Property Rights",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Plant Tissue Culture (Bio-Botany). Covers Cryopreservation & Intellectual Property Rights."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 6,
+                "title": "Reproduction in Organisms (Bio-Zoology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Modes of Asexual Reproduction (Fission, Budding, Regeneration)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Reproduction in Organisms (Bio-Zoology). Covers Modes of Asexual Reproduction (Fission, Budding, Regeneration)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Parthenogenesis",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 6: Reproduction in Organisms (Bio-Zoology). Covers Parthenogenesis."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 7,
+                "title": "Human Reproduction (Bio-Zoology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Gametogenesis (Spermatogenesis & Oogenesis)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Human Reproduction (Bio-Zoology). Covers Gametogenesis (Spermatogenesis & Oogenesis)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Menstrual Cycle & Hormonal Control",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Human Reproduction (Bio-Zoology). Covers Menstrual Cycle & Hormonal Control."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Fertilization, Implantation, Pregnancy & Parturition",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 7: Human Reproduction (Bio-Zoology). Covers Fertilization, Implantation, Pregnancy & Parturition."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 8,
+                "title": "Reproductive Health (Bio-Zoology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Population Explosion & Contraception Methods",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Reproductive Health (Bio-Zoology). Covers Population Explosion & Contraception Methods."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Sexually Transmitted Infections (STIs)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Reproductive Health (Bio-Zoology). Covers Sexually Transmitted Infections (STIs)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Assisted Reproductive Technologies (IVF, ZIFT, ICSI)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 8: Reproductive Health (Bio-Zoology). Covers Assisted Reproductive Technologies (IVF, ZIFT, ICSI)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 9,
+                "title": "Principles of Inheritance and Variation (Bio-Zoology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Sex Determination in Humans (XX-XY)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Principles of Inheritance and Variation (Bio-Zoology). Covers Sex Determination in Humans (XX-XY)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Sex-linked Inheritance (Haemophilia, Colour Blindness)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Principles of Inheritance and Variation (Bio-Zoology). Covers Sex-linked Inheritance (Haemophilia, Colour Blindness)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Mendelian & Chromosomal Disorders (Down, Turner, Klinefelter Syndrome)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 9: Principles of Inheritance and Variation (Bio-Zoology). Covers Mendelian & Chromosomal Disorders (Down, Turner, Klinefelter Syndrome)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 10,
+                "title": "Molecular Genetics (Bio-Zoology)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "DNA as Genetic Material (Griffith, Hershey-Chase)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Molecular Genetics (Bio-Zoology). Covers DNA as Genetic Material (Griffith, Hershey-Chase)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Central Dogma & DNA Replication",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Molecular Genetics (Bio-Zoology). Covers Central Dogma & DNA Replication."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Transcription, Genetic Code & Translation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Molecular Genetics (Bio-Zoology). Covers Transcription, Genetic Code & Translation."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Operon Model (lac operon)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Molecular Genetics (Bio-Zoology). Covers Operon Model (lac operon)."
+                  },
+                  {
+                    "chapterNumber": 5,
+                    "title": "Human Genome Project (HGP)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 10: Molecular Genetics (Bio-Zoology). Covers Human Genome Project (HGP)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "COM-12",
+            "name": "Commerce",
+            "medium": "English",
+            "prepClass": 12,
+            "unitsCount": 10,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Management Process",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Principles of Scientific Management (F.W. Taylor)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Management Process. Covers Principles of Scientific Management (F.W. Taylor)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Administrative Management (Henry Fayol)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Management Process. Covers Administrative Management (Henry Fayol)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Financial Markets - I",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Money Market vs Capital Market",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Financial Markets - I. Covers Money Market vs Capital Market."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Debt and Equity Markets",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Financial Markets - I. Covers Debt and Equity Markets."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Financial Markets - II",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Stock Exchange Functions (NSE, BSE)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Financial Markets - II. Covers Stock Exchange Functions (NSE, BSE)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "SEBI Regulatory Role",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Financial Markets - II. Covers SEBI Regulatory Role."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Human Resource Management",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Recruitment, Selection, Training & Development",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Human Resource Management. Covers Recruitment, Selection, Training & Development."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Elements of Marketing",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Marketing Mix (4 Ps)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Elements of Marketing. Covers Marketing Mix (4 Ps)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Consumer Protection Act & Consumer Rights",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Elements of Marketing. Covers Consumer Protection Act & Consumer Rights."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "ACC-12",
+            "name": "Accountancy",
+            "medium": "English",
+            "prepClass": 12,
+            "unitsCount": 9,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Accounts from Incomplete Records",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Single Entry System Limitations",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Accounts from Incomplete Records. Covers Single Entry System Limitations."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Statement of Affairs Method",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Accounts from Incomplete Records. Covers Statement of Affairs Method."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Conversion to Double Entry",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Accounts from Incomplete Records. Covers Conversion to Double Entry."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Accounts of Not-for-Profit Organisations",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Receipts and Payments Account",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Accounts of Not-for-Profit Organisations. Covers Receipts and Payments Account."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Income and Expenditure Account",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Accounts of Not-for-Profit Organisations. Covers Income and Expenditure Account."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Balance Sheet of Non-Profit Entities",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: Accounts of Not-for-Profit Organisations. Covers Balance Sheet of Non-Profit Entities."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Accounts of Partnership Firms - Fundamentals",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Partnership Deed",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Accounts of Partnership Firms - Fundamentals. Covers Partnership Deed."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Profit and Loss Appropriation Account",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Accounts of Partnership Firms - Fundamentals. Covers Profit and Loss Appropriation Account."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Fixed and Fluctuating Capital Methods",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Accounts of Partnership Firms - Fundamentals. Covers Fixed and Fluctuating Capital Methods."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "Goodwill Valuation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Accounts of Partnership Firms - Fundamentals. Covers Goodwill Valuation."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Admission and Retirement of a Partner",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Revaluation Account",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Admission and Retirement of a Partner. Covers Revaluation Account."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Sacrificing and Gaining Ratio",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Admission and Retirement of a Partner. Covers Sacrificing and Gaining Ratio."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Capital Adjustments",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Admission and Retirement of a Partner. Covers Capital Adjustments."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Company Accounts",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Issue of Shares at Par, Premium, Discount",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Company Accounts. Covers Issue of Shares at Par, Premium, Discount."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Forfeiture and Reissue of Shares",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Company Accounts. Covers Forfeiture and Reissue of Shares."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "ECO-12",
+            "name": "Economics",
+            "medium": "English",
+            "prepClass": 12,
+            "unitsCount": 12,
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Introduction to Macro Economics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Scope and Importance of Macro Economics",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Introduction to Macro Economics. Covers Scope and Importance of Macro Economics."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Economic Systems (Capitalism, Socialism, Mixed)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 1: Introduction to Macro Economics. Covers Economic Systems (Capitalism, Socialism, Mixed)."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "National Income",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "GNP, GDP, NNP, Per Capita Income",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: National Income. Covers GNP, GDP, NNP, Per Capita Income."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Methods of Measuring National Income",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: National Income. Covers Methods of Measuring National Income."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Difficulties in Measurement",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 2: National Income. Covers Difficulties in Measurement."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 3,
+                "title": "Theories of Employment and Income",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Classical Theory of Employment (Say's Law)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Theories of Employment and Income. Covers Classical Theory of Employment (Say's Law)."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Keynesian Theory of Effective Demand",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Theories of Employment and Income. Covers Keynesian Theory of Effective Demand."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Consumption and Investment Functions",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 3: Theories of Employment and Income. Covers Consumption and Investment Functions."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 4,
+                "title": "Monetary Economics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Functions of Money",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Monetary Economics. Covers Functions of Money."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Inflation (Demand-pull, Cost-push)",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Monetary Economics. Covers Inflation (Demand-pull, Cost-push)."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "Trade Cycles & Deflation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 4: Monetary Economics. Covers Trade Cycles & Deflation."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 5,
+                "title": "Banking",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Commercial Banks & Credit Creation",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Banking. Covers Commercial Banks & Credit Creation."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Central Bank (RBI) & Monetary Policy Instruments",
+                    "description": "Official DGE TN State Board Curriculum topic under Unit 5: Banking. Covers Central Bank (RBI) & Monetary Policy Instruments."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
