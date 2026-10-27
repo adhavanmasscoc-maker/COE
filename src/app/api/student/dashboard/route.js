@@ -18,6 +18,63 @@ export async function GET(request) {
         where: { user: { username: previewRollNo } },
         include: { user: { select: { id: true, username: true, role: true } } },
       });
+
+      if (!profile) {
+        // Auto-provision candidate profile for previewRollNo (e.g. TN2026-0900)
+        try {
+          const is12th = /1[12]\d{2}/.test(previewRollNo);
+          const prepClass = is12th ? 12 : 10;
+          const currentClass = is12th ? 11 : 9;
+          const studentName = previewRollNo === "TN2026-0900"
+            ? "Sample Candidate (TN2026-0900)"
+            : `TN Board Candidate (${previewRollNo})`;
+
+          let user = await db.user.findUnique({ where: { username: previewRollNo } });
+          if (!user) {
+            user = await db.user.create({
+              data: {
+                username: previewRollNo,
+                passwordHash: "$2a$10$w82WbI2x0oA7fU3gC5tNf.fMwqD3pWbQ1uRk9V9M8a.P7nN4S7bW6",
+                role: "STUDENT",
+              },
+            });
+          }
+
+          profile = await db.studentProfile.create({
+            data: {
+              userId: user.id,
+              fullName: studentName,
+              currentClass: currentClass,
+              examPrepClass: prepClass,
+              board: "Tamil Nadu Samacheer Kalvi",
+              medium: "English",
+              academicYear: "2026–2027",
+            },
+            include: { user: { select: { id: true, username: true, role: true } } },
+          });
+
+          // Link default core subjects for this class
+          const defaultCodes = prepClass === 10
+            ? ["TAM-10", "ENG-10", "MAT-10", "SCI-10", "SOC-10"]
+            : ["TAM-12", "ENG-12", "MAT-12", "PHY-12", "CHE-12", "CSC-12"];
+
+          const subs = await db.subject.findMany({
+            where: { code: { in: defaultCodes } },
+          });
+
+          for (const sub of subs) {
+            await db.studentSubject.create({
+              data: {
+                studentId: profile.id,
+                subjectId: sub.id,
+              },
+            }).catch(() => {});
+          }
+        } catch (provisionErr) {
+          console.warn("Auto-provision preview student error:", provisionErr.message);
+        }
+      }
+
       if (!profile) {
         // Fallback to first available student profile
         profile = await db.studentProfile.findFirst({

@@ -80,16 +80,18 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
   if (done) {
     return (
       <div className="text-center py-8 px-2 space-y-5 animate-scale-in">
-        <div className="w-16 h-16 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center mx-auto">
+        <div className="w-16 h-16 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/20">
           <CheckCircle2 className="w-8 h-8 text-emerald-400" />
         </div>
         <div>
-          <h3 className="text-lg font-bold text-[#f0f0ff] mb-1">Registration Submitted</h3>
-          <p className="text-sm text-[#5c5c8a] leading-relaxed">
-            Your candidate application is under COE review with {selectedSubjects.length} selected subjects. You&apos;ll be able to sign in once your account is approved.
+          <h3 className="text-lg font-bold text-[#f0f0ff] mb-1">Registration Complete & Active!</h3>
+          <p className="text-sm text-[#a8a8d0] leading-relaxed">
+            Your candidate account for Roll Number <strong className="text-emerald-300 font-mono">{rollNo}</strong> is active with {selectedSubjects.length} official subjects. You can now sign in immediately.
           </p>
         </div>
-        <Button variant="outline" onClick={onBack}>← Back to Sign In</Button>
+        <Button variant="primary" onClick={onBack} className="w-full justify-center gap-1.5 font-bold shadow-lg shadow-violet-500/30">
+          Sign In Now with Roll Number & DOB →
+        </Button>
       </div>
     );
   }

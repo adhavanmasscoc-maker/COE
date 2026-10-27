@@ -80,6 +80,28 @@ async function main() {
   });
   console.log(`✅ Sister created: ${sisterUser.username} | School Grade: 11 -> Prep Standard: 12`);
 
+  // 5b. Create Candidate TN2026-0900 for Dashboard Previews
+  const sampleDobHash = await bcrypt.hash("2011-01-10", saltRounds);
+  const sampleUser = await prisma.user.create({
+    data: {
+      username: "TN2026-0900",
+      passwordHash: sampleDobHash,
+      role: "STUDENT",
+      profile: {
+        create: {
+          fullName: "Kavin Kumar (Sample Candidate)",
+          currentClass: 9,
+          examPrepClass: 10,
+          board: "Tamil Nadu Samacheer Kalvi",
+          medium: "English",
+          academicYear: "2026–2027",
+        },
+      },
+    },
+    include: { profile: true },
+  });
+  console.log(`✅ Sample Candidate created: ${sampleUser.username} | Standard: 10`);
+
   // 6. Seed 5 Core Subjects for Class 10 (Tamil Nadu Samacheer Kalvi)
   const class10SubjectsData = [
     {
@@ -228,8 +250,15 @@ async function main() {
         subjectId: createdSub.id,
       },
     });
+
+    await prisma.studentSubject.create({
+      data: {
+        studentId: sampleUser.profile.id,
+        subjectId: createdSub.id,
+      },
+    });
   }
-  console.log("✅ Seeded 5 Class 10 subjects and mapped to Brother.");
+  console.log("✅ Seeded 5 Class 10 subjects and mapped to Brother and Sample Candidate (TN2026-0900).");
 
   // Insert Class 12 Subjects & Assign to Sister
   const sisterProfile = sisterUser.profile;
@@ -442,6 +471,31 @@ async function main() {
   } catch (err) {
     console.log("Auto-seed error on telemetry logs:", err.message);
   }
+
+  // 12. Seed Official COE Notices & Proctoring Guidelines
+  await prisma.notice.createMany({
+    data: [
+      {
+        title: "COE Surveillance Protocol: Student Device IP, Clicks & Attendance Notice",
+        content: "Candidates must attend all examinations strictly on their personal mobile devices without any outside assistance. All candidate device IPs, credentials login/logout timestamps, click streams, and tab-switching events are actively audited by the COE History Proctor. Desktop attendance or leaving the exam window will result in automated disqualification.",
+        targetPrepClass: null, // ALL classes
+        isPublished: true,
+      },
+      {
+        title: "Instructions for TN Board Examinations 2026-2027",
+        content: "Candidates must review question papers calmly. All 10th and 12th standard papers include Part-I MCQs and detailed descriptive sections. Answers are secured and official worked solutions are released upon conclusion of the evaluation period.",
+        targetPrepClass: null,
+        isPublished: true,
+      },
+      {
+        title: "Class 10 & 12 Board Curriculum Update (Samacheer Kalvi)",
+        content: "Complete chapter-wise syllabus modules, practical question sets, and past examination papers for 2021 through 2026 are published. All registered candidates can access their respective subjects from their dashboard.",
+        targetPrepClass: null,
+        isPublished: true,
+      }
+    ]
+  });
+  console.log("✅ Seeded Official COE Notices & Proctoring Guidelines.");
 
   console.log("🎉 Seeding completed successfully!");
 }

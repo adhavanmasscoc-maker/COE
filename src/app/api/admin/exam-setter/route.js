@@ -181,22 +181,28 @@ async function processSingleExam(payload) {
 
   for (let i = 0; i < questions.length; i++) {
     const q = questions[i];
-    const rawNum = typeof q.questionNumber === "number" ? q.questionNumber : parseInt(String(q.questionNumber || "").replace(/\D/g, ""), 10);
+    const rawNum = typeof q.questionNumber === "number"
+      ? q.questionNumber
+      : (typeof q.q_no === "number"
+          ? q.q_no
+          : parseInt(String(q.questionNumber || q.q_no || q.number || "").replace(/\D/g, ""), 10));
     const qNum = (!isNaN(rawNum) && rawNum > 0) ? rawNum : (i + 1);
-    let qText = q.questionText || `Question ${qNum}`;
-    if (typeof q.questionNumber === "string" && !qText.startsWith(q.questionNumber)) {
-      qText = `[Q.${q.questionNumber}] ${qText}`;
+
+    let qText = q.questionText || q.question || q.title || `Question ${qNum}`;
+    const displayNum = q.questionNumber || q.q_no;
+    if (typeof displayNum === "string" && !qText.startsWith(displayNum)) {
+      qText = `[Q.${displayNum}] ${qText}`;
     }
-    const qMarks = parseInt(q.marks, 10) || 1;
+    const qMarks = parseInt(q.marks || q.mark, 10) || 1;
     
     // Check direct answer or lookup from postExamEvaluationKey
     const keyInfo = (q.questionId && evalKey[q.questionId]) ? evalKey[q.questionId] : {};
-    const qCorrect = q.correctAnswer
-      ? String(q.correctAnswer).toUpperCase()
-      : (keyInfo.correctOption ? String(keyInfo.correctOption).toUpperCase() : "A");
+    const rawAnswer = q.correctAnswer || q.answer || q.correct || keyInfo.correctOption || "A";
+    const qCorrect = String(rawAnswer).trim().toUpperCase();
 
     const qExplanation =
       q.explanation ||
+      q.solution ||
       keyInfo.explanation ||
       (keyInfo.modelAnswer ? keyInfo.modelAnswer : `Correct Answer: Option ${qCorrect}. Verified by COE Examination Board.`);
 
@@ -213,6 +219,11 @@ async function processSingleExam(payload) {
           text: opt.text || String(opt),
         };
       });
+    } else if (q.options && typeof q.options === "object") {
+      formattedOptions = Object.entries(q.options).map(([k, v]) => ({
+        id: String(k).toUpperCase(),
+        text: typeof v === "object" && v !== null ? (v.text || String(v)) : String(v),
+      }));
     } else {
       formattedOptions = [
         { id: "A", text: "Option A" },

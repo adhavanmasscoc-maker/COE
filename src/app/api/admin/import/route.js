@@ -17,7 +17,19 @@ export async function POST(request) {
     const body = await request.json();
     const { type, data } = body;
 
-    if (!Array.isArray(data) || data.length === 0) {
+    let importList = [];
+    if (Array.isArray(data)) {
+      importList = data;
+    } else if (data && typeof data === "object") {
+      const arrayKey = Object.keys(data).find((k) => Array.isArray(data[k]));
+      if (arrayKey) {
+        importList = data[arrayKey];
+      } else {
+        importList = [data];
+      }
+    }
+
+    if (importList.length === 0) {
       return NextResponse.json(
         { error: "Invalid or empty import dataset. Expected an array of records." },
         { status: 400 }
@@ -29,12 +41,20 @@ export async function POST(request) {
 
     // ── 1. Batch Import for Examinations ──────────────────────────────
     if (type === "exams") {
-      for (const item of data) {
-        const subjectCode = (item.subjectCode || "CSC-12").toUpperCase().trim();
-        const prepClass = parseInt(item.prepClass ?? item.standard, 10) || 12;
-        const examDate = item.examDate ? new Date(item.examDate) : new Date();
+      for (const item of importList) {
+        const subjectCode = (item.subjectCode || item.code || "CSC-12").toUpperCase().trim();
+        const prepClass = parseInt(item.prepClass ?? item.standard ?? (subjectCode.includes("12") ? 12 : 10), 10) || 12;
+        
+        let examDate = new Date();
+        if (item.examDate) {
+          examDate = new Date(item.examDate);
+        } else if (item.year) {
+          const yMatch = String(item.year).match(/\d{4}/);
+          if (yMatch) examDate = new Date(`${yMatch[0]}-03-01T00:00:00.000Z`);
+        }
+
         const durationMinutes = parseInt(item.durationMinutes, 10) || 60;
-        const totalMarks = parseInt(item.totalMarks, 10) || 15;
+        const totalMarks = parseInt(item.totalMarks || (item.questions ? item.questions.length : 15), 10) || 15;
         const status = item.status === "DRAFT" ? "DRAFT" : "PUBLISHED";
         const instructions =
           item.instructions ||
@@ -48,6 +68,7 @@ export async function POST(request) {
         if (!subject) {
           const defaultSubjectNames = {
             "CSC-12": "Computer Science",
+            "CS-12": "Computer Science",
             "MAT-10": "Mathematics",
             "PHY-12": "Physics",
             "CHE-12": "Chemistry",
@@ -114,21 +135,27 @@ export async function POST(request) {
         if (questionsToImport.length > 0) {
           for (let i = 0; i < questionsToImport.length; i++) {
             const q = questionsToImport[i];
-            const rawNum = typeof q.questionNumber === "number" ? q.questionNumber : parseInt(String(q.questionNumber || "").replace(/\D/g, ""), 10);
+            const rawNum = typeof q.questionNumber === "number"
+              ? q.questionNumber
+              : (typeof q.q_no === "number"
+                  ? q.q_no
+                  : parseInt(String(q.questionNumber || q.q_no || q.number || "").replace(/\D/g, ""), 10));
             const qNum = (!isNaN(rawNum) && rawNum > 0) ? rawNum : (i + 1);
-            let qText = q.questionText || `Question ${qNum}`;
-            if (typeof q.questionNumber === "string" && !qText.startsWith(q.questionNumber)) {
-              qText = `[Q.${q.questionNumber}] ${qText}`;
+
+            let qText = q.questionText || q.question || q.title || `Question ${qNum}`;
+            const displayNum = q.questionNumber || q.q_no;
+            if (typeof displayNum === "string" && !qText.startsWith(displayNum)) {
+              qText = `[Q.${displayNum}] ${qText}`;
             }
-            const qMarks = parseInt(q.marks, 10) || 1;
+            const qMarks = parseInt(q.marks || q.mark, 10) || 1;
             
             const keyInfo = (q.questionId && evalKey[q.questionId]) ? evalKey[q.questionId] : {};
-            const qCorrect = q.correctAnswer
-              ? String(q.correctAnswer).toUpperCase()
-              : (keyInfo.correctOption ? String(keyInfo.correctOption).toUpperCase() : "A");
+            const rawAnswer = q.correctAnswer || q.answer || q.correct || keyInfo.correctOption || "A";
+            const qCorrect = String(rawAnswer).trim().toUpperCase();
 
             const qExplanation =
               q.explanation ||
+              q.solution ||
               keyInfo.explanation ||
               (keyInfo.modelAnswer ? keyInfo.modelAnswer : `Correct Answer: Option ${qCorrect}. Verified by COE Examiner.`);
 
@@ -143,6 +170,11 @@ export async function POST(request) {
                   text: opt.text || String(opt),
                 };
               });
+            } else if (q.options && typeof q.options === "object") {
+              formattedOptions = Object.entries(q.options).map(([k, v]) => ({
+                id: String(k).toUpperCase(),
+                text: typeof v === "object" && v !== null ? (v.text || String(v)) : String(v),
+              }));
             } else {
               formattedOptions = [
                 { id: "A", text: "Option A" },

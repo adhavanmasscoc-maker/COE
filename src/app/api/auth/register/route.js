@@ -85,12 +85,12 @@ export async function POST(request) {
     // --- Hash the DOB as password ---
     const passwordHash = await bcrypt.hash(dob, 12);
 
-    // --- Create pending user and profile with requested subjects ---
+    // --- Create active student user and profile with requested subjects ---
     const newUser = await prisma.user.create({
       data: {
         username: rollNo,
         passwordHash,
-        role: "PENDING", // Will be changed to "STUDENT" by COE upon approval
+        role: "STUDENT", // Immediately activated so candidate can register then login
         profile: {
           create: {
             fullName: name,
@@ -127,7 +127,8 @@ export async function POST(request) {
       {
         success: true,
         message:
-          "Registration submitted. Your application is under review by the Controller of Examinations. You will be able to sign in once approved.",
+          `Candidate account ${rollNo} successfully registered! You can now sign in immediately using your Roll Number and Date of Birth.`,
+        rollNo: rollNo,
       },
       { status: 201 }
     );
