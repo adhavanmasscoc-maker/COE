@@ -99,35 +99,35 @@ function HistoryContent() {
   const handleExportCSV = () => {
     if (!logs || logs.length === 0) return;
     const headers = [
-      "Time",
-      "Total Duration",
+      "Details & Time",
+      "Total Duration in Site Particular",
+      "Logout Time",
       "Login Time",
       "Last Login",
-      "Logout Time",
       "Student Name",
+      "Username",
       "Roll No",
       "DOB",
       "IP Address",
       "Device Type",
-      "Is Mobile",
       "Action",
       "Details",
       "Tab Switch Alerts",
-      "Integrity Status"
+      "Anti-Cheat Verification"
     ];
 
     const rows = logs.map((l) => [
-      new Date(l.time).toISOString(),
+      `"${new Date(l.time).toISOString()}"`,
       `"${l.totalDuration}"`,
-      l.loginTime ? new Date(l.loginTime).toISOString() : "N/A",
-      l.lastLoginTime ? new Date(l.lastLoginTime).toISOString() : "N/A",
-      l.logoutTime ? new Date(l.logoutTime).toISOString() : "ACTIVE",
+      l.logoutTime ? `"${new Date(l.logoutTime).toISOString()}"` : '"ACTIVE"',
+      l.loginTime ? `"${new Date(l.loginTime).toISOString()}"` : '"N/A"',
+      l.lastLoginTime ? `"${new Date(l.lastLoginTime).toISOString()}"` : '"First Session"',
       `"${l.studentName}"`,
+      `"${l.username || l.rollNo}"`,
       `"${l.rollNo}"`,
       `"${l.dob || "N/A"}"`,
       `"${l.ipAddress}"`,
       `"${l.deviceType}"`,
-      l.isMobile ? "YES" : "NO",
       `"${l.action}"`,
       `"${(l.details || "").replace(/"/g, '""')}"`,
       l.tabSwitchCount || 0,
@@ -344,17 +344,16 @@ function HistoryContent() {
             <table className="w-full text-left text-xs border-collapse">
               <thead>
                 <tr className="bg-[rgba(124,58,237,0.08)] border-b border-[rgba(124,58,237,0.15)] text-[#a8a8d0] font-bold">
-                  <th className="py-3 px-3.5 whitespace-nowrap">Time</th>
-                  <th className="py-3 px-3.5 whitespace-nowrap">Candidate Name</th>
+                  <th className="py-3 px-3.5 whitespace-nowrap">Details & Time</th>
+                  <th className="py-3 px-3.5 whitespace-nowrap">Total Duration in Site Particular</th>
+                  <th className="py-3 px-3.5 whitespace-nowrap">Logout Time</th>
+                  <th className="py-3 px-3.5 whitespace-nowrap">Student Name</th>
+                  <th className="py-3 px-3.5 whitespace-nowrap">Username</th>
                   <th className="py-3 px-3.5 whitespace-nowrap">Roll No</th>
                   <th className="py-3 px-3.5 whitespace-nowrap">DOB</th>
-                  <th className="py-3 px-3.5 whitespace-nowrap">Device IP</th>
+                  <th className="py-3 px-3.5 whitespace-nowrap">IP</th>
                   <th className="py-3 px-3.5 whitespace-nowrap">Device Type</th>
-                  <th className="py-3 px-3.5 whitespace-nowrap">Action & Clicks</th>
-                  <th className="py-3 px-3.5 whitespace-nowrap">Total Duration</th>
-                  <th className="py-3 px-3.5 whitespace-nowrap">Login Time</th>
-                  <th className="py-3 px-3.5 whitespace-nowrap">Last Login</th>
-                  <th className="py-3 px-3.5 whitespace-nowrap">Logout Time</th>
+                  <th className="py-3 px-3.5 whitespace-nowrap">Action</th>
                   <th className="py-3 px-3.5 whitespace-nowrap text-right">Preview</th>
                 </tr>
               </thead>
@@ -371,37 +370,78 @@ function HistoryContent() {
                         isAlert ? "bg-rose-500/5" : ""
                       }`}
                     >
-                      {/* Time */}
-                      <td className="py-3 px-3.5 whitespace-nowrap font-mono text-[11px] text-[#a8a8d0]">
-                        {new Date(log.time).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}
-                        <div className="text-[10px] text-[#5c5c8a]">
-                          {new Date(log.time).toLocaleDateString()}
+                      {/* 1. Details & Time */}
+                      <td className="py-3 px-3.5 min-w-[200px] max-w-[280px]">
+                        <div className="font-mono text-[11px] font-bold text-[#f0f0ff] flex items-center gap-1.5">
+                          <Clock className="w-3 h-3 text-violet-400 flex-shrink-0" />
+                          <span>{new Date(log.time).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}</span>
+                          <span className="text-[10px] text-[#5c5c8a]">({new Date(log.time).toLocaleDateString()})</span>
+                        </div>
+                        <p className="text-[11px] text-[#a8a8d0] mt-1 line-clamp-2" title={log.details}>
+                          {log.details}
+                        </p>
+                      </td>
+
+                      {/* 2. Total Duration in Site Particular */}
+                      <td className="py-3 px-3.5 whitespace-nowrap font-mono text-xs font-bold text-emerald-300">
+                        <span className="px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20">
+                          {log.totalDuration}
+                        </span>
+                      </td>
+
+                      {/* 3. Logout Time (with Login & Last Login timestamps) */}
+                      <td className="py-3 px-3.5 whitespace-nowrap font-mono text-[11px]">
+                        {log.logoutTime ? (
+                          <div className="text-rose-300 font-semibold flex items-center gap-1">
+                            <LogOut className="w-3 h-3 text-rose-400" />
+                            {new Date(log.logoutTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" })}
+                          </div>
+                        ) : (
+                          <span className="text-emerald-400 font-bold flex items-center gap-1">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" /> Active Now
+                          </span>
+                        )}
+                        <div className="text-[10px] text-[#5c5c8a] mt-0.5">
+                          Login: {log.loginTime ? new Date(log.loginTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : "—"}
+                          {log.lastLoginTime && (
+                            <span> | Prev: {new Date(log.lastLoginTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</span>
+                          )}
                         </div>
                       </td>
 
-                      {/* Student Name */}
+                      {/* 4. Student Name */}
                       <td className="py-3 px-3.5 whitespace-nowrap font-bold text-violet-200">
-                        {log.studentName}
+                        <div className="flex items-center gap-1.5">
+                          <User className="w-3 h-3 text-violet-400" />
+                          <span>{log.studentName}</span>
+                        </div>
                       </td>
 
-                      {/* Roll No */}
+                      {/* 5. Username */}
+                      <td className="py-3 px-3.5 whitespace-nowrap font-mono text-xs font-semibold text-cyan-300">
+                        {log.username || log.rollNo}
+                      </td>
+
+                      {/* 6. Roll No */}
                       <td className="py-3 px-3.5 whitespace-nowrap font-mono text-xs font-bold text-amber-300">
                         {log.rollNo}
                       </td>
 
-                      {/* DOB */}
+                      {/* 7. DOB */}
                       <td className="py-3 px-3.5 whitespace-nowrap font-mono text-xs text-[#a8a8d0]">
-                        {log.dob || "On File"}
+                        <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10">
+                          {log.dob || "On File"}
+                        </span>
                       </td>
 
-                      {/* Device IP */}
+                      {/* 8. IP */}
                       <td className="py-3 px-3.5 whitespace-nowrap">
                         <span className="font-mono text-xs px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-cyan-300">
                           {log.ipAddress}
                         </span>
                       </td>
 
-                      {/* Device Type */}
+                      {/* 9. Device Type */}
                       <td className="py-3 px-3.5 whitespace-nowrap">
                         <div className="flex items-center gap-1.5">
                           {log.isMobile ? (
@@ -418,12 +458,12 @@ function HistoryContent() {
                         </div>
                       </td>
 
-                      {/* Action & Clicks */}
-                      <td className="py-3 px-3.5 max-w-[280px]">
-                        <div className="flex items-center gap-1.5 mb-0.5">
+                      {/* 10. Action */}
+                      <td className="py-3 px-3.5 whitespace-nowrap">
+                        <div className="flex items-center gap-1.5">
                           {isAlert ? (
                             <span className="badge badge-rose text-[10px] font-bold flex items-center gap-1">
-                              <AlertTriangle className="w-3 h-3" /> TAB SWITCH ALERT
+                              <AlertTriangle className="w-3 h-3" /> TAB SWITCH ALERT ({log.tabSwitchCount}x)
                             </span>
                           ) : isLogin ? (
                             <span className="badge badge-emerald text-[10px] font-bold">
@@ -439,40 +479,12 @@ function HistoryContent() {
                             </span>
                           )}
                         </div>
-                        <p className="text-[11px] text-[#a8a8d0] truncate" title={log.details}>
-                          {log.details}
-                        </p>
+                        <div className="text-[10px] text-[#5c5c8a] mt-0.5">
+                          {log.integrityBadge}
+                        </div>
                       </td>
 
-                      {/* Total Duration in Site */}
-                      <td className="py-3 px-3.5 whitespace-nowrap font-mono text-xs font-semibold text-emerald-300">
-                        {log.totalDuration}
-                      </td>
-
-                      {/* Login Time */}
-                      <td className="py-3 px-3.5 whitespace-nowrap font-mono text-[11px] text-[#a8a8d0]">
-                        {log.loginTime ? new Date(log.loginTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : "—"}
-                      </td>
-
-                      {/* Last Login */}
-                      <td className="py-3 px-3.5 whitespace-nowrap font-mono text-[11px] text-[#5c5c8a]">
-                        {log.lastLoginTime ? new Date(log.lastLoginTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) : "First Session"}
-                      </td>
-
-                      {/* Logout Time */}
-                      <td className="py-3 px-3.5 whitespace-nowrap font-mono text-[11px]">
-                        {log.logoutTime ? (
-                          <span className="text-[#a8a8d0]">
-                            {new Date(log.logoutTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-                          </span>
-                        ) : (
-                          <span className="text-emerald-400 font-bold flex items-center gap-1">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" /> Active
-                          </span>
-                        )}
-                      </td>
-
-                      {/* Student Preview Link */}
+                      {/* Preview Link */}
                       <td className="py-3 px-3.5 whitespace-nowrap text-right">
                         <Link
                           href={`/student/dashboard?previewRollNo=${encodeURIComponent(log.rollNo)}`}
