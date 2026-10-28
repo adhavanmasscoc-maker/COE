@@ -10,12 +10,13 @@ const COOKIE_NAME = "exam_portal_session";
 export async function middleware(request) {
   const { pathname } = request.nextUrl;
 
-  // Protect all /student, /coe-admin, and /api/admin paths
+  // Protect all /student, /coe-admin, and /api/admin + /api/student paths
   const isStudentRoute = pathname.startsWith("/student");
   const isCOERoute = pathname.startsWith("/coe-admin");
   const isAdminApiRoute = pathname.startsWith("/api/admin");
+  const isStudentApiRoute = pathname.startsWith("/api/student");
 
-  if (!isStudentRoute && !isCOERoute && !isAdminApiRoute) {
+  if (!isStudentRoute && !isCOERoute && !isAdminApiRoute && !isStudentApiRoute) {
     return NextResponse.next();
   }
 
@@ -28,9 +29,9 @@ export async function middleware(request) {
   const sessionToken = request.cookies.get(COOKIE_NAME)?.value;
 
   if (!sessionToken) {
-    if (isAdminApiRoute) {
+    if (isAdminApiRoute || isStudentApiRoute) {
       return NextResponse.json(
-        { error: "Access denied. Administrator session required." },
+        { error: "Access denied. Session required." },
         { status: 401 }
       );
     }
@@ -56,6 +57,14 @@ export async function middleware(request) {
       return NextResponse.redirect(homeUrl);
     }
 
+    // Student API guard: require STUDENT or ADMIN (for preview)
+    if (isStudentApiRoute && payload.role !== "STUDENT" && payload.role !== "ADMIN") {
+      return NextResponse.json(
+        { error: "Access denied. Student session required." },
+        { status: 403 }
+      );
+    }
+
     // Student route guard: Allow STUDENTS (and allow ADMIN to preview)
     if (isStudentRoute && payload.role !== "STUDENT" && payload.role !== "ADMIN") {
       const homeUrl = new URL("/", request.url);
@@ -70,7 +79,7 @@ export async function middleware(request) {
     return response;
   } catch (err) {
     // Token tampered with or expired
-    if (isAdminApiRoute) {
+    if (isAdminApiRoute || isStudentApiRoute) {
       return NextResponse.json(
         { error: "Session expired or invalid." },
         { status: 401 }
@@ -91,5 +100,7 @@ export const config = {
     "/student",
     "/student/:path*",
     "/api/admin/:path*",
+    "/api/student/:path*",
   ],
 };
+

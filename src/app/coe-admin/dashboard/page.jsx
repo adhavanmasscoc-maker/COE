@@ -10,7 +10,7 @@ import {
   ShieldCheck, Users, Calendar, FileText, CheckCircle, PlusCircle,
   Eye, Award, Sparkles, RefreshCw, Loader2, AlertCircle,
   Layers, Bell, BarChart3, ClipboardList, UserCheck, Clock, FileJson,
-  Activity, Smartphone
+  Activity, Smartphone, FolderArchive
 } from "lucide-react";
 import { ExamLifecycleStepper } from "@/components/admin/ExamLifecycleStepper";
 
@@ -96,9 +96,33 @@ export default function COEAdminDashboardPage() {
 
         {/* Quick action buttons */}
         <div className="flex flex-wrap gap-2">
+          <Link href="/coe-admin/live-monitoring">
+            <Button variant="emerald" size="sm" className="gap-1.5 shadow-md shadow-emerald-500/20 font-bold">
+              <span className="w-2 h-2 rounded-full bg-rose-400 animate-pulse" />
+              Live Screen Monitoring
+            </Button>
+          </Link>
+          <Link href="/coe-admin/help-panel">
+            <Button variant="outline" size="sm" className="gap-1.5 border-rose-500/40 text-rose-300 hover:bg-rose-500/10 font-bold">
+              <AlertCircle className="w-4 h-4 text-rose-400" />
+              COE Help Panel
+            </Button>
+          </Link>
+          <Link href="/coe-admin/curriculum">
+            <Button variant="secondary" size="sm" className="gap-1.5 border-violet-500/40 text-violet-300 hover:bg-violet-500/10 font-bold">
+              <FolderArchive className="w-4 h-4 text-violet-400" />
+              Curriculum Archive
+            </Button>
+          </Link>
+          <Link href="/coe-admin/ai-questions">
+            <Button variant="secondary" size="sm" className="gap-1.5 border-amber-500/40 text-amber-300 hover:bg-amber-500/10 font-bold">
+              <Sparkles className="w-4 h-4 text-amber-400" />
+              AI Exam Setter
+            </Button>
+          </Link>
           <Link href="/coe-admin/exam-setter">
-            <Button variant="emerald" size="sm" className="gap-1.5 shadow-md shadow-emerald-500/20">
-              <Sparkles className="w-4 h-4 text-amber-300" />Exam Setter (JSON)
+            <Button variant="secondary" size="sm" className="gap-1.5 shadow-md">
+              <FileJson className="w-4 h-4 text-cyan-300" />Exam Setter (JSON)
             </Button>
           </Link>
           <Link href="/coe-admin/student-preview">

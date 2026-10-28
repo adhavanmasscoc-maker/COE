@@ -1,0 +1,132 @@
+{
+  "systemModule": "PRACTICE_EXAM_ENGINE",
+  "version": "1.0",
+  "board": "Tamil Nadu State Board of School Examination (DGE)",
+  "feedbackMode": "IMMEDIATE_POST_SUBMIT_OR_PER_QUESTION",
+  "practiceModules": [
+    {
+      "practiceId": "PRAC-10-SCI-01",
+      "standard": 10,
+      "subjectCode": "SCI-10",
+      "subjectName": "Science",
+      "topic": "Physics - Laws of Motion & Electricity",
+      "totalQuestions": 4,
+      "questions": [
+        {
+          "questionId": "PQ-10S-01",
+          "questionText": "The linear momentum of a body of mass 5 kg moving with a velocity of 10 m/s is:",
+          "options": {
+            "A": "2 kg m/s",
+            "B": "50 kg m/s",
+            "C": "0.5 kg m/s",
+            "D": "500 kg m/s"
+          },
+          "correctAnswer": "B",
+          "instantExplanation": "Linear momentum p = m * v = 5 kg * 10 m/s = 50 kg m/s.",
+          "conceptTag": "Laws of Motion - Linear Momentum"
+        },
+        {
+          "questionId": "PQ-10S-02",
+          "questionText": "According to Ohm's Law, the graph plotted between current (I) and potential difference (V) is a:",
+          "options": {
+            "A": "Parabola",
+            "B": "Hyperbola",
+            "C": "Straight line passing through origin",
+            "D": "Circular curve"
+          },
+          "correctAnswer": "C",
+          "instantExplanation": "Since V = I * R, V is directly proportional to I, resulting in a straight line graph.",
+          "conceptTag": "Electricity - Ohm's Law"
+        },
+        {
+          "questionId": "PQ-10S-03",
+          "questionText": "Kilowatt hour is the commercial unit of:",
+          "options": {
+            "A": "Electric power",
+            "B": "Electric resistance",
+            "C": "Electrical energy",
+            "D": "Electric current"
+          },
+          "correctAnswer": "C",
+          "instantExplanation": "1 kWh = 3.6 x 10^6 Joules, which measures commercial electrical energy consumption.",
+          "conceptTag": "Electricity - Energy"
+        },
+        {
+          "questionId": "PQ-10S-04",
+          "questionText": "Inertia of a body depends on its:",
+          "options": {
+            "A": "Weight",
+            "B": "Mass",
+            "C": "Velocity",
+            "D": "Volume"
+          },
+          "correctAnswer": "B",
+          "instantExplanation": "Mass is a quantitative measure of the inertia of a body.",
+          "conceptTag": "Laws of Motion - Inertia"
+        }
+      ]
+    },
+    {
+      "practiceId": "PRAC-12-CSC-01",
+      "standard": 12,
+      "subjectCode": "CSC-12",
+      "subjectName": "Computer Science",
+      "topic": "Python Slicing & SQL Operators",
+      "totalQuestions": 4,
+      "questions": [
+        {
+          "questionId": "PQ-12C-01",
+          "questionText": "What will be the output of string slicing: str1 = 'TAMILNADU'; print(str1[2:5])?",
+          "options": {
+            "A": "MIL",
+            "B": "MILN",
+            "C": "AMI",
+            "D": "TAM"
+          },
+          "correctAnswer": "A",
+          "instantExplanation": "str1[2:5] extracts characters from index 2 up to index 4: 'M' (idx 2), 'I' (idx 3), 'L' (idx 4) -> 'MIL'.",
+          "conceptTag": "Python Strings - Slicing"
+        },
+        {
+          "questionId": "PQ-12C-02",
+          "questionText": "Which clause in SQL is used to eliminate duplicate rows from a query result?",
+          "options": {
+            "A": "UNIQUE",
+            "B": "DISTINCT",
+            "C": "GROUP BY",
+            "D": "WHERE"
+          },
+          "correctAnswer": "B",
+          "instantExplanation": "The DISTINCT keyword in SELECT statement returns only non-duplicate values.",
+          "conceptTag": "SQL - Data Retrieval"
+        },
+        {
+          "questionId": "PQ-12C-03",
+          "questionText": "Binary search is also called as:",
+          "options": {
+            "A": "Random search",
+            "B": "Linear search",
+            "C": "Half-interval search",
+            "D": "Sequential search"
+          },
+          "correctAnswer": "C",
+          "instantExplanation": "Binary search divides the search interval in half at each step, hence termed half-interval search.",
+          "conceptTag": "Algorithms - Searching"
+        },
+        {
+          "questionId": "PQ-12C-04",
+          "questionText": "Which of the following is an immutable data type in Python?",
+          "options": {
+            "A": "List",
+            "B": "Tuple",
+            "C": "Dictionary",
+            "D": "Set"
+          },
+          "correctAnswer": "B",
+          "instantExplanation": "Tuples in Python cannot be modified once defined, unlike lists and dictionaries.",
+          "conceptTag": "Python - Data Structures"
+        }
+      ]
+    }
+  ]
+}

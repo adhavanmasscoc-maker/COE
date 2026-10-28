@@ -6,8 +6,10 @@ import { db } from "@/lib/db";
 import { signSession, getSessionCookieOptions } from "@/lib/auth";
 import { checkRateLimit, resetRateLimit } from "@/lib/rateLimit";
 import { extractClientIp, parseDevice } from "@/lib/deviceTracker";
+import { createIncident } from "@/lib/incident";
 
 export async function POST(request) {
+  let cleanRollNo = "";
   try {
     const body = await request.json();
     const { rollNo, dob } = body;
@@ -19,12 +21,19 @@ export async function POST(request) {
       );
     }
 
-    const cleanRollNo = rollNo.trim().toUpperCase();
+    cleanRollNo = rollNo.trim().toUpperCase();
     const cleanDob = dob.trim(); // Format: YYYY-MM-DD
 
     // 1. Rate limiting check (max 5 failed attempts per roll number)
     const rateLimit = checkRateLimit(`student_${cleanRollNo}`);
     if (!rateLimit.allowed) {
+      await createIncident({
+        route: "/api/auth/login-student",
+        rollNo: cleanRollNo,
+        step: "login_rate_limit",
+        message: `Student login blocked: rate limit exceeded for ${cleanRollNo} (retry after ${rateLimit.retryAfterSeconds}s).`,
+      }).catch(() => {});
+
       return NextResponse.json(
         {
           error: `Too many failed login attempts. Please wait ${rateLimit.retryAfterSeconds} seconds before trying again.`,
@@ -54,6 +63,13 @@ export async function POST(request) {
         console.warn("Could not write to login attempts log file:", logErr.message);
       }
 
+      await createIncident({
+        route: "/api/auth/login-student",
+        rollNo: cleanRollNo,
+        step: "unregistered_login_attempt",
+        message: `Unregistered candidate "${cleanRollNo}" attempted login. Candidate advised to register first.`,
+      }).catch(() => {});
+
       return NextResponse.json(
         {
           error: `Roll Number "${cleanRollNo}" is not registered in the examination portal. Please register as a candidate first under "Register Candidate" before signing in.`,
@@ -63,6 +79,7 @@ export async function POST(request) {
         { status: 404 }
       );
     }
+
 
     // 2a. Block PENDING accounts with a clear message
     if (user.role === "PENDING") {
@@ -86,6 +103,13 @@ export async function POST(request) {
     // 3. Compare DOB against bcrypt passwordHash
     const isMatch = await bcrypt.compare(cleanDob, user.passwordHash);
     if (!isMatch) {
+      await createIncident({
+        route: "/api/auth/login-student",
+        rollNo: cleanRollNo,
+        step: "login_credential_mismatch",
+        message: `Failed authentication for ${cleanRollNo}: Incorrect date of birth supplied.`,
+      }).catch(() => {});
+
       return NextResponse.json(
         {
           error: `Incorrect Date of Birth. ${rateLimit.remainingAttempts} attempts remaining.`,
@@ -161,9 +185,18 @@ export async function POST(request) {
     return response;
   } catch (error) {
     console.error("Student login error:", error);
+    await createIncident({
+      route: "/api/auth/login-student",
+      rollNo: cleanRollNo || "UNKNOWN",
+      step: "login_exception",
+      message: error?.message || "Internal server error during authentication",
+      raw: error?.stack,
+    }).catch(() => {});
+
     return NextResponse.json(
-      { error: "Internal server error during authentication." },
+      { error: "Internal server error during authentication. The COE Help Panel has been notified." },
       { status: 500 }
     );
   }
 }
+

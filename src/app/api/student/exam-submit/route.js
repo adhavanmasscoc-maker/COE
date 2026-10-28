@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import { getCurrentSession } from "@/lib/auth";
 import { db } from "@/lib/db";
+import { encryptSubmissionPayload } from "@/lib/encryption";
+import { createIncident } from "@/lib/incident";
 
 export const dynamic = "force-dynamic";
-
-import { encryptSubmissionPayload } from "@/lib/encryption";
 
 // POST /api/student/exam-submit: Record student exam submission
 export async function POST(request) {
@@ -127,7 +127,7 @@ export async function POST(request) {
 
     const encryptedAnswersJson = encryptSubmissionPayload(auditPayload);
 
-    // Save submission permanently in SQLite
+    // Save submission permanently in SQLite (awaited — client sees "submitted" only after this)
     const submission = await db.examSubmission.create({
       data: {
         examScheduleId: exam.id,
@@ -139,6 +139,17 @@ export async function POST(request) {
         submittedAt: new Date(),
       },
     });
+
+    // Advance exam phase to 6 (submissions) on first successful submission
+    if (exam.phase < 6) {
+      let ts = {};
+      try { ts = JSON.parse(exam.phaseTimestamps || "{}"); } catch {}
+      if (!ts[6]) ts[6] = new Date().toISOString();
+      await db.examSchedule.update({
+        where: { id: exam.id },
+        data: { phase: 6, phaseTimestamps: JSON.stringify(ts) },
+      }).catch(() => {});
+    }
 
     return NextResponse.json({
       success: true,
@@ -164,6 +175,15 @@ export async function POST(request) {
     });
   } catch (error) {
     console.error("Exam submit POST error:", error);
+    // Record traceable incident
+    try {
+      await createIncident({
+        route: "/api/student/exam-submit",
+        step: "exam_submit",
+        message: error?.message || "Exam submit failed",
+        raw: error?.stack,
+      });
+    } catch {}
     return NextResponse.json({ error: "Failed to seal and record exam submission." }, { status: 500 });
   }
 }

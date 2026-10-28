@@ -126,12 +126,19 @@ model ExamSchedule {
   examDate        DateTime
   durationMinutes Int          @default(150)
   totalMarks      Int          @default(100)
+  requiredQuestions Int        @default(0)  // minimum question count before publish is allowed
   instructions    String?
+  // 10-phase lifecycle: 0=scheduled,1=questions_set,2=verified,3=published,
+  // 4=reached_students,5=exam_live,6=submissions,7=evaluated,8=result_verified,9=result_published
+  phase           Int          @default(0)
+  // Timestamps for each phase transition
+  phaseTimestamps String?      // JSON: { [phaseIndex]: ISO-timestamp }
   status          String       @default("DRAFT") // "DRAFT", "PUBLISHED", "COMPLETED"
   createdAt       DateTime     @default(now())
   results         ExamResult[]
   questions       ExamQuestion[]
   submissions     ExamSubmission[]
+  heartbeats      ExamHeartbeat[]
 }
 
 model ExamQuestion {
@@ -141,9 +148,14 @@ model ExamQuestion {
   questionNumber Int
   questionText   String
   marks          Int          @default(2)
+  qType          String       @default("MCQ") // "MCQ", "SHORT_ANSWER", "NUMERICAL"
+  difficulty     String       @default("MEDIUM") // "EASY", "MEDIUM", "HARD"
+  syllabusRef    String?      // e.g. "Unit 2, Chapter 3: Motion"
   options        String       // JSON stringified array of { id: string, text: string }
   correctAnswer  String?      // e.g. "A"
   explanation    String?
+  reviewStatus   String       @default("approved") // "needs_review", "approved", "rejected"
+  source         String       @default("manual") // "manual", "gemini"
   createdAt      DateTime     @default(now())
 }
 
@@ -205,5 +217,32 @@ model StudentActivityLog {
   durationSeconds Int             @default(0) // Total duration in site (seconds)
   tabSwitchCount  Int             @default(0) // Suspicious tab switch count for help prevention
   createdAt       DateTime        @default(now())
+}
+
+model ExamHeartbeat {
+  id             String       @id @default(cuid())
+  examScheduleId String
+  examSchedule   ExamSchedule @relation(fields: [examScheduleId], references: [id], onDelete: Cascade)
+  studentId      String
+  rollNo         String
+  status         String       @default("alive") // "alive", "missed", "warning"
+  answeredCount  Int          @default(0)
+  timeLeftSecs   Int          @default(0)
+  createdAt      DateTime     @default(now())
+}
+
+model IncidentLog {
+  id         String    @id @default(cuid())
+  incidentId String    @unique
+  route      String
+  userId     String?
+  role       String?
+  rollNo     String?
+  step       String?   // e.g. "registration", "login", "exam_submit"
+  message    String
+  rawError   String?   // Only stored in dev; null in production
+  status     String    @default("open") // "open", "acknowledged", "resolved"
+  resolvedAt DateTime?
+  createdAt  DateTime  @default(now())
 }
 

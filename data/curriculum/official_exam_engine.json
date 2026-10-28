@@ -1,0 +1,380 @@
+{
+  "systemModule": "OFFICIAL_EXAM_ENGINE",
+  "version": "1.0",
+  "board": "Tamil Nadu State Board of School Examination (DGE)",
+  "visibilityRule": "ANSWERS_LOCKED_UNTIL_RESULT_DATE",
+  "publishResultsAt": "2026-04-01T10:00:00Z",
+  "officialExams": [
+    {
+      "examId": "TN-10-MAT-2026-OFFICIAL",
+      "standard": 10,
+      "subjectCode": "MAT-10",
+      "subjectName": "Mathematics",
+      "medium": "English",
+      "totalMarks": 100,
+      "durationMinutes": 180,
+      "instructions": "Attempt all sections. Answers and evaluation rubrics will be published on the official result declaration date.",
+      "sections": [
+        {
+          "sectionId": "PART-I",
+          "title": "Multiple Choice Questions (14 x 1 = 14 Marks)",
+          "questions": [
+            {
+              "questionId": "Q10M01",
+              "questionNumber": 1,
+              "questionText": "If n(A x B) = 12 and n(A) = 4, then n(B) is equal to:",
+              "options": {
+                "A": "3",
+                "B": "4",
+                "C": "8",
+                "D": "12"
+              },
+              "correctAnswer": "A",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M02",
+              "questionNumber": 2,
+              "questionText": "The modular arithmetic expression 17 ≡ x (mod 5) yields x as:",
+              "options": {
+                "A": "1",
+                "B": "2",
+                "C": "3",
+                "D": "4"
+              },
+              "correctAnswer": "B",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M03",
+              "questionNumber": 3,
+              "questionText": "If a, b, c are in A.P., then (a - b) / (b - c) is equal to:",
+              "options": {
+                "A": "a / b",
+                "B": "b / c",
+                "C": "1",
+                "D": "c / a"
+              },
+              "correctAnswer": "C",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M04",
+              "questionNumber": 4,
+              "questionText": "If the ordered pairs (a + 2, 4) and (5, 2a + b) are equal, then (a, b) is:",
+              "options": {
+                "A": "(2, -2)",
+                "B": "(5, 1)",
+                "C": "(2, 3)",
+                "D": "(3, -2)"
+              },
+              "correctAnswer": "D",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M05",
+              "questionNumber": 5,
+              "questionText": "If the HCF of 65 and 117 is expressible in the form 65m - 117, then the value of m is:",
+              "options": {
+                "A": "4",
+                "B": "2",
+                "C": "1",
+                "D": "3"
+              },
+              "correctAnswer": "B",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M06",
+              "questionNumber": 6,
+              "questionText": "If ΔABC ~ ΔPQR such that Area(ΔABC) = 9 cm² and Area(ΔPQR) = 16 cm² with BC = 2.1 cm, then QR is:",
+              "options": {
+                "A": "2.8 cm",
+                "B": "3.2 cm",
+                "C": "4.2 cm",
+                "D": "1.8 cm"
+              },
+              "correctAnswer": "A",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M07",
+              "questionNumber": 7,
+              "questionText": "The slope of the line perpendicular to 2x - 3y + 6 = 0 is:",
+              "options": {
+                "A": "2/3",
+                "B": "-2/3",
+                "C": "3/2",
+                "D": "-3/2"
+              },
+              "correctAnswer": "D",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M08",
+              "questionNumber": 8,
+              "questionText": "If (5, 7), (3, p), and (6, 6) are collinear, then the value of p is:",
+              "options": {
+                "A": "3",
+                "B": "6",
+                "C": "9",
+                "D": "12"
+              },
+              "correctAnswer": "C",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M09",
+              "questionNumber": 9,
+              "questionText": "The value of sin²θ + 1 / (1 + tan²θ) is:",
+              "options": {
+                "A": "tan²θ",
+                "B": "1",
+                "C": "sec²θ",
+                "D": "0"
+              },
+              "correctAnswer": "B",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M10",
+              "questionNumber": 10,
+              "questionText": "A tower of height 60 m casts a shadow of x m when the sun's altitude is 45°. Then x is equal to:",
+              "options": {
+                "A": "41.92 m",
+                "B": "43.92 m",
+                "C": "43 m",
+                "D": "60 m"
+              },
+              "correctAnswer": "D",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M11",
+              "questionNumber": 11,
+              "questionText": "The total surface area of a hemisphere of radius r is:",
+              "options": {
+                "A": "2πr² sq. units",
+                "B": "3πr² sq. units",
+                "C": "4πr² sq. units",
+                "D": "6πr² sq. units"
+              },
+              "correctAnswer": "B",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M12",
+              "questionNumber": 12,
+              "questionText": "The ratio of the volumes of two spheres of radii r1 and r2 is:",
+              "options": {
+                "A": "r1 : r2",
+                "B": "r1² : r2²",
+                "C": "r1³ : r2³",
+                "D": "3r1 : 3r2"
+              },
+              "correctAnswer": "C",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M13",
+              "questionNumber": 13,
+              "questionText": "Which of the following is not a measure of dispersion?",
+              "options": {
+                "A": "Range",
+                "B": "Standard deviation",
+                "C": "Variance",
+                "D": "Arithmetic Mean"
+              },
+              "correctAnswer": "D",
+              "marks": 1
+            },
+            {
+              "questionId": "Q10M14",
+              "questionNumber": 14,
+              "questionText": "If P(A) = 0.37, P(B) = 0.42, and P(A ∩ B) = 0.09, then P(A ∪ B) is:",
+              "options": {
+                "A": "0.70",
+                "B": "0.88",
+                "C": "0.69",
+                "D": "0.79"
+              },
+              "correctAnswer": "A",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "postExamEvaluationKey": {
+        "Q10M01": { "correctOption": "A", "explanation": "n(A x B) = n(A) * n(B) => 12 = 4 * n(B) => n(B) = 3." },
+        "Q10M02": { "correctOption": "B", "explanation": "17 = 5 * 3 + 2, so 17 ≡ 2 (mod 5)." },
+        "Q10M03": { "correctOption": "C", "explanation": "Since b - a = c - b = d, (a - b) / (b - c) = -d / -d = 1." },
+        "Q10M04": { "correctOption": "D", "explanation": "a + 2 = 5 => a = 3; 2(3) + b = 4 => b = -2. So (a, b) = (3, -2)." },
+        "Q10M05": { "correctOption": "B", "explanation": "HCF(65, 117) = 13. 65m - 117 = 13 => 65m = 130 => m = 2." },
+        "Q10M06": { "correctOption": "A", "explanation": "Area(ABC)/Area(PQR) = BC²/QR² => 9/16 = 2.1²/QR² => 3/4 = 2.1/QR => QR = 2.8 cm." },
+        "Q10M07": { "correctOption": "D", "explanation": "Slope of 2x - 3y + 6 = 0 is 2/3. Perpendicular slope m = -3/2." },
+        "Q10M08": { "correctOption": "C", "explanation": "Slope of first two = (p - 7)/(3 - 5) = (p - 7)/(-2). Slope of last two = (6 - p)/(6 - 3) = (6 - p)/3. Setting equal yields p = 9." },
+        "Q10M09": { "correctOption": "B", "explanation": "sin²θ + 1/sec²θ = sin²θ + cos²θ = 1." },
+        "Q10M10": { "correctOption": "D", "explanation": "tan 45° = 60/x => 1 = 60/x => x = 60 m." },
+        "Q10M11": { "correctOption": "B", "explanation": "TSA of hemisphere = 3πr²." },
+        "Q10M12": { "correctOption": "C", "explanation": "Volume of sphere = (4/3)πr³, hence ratio is r1³ : r2³." },
+        "Q10M13": { "correctOption": "D", "explanation": "Arithmetic Mean is a measure of central tendency, not dispersion." },
+        "Q10M14": { "correctOption": "A", "explanation": "P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0.37 + 0.42 - 0.09 = 0.70." }
+      }
+    },
+    {
+      "examId": "TN-12-CSC-2026-OFFICIAL",
+      "standard": 12,
+      "subjectCode": "CSC-12",
+      "subjectName": "Computer Science",
+      "medium": "English",
+      "totalMarks": 70,
+      "durationMinutes": 180,
+      "instructions": "All answers are hidden during testing and evaluated automatically upon system result release.",
+      "sections": [
+        {
+          "sectionId": "PART-I",
+          "title": "Objective Choice (15 x 1 = 15 Marks)",
+          "questions": [
+            {
+              "questionId": "Q12C01",
+              "questionNumber": 1,
+              "questionText": "Which of the following is an organized collection of data?",
+              "options": { "A": "Database", "B": "DBMS", "C": "SQL", "D": "Table" },
+              "correctAnswer": "A",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C02",
+              "questionNumber": 2,
+              "questionText": "The private members of a class can be accessed from outside the class using:",
+              "options": { "A": "Public functions", "B": "Private functions", "C": "Scope resolution operator", "D": "Directly" },
+              "correctAnswer": "A",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C03",
+              "questionNumber": 3,
+              "questionText": "Which of the following algorithm design techniques uses a top-down approach?",
+              "options": { "A": "Divide and Conquer", "B": "Dynamic Programming", "C": "Greedy Approach", "D": "Backtracking" },
+              "correctAnswer": "A",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C04",
+              "questionNumber": 4,
+              "questionText": "What is the worst-case time complexity of Bubble Sort?",
+              "options": { "A": "O(n)", "B": "O(n log n)", "C": "O(n^2)", "D": "O(1)" },
+              "correctAnswer": "C",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C05",
+              "questionNumber": 5,
+              "questionText": "Which operator is used for Exponentiation in Python?",
+              "options": { "A": "*", "B": "**", "C": "^", "D": "//" },
+              "correctAnswer": "B",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C06",
+              "questionNumber": 6,
+              "questionText": "Which control statement in Python is used as a placeholder for future code?",
+              "options": { "A": "break", "B": "continue", "C": "pass", "D": "exit" },
+              "correctAnswer": "C",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C07",
+              "questionNumber": 7,
+              "questionText": "In Python, which function is used to find the length of a string/list?",
+              "options": { "A": "length()", "B": "size()", "C": "len()", "D": "count()" },
+              "correctAnswer": "C",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C08",
+              "questionNumber": 8,
+              "questionText": "Which data type in Python is immutable?",
+              "options": { "A": "List", "B": "Dictionary", "C": "Set", "D": "Tuple" },
+              "correctAnswer": "D",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C09",
+              "questionNumber": 9,
+              "questionText": "Which class method is automatically executed when an object of a class is created in Python?",
+              "options": { "A": "__init__()", "B": "__del__()", "C": "__new__()", "D": "__create__()" },
+              "correctAnswer": "A",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C10",
+              "questionNumber": 10,
+              "questionText": "What is the full form of DBMS?",
+              "options": { "A": "Data Base Management System", "B": "Data Management System", "C": "Database Mining System", "D": "Database Multiple System" },
+              "correctAnswer": "A",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C11",
+              "questionNumber": 11,
+              "questionText": "Which key uniquely identifies each record in a relational table?",
+              "options": { "A": "Foreign Key", "B": "Primary Key", "C": "Candidate Key", "D": "Alternate Key" },
+              "correctAnswer": "B",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C12",
+              "questionNumber": 12,
+              "questionText": "Which SQL command is used to remove a table permanently from a database?",
+              "options": { "A": "DELETE", "B": "TRUNCATE", "C": "DROP", "D": "REMOVE" },
+              "correctAnswer": "C",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C13",
+              "questionNumber": 13,
+              "questionText": "Which CSV module function is used to write data into a CSV file line by line?",
+              "options": { "A": "writerow()", "B": "writeall()", "C": "append()", "D": "writer()" },
+              "correctAnswer": "A",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C14",
+              "questionNumber": 14,
+              "questionText": "Which Python module provides functions for interfacing with the operating system?",
+              "options": { "A": "sys", "B": "os", "C": "getopt", "D": "csv" },
+              "correctAnswer": "B",
+              "marks": 1
+            },
+            {
+              "questionId": "Q12C15",
+              "questionNumber": 15,
+              "questionText": "Which SQL function returns the largest value of the selected column?",
+              "options": { "A": "HIGH()", "B": "MAX()", "C": "MAXIMUM()", "D": "LARGE()" },
+              "correctAnswer": "B",
+              "marks": 1
+            }
+          ]
+        }
+      ],
+      "postExamEvaluationKey": {
+        "Q12C01": { "correctOption": "A", "explanation": "A database is an organized collection of structured information or data." },
+        "Q12C02": { "correctOption": "A", "explanation": "Private members cannot be accessed directly from outside the class; they must be accessed through public member functions." },
+        "Q12C03": { "correctOption": "A", "explanation": "Divide and Conquer breaks down problems recursively into subproblems." },
+        "Q12C04": { "correctOption": "C", "explanation": "Bubble Sort performs n*(n-1)/2 comparisons in worst case, giving O(n^2)." },
+        "Q12C05": { "correctOption": "B", "explanation": "The ** operator computes exponentiation in Python." },
+        "Q12C06": { "correctOption": "C", "explanation": "pass is a null operation used as a placeholder." },
+        "Q12C07": { "correctOption": "C", "explanation": "len() returns the number of items in an object." },
+        "Q12C08": { "correctOption": "D", "explanation": "Tuples cannot be modified after creation." },
+        "Q12C09": { "correctOption": "A", "explanation": "__init__() is the constructor method in Python classes." },
+        "Q12C10": { "correctOption": "A", "explanation": "DBMS stands for Data Base Management System." },
+        "Q12C11": { "correctOption": "B", "explanation": "A primary key uniquely identifies each record in a relational database table." },
+        "Q12C12": { "correctOption": "C", "explanation": "DROP TABLE deletes both records and the table schema." },
+        "Q12C13": { "correctOption": "A", "explanation": "writerow() writes a single row of data into a CSV file." },
+        "Q12C14": { "correctOption": "B", "explanation": "The os module provides interaction with the operating system." },
+        "Q12C15": { "correctOption": "B", "explanation": "MAX() returns the maximum value in an SQL column." }
+      }
+    }
+  ]
+}
