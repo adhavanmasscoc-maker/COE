@@ -102,6 +102,28 @@ async function main() {
   });
   console.log(`✅ Sample Candidate created: ${sampleUser.username} | Standard: 10`);
 
+  // 5c. Create Candidate Vikram (TN2026-1005)
+  const vikramDobHash = await bcrypt.hash("2010-05-15", saltRounds);
+  const vikramUser = await prisma.user.create({
+    data: {
+      username: "TN2026-1005",
+      passwordHash: vikramDobHash,
+      role: "STUDENT",
+      profile: {
+        create: {
+          fullName: "Vikram",
+          currentClass: 9,
+          examPrepClass: 10,
+          board: "Tamil Nadu Samacheer Kalvi",
+          medium: "English",
+          academicYear: "2026–2027",
+        },
+      },
+    },
+    include: { profile: true },
+  });
+  console.log(`✅ Candidate Vikram created: ${vikramUser.username} | Standard: 10`);
+
   // 6. Seed 5 Core Subjects for Class 10 (Tamil Nadu Samacheer Kalvi)
   const class10SubjectsData = [
     {
@@ -257,8 +279,15 @@ async function main() {
         subjectId: createdSub.id,
       },
     });
+
+    await prisma.studentSubject.create({
+      data: {
+        studentId: vikramUser.profile.id,
+        subjectId: createdSub.id,
+      },
+    });
   }
-  console.log("✅ Seeded 5 Class 10 subjects and mapped to Brother and Sample Candidate (TN2026-0900).");
+  console.log("✅ Seeded 5 Class 10 subjects and mapped to Brother, Sample Candidate, and Vikram.");
 
   // Insert Class 12 Subjects & Assign to Sister
   const sisterProfile = sisterUser.profile;
