@@ -1,0 +1,180 @@
+{
+  "examinationEngine": {
+    "PART-I": [
+      {
+        "id": "MCQ-10-MAT-01",
+        "standard": 10,
+        "subjectCode": "MAT-10",
+        "questionText": "If n(A x B) = 6 and A = {1, 3}, then n(B) is:",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "3",
+          "d": "6"
+        },
+        "correctOption": "c",
+        "explanation": "n(A x B) = n(A) * n(B). Since n(A) = 2, n(B) = 6 / 2 = 3."
+      },
+      {
+        "id": "MCQ-12-CSC-01",
+        "standard": 12,
+        "subjectCode": "CSC-12",
+        "questionText": "Binary search is also called as:",
+        "options": {
+          "a": "Random search",
+          "b": "Linear search",
+          "c": "Half-interval search",
+          "d": "Sequential search"
+        },
+        "correctOption": "c",
+        "explanation": "Binary search divides the search interval in half at each step, hence termed half-interval search."
+      },
+      {
+        "id": "MCQ-12-CSC-02",
+        "standard": 12,
+        "subjectCode": "CSC-12",
+        "questionText": "Which clause is used in SQL to sort data in ascending or descending order?",
+        "options": {
+          "a": "GROUP BY",
+          "b": "SORT BY",
+          "c": "ORDER BY",
+          "d": "ALIGN BY"
+        },
+        "correctOption": "c",
+        "explanation": "ORDER BY clause sorts records in database tables based on specified columns."
+      },
+      {
+        "id": "MCQ-10-SCI-01",
+        "standard": 10,
+        "subjectCode": "SCI-10",
+        "questionText": "Kilowatt hour is the unit of:",
+        "options": {
+          "a": "Electric power",
+          "b": "Electric resistance",
+          "c": "Electrical energy",
+          "d": "Electric current"
+        },
+        "correctOption": "c",
+        "explanation": "1 kWh = 3.6 x 10^6 Joules, which measures commercial electrical energy consumption."
+      }
+    ],
+    "PART-II": [
+      {
+        "id": "SA-10-MAT-01",
+        "standard": 10,
+        "subjectCode": "MAT-10",
+        "questionText": "Define a Relation from set A to set B.",
+        "modelAnswerKey": "Let A and B be any two non-empty sets. A Relation R from A to B is a subset of A x B satisfying specified conditions. Symbolically, R ⊆ A x B.",
+        "evaluationKeywords": [
+          "subset of A x B",
+          "non-empty sets",
+          "R ⊆ A x B"
+        ]
+      },
+      {
+        "id": "SA-12-CSC-01",
+        "standard": 12,
+        "subjectCode": "CSC-12",
+        "questionText": "What is concrete data type?",
+        "modelAnswerKey": "Concrete data types are data types whose internal structure and representation are directly known to the programmer and implemented directly.",
+        "evaluationKeywords": [
+          "representation known",
+          "direct implementation",
+          "built-in types"
+        ]
+      }
+    ],
+    "PART-III": [
+      {
+        "id": "LA-12-CSC-01",
+        "standard": 12,
+        "subjectCode": "CSC-12",
+        "questionText": "Write a Python code using a loop to compute the factorial of a given number n.",
+        "modelAnswerKey": "def factorial(n):\n    fact = 1\n    for i in range(1, n + 1):\n        fact *= i\n    return fact\nprint(factorial(5))",
+        "evaluationKeywords": [
+          "def definition",
+          "for loop range",
+          "multiplication accumulator",
+          "return result"
+        ]
+      },
+      {
+        "id": "LA-10-MAT-01",
+        "standard": 10,
+        "subjectCode": "MAT-10",
+        "questionText": "Find the HCF of 84 and 120 using Euclid's Division Algorithm.",
+        "modelAnswerKey": "120 = 84 x 1 + 36\n84 = 36 x 2 + 12\n36 = 12 x 3 + 0\nSince the remainder is 0, HCF(84, 120) = 12.",
+        "evaluationKeywords": [
+          "Euclid lemma a=bq+r",
+          "remainder calculation",
+          "HCF = 12"
+        ]
+      }
+    ],
+    "PART-IV": [
+      {
+        "id": "ESSAY-12-MAT-01",
+        "standard": 12,
+        "subjectCode": "MAT-12",
+        "questionText": "Solve the following system of linear equations by Matrix Inversion Method:\n2x + 3y = 5\nx - 2y = -1",
+        "eitherOrPairId": "ESSAY-12-MAT-01B",
+        "stepWiseEvaluationRubric": [
+          {
+            "step": 1,
+            "description": "Formulating Matrix equation AX = B",
+            "marks": 1
+          },
+          {
+            "step": 2,
+            "description": "Finding determinant |A| and verifying non-singular (|A| != 0)",
+            "marks": 1
+          },
+          {
+            "step": 3,
+            "description": "Finding Adjoint matrix adj(A)",
+            "marks": 1
+          },
+          {
+            "step": 4,
+            "description": "Calculating inverse A^-1 = (1/|A|) adj(A)",
+            "marks": 1
+          },
+          {
+            "step": 5,
+            "description": "Multiplying X = A^-1 B to obtain final values x=1, y=1",
+            "marks": 1
+          }
+        ]
+      },
+      {
+        "id": "ESSAY-10-SCI-01",
+        "standard": 10,
+        "subjectCode": "SCI-10",
+        "questionText": "State Newton's Laws of Motion and derive the mathematical expression F = ma from Newton's Second Law.",
+        "eitherOrPairId": "ESSAY-10-SCI-01B",
+        "stepWiseEvaluationRubric": [
+          {
+            "step": 1,
+            "description": "State Newton's First and Third Laws",
+            "marks": 1.5
+          },
+          {
+            "step": 2,
+            "description": "State Newton's Second Law statement",
+            "marks": 1
+          },
+          {
+            "step": 3,
+            "description": "Derivation: Initial momentum p1=mu, final momentum p2=mv, dp=m(v-u)",
+            "marks": 1.5
+          },
+          {
+            "step": 4,
+            "description": "Apply F proportional to dp/dt => F = k m a => F = ma",
+            "marks": 1
+          }
+        ]
+      }
+    ]
+  }
+}

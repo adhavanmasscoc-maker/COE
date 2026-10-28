@@ -1,0 +1,82 @@
+{
+  "revisionModules": {
+    "highYieldConceptSummaries": [
+      {
+        "subjectCode": "MAT-10",
+        "chapterTitle": "Relations and Functions",
+        "keyTakeaways": "Cartesian product A x B contains all ordered pairs (a,b). A relation is any subset of A x B. A function is a special relation where each domain element has exactly one image."
+      },
+      {
+        "subjectCode": "CSC-12",
+        "chapterTitle": "Algorithmic Strategies",
+        "keyTakeaways": "Worst case complexity is measured in Big O. Binary search requires O(log n) time and sorted data. Bubble sort takes O(n^2) worst case."
+      }
+    ],
+    "formulaAndSyntaxBanks": [
+      {
+        "subjectCode": "MAT-10",
+        "category": "Algebra & Progressions",
+        "items": [
+          {
+            "name": "AP nth Term",
+            "formula": "t_n = a + (n - 1)d"
+          },
+          {
+            "name": "AP Sum to n Terms",
+            "formula": "S_n = (n / 2) * [2a + (n - 1)d]"
+          },
+          {
+            "name": "GP nth Term",
+            "formula": "t_n = a * r^(n - 1)"
+          }
+        ]
+      },
+      {
+        "subjectCode": "MAT-12",
+        "category": "Matrices & Vectors",
+        "items": [
+          {
+            "name": "Matrix Inverse",
+            "formula": "A^-1 = (1 / |A|) * adj(A)"
+          },
+          {
+            "name": "Vector Triple Product",
+            "formula": "a x (b x c) = (a . c)b - (a . b)c"
+          }
+        ]
+      },
+      {
+        "subjectCode": "CSC-12",
+        "category": "Python Syntax",
+        "items": [
+          {
+            "name": "Lambda Function",
+            "syntax": "lambda arguments: expression"
+          },
+          {
+            "name": "List Slicing",
+            "syntax": "list_name[start : stop : step]"
+          },
+          {
+            "name": "SQL Select",
+            "syntax": "SELECT column1, column2 FROM table_name WHERE condition ORDER BY column1 ASC;"
+          }
+        ]
+      }
+    ],
+    "recurringPastExamPatterns": [
+      {
+        "subjectCode": "TAM-10",
+        "patternDescription": "அழகிடுதல் (வெண்பா யாப்பிலக்கணம்) மற்றும் அணி இலக்கணம் (உவமை, வேற்றுமை, தற்Structure) 5 மதிப்பெண் வினாக்களில் தொடர்ந்து கேட்கப்படுகிறது."
+      },
+      {
+        "subjectCode": "MAT-10",
+        "patternDescription": "5-mark questions frequently feature Construction of Similar Triangles/Tangents, Solving System of Linear Equations in 3 Variables, and Proving Thales/Pythagoras Theorem."
+      },
+      {
+        "subjectCode": "CSC-12",
+        "patternDescription": "SQL queries (JOIN, GROUP BY, HAVING) and Python CSV processing/Matplotlib visualization scripts appear consistently in Part-III and Part-IV."
+      }
+    ]
+  }
+}

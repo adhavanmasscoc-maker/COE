@@ -23,6 +23,8 @@ import {
   Zap,
   FileJson,
   Activity,
+  FolderArchive,
+  Sparkles,
 } from "lucide-react";
 import { ActivityTracker } from "@/components/telemetry/ActivityTracker";
 
@@ -40,10 +42,12 @@ const studentNav = [
 
 const adminNav = [
   { href: "/coe-admin/dashboard",   label: "Overview",        icon: LayoutDashboard },
+  { href: "/coe-admin/curriculum",  label: "Curriculum Archive", icon: FolderArchive },
+  { href: "/coe-admin/ai-questions", label: "AI Exam Setter",  icon: Sparkles },
   { href: "/coe-admin/history",     label: "History & Clicks", icon: Activity },
   { href: "/coe-admin/students",    label: "Students",        icon: Users },
   { href: "/coe-admin/exams",       label: "Exams",           icon: CalendarDays },
-  { href: "/coe-admin/exam-setter", label: "Exam Setter",     icon: Zap },
+  { href: "/coe-admin/exam-setter", label: "Exam Setter (JSON)", icon: Zap },
   { href: "/coe-admin/syllabus",    label: "Syllabus",        icon: Layers },
   { href: "/coe-admin/papers",      label: "Papers",          icon: ClipboardList },
   { href: "/coe-admin/results",     label: "Marks",           icon: Award },

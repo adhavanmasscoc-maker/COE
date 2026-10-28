@@ -2,8 +2,36 @@ import { NextResponse } from "next/server";
 import { getCurrentSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { createIncident } from "@/lib/incident";
+import { resolvePolicyDirective, EXAM_POLICY_CONFIG } from "@/lib/policyPresets";
+import fs from "fs";
+import path from "path";
 
 export const dynamic = "force-dynamic";
+
+/** Universal in-memory PDF text extractor supporting both pdf-parse v1 and v2 */
+async function extractPdfText(buffer) {
+  try {
+    const pdfPkg = await import("pdf-parse");
+    // Version 2 (PDFParse class)
+    if (pdfPkg.PDFParse) {
+      const parser = new pdfPkg.PDFParse({ data: buffer });
+      const res = await parser.getText();
+      return res?.text || "";
+    }
+    // Version 1 default export
+    if (typeof pdfPkg.default === "function") {
+      const res = await pdfPkg.default(buffer);
+      return res?.text || "";
+    }
+    if (typeof pdfPkg === "function") {
+      const res = await pdfPkg(buffer);
+      return res?.text || "";
+    }
+  } catch (err) {
+    console.error("PDF text extraction error:", err.message);
+  }
+  return "";
+}
 
 /** Shared grade table — single source of truth */
 export const GRADE_TABLE = [
@@ -23,15 +51,15 @@ export function calculateGrade(percentage) {
   return GRADE_TABLE[GRADE_TABLE.length - 1];
 }
 
-import { resolvePolicyDirective, EXAM_POLICY_CONFIG } from "@/lib/policyPresets";
-
 const ALLOWED_QTYPES = ["MCQ", "SHORT_ANSWER", "NUMERICAL"];
 const ALLOWED_DIFFICULTIES = ["EASY", "MEDIUM", "HARD"];
+const CURRICULUM_DIR = path.join(process.cwd(), "data", "curriculum");
 
 /**
  * POST /api/admin/generate-questions
- * Calls Gemini API server-side. Validates returned JSON against schema.
- * Generated questions start as "needs_review" — never auto-published.
+ * Calls Gemini API server-side.
+ * Supports BOTH application/json AND multipart/form-data (with pdf-parse & multi-file extraction).
+ * Also reads pre-saved curriculum files directly from data/curriculum/.
  */
 export async function POST(request) {
   const session = await getCurrentSession();
@@ -47,27 +75,87 @@ export async function POST(request) {
     );
   }
 
-  let body;
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ error: "Invalid JSON body." }, { status: 400 });
+  let examId, subjectName, prepClass, totalMarks, questionCount, policyId, optionId,
+      policyIndex = 3, customPolicy, customPolicyText, syllabusText = "", samplePaperText = "",
+      selectedCurriculumFiles = [], uploadedFilesCount = 0;
+
+  const contentType = request.headers.get("content-type") || "";
+
+  if (contentType.includes("multipart/form-data")) {
+    try {
+      const formData = await request.formData();
+      examId = formData.get("examId");
+      subjectName = formData.get("subjectName") || formData.get("subject");
+      prepClass = parseInt(formData.get("prepClass"), 10) || 10;
+      totalMarks = parseInt(formData.get("totalMarks"), 10);
+      questionCount = parseInt(formData.get("questionCount"), 10);
+      policyId = formData.get("policyId");
+      optionId = formData.get("optionId");
+      customPolicyText = formData.get("customPolicyText") || formData.get("customPolicy") || "";
+
+      // Handle server files selection passed as string or JSON
+      const serverFilesRaw = formData.get("selectedCurriculumFiles");
+      if (serverFilesRaw) {
+        try { selectedCurriculumFiles = JSON.parse(serverFilesRaw); } catch { selectedCurriculumFiles = [serverFilesRaw]; }
+      }
+
+      // Extract text from uploaded files (in-memory parsing)
+      const uploadedFiles = formData.getAll("files");
+      uploadedFilesCount = uploadedFiles.length;
+
+      for (const file of uploadedFiles) {
+        if (!file || typeof file === "string") continue;
+        const name = file.name || "uploaded_document";
+        if (name.endsWith(".pdf")) {
+          const arrayBuffer = await file.arrayBuffer();
+          const buffer = Buffer.from(arrayBuffer);
+          const pdfText = await extractPdfText(buffer);
+          syllabusText += `\n\n=== SOURCE DOCUMENT (PDF): ${name} ===\n${pdfText}`;
+        } else {
+          const text = await file.text();
+          syllabusText += `\n\n=== SOURCE DOCUMENT: ${name} ===\n${text}`;
+        }
+      }
+    } catch (formErr) {
+      return NextResponse.json({ error: "Failed to parse multipart form data.", message: formErr.message }, { status: 400 });
+    }
+  } else {
+    // JSON Request
+    try {
+      const body = await request.json();
+      examId = body.examId;
+      subjectName = body.subjectName || body.subject;
+      prepClass = parseInt(body.prepClass, 10) || 10;
+      totalMarks = body.totalMarks;
+      questionCount = parseInt(body.questionCount, 10);
+      policyId = body.policyId;
+      optionId = body.optionId;
+      policyIndex = body.policyIndex !== undefined ? body.policyIndex : 3;
+      customPolicy = body.customPolicy;
+      customPolicyText = body.customPolicyText;
+      syllabusText = body.syllabusText || "";
+      samplePaperText = body.samplePaperText || "";
+      selectedCurriculumFiles = Array.isArray(body.selectedCurriculumFiles) ? body.selectedCurriculumFiles : [];
+    } catch {
+      return NextResponse.json({ error: "Invalid JSON body." }, { status: 400 });
+    }
   }
 
-  const {
-    examId,
-    subjectName,
-    prepClass,
-    totalMarks,
-    questionCount,
-    policyId,
-    optionId,
-    policyIndex = 3,
-    customPolicy,
-    customPolicyText,
-    syllabusText,
-    samplePaperText,
-  } = body;
+  // Pre-Saved Server Repository: read any selected curriculum documents directly from data/curriculum/
+  if (Array.isArray(selectedCurriculumFiles) && selectedCurriculumFiles.length > 0) {
+    for (const fileName of selectedCurriculumFiles) {
+      const safeName = path.basename(fileName);
+      const filePath = path.join(CURRICULUM_DIR, safeName);
+      if (fs.existsSync(filePath)) {
+        try {
+          const fileContent = fs.readFileSync(filePath, "utf-8");
+          syllabusText += `\n\n=== SERVER REPOSITORY CURRICULUM: ${safeName} ===\n${fileContent}`;
+        } catch (readErr) {
+          console.warn(`Could not read curriculum file ${safeName}:`, readErr.message);
+        }
+      }
+    }
+  }
 
   if (!examId || !subjectName || !prepClass || !questionCount) {
     return NextResponse.json(
@@ -76,7 +164,7 @@ export async function POST(request) {
     );
   }
 
-  // Verify exam exists and belongs to admin
+  // Verify exam exists
   const exam = await db.examSchedule.findUnique({
     where: { id: examId },
     include: { subject: { select: { name: true } } },
@@ -92,21 +180,22 @@ export async function POST(request) {
 
   // Build prompt from fixed template
   const marksPerQ = totalMarks ? Math.round(totalMarks / questionCount) : 2;
-  const prompt = `You are the Chief Exam Setter for ${prepClass} ${subjectName} under the Tamil Nadu Samacheer Kalvi curriculum.
+  const prompt = `You are the Chief Exam Setter for Class ${prepClass} ${subjectName} under the Tamil Nadu Samacheer Kalvi curriculum.
 
-Subject: ${subjectName}
-Class: ${prepClass}
-Total Marks: ${totalMarks ?? questionCount * marksPerQ}
-Number of questions: ${questionCount}
+Target Total Marks: ${totalMarks ?? questionCount * marksPerQ}
+Target Question Count: ${questionCount}
 Marks per question: ${marksPerQ}
-
 Policy Category: ${EXAM_POLICY_CONFIG[effectivePolicyId]?.name || "Standard Examination Policy"}
 Exact Policy Directive: ${policyText}
 
-${syllabusText ? `Syllabus (use as source):\n${syllabusText.slice(0, 6000)}\n` : ""}
-${samplePaperText ? `Sample Paper (style reference only, do not copy):\n${samplePaperText.slice(0, 3000)}\n` : ""}
+${syllabusText ? `Reference Syllabus & Curriculum Materials:\n${syllabusText.slice(0, 350000)}\n` : ""}
+${samplePaperText ? `Sample Paper (style reference only, do not copy):\n${samplePaperText.slice(0, 50000)}\n` : ""}
 
-Return ONLY a valid JSON array (no markdown, no explanation). Each element must have:
+Instructions:
+1. Ensure the sum of marks of all questions equals exactly ${totalMarks ?? questionCount * marksPerQ}.
+2. Ensure every MCQ has exactly 4 options with single distinct keys: A, B, C, D.
+3. Every question must include a valid 'syllabusRef' citing the unit/chapter.
+4. Return ONLY a valid JSON array (no markdown code fences, no extra text). Each element must have:
 {
   "questionNumber": <integer starting at 1>,
   "questionText": "<question>",
@@ -118,8 +207,7 @@ Return ONLY a valid JSON array (no markdown, no explanation). Each element must 
   "correctAnswer": "<A|B|C|D>",
   "explanation": "<brief explanation>"
 }
-For non-MCQ types, set options to [] and correctAnswer to null.
-Marks must sum to ${totalMarks ?? questionCount * marksPerQ}.`;
+For non-MCQ types, set options to [] and correctAnswer to null.`;
 
   // Call Gemini API
   async function callGemini(promptText) {
@@ -143,13 +231,11 @@ Marks must sum to ${totalMarks ?? questionCount * marksPerQ}.`;
   }
 
   let rawText;
-  let usageMetadata = null;
   let parsed;
   let validationErrors = [];
 
   try {
     rawText = await callGemini(prompt);
-    usageMetadata = null; // Gemini 1.5 flash doesn't always return token counts in this format
   } catch (err) {
     const incidentId = await createIncident({
       route: "/api/admin/generate-questions",
@@ -215,7 +301,6 @@ Marks must sum to ${totalMarks ?? questionCount * marksPerQ}.`;
   }
 
   if (validationErrors.length > 0) {
-    // Send to review queue — record incident
     const incidentId = await createIncident({
       route: "/api/admin/generate-questions",
       userId: session.userId,
@@ -272,8 +357,12 @@ Marks must sum to ${totalMarks ?? questionCount * marksPerQ}.`;
 
   return NextResponse.json({
     success: true,
+    status: "success",
     message: `${created.length} question(s) generated and added to the review queue. COE must approve each question before publishing.`,
     count: created.length,
+    processedFilesCount: uploadedFilesCount,
+    serverCurriculumFilesCount: selectedCurriculumFiles.length,
     reviewStatus: "needs_review",
+    questions: created,
   });
 }

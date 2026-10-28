@@ -22,7 +22,9 @@ import {
   Users,
   FileJson,
   Eye,
-  Sparkles
+  Sparkles,
+  FolderArchive,
+  Zap
 } from "lucide-react";
 
 export function Navbar() {
@@ -73,6 +75,8 @@ export function Navbar() {
     if (currentUser?.role === "ADMIN") {
       return [
         { href: "/coe-admin/dashboard", label: "COE Control", icon: ShieldCheck },
+        { href: "/coe-admin/curriculum", label: "Curriculum Archive", icon: FolderArchive },
+        { href: "/coe-admin/ai-questions", label: "AI Exam Setter", icon: Zap },
         { href: "/coe-admin/exam-setter", label: "Exam Setter (JSON)", icon: Sparkles },
         { href: "/coe-admin/student-preview", label: "Student Preview", icon: Eye },
         { href: "/coe-admin/students", label: "Students", icon: Users },

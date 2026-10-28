@@ -50,6 +50,28 @@ export async function GET(request) {
       });
     }
 
+    if (searchParams.get("allData") === "true") {
+      const dataBundle = {};
+      const files = fs.readdirSync(CURRICULUM_DIR);
+      for (const f of files) {
+        const filePath = path.join(CURRICULUM_DIR, f);
+        const ext = path.extname(f).toLowerCase();
+        if (ext === ".json") {
+          try {
+            dataBundle[f] = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+          } catch {}
+        } else {
+          try {
+            dataBundle[f] = fs.readFileSync(filePath, "utf-8");
+          } catch {}
+        }
+      }
+      return NextResponse.json({
+        success: true,
+        data: dataBundle,
+      });
+    }
+
     // List all files in data/curriculum/
     const files = fs.readdirSync(CURRICULUM_DIR).map((file) => {
       const filePath = path.join(CURRICULUM_DIR, file);
@@ -76,5 +98,35 @@ export async function GET(request) {
   } catch (err) {
     console.error("Error reading curriculum repository:", err);
     return NextResponse.json({ error: "Failed to access curriculum archive.", message: err.message }, { status: 500 });
+  }
+}
+
+/**
+ * POST /api/admin/curriculum
+ * Allows saving or updating text/markdown/json files directly into data/curriculum/
+ */
+export async function POST(request) {
+  try {
+    const session = await getCurrentSession();
+    if (!session || session.role !== "ADMIN") {
+      return NextResponse.json({ error: "COE Admin authorization required." }, { status: 403 });
+    }
+
+    const { filename, content } = await request.json();
+    if (!filename || !content) {
+      return NextResponse.json({ error: "filename and content are required." }, { status: 400 });
+    }
+
+    const safeName = path.basename(filename);
+    const filePath = path.join(CURRICULUM_DIR, safeName);
+    fs.writeFileSync(filePath, typeof content === "object" ? JSON.stringify(content, null, 2) : content, "utf-8");
+
+    return NextResponse.json({
+      success: true,
+      message: `Document "${safeName}" saved to server curriculum repository.`,
+      filename: safeName,
+    });
+  } catch (err) {
+    return NextResponse.json({ error: "Failed to save curriculum document.", message: err.message }, { status: 500 });
   }
 }

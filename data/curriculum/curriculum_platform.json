@@ -1,0 +1,319 @@
+{
+  "curriculumPlatform": {
+    "standards": [
+      {
+        "standard": 10,
+        "subjects": [
+          {
+            "subjectCode": "TAM-10",
+            "name": "Tamil",
+            "medium": "Tamil",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "அமிழ்தே ஊற்றே (மொழி)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "அன்னை மொழியே",
+                    "description": "பாவலரேறு பெருஞ்சித்திரனாரின் தமிழ்த்தாய் வாழ்த்து மற்றும் புலமைச்சிறப்பு."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "தமிழ்ச் சொல் வளம்",
+                    "description": "தேவநேயப் பாவாணரின் தமிழ் சொல்லாராய்ச்சி மற்றும் சொல் வளம்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "இரட்டுற மொழிதல்",
+                    "description": "சந்தக்கவிமணி தமிழழகனாரின் ஆழியும் தமிழும் இரட்டுற மொழிதல்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "உரைநடையின் அணிகலன்கள்",
+                    "description": "எழில்முதல்வனின் நவீன உரைநடை உத்திகள் மற்றும் உவமைகள்."
+                  },
+                  {
+                    "chapterNumber": 5,
+                    "title": "எழுத்து, சொல் (இலக்கணம்)",
+                    "description": "சார்பெழுத்து வகைகள், மொழி உருபுகள், மொழிப்போலி மற்றும் சொல் வகைகள்."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "உயிரின் வேர் (இயற்கை, சுற்றுச்சூழல்)",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "காற்றே வா!",
+                    "description": "பாரதியாரின் வசன கவிதை மற்றும் இயற்கை வர்ணனை."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "முல்லைப் பாட்டு",
+                    "description": "நப்பூதனாரின் முல்லைத்திணை வர்ணனை மற்றும் நல்நிமித்தம்."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "புயலிலே ஒரு தோணி",
+                    "description": "ப. சிங்காரத்தின் கடற்பயணம் மற்றும் புயல் அனுபவம்."
+                  },
+                  {
+                    "chapterNumber": 4,
+                    "title": "தொகைநிலைத் தொடர்கள் (இலக்கணம்)",
+                    "description": "வேற்றுமை, வினை, பண்பு, உவமை, உம்மை, அன்மொழித் தொகைகள்."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "ENG-10",
+            "name": "English",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Unit 1 - Courage & Fear",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "His First Flight",
+                    "description": "Prose by Liam O'Flaherty about a young seagull overcoming fear to fly."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Life",
+                    "description": "Poem by Henry Van Dyke emphasizing positive living without regrets."
+                  },
+                  {
+                    "chapterNumber": 3,
+                    "title": "The Tempest",
+                    "description": "Supplementary reader adapted from Shakespeare's play."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "MAT-10",
+            "name": "Mathematics",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Relations and Functions",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Ordered Pairs and Cartesian Products",
+                    "description": "Cartesian product of sets, representation through arrow diagrams, tables, and graphs."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Relations and Functions",
+                    "description": "Definitions, domain, co-domain, range, types of functions."
+                  }
+                ]
+              },
+              {
+                "unitNumber": 2,
+                "title": "Numbers and Sequences",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Euclid's Division Lemma and Fundamental Theorem",
+                    "description": "HCF algorithms, modular arithmetic, prime factorization."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Arithmetic Progression (AP)",
+                    "description": "General term t_n = a + (n-1)d, sum to n terms S_n."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "SCI-10",
+            "name": "Science",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Physics - Mechanics & Waves",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Laws of Motion",
+                    "description": "Inertia, Newton's laws, linear momentum, conservation of momentum."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Optics",
+                    "description": "Refraction of light, convex/concave lenses, lens formula, human eye defects."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "SOC-10",
+            "name": "Social Science",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "History",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Outbreak of World War I and Its Aftermath",
+                    "description": "Imperialistic rivalries, course of WWI, League of Nations."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "standard": 12,
+        "subjects": [
+          {
+            "subjectCode": "TAM-12",
+            "name": "Tamil",
+            "medium": "Tamil",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "உயிரினும் ஓம்பப்படும்",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "இளம்தமிழே!",
+                    "description": "சிற்பி பாலசுப்பிரமணியத்தின் தமிழ்க் கவிதை."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "ENG-12",
+            "name": "English",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Unit 1 - Sacrifice and Devotion",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Two Gentlemen of Verona",
+                    "description": "Prose by A.J. Cronin depicting sacrifice of Jacopo and Nicola."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "MAT-12",
+            "name": "Mathematics",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Applications of Matrices and Determinants",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Inverse of Non-Singular Square Matrix",
+                    "description": "Adjoint, inverse matrix A^-1 = (1/|A|) adj(A), orthogonal matrices."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "PHY-12",
+            "name": "Physics",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Electrostatics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Electrostatic Field and Potential",
+                    "description": "Coulomb's law, electric field, electric dipole, Gauss's law."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "CHE-12",
+            "name": "Chemistry",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Metallurgy",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Extraction of Metals",
+                    "description": "Ores and minerals, concentration methods, Ellingham diagram."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "CSC-12",
+            "name": "Computer Science",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Problem Solving Techniques",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Function",
+                    "description": "Subroutines, function specification, pure vs impure functions."
+                  },
+                  {
+                    "chapterNumber": 2,
+                    "title": "Algorithmic Strategies",
+                    "description": "Time and space complexity, searching and sorting algorithms."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "subjectCode": "BIO-12",
+            "name": "Biology",
+            "medium": "English",
+            "units": [
+              {
+                "unitNumber": 1,
+                "title": "Botany - Reproduction and Genetics",
+                "chapters": [
+                  {
+                    "chapterNumber": 1,
+                    "title": "Asexual and Sexual Reproduction in Plants",
+                    "description": "Microsporogenesis, megasporogenesis, double fertilization."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
