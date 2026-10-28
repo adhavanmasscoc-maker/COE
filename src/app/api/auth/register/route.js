@@ -16,10 +16,39 @@ function isValidRollNo(rollNo) {
   return typeof rollNo === "string" && /^[A-Z0-9_-]{4,16}$/i.test(rollNo);
 }
 
-function isValidDate(dateStr) {
-  if (!dateStr) return false;
-  const d = new Date(dateStr);
-  return !isNaN(d.getTime()) && dateStr.match(/^\d{4}-\d{2}-\d{2}$/);
+function normalizeDate(dateStr) {
+  if (!dateStr || typeof dateStr !== "string") return null;
+  const cleaned = dateStr.trim();
+  // Match YYYY-MM-DD
+  if (/^\d{4}-\d{2}-\d{2}$/.test(cleaned)) {
+    const d = new Date(cleaned);
+    if (!isNaN(d.getTime())) return cleaned;
+  }
+  // Match DD-MM-YYYY or DD/MM/YYYY
+  const dmyMatch = cleaned.match(/^(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})$/);
+  if (dmyMatch) {
+    const day = dmyMatch[1].padStart(2, "0");
+    const month = dmyMatch[2].padStart(2, "0");
+    const year = dmyMatch[3];
+    const iso = `${year}-${month}-${day}`;
+    const d = new Date(iso);
+    if (!isNaN(d.getTime())) return iso;
+  }
+  // Match YYYY/MM/DD
+  const ymdMatch = cleaned.match(/^(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})$/);
+  if (ymdMatch) {
+    const year = ymdMatch[1];
+    const month = ymdMatch[2].padStart(2, "0");
+    const day = ymdMatch[3].padStart(2, "0");
+    const iso = `${year}-${month}-${day}`;
+    const d = new Date(iso);
+    if (!isNaN(d.getTime())) return iso;
+  }
+  const d = new Date(cleaned);
+  if (!isNaN(d.getTime())) {
+    return d.toISOString().split("T")[0];
+  }
+  return null;
 }
 
 export async function POST(request) {
@@ -30,8 +59,13 @@ export async function POST(request) {
     // Extract and sanitize inputs
     const name = sanitizeString(body.name || "");
     rollNo = sanitizeString(body.rollNo || "").toUpperCase();
-    const dob = sanitizeString(body.dob || "");
+    const rawDob = sanitizeString(body.dob || "");
     const language = body.language === "Tamil" ? "Tamil" : "English";
+
+    // Auto-generate roll number if omitted
+    if (!rollNo) {
+      rollNo = `TN2026-${Math.floor(1000 + Math.random() * 9000)}`;
+    }
 
     // --- Input Validation ---
     if (!name || name.length < 2 || name.length > 100) {
@@ -62,35 +96,17 @@ export async function POST(request) {
       );
     }
 
-    if (!isValidDate(dob)) {
+    const dob = normalizeDate(rawDob);
+    if (!dob) {
       await createIncident({
         route: "/api/auth/register",
         rollNo: rollNo,
         step: "registration_validation",
-        message: `Candidate registration failed for ${rollNo}: Invalid date of birth ("${dob}"). Format must be YYYY-MM-DD.`,
+        message: `Candidate registration failed for ${rollNo}: Invalid date of birth ("${rawDob}").`,
       }).catch(() => {});
 
       return NextResponse.json(
-        { error: "Invalid date of birth. Please use YYYY-MM-DD format." },
-        { status: 400 }
-      );
-    }
-
-    // Age check: must be between 10 and 25 years
-    const dobDate = new Date(dob);
-    const today = new Date();
-    const ageMs = today - dobDate;
-    const ageYears = ageMs / (1000 * 60 * 60 * 24 * 365.25);
-    if (ageYears < 10 || ageYears > 25) {
-      await createIncident({
-        route: "/api/auth/register",
-        rollNo: rollNo,
-        step: "registration_validation",
-        message: `Candidate registration failed for ${rollNo}: Age out of bounds (${ageYears.toFixed(1)} years). Required: 10-25 years.`,
-      }).catch(() => {});
-
-      return NextResponse.json(
-        { error: "Date of birth does not meet age requirements (10–25 years)." },
+        { error: "Invalid date of birth. Please enter a valid date (e.g. 2008-05-15 or 15-05-2008)." },
         { status: 400 }
       );
     }
@@ -108,8 +124,13 @@ export async function POST(request) {
         message: `Candidate registration conflict: Roll number ${rollNo} is already registered.`,
       }).catch(() => {});
 
+      const suggestedRollNo = `TN2026-${Math.floor(1000 + Math.random() * 9000)}`;
       return NextResponse.json(
-        { error: "This Roll Number is already registered. Please sign in or contact the COE if you believe this is an error." },
+        {
+          error: `Roll Number "${rollNo}" is already registered. Please sign in or use a different roll number (e.g. ${suggestedRollNo}).`,
+          isDuplicate: true,
+          suggestedRollNo
+        },
         { status: 409 }
       );
     }

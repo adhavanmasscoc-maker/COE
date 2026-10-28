@@ -98,6 +98,13 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!name || name.trim().length === 0) {
+      setError("Please enter your Full Name.");
+      return;
+    }
+    const finalRollNo = (rollNo && rollNo.trim().length >= 4) ? rollNo.trim() : `TN2026-${Math.floor(1000 + Math.random() * 9000)}`;
+    const finalDob = (dob && dob.trim().length > 0) ? dob.trim() : (examPrepClass === "12" ? "2008-05-15" : "2010-05-15");
+    
     if (selectedSubjects.length === 0) {
       setError("Please select at least 1 subject for your syllabus.");
       return;
@@ -109,9 +116,9 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name,
-          rollNo,
-          dob,
+          name: name.trim(),
+          rollNo: finalRollNo,
+          dob: finalDob,
           language,
           currentClass: parseInt(currentClass, 10),
           examPrepClass: parseInt(examPrepClass, 10),
@@ -119,10 +126,16 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
         }),
       });
       const data = await res.json();
-      if (!res.ok) { setError(data.error || "Registration failed."); setLoading(false); return; }
+      if (!res.ok) {
+        setError(data.error || "Registration failed.");
+        setLoading(false);
+        return;
+      }
+      setRollNo(finalRollNo);
+      setDob(finalDob);
       setDone(true);
     } catch {
-      setError("Network error. Try again.");
+      setError("Network error contacting registration server. Please try again.");
       setLoading(false);
     }
   };
@@ -138,33 +151,95 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
       </div>
 
       {error && (
-        <div className="flex items-start gap-2 p-3 rounded-xl bg-rose-500/10 border border-rose-500/25 text-xs text-rose-300">
-          <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" /><span>{error}</span>
+        <div className="flex items-start gap-2 p-3 rounded-xl bg-rose-500/15 border border-rose-500/35 text-xs text-rose-300 animate-shake">
+          <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-rose-400" />
+          <div className="flex-1">
+            <span className="font-semibold">{error}</span>
+            {error.includes("already registered") && (
+              <button
+                type="button"
+                onClick={onBack}
+                className="block mt-1 text-xs text-amber-300 underline font-bold"
+              >
+                Sign in with this Roll Number & DOB →
+              </button>
+            )}
+          </div>
         </div>
       )}
 
-      {[
-        { id: "reg-name", label: "Full Name", type: "text", value: name, set: setName, icon: User, placeholder: "e.g. Adhavan S" },
-        { id: "reg-roll", label: "Roll Number (4–16 Characters)", type: "text", value: rollNo, set: (v) => setRollNo(v.toUpperCase()), icon: Hash, placeholder: "e.g. TN2026-0901, 1001, or ADHA2026", mono: true, minLength: 4, maxLength: 16 },
-        { id: "reg-dob", label: "Date of Birth (YYYY-MM-DD)", type: "date", value: dob, set: setDob, icon: Calendar, mono: true },
-      ].map(({ id, label, type, value, set, icon: Icon, placeholder, mono, minLength, maxLength }) => (
-        <div key={id}>
-          <label htmlFor={id} className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1">
-            <Icon className="w-3.5 h-3.5 text-violet-400" />{label}
+      {/* Full Name */}
+      <div>
+        <label htmlFor="reg-name" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1">
+          <User className="w-3.5 h-3.5 text-violet-400" /> Full Name
+        </label>
+        <input
+          id="reg-name"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          placeholder="e.g. Adhavan S or Vikram"
+          className="input-field text-xs"
+        />
+      </div>
+
+      {/* Roll Number with Auto-Generate */}
+      <div>
+        <div className="flex items-center justify-between mb-1">
+          <label htmlFor="reg-roll" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0]">
+            <Hash className="w-3.5 h-3.5 text-violet-400" /> Roll Number
           </label>
-          <input
-            id={id}
-            type={type}
-            value={value}
-            onChange={(e) => set(e.target.value)}
-            required
-            minLength={minLength}
-            maxLength={maxLength}
-            placeholder={placeholder}
-            className={`input-field ${mono ? "font-mono text-xs" : "text-xs"}`}
-          />
+          <button
+            type="button"
+            onClick={() => setRollNo(`TN2026-${Math.floor(1000 + Math.random() * 9000)}`)}
+            className="text-[10.5px] text-violet-400 hover:text-violet-300 font-bold underline cursor-pointer"
+          >
+            Auto-Generate Roll No
+          </button>
         </div>
-      ))}
+        <input
+          id="reg-roll"
+          type="text"
+          value={rollNo}
+          onChange={(e) => setRollNo(e.target.value.toUpperCase())}
+          placeholder="e.g. TN2026-0901, 1001, or ADHA2026"
+          className="input-field font-mono text-xs"
+        />
+      </div>
+
+      {/* Date of Birth with Quick Helpers */}
+      <div>
+        <div className="flex items-center justify-between mb-1">
+          <label htmlFor="reg-dob" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0]">
+            <Calendar className="w-3.5 h-3.5 text-violet-400" /> Date of Birth (YYYY-MM-DD)
+          </label>
+        </div>
+        <input
+          id="reg-dob"
+          type="date"
+          value={dob}
+          onChange={(e) => setDob(e.target.value)}
+          className="input-field font-mono text-xs"
+        />
+        <div className="flex flex-wrap items-center gap-1.5 mt-1.5 text-[10px]">
+          <span className="text-[#5c5c8a]">Quick presets:</span>
+          <button
+            type="button"
+            onClick={() => setDob("2008-05-15")}
+            className="px-2 py-0.5 rounded-lg bg-violet-500/15 border border-violet-500/30 text-violet-300 hover:bg-violet-500/25 transition-all font-mono"
+          >
+            2008-05-15 (Class 12)
+          </button>
+          <button
+            type="button"
+            onClick={() => setDob("2010-05-15")}
+            className="px-2 py-0.5 rounded-lg bg-violet-500/15 border border-violet-500/30 text-violet-300 hover:bg-violet-500/25 transition-all font-mono"
+          >
+            2010-05-15 (Class 10)
+          </button>
+        </div>
+      </div>
 
       {/* Class Level Pickers: 1 to 12 */}
       <div className="grid grid-cols-2 gap-3">
@@ -271,9 +346,23 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
         </div>
       </div>
 
-      <p className="text-[10px] text-[#5c5c8a] flex items-center gap-1">
-        <Lock className="w-3 h-3 text-emerald-400 flex-shrink-0" /> Encrypted credential storage via salted bcrypt
-      </p>
+      {error && (
+        <div className="flex items-start gap-2 p-3.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-xs text-rose-200 animate-shake shadow-lg shadow-rose-500/10">
+          <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-rose-400" />
+          <div className="flex-1">
+            <span className="font-semibold">{error}</span>
+            {error.includes("already registered") && (
+              <button
+                type="button"
+                onClick={onBack}
+                className="block mt-1.5 text-xs text-amber-300 underline font-bold"
+              >
+                Sign in with this Roll Number &amp; DOB →
+              </button>
+            )}
+          </div>
+        </div>
+      )}
 
       <Button type="submit" disabled={loading} className="w-full justify-center !py-2.5">
         {loading ? <><Loader2 className="w-4 h-4 animate-spin" /> Submitting…</> : <>Submit Registration <ArrowRight className="w-4 h-4" /></>}
