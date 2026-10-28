@@ -274,7 +274,7 @@ function ExamHallContent() {
     );
   }
 
-  // Submitted Receipt View
+  // Submitted Receipt View (Strict Lock: Retakes are strictly prohibited on official exams)
   if (submittedData) {
     return (
       <div className="min-h-screen flex items-center justify-center p-4 bg-background">
@@ -283,12 +283,26 @@ function ExamHallContent() {
             <CheckCircle2 className="w-10 h-10 text-emerald-400" />
           </div>
 
-          <Badge variant="success" className="mb-2">Official Examination Sealed</Badge>
-          <h2 className="text-2xl font-black text-foreground mb-2">Responses Recorded Successfully!</h2>
-          <p className="text-xs text-muted-foreground mb-6">
-            Your answer script has been officially time-stamped and encrypted in SQLite.
-            The Controller of Examinations will publish the final verified marksheet.
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Badge variant="success">Official Examination Sealed</Badge>
+            <Badge variant="danger" className="text-[10px] font-mono">Retakes Strictly Prohibited</Badge>
+          </div>
+
+          <h2 className="text-2xl font-black text-foreground mb-2">Responses Encrypted & Sealed!</h2>
+          <p className="text-xs text-muted-foreground mb-4">
+            Your candidate question paper and submitted answers have been cryptographically sealed (AES-256-CBC) into the Controller of Examinations SQLite vault.
           </p>
+
+          {/* Strict Board Policy Notice */}
+          <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs text-left mb-6 space-y-1">
+            <div className="flex items-center gap-1.5 font-bold">
+              <ShieldAlert className="w-4 h-4 text-amber-400 flex-shrink-0" />
+              <span>Official Examination Lock Policy</span>
+            </div>
+            <p className="text-[11px] text-[#a8a8d0] leading-relaxed">
+              Official board examinations cannot be retaken once submitted. Your preliminary responses are permanently locked for COE moderation and final results release. Unlimited instant retakes are permitted exclusively inside the <strong>Syllabus Practice Section</strong>.
+            </p>
+          </div>
 
           <div className="bg-secondary/60 rounded-2xl p-4 text-left text-xs space-y-2.5 mb-6 border border-border">
             <div className="flex justify-between pb-2 border-b border-border font-medium">
@@ -317,11 +331,20 @@ function ExamHallContent() {
                 {new Date(submittedData.submittedAt || Date.now()).toLocaleTimeString("en-IN")}
               </span>
             </div>
+            <div className="flex justify-between pt-2 border-t border-border">
+              <span className="text-muted-foreground">Encryption Status:</span>
+              <span className="font-mono text-[10px] text-emerald-400 font-bold">AES-256-CBC • SHA-256 HMAC Sealed</span>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
             <Link href="/student/dashboard" className="flex-1">
-              <Button className="w-full justify-center">Return to Dashboard</Button>
+              <Button variant="outline" className="w-full justify-center text-xs">Return to Dashboard</Button>
+            </Link>
+            <Link href="/student/syllabus" className="flex-1">
+              <Button variant="primary" className="w-full justify-center text-xs font-bold gap-1.5">
+                <Sparkles className="w-3.5 h-3.5" /> Practice Section (Retakes Open)
+              </Button>
             </Link>
           </div>
         </Card>

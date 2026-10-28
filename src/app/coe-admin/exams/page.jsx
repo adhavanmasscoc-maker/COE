@@ -23,8 +23,10 @@ import {
   Layers,
   Sparkles,
   ChevronRight,
-  X
+  X,
+  Activity
 } from "lucide-react";
+import { ExamLifecycleStepper, calculateExamPhase } from "@/components/admin/ExamLifecycleStepper";
 
 function COEAdminExamsContent() {
   const searchParams = useSearchParams();
@@ -39,6 +41,7 @@ function COEAdminExamsContent() {
   // Modals
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showQuestionsModal, setShowQuestionsModal] = useState(false);
+  const [lifecycleExamModal, setLifecycleExamModal] = useState(null);
   const [activeExam, setActiveExam] = useState(null);
   const [examDetail, setExamDetail] = useState(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
@@ -391,6 +394,7 @@ function COEAdminExamsContent() {
                 <th className="py-3 px-4">Duration</th>
                 <th className="py-3 px-4">Questions</th>
                 <th className="py-3 px-4">Submissions</th>
+                <th className="py-3 px-4">10-Phase Lifecycle</th>
                 <th className="py-3 px-4">Portal Status</th>
                 <th className="py-3 px-4 text-right">Actions</th>
               </tr>
@@ -398,14 +402,14 @@ function COEAdminExamsContent() {
             <tbody className="divide-y divide-border">
               {loading ? (
                 <tr>
-                  <td colSpan={8} className="py-8 text-center text-muted-foreground">
+                  <td colSpan={9} className="py-8 text-center text-muted-foreground">
                     <Loader2 className="w-6 h-6 animate-spin mx-auto mb-2 text-amber-400" />
                     Loading exam schedules...
                   </td>
                 </tr>
               ) : exams.filter(e => statusFilter === "ALL" || e.status === statusFilter).length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="py-8 text-center text-muted-foreground">
+                  <td colSpan={9} className="py-8 text-center text-muted-foreground">
                     No examination schedules found for selected filter. Click &quot;Create Exam Schedule&quot; above to schedule one.
                   </td>
                 </tr>
@@ -462,6 +466,18 @@ function COEAdminExamsContent() {
                       ) : (
                         <span className="text-muted-foreground">0 Received</span>
                       )}
+                    </td>
+                    <td className="py-3 px-4">
+                      <div
+                        onClick={() => setLifecycleExamModal(exam)}
+                        className="cursor-pointer group p-1.5 rounded-xl hover:bg-violet-500/10 transition-all border border-transparent hover:border-violet-500/25"
+                        title="Click to view full 10-Phase Examination Lifecycle"
+                      >
+                        <ExamLifecycleStepper exam={exam} mode="compact" />
+                        <span className="text-[9px] text-[#5c5c8a] group-hover:text-violet-300 font-semibold flex items-center gap-0.5 mt-0.5">
+                          Inspect 10 Phases <ChevronRight className="w-2.5 h-2.5" />
+                        </span>
+                      </div>
                     </td>
                     <td className="py-3 px-4">
                       {exam.status === "PUBLISHED" ? (
@@ -730,6 +746,9 @@ function COEAdminExamsContent() {
                 </div>
               ) : (
                 <>
+                  {/* Full 10-Phase Examination Lifecycle Stepper */}
+                  <ExamLifecycleStepper exam={examDetail || activeExam} mode="full" />
+
                   {/* Candidate Submissions Section if any exist */}
                   {examDetail?.submissions && examDetail.submissions.length > 0 && (
                     <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
@@ -969,6 +988,59 @@ function COEAdminExamsContent() {
                 onClick={() => setShowQuestionsModal(false)}
               >
                 Close Paper Manager
+              </Button>
+            </div>
+          </Card>
+        </div>
+      )}
+
+      {/* Dedicated 10-Phase Lifecycle Details Modal */}
+      {lifecycleExamModal && (
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+          <Card className="max-w-4xl w-full p-6 border-violet-500/30 animate-in fade-in-50 zoom-in-95 space-y-5">
+            <div className="flex items-center justify-between pb-3 border-b border-border">
+              <div>
+                <div className="flex items-center gap-2">
+                  <h3 className="text-lg font-black text-foreground">
+                    {lifecycleExamModal.subject?.name} ({lifecycleExamModal.subject?.code})
+                  </h3>
+                  <Badge variant="purple">Class {lifecycleExamModal.prepClass}</Badge>
+                  <Badge variant={lifecycleExamModal.status === "PUBLISHED" ? "success" : "secondary"}>
+                    {lifecycleExamModal.status}
+                  </Badge>
+                </div>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Full 10-Phase End-to-End Board Examination Pipeline & Real-Time Surveillance
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setLifecycleExamModal(null)}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Full 10-Phase Stepper */}
+            <ExamLifecycleStepper exam={lifecycleExamModal} mode="full" />
+
+            <div className="pt-2 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div className="text-xs text-[#a8a8d0] flex items-center gap-1.5">
+                <Info className="w-4 h-4 text-violet-400 flex-shrink-0" />
+                <span>Phases advance automatically as questions are set, exams published, candidate responses collected, and results released.</span>
+              </div>
+              <Button
+                size="sm"
+                variant="primary"
+                onClick={() => {
+                  const target = lifecycleExamModal;
+                  setLifecycleExamModal(null);
+                  openQuestionsModal(target);
+                }}
+                className="text-xs font-bold whitespace-nowrap"
+              >
+                Manage Questions & Paper
               </Button>
             </div>
           </Card>

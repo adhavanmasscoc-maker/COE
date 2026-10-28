@@ -12,6 +12,7 @@ import {
   Layers, Bell, BarChart3, ClipboardList, UserCheck, Clock, FileJson,
   Activity, Smartphone
 } from "lucide-react";
+import { ExamLifecycleStepper } from "@/components/admin/ExamLifecycleStepper";
 
 export default function COEAdminDashboardPage() {
   const [students, setStudents]   = useState([]);
@@ -339,6 +340,7 @@ export default function COEAdminDashboardPage() {
                     <th>Exam Date</th>
                     <th>Duration & Marks</th>
                     <th>Questions</th>
+                    <th>10-Phase Lifecycle</th>
                     <th>Status</th>
                     <th className="text-right">Actions</th>
                   </tr>
@@ -358,6 +360,11 @@ export default function COEAdminDashboardPage() {
                       </td>
                       <td className="text-xs">{exam.durationMinutes}m · {exam.totalMarks}M</td>
                       <td className="font-bold text-[#f0f0ff] text-xs">{exam._count?.questions || 0}</td>
+                      <td>
+                        <Link href="/coe-admin/exams" className="block hover:opacity-80 transition-opacity" title="Open 10-Phase Exam Engine">
+                          <ExamLifecycleStepper exam={exam} mode="compact" />
+                        </Link>
+                      </td>
                       <td>
                         {exam.status === "PUBLISHED"
                           ? <span className="badge badge-emerald">Live</span>

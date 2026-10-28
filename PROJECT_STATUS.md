@@ -4,9 +4,10 @@
 - **System**: Personal School Examination & Learning Portal
 - **Controller of Examinations (COE)**: Admin User (Username & Password authentication)
 - **Students**:
-  - **Student A (Brother)**: Current Class: 9 | Exam Preparation Level: Class 10 (TN Samacheer Kalvi)
-  - **Student B (Sister)**: Current Class: 11 | Exam Preparation Level: Class 12 (TN Samacheer Kalvi)
-- **Primary Goals**: Dynamic syllabus explorer, PYQ & worked solutions library, COE exam scheduling engine, distraction-free test interface, and live result publishing.
+  - **Student A (Adhavan S)**: Roll No: `TN2026-0901` | Current Class: 9 | Exam Preparation Level: Class 10 (TN Samacheer Kalvi)
+  - **Student B (Nithya S)**: Roll No: `TN2026-1102` | Current Class: 11 | Exam Preparation Level: Class 12 (TN Samacheer Kalvi)
+  - **Preview Candidate (Kavin Kumar)**: Roll No: `TN2026-0900` | Sample Candidate Profile
+- **Primary Goals**: Dynamic syllabus explorer, PYQ & worked solutions library, 10-phase COE exam lifecycle engine, distraction-free test interface, encrypted exam submissions, and live result publishing.
 - **Environment**: Localhost (accessible via laptop and mobile on local network).
 
 ---
@@ -52,6 +53,6 @@
     - Detailed evaluation table: Subject, code, max marks, marks scored, percentage progress bar, grade badge, and certified COE remarks.
     - Print-friendly layout for physical archiving.
   - **Class Isolation Audit**:
-    - Brother (`TN2026-0901`) sees his published Class 10 Mathematics evaluation (95/100, Grade A+).
-    - Sister (`TN2026-1102`) receives 0 of Brother's results, ensuring strict candidate segregation.
+    - Student A (`TN2026-0901`, Adhavan S) sees his published Class 10 Mathematics evaluation (95/100, Grade A+).
+    - Student B (`TN2026-1102`, Nithya S) receives 0 of Student A's results, ensuring strict candidate segregation.
   - End-to-end browser subagent verification completed with recording at `phase8_results_verification_1793032392553.webp` and screenshot at `brother_mathematics_marksheet_1793032665618.png`.

@@ -67,37 +67,37 @@ export async function GET() {
     const notices = await db.notice.findMany();
 
     // 6. Security & Data Isolation Audit Verification
-    const brother = students.find((s) => s.currentClass === 9);
-    const sister = students.find((s) => s.currentClass === 11);
+    const studentA = students.find((s) => s.currentClass === 9);
+    const studentB = students.find((s) => s.currentClass === 11);
 
     const isolationVerified =
-      brother &&
-      sister &&
-      brother.examPrepClass === 10 &&
-      sister.examPrepClass === 12 &&
-      brother.subjects.every((s) => s.subject.prepClass === 10) &&
-      sister.subjects.every((s) => s.subject.prepClass === 12);
+      studentA &&
+      studentB &&
+      studentA.examPrepClass === 10 &&
+      studentB.examPrepClass === 12 &&
+      studentA.subjects.every((s) => s.subject.prepClass === 10) &&
+      studentB.subjects.every((s) => s.subject.prepClass === 12);
 
     return NextResponse.json({
       status: "success",
       database: "SQLite (dev.db)",
       dataIsolation: {
         status: isolationVerified ? "VERIFIED_ISOLATED" : "CHECK_FAILED",
-        brother: {
-          name: brother?.fullName,
-          rollNo: brother?.user?.username,
-          currentSchoolClass: brother?.currentClass,
-          examPrepClass: brother?.examPrepClass,
-          assignedSubjectsCount: brother?.subjects.length,
-          subjects: brother?.subjects.map((s) => `${s.subject.name} (${s.subject.code})`),
+        studentA: {
+          name: studentA?.fullName,
+          rollNo: studentA?.user?.username,
+          currentSchoolClass: studentA?.currentClass,
+          examPrepClass: studentA?.examPrepClass,
+          assignedSubjectsCount: studentA?.subjects.length,
+          subjects: studentA?.subjects.map((s) => `${s.subject.name} (${s.subject.code})`),
         },
-        sister: {
-          name: sister?.fullName,
-          rollNo: sister?.user?.username,
-          currentSchoolClass: sister?.currentClass,
-          examPrepClass: sister?.examPrepClass,
-          assignedSubjectsCount: sister?.subjects.length,
-          subjects: sister?.subjects.map((s) => `${s.subject.name} (${s.subject.code})`),
+        studentB: {
+          name: studentB?.fullName,
+          rollNo: studentB?.user?.username,
+          currentSchoolClass: studentB?.currentClass,
+          examPrepClass: studentB?.examPrepClass,
+          assignedSubjectsCount: studentB?.subjects.length,
+          subjects: studentB?.subjects.map((s) => `${s.subject.name} (${s.subject.code})`),
         },
       },
       counts: {

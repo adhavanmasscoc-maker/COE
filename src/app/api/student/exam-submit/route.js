@@ -4,6 +4,8 @@ import { db } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
+import { encryptSubmissionPayload } from "@/lib/encryption";
+
 // POST /api/student/exam-submit: Record student exam submission
 export async function POST(request) {
   try {
@@ -41,7 +43,7 @@ export async function POST(request) {
     const exam = await db.examSchedule.findUnique({
       where: { id: examId },
       include: {
-        questions: true,
+        questions: { orderBy: { questionNumber: "asc" } },
         subject: { select: { name: true, code: true } },
       },
     });
@@ -58,6 +60,30 @@ export async function POST(request) {
       );
     }
 
+    // STRICT NO-RETAKE RULE FOR OFFICIAL EXAMINATIONS:
+    // Retakes are strictly prohibited on official board exams once submitted.
+    // (Retakes are permitted only for practice-based tests in the Syllabus Section)
+    const existingSubmission = await db.examSubmission.findUnique({
+      where: {
+        examScheduleId_studentId: {
+          examScheduleId: exam.id,
+          studentId: studentProfile.id,
+        },
+      },
+    });
+
+    if (existingSubmission && existingSubmission.isSubmitted) {
+      return NextResponse.json(
+        {
+          error: "Official Board Examination already submitted. Retakes are strictly prohibited for official board exams.",
+          isSubmitted: true,
+          submittedAt: existingSubmission.submittedAt,
+          isLocked: true,
+        },
+        { status: 403 }
+      );
+    }
+
     // Auto-calculate objective score
     let calculatedScore = 0;
     let totalExamMarks = 0;
@@ -70,28 +96,43 @@ export async function POST(request) {
       }
     });
 
-    const answersJsonStr = JSON.stringify(answeredMap);
     const timeSpent = timeTakenSecs ? parseInt(timeTakenSecs, 10) : 0;
 
-    // Save or update submission in SQLite
-    const submission = await db.examSubmission.upsert({
-      where: {
-        examScheduleId_studentId: {
-          examScheduleId: exam.id,
-          studentId: studentProfile.id,
-        },
-      },
-      create: {
+    // Encrypt all questions & student answers in minimal encrypted format (AES-256 + HMAC)
+    const auditPayload = {
+      version: "1.0",
+      candidateRollNo: studentProfile.user.username,
+      candidateName: studentProfile.fullName,
+      examId: exam.id,
+      subject: exam.subject.name,
+      code: exam.subject.code,
+      prepClass: exam.prepClass,
+      submittedAt: new Date().toISOString(),
+      timeTakenSecs: timeSpent,
+      totalQuestions: exam.questions.length,
+      answeredCount: Object.keys(answeredMap).length,
+      calculatedScore,
+      totalMarks: totalExamMarks || exam.totalMarks,
+      rawAnswers: answeredMap,
+      questionsWithAnswers: exam.questions.map((q) => ({
+        questionId: q.id,
+        questionNumber: q.questionNumber,
+        questionText: q.questionText,
+        marks: q.marks,
+        candidateAnswer: answeredMap[q.id] || null,
+        correctAnswer: q.correctAnswer || null,
+        isCorrect: q.correctAnswer ? answeredMap[q.id] === q.correctAnswer : null,
+      })),
+    };
+
+    const encryptedAnswersJson = encryptSubmissionPayload(auditPayload);
+
+    // Save submission permanently in SQLite
+    const submission = await db.examSubmission.create({
+      data: {
         examScheduleId: exam.id,
         studentId: studentProfile.id,
-        answersJson: answersJsonStr,
-        timeTakenSecs: timeSpent,
-        score: calculatedScore,
-        isSubmitted: true,
-        submittedAt: new Date(),
-      },
-      update: {
-        answersJson: answersJsonStr,
+        answersJson: encryptedAnswersJson,
         timeTakenSecs: timeSpent,
         score: calculatedScore,
         isSubmitted: true,

@@ -20,7 +20,7 @@ async function seedActivityLogs() {
     {
       studentId: sister?.id || null,
       rollNo: "TN2026-1102",
-      studentName: sister?.fullName || "Nithya (Sister)",
+      studentName: sister?.fullName || "Nithya S",
       dob: "2009-08-22",
       ipAddress: "157.48.192.45",
       deviceType: "📱 Mobile (Android Mobile / Chrome)",
@@ -37,7 +37,7 @@ async function seedActivityLogs() {
     {
       studentId: sister?.id || null,
       rollNo: "TN2026-1102",
-      studentName: sister?.fullName || "Nithya (Sister)",
+      studentName: sister?.fullName || "Nithya S",
       dob: "2009-08-22",
       ipAddress: "157.48.192.45",
       deviceType: "📱 Mobile (Android Mobile / Chrome)",
@@ -53,7 +53,7 @@ async function seedActivityLogs() {
     {
       studentId: sister?.id || null,
       rollNo: "TN2026-1102",
-      studentName: sister?.fullName || "Nithya (Sister)",
+      studentName: sister?.fullName || "Nithya S",
       dob: "2009-08-22",
       ipAddress: "157.48.192.45",
       deviceType: "📱 Mobile (Android Mobile / Chrome)",
@@ -69,7 +69,7 @@ async function seedActivityLogs() {
     {
       studentId: sister?.id || null,
       rollNo: "TN2026-1102",
-      studentName: sister?.fullName || "Nithya (Sister)",
+      studentName: sister?.fullName || "Nithya S",
       dob: "2009-08-22",
       ipAddress: "157.48.192.45",
       deviceType: "📱 Mobile (Android Mobile / Chrome)",
@@ -85,7 +85,7 @@ async function seedActivityLogs() {
     {
       studentId: sister?.id || null,
       rollNo: "TN2026-1102",
-      studentName: sister?.fullName || "Nithya (Sister)",
+      studentName: sister?.fullName || "Nithya S",
       dob: "2009-08-22",
       ipAddress: "157.48.192.45",
       deviceType: "📱 Mobile (Android Mobile / Chrome)",
@@ -104,7 +104,7 @@ async function seedActivityLogs() {
     {
       studentId: brother?.id || null,
       rollNo: "TN2026-0901",
-      studentName: brother?.fullName || "Adhavan (Brother)",
+      studentName: brother?.fullName || "Adhavan S",
       dob: "2011-05-14",
       ipAddress: "49.37.201.88",
       deviceType: "📱 Mobile (iOS (iPhone) / Safari)",
@@ -121,7 +121,7 @@ async function seedActivityLogs() {
     {
       studentId: brother?.id || null,
       rollNo: "TN2026-0901",
-      studentName: brother?.fullName || "Adhavan (Brother)",
+      studentName: brother?.fullName || "Adhavan S",
       dob: "2011-05-14",
       ipAddress: "49.37.201.88",
       deviceType: "📱 Mobile (iOS (iPhone) / Safari)",
@@ -137,7 +137,7 @@ async function seedActivityLogs() {
     {
       studentId: brother?.id || null,
       rollNo: "TN2026-0901",
-      studentName: brother?.fullName || "Adhavan (Brother)",
+      studentName: brother?.fullName || "Adhavan S",
       dob: "2011-05-14",
       ipAddress: "49.37.201.88",
       deviceType: "📱 Mobile (iOS (iPhone) / Safari)",
@@ -153,7 +153,7 @@ async function seedActivityLogs() {
     {
       studentId: brother?.id || null,
       rollNo: "TN2026-0901",
-      studentName: brother?.fullName || "Adhavan (Brother)",
+      studentName: brother?.fullName || "Adhavan S",
       dob: "2011-05-14",
       ipAddress: "49.37.201.88",
       deviceType: "📱 Mobile (iOS (iPhone) / Safari)",

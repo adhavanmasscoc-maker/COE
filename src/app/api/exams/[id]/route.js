@@ -4,6 +4,8 @@ import { db } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
+import { decryptSubmissionPayload } from "@/lib/encryption";
+
 // GET /api/exams/[id]: Fetch exam hall data with anti-cheat sanitization
 export async function GET(request, { params }) {
   try {
@@ -104,12 +106,15 @@ export async function GET(request, { params }) {
       });
 
       if (submission) {
-        let parsedAnswers = {};
+        let decrypted = null;
         try {
-          parsedAnswers = JSON.parse(submission.answersJson);
+          decrypted = decryptSubmissionPayload(submission.answersJson);
         } catch (e) {
-          parsedAnswers = {};
+          decrypted = null;
         }
+
+        const parsedAnswers = decrypted?.rawAnswers || decrypted || {};
+
         submissionRecord = {
           id: submission.id,
           isSubmitted: submission.isSubmitted,
@@ -117,6 +122,11 @@ export async function GET(request, { params }) {
           timeTakenSecs: submission.timeTakenSecs,
           score: submission.score,
           answers: parsedAnswers,
+          isLocked: true, // Official board exams are locked forever once submitted
+          auditDetails: decrypted?.questionsWithAnswers ? {
+            totalQuestions: decrypted.totalQuestions,
+            answeredCount: decrypted.answeredCount,
+          } : null,
         };
       }
     }

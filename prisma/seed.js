@@ -38,7 +38,7 @@ async function main() {
   });
   console.log(`✅ COE Administrator created: ${adminUser.username} (password: 1)`);
 
-  // 4. Create Student A (Brother)
+  // 4. Create Student A (Adhavan S - Class 10 Prep)
   const brotherUser = await prisma.user.create({
     data: {
       username: "TN2026-0901",
@@ -46,7 +46,7 @@ async function main() {
       role: "STUDENT",
       profile: {
         create: {
-          fullName: "Adhavan (Brother)",
+          fullName: "Adhavan S",
           currentClass: 9,
           examPrepClass: 10,
           board: "Tamil Nadu Samacheer Kalvi",
@@ -57,9 +57,9 @@ async function main() {
     },
     include: { profile: true },
   });
-  console.log(`✅ Brother created: ${brotherUser.username} | School Grade: 9 -> Prep Standard: 10`);
+  console.log(`✅ Student A created: ${brotherUser.username} (Adhavan S) | School Grade: 9 -> Prep Standard: 10`);
 
-  // 5. Create Student B (Sister)
+  // 5. Create Student B (Nithya S - Class 12 Prep)
   const sisterUser = await prisma.user.create({
     data: {
       username: "TN2026-1102",
@@ -67,7 +67,7 @@ async function main() {
       role: "STUDENT",
       profile: {
         create: {
-          fullName: "Nithya (Sister)",
+          fullName: "Nithya S",
           currentClass: 11,
           examPrepClass: 12,
           board: "Tamil Nadu Samacheer Kalvi",
@@ -78,7 +78,7 @@ async function main() {
     },
     include: { profile: true },
   });
-  console.log(`✅ Sister created: ${sisterUser.username} | School Grade: 11 -> Prep Standard: 12`);
+  console.log(`✅ Student B created: ${sisterUser.username} (Nithya S) | School Grade: 11 -> Prep Standard: 12`);
 
   // 5b. Create Candidate TN2026-0900 for Dashboard Previews
   const sampleDobHash = await bcrypt.hash("2011-01-10", saltRounds);
@@ -463,14 +463,7 @@ async function main() {
   }
   console.log("✅ Seeded Official Examination Schedules including Computer Science (CSC-12).");
 
-  try {
-    const { seedActivityLogs } = require("../scripts/seed_activity_logs");
-    if (typeof seedActivityLogs === "function") {
-      await seedActivityLogs();
-    }
-  } catch (err) {
-    console.log("Auto-seed error on telemetry logs:", err.message);
-  }
+  console.log("✅ Pure Real Telemetry Active: Synthetic mock telemetry removed. Telemetry records strictly stream from real candidate sessions.");
 
   // 12. Seed Official COE Notices & Proctoring Guidelines
   await prisma.notice.createMany({

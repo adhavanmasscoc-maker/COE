@@ -69,7 +69,7 @@ async function runAudit() {
   // -------------------------------------------------------------------
   console.log("▶ TEST SUITE 1: Database Credential Storage & Cryptographic Hashing");
   const users = await prisma.user.findMany();
-  assert(users.length >= 3, "Database contains seeded accounts (COE Admin, Brother, Sister)");
+  assert(users.length >= 3, "Database contains seeded accounts (COE Admin, Student A Adhavan S, Student B Nithya S)");
 
   users.forEach((u) => {
     const isBcrypt = u.passwordHash.startsWith("$2a$") || u.passwordHash.startsWith("$2b$");
@@ -205,79 +205,79 @@ async function runAudit() {
   );
 
   // -------------------------------------------------------------------
-  // TEST SUITE 5: STRICT CROSS-CLASS DATA ISOLATION (BROTHER VS SISTER)
+  // TEST SUITE 5: STRICT CROSS-CLASS DATA ISOLATION (STUDENT A VS STUDENT B)
   // -------------------------------------------------------------------
   console.log("\n▶ TEST SUITE 5: Cross-Class Data Isolation (Class 10 vs Class 12)");
 
-  // 1. Brother dashboard query must ONLY return Class 10
+  // 1. Student A dashboard query must ONLY return Class 10
   const brotherDash = await makeRequest("/api/student/dashboard", {
     headers: { Cookie: brotherCookie },
   });
-  assert(brotherDash.status === 200, "Brother dashboard accessed");
+  assert(brotherDash.status === 200, "Student A dashboard accessed");
   assert(
     brotherDash.data.profile.examPrepClass === 10,
-    "Brother profile strictly isolated to Class 10 Samacheer syllabus",
+    "Student A profile strictly isolated to Class 10 Samacheer syllabus",
     `Class: ${brotherDash.data.profile.examPrepClass}`
   );
   const allSub10 = brotherDash.data.subjects.every((s) => s.prepClass === 10);
-  assert(allSub10, "All assigned subjects for Brother are strictly Class 10");
+  assert(allSub10, "All assigned subjects for Student A are strictly Class 10");
 
-  // 2. Sister dashboard query must ONLY return Class 12
+  // 2. Student B dashboard query must ONLY return Class 12
   const sisterDash = await makeRequest("/api/student/dashboard", {
     headers: { Cookie: sisterCookie },
   });
-  assert(sisterDash.status === 200, "Sister dashboard accessed");
+  assert(sisterDash.status === 200, "Student B dashboard accessed");
   assert(
     sisterDash.data.profile.examPrepClass === 12,
-    "Sister profile strictly isolated to Class 12 Samacheer syllabus",
+    "Student B profile strictly isolated to Class 12 Samacheer syllabus",
     `Class: ${sisterDash.data.profile.examPrepClass}`
   );
   const allSub12 = sisterDash.data.subjects.every((s) => s.prepClass === 12);
-  assert(allSub12, "All assigned subjects for Sister are strictly Class 12");
+  assert(allSub12, "All assigned subjects for Student B are strictly Class 12");
 
-  // 3. ID Tampering: Brother accessing Sister's Class 12 Physics exam hall
+  // 3. ID Tampering: Student A accessing Student B's Class 12 Physics exam hall
   if (phy12Exam) {
     const brotherTamperingPhy12 = await makeRequest(`/api/exams/${phy12Exam.id}`, {
       headers: { Cookie: brotherCookie },
     });
     assert(
       brotherTamperingPhy12.status === 403,
-      "Brother querying Class 12 Physics exam ID is BLOCKED with 403 Class Isolation Violation",
+      "Student A querying Class 12 Physics exam ID is BLOCKED with 403 Class Isolation Violation",
       `Status: ${brotherTamperingPhy12.status}, Error: ${brotherTamperingPhy12.data?.error}`
     );
   }
 
-  // 4. ID Tampering: Sister accessing Brother's Class 10 Math exam hall
+  // 4. ID Tampering: Student B accessing Student A's Class 10 Math exam hall
   if (math10Exam) {
     const sisterTamperingMath10 = await makeRequest(`/api/exams/${math10Exam.id}`, {
       headers: { Cookie: sisterCookie },
     });
     assert(
       sisterTamperingMath10.status === 403,
-      "Sister querying Class 10 Math exam ID is BLOCKED with 403 Class Isolation Violation",
+      "Student B querying Class 10 Math exam ID is BLOCKED with 403 Class Isolation Violation",
       `Status: ${sisterTamperingMath10.status}, Error: ${sisterTamperingMath10.data?.error}`
     );
   }
 
-  // 5. Results Isolation: Sister querying /api/student/results
+  // 5. Results Isolation: Student B querying /api/student/results
   const sisterResults = await makeRequest("/api/student/results", {
     headers: { Cookie: sisterCookie },
   });
-  assert(sisterResults.status === 200, "Sister results accessed");
+  assert(sisterResults.status === 200, "Student B results accessed");
   assert(
     sisterResults.data.results.length === 0,
-    "Sister results query contains 0 of Brother's published Class 10 marks (100% isolated)",
+    "Student B results query contains 0 of Student A's published Class 10 marks (100% isolated)",
     `Count: ${sisterResults.data.results.length}`
   );
 
-  // 6. Brother querying /api/student/results
+  // 6. Student A querying /api/student/results
   const brotherResults = await makeRequest("/api/student/results", {
     headers: { Cookie: brotherCookie },
   });
-  assert(brotherResults.status === 200, "Brother results accessed");
+  assert(brotherResults.status === 200, "Student A results accessed");
   assert(
     brotherResults.data.results.length >= 1,
-    "Brother results query successfully returns his published Mathematics marks",
+    "Student A results query successfully returns his published Mathematics marks",
     `Marks: ${brotherResults.data.results[0]?.marksObtained}/${brotherResults.data.results[0]?.maxMarks}`
   );
 
@@ -286,19 +286,18 @@ async function runAudit() {
   // -------------------------------------------------------------------
   console.log("\n▶ TEST SUITE 6: Anti-Cheat Question Payload Sanitization");
 
-  // When Brother queries an exam hall, verify correctAnswer and explanation are stripped
+  // When Student A queries an exam hall, verify correctAnswer and explanation are stripped
   if (math10Exam) {
-    const brotherExamHall = await makeRequest(`/api/exams/${math10Exam.id}`, {
+    const studentAExamHall = await makeRequest(`/api/exams/${math10Exam.id}`, {
       headers: { Cookie: brotherCookie },
     });
-    assert(brotherExamHall.status === 200, "Brother accessed active exam hall");
-    const questions = brotherExamHall.data.questions || [];
+    assert(studentAExamHall.status === 200, "Student A accessed active exam hall");
+    const questions = studentAExamHall.data.questions || [];
     assert(questions.length > 0, "Exam contains active questions");
 
-    // Since Brother has submitted this exam, let's verify another exam without submission
-    // or verify that a student taking a test cannot see correct answers
+    // Verify that an active test-taker cannot see correct answers
     const hasAnyLeak = questions.some(
-      (q) => q.correctAnswer !== undefined && !brotherExamHall.data.submission?.isSubmitted
+      (q) => q.correctAnswer !== undefined && !studentAExamHall.data.submission?.isSubmitted
     );
     assert(!hasAnyLeak, "Active exam questions payload strips 'correctAnswer' and 'explanation' for test-takers");
   }
