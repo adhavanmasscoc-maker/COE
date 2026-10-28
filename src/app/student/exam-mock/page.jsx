@@ -30,6 +30,7 @@ function ExamHallContent() {
   const router = useRouter();
   const urlExamId = searchParams.get("examId");
   const previewRollNo = searchParams.get("previewRollNo");
+  const urlMode = searchParams.get("mode");
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -46,6 +47,11 @@ function ExamHallContent() {
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submittedData, setSubmittedData] = useState(null);
+
+  // Virtual practice mode state (retake without affecting official evaluation)
+  const [isPracticeMode, setIsPracticeMode] = useState(urlMode === "practice");
+  const [officialSubmission, setOfficialSubmission] = useState(null);
+  const [practiceResult, setPracticeResult] = useState(null);
 
   // Live screen proctoring state
   const [isSharingScreen, setIsSharingScreen] = useState(false);
@@ -107,13 +113,21 @@ function ExamHallContent() {
 
         // Check if student already submitted
         if (data.submission && data.submission.isSubmitted) {
-          setSubmittedData({
+          const subInfo = {
             alreadySubmitted: true,
             submittedAt: data.submission.submittedAt,
             score: data.submission.score,
             totalMarks: data.exam.totalMarks,
             answers: data.submission.answers,
-          });
+          };
+          setOfficialSubmission(subInfo);
+
+          if (urlMode === "practice") {
+            setIsPracticeMode(true);
+            setSubmittedData(null);
+          } else {
+            setSubmittedData(subInfo);
+          }
         } else {
           // Restore saved local progress if exists
           try {
@@ -337,6 +351,9 @@ function ExamHallContent() {
       const nextQ = questions[currentIdx + 1];
       setVisited((prev) => ({ ...prev, [nextQ.id]: true }));
       setCurrentIdx(currentIdx + 1);
+    } else {
+      // Final question reached: directly open confirmation modal to prompt candidate to submit
+      setShowConfirmModal(true);
     }
   };
 
@@ -380,10 +397,40 @@ function ExamHallContent() {
     unanswered: questions.length - Object.keys(answers).length,
   };
 
+  // Practice mode local evaluation
+  const handlePracticeSubmit = () => {
+    let score = 0;
+    const breakdown = questions.map((q, idx) => {
+      const chosen = answers[q.id];
+      const isCorrect = Boolean(chosen && chosen === q.correctAnswer);
+      if (isCorrect) score += (q.marks || 1);
+      return {
+        ...q,
+        index: idx + 1,
+        chosen,
+        isCorrect,
+      };
+    });
+    setPracticeResult({
+      score,
+      totalMarks: exam.totalMarks,
+      breakdown,
+      answeredCount: Object.keys(answers).length,
+      totalQuestions: questions.length,
+      timeTakenSecs: (exam.durationMinutes * 60) - timeLeft,
+    });
+    setShowConfirmModal(false);
+  };
+
   // Submit test to SQLite — only sets submitted state on confirmed server success
   const [submitError, setSubmitError] = useState("");
 
   const handleSubmitExam = async () => {
+    if (isPracticeMode) {
+      handlePracticeSubmit();
+      return;
+    }
+
     if (submitting || submittedData) return;
     setSubmitting(true);
     setSubmitError("");
@@ -403,6 +450,7 @@ function ExamHallContent() {
       if (res.ok && json.success) {
         // ✅ Server confirmed: safe to show submitted state
         setSubmittedData(json);
+        setOfficialSubmission(json);
         setShowConfirmModal(false);
         try {
           localStorage.removeItem(`exam_draft_${exam.id}_${candidate?.rollNo || "guest"}`);
@@ -446,37 +494,160 @@ function ExamHallContent() {
     );
   }
 
-  // Submitted Receipt View (Strict Lock: Retakes are strictly prohibited on official exams)
-  if (submittedData) {
+  // Virtual Practice Evaluation & Review Screen
+  if (practiceResult) {
+    const pct = Math.round((practiceResult.score / practiceResult.totalMarks) * 100);
+    return (
+      <div className="min-h-screen py-10 px-4 bg-background max-w-4xl mx-auto space-y-6">
+        <Card className="p-6 border-violet-500/30 text-center space-y-4">
+          <div className="w-16 h-16 rounded-full bg-violet-500/15 border border-violet-500/30 flex items-center justify-center mx-auto text-violet-400">
+            <Sparkles className="w-8 h-8" />
+          </div>
+
+          <div className="flex items-center justify-center gap-2">
+            <Badge variant="purple">Virtual Simulation Practice</Badge>
+            <Badge variant="secondary" className="font-mono text-[10px]">Non-Evaluated Practice Mode</Badge>
+          </div>
+
+          <h2 className="text-2xl font-black text-foreground">
+            Virtual Practice Evaluation Complete!
+          </h2>
+          <p className="text-xs text-muted-foreground max-w-lg mx-auto">
+            This practice test is an interactive simulation to help you prepare. Your official submitted score remains safely recorded in the COE vault.
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-secondary/60 border border-border text-xs">
+            <div>
+              <span className="text-muted-foreground block text-[10px]">Practice Score</span>
+              <span className="text-lg font-black text-amber-400">
+                {practiceResult.score} / {practiceResult.totalMarks}
+              </span>
+            </div>
+            <div>
+              <span className="text-muted-foreground block text-[10px]">Percentage</span>
+              <span className="text-lg font-black text-emerald-400">{pct}%</span>
+            </div>
+            <div>
+              <span className="text-muted-foreground block text-[10px]">Questions Answered</span>
+              <span className="text-lg font-black text-foreground">
+                {practiceResult.answeredCount} / {practiceResult.totalQuestions}
+              </span>
+            </div>
+            <div>
+              <span className="text-muted-foreground block text-[10px]">Official Record</span>
+              <span className="badge badge-emerald mt-1">Protected</span>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <Button
+              variant="primary"
+              onClick={() => {
+                setPracticeResult(null);
+                setAnswers({});
+                setReviewed({});
+                setCurrentIdx(0);
+                setTimeLeft((exam.durationMinutes || 90) * 60);
+              }}
+              className="flex-1 justify-center text-xs font-bold gap-1.5"
+            >
+              <RotateCcw className="w-3.5 h-3.5" /> Retake Virtual Practice
+            </Button>
+            <Link href="/student/dashboard" className="flex-1">
+              <Button variant="outline" className="w-full justify-center text-xs">
+                Return to Dashboard
+              </Button>
+            </Link>
+          </div>
+        </Card>
+
+        {/* Detailed Question Review with Explanations */}
+        <div className="space-y-4">
+          <h3 className="font-bold text-sm text-foreground flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <span>Practice Paper Solution Key & Explanations ({practiceResult.breakdown.length} Questions)</span>
+          </h3>
+
+          {practiceResult.breakdown.map((q) => (
+            <Card key={q.id} className="p-5 border-border space-y-3 text-xs">
+              <div className="flex items-start justify-between gap-2">
+                <span className="font-bold text-foreground">
+                  Q{q.index}. {q.questionText}
+                </span>
+                <span className={`px-2 py-0.5 rounded-full font-mono text-[10px] font-bold ${
+                  q.isCorrect
+                    ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                    : q.chosen
+                    ? "bg-rose-500/20 text-rose-300 border border-rose-500/30"
+                    : "bg-slate-700 text-slate-300"
+                }`}>
+                  {q.isCorrect ? `+${q.marks || 1} Marks (Correct)` : q.chosen ? "0 Marks (Incorrect)" : "Unattempted"}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                {q.options?.map((opt) => {
+                  const isUserChosen = q.chosen === opt.id;
+                  const isCorrectAns = q.correctAnswer === opt.id;
+
+                  let optStyle = "bg-secondary/40 border-border text-muted-foreground";
+                  if (isCorrectAns) {
+                    optStyle = "bg-emerald-500/15 border-emerald-500/40 text-emerald-300 font-semibold";
+                  } else if (isUserChosen && !isCorrectAns) {
+                    optStyle = "bg-rose-500/15 border-rose-500/40 text-rose-300 font-semibold line-through";
+                  }
+
+                  return (
+                    <div key={opt.id} className={`p-2.5 rounded-xl border flex items-center justify-between ${optStyle}`}>
+                      <span><strong>{opt.id}.</strong> {opt.text}</span>
+                      {isCorrectAns && <span className="text-[10px] text-emerald-400 font-bold ml-2">✓ Correct Answer</span>}
+                      {isUserChosen && !isCorrectAns && <span className="text-[10px] text-rose-400 font-bold ml-2">✗ Your Choice</span>}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {q.explanation && (
+                <div className="p-3 rounded-xl bg-violet-500/10 border border-violet-500/20 text-[11px] text-[#a8a8d0]">
+                  <strong className="text-violet-300 block mb-0.5">Explanation & Rationale:</strong>
+                  {q.explanation}
+                </div>
+              )}
+            </Card>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Submitted Receipt View (Official submission lock + virtual practice launcher)
+  if (submittedData && !isPracticeMode) {
     return (
       <div className="min-h-screen flex items-center justify-center p-4 bg-background">
-        <Card className="max-w-lg w-full text-center p-8 border-emerald-500/40 shadow-2xl bg-card">
-          <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto mb-4">
+        <Card className="max-w-lg w-full text-center p-8 border-emerald-500/40 shadow-2xl bg-card space-y-4">
+          <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto">
             <CheckCircle2 className="w-10 h-10 text-emerald-400" />
           </div>
 
-          <div className="flex items-center justify-center gap-2 mb-2">
+          <div className="flex items-center justify-center gap-2">
             <Badge variant="success">Official Examination Sealed</Badge>
-            <Badge variant="danger" className="text-[10px] font-mono">Retakes Strictly Prohibited</Badge>
+            <Badge variant="secondary" className="text-[10px] font-mono">AES-256 Vault</Badge>
           </div>
 
-          <h2 className="text-2xl font-black text-foreground mb-2">Responses Encrypted & Sealed!</h2>
-          <p className="text-xs text-muted-foreground mb-4">
-            Your candidate question paper and submitted answers have been cryptographically sealed (AES-256-CBC) into the Controller of Examinations SQLite vault.
-          </p>
+          <h2 className="text-2xl font-black text-foreground">Responses Encrypted & Sealed!</h2>
 
-          {/* Strict Board Policy Notice */}
-          <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs text-left mb-6 space-y-1">
-            <div className="flex items-center gap-1.5 font-bold">
-              <ShieldAlert className="w-4 h-4 text-amber-400 flex-shrink-0" />
-              <span>Official Examination Lock Policy</span>
+          {/* User Requested Post-Submission Status */}
+          <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs text-left space-y-1.5">
+            <div className="flex items-center gap-2 font-bold text-sm">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <span>Current Status: Submitted — Under COE Evaluation</span>
             </div>
             <p className="text-[11px] text-[#a8a8d0] leading-relaxed">
-              Official board examinations cannot be retaken once submitted. Your preliminary responses are permanently locked for COE moderation and final results release. Unlimited instant retakes are permitted exclusively inside the <strong>Syllabus Practice Section</strong>.
+              Your official examination answers have been securely received and recorded. They will be evaluated by the Controller of Examinations and results will be published soon once Phase 10 is officially released.
             </p>
           </div>
 
-          <div className="bg-secondary/60 rounded-2xl p-4 text-left text-xs space-y-2.5 mb-6 border border-border">
+          <div className="bg-secondary/60 rounded-2xl p-4 text-left text-xs space-y-2.5 border border-border">
             <div className="flex justify-between pb-2 border-b border-border font-medium">
               <span className="text-muted-foreground">Subject:</span>
               <span className="font-bold text-foreground">{exam.subject} ({exam.code})</span>
@@ -504,18 +675,32 @@ function ExamHallContent() {
               </span>
             </div>
             <div className="flex justify-between pt-2 border-t border-border">
-              <span className="text-muted-foreground">Encryption Status:</span>
+              <span className="text-muted-foreground">Security Vault:</span>
               <span className="font-mono text-[10px] text-emerald-400 font-bold">AES-256-CBC • SHA-256 HMAC Sealed</span>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link href="/student/dashboard" className="flex-1">
-              <Button variant="outline" className="w-full justify-center text-xs">Return to Dashboard</Button>
-            </Link>
-            <Link href="/student/syllabus" className="flex-1">
-              <Button variant="primary" className="w-full justify-center text-xs font-bold gap-1.5">
-                <Sparkles className="w-3.5 h-3.5" /> Practice Section (Retakes Open)
+          {/* Action buttons: Virtual practice retake & dashboard */}
+          <div className="space-y-2 pt-2">
+            <Button
+              variant="primary"
+              onClick={() => {
+                setIsPracticeMode(true);
+                setSubmittedData(null);
+                setAnswers({});
+                setReviewed({});
+                setCurrentIdx(0);
+                setTimeLeft((exam.durationMinutes || 90) * 60);
+              }}
+              className="w-full justify-center text-xs font-bold gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-md shadow-violet-500/25 py-2.5"
+            >
+              <Sparkles className="w-4 h-4 text-amber-300" />
+              Take Virtual Practice Exam (Non-Evaluated)
+            </Button>
+
+            <Link href="/student/dashboard" className="block w-full">
+              <Button variant="outline" className="w-full justify-center text-xs">
+                Return to Dashboard
               </Button>
             </Link>
           </div>
@@ -539,6 +724,29 @@ function ExamHallContent() {
           </button>
         </div>
       )}
+      {/* Virtual Practice Mode Active Notice */}
+      {isPracticeMode && (
+        <div className="bg-amber-500/20 border-b border-amber-500/30 px-4 py-2 text-center text-xs text-amber-200 flex items-center justify-between font-medium">
+          <div className="flex items-center gap-2 mx-auto">
+            <Sparkles className="w-4 h-4 text-amber-400 animate-pulse flex-shrink-0" />
+            <span>
+              <strong>Virtual Simulation Practice Mode</strong> — You can answer and practice all questions freely. Your official board submission is safe and will not be overwritten.
+            </span>
+          </div>
+          {officialSubmission && (
+            <button
+              onClick={() => {
+                setIsPracticeMode(false);
+                setSubmittedData(officialSubmission);
+              }}
+              className="text-[11px] px-2.5 py-1 rounded-lg bg-amber-500/30 hover:bg-amber-500/50 text-amber-100 font-bold ml-3 flex-shrink-0"
+            >
+              Exit to Official Status
+            </button>
+          )}
+        </div>
+      )}
+
       {/* Sticky Exam Header Bar */}
       <header className="sticky top-0 z-50 w-full bg-card/95 backdrop-blur-md border-b border-border shadow-md">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -706,14 +914,25 @@ function ExamHallContent() {
                   <Bookmark className="w-3.5 h-3.5" /> Mark for Review
                 </Button>
 
-                <Button
-                  variant="primary"
-                  size="sm"
-                  onClick={handleSaveAndNext}
-                  className="gap-1 font-semibold text-xs"
-                >
-                  Save & Next <ChevronRight className="w-4 h-4" />
-                </Button>
+                {currentIdx < questions.length - 1 ? (
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={handleSaveAndNext}
+                    className="gap-1 font-semibold text-xs"
+                  >
+                    Save & Next <ChevronRight className="w-4 h-4" />
+                  </Button>
+                ) : (
+                  <Button
+                    variant="success"
+                    size="sm"
+                    onClick={() => setShowConfirmModal(true)}
+                    className="gap-1.5 font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/30"
+                  >
+                    <Send className="w-3.5 h-3.5" /> Review & Submit Examination
+                  </Button>
+                )}
               </div>
             </div>
           </Card>
@@ -787,10 +1006,13 @@ function ExamHallContent() {
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
           <Card className="max-w-md w-full p-6 border-amber-500/30 animate-in fade-in-50 zoom-in-95">
             <h3 className="text-lg font-black text-foreground mb-2 flex items-center gap-2">
-              <AlertCircle className="w-5 h-5 text-amber-400" /> Confirm Submission
+              <AlertCircle className="w-5 h-5 text-amber-400" />
+              {isPracticeMode ? "Submit Virtual Practice Session?" : "Confirm Official Examination Submission"}
             </h3>
             <p className="text-xs text-muted-foreground mb-4">
-              Are you sure you want to end this examination? Once submitted, your answers will be permanently sealed.
+              {isPracticeMode
+                ? "Your practice answers will be evaluated immediately with solutions. Your official submitted score is safe and will not be altered."
+                : "Are you sure you want to seal and end your examination? Once submitted, your responses will be encrypted into the COE SQLite vault."}
             </p>
 
             <div className="bg-secondary/70 p-3.5 rounded-xl text-xs space-y-2 mb-6 border border-border">
@@ -819,10 +1041,10 @@ function ExamHallContent() {
                 onClick={() => setShowConfirmModal(false)}
                 disabled={submitting}
               >
-                Continue Exam
+                Continue Answering
               </Button>
               <Button
-                variant="danger"
+                variant={isPracticeMode ? "primary" : "danger"}
                 size="sm"
                 onClick={handleSubmitExam}
                 disabled={submitting}
@@ -831,6 +1053,10 @@ function ExamHallContent() {
                 {submitting ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" /> Sealing...
+                  </>
+                ) : isPracticeMode ? (
+                  <>
+                    <CheckCircle2 className="w-4 h-4" /> Evaluate Practice Now
                   </>
                 ) : (
                   <>

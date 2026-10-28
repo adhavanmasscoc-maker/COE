@@ -277,6 +277,48 @@ const SAMPLE_180M_CS12 = {
   ]
 };
 
+const SAMPLE_180M_MAT12 = {
+  examTitle: "Class 12 Mathematics Higher Secondary Public Examination 2026",
+  subjectCode: "MAT-12",
+  subjectName: "Mathematics",
+  prepClass: 12,
+  medium: "English",
+  examDate: "2026-11-28",
+  startTime: "09:30 AM",
+  durationMinutes: 180,
+  totalMarks: 90,
+  passingMarks: 30,
+  instructions: "Dear candidate, verify all matrix determinants and vector solutions step-by-step. Manage your 180 minutes with confidence.",
+  status: "PUBLISHED",
+  paperType: "PUBLIC_EXAM",
+  syllabusUnits: [
+    {
+      unitNumber: 1,
+      title: "Applications of Matrices and Determinants",
+      chapters: [
+        { chapterNumber: 1, title: "Rank of a Matrix & Adjoint" },
+        { chapterNumber: 2, title: "Linear Equations & Cramer Rule" }
+      ]
+    }
+  ],
+  questions: [
+    {
+      questionNumber: 1,
+      section: "Part I — 1 Mark Multiple Choice",
+      marks: 1,
+      questionText: "If |A| ≠ 0, then A is a:",
+      options: [
+        { id: "A", text: "Non-singular matrix" },
+        { id: "B", text: "Singular matrix" },
+        { id: "C", text: "Zero matrix" },
+        { id: "D", text: "Identity matrix only" }
+      ],
+      correctAnswer: "A",
+      explanation: "A square matrix A is defined to be non-singular if and only if its determinant is non-zero, i.e., |A| ≠ 0."
+    }
+  ]
+};
+
 function parseDisplayDuration(val) {
   if (typeof val === "number" && !isNaN(val)) return val;
   if (typeof val === "string") {
@@ -449,6 +491,12 @@ export default function ExamSetterPage() {
             className="px-2.5 py-1 rounded-lg text-xs font-medium glass-sm border border-violet-500/20 text-[#a8a8d0] hover:text-white hover:bg-violet-500/10"
           >
             Class 12 Physics (180 mins / 3 hrs)
+          </button>
+          <button
+            onClick={() => loadPreset(SAMPLE_180M_MAT12)}
+            className="px-2.5 py-1 rounded-lg text-xs font-medium glass-sm border border-violet-500/20 text-[#a8a8d0] hover:text-white hover:bg-violet-500/10"
+          >
+            Class 12 Math (180 mins / 3 hrs)
           </button>
           <button
             onClick={() => loadPreset(SAMPLE_180M_CS12)}

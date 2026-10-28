@@ -35,7 +35,31 @@ export async function GET(request) {
       orderBy: { examDate: "asc" },
     });
 
-    return NextResponse.json({ success: true, exams });
+    // Count eligible registered students per class for accurate completed vs pending monitoring
+    const studentsByClass = await db.studentProfile.groupBy({
+      by: ["examPrepClass"],
+      _count: { id: true },
+    });
+    const classCountMap = {};
+    studentsByClass.forEach((s) => {
+      classCountMap[s.examPrepClass] = s._count.id;
+    });
+
+    const enrichedExams = exams.map((exam) => {
+      const totalEligible = classCountMap[exam.prepClass] || 0;
+      const completedCount = exam._count?.submissions || 0;
+      const pendingCount = Math.max(0, totalEligible - completedCount);
+      return {
+        ...exam,
+        stats: {
+          totalEligible,
+          completedCount,
+          pendingCount,
+        },
+      };
+    });
+
+    return NextResponse.json({ success: true, exams: enrichedExams });
   } catch (error) {
     console.error("Admin exams GET error:", error);
     return NextResponse.json({ error: "Internal server error loading exam schedules." }, { status: 500 });

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getCurrentSession } from "@/lib/auth";
 import { db } from "@/lib/db";
+import { decryptSubmissionPayload } from "@/lib/encryption";
 
 export const dynamic = "force-dynamic";
 
@@ -61,6 +62,28 @@ export async function GET(request, { params }) {
       return { ...q, options: parsedOptions };
     });
 
+    // Decrypt student submissions so COE can inspect written/selected answers
+    const formattedSubmissions = exam.submissions.map((sub) => {
+      let decrypted = null;
+      try {
+        decrypted = decryptSubmissionPayload(sub.answersJson);
+      } catch (e) {
+        try { decrypted = JSON.parse(sub.answersJson); } catch {}
+      }
+      const rawAnswers = decrypted?.rawAnswers || decrypted || {};
+      return {
+        id: sub.id,
+        studentId: sub.studentId,
+        studentName: sub.student?.fullName || "Candidate",
+        rollNo: sub.student?.user?.username || "Roll No",
+        score: sub.score,
+        timeTakenSecs: sub.timeTakenSecs,
+        submittedAt: sub.submittedAt,
+        isSubmitted: sub.isSubmitted,
+        answers: rawAnswers,
+      };
+    });
+
     // Parse phase timestamps
     let phaseTimestamps = {};
     try { phaseTimestamps = exam.phaseTimestamps ? JSON.parse(exam.phaseTimestamps) : {}; } catch {}
@@ -70,6 +93,7 @@ export async function GET(request, { params }) {
       exam: {
         ...exam,
         questions: formattedQuestions,
+        submissions: formattedSubmissions,
         phaseTimestamps,
       },
     });

@@ -221,7 +221,17 @@ async function main() {
       ],
     },
     {
-      name: "Biology / Mathematics",
+      name: "Mathematics",
+      code: "MAT-12",
+      prepClass: 12,
+      medium: "English",
+      units: [
+        { unitNumber: 1, title: "Applications of Matrices and Determinants", chapters: ["Rank of a Matrix & Adjoint", "Linear Equations & Cramer Rule"] },
+        { unitNumber: 2, title: "Complex Numbers", chapters: ["Algebraic Operations of Complex Numbers", "De Moivre Theorem and Roots of Unity"] },
+      ],
+    },
+    {
+      name: "Biology",
       code: "BIO-12",
       prepClass: 12,
       medium: "English",

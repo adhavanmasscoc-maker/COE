@@ -24,7 +24,15 @@ import {
   Sparkles,
   ChevronRight,
   X,
-  Activity
+  Activity,
+  Info,
+  Users,
+  Download,
+  Printer,
+  Zap,
+  FileCheck,
+  BookOpen,
+  Award
 } from "lucide-react";
 import { ExamLifecycleStepper, calculateExamPhase } from "@/components/admin/ExamLifecycleStepper";
 
@@ -45,6 +53,12 @@ function COEAdminExamsContent() {
   const [activeExam, setActiveExam] = useState(null);
   const [examDetail, setExamDetail] = useState(null);
   const [loadingDetail, setLoadingDetail] = useState(false);
+
+  // Submissions inspector & Solutions modal state
+  const [submissionsInspectorExam, setSubmissionsInspectorExam] = useState(null);
+  const [selectedSubmission, setSelectedSubmission] = useState(null);
+  const [solutionsModalExam, setSolutionsModalExam] = useState(null);
+  const [fastPhaseLoading, setFastPhaseLoading] = useState(false);
 
   // New Exam Form State (12-hour clock with AM/PM & supportive instructions)
   const [examDateOnly, setExamDateOnly] = useState(
@@ -93,7 +107,7 @@ function COEAdminExamsContent() {
 
   const fetchSubjects = async () => {
     try {
-      const res = await fetch("/api/syllabus");
+      const res = await fetch("/api/subjects?prepClass=ALL");
       const data = await res.json();
       if (res.ok && data.subjects) {
         setSubjects(data.subjects);
@@ -118,6 +132,67 @@ function COEAdminExamsContent() {
   const showMsg = (msg) => {
     setNotification(msg);
     setTimeout(() => setNotification(""), 4000);
+  };
+
+  const openSubmissionsInspector = async (exam) => {
+    setSubmissionsInspectorExam(exam);
+    setSelectedSubmission(null);
+    setLoadingDetail(true);
+    try {
+      const res = await fetch(`/api/admin/exams/${exam.id}`);
+      const data = await res.json();
+      if (res.ok) {
+        setExamDetail(data.exam);
+        if (data.exam?.submissions?.length > 0) {
+          setSelectedSubmission(data.exam.submissions[0]);
+        }
+      }
+    } catch (e) {
+      console.error("Submissions inspector error:", e);
+    } finally {
+      setLoadingDetail(false);
+    }
+  };
+
+  const openSolutionsModal = async (exam) => {
+    setSolutionsModalExam(exam);
+    setLoadingDetail(true);
+    try {
+      const res = await fetch(`/api/admin/exams/${exam.id}`);
+      const data = await res.json();
+      if (res.ok) {
+        setExamDetail(data.exam);
+      }
+    } catch (e) {
+      console.error("Solutions modal error:", e);
+    } finally {
+      setLoadingDetail(false);
+    }
+  };
+
+  const handleFastAdvancePhase = async (examId, targetPhase) => {
+    setFastPhaseLoading(true);
+    try {
+      const res = await fetch(`/api/admin/exams/${examId}/fast-phase`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ targetPhase }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        showMsg(`Success: Exam transitioned to Phase ${targetPhase}/10.`);
+        fetchExams();
+        if (lifecycleExamModal && lifecycleExamModal.id === examId) {
+          setLifecycleExamModal(data.exam);
+        }
+      } else {
+        alert(data.error || "Failed to update exam phase.");
+      }
+    } catch {
+      alert("Network error updating phase.");
+    } finally {
+      setFastPhaseLoading(false);
+    }
   };
 
   // Toggle Publish / Draft
@@ -458,14 +533,29 @@ function COEAdminExamsContent() {
                       </button>
                     </td>
                     <td className="py-3 px-4">
-                      {exam._count?.submissions > 0 ? (
-                        <span className="inline-flex items-center gap-1 font-bold text-emerald-400">
-                          <CheckCircle2 className="w-3.5 h-3.5" />
-                          {exam._count.submissions} Submitted
-                        </span>
-                      ) : (
-                        <span className="text-muted-foreground">0 Received</span>
-                      )}
+                      <div className="space-y-0.5">
+                        <div className="flex items-center gap-1.5 font-bold">
+                          <span className="text-emerald-400">
+                            {exam.stats?.completedCount ?? (exam._count?.submissions || 0)} Completed
+                          </span>
+                          <span className="text-border">•</span>
+                          <span className="text-amber-400">
+                            {exam.stats?.pendingCount ?? 0} Pending
+                          </span>
+                        </div>
+                        <div className="flex items-center justify-between text-[10px] text-muted-foreground">
+                          <span>Total: {exam.stats?.totalEligible ?? (exam._count?.submissions || 0)}</span>
+                          {(exam.stats?.completedCount > 0 || exam._count?.submissions > 0) && (
+                            <button
+                              type="button"
+                              onClick={() => openSubmissionsInspector(exam)}
+                              className="text-sky-400 hover:text-sky-300 hover:underline font-bold ml-1 inline-flex items-center gap-0.5"
+                            >
+                              Inspect Answers <ChevronRight className="w-2.5 h-2.5" />
+                            </button>
+                          )}
+                        </div>
+                      </div>
                     </td>
                     <td className="py-3 px-4">
                       <div
@@ -1025,6 +1115,65 @@ function COEAdminExamsContent() {
             {/* Full 10-Phase Stepper */}
             <ExamLifecycleStepper exam={lifecycleExamModal} mode="full" />
 
+            {/* Fast 10-Phase Pipeline Controller */}
+            <div className="p-4 rounded-2xl bg-secondary/80 border border-violet-500/25 space-y-3">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pb-2 border-b border-border">
+                <div className="flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-amber-400" />
+                  <span className="text-xs font-bold text-foreground">Fast 10-Phase Lifecycle Controller</span>
+                  <Badge variant="warning" className="text-[10px]">COE Instant Mode</Badge>
+                </div>
+                <Button
+                  size="xs"
+                  onClick={() => handleFastAdvancePhase(lifecycleExamModal.id, 10)}
+                  disabled={fastPhaseLoading}
+                  className="bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-black text-xs shadow-md shadow-amber-500/20"
+                >
+                  {fastPhaseLoading ? <Loader2 className="w-3 h-3 animate-spin mr-1" /> : <Award className="w-3.5 h-3.5 mr-1" />}
+                  Fast-Forward to Phase 10 (Publish Results)
+                </Button>
+              </div>
+
+              <div>
+                <p className="text-[11px] text-muted-foreground mb-2">
+                  1-Click Jump to any phase of the examination lifecycle:
+                </p>
+                <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
+                  {Array.from({ length: 10 }, (_, i) => i + 1).map((p) => (
+                    <button
+                      key={p}
+                      disabled={fastPhaseLoading}
+                      onClick={() => handleFastAdvancePhase(lifecycleExamModal.id, p)}
+                      className="px-2 py-1.5 rounded-lg text-xs font-mono font-bold bg-card hover:bg-violet-600/30 border border-border hover:border-violet-400/40 text-foreground transition-all flex flex-col items-center gap-0.5"
+                    >
+                      <span className="text-[9px] text-[#5c5c8a]">Phase</span>
+                      <span>{p}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* View Official Paper with Solutions button */}
+              <div className="pt-2 flex items-center justify-between flex-wrap gap-2 border-t border-border text-xs">
+                <span className="text-muted-foreground text-[11px]">
+                  Official Master Key & Explanations:
+                </span>
+                <Button
+                  size="xs"
+                  variant="outline"
+                  onClick={() => {
+                    const target = lifecycleExamModal;
+                    setLifecycleExamModal(null);
+                    openSolutionsModal(target);
+                  }}
+                  className="gap-1.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/15"
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+                  View Official Q-Paper & Complete Solutions
+                </Button>
+              </div>
+            </div>
+
             <div className="pt-2 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div className="text-xs text-[#a8a8d0] flex items-center gap-1.5">
                 <Info className="w-4 h-4 text-violet-400 flex-shrink-0" />
@@ -1041,6 +1190,275 @@ function COEAdminExamsContent() {
                 className="text-xs font-bold whitespace-nowrap"
               >
                 Manage Questions & Paper
+              </Button>
+            </div>
+          </Card>
+        </div>
+      )}
+
+      {/* Student Submissions & Written Answer Inspector Modal */}
+      {submissionsInspectorExam && (
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+          <Card className="max-w-5xl w-full max-h-[90vh] flex flex-col p-6 border-sky-500/30 animate-in fade-in-50 zoom-in-95">
+            <div className="flex items-center justify-between pb-3 mb-4 border-b border-border">
+              <div>
+                <div className="flex items-center gap-2">
+                  <h3 className="text-lg font-black text-foreground">
+                    Student Submissions & Written Answers Inspector
+                  </h3>
+                  <Badge variant="cyan">{submissionsInspectorExam.subject?.name}</Badge>
+                  <Badge variant="purple">Class {submissionsInspectorExam.prepClass}</Badge>
+                </div>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Inspect exact candidate choices, preliminary scoring, and compare with official answer key.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSubmissionsInspectorExam(null)}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {loadingDetail ? (
+              <div className="p-12 text-center text-xs text-muted-foreground">
+                <Loader2 className="w-6 h-6 animate-spin mx-auto mb-2 text-sky-400" />
+                Decrypting candidate responses from SQLite AES-256 vault...
+              </div>
+            ) : !examDetail?.submissions || examDetail.submissions.length === 0 ? (
+              <div className="p-8 text-center text-xs text-muted-foreground">
+                <AlertCircle className="w-8 h-8 text-amber-400 mx-auto mb-2" />
+                No candidate submissions recorded yet for this examination.
+              </div>
+            ) : (
+              <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-6 overflow-hidden">
+                {/* Left: Candidate list */}
+                <div className="md:col-span-4 border-r border-border pr-4 space-y-2 overflow-y-auto max-h-[65vh]">
+                  <h4 className="text-xs font-bold text-muted-foreground uppercase mb-2">
+                    Candidates ({examDetail.submissions.length})
+                  </h4>
+                  {examDetail.submissions.map((sub) => {
+                    const isSelected = selectedSubmission?.id === sub.id;
+                    return (
+                      <div
+                        key={sub.id}
+                        onClick={() => setSelectedSubmission(sub)}
+                        className={`p-3 rounded-xl border text-xs cursor-pointer transition-all ${
+                          isSelected
+                            ? "bg-sky-500/15 border-sky-500/40 text-foreground shadow-sm"
+                            : "bg-secondary/40 border-border hover:bg-secondary/70 text-muted-foreground"
+                        }`}
+                      >
+                        <div className="flex justify-between items-start mb-1">
+                          <span className="font-bold text-foreground">{sub.studentName}</span>
+                          <span className="font-mono text-[10px] text-sky-400 font-bold">{sub.rollNo}</span>
+                        </div>
+                        <div className="flex justify-between text-[11px]">
+                          <span>Time: {Math.floor(sub.timeTakenSecs / 60)}m {sub.timeTakenSecs % 60}s</span>
+                          <span className="font-bold text-emerald-400">Score: {sub.score} Marks</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Right: Selected Candidate's Written Question Paper */}
+                <div className="md:col-span-8 overflow-y-auto max-h-[65vh] space-y-4 pr-1">
+                  {selectedSubmission ? (
+                    <>
+                      <div className="p-3.5 rounded-xl bg-secondary/70 border border-border flex items-center justify-between text-xs">
+                        <div>
+                          <span className="font-bold text-foreground text-sm block">
+                            {selectedSubmission.studentName} ({selectedSubmission.rollNo})
+                          </span>
+                          <span className="text-[11px] text-muted-foreground">
+                            Submitted at {new Date(selectedSubmission.submittedAt).toLocaleTimeString("en-IN")} • Time Taken: {Math.floor(selectedSubmission.timeTakenSecs / 60)} mins
+                          </span>
+                        </div>
+                        <Badge variant="success" className="text-xs font-mono font-bold">
+                          Total Score: {selectedSubmission.score} / {examDetail.totalMarks}
+                        </Badge>
+                      </div>
+
+                      <div className="space-y-3">
+                        {examDetail.questions?.map((q, idx) => {
+                          const chosen = selectedSubmission.answers?.[q.id];
+                          const isCorrect = chosen && chosen === q.correctAnswer;
+                          const isUnattempted = !chosen;
+
+                          return (
+                            <div key={q.id} className="p-4 rounded-xl bg-card border border-border space-y-2 text-xs">
+                              <div className="flex items-start justify-between gap-2">
+                                <span className="font-bold text-foreground">
+                                  Q{idx + 1}. {q.questionText}
+                                </span>
+                                <span className={`px-2 py-0.5 rounded-full font-mono text-[10px] font-bold ${
+                                  isCorrect
+                                    ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                                    : isUnattempted
+                                    ? "bg-slate-700 text-slate-300"
+                                    : "bg-rose-500/20 text-rose-300 border border-rose-500/30"
+                                }`}>
+                                  {isCorrect ? `+${q.marks || 1} Marks (Correct)` : isUnattempted ? "0 Marks (Unattempted)" : "0 Marks (Incorrect)"}
+                                </span>
+                              </div>
+
+                              <div className="grid grid-cols-2 gap-2 text-[11px]">
+                                {q.options?.map((opt) => {
+                                  const isCandidateOpt = chosen === opt.id;
+                                  const isCorrectOpt = q.correctAnswer === opt.id;
+
+                                  let optClass = "bg-secondary/40 border-border text-muted-foreground";
+                                  if (isCorrectOpt) {
+                                    optClass = "bg-emerald-500/15 border-emerald-500/40 text-emerald-300 font-semibold";
+                                  } else if (isCandidateOpt && !isCorrectOpt) {
+                                    optClass = "bg-rose-500/15 border-rose-500/40 text-rose-300 font-semibold line-through";
+                                  }
+
+                                  return (
+                                    <div key={opt.id} className={`p-2 rounded-lg border flex items-center justify-between ${optClass}`}>
+                                      <span><strong>{opt.id}.</strong> {opt.text}</span>
+                                      {isCorrectOpt && <span className="text-[10px] text-emerald-400 font-bold ml-1">✓ Correct</span>}
+                                      {isCandidateOpt && !isCorrectOpt && <span className="text-[10px] text-rose-400 font-bold ml-1">✗ Candidate</span>}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+
+                              {q.explanation && (
+                                <p className="text-[11px] text-muted-foreground pt-1 italic">
+                                  * Explanation: {q.explanation}
+                                </p>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="p-8 text-center text-xs text-muted-foreground">
+                      Select a candidate on the left to inspect their written answers.
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            <div className="pt-3 mt-4 border-t border-border flex justify-end">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setSubmissionsInspectorExam(null)}
+              >
+                Close Inspector
+              </Button>
+            </div>
+          </Card>
+        </div>
+      )}
+
+      {/* Official Question Paper & Worked Solutions Modal (Phase 10 Release) */}
+      {solutionsModalExam && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <Card className="max-w-4xl w-full max-h-[90vh] flex flex-col p-6 border-amber-500/40 bg-card animate-in fade-in-50 zoom-in-95">
+            <div className="flex items-center justify-between pb-3 mb-4 border-b border-border">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-amber-400" />
+                <div>
+                  <h3 className="text-base font-black text-foreground">
+                    Official Board Master Question Paper & Worked Solutions
+                  </h3>
+                  <p className="text-[11px] text-muted-foreground">
+                    Published under Controller of Examinations — Tamil Nadu Samacheer Kalvi
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Button
+                  size="xs"
+                  variant="outline"
+                  onClick={() => window.print()}
+                  className="gap-1 text-xs"
+                >
+                  <Printer className="w-3.5 h-3.5" /> Print / Save PDF
+                </Button>
+                <button
+                  onClick={() => setSolutionsModalExam(null)}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            <div className="flex-1 overflow-y-auto space-y-4 pr-1 text-xs">
+              {/* Header Box */}
+              <div className="p-4 rounded-xl bg-secondary/60 border border-border text-center space-y-1">
+                <h4 className="font-extrabold text-sm text-foreground uppercase tracking-wide">
+                  Directorate of Government Examinations — Tamil Nadu
+                </h4>
+                <p className="font-bold text-amber-400 text-xs">
+                  {solutionsModalExam.subject?.name} ({solutionsModalExam.subject?.code}) — Class {solutionsModalExam.prepClass}
+                </p>
+                <div className="flex items-center justify-center gap-4 text-[11px] text-muted-foreground font-mono pt-1">
+                  <span>Duration: {solutionsModalExam.durationMinutes} Minutes</span>
+                  <span>•</span>
+                  <span>Maximum Marks: {solutionsModalExam.totalMarks}</span>
+                  <span>•</span>
+                  <span>Status: Phase 10 / Released</span>
+                </div>
+              </div>
+
+              {/* Questions with Worked Solutions */}
+              <div className="space-y-4">
+                {examDetail?.questions?.map((q, idx) => (
+                  <div key={q.id} className="p-4 rounded-xl bg-secondary/30 border border-border space-y-2.5">
+                    <div className="flex justify-between items-start gap-2">
+                      <span className="font-bold text-foreground">
+                        Q{idx + 1}. {q.questionText}
+                      </span>
+                      <Badge variant="secondary">+{q.marks || 1} Marks</Badge>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2 text-[11px]">
+                      {q.options?.map((opt) => (
+                        <div
+                          key={opt.id}
+                          className={`p-2.5 rounded-lg border flex items-center justify-between ${
+                            opt.id === q.correctAnswer
+                              ? "bg-emerald-500/15 border-emerald-500/40 text-emerald-300 font-bold"
+                              : "bg-card border-border text-muted-foreground"
+                          }`}
+                        >
+                          <span><strong>{opt.id}.</strong> {opt.text}</span>
+                          {opt.id === q.correctAnswer && (
+                            <span className="text-[10px] text-emerald-400 font-bold">✓ Official Key</span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+
+                    {q.explanation && (
+                      <div className="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/20 text-[11px] text-emerald-200">
+                        <strong className="block text-emerald-300 font-semibold mb-0.5">Step-by-step Solution & Rationale:</strong>
+                        {q.explanation}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-3 mt-4 border-t border-border flex justify-end">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setSolutionsModalExam(null)}
+              >
+                Close Solutions Viewer
               </Button>
             </div>
           </Card>

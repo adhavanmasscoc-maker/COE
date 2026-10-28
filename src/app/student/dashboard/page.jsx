@@ -287,14 +287,28 @@ function StudentDashboardContent() {
             {upcomingExams.map((exam, i) => (
               <div
                 key={exam.id}
-                className="glass rounded-2xl p-5 card-glow border border-[rgba(124,58,237,0.2)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+                className={`glass rounded-2xl p-5 card-glow border flex flex-col justify-between gap-4 ${
+                  exam.isSubmitted
+                    ? "border-emerald-500/30 bg-emerald-950/10"
+                    : "border-[rgba(124,58,237,0.2)]"
+                }`}
                 style={{ animationDelay: `${i * 60}ms` }}
               >
-                <div className="space-y-1.5 flex-1">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="font-bold text-[#f0f0ff]">{exam.subject}</span>
-                    <span className="badge badge-violet">Class {exam.prepClass}</span>
+                <div className="space-y-2 flex-1">
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <div className="flex items-center gap-2">
+                      <span className="font-bold text-[#f0f0ff]">{exam.subject}</span>
+                      <span className="badge badge-violet">Class {exam.prepClass}</span>
+                    </div>
+                    {exam.isSubmitted ? (
+                      <span className="badge badge-emerald flex items-center gap-1 font-mono text-[10px]">
+                        <CheckCircle className="w-3 h-3 text-emerald-400" /> SUBMITTED
+                      </span>
+                    ) : (
+                      <span className="badge badge-amber text-[10px]">Scheduled</span>
+                    )}
                   </div>
+
                   <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#5c5c8a]">
                     <span className="flex items-center gap-1 font-mono">
                       <Calendar className="w-3 h-3 text-violet-400" />
@@ -312,13 +326,49 @@ function StudentDashboardContent() {
                       {exam.totalMarks} Marks
                     </span>
                   </div>
-                  {exam.instructions && (
+
+                  {exam.isSubmitted ? (
+                    <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                      <span>
+                        <strong>Submitted!</strong> Your exam is under COE evaluation and results will publish soon.
+                      </span>
+                    </div>
+                  ) : exam.instructions ? (
                     <p className="text-[11px] text-[#5c5c8a] italic">* {exam.instructions}</p>
+                  ) : null}
+                </div>
+
+                <div className="flex items-center gap-2 pt-2 border-t border-white/5 flex-wrap">
+                  {exam.isSubmitted ? (
+                    <>
+                      <Link
+                        href={`/student/exam-mock?examId=${exam.id}${isPreview ? `&previewRollNo=${previewRoll}` : ""}&mode=practice`}
+                        className="flex-1"
+                      >
+                        <Button variant="outline" size="sm" className="w-full text-xs font-semibold gap-1.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/15">
+                          <Zap className="w-3.5 h-3.5 text-amber-400" /> Practice Mode (Non-Evaluated)
+                        </Button>
+                      </Link>
+                      <Link
+                        href={`/student/exam-mock?examId=${exam.id}${isPreview ? `&previewRollNo=${previewRoll}` : ""}`}
+                      >
+                        <Button variant="secondary" size="sm" className="text-xs">
+                          View Receipt
+                        </Button>
+                      </Link>
+                    </>
+                  ) : (
+                    <Link
+                      href={`/student/exam-mock?examId=${exam.id}${isPreview ? `&previewRollNo=${previewRoll}` : ""}`}
+                      className="w-full"
+                    >
+                      <Button variant="success" size="sm" className="w-full justify-center gap-2 font-bold">
+                        <PlayCircle className="w-4 h-4" /> Start Examination
+                      </Button>
+                    </Link>
                   )}
                 </div>
-                <Link href={`/student/exam-mock?examId=${exam.id}${isPreview ? `&previewRollNo=${previewRoll}` : ""}`}>
-                  <Button variant="secondary" size="sm">Take Test</Button>
-                </Link>
               </div>
             ))}
           </div>

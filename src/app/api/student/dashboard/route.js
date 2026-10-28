@@ -189,6 +189,38 @@ export async function GET(request) {
       orderBy: { examDate: "asc" },
     });
 
+    const examIds = upcomingExams.map((e) => e.id);
+    const existingSubmissions = await db.examSubmission.findMany({
+      where: {
+        studentId: profile.id,
+        examScheduleId: { in: examIds },
+      },
+      select: {
+        examScheduleId: true,
+        isSubmitted: true,
+        submittedAt: true,
+        score: true,
+      },
+    });
+    const subMap = new Map(existingSubmissions.map((s) => [s.examScheduleId, s]));
+
+    const enrichedUpcomingExams = upcomingExams.map((exam) => {
+      const sub = subMap.get(exam.id);
+      return {
+        id: exam.id,
+        subject: exam.subject.name,
+        code: exam.subject.code,
+        prepClass: exam.prepClass,
+        examDate: exam.examDate,
+        durationMinutes: exam.durationMinutes,
+        totalMarks: exam.totalMarks,
+        instructions: exam.instructions,
+        isSubmitted: Boolean(sub?.isSubmitted),
+        submittedAt: sub?.submittedAt || null,
+        score: sub?.score ?? null,
+      };
+    });
+
     // 4. Fetch applicable notices
     const notices = await db.notice.findMany({
       where: {
@@ -214,16 +246,7 @@ export async function GET(request) {
         overallCompletion,
       },
       subjects: subjectsSummary,
-      upcomingExams: upcomingExams.map((e) => ({
-        id: e.id,
-        subject: e.subject.name,
-        code: e.subject.code,
-        prepClass: e.prepClass,
-        examDate: e.examDate,
-        durationMinutes: e.durationMinutes,
-        totalMarks: e.totalMarks,
-        instructions: e.instructions,
-      })),
+      upcomingExams: enrichedUpcomingExams,
       notices: notices.map((n) => ({
         id: n.id,
         title: n.title,

@@ -41,10 +41,12 @@ function parseFlexibleDuration(val) {
 
 const DEFAULT_SUBJECT_NAMES = {
   "CSC-12": "Computer Science",
+  "CS-12": "Computer Science",
+  "MAT-12": "Mathematics",
   "MAT-10": "Mathematics",
   "PHY-12": "Physics",
   "CHE-12": "Chemistry",
-  "BIO-12": "Biology / Mathematics",
+  "BIO-12": "Biology",
   "BOT-12": "Botany",
   "ZOO-12": "Zoology",
   "COM-12": "Commerce",
