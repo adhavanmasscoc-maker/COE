@@ -342,7 +342,7 @@ function ExamHallContent() {
   };
 
   const currentQ = questions[currentIdx];
-  const isExamTamil = globalIsTamil || candidate?.medium === "Tamil" || exam?.medium === "Tamil";
+  const isExamTamil = exam?.examLanguage === "ta" || exam?.language === "Tamil" || globalIsTamil || candidate?.medium === "Tamil" || exam?.medium === "Tamil";
 
   const handleSelectOption = (optId) => {
     if (submittedData) return;

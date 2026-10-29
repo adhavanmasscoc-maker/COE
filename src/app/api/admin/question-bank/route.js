@@ -3,9 +3,82 @@ import { db } from "@/lib/db";
 import { getCurrentSession } from "@/lib/auth";
 import { validateQuestionItems, parseMarkdownQuestionBank } from "@/lib/questionBankParser";
 
+export const dynamic = "force-dynamic";
+
+// Sample Templates for Phase 3.3
+const SAMPLE_JSON_TEMPLATE = [
+  {
+    "id": 1,
+    "question": "What is the capital of Tamil Nadu?",
+    "options": {
+      "A": "Madurai",
+      "B": "Chennai",
+      "C": "Coimbatore",
+      "D": "Tiruchirappalli"
+    },
+    "answer": "B",
+    "explanation": "Chennai is the capital city of Tamil Nadu.",
+    "topic": "General Geography",
+    "difficulty": "EASY"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is the author of Tirukkural?",
+    "options": {
+      "A": "Thiruvalluvar",
+      "B": "Kambar",
+      "C": "Avvaiyar",
+      "D": "Bharathiyar"
+    },
+    "answer": "A",
+    "explanation": "Thiruvalluvar is the celebrated ancient Tamil poet and philosopher who wrote the Tirukkural.",
+    "topic": "Tamil Literature",
+    "difficulty": "EASY"
+  }
+];
+
+const SAMPLE_MD_TEMPLATE = `## Q1
+What is the capital of Tamil Nadu?
+- A) Madurai
+- B) Chennai
+- C) Coimbatore
+- D) Tiruchirappalli
+**Answer:** B
+**Explanation:** Chennai is the capital city of Tamil Nadu.
+
+## Q2
+Which of the following is the author of Tirukkural?
+- A) Thiruvalluvar
+- B) Kambar
+- C) Avvaiyar
+- D) Bharathiyar
+**Answer:** A
+**Explanation:** Thiruvalluvar is the celebrated ancient Tamil poet and philosopher who wrote the Tirukkural.
+`;
+
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
+    const templateFormat = searchParams.get("template");
+
+    // Phase 3.3: Downloadable sample template
+    if (templateFormat) {
+      if (templateFormat.toLowerCase() === "markdown" || templateFormat.toLowerCase() === "md") {
+        return new NextResponse(SAMPLE_MD_TEMPLATE, {
+          headers: {
+            "Content-Type": "text/markdown; charset=utf-8",
+            "Content-Disposition": 'attachment; filename="question_bank_sample_template.md"',
+          },
+        });
+      }
+      return new NextResponse(JSON.stringify(SAMPLE_JSON_TEMPLATE, null, 2), {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          "Content-Disposition": 'attachment; filename="question_bank_sample_template.json"',
+        },
+      });
+    }
+
     const subjectCode = searchParams.get("code") || searchParams.get("subjectCode");
     const prepClass = parseInt(searchParams.get("prepClass"), 10);
 
@@ -48,6 +121,8 @@ export async function GET(request) {
         options: JSON.parse(item.options),
         correctAnswer: item.correctAnswer,
         explanation: item.explanation,
+        topic: item.topic,
+        difficulty: item.difficulty,
         sourceFormat: item.sourceFormat,
       });
     });
@@ -71,7 +146,13 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    const { subjectCode, format = "JSON", content, questions: directQuestions } = body;
+    const {
+      subjectCode,
+      format = "JSON",
+      content,
+      questions: directQuestions,
+      mode = "replace", // "replace" or "append"
+    } = body;
 
     if (!subjectCode) {
       return NextResponse.json({ error: "Subject code is required (e.g. TAM-10, MAT-10, CSC-12)." }, { status: 400 });
@@ -95,7 +176,7 @@ export async function POST(request) {
     let rawQuestions = [];
     if (Array.isArray(directQuestions)) {
       rawQuestions = directQuestions;
-    } else if (format.toUpperCase() === "MARKDOWN" || typeof content === "string" && content.includes("#")) {
+    } else if (format.toUpperCase() === "MARKDOWN" || (typeof content === "string" && content.includes("#"))) {
       rawQuestions = parseMarkdownQuestionBank(typeof content === "string" ? content : "");
     } else if (typeof content === "string") {
       try {
@@ -120,34 +201,58 @@ export async function POST(request) {
       }, { status: 400 });
     }
 
-    // Validate
+    // Validate using central parser
     const { errors, validItems } = validateQuestionItems(rawQuestions);
 
     if (errors.length > 0 && validItems.length === 0) {
       return NextResponse.json({
         success: false,
-        message: "Question bank validation failed. Please correct the reported issues.",
+        message: "Question bank validation failed. All questions contained errors.",
         errors,
+        rejected: errors,
         validCount: 0,
         errorCount: errors.length,
       }, { status: 422 });
     }
 
-    // Store in DB: Replace or add into subject's QuestionBankItem
-    await db.questionBankItem.deleteMany({
-      where: { subjectId: subject.id },
-    });
+    // Warning if count is not 100
+    const warning = validItems.length !== 100
+      ? `Question bank has ${validItems.length} questions (expected 100 questions).`
+      : null;
 
-    for (const item of validItems) {
+    // Mode: Replace or Append
+    let startNumber = 1;
+    if (mode === "append") {
+      const highestItem = await db.questionBankItem.findFirst({
+        where: { subjectId: subject.id },
+        orderBy: { questionNumber: "desc" },
+      });
+      if (highestItem) {
+        startNumber = highestItem.questionNumber + 1;
+      }
+    } else {
+      // Replace mode: delete previous questions for this subject
+      await db.questionBankItem.deleteMany({
+        where: { subjectId: subject.id },
+      });
+    }
+
+    // Store in DB
+    for (let i = 0; i < validItems.length; i++) {
+      const item = validItems[i];
+      const qNum = mode === "append" ? startNumber + i : item.questionNumber;
       await db.questionBankItem.create({
         data: {
           subjectId: subject.id,
-          questionNumber: item.questionNumber,
+          questionNumber: qNum,
           questionText: item.questionText,
-          marks: item.marks,
+          marks: item.marks || 1,
           options: item.options,
           correctAnswer: item.correctAnswer,
           explanation: item.explanation,
+          topic: item.topic || null,
+          difficulty: item.difficulty || "MEDIUM",
+          language: subject.medium === "Tamil" ? "ta" : "en",
           sourceFormat: format.toUpperCase(),
         },
       });
@@ -155,11 +260,13 @@ export async function POST(request) {
 
     return NextResponse.json({
       success: true,
-      message: `Successfully imported ${validItems.length} questions into Question Bank for ${subject.name} (${subject.code})!`,
+      message: `Successfully imported ${validItems.length} valid questions into Question Bank for ${subject.name} (${subject.code}) in ${mode} mode!`,
       subject: { id: subject.id, code: subject.code, name: subject.name },
       importedCount: validItems.length,
       errorsCount: errors.length,
       errors: errors.length > 0 ? errors : undefined,
+      rejected: errors.length > 0 ? errors : [],
+      warning,
     });
   } catch (error) {
     console.error("[QuestionBank API POST Error]", error);

@@ -173,6 +173,7 @@ export async function POST(request) {
     resetRateLimit(`student_${cleanRollNo}`);
 
     // 5. Sign session token
+    const userLanguage = user.language || (user.profile.medium === "Tamil" ? "ta" : "en");
     const sessionPayload = {
       userId: user.id,
       username: user.username,
@@ -183,6 +184,7 @@ export async function POST(request) {
       examPrepClass: user.profile.examPrepClass,
       board: user.profile.board,
       medium: user.profile.medium || "English",
+      language: userLanguage,
     };
 
     const token = await signSession(sessionPayload);

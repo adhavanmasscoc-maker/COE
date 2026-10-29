@@ -176,6 +176,43 @@ function COEAdminExamsContent() {
     }));
   };
 
+  // Phase 4.3: Apply common details to all rows
+  const applyCommonDetailsToAllRows = () => {
+    const commonTime = `${examHour}:${examMinute} ${examAmpm}`;
+    setPerSubjectRows((prev) => {
+      const updated = { ...prev };
+      selectedSubjectIds.forEach((id) => {
+        updated[id] = {
+          ...(updated[id] || {}),
+          date: examDateOnly,
+          time: commonTime,
+          durationMinutes: formData.durationMinutes,
+          totalMarks: formData.totalMarks,
+          instructions: formData.instructions,
+        };
+      });
+      return updated;
+    });
+  };
+
+  // Phase 4.3: Copy single row's time to all rows
+  const copyTimeToAllRows = (sourceSubId) => {
+    const source = perSubjectRows[sourceSubId] || {};
+    const timeToCopy = source.time || `${examHour}:${examMinute} ${examAmpm}`;
+    const dateToCopy = source.date || examDateOnly;
+    setPerSubjectRows((prev) => {
+      const updated = { ...prev };
+      selectedSubjectIds.forEach((id) => {
+        updated[id] = {
+          ...(updated[id] || {}),
+          date: dateToCopy,
+          time: timeToCopy,
+        };
+      });
+      return updated;
+    });
+  };
+
   const openRandomSwapper = async (exam) => {
     setRandomSwapperExam(exam);
     setLoadingPool(true);
@@ -956,7 +993,13 @@ function COEAdminExamsContent() {
                       <Layers className="w-3.5 h-3.5 text-sky-400" />
                       Sequence of Selected Examinations ({selectedSubjectIds.length} Subjects — Vertically Scrollable)
                     </span>
-                    <span className="text-[10px] text-muted-foreground">Each row has independent date, time &amp; marks</span>
+                    <button
+                      type="button"
+                      onClick={applyCommonDetailsToAllRows}
+                      className="px-2.5 py-1 rounded-lg bg-sky-500/15 border border-sky-500/30 text-sky-300 hover:bg-sky-500/25 text-[10.5px] font-bold"
+                    >
+                      Apply Common Details to All Rows
+                    </button>
                   </div>
 
                   <div className="max-h-56 overflow-y-auto space-y-2.5 p-2 rounded-xl bg-slate-950/40 border border-border pr-1">
@@ -973,6 +1016,14 @@ function COEAdminExamsContent() {
                               {sub?.name}
                             </span>
                             <div className="flex items-center gap-2">
+                              <button
+                                type="button"
+                                onClick={() => copyTimeToAllRows(subId)}
+                                className="text-[10px] text-amber-400 hover:text-amber-300 hover:underline font-semibold"
+                                title="Copy this date & time to all selected rows"
+                              >
+                                Copy Time to All
+                              </button>
                               <span className="badge badge-purple text-[10px]">{sub?.code}</span>
                               <span className="badge badge-emerald text-[9px]">10 MCQs Auto-Sampled</span>
                             </div>

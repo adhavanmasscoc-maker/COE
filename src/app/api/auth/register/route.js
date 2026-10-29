@@ -159,6 +159,7 @@ export async function POST(request) {
         username: rollNo,
         passwordHash,
         role: "STUDENT", // Immediately activated so candidate can register then login
+        language: language === "Tamil" ? "ta" : "en",
         profile: {
           create: {
             fullName: name,

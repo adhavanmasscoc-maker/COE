@@ -39,6 +39,30 @@ export async function GET(request) {
       "TAM-09", "ENG-09", "MAT-09", "SCI-09", "SOC-09"
     ];
 
+    // Tamil name map for state board syllabus
+    const TA_NAMES = {
+      "TAM-10": "தமிழ் மொழி",
+      "ENG-10": "ஆங்கிலம்",
+      "MAT-10": "கணிதம்",
+      "SCI-10": "அறிவியல்",
+      "SOC-10": "சமூக அறிவியல்",
+      "TAM-12": "தமிழ் மொழி",
+      "ENG-12": "ஆங்கிலம்",
+      "MAT-12": "கணிதம்",
+      "PHY-12": "இயற்பியல்",
+      "CHE-12": "வேதியியல்",
+      "CSC-12": "கணினி அறிவியல்",
+      "BIO-12": "உயிரியல்",
+      "BOT-12": "தாவரவியல்",
+      "ZOO-12": "விலங்கியல்",
+      "ACC-12": "கணக்குப்பதிவியல்",
+      "COM-12": "வணிகவியல்",
+      "ECO-12": "பொருளியல்",
+      "BMS-12": "வணிகக் கணிதம் & புள்ளியியல்",
+      "CA-12": "கணினி பயன்பாடுகள்",
+      "HIS-12": "வரலாறு",
+    };
+
     // Tag streams and apply curriculum order
     const enriched = subjects.map((s) => {
       let stream = "Core";
@@ -53,6 +77,11 @@ export async function GET(request) {
       }
       return {
         ...s,
+        name_en: s.nameEn || s.name,
+        name_ta: s.nameTa || TA_NAMES[s.code] || s.name,
+        category: s.category || stream,
+        standard: s.prepClass,
+        active: s.active !== false,
         stream,
       };
     }).sort((a, b) => {

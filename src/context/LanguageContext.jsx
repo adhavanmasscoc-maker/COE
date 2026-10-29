@@ -6,8 +6,10 @@ import { getTranslation } from "@/lib/i18n";
 const LanguageContext = createContext({
   language: "en",
   setLanguage: () => {},
+  toggleLanguage: () => {},
   t: (key, fallback) => key,
   isTamil: false,
+  mounted: false,
 });
 
 export function LanguageProvider({ children }) {
@@ -29,8 +31,8 @@ export function LanguageProvider({ children }) {
     fetch("/api/auth/me")
       .then((r) => r.json())
       .then((data) => {
-        if (data?.authenticated && data.user?.medium) {
-          const userLang = data.user.medium === "Tamil" ? "ta" : "en";
+        if (data?.authenticated && (data.user?.language || data.user?.medium)) {
+          const userLang = (data.user.language === "ta" || data.user.medium === "Tamil") ? "ta" : "en";
           setLanguageState(userLang);
           localStorage.setItem("exam_portal_lang", userLang);
           document.documentElement.lang = userLang;
@@ -45,10 +47,21 @@ export function LanguageProvider({ children }) {
     localStorage.setItem("exam_portal_lang", normalized);
     document.documentElement.lang = normalized;
 
+    // Persist to user profile if logged in
+    fetch("/api/auth/me", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ language: normalized }),
+    }).catch(() => {});
+
     // Dispatch custom event so any non-React code or separate tabs react
     if (typeof window !== "undefined") {
       window.dispatchEvent(new CustomEvent("languagechange", { detail: normalized }));
     }
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === "ta" ? "en" : "ta");
   };
 
   const t = (key, fallback = "") => {
@@ -58,7 +71,7 @@ export function LanguageProvider({ children }) {
   const isTamil = language === "ta" || language === "Tamil";
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, isTamil, mounted }}>
+    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t, isTamil, mounted }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -67,4 +80,3 @@ export function LanguageProvider({ children }) {
 export function useLanguage() {
   return useContext(LanguageContext);
 }
-

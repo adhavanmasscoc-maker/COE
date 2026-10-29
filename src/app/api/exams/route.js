@@ -57,10 +57,15 @@ export async function GET(request) {
       }
     }
 
-    // Build query conditions
-    const whereClause = {
-      status: "PUBLISHED",
-    };
+    // Build query conditions (Phase 4.4: Visibility bug fix - include PUBLISHED, SCHEDULED, LIVE, COMPLETED)
+    const statusParam = searchParams.get("status");
+    const whereClause = {};
+    if (statusParam && statusParam !== "ALL") {
+      whereClause.status = statusParam.toUpperCase();
+    } else {
+      whereClause.status = { in: ["PUBLISHED", "SCHEDULED", "LIVE", "COMPLETED"] };
+    }
+
     if (targetPrepClass) {
       whereClause.prepClass = targetPrepClass;
     }
@@ -92,6 +97,9 @@ export async function GET(request) {
         totalMarks: exam.totalMarks,
         instructions: exam.instructions,
         questionsCount: exam._count.questions,
+        status: exam.status,
+        phase: exam.phase,
+        examLanguage: exam.examLanguage || "en",
         hasSubmitted: !!studentSubmission?.isSubmitted,
         submittedAt: studentSubmission?.submittedAt || null,
         preliminaryScore: studentSubmission?.score ?? null,

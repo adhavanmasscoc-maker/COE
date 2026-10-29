@@ -12,6 +12,7 @@ model User {
   username     String          @unique // Roll No (e.g. TN2026-0901) or Admin ID (coe.admin)
   passwordHash String          // Hashed DOB (YYYY-MM-DD) or hashed admin password
   role         String          @default("STUDENT") // "STUDENT" or "ADMIN"
+  language     String          @default("en") // "en" or "ta"
   createdAt    DateTime        @default(now())
   updatedAt    DateTime        @updatedAt
   profile      StudentProfile?
@@ -39,6 +40,10 @@ model StudentProfile {
 model Subject {
   id              String           @id @default(cuid())
   name            String           // e.g. Mathematics, Science, Physics
+  nameEn          String?          // e.g. Mathematics
+  nameTa          String?          // e.g. கணிதம்
+  category        String           @default("Core") // Core, Language, Science, Commerce, Arts
+  active          Boolean          @default(true)
   code            String           @unique // e.g. MAT-10, PHY-12
   prepClass       Int              // 10 or 12
   medium          String           @default("English")
@@ -129,6 +134,7 @@ model ExamSchedule {
   totalMarks      Int          @default(100)
   requiredQuestions Int        @default(0)  // minimum question count before publish is allowed
   instructions    String?
+  examLanguage    String       @default("en") // "en" (English) or "ta" (Tamil)
   // 10-phase lifecycle: 0=scheduled,1=questions_set,2=verified,3=published,
   // 4=reached_students,5=exam_live,6=submissions,7=evaluated,8=result_verified,9=result_published
   phase           Int          @default(0)
@@ -257,6 +263,9 @@ model QuestionBankItem {
   options        String   // JSON stringified: { "A": "...", "B": "...", "C": "...", "D": "..." }
   correctAnswer  String   // "A", "B", "C", or "D"
   explanation    String?
+  topic          String?
+  difficulty     String   @default("MEDIUM") // "EASY", "MEDIUM", "HARD"
+  language       String   @default("en") // "en" or "ta"
   sourceFormat   String   @default("JSON") // "JSON" or "MARKDOWN"
   createdAt      DateTime @default(now())
 

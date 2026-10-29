@@ -1,6 +1,13 @@
 // Question Bank Validation and Parsing Library
 // Compatible with both Next.js ESM imports and Node.js require()
 
+function sanitizeHtml(str) {
+  if (typeof str !== "string") return "";
+  return str.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+            .replace(/javascript:/gi, "")
+            .replace(/on\w+\s*=/gi, "");
+}
+
 function validateQuestionItems(rawItems) {
   const errors = [];
   const validItems = [];
@@ -8,7 +15,7 @@ function validateQuestionItems(rawItems) {
 
   rawItems.forEach((item, index) => {
     const qNum = item.id || item.questionNumber || index + 1;
-    const qText = (item.question || item.questionText || "").trim();
+    const qText = sanitizeHtml((item.question || item.questionText || "").trim());
 
     if (!qText) {
       errors.push({
@@ -37,13 +44,13 @@ function validateQuestionItems(rawItems) {
       if (Array.isArray(item.options)) {
         item.options.forEach((opt) => {
           if (opt && opt.id && opt.text) {
-            optionsObj[opt.id.toUpperCase()] = String(opt.text).trim();
+            optionsObj[opt.id.toUpperCase()] = sanitizeHtml(String(opt.text).trim());
           }
         });
       } else {
         ["A", "B", "C", "D"].forEach((key) => {
           if (item.options[key] || item.options[key.toLowerCase()]) {
-            optionsObj[key] = String(item.options[key] || item.options[key.toLowerCase()]).trim();
+            optionsObj[key] = sanitizeHtml(String(item.options[key] || item.options[key.toLowerCase()]).trim());
           }
         });
       }
@@ -75,7 +82,7 @@ function validateQuestionItems(rawItems) {
       questionText: qText,
       options: optionsObj,
       correctAnswer: ans,
-      explanation: item.explanation ? String(item.explanation).trim() : null,
+      explanation: item.explanation ? sanitizeHtml(String(item.explanation).trim()) : null,
       difficulty: item.difficulty || "MEDIUM",
       marks: item.marks ? Number(item.marks) : 1,
     });
