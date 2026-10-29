@@ -14,6 +14,42 @@ import {
   Code, Calculator, FileCheck, Check, Database, ListChecks, History
 } from "lucide-react";
 
+function normalizeOptionsList(options) {
+  if (!options) return [];
+  let parsed = options;
+  if (typeof parsed === "string") {
+    try {
+      parsed = JSON.parse(parsed);
+    } catch {
+      return [];
+    }
+  }
+  if (Array.isArray(parsed)) {
+    return parsed.map((item, idx) => {
+      if (typeof item === "string") {
+        return { id: String.fromCharCode(65 + idx), text: item };
+      }
+      if (item && typeof item === "object") {
+        return {
+          id: String(item.id || item.key || String.fromCharCode(65 + idx)).toUpperCase(),
+          text: String(item.text !== undefined ? item.text : item.label !== undefined ? item.label : item.value !== undefined ? item.value : ""),
+        };
+      }
+      return { id: String.fromCharCode(65 + idx), text: String(item || "") };
+    });
+  }
+  if (parsed && typeof parsed === "object") {
+    return Object.keys(parsed).map((k) => {
+      const val = parsed[k];
+      return {
+        id: k.toUpperCase(),
+        text: typeof val === "object" && val !== null ? String(val.text || val.label || "") : String(val !== undefined && val !== null ? val : ""),
+      };
+    });
+  }
+  return [];
+}
+
 export default function CurriculumRepositoryPage() {
   const router = useRouter();
 
@@ -471,9 +507,9 @@ export default function CurriculumRepositoryPage() {
                                     {/* MCQ Options if present */}
                                     {q.options && (
                                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 font-mono text-[11px]">
-                                        {Object.entries(q.options).map(([optKey, optVal]) => (
-                                          <div key={optKey} className="px-2 py-1 rounded bg-secondary/80 border border-border/80">
-                                            <strong>({optKey})</strong> {optVal}
+                                        {normalizeOptionsList(q.options).map((opt) => (
+                                          <div key={opt.id} className="px-2 py-1 rounded bg-secondary/80 border border-border/80">
+                                            <strong>({opt.id})</strong> {opt.text}
                                           </div>
                                         ))}
                                       </div>
@@ -562,16 +598,16 @@ export default function CurriculumRepositoryPage() {
                               {idx + 1}. {q.questionText}
                             </div>
                             <div className="grid grid-cols-2 gap-1.5 font-mono text-[11px]">
-                              {Object.entries(q.options || {}).map(([k, v]) => {
-                                const isCorrect = k.toLowerCase() === q.correctAnswer?.toLowerCase();
+                              {normalizeOptionsList(q.options).map((opt) => {
+                                const isCorrect = opt.id.toLowerCase() === q.correctAnswer?.toLowerCase();
                                 return (
                                   <div
-                                    key={k}
+                                    key={opt.id}
                                     className={`px-2 py-1 rounded border ${
                                       isCorrect ? "bg-emerald-500/20 border-emerald-500/40 text-emerald-200 font-bold" : "bg-background/80 border-border text-muted-foreground"
                                     }`}
                                   >
-                                    ({k}) {v}
+                                    ({opt.id}) {opt.text}
                                   </div>
                                 );
                               })}

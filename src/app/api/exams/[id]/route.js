@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server";
 import { getCurrentSession } from "@/lib/auth";
 import { db } from "@/lib/db";
-
-export const dynamic = "force-dynamic";
-
 import { decryptSubmissionPayload } from "@/lib/encryption";
+import { normalizeOptionsList } from "@/lib/questionBankParser";
 
 // GET /api/exams/[id]: Fetch exam hall data with anti-cheat sanitization
 export async function GET(request, { params }) {
@@ -133,12 +131,7 @@ export async function GET(request, { params }) {
 
     // Parse question options & sanitize answers for student anti-cheat
     const sanitizedQuestions = exam.questions.map((q) => {
-      let parsedOptions = [];
-      try {
-        parsedOptions = typeof q.options === "string" ? JSON.parse(q.options) : q.options;
-      } catch (e) {
-        parsedOptions = [];
-      }
+      const parsedOptions = normalizeOptionsList(q.options);
 
       const qData = {
         id: q.id,

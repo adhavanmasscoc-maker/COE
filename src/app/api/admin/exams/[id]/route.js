@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getCurrentSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { decryptSubmissionPayload } from "@/lib/encryption";
+import { normalizeOptionsList } from "@/lib/questionBankParser";
 
 export const dynamic = "force-dynamic";
 
@@ -53,12 +54,9 @@ export async function GET(request, { params }) {
       return NextResponse.json({ error: "Exam schedule not found." }, { status: 404 });
     }
 
-    // Parse options json for each question
+    // Parse options json for each question and guarantee standard array format
     const formattedQuestions = exam.questions.map((q) => {
-      let parsedOptions = [];
-      try {
-        parsedOptions = typeof q.options === "string" ? JSON.parse(q.options) : q.options;
-      } catch { parsedOptions = []; }
+      const parsedOptions = normalizeOptionsList(q.options);
       return { ...q, options: parsedOptions };
     });
 

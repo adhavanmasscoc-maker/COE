@@ -36,6 +36,75 @@ import {
 } from "lucide-react";
 import { ExamLifecycleStepper, calculateExamPhase } from "@/components/admin/ExamLifecycleStepper";
 
+function normalizeOptionsList(options) {
+  if (!options) return [];
+  let parsed = options;
+  if (typeof parsed === "string") {
+    try {
+      parsed = JSON.parse(parsed);
+    } catch {
+      return [];
+    }
+  }
+  if (Array.isArray(parsed)) {
+    return parsed.map((item, idx) => {
+      if (typeof item === "string") {
+        return { id: String.fromCharCode(65 + idx), text: item };
+      }
+      if (item && typeof item === "object") {
+        return {
+          id: String(item.id || item.key || String.fromCharCode(65 + idx)).toUpperCase(),
+          text: String(item.text !== undefined ? item.text : item.label !== undefined ? item.label : item.value !== undefined ? item.value : ""),
+        };
+      }
+      return { id: String.fromCharCode(65 + idx), text: String(item || "") };
+    });
+  }
+  if (parsed && typeof parsed === "object") {
+    return Object.keys(parsed).map((k) => {
+      const val = parsed[k];
+      return {
+        id: k.toUpperCase(),
+        text: typeof val === "object" && val !== null ? String(val.text || val.label || "") : String(val !== undefined && val !== null ? val : ""),
+      };
+    });
+  }
+  return [];
+}
+
+function safeFormatDate(dateVal, options = {}) {
+  try {
+    if (!dateVal) return "TBD";
+    const d = new Date(dateVal);
+    if (isNaN(d.getTime())) return "TBD";
+    return d.toLocaleDateString("en-IN", options);
+  } catch {
+    return "TBD";
+  }
+}
+
+function safeFormatTime(dateVal, options = {}) {
+  try {
+    if (!dateVal) return "TBD";
+    const d = new Date(dateVal);
+    if (isNaN(d.getTime())) return "TBD";
+    return d.toLocaleTimeString("en-IN", options);
+  } catch {
+    return "TBD";
+  }
+}
+
+function safeISODate(dateVal) {
+  try {
+    if (!dateVal) return new Date().toISOString().slice(0, 10);
+    const d = new Date(dateVal);
+    if (isNaN(d.getTime())) return new Date().toISOString().slice(0, 10);
+    return d.toISOString().slice(0, 10);
+  } catch {
+    return new Date().toISOString().slice(0, 10);
+  }
+}
+
 function COEAdminExamsContent() {
   const searchParams = useSearchParams();
   const initialStatus = searchParams.get("status") || "ALL";
@@ -358,7 +427,7 @@ function COEAdminExamsContent() {
           prev.map((e) => (e.id === exam.id ? { ...e, status: nextStatus } : e))
         );
         showMsg(
-          `Exam "${exam.subject.name}" (Class ${exam.prepClass}) is now ${
+          `Exam "${exam.subject?.name || "Subject"}" (Class ${exam.prepClass}) is now ${
             nextStatus === "PUBLISHED" ? "PUBLISHED to Student Portal" : "saved as DRAFT (Hidden)"
           }.`
         );
@@ -665,7 +734,7 @@ function COEAdminExamsContent() {
                     Loading exam schedules...
                   </td>
                 </tr>
-              ) : exams.filter(e => statusFilter === "ALL" || e.status === statusFilter).length === 0 ? (
+              ) : exams.filter(e => e && (statusFilter === "ALL" || e.status === statusFilter)).length === 0 ? (
                 <tr>
                   <td colSpan={9} className="py-8 text-center text-muted-foreground">
                     No examination schedules found for selected filter. Click &quot;Create Exam Schedule&quot; above to schedule one.
@@ -673,12 +742,12 @@ function COEAdminExamsContent() {
                 </tr>
               ) : (
                 exams
-                  .filter(e => statusFilter === "ALL" || e.status === statusFilter)
+                  .filter(e => e && (statusFilter === "ALL" || e.status === statusFilter))
                   .map((exam) => (
                   <tr key={exam.id} className="hover:bg-secondary/30 transition-colors">
                     <td className="py-3 px-4">
-                      <span className="font-bold text-foreground block">{exam.subject?.name}</span>
-                      <span className="font-mono text-[10px] text-muted-foreground">{exam.subject?.code}</span>
+                      <span className="font-bold text-foreground block">{exam.subject?.name || "Exam Subject"}</span>
+                      <span className="font-mono text-[10px] text-muted-foreground">{exam.subject?.code || "N/A"}</span>
                     </td>
                     <td className="py-3 px-4">
                       <Badge variant="purple">Class {exam.prepClass}</Badge>
@@ -687,14 +756,14 @@ function COEAdminExamsContent() {
                       <div className="flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5 text-sky-400" />
                         <span>
-                          {new Date(exam.examDate).toLocaleDateString("en-IN", {
+                          {safeFormatDate(exam.examDate, {
                             day: "numeric",
                             month: "short",
                             year: "numeric",
                           })}
                         </span>
                         <span className="text-foreground font-semibold">
-                          {new Date(exam.examDate).toLocaleTimeString("en-IN", {
+                          {safeFormatTime(exam.examDate, {
                             hour: "numeric",
                             minute: "2-digit",
                             hour12: true,
@@ -761,7 +830,7 @@ function COEAdminExamsContent() {
                     </td>
                     <td className="py-3 px-4 text-right space-x-1.5 whitespace-nowrap">
                       <Link
-                        href={`/coe-admin/exam-setter?examId=${exam.id}&sub=${exam.subject?.code || ""}&date=${new Date(exam.examDate).toISOString().slice(0, 10)}&time=${new Date(exam.examDate).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}&marks=${exam.totalMarks}&count=${exam._count?.questions || 10}`}
+                        href={`/coe-admin/exam-setter?examId=${exam.id}&sub=${exam.subject?.code || ""}&date=${safeISODate(exam.examDate)}&time=${safeFormatTime(exam.examDate, { hour: "2-digit", minute: "2-digit", hour12: false })}&marks=${exam.totalMarks || 100}&count=${exam._count?.questions || 10}`}
                       >
                         <Button
                           size="sm"
@@ -1266,11 +1335,11 @@ function COEAdminExamsContent() {
                           >
                             <div>
                               <span className="font-bold text-foreground">
-                                {sub.student?.fullName} ({sub.student?.user?.username})
+                                {sub.studentName || sub.student?.fullName || "Candidate"} ({sub.rollNo || sub.student?.user?.username || "Roll No"})
                               </span>
                               <div className="text-[11px] text-muted-foreground flex items-center gap-2 mt-0.5">
-                                <span>Time Spent: {Math.floor(sub.timeTakenSecs / 60)}m {sub.timeTakenSecs % 60}s</span>
-                                <span>• Submitted: {new Date(sub.submittedAt).toLocaleTimeString("en-IN")}</span>
+                                <span>Time Spent: {Math.floor((sub.timeTakenSecs || 0) / 60)}m {(sub.timeTakenSecs || 0) % 60}s</span>
+                                <span>• Submitted: {safeFormatTime(sub.submittedAt)}</span>
                               </div>
                             </div>
                             <Badge variant="success" className="font-mono">
@@ -1320,7 +1389,7 @@ function COEAdminExamsContent() {
                             </div>
 
                             <div className="grid grid-cols-2 gap-2 text-[11px] pt-1">
-                              {q.options?.map((opt) => (
+                              {normalizeOptionsList(q.options).map((opt) => (
                                 <div
                                   key={opt.id}
                                   className={`p-2 rounded-lg border flex items-center gap-2 ${
@@ -1686,11 +1755,11 @@ function COEAdminExamsContent() {
                             {selectedSubmission.studentName} ({selectedSubmission.rollNo})
                           </span>
                           <span className="text-[11px] text-muted-foreground">
-                            Submitted at {new Date(selectedSubmission.submittedAt).toLocaleTimeString("en-IN")} • Time Taken: {Math.floor(selectedSubmission.timeTakenSecs / 60)} mins
+                            Submitted at {safeFormatTime(selectedSubmission.submittedAt)} • Time Taken: {Math.floor((selectedSubmission.timeTakenSecs || 0) / 60)} mins
                           </span>
                         </div>
                         <Badge variant="success" className="text-xs font-mono font-bold">
-                          Total Score: {selectedSubmission.score} / {examDetail.totalMarks}
+                          Total Score: {selectedSubmission.score || 0} / {examDetail?.totalMarks || 100}
                         </Badge>
                       </div>
 
@@ -1718,7 +1787,7 @@ function COEAdminExamsContent() {
                               </div>
 
                               <div className="grid grid-cols-2 gap-2 text-[11px]">
-                                {q.options?.map((opt) => {
+                                {normalizeOptionsList(q.options).map((opt) => {
                                   const isCandidateOpt = chosen === opt.id;
                                   const isCorrectOpt = q.correctAnswer === opt.id;
 
@@ -1836,7 +1905,7 @@ function COEAdminExamsContent() {
                     </div>
 
                     <div className="grid grid-cols-2 gap-2 text-[11px]">
-                      {q.options?.map((opt) => (
+                      {normalizeOptionsList(q.options).map((opt) => (
                         <div
                           key={opt.id}
                           className={`p-2.5 rounded-lg border flex items-center justify-between ${

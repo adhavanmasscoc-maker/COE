@@ -27,6 +27,42 @@ import {
   ChevronLeft,
 } from "lucide-react";
 
+function normalizeOptionsList(options) {
+  if (!options) return [];
+  let parsed = options;
+  if (typeof parsed === "string") {
+    try {
+      parsed = JSON.parse(parsed);
+    } catch {
+      return [];
+    }
+  }
+  if (Array.isArray(parsed)) {
+    return parsed.map((item, idx) => {
+      if (typeof item === "string") {
+        return { id: String.fromCharCode(65 + idx), text: item };
+      }
+      if (item && typeof item === "object") {
+        return {
+          id: String(item.id || item.key || String.fromCharCode(65 + idx)).toUpperCase(),
+          text: String(item.text !== undefined ? item.text : item.label !== undefined ? item.label : item.value !== undefined ? item.value : ""),
+        };
+      }
+      return { id: String.fromCharCode(65 + idx), text: String(item || "") };
+    });
+  }
+  if (parsed && typeof parsed === "object") {
+    return Object.keys(parsed).map((k) => {
+      const val = parsed[k];
+      return {
+        id: k.toUpperCase(),
+        text: typeof val === "object" && val !== null ? String(val.text || val.label || "") : String(val !== undefined && val !== null ? val : ""),
+      };
+    });
+  }
+  return [];
+}
+
 function SyllabusExplorerContent() {
   const searchParams = useSearchParams();
   const initialSubjectCode = searchParams.get("code");
@@ -564,7 +600,7 @@ function SyllabusExplorerContent() {
 
                     {/* Options */}
                     <div className="space-y-2.5">
-                      {q.options?.map((opt) => {
+                      {normalizeOptionsList(q.options).map((opt) => {
                         const isChosen = selectedOpt === opt.id;
                         return (
                           <div
@@ -729,7 +765,7 @@ function SyllabusExplorerContent() {
 
                     {/* Options Breakdown */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-3">
-                      {q.options?.map((opt) => {
+                      {normalizeOptionsList(q.options).map((opt) => {
                         const isStudent = q.studentAnswer === opt.id;
                         const isAnswer = q.correctAnswer === opt.id;
 
