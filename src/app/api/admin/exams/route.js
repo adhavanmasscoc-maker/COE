@@ -4,6 +4,12 @@ import { db } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
+// Helper to randomly sample N items from an array without replacement
+function sampleRandom(array, count) {
+  const shuffled = [...array].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, Math.min(count, array.length));
+}
+
 // GET /api/admin/exams: List all exams with subject info, question counts, and submission stats
 export async function GET(request) {
   try {
@@ -16,14 +22,14 @@ export async function GET(request) {
     const prepClassParam = searchParams.get("prepClass");
 
     const whereClause = {};
-    if (prepClassParam) {
+    if (prepClassParam && prepClassParam !== "ALL") {
       whereClause.prepClass = parseInt(prepClassParam, 10);
     }
 
     const exams = await db.examSchedule.findMany({
       where: whereClause,
       include: {
-        subject: { select: { id: true, name: true, code: true, prepClass: true } },
+        subject: { select: { id: true, name: true, code: true, prepClass: true, medium: true } },
         _count: {
           select: {
             questions: true,
@@ -66,7 +72,7 @@ export async function GET(request) {
   }
 }
 
-// POST /api/admin/exams: Create a new exam schedule
+// POST /api/admin/exams: Create single or batch multi-subject exam schedules with random question sampling
 export async function POST(request) {
   try {
     const session = await getCurrentSession();
@@ -75,33 +81,110 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    const { subjectId, prepClass, examDate, durationMinutes, totalMarks, instructions, status } = body;
+    const isBatch = Array.isArray(body.batch) && body.batch.length > 0;
+    const examPayloads = isBatch ? body.batch : [body];
 
-    if (!subjectId || !prepClass || !examDate) {
-      return NextResponse.json(
-        { error: "Subject ID, preparation class, and exam date/time are required." },
-        { status: 400 }
-      );
+    const createdExams = [];
+
+    for (const item of examPayloads) {
+      const {
+        subjectId,
+        prepClass,
+        examDate,
+        durationMinutes,
+        totalMarks,
+        instructions,
+        status = "PUBLISHED",
+        randomSelectCount,
+      } = item;
+
+      if (!subjectId || !prepClass || !examDate) {
+        continue;
+      }
+
+      const pClass = parseInt(prepClass, 10);
+      const marks = parseInt(totalMarks, 10) || 100;
+      const duration = parseInt(durationMinutes, 10) || 150;
+
+      // 1. Create the exam schedule
+      const newSchedule = await db.examSchedule.create({
+        data: {
+          subjectId,
+          prepClass: pClass,
+          examDate: new Date(examDate),
+          durationMinutes: duration,
+          totalMarks: marks,
+          instructions: instructions || null,
+          status: status || "PUBLISHED",
+          phase: 3, // Live Published phase
+        },
+        include: {
+          subject: { select: { id: true, name: true, code: true } },
+        },
+      });
+
+      // 2. Random Question Selection from Subject's Question Bank (Phase 6)
+      const targetCount = parseInt(randomSelectCount, 10) || (marks <= 25 ? 10 : marks <= 50 ? 15 : 20);
+      const bankItems = await db.questionBankItem.findMany({
+        where: { subjectId },
+      });
+
+      if (bankItems.length > 0) {
+        const sampled = sampleRandom(bankItems, targetCount);
+        const marksPerQ = Math.max(1, Math.round(marks / sampled.length));
+
+        for (let i = 0; i < sampled.length; i++) {
+          const bq = sampled[i];
+          let parsedOptions = [];
+          try {
+            const rawOpts = JSON.parse(bq.options);
+            if (Array.isArray(rawOpts)) {
+              parsedOptions = rawOpts;
+            } else {
+              parsedOptions = Object.keys(rawOpts).map((k) => ({
+                id: k.toUpperCase(),
+                text: rawOpts[k],
+              }));
+            }
+          } catch {
+            parsedOptions = [
+              { id: "A", text: "Option A" },
+              { id: "B", text: "Option B" },
+              { id: "C", text: "Option C" },
+              { id: "D", text: "Option D" },
+            ];
+          }
+
+          await db.examQuestion.create({
+            data: {
+              examScheduleId: newSchedule.id,
+              questionNumber: i + 1,
+              questionText: bq.questionText,
+              marks: marksPerQ,
+              options: JSON.stringify(parsedOptions),
+              correctAnswer: bq.correctAnswer,
+              explanation: bq.explanation,
+              reviewStatus: "approved",
+              source: "question_bank",
+            },
+          });
+        }
+      }
+
+      createdExams.push(newSchedule);
     }
 
-    const newExam = await db.examSchedule.create({
-      data: {
-        subjectId,
-        prepClass: parseInt(prepClass, 10),
-        examDate: new Date(examDate),
-        durationMinutes: durationMinutes ? parseInt(durationMinutes, 10) : 150,
-        totalMarks: totalMarks ? parseInt(totalMarks, 10) : 100,
-        instructions: instructions || null,
-        status: status || "DRAFT",
+    return NextResponse.json(
+      {
+        success: true,
+        count: createdExams.length,
+        exams: createdExams,
+        message: `Successfully created and published ${createdExams.length} examination schedule(s)!`,
       },
-      include: {
-        subject: { select: { name: true, code: true } },
-      },
-    });
-
-    return NextResponse.json({ success: true, exam: newExam }, { status: 201 });
+      { status: 201 }
+    );
   } catch (error) {
     console.error("Admin exams POST error:", error);
-    return NextResponse.json({ error: "Failed to create exam schedule in database." }, { status: 500 });
+    return NextResponse.json({ error: "Failed to create exam schedules: " + error.message }, { status: 500 });
   }
 }

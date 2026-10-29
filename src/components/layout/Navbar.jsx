@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { useLanguage } from "@/context/LanguageContext";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { 
@@ -24,12 +25,14 @@ import {
   Eye,
   Sparkles,
   FolderArchive,
-  Zap
+  Zap,
+  Languages
 } from "lucide-react";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
+  const { language, setLanguage, t, isTamil } = useLanguage();
   const pathname = usePathname();
   const router = useRouter();
 
@@ -44,6 +47,10 @@ export function Navbar() {
           const data = await res.json();
           if (data.authenticated) {
             setCurrentUser(data.user);
+            // If user's medium is Tamil and language is not set to ta, align it
+            if (data.user.medium === "Tamil" && !localStorage.getItem("exam_portal_lang")) {
+              setLanguage("ta");
+            }
           } else {
             setCurrentUser(null);
           }
@@ -74,31 +81,31 @@ export function Navbar() {
   const getNavLinks = () => {
     if (currentUser?.role === "ADMIN") {
       return [
-        { href: "/coe-admin/dashboard", label: "COE Control", icon: ShieldCheck },
-        { href: "/coe-admin/curriculum", label: "Curriculum Archive", icon: FolderArchive },
-        { href: "/coe-admin/ai-questions", label: "AI Exam Setter", icon: Zap },
-        { href: "/coe-admin/exam-setter", label: "Exam Setter (JSON)", icon: Sparkles },
-        { href: "/coe-admin/student-preview", label: "Student Preview", icon: Eye },
-        { href: "/coe-admin/students", label: "Students", icon: Users },
-        { href: "/coe-admin/exams", label: "Exams", icon: Calendar },
-        { href: "/coe-admin/results", label: "Marks Entry", icon: Award },
-        { href: "/coe-admin/syllabus", label: "Syllabus", icon: Layers },
-        { href: "/coe-admin/papers", label: "Papers", icon: FileText },
+        { href: "/coe-admin/dashboard", label: isTamil ? "முதன்மை கட்டுப்பாடு" : "COE Control", icon: ShieldCheck },
+        { href: "/coe-admin/curriculum", label: isTamil ? "பாடத்திட்ட காப்பகம்" : "Curriculum Archive", icon: FolderArchive },
+        { href: "/coe-admin/ai-questions", label: isTamil ? "AI தேர்வு அமைப்பான்" : "AI Exam Setter", icon: Zap },
+        { href: "/coe-admin/exam-setter", label: isTamil ? "JSON தேர்வு அமைப்பான்" : "Exam Setter (JSON)", icon: Sparkles },
+        { href: "/coe-admin/student-preview", label: isTamil ? "மாணவர் பார்வை" : "Student Preview", icon: Eye },
+        { href: "/coe-admin/students", label: isTamil ? "மாணவர்கள்" : "Students", icon: Users },
+        { href: "/coe-admin/exams", label: isTamil ? "தேர்வுகள்" : "Exams", icon: Calendar },
+        { href: "/coe-admin/results", label: isTamil ? "மதிப்பெண்கள்" : "Marks Entry", icon: Award },
+        { href: "/coe-admin/syllabus", label: isTamil ? "பாடத்திட்டம்" : "Syllabus", icon: Layers },
+        { href: "/coe-admin/papers", label: isTamil ? "வினாத்தாள்கள்" : "Papers", icon: FileText },
       ];
     }
     if (currentUser?.role === "STUDENT") {
       return [
-        { href: "/student/dashboard", label: "Dashboard", icon: LayoutDashboard },
-        { href: "/student/syllabus", label: "Syllabus & Practice", icon: BookOpen },
-        { href: "/student/papers", label: "Question Papers", icon: FileText },
-        { href: "/student/results", label: "Marksheet", icon: Award },
+        { href: "/student/dashboard", label: t("nav_dashboard", "Dashboard"), icon: LayoutDashboard },
+        { href: "/student/syllabus", label: t("nav_syllabus", "Syllabus & Practice"), icon: BookOpen },
+        { href: "/student/papers", label: t("nav_papers", "Question Papers"), icon: FileText },
+        { href: "/student/results", label: t("nav_results", "Marksheet"), icon: Award },
       ];
     }
     return [
-      { href: "/", label: "Portal Home", icon: GraduationCap },
-      { href: "/student/dashboard", label: "Student Login", icon: LayoutDashboard },
-      { href: "/student/syllabus", label: "Syllabus & Practice", icon: BookOpen },
-      { href: "/coe-admin/dashboard", label: "COE Control", icon: ShieldCheck },
+      { href: "/", label: t("nav_home", "Portal Home"), icon: GraduationCap },
+      { href: "/student/dashboard", label: t("nav_student_login", "Student Sign In"), icon: LayoutDashboard },
+      { href: "/student/syllabus", label: t("nav_syllabus", "Syllabus & Practice"), icon: BookOpen },
+      { href: "/coe-admin/dashboard", label: t("nav_coe_login", "COE Admin"), icon: ShieldCheck },
     ];
   };
 
@@ -186,6 +193,16 @@ export function Navbar() {
                 <span className="text-[11px] font-medium text-emerald-400">Class 10 & 12 Prep Ready</span>
               </div>
             )}
+
+            <button
+              type="button"
+              onClick={() => setLanguage(isTamil ? "en" : "ta")}
+              className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border border-border bg-card hover:bg-secondary text-xs font-semibold text-foreground transition-all shadow-sm"
+              title={isTamil ? "Switch interface to English" : "தமிழுக்கு மாற்றுக (Switch to Tamil)"}
+            >
+              <Languages className="w-3.5 h-3.5 text-violet-400" />
+              <span>{isTamil ? "தமிழ்" : "English"}</span>
+            </button>
 
             <ThemeToggle />
 

@@ -17,8 +17,10 @@ export function ThemeProvider({ children }) {
     setTheme(savedTheme);
     if (savedTheme === "dark") {
       document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
     } else {
       document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
     }
   }, []);
 
@@ -28,8 +30,10 @@ export function ThemeProvider({ children }) {
     localStorage.setItem("exam_portal_theme", nextTheme);
     if (nextTheme === "dark") {
       document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
     } else {
       document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
     }
   };
 

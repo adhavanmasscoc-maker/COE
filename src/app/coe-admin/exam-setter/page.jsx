@@ -1,9 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { AdminGuard } from "@/components/auth/AdminGuard";
+import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 import {
   FileJson,
   Sparkles,
@@ -15,756 +18,591 @@ import {
   Clock,
   Award,
   Layers,
-  Eye,
   Send,
   Loader2,
-  BookOpen,
-  HelpCircle,
   ArrowRight,
+  ArrowLeft,
+  RefreshCw,
+  Code2,
+  BookOpen
 } from "lucide-react";
 
-const NOTEBOOK_LLM_PROMPT = `Act as an expert Tamil Nadu Samacheer Kalvi & DGE Examination Setter.
-Generate a complete, authentic examination question paper in JSON format matching this exact schema:
+// Generate exact template matching Phase 5.2
+function generateExactTemplate({ sub, date, time, total_marks, language, level, count }) {
+  const qCount = parseInt(count, 10) || (total_marks <= 25 ? 10 : 20);
+  const questions = [];
 
-{
-  "examTitle": "Official Model Examination 2026",
-  "subjectCode": "MAT-10",
-  "subjectName": "Mathematics",
-  "prepClass": 10,
-  "medium": "English",
-  "examDate": "2026-11-20",
-  "startTime": "09:30 AM",
-  "durationMinutes": 180,
-  "totalMarks": 100,
-  "passingMarks": 35,
-  "instructions": "Dear candidate, please read each question calmly. Manage your 180 minutes steadily. Best wishes!",
-  "status": "PUBLISHED",
-  "paperType": "MODEL",
-  "syllabusUnits": [
-    {
-      "unitNumber": 1,
-      "title": "Relations and Functions",
-      "chapters": [
-        { "chapterNumber": 1, "title": "Ordered Pair & Cartesian Product" }
-      ]
-    }
-  ],
-  "questions": [
-    {
-      "questionNumber": 1,
-      "section": "Part I - One Mark Questions",
-      "marks": 1,
-      "questionText": "If n(A x B) = 6 and A = {1, 3}, then n(B) is:",
-      "options": [
-        { "id": "A", "text": "1" },
-        { "id": "B", "text": "2" },
-        { "id": "C", "text": "3" },
-        { "id": "D", "text": "6" }
-      ],
-      "correctAnswer": "C",
-      "explanation": "Since n(A x B) = n(A) x n(B) and n(A) = 2, we have 6 = 2 x n(B) => n(B) = 3."
-    }
-  ]
-}
-
-Ensure:
-1. "durationMinutes" is set accurately (e.g. 180 for 3 hours, 150 for 2.5 hours).
-2. "startTime" is formatted in 12-Hour AM/PM (e.g. "09:30 AM" or "02:00 PM").
-3. Each question has detailed step-by-step "explanation" and correct answer.
-4. Output ONLY valid JSON with no markdown wrapping or preamble.`;
-
-const SAMPLE_180M_MAT10 = {
-  examTitle: "Class 10 Mathematics Public Practice Examination 2026",
-  subjectCode: "MAT-10",
-  subjectName: "Mathematics",
-  prepClass: 10,
-  medium: "English",
-  examDate: "2026-11-15",
-  startTime: "09:30 AM",
-  durationMinutes: 180,
-  totalMarks: 100,
-  passingMarks: 35,
-  instructions: "Dear candidate, take a deep breath. Read each question carefully and calmly. Manage your 180 minutes with confidence. Best wishes for your success!",
-  status: "PUBLISHED",
-  paperType: "PUBLIC_EXAM",
-  syllabusUnits: [
-    {
-      unitNumber: 1,
-      title: "Relations and Functions",
-      chapters: [
-        { chapterNumber: 1, title: "Ordered Pairs & Cartesian Product" },
-        { chapterNumber: 2, title: "Relations & Types of Functions" }
-      ]
-    },
-    {
-      unitNumber: 2,
-      title: "Numbers and Sequences",
-      chapters: [
-        { chapterNumber: 1, title: "Euclid's Division Lemma" },
-        { chapterNumber: 2, title: "Arithmetic & Geometric Progressions" }
-      ]
-    }
-  ],
-  questions: [
-    {
-      questionNumber: 1,
-      section: "Part I — 1 Mark Multiple Choice Questions",
-      marks: 1,
-      questionText: "If n(A × B) = 6 and A = {1, 3}, then n(B) is:",
-      options: [
-        { id: "A", text: "1" },
-        { id: "B", text: "2" },
-        { id: "C", text: "3" },
-        { id: "D", text: "6" }
-      ],
-      correctAnswer: "C",
-      explanation: "By the multiplication principle of Cartesian products, n(A × B) = n(A) × n(B). Given n(A) = 2 and n(A × B) = 6: 6 = 2 × n(B) ⟹ n(B) = 3."
-    },
-    {
-      questionNumber: 2,
-      section: "Part I — 1 Mark Multiple Choice Questions",
-      marks: 1,
-      questionText: "The least number that is divisible by all numbers from 1 to 10 (both inclusive) is:",
-      options: [
-        { id: "A", text: "2025" },
-        { id: "B", text: "5040" },
-        { id: "C", text: "2520" },
-        { id: "D", text: "100" }
-      ],
-      correctAnswer: "C",
-      explanation: "The LCM of numbers 1 through 10 is 2³ × 3² × 5 × 7 = 8 × 9 × 5 × 7 = 2520."
-    },
-    {
-      questionNumber: 3,
-      section: "Part I — 1 Mark Multiple Choice Questions",
-      marks: 1,
-      questionText: "If the first term of an A.P. is a and common difference is d, then the sum of first n terms is given by:",
-      options: [
-        { id: "A", text: "n/2 [2a + (n - 1)d]" },
-        { id: "B", text: "n/2 [a + (n - 1)d]" },
-        { id: "C", text: "n [2a + (n - 1)d]" },
-        { id: "D", text: "a + (n - 1)d" }
-      ],
-      correctAnswer: "A",
-      explanation: "The standard arithmetic series formula is S_n = (n/2) * [2a + (n - 1)d]."
-    },
-    {
-      questionNumber: 4,
-      section: "Part I — 1 Mark Multiple Choice Questions",
-      marks: 1,
-      questionText: "Which of the following is a relation from A = {1, 2, 3, 4} to B = {4, 7}?",
-      options: [
-        { id: "A", text: "{(1, 4), (2, 7), (3, 8)}" },
-        { id: "B", text: "{(1, 4), (2, 7), (3, 4), (4, 7)}" },
-        { id: "C", text: "{(4, 1), (7, 2)}" },
-        { id: "D", text: "{(1, 7), (2, 4), (5, 4)}" }
-      ],
-      correctAnswer: "B",
-      explanation: "Every element of the relation must be an ordered pair (a, b) where a ∈ A and b ∈ B. Only option B satisfies this completely."
-    },
-    {
-      questionNumber: 5,
-      section: "Part I — 1 Mark Multiple Choice Questions",
-      marks: 1,
-      questionText: "Euclid's division lemma states that for positive integers a and b, there exist unique integers q and r such that a = bq + r, where r must satisfy:",
-      options: [
-        { id: "A", text: "1 < r < b" },
-        { id: "B", text: "0 ≤ r < b" },
-        { id: "C", text: "0 < r ≤ b" },
-        { id: "D", text: "0 < r < b" }
-      ],
-      correctAnswer: "B",
-      explanation: "By Euclid's Division Lemma, the remainder r is non-negative and strictly less than the divisor b: 0 ≤ r < b."
-    }
-  ]
-};
-
-const SAMPLE_180M_PHY12 = {
-  examTitle: "Class 12 Physics Higher Secondary Public Board Examination 2026",
-  subjectCode: "PHY-12",
-  subjectName: "Physics",
-  prepClass: 12,
-  medium: "English",
-  examDate: "2026-11-22",
-  startTime: "09:30 AM",
-  durationMinutes: 180,
-  totalMarks: 70,
-  passingMarks: 24,
-  instructions: "Dear candidate, manage your 180 minutes with calm confidence. Draw neat diagrams where necessary. Best wishes!",
-  status: "PUBLISHED",
-  paperType: "PUBLIC_EXAM",
-  syllabusUnits: [
-    {
-      unitNumber: 1,
-      title: "Electrostatics",
-      chapters: [
-        { chapterNumber: 1, title: "Coulomb's Law and Electric Field" },
-        { chapterNumber: 2, title: "Gauss Law and Electric Potential" }
-      ]
-    }
-  ],
-  questions: [
-    {
-      questionNumber: 1,
-      section: "Part I — Multiple Choice",
-      marks: 1,
-      questionText: "Two point charges +3 μC and +4 μC repel each other with a force of 10 N. If a charge of -6 μC is added to each of them, then the new force will be:",
-      options: [
-        { id: "A", text: "5 N (attractive)" },
-        { id: "B", text: "10 N (repulsive)" },
-        { id: "C", text: "20 N (attractive)" },
-        { id: "D", text: "5 N (repulsive)" }
-      ],
-      correctAnswer: "A",
-      explanation: "Initial charges: q1 = 3, q2 = 4 (product = 12). New charges: q1' = 3 - 6 = -3 μC, q2' = 4 - 6 = -2 μC (product = 6). Since product is halved and charges have like signs, force magnitude is halved to 5 N, and signs are like so it remains repulsive, or if opposite attractive based on resultant."
-    },
-    {
-      questionNumber: 2,
-      section: "Part I — Multiple Choice",
-      marks: 1,
-      questionText: "The electric flux through a closed Gaussian surface enclosing an electric dipole is:",
-      options: [
-        { id: "A", text: "q / ε₀" },
-        { id: "B", text: "2q / ε₀" },
-        { id: "C", text: "Zero" },
-        { id: "D", text: "Infinite" }
-      ],
-      correctAnswer: "C",
-      explanation: "By Gauss's law, total electric flux Φ = q_enclosed / ε₀. An electric dipole consists of equal and opposite charges (+q and -q), so net enclosed charge is +q - q = 0. Therefore, Φ = 0."
-    }
-  ]
-};
-
-const SAMPLE_180M_CS12 = {
-  examTitle: "Class 12 Computer Science Official Examination 2026",
-  subjectCode: "CS-12",
-  subjectName: "Computer Science",
-  prepClass: 12,
-  medium: "English",
-  examDate: "2026-11-25",
-  startTime: "02:00 PM",
-  durationMinutes: 180,
-  totalMarks: 70,
-  passingMarks: 24,
-  instructions: "Dear candidate, read each algorithm and Python syntax question carefully. Manage your time calmly.",
-  status: "PUBLISHED",
-  paperType: "PUBLIC_EXAM",
-  syllabusUnits: [
-    {
-      unitNumber: 1,
-      title: "Problem Solving and Python",
-      chapters: [
-        { chapterNumber: 1, title: "Functions and Scoping" },
-        { chapterNumber: 2, title: "Data Abstraction and Object Orientation" }
-      ]
-    }
-  ],
-  questions: [
-    {
-      questionNumber: 1,
-      section: "Part I — Objectives",
-      marks: 1,
-      questionText: "In Python, which keyword is used to define an anonymous or in-line function?",
-      options: [
-        { id: "A", text: "def" },
-        { id: "B", text: "lambda" },
-        { id: "C", text: "inline" },
-        { id: "D", text: "function" }
-      ],
-      correctAnswer: "B",
-      explanation: "The 'lambda' keyword in Python creates small, anonymous function objects at runtime."
-    }
-  ]
-};
-
-const SAMPLE_180M_MAT12 = {
-  examTitle: "Class 12 Mathematics Higher Secondary Public Examination 2026",
-  subjectCode: "MAT-12",
-  subjectName: "Mathematics",
-  prepClass: 12,
-  medium: "English",
-  examDate: "2026-11-28",
-  startTime: "09:30 AM",
-  durationMinutes: 180,
-  totalMarks: 90,
-  passingMarks: 30,
-  instructions: "Dear candidate, verify all matrix determinants and vector solutions step-by-step. Manage your 180 minutes with confidence.",
-  status: "PUBLISHED",
-  paperType: "PUBLIC_EXAM",
-  syllabusUnits: [
-    {
-      unitNumber: 1,
-      title: "Applications of Matrices and Determinants",
-      chapters: [
-        { chapterNumber: 1, title: "Rank of a Matrix & Adjoint" },
-        { chapterNumber: 2, title: "Linear Equations & Cramer Rule" }
-      ]
-    }
-  ],
-  questions: [
-    {
-      questionNumber: 1,
-      section: "Part I — 1 Mark Multiple Choice",
-      marks: 1,
-      questionText: "If |A| ≠ 0, then A is a:",
-      options: [
-        { id: "A", text: "Non-singular matrix" },
-        { id: "B", text: "Singular matrix" },
-        { id: "C", text: "Zero matrix" },
-        { id: "D", text: "Identity matrix only" }
-      ],
-      correctAnswer: "A",
-      explanation: "A square matrix A is defined to be non-singular if and only if its determinant is non-zero, i.e., |A| ≠ 0."
-    }
-  ]
-};
-
-function parseDisplayDuration(val) {
-  if (typeof val === "number" && !isNaN(val)) return val;
-  if (typeof val === "string") {
-    const trimmed = val.trim();
-    const hMatch = trimmed.match(/^(\d+(?:\.\d+)?)\s*(?:h|hr|hrs|hours)$/i);
-    if (hMatch) return Math.round(parseFloat(hMatch[1]) * 60);
-    const mMatch = trimmed.match(/^(\d+)\s*(?:m|min|mins|minutes)?$/i);
-    if (mMatch) return parseInt(mMatch[1], 10);
+  for (let i = 1; i <= qCount; i++) {
+    questions.push({
+      id: i,
+      question: `<<QUESTION_${i}>>`,
+      options: {
+        A: `<<OPTION_A>>`,
+        B: `<<OPTION_B>>`,
+        C: `<<OPTION_C>>`,
+        D: `<<OPTION_D>>`
+      },
+      answer: `<<CORRECT_OPTION_LETTER>>`
+    });
   }
-  return 180;
+
+  return {
+    sub: sub || "TAM",
+    date: date || new Date().toISOString().slice(0, 10),
+    time: time || "09:30",
+    total_marks: parseInt(total_marks, 10) || 25,
+    language: language || "Tamil",
+    level: level || "10 police-level questions",
+    questions
+  };
 }
 
-export default function ExamSetterPage() {
-  const [jsonInput, setJsonInput] = useState(JSON.stringify(SAMPLE_180M_MAT10, null, 2));
-  const [copiedPrompt, setCopiedPrompt] = useState(false);
-  const [parsedExam, setParsedExam] = useState(SAMPLE_180M_MAT10);
-  const [parseError, setParseError] = useState("");
-  const [publishSchedule, setPublishSchedule] = useState(true);
-  const [publishSyllabus, setPublishSyllabus] = useState(true);
-  const [submitting, setSubmitting] = useState(false);
-  const [successReceipt, setSuccessReceipt] = useState(null);
+// Sample Completed 25-Mark Tamil Paper for instant demonstration
+const SAMPLE_25M_TAMIL = {
+  sub: "TAM-10",
+  date: "2026-11-20",
+  time: "09:30",
+  total_marks: 25,
+  language: "Tamil",
+  level: "10 police-level questions",
+  questions: [
+    {
+      id: 1,
+      question: "தமிழ்நாட்டின் அரசு முத்திரையில் பொறிக்கப்பட்டுள்ள கோவில் கோபுரம் எது?",
+      options: {
+        A: "மதுரை மீனாட்சி அம்மன் கோவில்",
+        B: "ஸ்ரீவில்லிபுத்தூர் ஆண்டாள் கோவில்",
+        C: "தஞ்சை பெரிய கோவில்",
+        D: "காஞ்சி கைலாசநாதர் கோவில்"
+      },
+      answer: "B"
+    },
+    {
+      id: 2,
+      question: "‘காற்றே வா’ என்னும் தலைப்பில் வசன கவிதை இயற்றியவர் யார்?",
+      options: {
+        A: "மகாகவி பாரதியார்",
+        B: "பாவேந்தர் பாரதிதாசன்",
+        C: "கவிமணி தேசிக விநாயகம் பிள்ளை",
+        D: "நாமக்கல் கவிஞர்"
+      },
+      answer: "A"
+    },
+    {
+      id: 3,
+      question: "‘செய்குதம்பி பாவலர்’ அவர்களின் சிறப்பான கலைத்திறன் பட்டம் எது?",
+      options: {
+        A: "கவியரசு",
+        B: "சதாவதானி",
+        C: "பாவலரேறு",
+        D: "சொல்லின் செல்வர்"
+      },
+      answer: "B"
+    },
+    {
+      id: 4,
+      question: "முல்லைப்பாட்டு நூலின் ஆசிரியர் யார் மற்றும் அது எந்த இலக்கிய வகையைச் சார்ந்தது?",
+      options: {
+        A: "நப்பூதனார் — பத்துப்பாட்டு",
+        B: "கபிலர் — எட்டுத்தொகை",
+        C: "நக்கீரர் — பதினெண்கீழ்க்கணக்கு",
+        D: "பரணர் — சங்க மருவிய காலம்"
+      },
+      answer: "A"
+    },
+    {
+      id: 5,
+      question: "சிலப்பதிகாரத்தை இயற்றிய இளங்கோவடிகள் எந்த நாட்டின் அரச மரபினர்?",
+      options: {
+        A: "சேர நாடு",
+        B: "சோழ நாடு",
+        C: "பாண்டிய நாடு",
+        D: "பல்லவ நாடு"
+      },
+      answer: "A"
+    },
+    {
+      id: 6,
+      question: "தொகைநிலைத் தொடர்கள் எத்தனை வகைப்படும்?",
+      options: {
+        A: "நான்கு",
+        B: "ஐந்து",
+        C: "ஆறு",
+        D: "எட்டு"
+      },
+      answer: "C"
+    },
+    {
+      id: 7,
+      question: "‘கெடுப்பதூஉம் கெட்டார்க்குச் சார்வாய்’ — இதில் பயின்று வந்துள்ள அளபெடை எது?",
+      options: {
+        A: "செய்யுளிசை அளபெடை",
+        B: "இன்னிசை அளபெடை",
+        C: "சொல்லிசை அளபெடை",
+        D: "ஒற்றளபெடை"
+      },
+      answer: "B"
+    },
+    {
+      id: 8,
+      question: "கம்பராமாயணத்தில் உள்ள காண்டங்களின் மொத்த எண்ணிக்கை எத்தனை?",
+      options: {
+        A: "ஐந்து காண்டங்கள்",
+        B: "ஆறு காண்டங்கள்",
+        C: "ஏழு காண்டங்கள்",
+        D: "எட்டு காண்டங்கள்"
+      },
+      answer: "B"
+    },
+    {
+      id: 9,
+      question: "‘செங்காந்தள்’ என்பதன் இலக்கணக் குறிப்பு என்ன?",
+      options: {
+        A: "வினைத்தொகை",
+        B: "பண்புத்தொகை",
+        C: "உம்மைத்தொகை",
+        D: "வேற்றுமைத்தொகை"
+      },
+      answer: "B"
+    },
+    {
+      id: 10,
+      question: "திருக்குறளில் உள்ள மொத்த அதிகாரங்கள் மற்றும் குறட்பாக்களின் எண்ணிக்கை யாது?",
+      options: {
+        A: "133 அதிகாரங்கள், 1330 குறள்கள்",
+        B: "130 அதிகாரங்கள், 1300 குறள்கள்",
+        C: "140 அதிகாரங்கள், 1400 குறள்கள்",
+        D: "125 அதிகாரங்கள், 1250 குறள்கள்"
+      },
+      answer: "A"
+    }
+  ]
+};
 
-  const handleJsonChange = (val) => {
-    setJsonInput(val);
+function ExamSetterContent() {
+  const searchParams = useSearchParams();
+  const targetExamId = searchParams.get("examId") || "";
+  const paramSub = searchParams.get("sub") || "TAM-10";
+  const paramDate = searchParams.get("date") || new Date().toISOString().slice(0, 10);
+  const paramTime = searchParams.get("time") || "09:30";
+  const paramMarks = searchParams.get("marks") || "25";
+  const paramLang = searchParams.get("lang") || "Tamil";
+  const paramCount = searchParams.get("count") || "10";
+
+  // Form Configuration
+  const [examId, setExamId] = useState(targetExamId);
+  const [sub, setSub] = useState(paramSub);
+  const [date, setDate] = useState(paramDate);
+  const [time, setTime] = useState(paramTime);
+  const [totalMarks, setTotalMarks] = useState(paramMarks);
+  const [language, setLanguage] = useState(paramLang);
+  const [level, setLevel] = useState("10 police-level questions");
+  const [questionCount, setQuestionCount] = useState(paramCount);
+
+  // JSON Preview & Paste states
+  const [generatedJson, setGeneratedJson] = useState("");
+  const [pastedJson, setPastedJson] = useState("");
+  const [copied, setCopied] = useState(false);
+  const [validating, setValidating] = useState(false);
+  const [validationErrors, setValidationErrors] = useState([]);
+  const [validationSuccess, setValidationSuccess] = useState("");
+  const [importing, setImporting] = useState(false);
+  const [importResult, setImportResult] = useState(null);
+
+  // Regenerate template whenever parameters change
+  useEffect(() => {
+    const template = generateExactTemplate({
+      sub,
+      date,
+      time,
+      total_marks: totalMarks,
+      language,
+      level,
+      count: questionCount
+    });
+    setGeneratedJson(JSON.stringify(template, null, 2));
+  }, [sub, date, time, totalMarks, language, level, questionCount]);
+
+  const handleCopyJson = async () => {
     try {
-      const parsed = JSON.parse(val);
-      setParsedExam(parsed);
-      setParseError("");
-    } catch (e) {
-      setParseError(e.message);
+      await navigator.clipboard.writeText(generatedJson);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      alert("Failed to copy automatically. Please select text manually.");
     }
   };
 
-  const copyPrompt = () => {
-    navigator.clipboard.writeText(NOTEBOOK_LLM_PROMPT);
-    setCopiedPrompt(true);
-    setTimeout(() => setCopiedPrompt(false), 3000);
-  };
+  const handleValidatePasted = () => {
+    setValidating(true);
+    setValidationErrors([]);
+    setValidationSuccess("");
 
-  const loadPreset = (preset) => {
-    const formatted = JSON.stringify(preset, null, 2);
-    setJsonInput(formatted);
-    setParsedExam(preset);
-    setParseError("");
-    setSuccessReceipt(null);
-  };
+    if (!pastedJson.trim()) {
+      setValidationErrors(["Please paste JSON content to validate."]);
+      setValidating(false);
+      return;
+    }
 
-  const handleDeployExam = async (overrideStatus) => {
-    setSubmitting(true);
-    setSuccessReceipt(null);
     try {
-      let payload = JSON.parse(jsonInput);
-      if (overrideStatus) {
-        payload.status = overrideStatus;
-      }
-      payload.publishSchedule = overrideStatus ? (overrideStatus === "PUBLISHED") : publishSchedule;
-      payload.publishSyllabus = publishSyllabus;
+      const parsed = JSON.parse(pastedJson);
+      const errors = [];
 
-      const res = await fetch("/api/admin/exam-setter", {
+      if (!parsed.sub) errors.push("Missing top-level 'sub' field (subject code e.g. 'TAM-10').");
+      if (!parsed.questions || !Array.isArray(parsed.questions)) {
+        errors.push("Missing 'questions' array.");
+      } else if (parsed.questions.length === 0) {
+        errors.push("'questions' array is empty.");
+      } else {
+        parsed.questions.forEach((q, idx) => {
+          const num = q.id || idx + 1;
+          if (!q.question || q.question.includes("<<QUESTION")) {
+            errors.push(`Question #${num}: Question text is missing or still contains template placeholder.`);
+          }
+          if (!q.options || typeof q.options !== "object") {
+            errors.push(`Question #${num}: Missing 'options' object with A, B, C, D.`);
+          } else {
+            ["A", "B", "C", "D"].forEach((c) => {
+              if (!q.options[c] || q.options[c].includes("<<OPTION")) {
+                errors.push(`Question #${num}: Choice '${c}' is missing or has template placeholder.`);
+              }
+            });
+          }
+          const rawAns = String(q.answer || "").trim().toUpperCase();
+          if (!["A", "B", "C", "D"].includes(rawAns)) {
+            errors.push(`Question #${num}: 'answer' must be one of 'A', 'B', 'C', or 'D'.`);
+          }
+        });
+      }
+
+      if (errors.length > 0) {
+        setValidationErrors(errors);
+      } else {
+        setValidationSuccess(`✓ Valid JSON schema! ${parsed.questions.length} questions ready for import.`);
+      }
+    } catch (e) {
+      setValidationErrors([`JSON Syntax Error: ${e.message}`]);
+    } finally {
+      setValidating(false);
+    }
+  };
+
+  const handleImportIntoExam = async () => {
+    setImporting(true);
+    setImportResult(null);
+    try {
+      const res = await fetch("/api/admin/exams/import-json", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          examId,
+          jsonContent: pastedJson
+        })
       });
 
       const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.error || "Failed to deploy exam schedule.");
+      if (res.ok) {
+        setImportResult({ success: true, message: data.message });
+      } else {
+        setImportResult({ success: false, message: data.error || data.message, errors: data.errors });
       }
-
-      setSuccessReceipt(data);
-    } catch (err) {
-      alert(`Deployment Error: ${err.message}`);
+    } catch (e) {
+      setImportResult({ success: false, message: "Network error transmitting JSON to server." });
     } finally {
-      setSubmitting(false);
+      setImporting(false);
     }
   };
 
+  const loadSample = (sampleObj) => {
+    setPastedJson(JSON.stringify(sampleObj, null, 2));
+    setValidationErrors([]);
+    setValidationSuccess(`Loaded sample for ${sampleObj.sub} (${sampleObj.total_marks} Marks). Click Validate & Import!`);
+  };
+
   return (
-    <AdminGuard>
-      <div className="page-content space-y-6">
-        {/* Header */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 animate-float-up">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
-              <FileJson className="w-6 h-6 text-white" />
+    <div className="page-content space-y-6">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 animate-float-up">
+        <div className="flex items-center gap-3">
+          <Link
+            href="/coe-admin/exams"
+            className="p-2 rounded-xl border border-border bg-card hover:bg-secondary text-muted-foreground hover:text-foreground transition-all"
+            title="Return to Exam Schedules"
+          >
+            <ArrowLeft className="w-4 h-4" />
+          </Link>
+          <div>
+            <div className="flex items-center gap-2">
+              <h1 className="text-xl font-black text-foreground">AI Exam Setter & JSON Engine</h1>
+              <Badge variant="purple" className="font-mono text-[10px]">Phase 5 Compliant</Badge>
             </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h1 className="text-xl sm:text-2xl font-black text-[#f0f0ff]">
-                  Exam Setter & JSON Ingestion Engine
-                </h1>
-                <span className="badge badge-violet">NotebookLLM Ready</span>
-              </div>
-              <p className="text-xs text-[#5c5c8a]">
-                Paste question papers and schedules from NotebookLLM or AI exam setters to publish immediately.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              onClick={copyPrompt}
-              className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold glass-sm border border-violet-500/30 text-violet-300 hover:text-white transition-all hover:bg-violet-600/20"
-            >
-              {copiedPrompt ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-              {copiedPrompt ? "Prompt Copied!" : "Copy NotebookLLM Prompt"}
-            </button>
-            <Link href="/coe-admin/exams">
-              <Button size="sm" variant="outline" className="text-xs">
-                View All Exams →
-              </Button>
-            </Link>
+            <p className="text-xs text-muted-foreground">
+              Generate exact schema templates, copy to NotebookLM, and paste back verified examinations.
+            </p>
           </div>
         </div>
 
-        {/* Success Receipt Banner */}
-        {successReceipt && (
-          <div className="p-5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-200 animate-scale-in space-y-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 font-bold text-sm">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400" />
-                {successReceipt.message}
-              </div>
-              <span className="badge badge-emerald">Live in SQLite</span>
-            </div>
-            {successReceipt.summary && (
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 p-3 glass-sm rounded-xl text-xs">
-                <div>
-                  <span className="text-[#5c5c8a] block text-[10px]">Subject</span>
-                  <span className="font-bold text-[#f0f0ff]">{successReceipt.summary.subject}</span>
-                </div>
-                <div>
-                  <span className="text-[#5c5c8a] block text-[10px]">Duration</span>
-                  <span className="font-bold text-[#f0f0ff]">{successReceipt.summary.duration}</span>
-                </div>
-                <div>
-                  <span className="text-[#5c5c8a] block text-[10px]">Questions</span>
-                  <span className="font-bold text-[#f0f0ff]">{successReceipt.summary.questionsCount} Questions</span>
-                </div>
-                <div>
-                  <span className="text-[#5c5c8a] block text-[10px]">Portal Status</span>
-                  <span className="badge badge-emerald">{successReceipt.summary.status}</span>
-                </div>
-              </div>
-            )}
-            <div className="flex items-center gap-2 pt-1">
-              <Link href="/coe-admin/exams">
-                <Button size="xs" variant="success">Inspect in Exam Schedules</Button>
-              </Link>
-              <Link href="/student/dashboard">
-                <Button size="xs" variant="outline">Preview Student Portal</Button>
-              </Link>
-            </div>
-          </div>
-        )}
-
-        {/* Quick Presets */}
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs text-[#5c5c8a] font-semibold flex items-center gap-1">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Fast Presets:
-          </span>
-          <button
-            onClick={() => loadPreset(SAMPLE_180M_MAT10)}
-            className="px-2.5 py-1 rounded-lg text-xs font-medium glass-sm border border-violet-500/20 text-[#a8a8d0] hover:text-white hover:bg-violet-500/10"
-          >
-            Class 10 Math (180 mins / 3 hrs)
-          </button>
-          <button
-            onClick={() => loadPreset(SAMPLE_180M_PHY12)}
-            className="px-2.5 py-1 rounded-lg text-xs font-medium glass-sm border border-violet-500/20 text-[#a8a8d0] hover:text-white hover:bg-violet-500/10"
-          >
-            Class 12 Physics (180 mins / 3 hrs)
-          </button>
-          <button
-            onClick={() => loadPreset(SAMPLE_180M_MAT12)}
-            className="px-2.5 py-1 rounded-lg text-xs font-medium glass-sm border border-violet-500/20 text-[#a8a8d0] hover:text-white hover:bg-violet-500/10"
-          >
-            Class 12 Math (180 mins / 3 hrs)
-          </button>
-          <button
-            onClick={() => loadPreset(SAMPLE_180M_CS12)}
-            className="px-2.5 py-1 rounded-lg text-xs font-medium glass-sm border border-violet-500/20 text-[#a8a8d0] hover:text-white hover:bg-violet-500/10"
-          >
-            Class 12 Computer Science (180 mins)
-          </button>
+        <div className="flex items-center gap-2">
+          <Link href="/coe-admin/exams">
+            <Button variant="outline" size="sm" className="gap-1.5 text-xs">
+              <Calendar className="w-3.5 h-3.5" /> Examination Schedules
+            </Button>
+          </Link>
         </div>
+      </div>
 
-        {/* Main 2-Column Work Area */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Left: JSON Input Textarea */}
-          <div className="lg:col-span-7 space-y-3">
-            <div className="flex items-center justify-between">
-              <label className="text-xs font-bold text-[#f0f0ff] flex items-center gap-1.5">
-                <FileJson className="w-4 h-4 text-violet-400" />
-                Raw Master JSON Payload
-              </label>
-              {parseError ? (
-                <span className="text-[11px] text-rose-400 flex items-center gap-1">
-                  <AlertCircle className="w-3.5 h-3.5" /> Invalid JSON
-                </span>
-              ) : (
-                <span className="text-[11px] text-emerald-400 flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5" /> Valid JSON Schema
-                </span>
-              )}
-            </div>
-
-            <textarea
-              rows={22}
-              value={jsonInput}
-              onChange={(e) => handleJsonChange(e.target.value)}
-              className="w-full p-4 rounded-2xl bg-[rgba(13,13,26,0.9)] border border-[rgba(124,58,237,0.3)] text-emerald-300 font-mono text-xs leading-relaxed focus:outline-none focus:border-violet-400 shadow-inner"
-              placeholder="Paste the JSON from NotebookLLM here..."
-            />
-
-            {/* Ingestion & Publishing Options */}
-            <div className="p-3.5 rounded-xl glass-sm border border-violet-500/20 space-y-2">
-              <span className="text-[11px] font-bold text-[#f0f0ff] uppercase tracking-wider block">
-                Ingestion & Publishing Options:
+      {/* Grid: Left Template Config & Generator (5 cols) | Right Paste & Validator (7 cols) */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        {/* Left Column: Template Config & Copy Box */}
+        <div className="lg:col-span-5 space-y-4">
+          <Card className="border-border space-y-4">
+            <div className="flex items-center justify-between border-b border-border pb-3">
+              <span className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                <Code2 className="w-4 h-4 text-violet-400" />
+                Template Parameters (Phase 5.2)
               </span>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-xs">
-                <label className="flex items-center gap-2 cursor-pointer text-[#a8a8d0] hover:text-white">
-                  <input
-                    type="checkbox"
-                    checked={publishSchedule}
-                    onChange={(e) => setPublishSchedule(e.target.checked)}
-                    className="rounded border-violet-500/40 text-violet-600 focus:ring-0"
-                  />
-                  <span>Publish Schedule to Student Portal immediately</span>
-                </label>
-                <label className="flex items-center gap-2 cursor-pointer text-[#a8a8d0] hover:text-white">
-                  <input
-                    type="checkbox"
-                    checked={publishSyllabus}
-                    onChange={(e) => setPublishSyllabus(e.target.checked)}
-                    className="rounded border-violet-500/40 text-violet-600 focus:ring-0"
-                  />
-                  <span>Import & Publish Syllabus Units & Chapters</span>
-                </label>
+              <span className="badge badge-cyan text-[10px]">{sub}</span>
+            </div>
+
+            <div className="space-y-3 text-xs">
+              <div>
+                <label className="text-muted-foreground font-semibold block mb-1">Subject Code</label>
+                <input
+                  type="text"
+                  value={sub}
+                  onChange={(e) => setSub(e.target.value.toUpperCase())}
+                  className="input-field font-mono"
+                  placeholder="e.g. TAM-10, MAT-10, CSC-12"
+                />
               </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-muted-foreground font-semibold block mb-1">Exam Date</label>
+                  <input
+                    type="date"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                    className="input-field font-mono"
+                  />
+                </div>
+                <div>
+                  <label className="text-muted-foreground font-semibold block mb-1">Start Time (HH:MM)</label>
+                  <input
+                    type="time"
+                    value={time}
+                    onChange={(e) => setTime(e.target.value)}
+                    className="input-field font-mono"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-muted-foreground font-semibold block mb-1">Total Marks</label>
+                  <input
+                    type="number"
+                    value={totalMarks}
+                    onChange={(e) => setTotalMarks(e.target.value)}
+                    className="input-field font-mono"
+                  />
+                </div>
+                <div>
+                  <label className="text-muted-foreground font-semibold block mb-1">Question Count</label>
+                  <input
+                    type="number"
+                    value={questionCount}
+                    onChange={(e) => setQuestionCount(e.target.value)}
+                    className="input-field font-mono"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-muted-foreground font-semibold block mb-1">Language</label>
+                  <select
+                    value={language}
+                    onChange={(e) => setLanguage(e.target.value)}
+                    className="input-field cursor-pointer"
+                  >
+                    <option value="Tamil">Tamil (தமிழ்)</option>
+                    <option value="English">English</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="text-muted-foreground font-semibold block mb-1">Exam Level</label>
+                  <input
+                    type="text"
+                    value={level}
+                    onChange={(e) => setLevel(e.target.value)}
+                    className="input-field text-xs"
+                    placeholder="e.g. 10 police-level questions"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Template JSON Output with 1-Click Copy */}
+            <div>
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="text-[11px] font-bold text-foreground">Exact Output JSON Template</span>
+                <Button
+                  variant={copied ? "success" : "primary"}
+                  size="sm"
+                  onClick={handleCopyJson}
+                  className="gap-1.5 text-xs py-1 px-3 shadow-md"
+                >
+                  {copied ? <><Check className="w-3.5 h-3.5" /> Copied!</> : <><Copy className="w-3.5 h-3.5" /> Copy JSON</>}
+                </Button>
+              </div>
+
+              <div className="relative rounded-xl border border-border bg-slate-950/70 p-3 max-h-56 overflow-y-auto">
+                <pre className="text-[11px] font-mono text-emerald-400 whitespace-pre">
+                  {generatedJson}
+                </pre>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Right Column: Paste & Import Area */}
+        <div className="lg:col-span-7 space-y-4">
+          <Card className="border-border space-y-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-border pb-3">
+              <div>
+                <span className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                  <Sparkles className="w-4 h-4 text-amber-400" />
+                  Paste & Import Completed JSON (NotebookLM / AI Output)
+                </span>
+                <p className="text-[11px] text-muted-foreground">
+                  Paste the generated questions. They will be validated against the exact schema and saved into the exam.
+                </p>
+              </div>
+
+              {/* Sample loader helper */}
+              <button
+                type="button"
+                onClick={() => loadSample(SAMPLE_25M_TAMIL)}
+                className="text-[11px] px-2.5 py-1 rounded-lg bg-violet-500/15 border border-violet-500/30 text-violet-300 hover:bg-violet-500/25 font-bold transition-all whitespace-nowrap cursor-pointer"
+              >
+                Load 25-Mark Tamil Sample →
+              </button>
+            </div>
+
+            {/* Monospace Textarea */}
+            <div>
+              <textarea
+                value={pastedJson}
+                onChange={(e) => {
+                  setPastedJson(e.target.value);
+                  setValidationErrors([]);
+                  setValidationSuccess("");
+                  setImportResult(null);
+                }}
+                rows={14}
+                className="w-full p-3 rounded-xl bg-slate-950/80 border border-border font-mono text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-violet-500"
+                placeholder='Paste completed JSON here, e.g.:
+{
+  "sub": "TAM-10",
+  "date": "2026-11-20",
+  "time": "09:30",
+  "total_marks": 25,
+  "language": "Tamil",
+  "level": "10 police-level questions",
+  "questions": [ ... ]
+}'
+              />
             </div>
 
             {/* Action Bar */}
-            <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-              <span className="text-xs text-[#5c5c8a]">
-                Questions in payload:{" "}
-                <strong className="text-[#f0f0ff]">
-                  {Array.isArray(parsedExam)
-                    ? `${parsedExam.reduce((acc, curr) => acc + (curr.questions?.length || 0), 0)} (${parsedExam.length} Exams)`
-                    : parsedExam?.questions?.length || 0}
-                </strong>
-              </span>
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-border">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleValidatePasted}
+                disabled={validating || !pastedJson.trim()}
+                className="gap-1.5 text-xs"
+              >
+                {validating ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />}
+                Validate Schema
+              </Button>
 
-              <div className="flex items-center gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  disabled={submitting || Boolean(parseError)}
-                  onClick={() => handleDeployExam("DRAFT")}
-                >
-                  Save as Draft
-                </Button>
-                <Button
-                  variant="primary"
-                  size="sm"
-                  disabled={submitting || Boolean(parseError)}
-                  onClick={() => handleDeployExam("PUBLISHED")}
-                  className="gap-1.5 shadow-lg shadow-violet-600/30"
-                >
-                  {submitting ? (
-                    <><Loader2 className="w-4 h-4 animate-spin" /> Deploying…</>
-                  ) : (
-                    <><Send className="w-4 h-4" /> Publish Exam & Questions Immediately</>
-                  )}
-                </Button>
-              </div>
+              <Button
+                variant="primary"
+                size="sm"
+                onClick={handleImportIntoExam}
+                disabled={importing || !pastedJson.trim() || validationErrors.length > 0}
+                className="gap-2 text-xs font-bold bg-gradient-to-r from-violet-600 to-indigo-600 shadow-md shadow-violet-500/25"
+              >
+                {importing ? (
+                  <><Loader2 className="w-4 h-4 animate-spin" /> Importing into Exam...</>
+                ) : (
+                  <><Send className="w-3.5 h-3.5" /> Accept &amp; Import into Exam (Phase 5/10) <ArrowRight className="w-3.5 h-3.5" /></>
+                )}
+              </Button>
             </div>
-          </div>
 
-          {/* Right: Live Visual Verification Panel */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="glass rounded-2xl p-5 border border-violet-500/25 space-y-4">
-              <div className="flex items-center justify-between pb-3 border-b border-[rgba(124,58,237,0.15)]">
-                <h3 className="font-bold text-sm text-[#f0f0ff] flex items-center gap-2">
-                  <Eye className="w-4 h-4 text-violet-400" />
-                  Live Exam Preview
-                </h3>
-                <span className="badge badge-amber text-[10px]">Pre-Flight Check</span>
+            {/* Validation Feedback */}
+            {validationSuccess && (
+              <div className="p-3 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-semibold flex items-center gap-2 animate-scale-in">
+                <CheckCircle2 className="w-4 h-4 flex-shrink-0 text-emerald-400" />
+                <span>{validationSuccess}</span>
               </div>
+            )}
 
-              {parseError ? (
-                <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/25 text-rose-300 text-xs">
-                  <p className="font-bold mb-1">JSON Syntax Error</p>
-                  <p className="font-mono text-[11px]">{parseError}</p>
+            {validationErrors.length > 0 && (
+              <div className="p-3.5 rounded-xl bg-rose-500/15 border border-rose-500/35 text-rose-300 text-xs space-y-1.5 animate-scale-in">
+                <div className="flex items-center gap-1.5 font-bold text-rose-400">
+                  <AlertCircle className="w-4 h-4" />
+                  <span>Validation Reported {validationErrors.length} Issue(s):</span>
                 </div>
-              ) : Array.isArray(parsedExam) ? (
-                <div className="space-y-3 text-xs">
-                  <div className="flex items-center justify-between pb-1 border-b border-[rgba(124,58,237,0.15)]">
-                    <span className="text-[10px] text-[#5c5c8a] uppercase font-bold block">Batch Mode</span>
-                    <span className="badge badge-emerald">{parsedExam.length} Examination Sets</span>
-                  </div>
+                <ul className="list-disc list-inside space-y-1 pl-1 text-[11px] max-h-36 overflow-y-auto">
+                  {validationErrors.map((err, idx) => (
+                    <li key={idx}>{err}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-                  <div className="max-h-72 overflow-y-auto space-y-2 pr-1">
-                    {parsedExam.map((ex, idx) => (
-                      <div key={idx} className="p-3 glass-sm rounded-xl border border-violet-500/20 space-y-1.5 text-xs">
-                        <div className="flex items-center justify-between">
-                          <span className="font-bold text-[#f0f0ff]">
-                            {ex.subjectCode} — Class {ex.prepClass || 12}
-                          </span>
-                          <span className="badge badge-violet text-[10px]">
-                            {ex.questions?.length || 0} Questions
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between text-[11px] text-[#5c5c8a]">
-                          <span>
-                            Date: {new Date(ex.examDate || Date.now()).toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" })}
-                          </span>
-                          <span className="text-amber-300 font-semibold">
-                            {ex.durationMinutes || 60}m · {ex.totalMarks || 15}M
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-200">
-                    All {parsedExam.length} examinations will be deployed to SQLite and automatically mapped to Class {parsedExam[0]?.prepClass || 12} students upon publishing.
-                  </div>
+            {importResult && (
+              <div className={`p-3.5 rounded-xl border text-xs animate-scale-in ${
+                importResult.success
+                  ? "bg-emerald-500/15 border-emerald-500/30 text-emerald-300 font-semibold"
+                  : "bg-rose-500/15 border-rose-500/30 text-rose-300"
+              }`}>
+                <div className="flex items-center gap-2">
+                  {importResult.success ? <CheckCircle2 className="w-4 h-4 text-emerald-400" /> : <AlertCircle className="w-4 h-4 text-rose-400" />}
+                  <span>{importResult.message}</span>
                 </div>
-              ) : (
-                <div className="space-y-3 text-xs">
-                  <div>
-                    <span className="text-[10px] text-[#5c5c8a] uppercase font-bold block">Title</span>
-                    <p className="font-bold text-[#f0f0ff] text-sm">{parsedExam?.examTitle || "Untitled Exam"}</p>
+                {importResult.success && (
+                  <div className="mt-2 pt-2 border-t border-emerald-500/20 flex gap-2">
+                    <Link href="/coe-admin/exams">
+                      <Button variant="outline" size="sm" className="text-xs">
+                        View Updated Schedule in COE Master Control →
+                      </Button>
+                    </Link>
                   </div>
-
-                  <div className="grid grid-cols-2 gap-2 p-3 glass-sm rounded-xl">
-                    <div>
-                      <span className="text-[10px] text-[#5c5c8a] block">Subject</span>
-                      <span className="font-bold text-[#f0f0ff]">{parsedExam?.subjectName || parsedExam?.subjectCode}</span>
-                      <span className="font-mono text-[10px] text-violet-300 block">{parsedExam?.subjectCode}</span>
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-[#5c5c8a] block">Standard</span>
-                      <span className="badge badge-violet text-[10px]">Class {parsedExam?.prepClass}</span>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2 p-3 glass-sm rounded-xl">
-                    <div>
-                      <span className="text-[10px] text-[#5c5c8a] block">Duration</span>
-                      {(() => {
-                        const dur = parseDisplayDuration(
-                          parsedExam?.durationMinutes ?? parsedExam?.time ?? parsedExam?.duration ?? 180
-                        );
-                        return (
-                          <span className="font-bold text-amber-300 flex items-center gap-1">
-                            <Clock className="w-3.5 h-3.5" />
-                            {dur} mins ({(dur / 60).toFixed(1).replace(/\.0$/, '')} hrs)
-                          </span>
-                        );
-                      })()}
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-[#5c5c8a] block">Total Marks</span>
-                      <span className="font-bold text-emerald-300 flex items-center gap-1">
-                        <Award className="w-3.5 h-3.5" />
-                        {parsedExam?.totalMarks || 100} Marks
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Syllabus Units Preview */}
-                  {parsedExam?.syllabusUnits?.length > 0 && (
-                    <div className="p-3 glass-sm rounded-xl space-y-1.5">
-                      <span className="text-[10px] text-cyan-400 font-bold flex items-center gap-1">
-                        <Layers className="w-3.5 h-3.5" />
-                        Syllabus Units ({parsedExam.syllabusUnits.length})
-                      </span>
-                      <div className="space-y-1">
-                        {parsedExam.syllabusUnits.map((u, i) => (
-                          <div key={i} className="text-[11px] text-[#f0f0ff]">
-                            <span className="font-semibold text-cyan-300">Unit {u.unitNumber}:</span> {u.title}
-                            {u.chapters?.length > 0 && (
-                              <span className="text-[10px] text-[#5c5c8a] ml-1">
-                                ({u.chapters.length} chapter{u.chapters.length > 1 ? "s" : ""})
-                              </span>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  <div className="p-3 glass-sm rounded-xl space-y-1">
-                    <span className="text-[10px] text-[#5c5c8a] block">Scheduled Conducting Time</span>
-                    <div className="flex items-center gap-2 font-mono text-xs text-[#f0f0ff]">
-                      <Calendar className="w-3.5 h-3.5 text-cyan-400" />
-                      <span>{parsedExam?.examDate || "2026-11-15"}</span>
-                      <span>•</span>
-                      <span>{parsedExam?.startTime || "09:30 AM"}</span>
-                    </div>
-                  </div>
-
-                  {parsedExam?.instructions && (
-                    <div className="p-3 rounded-xl bg-violet-500/10 border border-violet-500/20 text-[11px] text-[#c4b5fd] italic">
-                      "{parsedExam.instructions}"
-                    </div>
-                  )}
-
-                  {/* Questions Preview Carousel / List */}
-                  <div className="space-y-2 pt-2 border-t border-[rgba(124,58,237,0.15)]">
-                    <div className="flex items-center justify-between">
-                      <span className="font-bold text-xs text-[#f0f0ff]">
-                        Questions ({parsedExam?.questions?.length || 0})
-                      </span>
-                      <span className="text-[10px] text-[#5c5c8a]">Step-by-step solutions linked</span>
-                    </div>
-
-                    <div className="max-h-56 overflow-y-auto space-y-2 pr-1">
-                      {parsedExam?.questions?.slice(0, 6).map((q, idx) => (
-                        <div key={idx} className="p-2.5 rounded-xl glass-sm border border-[rgba(124,58,237,0.15)] space-y-1 text-xs">
-                          <div className="flex items-center justify-between">
-                            <span className="font-bold text-[#f0f0ff]">Q{q.questionNumber || idx + 1}</span>
-                            <span className="badge badge-emerald text-[9px]">{q.marks || 1}M</span>
-                          </div>
-                          <p className="text-[#a8a8d0] line-clamp-2">{q.questionText}</p>
-                          <div className="flex items-center justify-between text-[10px] pt-1 text-[#5c5c8a]">
-                            <span>Correct: <strong className="text-emerald-400">{q.correctAnswer}</strong></span>
-                            <span>{q.options?.length || 0} options</span>
-                          </div>
-                        </div>
-                      ))}
-                      {(parsedExam?.questions?.length || 0) > 6 && (
-                        <p className="text-center text-[10px] text-[#5c5c8a] pt-1">
-                          + {(parsedExam.questions.length - 6)} more questions included in payload
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+                )}
+              </div>
+            )}
+          </Card>
         </div>
       </div>
+    </div>
+  );
+}
+
+export default function ExamSetterPage() {
+  return (
+    <AdminGuard>
+      <Suspense fallback={
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <Loader2 className="w-6 h-6 animate-spin text-violet-400" />
+        </div>
+      }>
+        <ExamSetterContent />
+      </Suspense>
     </AdminGuard>
   );
 }

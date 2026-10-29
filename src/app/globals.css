@@ -44,6 +44,12 @@
     --radius-xl: 1.5rem;
     --radius-2xl: 2rem;
 
+    /* Google Palette (Strict Priority Order: Red, Green, Blue, Yellow - Phase 7.4) */
+    --google-red: #ea4335;
+    --google-green: #34a853;
+    --google-blue: #4285f4;
+    --google-yellow: #fbbc05;
+
     /* Legacy token shim */
     --background: #0d0d1a;
     --foreground: #f0f0ff;
@@ -58,6 +64,38 @@
     --muted: #5c5c8a;
     --muted-foreground: #5c5c8a;
     --border: rgba(124, 58, 237, 0.2);
+  }
+
+  /* Eye-friendly Dim Light Mode (Phase 7.2 & 7.3: Soft warm slate backgrounds, comfortable, no pure white) */
+  html:not(.dark),
+  .light {
+    --bg-base: #dce1e8;
+    --bg-surface: #e5ebf2;
+    --bg-elevated: #edf1f7;
+    --bg-overlay: rgba(220, 225, 232, 0.9);
+
+    --fg-primary: #1a202c;
+    --fg-secondary: #4a5568;
+    --fg-muted: #718096;
+    --fg-accent: #4285f4;
+
+    --border-subtle: rgba(0, 0, 0, 0.1);
+    --border-default: rgba(0, 0, 0, 0.18);
+    --border-strong: rgba(0, 0, 0, 0.3);
+
+    --card: #e8edf3;
+    --card-foreground: #1a202c;
+    --card-border: rgba(0, 0, 0, 0.15);
+
+    --primary: #4285f4;
+    --primary-foreground: #ffffff;
+    --primary-hover: #3367d6;
+
+    --secondary: #dde3eb;
+    --secondary-foreground: #2d3748;
+    --muted: #cbd5e0;
+    --muted-foreground: #718096;
+    --border: rgba(0, 0, 0, 0.15);
   }
 
   * {
@@ -270,36 +308,42 @@
     color: var(--accent-violet-light);
   }
 
-  /* Status badge */
+  /* Status badge (Phase 7.1: Clean rectangular softly-rounded corners, no oval shape) */
   .badge {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
     padding: 0.2rem 0.6rem;
-    border-radius: 99px;
+    border-radius: 6px;
     font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.03em;
     text-transform: uppercase;
   }
+  /* Google Color Palette Badges in Priority Order: Red, Green, Blue, Yellow (Phase 7.4) */
+  .badge-red { background: rgba(234, 67, 53, 0.15); color: #ef4444; border: 1px solid rgba(234, 67, 53, 0.35); }
+  .badge-green { background: rgba(52, 168, 83, 0.15); color: #22c55e; border: 1px solid rgba(52, 168, 83, 0.35); }
+  .badge-blue { background: rgba(66, 133, 244, 0.15); color: #3b82f6; border: 1px solid rgba(66, 133, 244, 0.35); }
+  .badge-yellow { background: rgba(251, 188, 5, 0.15); color: #eab308; border: 1px solid rgba(251, 188, 5, 0.35); }
+
   .badge-violet { background: rgba(124, 58, 237, 0.2); color: #c4b5fd; border: 1px solid rgba(167, 139, 250, 0.3); }
   .badge-cyan { background: rgba(6, 182, 212, 0.15); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.3); }
-  .badge-emerald { background: rgba(5, 150, 105, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
-  .badge-amber { background: rgba(217, 119, 6, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3); }
-  .badge-rose { background: rgba(225, 29, 72, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
+  .badge-emerald { background: rgba(52, 168, 83, 0.15); color: #22c55e; border: 1px solid rgba(52, 168, 83, 0.35); }
+  .badge-amber { background: rgba(251, 188, 5, 0.15); color: #eab308; border: 1px solid rgba(251, 188, 5, 0.35); }
+  .badge-rose { background: rgba(234, 67, 53, 0.15); color: #ef4444; border: 1px solid rgba(234, 67, 53, 0.35); }
   .badge-muted { background: rgba(92, 92, 138, 0.15); color: var(--fg-secondary); border: 1px solid var(--border-subtle); }
 
-  /* Progress bar */
+  /* Progress bar (Phase 7.1: Clean rectangular softly-rounded corners, no oval shape) */
   .progress-bar-track {
     height: 6px;
-    background: rgba(124, 58, 237, 0.15);
-    border-radius: 99px;
+    background: rgba(66, 133, 244, 0.15);
+    border-radius: 4px;
     overflow: hidden;
   }
   .progress-bar-fill {
     height: 100%;
-    border-radius: 99px;
-    background: linear-gradient(90deg, #7c3aed, #06b6d4);
+    border-radius: 4px;
+    background: linear-gradient(90deg, #ea4335 0%, #34a853 35%, #4285f4 70%, #fbbc05 100%);
     transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 

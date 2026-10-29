@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/Button";
 import {
   GraduationCap,
@@ -34,18 +35,21 @@ const features = [
 
 // ─── Register Form ──────────────────────────────────────────────────
 function RegisterForm({ onBack, initialRollNo = "" }) {
+  const { isTamil: globalIsTamil, setLanguage: setGlobalLanguage } = useLanguage();
   const [name, setName] = useState("");
   const [rollNo, setRollNo] = useState(initialRollNo);
   const [dob, setDob] = useState("");
   const [currentClass, setCurrentClass] = useState("10");
   const [examPrepClass, setExamPrepClass] = useState("10");
-  const [language, setLanguage] = useState("English");
+  const [language, setLanguage] = useState(globalIsTamil ? "Tamil" : "English");
   const [availableSubjects, setAvailableSubjects] = useState([]);
   const [selectedSubjects, setSelectedSubjects] = useState([]);
   const [loadingSubjects, setLoadingSubjects] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState(false);
+
+  const isFormTamil = language === "Tamil" || globalIsTamil;
 
   // Fetch subjects whenever examPrepClass changes
   useEffect(() => {
@@ -84,13 +88,17 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
           <CheckCircle2 className="w-8 h-8 text-emerald-400" />
         </div>
         <div>
-          <h3 className="text-lg font-bold text-[#f0f0ff] mb-1">Registration Complete & Active!</h3>
+          <h3 className="text-lg font-bold text-[#f0f0ff] mb-1">
+            {isFormTamil ? "பதிவு வெற்றிகரமாக முடிந்தது!" : "Registration Complete & Active!"}
+          </h3>
           <p className="text-sm text-[#a8a8d0] leading-relaxed">
-            Your candidate account for Roll Number <strong className="text-emerald-300 font-mono">{rollNo}</strong> is active with {selectedSubjects.length} official subjects. You can now sign in immediately.
+            {isFormTamil
+              ? `பதிவு எண் ${rollNo} கொண்ட உங்கள் கணக்கு ${selectedSubjects.length} அதிகாரப்பூர்வ பாடங்களுடன் உடனடியாக செயல்படத் தயாராக உள்ளது.`
+              : `Your candidate account for Roll Number ${rollNo} is active with ${selectedSubjects.length} official subjects. You can now sign in immediately.`}
           </p>
         </div>
-        <Button variant="primary" onClick={onBack} className="w-full justify-center gap-1.5 font-bold shadow-lg shadow-violet-500/30">
-          Sign In Now with Roll Number & DOB →
+        <Button variant="primary" onClick={() => onBack({ rollNo, dob })} className="w-full justify-center gap-1.5 font-bold shadow-lg shadow-violet-500/30">
+          {isFormTamil ? "பதிவு எண் மற்றும் பிறந்த தேதியுடன் உள்நுழைக →" : "Sign In Now with Roll Number & DOB →"}
         </Button>
       </div>
     );
@@ -329,11 +337,11 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
 
       <div>
         <label className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1">
-          <Languages className="w-3.5 h-3.5 text-violet-400" />Preferred Exam Language
+          <Languages className="w-3.5 h-3.5 text-violet-400" />{isFormTamil ? "விருப்ப தேர்வு & தள மொழி" : "Preferred Exam Language"}
         </label>
         <div className="grid grid-cols-2 gap-2">
           {["English", "Tamil"].map((lang) => (
-            <button key={lang} type="button" onClick={() => setLanguage(lang)}
+            <button key={lang} type="button" onClick={() => { setLanguage(lang); setGlobalLanguage(lang === "Tamil" ? "ta" : "en"); }}
               className={`py-2 text-xs font-semibold rounded-xl border transition-all ${
                 language === lang
                   ? "bg-violet-500/20 border-violet-400/50 text-violet-200"
@@ -382,6 +390,7 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
 function LoginPanel() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { isTamil, setLanguage, t } = useLanguage();
 
   const [tab, setTab] = useState("student"); // student | admin | register
   const [rollNo, setRollNo] = useState("");
@@ -448,8 +457,13 @@ function LoginPanel() {
     return (
       <RegisterForm
         initialRollNo={registerRollNo}
-        onBack={() => {
+        onBack={(cred) => {
           setTab("student");
+          if (cred && cred.rollNo) {
+            setRollNo(cred.rollNo);
+            if (cred.dob) setDob(cred.dob);
+            setSuccess(`Candidate ${cred.rollNo} registered and activated! Click below to enter.`);
+          }
           setError("");
           setIsUnregisteredCandidate(false);
         }}
@@ -521,13 +535,13 @@ function LoginPanel() {
       {tab === "student" && (
         <form onSubmit={handleStudentLogin} className="space-y-4">
           <div className="mb-5">
-            <h2 className="text-xl font-bold text-[#f0f0ff]">Student Sign In</h2>
-            <p className="text-xs text-[#5c5c8a] mt-0.5">Use your Roll Number and Date of Birth</p>
+            <h2 className="text-xl font-bold text-[#f0f0ff]">{isTamil ? "மாணவர் உள்நுழைவு" : "Student Sign In"}</h2>
+            <p className="text-xs text-[#5c5c8a] mt-0.5">{isTamil ? "உங்கள் பதிவு எண் மற்றும் பிறந்த தேதியைப் பயன்படுத்தவும்" : "Use your Roll Number and Date of Birth"}</p>
           </div>
 
           <div>
             <label htmlFor="student-roll-no" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1.5">
-              <User className="w-3.5 h-3.5 text-violet-400" />Roll Number
+              <User className="w-3.5 h-3.5 text-violet-400" />{isTamil ? "பதிவு எண்" : "Roll Number"}
             </label>
             <input id="student-roll-no" type="text" value={rollNo}
               onChange={(e) => setRollNo(e.target.value)} required
@@ -536,24 +550,24 @@ function LoginPanel() {
 
           <div>
             <label htmlFor="student-dob" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1.5">
-              <Calendar className="w-3.5 h-3.5 text-violet-400" />Date of Birth
+              <Calendar className="w-3.5 h-3.5 text-violet-400" />{isTamil ? "பிறந்த தேதி" : "Date of Birth"}
             </label>
             <input id="student-dob" type="date" value={dob}
               onChange={(e) => setDob(e.target.value)} required className="input-field font-mono" />
             <p className="text-[11px] text-[#5c5c8a] mt-1.5 flex items-center gap-1">
-              <Lock className="w-3 h-3 text-emerald-400" />Hashed with bcrypt — never stored as plaintext
+              <Lock className="w-3 h-3 text-emerald-400" />{isTamil ? "bcrypt மூலம் பாதுகாக்கப்பட்டது" : "Hashed with bcrypt — never stored as plaintext"}
             </p>
           </div>
 
-          <Button id="btn-student-login" type="submit" disabled={loading} className="w-full justify-center !py-2.5">
-            {loading ? <><Loader2 className="w-4 h-4 animate-spin" />Authenticating…</> : <>Enter Student Portal <ArrowRight className="w-4 h-4" /></>}
+          <Button id="btn-student-login" type="submit" disabled={loading} className="w-full justify-center !py-2.5 font-bold">
+            {loading ? <><Loader2 className="w-4 h-4 animate-spin" /> {isTamil ? "சரிபார்க்கப்படுகிறது…" : "Authenticating…"}</> : <>{isTamil ? "மாணவர் தளத்திற்குள் நுழைக" : "Enter Student Portal"} <ArrowRight className="w-4 h-4" /></>}
           </Button>
 
           <p className="text-center text-xs text-[#5c5c8a]">
-            New student?{" "}
+            {isTamil ? "புதிய மாணவரா?" : "New student?"}{" "}
             <button type="button" id="btn-go-register" onClick={() => { setTab("register"); setError(""); }}
               className="text-violet-400 hover:text-violet-300 font-semibold transition-colors inline-flex items-center gap-1">
-              <UserPlus className="w-3 h-3" />Register here
+              <UserPlus className="w-3 h-3" />{isTamil ? "இங்கே பதிவு செய்க" : "Register here"}
             </button>
           </p>
         </form>

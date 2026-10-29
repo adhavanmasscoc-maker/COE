@@ -46,6 +46,7 @@ model Subject {
   units           SyllabusUnit[]
   questionPapers  QuestionPaper[]
   examSchedules   ExamSchedule[]
+  questionBank    QuestionBankItem[]
 }
 
 model StudentSubject {
@@ -244,5 +245,21 @@ model IncidentLog {
   status     String    @default("open") // "open", "acknowledged", "resolved"
   resolvedAt DateTime?
   createdAt  DateTime  @default(now())
+}
+
+model QuestionBankItem {
+  id             String   @id @default(cuid())
+  subjectId      String
+  subject        Subject  @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  questionNumber Int
+  questionText   String
+  marks          Int      @default(1)
+  options        String   // JSON stringified: { "A": "...", "B": "...", "C": "...", "D": "..." }
+  correctAnswer  String   // "A", "B", "C", or "D"
+  explanation    String?
+  sourceFormat   String   @default("JSON") // "JSON" or "MARKDOWN"
+  createdAt      DateTime @default(now())
+
+  @@index([subjectId])
 }
 

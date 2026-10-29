@@ -1,5 +1,6 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { AppShell } from "@/components/layout/AppShell";
 
 export const metadata = {
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className="antialiased">
         <ThemeProvider>
-          <AppShell>{children}</AppShell>
+          <LanguageProvider>
+            <AppShell>{children}</AppShell>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

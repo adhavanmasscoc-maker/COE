@@ -60,6 +60,17 @@ function COEAdminExamsContent() {
   const [solutionsModalExam, setSolutionsModalExam] = useState(null);
   const [fastPhaseLoading, setFastPhaseLoading] = useState(false);
 
+  // Multi-subject batch scheduling state (Phase 4.1 & 4.4)
+  const [selectedSubjectIds, setSelectedSubjectIds] = useState([]);
+  const [perSubjectRows, setPerSubjectRows] = useState({});
+
+  // Question Bank & Random Swapper state (Phase 6)
+  const [randomSwapperExam, setRandomSwapperExam] = useState(null);
+  const [randomPoolData, setRandomPoolData] = useState(null);
+  const [loadingPool, setLoadingPool] = useState(false);
+  const [swappingId, setSwappingId] = useState(null);
+  const [regenerating, setRegenerating] = useState(false);
+
   // New Exam Form State (12-hour clock with AM/PM & supportive instructions)
   const [examDateOnly, setExamDateOnly] = useState(
     new Date(Date.now() + 86400000 * 2).toISOString().slice(0, 10)
@@ -123,11 +134,112 @@ function COEAdminExamsContent() {
 
   useEffect(() => {
     fetchExams();
+    // Live update / periodic auto-refresh (Phase 4.3: list never stays stale)
+    const interval = setInterval(() => {
+      fetchExams();
+    }, 25000);
+    return () => clearInterval(interval);
   }, [selectedClass]);
 
   useEffect(() => {
     fetchSubjects();
   }, []);
+
+  const toggleSubjectSelect = (subId) => {
+    setSelectedSubjectIds((prev) => {
+      const next = prev.includes(subId) ? prev.filter((id) => id !== subId) : [...prev, subId];
+      if (!prev.includes(subId) && !perSubjectRows[subId]) {
+        setPerSubjectRows((r) => ({
+          ...r,
+          [subId]: {
+            date: examDateOnly,
+            time: `${examHour}:${examMinute} ${examAmpm}`,
+            durationMinutes: formData.durationMinutes,
+            totalMarks: formData.totalMarks,
+            instructions: formData.instructions,
+            status: formData.status,
+            randomQuestionCount: 10,
+          },
+        }));
+      }
+      return next;
+    });
+  };
+
+  const updatePerSubjectRow = (subId, field, val) => {
+    setPerSubjectRows((prev) => ({
+      ...prev,
+      [subId]: {
+        ...(prev[subId] || {}),
+        [field]: val,
+      },
+    }));
+  };
+
+  const openRandomSwapper = async (exam) => {
+    setRandomSwapperExam(exam);
+    setLoadingPool(true);
+    try {
+      const res = await fetch(`/api/admin/exams/${exam.id}/random-questions`);
+      const data = await res.json();
+      if (res.ok) {
+        setRandomPoolData(data);
+      } else {
+        alert(data.error || "Failed to load question pool.");
+      }
+    } catch {
+      alert("Network error loading random question pool.");
+    } finally {
+      setLoadingPool(false);
+    }
+  };
+
+  const handleRegenerateRandomSelection = async () => {
+    if (!randomSwapperExam || regenerating) return;
+    setRegenerating(true);
+    try {
+      const res = await fetch(`/api/admin/exams/${randomSwapperExam.id}/random-questions`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "regenerate", count: 10 }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        showMsg("Random questions regenerated from Question Bank without duplicates!");
+        openRandomSwapper(randomSwapperExam);
+        fetchExams();
+      } else {
+        alert(data.error || "Failed to regenerate questions.");
+      }
+    } catch {
+      alert("Network error regenerating questions.");
+    } finally {
+      setRegenerating(false);
+    }
+  };
+
+  const handleSwapQuestion = async (qId) => {
+    if (!randomSwapperExam || swappingId) return;
+    setSwappingId(qId);
+    try {
+      const res = await fetch(`/api/admin/exams/${randomSwapperExam.id}/random-questions`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "swap", swapQuestionId: qId }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        showMsg("Question swapped with another question from bank!");
+        openRandomSwapper(randomSwapperExam);
+      } else {
+        alert(data.error || "Failed to swap question.");
+      }
+    } catch {
+      alert("Network error swapping question.");
+    } finally {
+      setSwappingId(null);
+    }
+  };
 
   const showMsg = (msg) => {
     setNotification(msg);
@@ -219,25 +331,59 @@ function COEAdminExamsContent() {
     }
   };
 
-  // Create new exam
+  // Create new exam (Single or Multi-Subject Batch - Phase 4.1 & 4.4)
   const handleCreateExam = async (e) => {
     e.preventDefault();
     try {
-      const h = (parseInt(examHour, 10) % 12) + (examAmpm === "PM" ? 12 : 0);
-      const isoExamDate = new Date(`${examDateOnly}T${String(h).padStart(2, "0")}:${examMinute}:00`).toISOString();
+      let payload = null;
+      if (selectedSubjectIds.length > 0) {
+        const batch = selectedSubjectIds.map((subId) => {
+          const row = perSubjectRows[subId] || {};
+          const sDate = row.date || examDateOnly;
+          const sTime = row.time || `${examHour}:${examMinute} ${examAmpm}`;
+
+          let h = 9, m = "30";
+          const match12 = sTime.match(/(\d{1,2}):(\d{2})\s*(AM|PM)?/i);
+          if (match12) {
+            h = parseInt(match12[1], 10);
+            if (match12[3]?.toUpperCase() === "PM" && h < 12) h += 12;
+            if (match12[3]?.toUpperCase() === "AM" && h === 12) h = 0;
+            m = match12[2];
+          }
+          const isoExamDate = new Date(`${sDate}T${String(h).padStart(2, "0")}:${m}:00`).toISOString();
+
+          return {
+            subjectId: subId,
+            prepClass: formData.prepClass,
+            examDate: isoExamDate,
+            durationMinutes: parseInt(row.durationMinutes ?? formData.durationMinutes, 10),
+            totalMarks: parseInt(row.totalMarks ?? formData.totalMarks, 10),
+            instructions: row.instructions ?? formData.instructions,
+            status: row.status ?? formData.status ?? "PUBLISHED",
+            randomSelectCount: parseInt(row.randomQuestionCount || 10, 10),
+          };
+        });
+        payload = { batch };
+      } else {
+        const h = (parseInt(examHour, 10) % 12) + (examAmpm === "PM" ? 12 : 0);
+        const isoExamDate = new Date(`${examDateOnly}T${String(h).padStart(2, "0")}:${examMinute}:00`).toISOString();
+        payload = {
+          ...formData,
+          examDate: isoExamDate,
+          randomSelectCount: 10,
+        };
+      }
 
       const res = await fetch("/api/admin/exams", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          examDate: isoExamDate,
-        }),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
       if (res.ok) {
-        showMsg("Official examination schedule created successfully!");
+        showMsg(data.message || `Successfully scheduled and published ${selectedSubjectIds.length || 1} examination(s)!`);
         setShowCreateModal(false);
+        setSelectedSubjectIds([]);
         fetchExams();
       } else {
         alert(data.error || "Failed to create examination.");
@@ -576,14 +722,39 @@ function COEAdminExamsContent() {
                         <Badge variant="secondary">Draft Only (Hidden)</Badge>
                       )}
                     </td>
-                    <td className="py-3 px-4 text-right space-x-2">
+                    <td className="py-3 px-4 text-right space-x-1.5 whitespace-nowrap">
+                      <Link
+                        href={`/coe-admin/exam-setter?examId=${exam.id}&sub=${exam.subject?.code || ""}&date=${new Date(exam.examDate).toISOString().slice(0, 10)}&time=${new Date(exam.examDate).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}&marks=${exam.totalMarks}&count=${exam._count?.questions || 10}`}
+                      >
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="text-xs py-1 px-2 text-violet-300 border-violet-500/30 hover:bg-violet-500/15"
+                          title="Open AI Exam Setter (JSON Template)"
+                        >
+                          <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                          <span className="hidden xl:inline ml-1 font-semibold">JSON Setter</span>
+                        </Button>
+                      </Link>
+
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => openRandomSwapper(exam)}
+                        className="text-xs py-1 px-2 text-emerald-300 border-emerald-500/30 hover:bg-emerald-500/15"
+                        title="Question Bank Random Pool & Swap"
+                      >
+                        <BookOpen className="w-3.5 h-3.5 text-emerald-400" />
+                        <span className="hidden xl:inline ml-1 font-semibold">Bank Pool</span>
+                      </Button>
+
                       <Button
                         size="sm"
                         variant={exam.status === "PUBLISHED" ? "outline" : "primary"}
                         onClick={() => toggleStatus(exam)}
-                        className="text-xs py-1 px-3"
+                        className="text-xs py-1 px-2.5"
                       >
-                        {exam.status === "PUBLISHED" ? "Unpublish" : "Publish Now"}
+                        {exam.status === "PUBLISHED" ? "Unpublish" : "Publish"}
                       </Button>
 
                       <Button
@@ -604,197 +775,387 @@ function COEAdminExamsContent() {
         </div>
       </div>
 
-      {/* Create New Exam Schedule Modal */}
+      {/* Create New Exam Schedule Modal (Single & Multi-Subject Batch - Phase 4) */}
       {showCreateModal && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <Card className="max-w-lg w-full p-6 border-amber-500/30 animate-in fade-in-50 zoom-in-95">
-            <div className="flex items-center justify-between pb-3 mb-4 border-b border-border">
-              <h3 className="text-lg font-black text-foreground flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-amber-400" /> Schedule Examination
-              </h3>
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+          <Card className="max-w-3xl w-full p-5 sm:p-6 border-amber-500/30 animate-in fade-in-50 zoom-in-95 my-auto max-h-[92vh] flex flex-col">
+            <div className="flex items-center justify-between pb-3 mb-3 border-b border-border flex-shrink-0">
+              <div>
+                <h3 className="text-base sm:text-lg font-black text-foreground flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-amber-400" /> Multi-Subject Examination Scheduler
+                </h3>
+                <p className="text-[11px] text-muted-foreground mt-0.5">
+                  Tick multiple subjects in one step, adjust per-subject dates &amp; times, and publish all at once.
+                </p>
+              </div>
               <button
                 type="button"
-                onClick={() => setShowCreateModal(false)}
-                className="text-muted-foreground hover:text-foreground"
+                onClick={() => {
+                  setShowCreateModal(false);
+                  setSelectedSubjectIds([]);
+                }}
+                className="p-1 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
-            <form onSubmit={handleCreateExam} className="space-y-4 text-xs">
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-muted-foreground font-semibold mb-1">
-                    Preparation Class
-                  </label>
-                  <select
-                    value={formData.prepClass}
-                    onChange={(e) => {
-                      const newCls = parseInt(e.target.value, 10);
-                      const matchingSub = subjects.find((s) => s.prepClass === newCls);
-                      setFormData({
-                        ...formData,
-                        prepClass: newCls,
-                        subjectId: matchingSub ? matchingSub.id : formData.subjectId,
-                      });
-                    }}
-                    className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground font-medium"
-                  >
-                    <option value={10}>Class 10 (Secondary)</option>
-                    <option value={12}>Class 12 (Higher Secondary)</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-muted-foreground font-semibold mb-1">
-                    Subject
-                  </label>
-                  <select
-                    value={formData.subjectId}
-                    onChange={(e) => setFormData({ ...formData, subjectId: e.target.value })}
-                    required
-                    className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground font-medium"
-                  >
-                    {subjects
-                      .filter((s) => s.prepClass === formData.prepClass)
-                      .map((sub) => (
-                        <option key={sub.id} value={sub.id}>
-                          {sub.name} ({sub.code})
-                        </option>
-                      ))}
-                  </select>
+            <form onSubmit={handleCreateExam} className="space-y-4 text-xs overflow-y-auto pr-1 flex-1">
+              {/* Preparation Class Picker */}
+              <div className="flex items-center justify-between p-3 rounded-xl bg-secondary/40 border border-border">
+                <span className="font-semibold text-foreground">Standard Curriculum Class:</span>
+                <div className="flex gap-2">
+                  {[10, 12].map((cls) => (
+                    <button
+                      key={cls}
+                      type="button"
+                      onClick={() => {
+                        setFormData((f) => ({ ...f, prepClass: cls }));
+                        setSelectedSubjectIds([]);
+                      }}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                        formData.prepClass === cls
+                          ? "bg-violet-600 text-white shadow-md shadow-violet-500/25"
+                          : "bg-secondary text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      Class {cls}
+                    </button>
+                  ))}
                 </div>
               </div>
 
-              {/* 12-Hour AM/PM Time Selector */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-muted-foreground font-semibold mb-1 text-xs">
-                    Exam Date
-                  </label>
-                  <input
-                    type="date"
-                    value={examDateOnly}
-                    onChange={(e) => setExamDateOnly(e.target.value)}
-                    required
-                    className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground font-mono text-xs"
-                  />
+              {/* Multi-Subject Checkbox Selector (Phase 4.1) */}
+              <div className="p-3.5 rounded-xl bg-secondary/30 border border-border space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-foreground flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+                    Select Subjects to Schedule (Tick Multiple Subjects in 1 Step)
+                  </span>
+                  <span className="badge badge-amber font-mono text-[10px]">
+                    {selectedSubjectIds.length} Selected
+                  </span>
                 </div>
+                <p className="text-[11px] text-muted-foreground">
+                  Tick 5 or more subjects to schedule an entire examination series simultaneously:
+                </p>
 
-                <div>
-                  <label className="block text-muted-foreground font-semibold mb-1 text-xs">
-                    Conducting Time (12-Hour AM/PM)
-                  </label>
-                  <div className="grid grid-cols-3 gap-1.5">
-                    <select
-                      value={examHour}
-                      onChange={(e) => setExamHour(e.target.value)}
-                      className="px-2 py-2 rounded-xl bg-secondary border border-border text-foreground font-mono text-xs"
-                    >
-                      {Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, "0")).map((hr) => (
-                        <option key={hr} value={hr}>{hr}</option>
-                      ))}
-                    </select>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 max-h-36 overflow-y-auto pr-1 pt-1">
+                  {subjects
+                    .filter((s) => s.prepClass === formData.prepClass)
+                    .map((sub) => {
+                      const isChecked = selectedSubjectIds.includes(sub.id);
+                      return (
+                        <label
+                          key={sub.id}
+                          className={`flex items-center gap-2 p-2 rounded-lg border text-xs cursor-pointer transition-all ${
+                            isChecked
+                              ? "bg-violet-500/15 border-violet-500/40 text-violet-200 font-semibold"
+                              : "bg-card border-border text-muted-foreground hover:text-foreground"
+                          }`}
+                        >
+                          <input
+                            type="checkbox"
+                            checked={isChecked}
+                            onChange={() => toggleSubjectSelect(sub.id)}
+                            className="rounded border-border text-violet-600 focus:ring-0"
+                          />
+                          <span className="truncate">{sub.name}</span>
+                          <span className="font-mono text-[9px] text-muted-foreground ml-auto">{sub.code}</span>
+                        </label>
+                      );
+                    })}
+                </div>
+              </div>
 
-                    <select
-                      value={examMinute}
-                      onChange={(e) => setExamMinute(e.target.value)}
-                      className="px-2 py-2 rounded-xl bg-secondary border border-border text-foreground font-mono text-xs"
-                    >
-                      {["00", "15", "30", "45"].map((min) => (
-                        <option key={min} value={min}>{min}</option>
-                      ))}
-                    </select>
+              {/* Baseline Default Configuration (Applied once) */}
+              <div className="p-3.5 rounded-xl bg-card border border-border space-y-3">
+                <span className="font-bold text-foreground text-xs block">
+                  Baseline Exam Configuration (Applied as default to all selected subjects)
+                </span>
 
-                    <select
-                      value={examAmpm}
-                      onChange={(e) => setExamAmpm(e.target.value)}
-                      className="px-2 py-2 rounded-xl bg-secondary border border-border text-amber-400 font-bold text-xs"
-                    >
-                      <option value="AM">AM</option>
-                      <option value="PM">PM</option>
-                    </select>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div>
+                    <label className="block text-muted-foreground font-semibold mb-1">Baseline Date</label>
+                    <input
+                      type="date"
+                      value={examDateOnly}
+                      onChange={(e) => setExamDateOnly(e.target.value)}
+                      className="w-full px-2.5 py-1.5 rounded-lg bg-secondary border border-border text-foreground font-mono"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-muted-foreground font-semibold mb-1">Baseline Time</label>
+                    <div className="grid grid-cols-3 gap-1">
+                      <select
+                        value={examHour}
+                        onChange={(e) => setExamHour(e.target.value)}
+                        className="px-1.5 py-1.5 rounded-lg bg-secondary border border-border text-foreground font-mono"
+                      >
+                        {Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, "0")).map((hr) => (
+                          <option key={hr} value={hr}>{hr}</option>
+                        ))}
+                      </select>
+                      <select
+                        value={examMinute}
+                        onChange={(e) => setExamMinute(e.target.value)}
+                        className="px-1.5 py-1.5 rounded-lg bg-secondary border border-border text-foreground font-mono"
+                      >
+                        {["00", "15", "30", "45"].map((min) => (
+                          <option key={min} value={min}>{min}</option>
+                        ))}
+                      </select>
+                      <select
+                        value={examAmpm}
+                        onChange={(e) => setExamAmpm(e.target.value)}
+                        className="px-1.5 py-1.5 rounded-lg bg-secondary border border-border text-amber-400 font-bold"
+                      >
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-muted-foreground font-semibold mb-1">Duration &amp; Marks</label>
+                    <div className="grid grid-cols-2 gap-1.5">
+                      <input
+                        type="number"
+                        value={formData.durationMinutes}
+                        onChange={(e) => setFormData({ ...formData, durationMinutes: e.target.value })}
+                        placeholder="Mins"
+                        className="w-full px-2 py-1.5 rounded-lg bg-secondary border border-border text-foreground"
+                      />
+                      <input
+                        type="number"
+                        value={formData.totalMarks}
+                        onChange={(e) => setFormData({ ...formData, totalMarks: e.target.value })}
+                        placeholder="Marks"
+                        className="w-full px-2 py-1.5 rounded-lg bg-secondary border border-border text-foreground"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="grid grid-cols-3 gap-3">
                 <div>
-                  <label className="block text-muted-foreground font-semibold mb-1">
-                    Duration (Mins)
-                  </label>
+                  <label className="block text-muted-foreground font-semibold mb-1">Candidate Instructions</label>
                   <input
-                    type="number"
-                    value={formData.durationMinutes}
-                    onChange={(e) => setFormData({ ...formData, durationMinutes: e.target.value })}
-                    required
-                    min={10}
-                    max={360}
-                    className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground"
+                    type="text"
+                    value={formData.instructions}
+                    onChange={(e) => setFormData({ ...formData, instructions: e.target.value })}
+                    className="w-full px-2.5 py-1.5 rounded-lg bg-secondary border border-border text-foreground text-xs"
+                    placeholder="Candidate guidance message"
                   />
                 </div>
-
-                <div>
-                  <label className="block text-muted-foreground font-semibold mb-1">
-                    Total Marks
-                  </label>
-                  <input
-                    type="number"
-                    value={formData.totalMarks}
-                    onChange={(e) => setFormData({ ...formData, totalMarks: e.target.value })}
-                    required
-                    min={10}
-                    max={200}
-                    className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-muted-foreground font-semibold mb-1">
-                    Initial Status
-                  </label>
-                  <select
-                    value={formData.status}
-                    onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground font-medium"
-                  >
-                    <option value="DRAFT">DRAFT (Hidden from Student)</option>
-                    <option value="PUBLISHED">PUBLISHED (Visible Immediately)</option>
-                  </select>
-                </div>
               </div>
 
-              <div>
-                <label className="block text-muted-foreground font-semibold mb-1 text-xs">
-                  Encouraging Candidate Instructions
-                </label>
-                <textarea
-                  rows={2}
-                  value={formData.instructions}
-                  onChange={(e) => setFormData({ ...formData, instructions: e.target.value })}
-                  className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground text-xs leading-relaxed"
-                  placeholder="e.g. Read each question with care and confidence. Manage your time calmly. Best wishes!"
-                />
-              </div>
+              {/* Vertically Scrollable Sequence of Selected Subjects (Phase 4.4) */}
+              {selectedSubjectIds.length > 0 && (
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold text-foreground text-xs flex items-center gap-1.5">
+                      <Layers className="w-3.5 h-3.5 text-sky-400" />
+                      Sequence of Selected Examinations ({selectedSubjectIds.length} Subjects — Vertically Scrollable)
+                    </span>
+                    <span className="text-[10px] text-muted-foreground">Each row has independent date, time &amp; marks</span>
+                  </div>
 
-              <div className="pt-3 border-t border-border flex items-center justify-end gap-2">
+                  <div className="max-h-56 overflow-y-auto space-y-2.5 p-2 rounded-xl bg-slate-950/40 border border-border pr-1">
+                    {selectedSubjectIds.map((subId, idx) => {
+                      const sub = subjects.find((s) => s.id === subId);
+                      const row = perSubjectRows[subId] || {};
+                      return (
+                        <div key={subId} className="p-3 rounded-xl bg-card border border-border space-y-2 text-xs">
+                          <div className="flex items-center justify-between">
+                            <span className="font-bold text-foreground flex items-center gap-1.5">
+                              <span className="w-4 h-4 rounded-md bg-secondary flex items-center justify-center text-[10px] text-muted-foreground font-mono">
+                                {idx + 1}
+                              </span>
+                              {sub?.name}
+                            </span>
+                            <div className="flex items-center gap-2">
+                              <span className="badge badge-purple text-[10px]">{sub?.code}</span>
+                              <span className="badge badge-emerald text-[9px]">10 MCQs Auto-Sampled</span>
+                            </div>
+                          </div>
+
+                          <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
+                            <div>
+                              <label className="text-[10px] text-muted-foreground block mb-0.5">Subject Date</label>
+                              <input
+                                type="date"
+                                value={row.date || examDateOnly}
+                                onChange={(e) => updatePerSubjectRow(subId, "date", e.target.value)}
+                                className="w-full px-2 py-1 rounded-md bg-secondary border border-border text-[11px] font-mono"
+                              />
+                            </div>
+                            <div>
+                              <label className="text-[10px] text-muted-foreground block mb-0.5">Subject Time</label>
+                              <input
+                                type="text"
+                                value={row.time || `${examHour}:${examMinute} ${examAmpm}`}
+                                onChange={(e) => updatePerSubjectRow(subId, "time", e.target.value)}
+                                className="w-full px-2 py-1 rounded-md bg-secondary border border-border text-[11px] font-mono"
+                                placeholder="09:30 AM"
+                              />
+                            </div>
+                            <div>
+                              <label className="text-[10px] text-muted-foreground block mb-0.5">Duration (mins)</label>
+                              <input
+                                type="number"
+                                value={row.durationMinutes ?? formData.durationMinutes}
+                                onChange={(e) => updatePerSubjectRow(subId, "durationMinutes", e.target.value)}
+                                className="w-full px-2 py-1 rounded-md bg-secondary border border-border text-[11px]"
+                              />
+                            </div>
+                            <div>
+                              <label className="text-[10px] text-muted-foreground block mb-0.5">Marks</label>
+                              <input
+                                type="number"
+                                value={row.totalMarks ?? formData.totalMarks}
+                                onChange={(e) => updatePerSubjectRow(subId, "totalMarks", e.target.value)}
+                                className="w-full px-2 py-1 rounded-md bg-secondary border border-border text-[11px]"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Submit Buttons */}
+              <div className="pt-3 border-t border-border flex items-center justify-end gap-2 flex-shrink-0">
                 <Button
                   type="button"
                   variant="outline"
                   size="sm"
-                  onClick={() => setShowCreateModal(false)}
+                  onClick={() => {
+                    setShowCreateModal(false);
+                    setSelectedSubjectIds([]);
+                  }}
                 >
                   Cancel
                 </Button>
                 <Button
                   type="submit"
                   size="sm"
-                  className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold"
+                  className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold gap-1.5 shadow-md shadow-amber-500/20"
                 >
-                  Save Schedule
+                  <Send className="w-3.5 h-3.5" />
+                  {selectedSubjectIds.length > 0
+                    ? `Publish All ${selectedSubjectIds.length} Selected Examinations`
+                    : "Publish Single Examination Schedule"}
                 </Button>
               </div>
             </form>
+          </Card>
+        </div>
+      )}
+
+      {/* Random Question Bank Pool & Swapper Modal (Phase 6) */}
+      {randomSwapperExam && (
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+          <Card className="max-w-3xl w-full p-5 sm:p-6 border-emerald-500/30 animate-in fade-in-50 zoom-in-95 my-auto max-h-[92vh] flex flex-col">
+            <div className="flex items-center justify-between pb-3 mb-3 border-b border-border flex-shrink-0">
+              <div>
+                <h3 className="text-base sm:text-lg font-black text-foreground flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-emerald-400" />
+                  Question Bank &amp; Random Swapper
+                </h3>
+                <p className="text-[11px] text-muted-foreground mt-0.5">
+                  Exam: <strong>{randomSwapperExam.subject?.name}</strong> ({randomSwapperExam.subject?.code}) · 100-Question Pool
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setRandomSwapperExam(null)}
+                className="p-1 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {loadingPool ? (
+              <div className="py-12 text-center text-xs text-muted-foreground">
+                <Loader2 className="w-6 h-6 animate-spin mx-auto mb-2 text-emerald-400" />
+                Loading question bank pool...
+              </div>
+            ) : (
+              <div className="space-y-4 overflow-y-auto pr-1 flex-1 text-xs">
+                {/* Stats & Action Bar */}
+                <div className="p-3.5 rounded-xl bg-secondary/50 border border-border flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <span className="font-bold text-foreground block">
+                      Currently Selected: {randomPoolData?.currentQuestions?.length || 0} Questions
+                    </span>
+                    <span className="text-[11px] text-muted-foreground">
+                      Total 100-Question Bank Pool: {randomPoolData?.bankTotal || 0} Questions Available
+                    </span>
+                  </div>
+
+                  <Button
+                    type="button"
+                    variant="primary"
+                    size="sm"
+                    onClick={handleRegenerateRandomSelection}
+                    disabled={regenerating}
+                    className="gap-1.5 font-bold text-xs bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-600/25"
+                  >
+                    {regenerating ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <RefreshCw className="w-3.5 h-3.5" />}
+                    Regenerate Random Selection (No Duplicates)
+                  </Button>
+                </div>
+
+                {/* List of current questions with Swap controls */}
+                <div className="space-y-2.5">
+                  <span className="font-bold text-foreground block">Active Questions in This Exam:</span>
+                  {randomPoolData?.currentQuestions?.map((q) => (
+                    <div key={q.id} className="p-3.5 rounded-xl bg-card border border-border space-y-2">
+                      <div className="flex items-start justify-between gap-3">
+                        <span className="font-bold text-foreground flex-1">
+                          Q{q.questionNumber}. {q.questionText}
+                        </span>
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="sm"
+                          onClick={() => handleSwapQuestion(q.id)}
+                          disabled={swappingId === q.id}
+                          className="text-[11px] py-0.5 px-2.5 border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/15 gap-1 font-semibold flex-shrink-0"
+                          title="Replace this question with another unused question from the bank"
+                        >
+                          {swappingId === q.id ? <Loader2 className="w-3 h-3 animate-spin" /> : <RefreshCw className="w-3 h-3 text-emerald-400" />}
+                          Swap Question
+                        </Button>
+                      </div>
+
+                      {q.options && (
+                        <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground pt-1">
+                          {Array.isArray(q.options)
+                            ? q.options.map((opt) => (
+                                <div key={opt.id} className={`px-2 py-1 rounded-md border ${
+                                  opt.id === q.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border bg-secondary/30"
+                                }`}>
+                                  <span className="font-bold font-mono mr-1.5">{opt.id}:</span>
+                                  <span>{opt.text}</span>
+                                </div>
+                              ))
+                            : Object.keys(q.options).map((key) => (
+                                <div key={key} className={`px-2 py-1 rounded-md border ${
+                                  key === q.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border bg-secondary/30"
+                                }`}>
+                                  <span className="font-bold font-mono mr-1.5">{key}:</span>
+                                  <span>{q.options[key]}</span>
+                                </div>
+                              ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </Card>
         </div>
       )}

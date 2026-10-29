@@ -3,6 +3,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -28,6 +29,7 @@ import {
 function ExamHallContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const { isTamil: globalIsTamil, setLanguage, t } = useLanguage();
   const urlExamId = searchParams.get("examId");
   const previewRollNo = searchParams.get("previewRollNo");
   const urlMode = searchParams.get("mode");
@@ -340,6 +342,7 @@ function ExamHallContent() {
   };
 
   const currentQ = questions[currentIdx];
+  const isExamTamil = globalIsTamil || candidate?.medium === "Tamil" || exam?.medium === "Tamil";
 
   const handleSelectOption = (optId) => {
     if (submittedData) return;
@@ -832,11 +835,11 @@ function ExamHallContent() {
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-border">
                   <div className="flex items-center gap-2">
                     <span className="font-extrabold text-base text-foreground">
-                      Question {currentIdx + 1}
+                      {isExamTamil ? `வினா எண் ${currentIdx + 1}` : `Question ${currentIdx + 1}`}
                     </span>
-                    <span className="text-xs text-muted-foreground">of {questions.length}</span>
+                    <span className="text-xs text-muted-foreground">{isExamTamil ? `(மொத்தம் ${questions.length})` : `of ${questions.length}`}</span>
                   </div>
-                  <Badge variant="secondary">+{currentQ.marks || 2} Marks</Badge>
+                  <Badge variant="secondary">+{currentQ.marks || 2} {isExamTamil ? "மதிப்பெண்கள்" : "Marks"}</Badge>
                 </div>
 
                 {/* Question Text */}
@@ -860,7 +863,7 @@ function ExamHallContent() {
                         }`}
                       >
                         <span
-                          className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold border transition-colors ${
+                          className={`w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold border transition-colors ${
                             isSelected
                               ? "bg-sky-500 text-slate-950 border-sky-400"
                               : "border-border text-muted-foreground"
@@ -876,7 +879,7 @@ function ExamHallContent() {
               </div>
             ) : (
               <div className="p-8 text-center text-xs text-muted-foreground">
-                No questions have been seeded for this examination yet.
+                {isExamTamil ? "இந்தத் தேர்விற்கான வினாக்கள் இன்னும் பதிவேற்றப்படவில்லை." : "No questions have been seeded for this examination yet."}
               </div>
             )}
 
@@ -888,9 +891,9 @@ function ExamHallContent() {
                   size="sm"
                   onClick={() => currentIdx > 0 && setCurrentIdx(currentIdx - 1)}
                   disabled={currentIdx === 0}
-                  className="gap-1"
+                  className="gap-1 text-xs"
                 >
-                  <ChevronLeft className="w-4 h-4" /> Previous
+                  <ChevronLeft className="w-4 h-4" /> {isExamTamil ? "முந்தைய வினா" : "Previous"}
                 </Button>
 
                 <Button
@@ -900,7 +903,7 @@ function ExamHallContent() {
                   disabled={!answers[currentQ?.id]}
                   className="text-xs text-muted-foreground hover:text-rose-400 gap-1"
                 >
-                  <RotateCcw className="w-3.5 h-3.5" /> Clear Response
+                  <RotateCcw className="w-3.5 h-3.5" /> {isExamTamil ? "பதிலை அழிக்க" : "Clear Response"}
                 </Button>
               </div>
 
@@ -911,7 +914,7 @@ function ExamHallContent() {
                   onClick={handleMarkForReview}
                   className="text-amber-400 border-amber-500/30 hover:bg-amber-500/10 gap-1 text-xs"
                 >
-                  <Bookmark className="w-3.5 h-3.5" /> Mark for Review
+                  <Bookmark className="w-3.5 h-3.5" /> {isExamTamil ? "மறுபரிசீலனைக்கு குறிக்க" : "Mark for Review"}
                 </Button>
 
                 {currentIdx < questions.length - 1 ? (
@@ -921,7 +924,7 @@ function ExamHallContent() {
                     onClick={handleSaveAndNext}
                     className="gap-1 font-semibold text-xs"
                   >
-                    Save & Next <ChevronRight className="w-4 h-4" />
+                    {isExamTamil ? "சேமித்து அடுத்த வினா" : "Save & Next"} <ChevronRight className="w-4 h-4" />
                   </Button>
                 ) : (
                   <Button
@@ -930,7 +933,7 @@ function ExamHallContent() {
                     onClick={() => setShowConfirmModal(true)}
                     className="gap-1.5 font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/30"
                   >
-                    <Send className="w-3.5 h-3.5" /> Review & Submit Examination
+                    <Send className="w-3.5 h-3.5" /> {isExamTamil ? "சரிபார்த்து சமர்ப்பிக்க" : "Review & Submit Examination"}
                   </Button>
                 )}
               </div>
@@ -941,25 +944,25 @@ function ExamHallContent() {
         {/* Right Panel: Question Navigator Grid (4 cols) */}
         <div className="lg:col-span-4 space-y-4">
           <Card className="border-border">
-            <h3 className="font-bold text-sm text-foreground mb-3">Question Palette</h3>
+            <h3 className="font-bold text-sm text-foreground mb-3">{isExamTamil ? "வினாத் தொகுப்பு பலகை" : "Question Palette"}</h3>
 
             {/* Palette Status Legend */}
             <div className="grid grid-cols-2 gap-2 text-[11px] mb-4 p-2.5 rounded-xl bg-secondary/50 border border-border">
               <div className="flex items-center gap-2">
                 <span className="w-3.5 h-3.5 rounded-md bg-emerald-500" />
-                <span>Answered ({counts.answered})</span>
+                <span>{isExamTamil ? "விடையளித்தவை" : "Answered"} ({counts.answered})</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-3.5 h-3.5 rounded-md bg-amber-500" />
-                <span>Review ({counts.reviewed})</span>
+                <span>{isExamTamil ? "மறுபரிசீலனை" : "Review"} ({counts.reviewed})</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-3.5 h-3.5 rounded-md bg-rose-500/70" />
-                <span>Unanswered</span>
+                <span>{isExamTamil ? "விடையளிக்காதவை" : "Unanswered"}</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-3.5 h-3.5 rounded-md bg-slate-700 border border-slate-600" />
-                <span>Not Visited</span>
+                <span>{isExamTamil ? "பார்க்காதவை" : "Not Visited"}</span>
               </div>
             </div>
 
@@ -1021,15 +1024,15 @@ function ExamHallContent() {
                 <span className="font-bold text-foreground">{counts.total}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Answered Questions:</span>
+                <span className="text-muted-foreground">{isExamTamil ? "விடையளிக்கப்பட்டவை:" : "Answered Questions:"}</span>
                 <span className="font-bold text-emerald-400">{counts.answered}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Marked for Review:</span>
+                <span className="text-muted-foreground">{isExamTamil ? "மறுபரிசீலனைக்குரியவை:" : "Marked for Review:"}</span>
                 <span className="font-bold text-amber-400">{counts.reviewed}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Unanswered:</span>
+                <span className="text-muted-foreground">{isExamTamil ? "விடையளிக்கப்படாதவை:" : "Unanswered:"}</span>
                 <span className="font-bold text-rose-400">{counts.unanswered}</span>
               </div>
             </div>
@@ -1041,7 +1044,7 @@ function ExamHallContent() {
                 onClick={() => setShowConfirmModal(false)}
                 disabled={submitting}
               >
-                Continue Answering
+                {isExamTamil ? "தொடர்ந்து தேர்வு எழுதுக" : "Continue Answering"}
               </Button>
               <Button
                 variant={isPracticeMode ? "primary" : "danger"}
@@ -1052,15 +1055,15 @@ function ExamHallContent() {
               >
                 {submitting ? (
                   <>
-                    <Loader2 className="w-4 h-4 animate-spin" /> Sealing...
+                    <Loader2 className="w-4 h-4 animate-spin" /> {isExamTamil ? "சேமிக்கப்படுகிறது..." : "Sealing..."}
                   </>
                 ) : isPracticeMode ? (
                   <>
-                    <CheckCircle2 className="w-4 h-4" /> Evaluate Practice Now
+                    <CheckCircle2 className="w-4 h-4" /> {isExamTamil ? "மாதிரி தேர்வை மதிப்பீடு செய்" : "Evaluate Practice Now"}
                   </>
                 ) : (
                   <>
-                    <Send className="w-4 h-4" /> Confirm & Submit
+                    <Send className="w-4 h-4" /> {isExamTamil ? "ஆம், சமர்ப்பிக்கவும்" : "Confirm & Submit"}
                   </>
                 )}
               </Button>

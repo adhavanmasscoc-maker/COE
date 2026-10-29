@@ -3,6 +3,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { useLanguage } from "@/context/LanguageContext";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { StatCard } from "@/components/ui/Card";
@@ -27,13 +28,14 @@ import {
 } from "lucide-react";
 
 function SubjectCard({ sub, isPreview, previewRoll }) {
+  const { isTamil } = useLanguage();
   const pct = sub.progressPercent || 0;
   const hue = pct >= 80 ? "#6ee7b7" : pct >= 50 ? "#818cf8" : "#f59e0b";
 
   return (
-    <div className="glass rounded-2xl p-5 card-glow border border-[rgba(124,58,237,0.2)] flex flex-col gap-3 animate-float-up">
+    <div className="glass rounded-xl p-5 card-glow border border-[rgba(124,58,237,0.2)] flex flex-col gap-3 animate-float-up">
       <div className="flex items-start justify-between">
-        <span className="text-[10px] font-bold font-mono text-[#5c5c8a] bg-[rgba(124,58,237,0.1)] px-2 py-0.5 rounded-lg border border-[rgba(124,58,237,0.2)]">
+        <span className="text-[10px] font-bold font-mono text-[#5c5c8a] bg-[rgba(124,58,237,0.1)] px-2 py-0.5 rounded-md border border-[rgba(124,58,237,0.2)]">
           {sub.code}
         </span>
         <span className="text-xs font-bold" style={{ color: hue }}>{pct}%</span>
@@ -42,7 +44,7 @@ function SubjectCard({ sub, isPreview, previewRoll }) {
       <div>
         <h3 className="font-bold text-[#f0f0ff] text-sm mb-0.5">{sub.name}</h3>
         <p className="text-[11px] text-[#5c5c8a]">
-          {sub.completedChapters}/{sub.totalChapters} chapters completed
+          {isTamil ? `${sub.totalChapters} பாட அலகுகளில் ${sub.completedChapters} முடிக்கப்பட்டது` : `${sub.completedChapters}/${sub.totalChapters} chapters completed`}
         </p>
       </div>
 
@@ -60,13 +62,13 @@ function SubjectCard({ sub, isPreview, previewRoll }) {
           className="flex items-center gap-1 text-[#5c5c8a] hover:text-violet-300 transition-colors"
         >
           <FileText className="w-3.5 h-3.5" />
-          {sub.publishedPapersCount} Papers
+          {sub.publishedPapersCount} {isTamil ? "வினாத்தாள்கள்" : "Papers"}
         </Link>
         <Link
           href={`/student/syllabus?code=${encodeURIComponent(sub.code)}`}
           className="flex items-center gap-1 text-violet-400 hover:text-violet-300 font-semibold transition-colors"
         >
-          Study <ChevronRight className="w-3 h-3" />
+          {isTamil ? "பாடக்குறிப்புகள்" : "Study"} <ChevronRight className="w-3 h-3" />
         </Link>
       </div>
     </div>
@@ -75,6 +77,7 @@ function SubjectCard({ sub, isPreview, previewRoll }) {
 
 function StudentDashboardContent() {
   const searchParams = useSearchParams();
+  const { isTamil, t } = useLanguage();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -178,7 +181,7 @@ function StudentDashboardContent() {
             <div className="flex items-center gap-2 flex-wrap">
               <h1 className="text-xl font-black text-[#f0f0ff]">{profile.fullName}</h1>
               <span className={`badge ${profile.medium === "Tamil" ? "badge-amber" : "badge-cyan"}`}>
-                {profile.medium} Medium
+                {profile.medium === "Tamil" ? "தமிழ் வழி" : "English Medium"}
               </span>
             </div>
             <p className="text-xs text-[#5c5c8a] font-mono mt-0.5">
@@ -187,33 +190,33 @@ function StudentDashboardContent() {
           </div>
         </div>
         <Link href={`/student/results${isPreview ? `?previewRollNo=${previewRoll}` : ""}`}>
-          <Button variant="secondary" size="sm" className="gap-1.5">
-            <Award className="w-4 h-4" />View Marksheet
+          <Button variant="secondary" size="sm" className="gap-1.5 font-semibold text-xs">
+            <Award className="w-4 h-4" />{t("btn_view_result", "View Marksheet")}
           </Button>
         </Link>
       </div>
 
       {/* Stat cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 stagger">
-        <StatCard label="Current Class" value={`Class ${profile.currentClass}`} icon={Users} color="violet"
-          trend="School enrollment grade" />
-        <StatCard label="Prep Standard" value={`Class ${profile.examPrepClass}`} icon={TrendingUp} color="cyan"
-          trend="COE configured syllabus level" />
-        <StatCard label="Overall Progress" value={`${overallPct}%`} icon={BarChart3} color="emerald"
-          trend="Syllabus chapters mastered" />
-        <StatCard label="Upcoming Exams" value={upcomingExams.length} icon={Calendar} color="amber"
-          trend="Published by COE" />
+        <StatCard label={isTamil ? "பயிலும் வகுப்பு" : "Current Class"} value={`${isTamil ? "வகுப்பு" : "Class"} ${profile.currentClass}`} icon={Users} color="violet"
+          trend={isTamil ? "பள்ளி சேர்க்கை வகுப்பு" : "School enrollment grade"} />
+        <StatCard label={isTamil ? "தேர்வு ஆயத்த நிலை" : "Prep Standard"} value={`${isTamil ? "வகுப்பு" : "Class"} ${profile.examPrepClass}`} icon={TrendingUp} color="cyan"
+          trend={isTamil ? "அரசுப் பாடத்திட்ட நிலை" : "COE configured syllabus level"} />
+        <StatCard label={isTamil ? "பாட முன்னேற்றம்" : "Overall Progress"} value={`${overallPct}%`} icon={BarChart3} color="emerald"
+          trend={isTamil ? "முடிக்கப்பட்ட பாட அலகுகள்" : "Syllabus chapters mastered"} />
+        <StatCard label={isTamil ? "அட்டவணை தேர்வுகள்" : "Upcoming Exams"} value={upcomingExams.length} icon={Calendar} color="amber"
+          trend={isTamil ? "அரசுத் தேர்வு மையம்" : "Published by COE"} />
       </div>
 
       {/* COE Notice */}
       {notices?.length > 0 && (
-        <div className="flex items-start gap-3 p-4 rounded-2xl bg-amber-500/8 border border-amber-500/25 animate-float-up">
-          <div className="w-8 h-8 rounded-xl bg-amber-500/15 flex items-center justify-center flex-shrink-0">
+        <div className="flex items-start gap-3 p-4 rounded-xl bg-amber-500/8 border border-amber-500/25 animate-float-up">
+          <div className="w-8 h-8 rounded-lg bg-amber-500/15 flex items-center justify-center flex-shrink-0">
             <Bell className="w-4 h-4 text-amber-400" />
           </div>
           <div>
             <p className="text-xs font-bold text-amber-300 uppercase tracking-wide mb-0.5">
-              COE Notice
+              {isTamil ? "அரசு தேர்வு வாரிய அறிவிப்பு" : "COE Notice"}
             </p>
             <p className="text-xs text-[#a8a8d0] leading-relaxed">{notices[0].content}</p>
           </div>
@@ -225,11 +228,11 @@ function StudentDashboardContent() {
         <div className="flex items-center justify-between mb-4">
           <div>
             <h2 className="text-base font-bold text-[#f0f0ff]">
-              Core Subjects — Class {profile.examPrepClass}
+              {isTamil ? `முதன்மை பாடங்கள் — வகுப்பு ${profile.examPrepClass}` : `Core Subjects — Class ${profile.examPrepClass}`}
             </h2>
-            <p className="text-xs text-[#5c5c8a] mt-0.5">5 subjects assigned by the COE</p>
+            <p className="text-xs text-[#5c5c8a] mt-0.5">{isTamil ? "அரசு தேர்வு வாரியத்தால் ஒதுக்கப்பட்ட பாடங்கள்" : "Assigned official curriculum subjects"}</p>
           </div>
-          <span className="badge badge-muted">{subjects.length} Subjects</span>
+          <span className="badge badge-muted">{subjects.length} {isTamil ? "பாடங்கள்" : "Subjects"}</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -240,15 +243,15 @@ function StudentDashboardContent() {
           ))}
 
           {/* Quick Exam Launch Card */}
-          <div className="relative glass rounded-2xl p-5 border border-emerald-500/25 flex flex-col gap-3 overflow-hidden">
+          <div className="relative glass rounded-xl p-5 border border-emerald-500/25 flex flex-col gap-3 overflow-hidden">
             <div className="orb w-32 h-32 bg-emerald-500/20 -top-8 -right-8" />
             <div className="relative">
-              <span className="badge badge-emerald mb-2 inline-flex">Examination Hall</span>
+              <span className="badge badge-emerald mb-2 inline-flex">{isTamil ? "தேர்வு கூடம்" : "Examination Hall"}</span>
               <h3 className="text-base font-bold text-[#f0f0ff] mb-1">
-                Start an Exam
+                {isTamil ? "தேர்வைத் தொடங்குக" : "Start an Exam"}
               </h3>
               <p className="text-xs text-[#5c5c8a] leading-relaxed">
-                Distraction-free environment with timer, question palette, and auto-save drafts.
+                {isTamil ? "கவனச்சிதறலற்ற பாதுகாப்பான தேர்வு முறை, வினாத் தொகுப்பு பலகை மற்றும் தானியங்கி சேமிப்பு." : "Distraction-free environment with timer, question palette, and auto-save drafts."}
               </p>
             </div>
             <Link
@@ -258,7 +261,7 @@ function StudentDashboardContent() {
               className="mt-auto"
             >
               <Button variant="success" className="w-full justify-center gap-2">
-                <PlayCircle className="w-4 h-4" />Start Examination
+                <PlayCircle className="w-4 h-4" />{isTamil ? "தேர்வைத் தொடங்குக" : "Start Examination"}
               </Button>
             </Link>
           </div>
@@ -269,17 +272,17 @@ function StudentDashboardContent() {
       <div>
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h2 className="text-base font-bold text-[#f0f0ff]">Official Examination Timetable</h2>
-            <p className="text-xs text-[#5c5c8a] mt-0.5">Published by Controller of Examinations</p>
+            <h2 className="text-base font-bold text-[#f0f0ff]">{isTamil ? "அதிகாரப்பூர்வ அரசு தேர்வு கால அட்டவணை" : "Official Examination Timetable"}</h2>
+            <p className="text-xs text-[#5c5c8a] mt-0.5">{isTamil ? "அரசுத் தேர்வுகள் இயக்ககத்தால் வெளியிடப்பட்டது" : "Published by Controller of Examinations"}</p>
           </div>
-          <span className="badge badge-emerald">COE Approved</span>
+          <span className="badge badge-emerald">{isTamil ? "அங்கீகரிக்கப்பட்டது" : "COE Approved"}</span>
         </div>
 
         {upcomingExams.length === 0 ? (
-          <div className="glass rounded-2xl p-8 text-center border border-[rgba(124,58,237,0.15)]">
+          <div className="glass rounded-xl p-8 text-center border border-[rgba(124,58,237,0.15)]">
             <Calendar className="w-8 h-8 text-[#5c5c8a] mx-auto mb-2" />
             <p className="text-sm text-[#5c5c8a]">
-              No exams published yet for Class {profile.examPrepClass}. Drafts are being prepared by the COE.
+              {isTamil ? `வகுப்பு ${profile.examPrepClass}-க்கு இன்னும் தேர்வுகள் வெளியிடப்படவில்லை.` : `No exams published yet for Class ${profile.examPrepClass}. Drafts are being prepared by the COE.`}
             </p>
           </div>
         ) : (
@@ -287,7 +290,7 @@ function StudentDashboardContent() {
             {upcomingExams.map((exam, i) => (
               <div
                 key={exam.id}
-                className={`glass rounded-2xl p-5 card-glow border flex flex-col justify-between gap-4 ${
+                className={`glass rounded-xl p-5 card-glow border flex flex-col justify-between gap-4 ${
                   exam.isSubmitted
                     ? "border-emerald-500/30 bg-emerald-950/10"
                     : "border-[rgba(124,58,237,0.2)]"
@@ -298,21 +301,21 @@ function StudentDashboardContent() {
                   <div className="flex items-center justify-between gap-2 flex-wrap">
                     <div className="flex items-center gap-2">
                       <span className="font-bold text-[#f0f0ff]">{exam.subject}</span>
-                      <span className="badge badge-violet">Class {exam.prepClass}</span>
+                      <span className="badge badge-violet">{isTamil ? `வகுப்பு ${exam.prepClass}` : `Class ${exam.prepClass}`}</span>
                     </div>
                     {exam.isSubmitted ? (
                       <span className="badge badge-emerald flex items-center gap-1 font-mono text-[10px]">
-                        <CheckCircle className="w-3 h-3 text-emerald-400" /> SUBMITTED
+                        <CheckCircle className="w-3 h-3 text-emerald-400" /> {isTamil ? "சமர்ப்பிக்கப்பட்டது" : "SUBMITTED"}
                       </span>
                     ) : (
-                      <span className="badge badge-amber text-[10px]">Scheduled</span>
+                      <span className="badge badge-amber text-[10px]">{isTamil ? "அட்டவணைப்படுத்தப்பட்டது" : "Scheduled"}</span>
                     )}
                   </div>
 
                   <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#5c5c8a]">
                     <span className="flex items-center gap-1 font-mono">
                       <Calendar className="w-3 h-3 text-violet-400" />
-                      {new Date(exam.examDate).toLocaleDateString("en-IN", {
+                      {new Date(exam.examDate).toLocaleDateString(isTamil ? "ta-IN" : "en-IN", {
                         day: "numeric", month: "short", year: "numeric",
                       })} · {new Date(exam.examDate).toLocaleTimeString("en-IN", {
                         hour: "numeric", minute: "2-digit", hour12: true,
@@ -320,18 +323,18 @@ function StudentDashboardContent() {
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock className="w-3 h-3 text-amber-400" />
-                      {exam.durationMinutes} mins
+                      {exam.durationMinutes} {isTamil ? "நிமிடங்கள்" : "mins"}
                     </span>
                     <span className="font-semibold text-[#a8a8d0]">
-                      {exam.totalMarks} Marks
+                      {exam.totalMarks} {isTamil ? "மதிப்பெண்கள்" : "Marks"}
                     </span>
                   </div>
 
                   {exam.isSubmitted ? (
-                    <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
+                    <div className="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                       <span>
-                        <strong>Submitted!</strong> Your exam is under COE evaluation and results will publish soon.
+                        <strong>{isTamil ? "சமர்ப்பிக்கப்பட்டது!" : "Submitted!"}</strong> {isTamil ? "உங்கள் தேர்வு மதிப்பீட்டில் உள்ளது; முடிவுகள் விரைவில் வெளியாகும்." : "Your exam is under COE evaluation and results will publish soon."}
                       </span>
                     </div>
                   ) : exam.instructions ? (
@@ -347,14 +350,14 @@ function StudentDashboardContent() {
                         className="flex-1"
                       >
                         <Button variant="outline" size="sm" className="w-full text-xs font-semibold gap-1.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/15">
-                          <Zap className="w-3.5 h-3.5 text-amber-400" /> Practice Mode (Non-Evaluated)
+                          <Zap className="w-3.5 h-3.5 text-amber-400" /> {isTamil ? "மாதிரி பயிற்சி தேர்வு (மதிப்பெண் பாதிக்காது)" : "Practice Mode (Non-Evaluated)"}
                         </Button>
                       </Link>
                       <Link
                         href={`/student/exam-mock?examId=${exam.id}${isPreview ? `&previewRollNo=${previewRoll}` : ""}`}
                       >
                         <Button variant="secondary" size="sm" className="text-xs">
-                          View Receipt
+                          {isTamil ? "சமர்ப்பிப்பு சான்றிதழ்" : "View Receipt"}
                         </Button>
                       </Link>
                     </>
@@ -364,7 +367,7 @@ function StudentDashboardContent() {
                       className="w-full"
                     >
                       <Button variant="success" size="sm" className="w-full justify-center gap-2 font-bold">
-                        <PlayCircle className="w-4 h-4" /> Start Examination
+                        <PlayCircle className="w-4 h-4" /> {isTamil ? "தேர்வைத் தொடங்குக" : "Start Examination"}
                       </Button>
                     </Link>
                   )}

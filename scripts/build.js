@@ -37,6 +37,9 @@ run("npx prisma db push --accept-data-loss", "Prisma Database Push");
 // 4. Seed database with candidates, subjects, exams, and notices
 run("node prisma/seed.js", "Database Seeding");
 
+// 4b. Seed 100-Question banks for subjects
+run("node scripts/seed-100-question-banks.js", "Question Banks Seeding");
+
 // 5. Next.js production build
 run("npx next build", "Next.js Production Build");
 
