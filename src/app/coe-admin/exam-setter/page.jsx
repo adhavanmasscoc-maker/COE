@@ -24,7 +24,8 @@ import {
   ArrowLeft,
   RefreshCw,
   Code2,
-  BookOpen
+  BookOpen,
+  Sliders
 } from "lucide-react";
 
 // Generate exact template matching Phase 5.2
@@ -199,6 +200,10 @@ function ExamSetterContent() {
   const [level, setLevel] = useState("10 police-level questions");
   const [questionCount, setQuestionCount] = useState(paramCount);
 
+  // Live Exam & 100-QB Pool states
+  const [loadingLiveExam, setLoadingLiveExam] = useState(false);
+  const [liveExamData, setLiveExamData] = useState(null);
+
   // JSON Preview & Paste states
   const [generatedJson, setGeneratedJson] = useState("");
   const [pastedJson, setPastedJson] = useState("");
@@ -208,6 +213,164 @@ function ExamSetterContent() {
   const [validationSuccess, setValidationSuccess] = useState("");
   const [importing, setImporting] = useState(false);
   const [importResult, setImportResult] = useState(null);
+
+  // When targetExamId is provided in URL, automatically load the current exam questions
+  useEffect(() => {
+    if (!targetExamId) return;
+    async function loadCurrentExam() {
+      setLoadingLiveExam(true);
+      try {
+        const res = await fetch(`/api/admin/exams/${targetExamId}/random-questions`);
+        const data = await res.json();
+        if (res.ok && data.exam) {
+          setLiveExamData(data);
+          setExamId(targetExamId);
+          setSub(data.exam.subjectCode || paramSub);
+          setTotalMarks(String(data.exam.totalMarks || paramMarks));
+          setQuestionCount(String(data.currentQuestions?.length || paramCount));
+
+          if (data.currentQuestions && data.currentQuestions.length > 0) {
+            const loadedTemplate = {
+              sub: data.exam.subjectCode,
+              examId: targetExamId,
+              subjectName: data.exam.subjectName,
+              date: paramDate,
+              time: paramTime,
+              total_marks: data.exam.totalMarks,
+              language: paramLang,
+              questions: data.currentQuestions.map((q, idx) => {
+                const optObj = {};
+                if (Array.isArray(q.options)) {
+                  q.options.forEach((opt, oIdx) => {
+                    const key = String(opt.id || String.fromCharCode(65 + oIdx)).toUpperCase();
+                    optObj[key] = opt.text || "";
+                  });
+                } else if (q.options && typeof q.options === "object") {
+                  Object.keys(q.options).forEach((k) => {
+                    optObj[k.toUpperCase()] = q.options[k];
+                  });
+                }
+                return {
+                  id: q.questionNumber || idx + 1,
+                  question: q.questionText,
+                  options: optObj,
+                  answer: q.correctAnswer || "A",
+                  explanation: q.explanation || "",
+                  difficulty: q.difficulty || "MEDIUM",
+                };
+              }),
+            };
+            const jsonStr = JSON.stringify(loadedTemplate, null, 2);
+            setPastedJson(jsonStr);
+            setGeneratedJson(jsonStr);
+            setValidationSuccess(`✓ Loaded live examination for ${data.exam.subjectName} (${data.currentQuestions.length} questions). Edit JSON freely below and click Validate & Import!`);
+          }
+        }
+      } catch (err) {
+        console.error("Error loading live exam in setter:", err);
+      } finally {
+        setLoadingLiveExam(false);
+      }
+    }
+    loadCurrentExam();
+  }, [targetExamId]);
+
+  // Quick Action: Shuffle questions in pastedJson
+  const handleShufflePastedQuestions = () => {
+    try {
+      const parsed = JSON.parse(pastedJson || generatedJson);
+      if (!parsed.questions || !Array.isArray(parsed.questions)) return;
+      const shuffled = [...parsed.questions].sort(() => 0.5 - Math.random());
+      const renumbered = shuffled.map((q, idx) => ({ ...q, id: idx + 1 }));
+      const updated = { ...parsed, questions: renumbered };
+      const jsonStr = JSON.stringify(updated, null, 2);
+      setPastedJson(jsonStr);
+      setValidationSuccess(`✓ Shuffled ${renumbered.length} questions randomly without duplicates!`);
+    } catch (e) {
+      alert("Please ensure valid JSON before shuffling: " + e.message);
+    }
+  };
+
+  // Quick Action: Sort questions by Policy (1=Easy first, 2=Moderate, 3=Hard, 6=Balanced)
+  const handleSortByPolicy = (policyNum) => {
+    try {
+      const parsed = JSON.parse(pastedJson || generatedJson);
+      if (!parsed.questions || !Array.isArray(parsed.questions)) return;
+      let sorted = [...parsed.questions];
+      if (policyNum === 1) { // Easy
+        sorted.sort((a, b) => ((a.difficulty || "MEDIUM") === "EASY" ? -1 : 1));
+      } else if (policyNum === 2) { // Moderate
+        sorted.sort((a, b) => ((a.difficulty || "MEDIUM") === "MEDIUM" ? -1 : 1));
+      } else if (policyNum === 3) { // Hard
+        sorted.sort((a, b) => ((a.difficulty || "MEDIUM") === "HARD" ? -1 : 1));
+      } else {
+        sorted.sort(() => 0.5 - Math.random());
+      }
+      const renumbered = sorted.map((q, idx) => ({ ...q, id: idx + 1 }));
+      const updated = { ...parsed, questions: renumbered };
+      const jsonStr = JSON.stringify(updated, null, 2);
+      setPastedJson(jsonStr);
+      setValidationSuccess(`✓ Sorted questions according to Policy #${policyNum}!`);
+    } catch (e) {
+      alert("Please ensure valid JSON: " + e.message);
+    }
+  };
+
+  // Quick Action: Select subset from 100-QB pool
+  const handlePullFromPool = (range, count, isRandom) => {
+    if (!liveExamData?.bankItems || liveExamData.bankItems.length === 0) {
+      alert("Bank pool is not loaded for this exam. Please select an exam from schedules.");
+      return;
+    }
+    let pool = [...liveExamData.bankItems];
+    if (range === "FIRST_50") {
+      pool = pool.filter((b) => b.questionNumber <= 50);
+    } else if (range === "SECOND_50") {
+      pool = pool.filter((b) => b.questionNumber > 50);
+    } else if (range === "FIRST_25") {
+      pool = pool.filter((b) => b.questionNumber <= 25);
+    }
+
+    let sampled = [];
+    if (isRandom) {
+      const shuffled = [...pool].sort(() => 0.5 - Math.random());
+      sampled = shuffled.slice(0, Math.min(count, shuffled.length));
+    } else {
+      sampled = pool.slice(0, Math.min(count, pool.length));
+    }
+
+    const newTemplate = {
+      sub: liveExamData.exam?.subjectCode || sub,
+      examId: targetExamId || examId,
+      subjectName: liveExamData.exam?.subjectName || "",
+      date,
+      time,
+      total_marks: totalMarks,
+      language,
+      questions: sampled.map((q, idx) => {
+        const optObj = {};
+        if (Array.isArray(q.options)) {
+          q.options.forEach((opt, oIdx) => {
+            const key = String(opt.id || String.fromCharCode(65 + oIdx)).toUpperCase();
+            optObj[key] = opt.text || "";
+          });
+        }
+        return {
+          id: idx + 1,
+          question: q.questionText,
+          options: optObj,
+          answer: q.correctAnswer || "A",
+          explanation: q.explanation || "",
+          difficulty: q.difficulty || "MEDIUM",
+        };
+      }),
+    };
+
+    const jsonStr = JSON.stringify(newTemplate, null, 2);
+    setPastedJson(jsonStr);
+    setQuestionCount(String(sampled.length));
+    setValidationSuccess(`✓ Pulled ${sampled.length} questions from ${range} pool! Click Validate & Import.`);
+  };
 
   // Regenerate template whenever parameters change
   useEffect(() => {
@@ -488,6 +651,78 @@ function ExamSetterContent() {
               >
                 Load 25-Mark Tamil Sample →
               </button>
+            </div>
+
+            {/* Live Exam Loaded Banner */}
+            {liveExamData && (
+              <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-between flex-wrap gap-2 text-xs">
+                <div className="flex items-center gap-2">
+                  <BookOpen className="w-4 h-4 text-emerald-400" />
+                  <span className="text-foreground">
+                    Loaded: <strong className="text-emerald-300">{liveExamData.exam.subjectName}</strong> ({liveExamData.exam.subjectCode}) · <strong>{liveExamData.currentQuestions?.length || 0} Questions Ready to Edit</strong>
+                  </span>
+                </div>
+                <span className="badge badge-emerald text-[10px]">Live Exam Sync Active</span>
+              </div>
+            )}
+
+            {/* Quick 100-QB Pool Actions & 10 Policies Toolbar */}
+            <div className="p-3 rounded-xl bg-secondary/30 border border-border flex items-center gap-2 flex-wrap text-[11px]">
+              <span className="font-bold text-muted-foreground mr-1 flex items-center gap-1">
+                <Sliders className="w-3.5 h-3.5 text-amber-400" />
+                Pool Quick-Select:
+              </span>
+              <button
+                type="button"
+                onClick={() => handlePullFromPool("FIRST_50", 25, true)}
+                className="px-2.5 py-1 rounded-lg border border-emerald-500/40 bg-emerald-500/15 text-emerald-300 font-bold hover:bg-emerald-500/25 transition-all"
+                title="Select 25 random non-duplicate questions from the first 50 questions"
+              >
+                Any 25 Random from First 50
+              </button>
+              <button
+                type="button"
+                onClick={() => handlePullFromPool("FIRST_50", 50, false)}
+                className="px-2.5 py-1 rounded-lg border border-border bg-card hover:bg-secondary text-foreground font-semibold transition-all"
+                title="Select all first 50 questions (Set A: Part 1 & 2)"
+              >
+                First 50 (Set A)
+              </button>
+              <button
+                type="button"
+                onClick={() => handlePullFromPool("SECOND_50", 50, false)}
+                className="px-2.5 py-1 rounded-lg border border-sky-500/40 bg-sky-500/15 text-sky-300 font-bold hover:bg-sky-500/25 transition-all"
+                title="Select remaining 50 questions (Set B: Part 3 & 4)"
+              >
+                Remaining 50 (Set B)
+              </button>
+              <button
+                type="button"
+                onClick={handleShufflePastedQuestions}
+                className="px-2.5 py-1 rounded-lg border border-amber-500/40 bg-amber-500/15 text-amber-300 font-bold hover:bg-amber-500/25 transition-all flex items-center gap-1"
+                title="Shuffle current questions randomly without duplicates"
+              >
+                <RefreshCw className="w-3 h-3" />
+                Shuffle Random
+              </button>
+
+              <div className="flex items-center gap-1.5 ml-auto">
+                <span className="text-muted-foreground font-semibold">10 Policies:</span>
+                <select
+                  defaultValue=""
+                  onChange={(e) => {
+                    if (e.target.value) handleSortByPolicy(Number(e.target.value));
+                  }}
+                  className="input-field text-[11px] py-1 px-2 border-violet-500/40 text-violet-300 font-semibold"
+                >
+                  <option value="" disabled>Sort by Policy...</option>
+                  <option value={1}>Policy 1: Easy-Only</option>
+                  <option value={2}>Policy 2: Moderate Standard</option>
+                  <option value={3}>Policy 3: Challenging</option>
+                  <option value={6}>Policy 6: Balanced Blueprint</option>
+                  <option value={9}>Policy 9: Fast-Paced Speed</option>
+                </select>
+              </div>
             </div>
 
             {/* Monospace Textarea */}

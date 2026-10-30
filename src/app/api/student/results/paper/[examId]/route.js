@@ -5,6 +5,7 @@ import { decryptSubmissionPayload } from "@/lib/encryption";
 import { normalizeOptionsList } from "@/lib/questionBankParser";
 import { getOrRestoreStudentProfile } from "@/lib/studentProfileHelper";
 import { getLocalizedQuestion, getLocalizedOption } from "@/lib/questionTranslations";
+import { pickQuestion, pickOption, pickExplanation } from "@/lib/config/engine.config";
 
 export const dynamic = "force-dynamic";
 
@@ -129,12 +130,11 @@ export async function GET(request, { params }) {
 
       const opts = normalizeOptionsList(q.options).map((opt) => ({
         id: opt.id,
-        text: isTamil ? (opt.textTa || getLocalizedOption(opt, true)) : (opt.textEn || opt.text),
+        text: pickOption(opt, isTamil ? "ta" : "en"),
       }));
 
-      const localizedQuestionText = isTamil
-        ? (q.questionTextTa || getLocalizedQuestion(q, true))
-        : q.questionText;
+      const localizedQuestionText = pickQuestion(q, isTamil ? "ta" : "en");
+      const localizedExplanation = pickExplanation(q, isTamil ? "ta" : "en");
 
       return {
         id: q.id,
@@ -146,7 +146,7 @@ export async function GET(request, { params }) {
         correctAnswer: correct,
         isCorrect,
         marksAwarded: marksEarned,
-        explanation: q.explanation || "Official Tamil Nadu Board verified key.",
+        explanation: localizedExplanation,
       };
     });
 

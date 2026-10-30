@@ -110,20 +110,21 @@ async function seedQuestionBanks() {
 
     await prisma.questionBankItem.deleteMany({ where: { subjectId: subject.id } });
 
-    for (const q of questions) {
-      await prisma.questionBankItem.create({
-        data: {
-          subjectId: subject.id,
-          questionNumber: q.questionNumber,
-          questionText: q.questionText,
-          marks: q.marks,
-          options: JSON.stringify(q.options),
-          correctAnswer: q.correctAnswer,
-          explanation: q.explanation,
-          sourceFormat: "JSON",
-        }
-      });
-    }
+    // Data structure: Array of 100 questions mapped into createMany payload.
+    // Time complexity: O(1) single round-trip batch insertion instead of 100 loops.
+    // If rules change: Update mapped questionBankItem columns.
+    await prisma.questionBankItem.createMany({
+      data: questions.map((q) => ({
+        subjectId: subject.id,
+        questionNumber: q.questionNumber,
+        questionText: q.questionText,
+        marks: q.marks,
+        options: JSON.stringify(q.options),
+        correctAnswer: q.correctAnswer,
+        explanation: q.explanation,
+        sourceFormat: "JSON",
+      })),
+    });
 
     console.log(`✓ Successfully seeded 100 questions into Question Bank for ${subject.code} (${subject.name})!`);
   }

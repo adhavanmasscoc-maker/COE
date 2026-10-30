@@ -29,6 +29,7 @@ import {
   Send,
 } from "lucide-react";
 import { getLocalizedQuestion, getLocalizedOption } from "@/lib/questionTranslations";
+import { pick, pickQuestion, pickOption, pickExplanation } from "@/lib/config/engine.config";
 
 export default function PracticeExamPage() {
   const params = useParams();
@@ -60,6 +61,7 @@ export default function PracticeExamPage() {
   // Results & DB Attempt
   const [resultData, setResultData] = useState(null);
   const [savingAttempt, setSavingAttempt] = useState(false);
+  const [resultFilter, setResultFilter] = useState("INCORRECT"); // "INCORRECT" | "UNATTEMPTED" | "CORRECT" | "ALL"
 
   // Text to Speech
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
@@ -73,6 +75,10 @@ export default function PracticeExamPage() {
     ? { code: "CHE-12", name: isTamil ? "வேதியியல் (வகுப்பு 12)" : "Chemistry (Class 12)" }
     : rawSubject.includes("PHY")
     ? { code: "PHY-12", name: isTamil ? "இயற்பியல் (வகுப்பு 12)" : "Physics (Class 12)" }
+    : rawSubject === "ENG-10" || (rawSubject.includes("ENG") && rawSubject.includes("10"))
+    ? { code: "ENG-10", name: isTamil ? "ஆங்கிலம் (வகுப்பு 10)" : "English (Class 10)" }
+    : rawSubject.includes("ENG")
+    ? { code: "ENG-12", name: isTamil ? "ஆங்கிலம் (வகுப்பு 12)" : "English (Class 12)" }
     : rawSubject.includes("CSC")
     ? { code: "CSC-12", name: isTamil ? "கணினி அறிவியல் (வகுப்பு 12)" : "Computer Science (Class 12)" }
     : { code: rawSubject, name: rawSubject };
@@ -128,6 +134,43 @@ export default function PracticeExamPage() {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [step, currentIdx, questions]);
+
+  // Telemetry heartbeat for active practice test-takers monitoring on COE admin panel
+  useEffect(() => {
+    if (step !== "PRACTICE") return;
+
+    const pingPracticeTelemetry = async () => {
+      try {
+        const roll = candidate?.user?.username || candidate?.rollNo || previewRollNo;
+        if (!roll) return;
+        await fetch("/api/student/activity", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            rollNo: roll,
+            studentName: candidate?.fullName || "Practice Candidate",
+            action: "PRACTICE_ACTIVE",
+            details: JSON.stringify({
+              subjectCode: subjectDisplay.code,
+              subjectName: subjectDisplay.name,
+              setName: setDisplayName,
+              answeredCount: Object.keys(answers).length,
+              totalQuestions: questions.length,
+              currentQuestion: currentIdx + 1,
+              secondsElapsed,
+            }),
+            durationSeconds: secondsElapsed,
+          }),
+        });
+      } catch {
+        // silent telemetry
+      }
+    };
+
+    pingPracticeTelemetry();
+    const interval = setInterval(pingPracticeTelemetry, 15000);
+    return () => clearInterval(interval);
+  }, [step, candidate, answers, questions.length, currentIdx, secondsElapsed, subjectDisplay, setDisplayName, previewRollNo]);
 
   // SpeechSynthesis handler
   const handleToggleAudio = (textToRead) => {
@@ -208,11 +251,21 @@ export default function PracticeExamPage() {
 
     let calculatedScore = 0;
     const totalMarks = questions.length;
+    let incorrectCount = 0;
+    let unattemptedCount = 0;
+    let correctCount = 0;
 
     const breakdown = questions.map((q, idx) => {
       const chosen = answers[q.id];
       const isCorrect = Boolean(chosen && chosen.toUpperCase() === q.correctAnswer?.toUpperCase());
-      if (isCorrect) calculatedScore += 1;
+      if (isCorrect) {
+        calculatedScore += 1;
+        correctCount += 1;
+      } else if (chosen) {
+        incorrectCount += 1;
+      } else {
+        unattemptedCount += 1;
+      }
 
       return {
         ...q,
@@ -231,10 +284,19 @@ export default function PracticeExamPage() {
       timeSpent: secondsElapsed,
       breakdown,
       answeredCount: Object.keys(answers).length,
+      incorrectCount,
+      unattemptedCount,
+      correctCount,
     };
 
     setResultData(summary);
+    // User requirement: automatically show wrong answered questions directly without scrolling
+    setResultFilter(incorrectCount > 0 ? "INCORRECT" : unattemptedCount > 0 ? "UNATTEMPTED" : "ALL");
     setStep("RESULT");
+
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
 
     // Save attempt to DB
     setSavingAttempt(true);
@@ -255,6 +317,29 @@ export default function PracticeExamPage() {
           previewRollNo,
         }),
       });
+
+      // Also log student activity telemetry for COE admin audit and monitoring
+      const roll = candidate?.user?.username || candidate?.rollNo || previewRollNo;
+      if (roll) {
+        fetch("/api/student/activity", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            rollNo: roll,
+            studentName: candidate?.fullName || "Practice Candidate",
+            action: "SUBMIT",
+            details: JSON.stringify({
+              type: "PRACTICE_EXAM",
+              subjectCode: subjectDisplay.code,
+              setName: setDisplayName,
+              score: calculatedScore,
+              totalMarks,
+              percentage,
+            }),
+            durationSeconds: secondsElapsed,
+          }),
+        }).catch(() => {});
+      }
     } catch (e) {
       console.warn("Could not save practice attempt to DB:", e);
     } finally {
@@ -358,13 +443,8 @@ export default function PracticeExamPage() {
 
   // 2. PRACTICE STEP
   const currentQ = questions[currentIdx];
-  const qText = isTamil
-    ? (currentQ?.questionTextTa || getLocalizedQuestion(currentQ, true))
-    : (currentQ?.questionText || currentQ?.question);
-
-  const rawExplanation = isTamil
-    ? (currentQ?.explanationTa || currentQ?.explanation || "பாடக்குறிப்புகள் மற்றும் விடைகள் தயாரிக்கப்பட்டு வருகின்றன.")
-    : (currentQ?.explanation || "Verified board key rationale.");
+  const qText = pickQuestion(currentQ, isTamil ? "ta" : "en");
+  const rawExplanation = pickExplanation(currentQ, isTamil ? "ta" : "en");
 
   return (
     <div className="max-w-4xl mx-auto py-6 px-4 space-y-5 animate-float-up">
@@ -478,9 +558,7 @@ export default function PracticeExamPage() {
             {(currentQ.options || []).map((opt) => {
               const optId = opt.id?.toUpperCase();
               const isChosen = answers[currentQ.id] === optId;
-              const optText = isTamil
-                ? (opt.textTa || getLocalizedOption(opt, true))
-                : (opt.textEn || opt.text);
+              const optText = pickOption(opt, isTamil ? "ta" : "en");
 
               return (
                 <button
@@ -673,67 +751,228 @@ export default function PracticeExamPage() {
             </Link>
           </div>
 
-          {/* Question by Question Breakdown */}
+          {/* User Requested: Immediate Mistakes / Wrong Answers Section - NO SCROLL NEEDED */}
           <div className="text-left space-y-4 pt-4 border-t border-border">
-            <h3 className="font-bold text-sm text-foreground">
-              {isTamil ? "முழு வினாக்கள் & விடைக்குறிப்பு பகுப்பாய்வு" : "Complete Question Review & Rationale"}
-            </h3>
-
-            <div className="space-y-3">
-              {resultData.breakdown.map((item) => (
-                <div
-                  key={item.id}
-                  className={`p-4 rounded-xl border text-xs space-y-2 ${
-                    item.isCorrect
-                      ? "bg-emerald-500/5 border-emerald-500/25"
-                      : "bg-rose-500/5 border-rose-500/25"
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-foreground">
-                      {item.index}. {isTamil ? (item.questionTextTa || item.questionText) : item.questionText}
-                    </span>
-                    <span
-                      className={`font-mono font-bold text-[10px] px-2 py-0.5 rounded ${
-                        item.isCorrect
-                          ? "bg-emerald-500/20 text-emerald-300"
-                          : "bg-rose-500/20 text-rose-300"
-                      }`}
-                    >
-                      {item.isCorrect ? "+1 Correct" : "0 Incorrect"}
-                    </span>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2 text-[11px] pt-1">
-                    <div className="p-2 rounded bg-card/60 border border-border">
-                      <span className="text-muted-foreground block text-[10px]">
-                        {isTamil ? "உங்கள் விடை:" : "Your Answer:"}
-                      </span>
-                      <span className={item.isCorrect ? "font-bold text-emerald-400" : "font-bold text-rose-400"}>
-                        {item.chosen ? `Option ${item.chosen}` : "Unattempted"}
-                      </span>
-                    </div>
-
-                    <div className="p-2 rounded bg-card/60 border border-border">
-                      <span className="text-muted-foreground block text-[10px]">
-                        {isTamil ? "சரியான விடைக்குறிப்பு:" : "Official Key:"}
-                      </span>
-                      <span className="font-bold text-emerald-400">
-                        Option {item.correctAnswer}
-                      </span>
-                    </div>
-                  </div>
-
-                  {(item.explanation || item.explanationTa) && (
-                    <div className="p-2.5 rounded bg-violet-500/10 border border-violet-500/20 text-[11px] text-muted-foreground">
-                      <strong className="text-violet-300 block mb-0.5">
-                        {isTamil ? "விளக்கம்:" : "Rationale:"}
-                      </strong>
-                      {isTamil ? (item.explanationTa || item.explanation) : item.explanation}
-                    </div>
-                  )}
+            {resultData.incorrectCount > 0 ? (
+              <div className="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-start gap-3 animate-in fade-in-50">
+                <AlertCircle className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <h4 className="font-bold text-rose-200 text-sm">
+                    {isTamil
+                      ? `தவறாக விடையளிக்கப்பட்ட வினாக்கள் (${resultData.incorrectCount}) — உடனடியாக கீழே சரிபார்க்கவும்`
+                      : `Wrongly Answered Questions (${resultData.incorrectCount}) — Review Directly Without Scrolling`}
+                  </h4>
+                  <p className="text-xs text-rose-300/80 leading-relaxed">
+                    {isTamil
+                      ? "நீங்கள் தவறாக தேர்வு செய்த விடைகள் மற்றும் அதற்கான சரியான அரசு தேர்வு விடைக் குறிப்புகள் கீழே நேரடியாக காட்டப்பட்டுள்ளன."
+                      : "Your mistakes are automatically highlighted below with official answer keys, step-by-step reasoning, and multi-lingual voice audio."}
+                  </p>
                 </div>
-              ))}
+              </div>
+            ) : (
+              <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-3 animate-in fade-in-50">
+                <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <div>
+                  <h4 className="font-bold text-emerald-200 text-sm">
+                    {isTamil ? "அற்புதம்! அனைத்து வினாக்களுக்கும் சரியான விடை!" : "Outstanding! 100% Accuracy — Zero Mistakes!"}
+                  </h4>
+                  <p className="text-xs text-emerald-300/80">
+                    {isTamil ? "நீங்கள் அனைத்து வினாக்களுக்கும் சரியான விடையளித்துள்ளீர்கள்." : "You got every question right on this practice assessment."}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Filter Tabs: Defaults to Incorrect so student sees wrong questions immediately */}
+            <div className="flex items-center gap-2 flex-wrap pb-2 border-b border-border">
+              <button
+                type="button"
+                onClick={() => setResultFilter("INCORRECT")}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                  resultFilter === "INCORRECT"
+                    ? "bg-rose-500/20 text-rose-300 border border-rose-500/40 shadow-sm"
+                    : "bg-secondary/40 text-muted-foreground hover:text-foreground border border-transparent"
+                }`}
+              >
+                <XCircle className="w-3.5 h-3.5 text-rose-400" />
+                {isTamil ? `தவறான விடைகள் (${resultData.incorrectCount || 0})` : `Wrong Answers (${resultData.incorrectCount || 0})`}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setResultFilter("UNATTEMPTED")}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                  resultFilter === "UNATTEMPTED"
+                    ? "bg-amber-500/20 text-amber-300 border border-amber-500/40 shadow-sm"
+                    : "bg-secondary/40 text-muted-foreground hover:text-foreground border border-transparent"
+                }`}
+              >
+                <HelpCircle className="w-3.5 h-3.5 text-amber-400" />
+                {isTamil ? `விடையளிக்காதவை (${resultData.unattemptedCount || 0})` : `Skipped (${resultData.unattemptedCount || 0})`}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setResultFilter("CORRECT")}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                  resultFilter === "CORRECT"
+                    ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm"
+                    : "bg-secondary/40 text-muted-foreground hover:text-foreground border border-transparent"
+                }`}
+              >
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                {isTamil ? `சரியான விடைகள் (${resultData.correctCount || 0})` : `Correct (${resultData.correctCount || 0})`}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setResultFilter("ALL")}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                  resultFilter === "ALL"
+                    ? "bg-violet-500/20 text-violet-300 border border-violet-500/40 shadow-sm"
+                    : "bg-secondary/40 text-muted-foreground hover:text-foreground border border-transparent"
+                }`}
+              >
+                <BookOpen className="w-3.5 h-3.5 text-violet-400" />
+                {isTamil ? `அனைத்து வினாக்கள் (${resultData.totalMarks})` : `All (${resultData.totalMarks})`}
+              </button>
+            </div>
+
+            {/* Questions List */}
+            <div className="space-y-3 pt-1">
+              {(resultData.breakdown || [])
+                .filter((item) => {
+                  if (resultFilter === "INCORRECT") return item.chosen && !item.isCorrect;
+                  if (resultFilter === "UNATTEMPTED") return !item.chosen;
+                  if (resultFilter === "CORRECT") return item.isCorrect;
+                  return true; // "ALL"
+                })
+                .length === 0 ? (
+                <div className="p-8 text-center rounded-2xl bg-secondary/30 border border-border space-y-2">
+                  <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto" />
+                  <p className="text-sm font-bold text-foreground">
+                    {resultFilter === "INCORRECT"
+                      ? isTamil ? "அற்புதம்! தவறான விடைகள் ஏதுமில்லை!" : "Brilliant! No incorrect answers in this practice test!"
+                      : isTamil ? "இப்பிரிவில் வினாக்கள் இல்லை" : "No questions in this filter category"}
+                  </p>
+                </div>
+              ) : (
+                (resultData.breakdown || [])
+                  .filter((item) => {
+                    if (resultFilter === "INCORRECT") return item.chosen && !item.isCorrect;
+                    if (resultFilter === "UNATTEMPTED") return !item.chosen;
+                    if (resultFilter === "CORRECT") return item.isCorrect;
+                    return true;
+                  })
+                  .map((item) => {
+                    const itemQText = pickQuestion(item, isTamil ? "ta" : "en");
+                    const itemExplanation = pickExplanation(item, isTamil ? "ta" : "en");
+
+                    let chosenOptText = "";
+                    let correctOptText = "";
+                    if (Array.isArray(item.options)) {
+                      const cOpt = item.options.find(o => String(o.id || "").toUpperCase() === String(item.chosen || "").toUpperCase());
+                      if (cOpt) chosenOptText = pickOption(cOpt, isTamil ? "ta" : "en");
+                      const kOpt = item.options.find(o => String(o.id || "").toUpperCase() === String(item.correctAnswer || "").toUpperCase());
+                      if (kOpt) correctOptText = pickOption(kOpt, isTamil ? "ta" : "en");
+                    } else if (item.options && typeof item.options === "object") {
+                      const cVal = item.options[item.chosen?.toLowerCase()] || item.options[item.chosen?.toUpperCase()];
+                      if (cVal) chosenOptText = typeof cVal === "string" ? cVal : pickOption(cVal, isTamil ? "ta" : "en");
+                      const kVal = item.options[item.correctAnswer?.toLowerCase()] || item.options[item.correctAnswer?.toUpperCase()];
+                      if (kVal) correctOptText = typeof kVal === "string" ? kVal : pickOption(kVal, isTamil ? "ta" : "en");
+                    }
+
+                    return (
+                      <div
+                        key={item.id}
+                        className={`p-4 rounded-xl border text-xs space-y-3 transition-all ${
+                          item.isCorrect
+                            ? "bg-emerald-500/5 border-emerald-500/25"
+                            : item.chosen
+                            ? "bg-rose-500/10 border-rose-500/40 shadow-sm shadow-rose-950/20"
+                            : "bg-amber-500/5 border-amber-500/25"
+                        }`}
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <span className="font-bold text-foreground text-sm leading-relaxed flex-1">
+                            <span className="font-mono text-violet-400 mr-1.5">Q{item.index}.</span>
+                            {itemQText}
+                          </span>
+                          <span
+                            className={`font-mono font-bold text-[10px] px-2 py-0.5 rounded-full flex-shrink-0 ${
+                              item.isCorrect
+                                ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                                : item.chosen
+                                ? "bg-rose-500/20 text-rose-300 border border-rose-500/40"
+                                : "bg-amber-500/20 text-amber-300 border border-amber-500/30"
+                            }`}
+                          >
+                            {item.isCorrect ? "+1 Correct" : item.chosen ? "0 Incorrect" : "Unattempted"}
+                          </span>
+                        </div>
+
+                        {/* Side by side comparison: What student selected vs Official answer */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs pt-1">
+                          <div className={`p-2.5 rounded-xl border ${
+                            item.isCorrect
+                              ? "bg-emerald-500/10 border-emerald-500/30"
+                              : item.chosen
+                              ? "bg-rose-500/15 border-rose-500/40"
+                              : "bg-secondary/40 border-border"
+                          }`}>
+                            <span className="text-muted-foreground block text-[10px] uppercase font-bold tracking-wider mb-0.5">
+                              {isTamil ? "உங்கள் விடை (Your Choice):" : "Your Answer:"}
+                            </span>
+                            <span className={item.isCorrect ? "font-bold text-emerald-400 flex items-center gap-1" : item.chosen ? "font-bold text-rose-300 flex items-center gap-1" : "text-muted-foreground italic font-mono"}>
+                              {item.chosen ? (
+                                <>
+                                  {item.isCorrect ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> : <XCircle className="w-3.5 h-3.5 text-rose-400" />}
+                                  Option {item.chosen} {chosenOptText ? `— ${chosenOptText}` : ""}
+                                </>
+                              ) : (
+                                isTamil ? "விடையளிக்கப்படவில்லை" : "Unattempted / Skipped"
+                              )}
+                            </span>
+                          </div>
+
+                          <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
+                            <span className="text-muted-foreground block text-[10px] uppercase font-bold tracking-wider mb-0.5">
+                              {isTamil ? "அரசு உத்தியோகபூர்வ விடைக்குறிப்பு:" : "Official Correct Key:"}
+                            </span>
+                            <span className="font-bold text-emerald-300 flex items-center gap-1">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                              Option {item.correctAnswer} {correctOptText ? `— ${correctOptText}` : ""}
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Explanation Rationale with Voice Audio */}
+                        {itemExplanation && (
+                          <div className="p-3 rounded-xl bg-violet-500/10 border border-violet-500/25 text-xs text-muted-foreground space-y-1.5">
+                            <div className="flex items-center justify-between">
+                              <strong className="text-violet-300 font-bold flex items-center gap-1">
+                                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                                {isTamil ? "படிமுறை தீர்வு & விளக்கம் (Rationale):" : "Step-by-Step Explanation:"}
+                              </strong>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={() => handleToggleAudio(itemExplanation)}
+                                className="text-[10px] py-0.5 px-2 border-violet-500/30 text-violet-300 gap-1 font-semibold"
+                              >
+                                {isPlayingAudio ? <Pause className="w-3 h-3 text-amber-400" /> : <Volume2 className="w-3 h-3 text-emerald-400" />}
+                                {isTamil ? "கேளுங்கள்" : "Listen"}
+                              </Button>
+                            </div>
+                            <p className="leading-relaxed text-foreground/90 font-medium">
+                              {itemExplanation}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })
+              )}
             </div>
           </div>
         </Card>

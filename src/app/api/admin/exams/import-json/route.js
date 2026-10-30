@@ -150,26 +150,27 @@ export async function POST(request) {
       }, { status: 422 });
     }
 
-    // 3. Clear existing questions and insert newly imported ones
+    // 3. Clear existing questions and insert newly imported ones in single atomic batch
+    // Data structure: Array of ExamQuestion payload objects mapped from valid questions.
+    // Time complexity: O(M) mapping + O(1) single-trip createMany.
+    // If rules change: Update mapped question fields.
     await db.examQuestion.deleteMany({
       where: { examScheduleId: exam.id },
     });
 
-    for (const vq of validQuestions) {
-      await db.examQuestion.create({
-        data: {
-          examScheduleId: exam.id,
-          questionNumber: vq.questionNumber,
-          questionText: vq.questionText,
-          marks: vq.marks,
-          options: vq.options,
-          correctAnswer: vq.correctAnswer,
-          explanation: vq.explanation,
-          reviewStatus: "approved",
-          source: "json_exam_setter",
-        },
-      });
-    }
+    await db.examQuestion.createMany({
+      data: validQuestions.map((vq) => ({
+        examScheduleId: exam.id,
+        questionNumber: vq.questionNumber,
+        questionText: vq.questionText,
+        marks: vq.marks,
+        options: vq.options,
+        correctAnswer: vq.correctAnswer,
+        explanation: vq.explanation,
+        reviewStatus: "approved",
+        source: "json_exam_setter",
+      })),
+    });
 
     // 4. Advance exam phase to Phase 4 / Phase 5
     await db.examSchedule.update({

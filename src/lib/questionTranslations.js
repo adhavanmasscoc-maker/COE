@@ -647,31 +647,37 @@ export function translateOption(text, lang = "en") {
   return trimmed;
 }
 
-/**
- * Strictly localizes a question text according to medium without English leakage.
- */
+import { pick, pickQuestion, pickOption, pickExplanation } from "./config/engine.config.js";
+
+// Data structure: Plain object field bundle { en, ta }.
+// Time complexity: O(1) constant time dictionary + pick lookup.
+// If rules change: Adjust field normalization or fallback message in engine.config.js.
 export function getLocalizedQuestion(q, isTamil) {
-  if (!q) return "";
-  if (!isTamil) return q.questionTextEn || q.questionText || "";
-  if (q.questionTextTa && q.questionTextTa.trim()) return q.questionTextTa;
-  const translated = translateQuestion(q.questionText || q.text, "ta");
-  if (/[\u0B80-\u0BFF]/.test(translated)) return translated;
-  return translated || "பாடக்குறிப்புகள் மற்றும் விடைகள் தயாரிக்கப்பட்டு வருகின்றன.";
+  if (!q) return pick(null, isTamil ? "ta" : "en");
+  const en = q.question_en || q.questionTextEn || q.questionText || q.question || q.text || "";
+  let ta = q.question_ta || q.questionTextTa || "";
+  if (!ta && en) {
+    const candidate = translateQuestion(en, "ta");
+    if (/[\u0B80-\u0BFF]/.test(candidate)) ta = candidate;
+  }
+  return pick({ en, ta }, isTamil ? "ta" : "en");
 }
 
-/**
- * Strictly localizes an option text according to medium without English leakage.
- */
+// Data structure: Plain object field bundle { en, ta }.
+// Time complexity: O(1) constant time dictionary + pick lookup.
+// If rules change: Adjust field normalization or fallback message in engine.config.js.
 export function getLocalizedOption(opt, isTamil) {
-  if (!opt) return "";
-  if (!isTamil) return opt.textEn || opt.text || "";
-  if (opt.textTa && opt.textTa.trim()) return opt.textTa;
-  const raw = opt.text || opt.label || "";
-  const translated = translateOption(raw, "ta");
-  if (/[\u0B80-\u0BFF]/.test(translated)) return translated;
-  if (/^[\d\s\.\+\-\/\(\)\=\>\<\,\:A-Za-z0-9\^₂₃₄₅₆]+$/.test(raw) && raw.length <= 15) {
-    return translated || raw;
+  if (!opt) return pick(null, isTamil ? "ta" : "en");
+  if (typeof opt === "string") return opt;
+  const en = opt.textEn || opt.en || opt.text || opt.label || opt.value || "";
+  let ta = opt.textTa || opt.ta || "";
+  if (!ta && en) {
+    const candidate = translateOption(en, "ta");
+    if (/[\u0B80-\u0BFF]/.test(candidate)) ta = candidate;
+    else if (/^[\d\s\.\+\-\/\(\)\=\>\<\,\:A-Za-z0-9\^₂₃₄₅₆]+$/.test(en) && en.length <= 15) ta = en;
   }
-  return translated || "பாடக்குறிப்புகள் மற்றும் விடைகள் தயாரிக்கப்பட்டு வருகின்றன.";
+  return pick({ en, ta }, isTamil ? "ta" : "en");
 }
+
+export { pick, pickQuestion, pickOption, pickExplanation };
 

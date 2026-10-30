@@ -14,7 +14,7 @@ export async function PATCH(request, { params }) {
 
     const { id } = params;
     const body = await request.json();
-    const { examDate, reason, resultPublishDelayMinutes, resultPublishDate } = body;
+    const { examDate, reason, resultPublishDelayMinutes, resultPublishDate, totalMarks, durationMinutes } = body;
 
     if (!examDate) {
       return NextResponse.json({ error: "New examDate is required." }, { status: 400 });
@@ -37,6 +37,12 @@ export async function PATCH(request, { params }) {
       examDate: newDateObj,
     };
 
+    if (totalMarks !== undefined && totalMarks !== null && totalMarks !== "") {
+      updateData.totalMarks = parseInt(totalMarks, 10);
+    }
+    if (durationMinutes !== undefined && durationMinutes !== null && durationMinutes !== "") {
+      updateData.durationMinutes = parseInt(durationMinutes, 10);
+    }
     if (resultPublishDelayMinutes !== undefined) {
       updateData.resultPublishDelayMinutes = parseInt(resultPublishDelayMinutes, 10);
     }

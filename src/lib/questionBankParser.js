@@ -198,8 +198,17 @@ function normalizeOptionsList(options) {
   return [];
 }
 
+// Data structure: JavaScript Map indexed by questionNumber.
+// Time complexity: O(N) single scan + O(1) random access lookup.
+// If rules change: Adjust key identifier or projected value fields.
+function buildQuestionBankMap(rows) {
+  if (!Array.isArray(rows)) return new Map();
+  return new Map(rows.map((r) => [r.questionNumber, r]));
+}
+
 module.exports = {
   validateQuestionItems,
   parseMarkdownQuestionBank,
   normalizeOptionsList,
+  buildQuestionBankMap,
 };

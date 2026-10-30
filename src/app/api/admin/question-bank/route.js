@@ -237,26 +237,26 @@ export async function POST(request) {
       });
     }
 
-    // Store in DB
-    for (let i = 0; i < validItems.length; i++) {
-      const item = validItems[i];
-      const qNum = mode === "append" ? startNumber + i : item.questionNumber;
-      await db.questionBankItem.create({
-        data: {
-          subjectId: subject.id,
-          questionNumber: qNum,
-          questionText: item.questionText,
-          marks: item.marks || 1,
-          options: item.options,
-          correctAnswer: item.correctAnswer,
-          explanation: item.explanation,
-          topic: item.topic || null,
-          difficulty: item.difficulty || "MEDIUM",
-          language: subject.medium === "Tamil" ? "ta" : "en",
-          sourceFormat: format.toUpperCase(),
-        },
-      });
-    }
+    // Data structure: Array mapped into atomic createMany payload.
+    // Time complexity: O(N) mapping with O(1) single database round-trip.
+    // If rules change: Update default questionBankItem field mappings.
+    const createPayload = validItems.map((item, i) => ({
+      subjectId: subject.id,
+      questionNumber: mode === "append" ? startNumber + i : item.questionNumber,
+      questionText: item.questionText,
+      marks: item.marks || 1,
+      options: item.options,
+      correctAnswer: item.correctAnswer,
+      explanation: item.explanation || "",
+      topic: item.topic || null,
+      difficulty: item.difficulty || "MEDIUM",
+      language: subject.medium === "Tamil" ? "ta" : "en",
+      sourceFormat: format.toUpperCase(),
+    }));
+
+    await db.questionBankItem.createMany({
+      data: createPayload,
+    });
 
     return NextResponse.json({
       success: true,

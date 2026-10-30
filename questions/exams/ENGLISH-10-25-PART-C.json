@@ -1,0 +1,362 @@
+{
+  "title": "10th Standard English - Maximum Objective Questions & Official Keys (2020 to 2026)",
+  "standard": 10,
+  "subject": "English",
+  "code": "ENG-10",
+  "total_questions": 25,
+  "board": "Tamil Nadu State Board SSLC Examination",
+  "pattern": "Part - I: 1-Mark Objective Questions",
+  "questions": [
+    {
+      "id": "ENG10-Q051",
+      "category": "Abbreviations & Acronyms",
+      "question": "Choose the correct expansion of 'ISRO':",
+      "options": {
+        "a": "Indian Space Research Organisation",
+        "b": "International Satellite Research Office",
+        "c": "Indian Scientific Rocket Operation",
+        "d": "Indian Satellite Radio Observatory"
+      },
+      "correct_option": "a",
+      "answer": "Indian Space Research Organisation",
+      "explanation": "ISRO is the Indian Space Research Organisation."
+    },
+    {
+      "id": "ENG10-Q052",
+      "category": "Abbreviations & Acronyms",
+      "question": "Choose the correct expansion of 'ATM':",
+      "options": {
+        "a": "Automated Teller Machine",
+        "b": "Any Time Money",
+        "c": "Automatic Transaction Mechanism",
+        "d": "Advanced Token Machine"
+      },
+      "correct_option": "a",
+      "answer": "Automated Teller Machine",
+      "explanation": "ATM expands to Automated Teller Machine."
+    },
+    {
+      "id": "ENG10-Q053",
+      "category": "Abbreviations & Acronyms",
+      "question": "Choose the correct expansion of 'RAM':",
+      "options": {
+        "a": "Random Access Memory",
+        "b": "Read Accessible Mechanism",
+        "c": "Rapid Action Memory",
+        "d": "Remote Access Module"
+      },
+      "correct_option": "a",
+      "answer": "Random Access Memory",
+      "explanation": "RAM stands for Random Access Memory."
+    },
+    {
+      "id": "ENG10-Q054",
+      "category": "Abbreviations & Acronyms",
+      "question": "Choose the correct expansion of 'UNESCO':",
+      "options": {
+        "a": "United Nations Educational, Scientific and Cultural Organization",
+        "b": "United Nations Economic, Social and Cultural Order",
+        "c": "Universal Network for Education, Science and Cooperation",
+        "d": "United Nations Environmental, Scientific and Children Office"
+      },
+      "correct_option": "a",
+      "answer": "United Nations Educational, Scientific and Cultural Organization",
+      "explanation": "UNESCO stands for United Nations Educational, Scientific and Cultural Organization."
+    },
+    {
+      "id": "ENG10-Q055",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'look into':",
+      "options": {
+        "a": "investigate or examine",
+        "b": "gaze at a mirror",
+        "c": "ignore deliberately",
+        "d": "admire from afar"
+      },
+      "correct_option": "a",
+      "answer": "investigate or examine",
+      "explanation": "To 'look into' means to investigate or inquire into facts."
+    },
+    {
+      "id": "ENG10-Q056",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'give up':",
+      "options": {
+        "a": "surrender / stop trying",
+        "b": "donate willingly",
+        "c": "raise upwards",
+        "d": "distribute items"
+      },
+      "correct_option": "a",
+      "answer": "surrender / stop trying",
+      "explanation": "'Give up' means to cease making an effort or surrender."
+    },
+    {
+      "id": "ENG10-Q057",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'put off':",
+      "options": {
+        "a": "postpone to a later time",
+        "b": "extinguish a fire",
+        "c": "wear clothes",
+        "d": "discard trash"
+      },
+      "correct_option": "a",
+      "answer": "postpone to a later time",
+      "explanation": "To 'put off' means to delay or postpone."
+    },
+    {
+      "id": "ENG10-Q058",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'stand by':",
+      "options": {
+        "a": "support / remain loyal to",
+        "b": "walk past",
+        "c": "oppose strongly",
+        "d": "stand motionless"
+      },
+      "correct_option": "a",
+      "answer": "support / remain loyal to",
+      "explanation": "To 'stand by' someone means to give loyalty and support during hardship."
+    },
+    {
+      "id": "ENG10-Q059",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'call off':",
+      "options": {
+        "a": "cancel an event or plan",
+        "b": "shout out a name",
+        "c": "visit a friend",
+        "d": "postpone briefly"
+      },
+      "correct_option": "a",
+      "answer": "cancel an event or plan",
+      "explanation": "'Call off' means to cancel something arranged."
+    },
+    {
+      "id": "ENG10-Q060",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'bring up':",
+      "options": {
+        "a": "raise and educate a child",
+        "b": "carry an object upstairs",
+        "c": "vomit food",
+        "d": "demolish a structure"
+      },
+      "correct_option": "a",
+      "answer": "raise and educate a child",
+      "explanation": "'Bring up' means to care for and rear until adulthood."
+    },
+    {
+      "id": "ENG10-Q061",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'break out':",
+      "options": {
+        "a": "start suddenly (of fire, war, disease)",
+        "b": "smash into pieces",
+        "c": "stop working",
+        "d": "escape secretly"
+      },
+      "correct_option": "a",
+      "answer": "start suddenly (of fire, war, disease)",
+      "explanation": "'Break out' means to begin abruptly and with violent spread."
+    },
+    {
+      "id": "ENG10-Q062",
+      "category": "Phrasal Verbs",
+      "question": "The fire brigade worked hard to _________ the raging flames.",
+      "options": {
+        "a": "put out",
+        "b": "put off",
+        "c": "put on",
+        "d": "put in"
+      },
+      "correct_option": "a",
+      "answer": "put out",
+      "explanation": "'Put out' means to extinguish a fire or light."
+    },
+    {
+      "id": "ENG10-Q063",
+      "category": "Compound Words",
+      "question": "Choose the correct compound word formed by combining 'water' + 'fall':",
+      "options": {
+        "a": "waterfall",
+        "b": "waterfalling",
+        "c": "waterfallen",
+        "d": "waterfaller"
+      },
+      "correct_option": "a",
+      "answer": "waterfall",
+      "explanation": "'Water' (Noun) + 'fall' (Noun/Verb) combines into the compound noun 'waterfall'."
+    },
+    {
+      "id": "ENG10-Q064",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of the compound word 'walking stick':",
+      "options": {
+        "a": "Gerund + Noun",
+        "b": "Noun + Noun",
+        "c": "Adjective + Verb",
+        "d": "Preposition + Noun"
+      },
+      "correct_option": "a",
+      "answer": "Gerund + Noun",
+      "explanation": "'Walking' (V+ing acting as participle/gerund) + 'stick' (Noun) = Gerund + Noun."
+    },
+    {
+      "id": "ENG10-Q065",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of the compound word 'sunflower':",
+      "options": {
+        "a": "Noun + Noun",
+        "b": "Adjective + Noun",
+        "c": "Noun + Verb",
+        "d": "Adverb + Noun"
+      },
+      "correct_option": "a",
+      "answer": "Noun + Noun",
+      "explanation": "'Sun' is a Noun and 'flower' is a Noun, forming Noun + Noun."
+    },
+    {
+      "id": "ENG10-Q066",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of the compound word 'blackboard':",
+      "options": {
+        "a": "Adjective + Noun",
+        "b": "Noun + Noun",
+        "c": "Verb + Noun",
+        "d": "Noun + Adjective"
+      },
+      "correct_option": "a",
+      "answer": "Adjective + Noun",
+      "explanation": "'Black' (Adjective describing color) + 'board' (Noun) = Adjective + Noun."
+    },
+    {
+      "id": "ENG10-Q067",
+      "category": "Compound Words",
+      "question": "Choose the word that can be placed after 'soft' to form a compound word:",
+      "options": {
+        "a": "ware",
+        "b": "land",
+        "c": "fall",
+        "d": "stick"
+      },
+      "correct_option": "a",
+      "answer": "ware",
+      "explanation": "'Soft' + 'ware' forms 'software'."
+    },
+    {
+      "id": "ENG10-Q068",
+      "category": "Compound Words",
+      "question": "Choose the word that can be placed before 'glasses' to form a compound word:",
+      "options": {
+        "a": "sun",
+        "b": "moon",
+        "c": "air",
+        "d": "star"
+      },
+      "correct_option": "a",
+      "answer": "sun",
+      "explanation": "'Sun' + 'glasses' forms 'sunglasses'."
+    },
+    {
+      "id": "ENG10-Q069",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of the compound word 'overcoat':",
+      "options": {
+        "a": "Preposition + Noun",
+        "b": "Noun + Verb",
+        "c": "Adjective + Adjective",
+        "d": "Verb + Adverb"
+      },
+      "correct_option": "a",
+      "answer": "Preposition + Noun",
+      "explanation": "'Over' is a Preposition and 'coat' is a Noun."
+    },
+    {
+      "id": "ENG10-Q070",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of 'dry-clean':",
+      "options": {
+        "a": "Adjective + Verb",
+        "b": "Noun + Noun",
+        "c": "Verb + Adverb",
+        "d": "Preposition + Verb"
+      },
+      "correct_option": "a",
+      "answer": "Adjective + Verb",
+      "explanation": "'Dry' is an Adjective and 'clean' is a Verb."
+    },
+    {
+      "id": "ENG10-Q071",
+      "category": "Prepositions",
+      "question": "Fill in the blank with the suitable prepositional phrase:\n_________ his illness, he attended the annual examination.",
+      "options": {
+        "a": "In spite of",
+        "b": "According to",
+        "c": "In the event of",
+        "d": "Due to"
+      },
+      "correct_option": "a",
+      "answer": "In spite of",
+      "explanation": "'In spite of' expresses concession or contrast against an obstacle."
+    },
+    {
+      "id": "ENG10-Q072",
+      "category": "Prepositions",
+      "question": "Fill in the blank with the correct preposition:\nThe young seagull leaned out eagerly _________ the edge of the cliff.",
+      "options": {
+        "a": "towards",
+        "b": "into",
+        "c": "upon",
+        "d": "under"
+      },
+      "correct_option": "a",
+      "answer": "towards",
+      "explanation": "'Towards' indicates the direction of movement or leaning."
+    },
+    {
+      "id": "ENG10-Q073",
+      "category": "Prepositions",
+      "question": "Fill in the blank with the appropriate preposition:\nMother threw a shoe _________ the window of our neighbour's house.",
+      "options": {
+        "a": "through",
+        "b": "over",
+        "c": "into",
+        "d": "across"
+      },
+      "correct_option": "a",
+      "answer": "through",
+      "explanation": "'Through' is used when motion penetrates an opening such as a window."
+    },
+    {
+      "id": "ENG10-Q074",
+      "category": "Prepositions",
+      "question": "Fill in the blank with the suitable prepositional phrase:\n_________ heavy rain, the football match was called off.",
+      "options": {
+        "a": "On account of / Due to",
+        "b": "In spite of",
+        "c": "In accordance with",
+        "d": "In case of"
+      },
+      "correct_option": "a",
+      "answer": "On account of / Due to",
+      "explanation": "'On account of' indicates the direct causal reason."
+    },
+    {
+      "id": "ENG10-Q075",
+      "category": "Prepositions",
+      "question": "The boy distributed sweets _________ his six close classmates.",
+      "options": {
+        "a": "among",
+        "b": "between",
+        "c": "with",
+        "d": "along"
+      },
+      "correct_option": "a",
+      "answer": "among",
+      "explanation": "'Among' is used when distributing or referring to more than two persons."
+    }
+  ],
+  "part": "Part C (Q51-75)"
+}

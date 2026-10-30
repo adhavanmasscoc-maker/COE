@@ -99,7 +99,7 @@ export default function COEAdminDashboardPage() {
           <Link href="/coe-admin/live-monitoring">
             <Button variant="emerald" size="sm" className="gap-1.5 shadow-md shadow-emerald-500/20 font-bold">
               <span className="w-2 h-2 rounded-full bg-rose-400 animate-pulse" />
-              Live Screen Monitoring
+              Live Test-Takers &amp; Proctoring
             </Button>
           </Link>
           <Link href="/coe-admin/help-panel">

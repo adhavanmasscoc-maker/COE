@@ -26,17 +26,42 @@ import {
   Sparkles,
   FolderArchive,
   Zap,
-  Languages
+  Languages,
+  Clock
 } from "lucide-react";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
+  const [istTime, setIstTime] = useState("");
   const { language, setLanguage, t, isTamil } = useLanguage();
   const pathname = usePathname();
   const router = useRouter();
 
   const isExamMode = pathname?.includes("/exam-mock");
+
+  // Real-time ticking IST clock
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      });
+      const dateStr = now.toLocaleDateString("en-IN", {
+        timeZone: "Asia/Kolkata",
+        day: "2-digit",
+        month: "short",
+      });
+      setIstTime(`${dateStr} • ${timeStr} IST`);
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Fetch current session on mount and route changes
   useEffect(() => {
@@ -191,6 +216,14 @@ export function Navbar() {
               <div className="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="text-[11px] font-medium text-emerald-400">Class 10 & 12 Prep Ready</span>
+              </div>
+            )}
+
+            {/* Live IST Real-Time Clock Badge */}
+            {istTime && (
+              <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-violet-500/10 border border-violet-500/25 text-[11px] font-mono text-violet-300 font-bold shadow-inner">
+                <Clock className="w-3.5 h-3.5 text-amber-400 animate-pulse flex-shrink-0" />
+                <span>{istTime}</span>
               </div>
             )}
 

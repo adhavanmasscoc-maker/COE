@@ -1,0 +1,712 @@
+{
+  "title": "10th Standard English - Maximum Objective Questions & Official Keys (2020 to 2026)",
+  "standard": 10,
+  "subject": "English",
+  "code": "ENG-10",
+  "total_questions": 50,
+  "board": "Tamil Nadu State Board SSLC Examination",
+  "pattern": "Part - I: 1-Mark Objective Questions",
+  "questions": [
+    {
+      "id": "ENG10-Q051",
+      "category": "Abbreviations & Acronyms",
+      "question": "Choose the correct expansion of 'ISRO':",
+      "options": {
+        "a": "Indian Space Research Organisation",
+        "b": "International Satellite Research Office",
+        "c": "Indian Scientific Rocket Operation",
+        "d": "Indian Satellite Radio Observatory"
+      },
+      "correct_option": "a",
+      "answer": "Indian Space Research Organisation",
+      "explanation": "ISRO is the Indian Space Research Organisation."
+    },
+    {
+      "id": "ENG10-Q052",
+      "category": "Abbreviations & Acronyms",
+      "question": "Choose the correct expansion of 'ATM':",
+      "options": {
+        "a": "Automated Teller Machine",
+        "b": "Any Time Money",
+        "c": "Automatic Transaction Mechanism",
+        "d": "Advanced Token Machine"
+      },
+      "correct_option": "a",
+      "answer": "Automated Teller Machine",
+      "explanation": "ATM expands to Automated Teller Machine."
+    },
+    {
+      "id": "ENG10-Q053",
+      "category": "Abbreviations & Acronyms",
+      "question": "Choose the correct expansion of 'RAM':",
+      "options": {
+        "a": "Random Access Memory",
+        "b": "Read Accessible Mechanism",
+        "c": "Rapid Action Memory",
+        "d": "Remote Access Module"
+      },
+      "correct_option": "a",
+      "answer": "Random Access Memory",
+      "explanation": "RAM stands for Random Access Memory."
+    },
+    {
+      "id": "ENG10-Q054",
+      "category": "Abbreviations & Acronyms",
+      "question": "Choose the correct expansion of 'UNESCO':",
+      "options": {
+        "a": "United Nations Educational, Scientific and Cultural Organization",
+        "b": "United Nations Economic, Social and Cultural Order",
+        "c": "Universal Network for Education, Science and Cooperation",
+        "d": "United Nations Environmental, Scientific and Children Office"
+      },
+      "correct_option": "a",
+      "answer": "United Nations Educational, Scientific and Cultural Organization",
+      "explanation": "UNESCO stands for United Nations Educational, Scientific and Cultural Organization."
+    },
+    {
+      "id": "ENG10-Q055",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'look into':",
+      "options": {
+        "a": "investigate or examine",
+        "b": "gaze at a mirror",
+        "c": "ignore deliberately",
+        "d": "admire from afar"
+      },
+      "correct_option": "a",
+      "answer": "investigate or examine",
+      "explanation": "To 'look into' means to investigate or inquire into facts."
+    },
+    {
+      "id": "ENG10-Q056",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'give up':",
+      "options": {
+        "a": "surrender / stop trying",
+        "b": "donate willingly",
+        "c": "raise upwards",
+        "d": "distribute items"
+      },
+      "correct_option": "a",
+      "answer": "surrender / stop trying",
+      "explanation": "'Give up' means to cease making an effort or surrender."
+    },
+    {
+      "id": "ENG10-Q057",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'put off':",
+      "options": {
+        "a": "postpone to a later time",
+        "b": "extinguish a fire",
+        "c": "wear clothes",
+        "d": "discard trash"
+      },
+      "correct_option": "a",
+      "answer": "postpone to a later time",
+      "explanation": "To 'put off' means to delay or postpone."
+    },
+    {
+      "id": "ENG10-Q058",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'stand by':",
+      "options": {
+        "a": "support / remain loyal to",
+        "b": "walk past",
+        "c": "oppose strongly",
+        "d": "stand motionless"
+      },
+      "correct_option": "a",
+      "answer": "support / remain loyal to",
+      "explanation": "To 'stand by' someone means to give loyalty and support during hardship."
+    },
+    {
+      "id": "ENG10-Q059",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'call off':",
+      "options": {
+        "a": "cancel an event or plan",
+        "b": "shout out a name",
+        "c": "visit a friend",
+        "d": "postpone briefly"
+      },
+      "correct_option": "a",
+      "answer": "cancel an event or plan",
+      "explanation": "'Call off' means to cancel something arranged."
+    },
+    {
+      "id": "ENG10-Q060",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'bring up':",
+      "options": {
+        "a": "raise and educate a child",
+        "b": "carry an object upstairs",
+        "c": "vomit food",
+        "d": "demolish a structure"
+      },
+      "correct_option": "a",
+      "answer": "raise and educate a child",
+      "explanation": "'Bring up' means to care for and rear until adulthood."
+    },
+    {
+      "id": "ENG10-Q061",
+      "category": "Phrasal Verbs",
+      "question": "Choose the correct meaning of the phrasal verb 'break out':",
+      "options": {
+        "a": "start suddenly (of fire, war, disease)",
+        "b": "smash into pieces",
+        "c": "stop working",
+        "d": "escape secretly"
+      },
+      "correct_option": "a",
+      "answer": "start suddenly (of fire, war, disease)",
+      "explanation": "'Break out' means to begin abruptly and with violent spread."
+    },
+    {
+      "id": "ENG10-Q062",
+      "category": "Phrasal Verbs",
+      "question": "The fire brigade worked hard to _________ the raging flames.",
+      "options": {
+        "a": "put out",
+        "b": "put off",
+        "c": "put on",
+        "d": "put in"
+      },
+      "correct_option": "a",
+      "answer": "put out",
+      "explanation": "'Put out' means to extinguish a fire or light."
+    },
+    {
+      "id": "ENG10-Q063",
+      "category": "Compound Words",
+      "question": "Choose the correct compound word formed by combining 'water' + 'fall':",
+      "options": {
+        "a": "waterfall",
+        "b": "waterfalling",
+        "c": "waterfallen",
+        "d": "waterfaller"
+      },
+      "correct_option": "a",
+      "answer": "waterfall",
+      "explanation": "'Water' (Noun) + 'fall' (Noun/Verb) combines into the compound noun 'waterfall'."
+    },
+    {
+      "id": "ENG10-Q064",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of the compound word 'walking stick':",
+      "options": {
+        "a": "Gerund + Noun",
+        "b": "Noun + Noun",
+        "c": "Adjective + Verb",
+        "d": "Preposition + Noun"
+      },
+      "correct_option": "a",
+      "answer": "Gerund + Noun",
+      "explanation": "'Walking' (V+ing acting as participle/gerund) + 'stick' (Noun) = Gerund + Noun."
+    },
+    {
+      "id": "ENG10-Q065",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of the compound word 'sunflower':",
+      "options": {
+        "a": "Noun + Noun",
+        "b": "Adjective + Noun",
+        "c": "Noun + Verb",
+        "d": "Adverb + Noun"
+      },
+      "correct_option": "a",
+      "answer": "Noun + Noun",
+      "explanation": "'Sun' is a Noun and 'flower' is a Noun, forming Noun + Noun."
+    },
+    {
+      "id": "ENG10-Q066",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of the compound word 'blackboard':",
+      "options": {
+        "a": "Adjective + Noun",
+        "b": "Noun + Noun",
+        "c": "Verb + Noun",
+        "d": "Noun + Adjective"
+      },
+      "correct_option": "a",
+      "answer": "Adjective + Noun",
+      "explanation": "'Black' (Adjective describing color) + 'board' (Noun) = Adjective + Noun."
+    },
+    {
+      "id": "ENG10-Q067",
+      "category": "Compound Words",
+      "question": "Choose the word that can be placed after 'soft' to form a compound word:",
+      "options": {
+        "a": "ware",
+        "b": "land",
+        "c": "fall",
+        "d": "stick"
+      },
+      "correct_option": "a",
+      "answer": "ware",
+      "explanation": "'Soft' + 'ware' forms 'software'."
+    },
+    {
+      "id": "ENG10-Q068",
+      "category": "Compound Words",
+      "question": "Choose the word that can be placed before 'glasses' to form a compound word:",
+      "options": {
+        "a": "sun",
+        "b": "moon",
+        "c": "air",
+        "d": "star"
+      },
+      "correct_option": "a",
+      "answer": "sun",
+      "explanation": "'Sun' + 'glasses' forms 'sunglasses'."
+    },
+    {
+      "id": "ENG10-Q069",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of the compound word 'overcoat':",
+      "options": {
+        "a": "Preposition + Noun",
+        "b": "Noun + Verb",
+        "c": "Adjective + Adjective",
+        "d": "Verb + Adverb"
+      },
+      "correct_option": "a",
+      "answer": "Preposition + Noun",
+      "explanation": "'Over' is a Preposition and 'coat' is a Noun."
+    },
+    {
+      "id": "ENG10-Q070",
+      "category": "Compound Words",
+      "question": "Identify the grammatical pattern of 'dry-clean':",
+      "options": {
+        "a": "Adjective + Verb",
+        "b": "Noun + Noun",
+        "c": "Verb + Adverb",
+        "d": "Preposition + Verb"
+      },
+      "correct_option": "a",
+      "answer": "Adjective + Verb",
+      "explanation": "'Dry' is an Adjective and 'clean' is a Verb."
+    },
+    {
+      "id": "ENG10-Q071",
+      "category": "Prepositions",
+      "question": "Fill in the blank with the suitable prepositional phrase:\n_________ his illness, he attended the annual examination.",
+      "options": {
+        "a": "In spite of",
+        "b": "According to",
+        "c": "In the event of",
+        "d": "Due to"
+      },
+      "correct_option": "a",
+      "answer": "In spite of",
+      "explanation": "'In spite of' expresses concession or contrast against an obstacle."
+    },
+    {
+      "id": "ENG10-Q072",
+      "category": "Prepositions",
+      "question": "Fill in the blank with the correct preposition:\nThe young seagull leaned out eagerly _________ the edge of the cliff.",
+      "options": {
+        "a": "towards",
+        "b": "into",
+        "c": "upon",
+        "d": "under"
+      },
+      "correct_option": "a",
+      "answer": "towards",
+      "explanation": "'Towards' indicates the direction of movement or leaning."
+    },
+    {
+      "id": "ENG10-Q073",
+      "category": "Prepositions",
+      "question": "Fill in the blank with the appropriate preposition:\nMother threw a shoe _________ the window of our neighbour's house.",
+      "options": {
+        "a": "through",
+        "b": "over",
+        "c": "into",
+        "d": "across"
+      },
+      "correct_option": "a",
+      "answer": "through",
+      "explanation": "'Through' is used when motion penetrates an opening such as a window."
+    },
+    {
+      "id": "ENG10-Q074",
+      "category": "Prepositions",
+      "question": "Fill in the blank with the suitable prepositional phrase:\n_________ heavy rain, the football match was called off.",
+      "options": {
+        "a": "On account of / Due to",
+        "b": "In spite of",
+        "c": "In accordance with",
+        "d": "In case of"
+      },
+      "correct_option": "a",
+      "answer": "On account of / Due to",
+      "explanation": "'On account of' indicates the direct causal reason."
+    },
+    {
+      "id": "ENG10-Q075",
+      "category": "Prepositions",
+      "question": "The boy distributed sweets _________ his six close classmates.",
+      "options": {
+        "a": "among",
+        "b": "between",
+        "c": "with",
+        "d": "along"
+      },
+      "correct_option": "a",
+      "answer": "among",
+      "explanation": "'Among' is used when distributing or referring to more than two persons."
+    },
+    {
+      "id": "ENG10-Q076",
+      "category": "Prepositions",
+      "question": "A discussion took place _________ the teacher and the student.",
+      "options": {
+        "a": "between",
+        "b": "among",
+        "c": "within",
+        "d": "through"
+      },
+      "correct_option": "a",
+      "answer": "between",
+      "explanation": "'Between' is used when comparing or referencing exactly two entities."
+    },
+    {
+      "id": "ENG10-Q077",
+      "category": "Prepositions",
+      "question": "Fill in the blank with the suitable prepositional phrase:\nWe acted strictly _________ the rules laid down in the handbook.",
+      "options": {
+        "a": "in accordance with",
+        "b": "in front of",
+        "c": "in place of",
+        "d": "for the sake of"
+      },
+      "correct_option": "a",
+      "answer": "in accordance with",
+      "explanation": "'In accordance with' means in conformity or agreement with regulations."
+    },
+    {
+      "id": "ENG10-Q078",
+      "category": "Prepositions",
+      "question": "He leaned his bicycle _________ the whitewashed wall.",
+      "options": {
+        "a": "against",
+        "b": "upon",
+        "c": "with",
+        "d": "over"
+      },
+      "correct_option": "a",
+      "answer": "against",
+      "explanation": "'Against' is used when one object is resting touching the surface of another."
+    },
+    {
+      "id": "ENG10-Q079",
+      "category": "Modal Auxiliaries",
+      "question": "We _________ obey traffic regulations without fail. (Expressing strong compulsion)",
+      "options": {
+        "a": "must",
+        "b": "can",
+        "c": "might",
+        "d": "may"
+      },
+      "correct_option": "a",
+      "answer": "must",
+      "explanation": "'Must' expresses strict necessity or compulsion."
+    },
+    {
+      "id": "ENG10-Q080",
+      "category": "Modal Auxiliaries",
+      "question": "You _________ respect your teachers and parents. (Expressing moral obligation)",
+      "options": {
+        "a": "ought to",
+        "b": "can",
+        "c": "might",
+        "d": "would"
+      },
+      "correct_option": "a",
+      "answer": "ought to",
+      "explanation": "'Ought to' expresses duty and moral obligation."
+    },
+    {
+      "id": "ENG10-Q081",
+      "category": "Modal Auxiliaries",
+      "question": "My grandfather _________ walk five miles every morning in his youth. (Past habit)",
+      "options": {
+        "a": "used to",
+        "b": "ought to",
+        "c": "dared to",
+        "d": "should"
+      },
+      "correct_option": "a",
+      "answer": "used to",
+      "explanation": "'Used to' expresses a discontinued past habit."
+    },
+    {
+      "id": "ENG10-Q082",
+      "category": "Modal Auxiliaries",
+      "question": "How _________ you speak to the principal like this? (Expressing courage / boldness)",
+      "options": {
+        "a": "dare",
+        "b": "need",
+        "c": "used",
+        "d": "ought"
+      },
+      "correct_option": "a",
+      "answer": "dare",
+      "explanation": "Semi-modal 'dare' indicates having the boldness or audacity."
+    },
+    {
+      "id": "ENG10-Q083",
+      "category": "Modal Auxiliaries",
+      "question": "You _________ not hurry; there is plenty of time left. (Absence of obligation)",
+      "options": {
+        "a": "need",
+        "b": "dare",
+        "c": "ought",
+        "d": "used"
+      },
+      "correct_option": "a",
+      "answer": "need",
+      "explanation": "'Need not' expresses absence of necessity or obligation."
+    },
+    {
+      "id": "ENG10-Q084",
+      "category": "Modal Auxiliaries",
+      "question": "_________ I come in, Sir? (Asking polite permission)",
+      "options": {
+        "a": "May",
+        "b": "Might",
+        "c": "Will",
+        "d": "Must"
+      },
+      "correct_option": "a",
+      "answer": "May",
+      "explanation": "'May' is the standard modal auxiliary used to request polite permission."
+    },
+    {
+      "id": "ENG10-Q085",
+      "category": "Question Tags",
+      "question": "Add a suitable question tag:\nLet us go for a walk along the beach, _________?",
+      "options": {
+        "a": "shall we",
+        "b": "shan't we",
+        "c": "will we",
+        "d": "can we"
+      },
+      "correct_option": "a",
+      "answer": "shall we",
+      "explanation": "Sentences beginning with 'Let us' or 'Let's' take the question tag 'shall we?'."
+    },
+    {
+      "id": "ENG10-Q086",
+      "category": "Question Tags",
+      "question": "Add a suitable question tag:\nThe children are playing happily in the garden, _________?",
+      "options": {
+        "a": "aren't they",
+        "b": "are they",
+        "c": "don't they",
+        "d": "do they"
+      },
+      "correct_option": "a",
+      "answer": "aren't they",
+      "explanation": "A positive statement with auxiliary 'are' takes the negative tag 'aren't they?'."
+    },
+    {
+      "id": "ENG10-Q087",
+      "category": "Question Tags",
+      "question": "Add a suitable question tag:\nShe rarely tells lies, _________?",
+      "options": {
+        "a": "does she",
+        "b": "doesn't she",
+        "c": "isn't she",
+        "d": "is she"
+      },
+      "correct_option": "a",
+      "answer": "does she",
+      "explanation": "'Rarely' has a negative meaning; hence the tag must be positive ('does she?')."
+    },
+    {
+      "id": "ENG10-Q088",
+      "category": "Question Tags",
+      "question": "Add a suitable question tag:\nI am doing my homework honestly, _________?",
+      "options": {
+        "a": "aren't I",
+        "b": "am I",
+        "c": "amn't I",
+        "d": "don't I"
+      },
+      "correct_option": "a",
+      "answer": "aren't I",
+      "explanation": "The standard tag for positive 'I am' is 'aren't I?'."
+    },
+    {
+      "id": "ENG10-Q089",
+      "category": "Question Tags",
+      "question": "Add a suitable question tag:\nPlease close the door, _________?",
+      "options": {
+        "a": "will you",
+        "b": "do you",
+        "c": "shall we",
+        "d": "aren't you"
+      },
+      "correct_option": "a",
+      "answer": "will you",
+      "explanation": "Imperative polite requests take 'will you?' (or 'won't you?')."
+    },
+    {
+      "id": "ENG10-Q090",
+      "category": "Question Tags",
+      "question": "Add a suitable question tag:\nHe won't attend the meeting tomorrow, _________?",
+      "options": {
+        "a": "will he",
+        "b": "won't he",
+        "c": "can he",
+        "d": "would he"
+      },
+      "correct_option": "a",
+      "answer": "will he",
+      "explanation": "A negative sentence with 'won't' takes the positive tag 'will he?'."
+    },
+    {
+      "id": "ENG10-Q091",
+      "category": "Connectors & Conjunctions",
+      "question": "Walk briskly, _________ you will miss the morning train.",
+      "options": {
+        "a": "otherwise / or else",
+        "b": "and",
+        "c": "because",
+        "d": "since"
+      },
+      "correct_option": "a",
+      "answer": "otherwise / or else",
+      "explanation": "'Otherwise' denotes the undesirable outcome if the preceding condition is not met."
+    },
+    {
+      "id": "ENG10-Q092",
+      "category": "Connectors & Conjunctions",
+      "question": "_________ he was poor, he remained completely honest.",
+      "options": {
+        "a": "Though / Although",
+        "b": "Because",
+        "c": "Unless",
+        "d": "Since"
+      },
+      "correct_option": "a",
+      "answer": "Though / Although",
+      "explanation": "'Though' introduces a subordinate clause of contrast and concession."
+    },
+    {
+      "id": "ENG10-Q093",
+      "category": "Connectors & Conjunctions",
+      "question": "You cannot succeed _________ you work with sincere diligence.",
+      "options": {
+        "a": "unless",
+        "b": "if",
+        "c": "provided",
+        "d": "since"
+      },
+      "correct_option": "a",
+      "answer": "unless",
+      "explanation": "'Unless' means 'if not' and introduces a necessary negative condition."
+    },
+    {
+      "id": "ENG10-Q094",
+      "category": "Connectors & Conjunctions",
+      "question": "_________ the teacher entered the classroom, all students stood up.",
+      "options": {
+        "a": "As soon as",
+        "b": "While",
+        "c": "Until",
+        "d": "Unless"
+      },
+      "correct_option": "a",
+      "answer": "As soon as",
+      "explanation": "'As soon as' marks an immediate sequential action."
+    },
+    {
+      "id": "ENG10-Q095",
+      "category": "Relative Pronouns",
+      "question": "This is the boy _________ won the first prize in the state elocution contest.",
+      "options": {
+        "a": "who",
+        "b": "whom",
+        "c": "which",
+        "d": "whose"
+      },
+      "correct_option": "a",
+      "answer": "who",
+      "explanation": "'Who' is the subjective relative pronoun for a person."
+    },
+    {
+      "id": "ENG10-Q096",
+      "category": "Relative Pronouns",
+      "question": "The watch _________ my father gifted me is running accurately.",
+      "options": {
+        "a": "which / that",
+        "b": "who",
+        "c": "whom",
+        "d": "whose"
+      },
+      "correct_option": "a",
+      "answer": "which / that",
+      "explanation": "'Which' or 'that' is the relative pronoun used for non-human objects and things."
+    },
+    {
+      "id": "ENG10-Q097",
+      "category": "Relative Pronouns",
+      "question": "The lady _________ car was stolen lodged a complaint with the police.",
+      "options": {
+        "a": "whose",
+        "b": "who",
+        "c": "which",
+        "d": "whom"
+      },
+      "correct_option": "a",
+      "answer": "whose",
+      "explanation": "'Whose' is the possessive relative pronoun indicating ownership."
+    },
+    {
+      "id": "ENG10-Q098",
+      "category": "Syllabification",
+      "question": "Choose the correct syllabification of the word 'fantastic':",
+      "options": {
+        "a": "fan - tas - tic",
+        "b": "fa - ntastic",
+        "c": "fant - astic",
+        "d": "fantas - tic"
+      },
+      "correct_option": "a",
+      "answer": "fan - tas - tic",
+      "explanation": "'Fantastic' has three syllables: fan - tas - tic (trisyllabic)."
+    },
+    {
+      "id": "ENG10-Q099",
+      "category": "Syllabification",
+      "question": "Choose the correct syllabification of the word 'entertainment':",
+      "options": {
+        "a": "en - ter - tain - ment",
+        "b": "ent - er - tain - ment",
+        "c": "enter - tain - ment",
+        "d": "en - tertain - ment"
+      },
+      "correct_option": "a",
+      "answer": "en - ter - tain - ment",
+      "explanation": "'Entertainment' is tetrasyllabic: en - ter - tain - ment."
+    },
+    {
+      "id": "ENG10-Q100",
+      "category": "Syllabification",
+      "question": "Choose the monosyllabic word from the options below:",
+      "options": {
+        "a": "school",
+        "b": "father",
+        "c": "teacher",
+        "d": "doctor"
+      },
+      "correct_option": "a",
+      "answer": "school",
+      "explanation": "'School' consists of only one syllable / vowel sound (monosyllabic)."
+    }
+  ],
+  "setName": "Practice Set B (Part C & D)"
+}

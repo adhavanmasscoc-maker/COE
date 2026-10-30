@@ -1,0 +1,1091 @@
+{
+  "title": "12th Standard Physics - 50 Objective Questions & Official Keys (Set 2 Bilingual)",
+  "board": "Tamil Nadu State Board Higher Secondary Examination",
+  "total_questions": 45,
+  "languages": [
+    "English",
+    "Tamil"
+  ],
+  "questions": [
+    {
+      "id": "PHY12-SET2-Q01",
+      "unit": 1,
+      "topic": "Electrostatics / நிலை மின்னியல்",
+      "question_en": "According to Gauss's law, the total electric flux (Φ_E) through any closed surface enclosing a net charge Q is equal to:",
+      "question_ta": "காஸ் விதியின்படி, Q அளவுள்ள நிகர மின்னூட்டத்தை உள்ளடக்கிய மூடிய பரப்பின் வழியே பாயும் மொத்த மின்பாயம் (Φ_E):",
+      "options_en": {
+        "a": "Q · ε₀",
+        "b": "Q / ε₀",
+        "c": "ε₀ / Q",
+        "d": "Q / (4πε₀)"
+      },
+      "options_ta": {
+        "a": "Q · ε₀",
+        "b": "Q / ε₀",
+        "c": "ε₀ / Q",
+        "d": "Q / (4πε₀)"
+      },
+      "correct_option": "b",
+      "answer_en": "Q / ε₀",
+      "answer_ta": "Q / ε₀",
+      "explanation_en": "Gauss's law states that total electric flux through a closed surface is equal to 1/ε₀ times the net charge enclosed: Φ_E = ∮ E · dA = Q_enclosed / ε₀.",
+      "explanation_ta": "காஸ் விதியின்படி, மூடிய பரப்பினால் சூழப்பட்ட மொத்த மின்பாயம் Φ_E = Q / ε₀ ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q02",
+      "unit": 1,
+      "topic": "Electrostatics / நிலை மின்னியல்",
+      "question_en": "The electrostatic energy stored in a capacitor of capacitance C charged to a potential V is:",
+      "question_ta": "V மின்னழுத்த வேறுபாட்டில் மின்னூட்டம் செய்யப்பட்ட C மின்தேக்குத்திறன் கொண்ட மின்தேக்கியில் சேமிக்கப்படும் நிலைமின்னழுத்த ஆற்றல்:",
+      "options_en": {
+        "a": "½ C V²",
+        "b": "C V²",
+        "c": "½ C² V",
+        "d": "C / V²"
+      },
+      "options_ta": {
+        "a": "½ C V²",
+        "b": "C V²",
+        "c": "½ C² V",
+        "d": "C / V²"
+      },
+      "correct_option": "a",
+      "answer_en": "½ C V²",
+      "answer_ta": "½ C V²",
+      "explanation_en": "The electrostatic potential energy stored in a charged capacitor is given by U = ½ C V² = Q² / (2C) = ½ Q V.",
+      "explanation_ta": "மின்தேக்கியில் சேமிக்கப்படும் நிலைமின்னழுத்த ஆற்றல் U = ½ C V² ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q03",
+      "unit": 1,
+      "topic": "Electrostatics / நிலை மின்னியல்",
+      "question_en": "The electric potential at any point on the equatorial plane of an electric dipole is:",
+      "question_ta": "மின் இருமுனையின் நடுவரைக் கோட்டுத் தளத்தில் உள்ள எந்தவொரு புள்ளியிலும் நிலைமின்னழுத்த மதிப்பு:",
+      "options_en": {
+        "a": "Maximum",
+        "b": "Minimum and non-zero",
+        "c": "Zero",
+        "d": "Infinite"
+      },
+      "options_ta": {
+        "a": "பெருமம்",
+        "b": "சுழியற்ற சிறுமம்",
+        "c": "சுழி",
+        "d": "முடிவிலி"
+      },
+      "correct_option": "c",
+      "answer_en": "Zero",
+      "answer_ta": "சுழி",
+      "explanation_en": "Points on the equatorial plane are equidistant from +q and -q charges of the dipole, so V = (1/4πε₀)[q/r - q/r] = 0.",
+      "explanation_ta": "நடுவரைக் கோட்டில் உள்ள புள்ளி இரு மின்னூட்டங்களிலிருந்தும் சம தொலைவில் உள்ளதால், மொத்த மின்னழுத்தம் சுழியாகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q04",
+      "unit": 1,
+      "topic": "Electrostatics / நிலை மின்னியல்",
+      "question_en": "When a dielectric slab of dielectric constant K is introduced between the plates of an isolated charged capacitor, its capacitance:",
+      "question_ta": "மின்னேற்றம் செய்யப்பட்டு மின்கலத்திலிருந்து துண்டிக்கப்பட்ட மின்தேக்கியின் தட்டுகளுக்கிடையே K மின்காப்பு மாறிலி கொண்ட மின்காப்பு வைக்கப்பட்டால், மின்தேக்குத்திறன்:",
+      "options_en": {
+        "a": "Decreases by K times",
+        "b": "Increases by K times",
+        "c": "Remains unchanged",
+        "d": "Becomes zero"
+      },
+      "options_ta": {
+        "a": "K மடங்கு குறையும்",
+        "b": "K மடங்கு அதிகரிக்கும்",
+        "c": "மாறாது",
+        "d": "சுழியாகும்"
+      },
+      "correct_option": "b",
+      "answer_en": "Increases by K times",
+      "answer_ta": "K மடங்கு அதிகரிக்கும்",
+      "explanation_en": "The introduction of a dielectric always increases the capacitance: C' = K · C₀.",
+      "explanation_ta": "மின்காப்பு வைக்கப்படும் போது மின்தேக்குத்திறன் C' = K · C₀ என K மடங்கு அதிகரிக்கிறது."
+    },
+    {
+      "id": "PHY12-SET2-Q05",
+      "unit": 1,
+      "topic": "Electrostatics / நிலை மின்னியல்",
+      "question_en": "Lightning arresters protect tall buildings from lightning strikes based on the principle of:",
+      "question_ta": "இடிதாங்கிகள் உயரமான கட்டடங்களை மின்னல் தாக்கத்திலிருந்து பாதுகாக்கும் அடிப்படைத் தத்துவம்:",
+      "options_en": {
+        "a": "Coulomb's Law",
+        "b": "Electromagnetic Induction",
+        "c": "Corona discharge (Action of points)",
+        "d": "Thermoelectric effect"
+      },
+      "options_ta": {
+        "a": "கூலூம் விதி",
+        "b": "மின்காந்தத் தூண்டல்",
+        "c": "ஒளிவட்ட மின்னிறக்கம் (கூரிய முனைச் செயல்பாடு)",
+        "d": "வெப்ப மின் விளைவு"
+      },
+      "correct_option": "c",
+      "answer_en": "Corona discharge (Action of points)",
+      "answer_ta": "ஒளிவட்ட மின்னிறக்கம் (கூரிய முனைச் செயல்பாடு)",
+      "explanation_en": "Sharp pointed rods in lightning arresters create a high electric field that ionizes air and steadily neutralizes cloud charges via action of points (corona discharge).",
+      "explanation_ta": "இடிதாங்கிகளில் கூரிய முனைகளில் ஏற்படும் அதிக மின்னூட்ட அடர்த்தியினால் ஒளிவட்ட மின்னிறக்கம் (கூரிய முனைச் செயல்பாடு) ஏற்பட்டு மேகத்தின் மின்னூட்டம் நடுநிலையாக்கப்படுகிறது."
+    },
+    {
+      "id": "PHY12-SET2-Q06",
+      "unit": 2,
+      "topic": "Current Electricity / மின்னோட்டவியல்",
+      "question_en": "The temperature coefficient of resistance is negative for which of the following materials?",
+      "question_ta": "பின்வருவனவற்றுள் எந்தப் பொருளுக்கு மின்தடை வெப்பநிலை எண் எதிர்க்குறியைக் கொண்டிருக்கும்?",
+      "options_en": {
+        "a": "Copper",
+        "b": "Aluminium",
+        "c": "Germanium (Semiconductor)",
+        "d": "Silver"
+      },
+      "options_ta": {
+        "a": "தாமிரம்",
+        "b": "அலுமினியம்",
+        "c": "ஜெர்மானியம் (குறைக்கடத்தி)",
+        "d": "வெள்ளி"
+      },
+      "correct_option": "c",
+      "answer_en": "Germanium (Semiconductor)",
+      "answer_ta": "ஜெர்மானியம் (குறைக்கடத்தி)",
+      "explanation_en": "Semiconductors like Germanium and Silicon have negative temperature coefficient of resistance (as temperature increases, covalent bonds break and resistance decreases).",
+      "explanation_ta": "குறைக்கடத்திகளின் (ஜெர்மானியம், சிலிகான்) வெப்பநிலை உயரும் போது மின்தடை குறைவதால் மின்தடை வெப்பநிலை எண் எதிர்க்குறியைப் பெறும்."
+    },
+    {
+      "id": "PHY12-SET2-Q07",
+      "unit": 2,
+      "topic": "Current Electricity / மின்னோட்டவியல்",
+      "question_en": "In a potentiometer circuit, the internal resistance (r) of a cell of emf E balanced against lengths l₁ (open circuit) and l₂ (closed with resistance R) is given by:",
+      "question_ta": "மின்னழுத்தமானி சுற்றில் மின்கலத்தின் அகமின்தடை (r) காணும் சமன்பாடு (l₁ திறந்த சுற்று, l₂ புற மின்தடை R இணைக்கப்பட்ட மூடிய சுற்று சமன்செய் நீளங்கள்):",
+      "options_en": {
+        "a": "r = R · (l₁ - l₂) / l₂",
+        "b": "r = R · (l₂ - l₁) / l₁",
+        "c": "r = R · l₁ / l₂",
+        "d": "r = R · (l₁ + l₂) / l₁"
+      },
+      "options_ta": {
+        "a": "r = R · (l₁ - l₂) / l₂",
+        "b": "r = R · (l₂ - l₁) / l₁",
+        "c": "r = R · l₁ / l₂",
+        "d": "r = R · (l₁ + l₂) / l₁"
+      },
+      "correct_option": "a",
+      "answer_en": "r = R · (l₁ - l₂) / l₂",
+      "answer_ta": "r = R · (l₁ - l₂) / l₂",
+      "explanation_en": "Since E ∝ l₁ and V ∝ l₂, internal resistance r = R(E/V - 1) = R · (l₁ - l₂) / l₂.",
+      "explanation_ta": "மின்னழுத்தமானி மூலம் அகமின்தடை காணும் சூத்திரம் r = R · [(l₁ - l₂) / l₂] ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q08",
+      "unit": 2,
+      "topic": "Current Electricity / மின்னோட்டவியல்",
+      "question_en": "According to Joule's law of heating, the heat produced (H) in a resistor of resistance R carrying current I for time t is proportional to:",
+      "question_ta": "ஜூல் வெப்ப விதியின்படி, R மின்தடையில் t நேரத்தில் I மின்னோட்டம் பாய்வதால் உருவாகும் வெப்பம் (H) எதற்கு நேர்விகிதத்தில் இருக்கும்?",
+      "options_en": {
+        "a": "I",
+        "b": "I²",
+        "c": "1 / I²",
+        "d": "√I"
+      },
+      "options_ta": {
+        "a": "I",
+        "b": "I²",
+        "c": "1 / I²",
+        "d": "√I"
+      },
+      "correct_option": "b",
+      "answer_en": "I²",
+      "answer_ta": "I²",
+      "explanation_en": "Joule's heating law is H = I² R t, hence heat produced is directly proportional to the square of the current (I²).",
+      "explanation_ta": "ஜூல் வெப்ப விதி H = I² R t ஆகும். எனவே வெப்பம் மின்னோட்டத்தின் இருமடிக்கு (I²) நேர்விகிதத்தில் இருக்கும்."
+    },
+    {
+      "id": "PHY12-SET2-Q09",
+      "unit": 2,
+      "topic": "Current Electricity / மின்னோட்டவியல்",
+      "question_en": "In the carbon resistor color code system, the tolerance indicated by a gold band is:",
+      "question_ta": "கார்பன் மின்தடையாக்கிகளில் தங்க நிற வளையம் குறிக்கும் மாறுபடும் அளவு (ஏற்புத்தன்மை - Tolerance):",
+      "options_en": {
+        "a": "± 5%",
+        "b": "± 10%",
+        "c": "± 20%",
+        "d": "± 1%"
+      },
+      "options_ta": {
+        "a": "± 5%",
+        "b": "± 10%",
+        "c": "± 20%",
+        "d": "± 1%"
+      },
+      "correct_option": "a",
+      "answer_en": "± 5%",
+      "answer_ta": "± 5%",
+      "explanation_en": "Gold indicates ± 5% tolerance, Silver indicates ± 10%, and no fourth band indicates ± 20%.",
+      "explanation_ta": "தங்க நிற வளையத்தின் மாறுபடும் ஏற்புத்தன்மை அளவு ± 5% ஆகும் (வெள்ளி ± 10%)."
+    },
+    {
+      "id": "PHY12-SET2-Q10",
+      "unit": 2,
+      "topic": "Current Electricity / மின்னோட்டவியல்",
+      "question_en": "The phenomenon in which an emf is developed in an electric circuit containing two dissimilar metals whose junctions are maintained at different temperatures is known as:",
+      "question_ta": "இரு வேறுபட்ட உலோக சந்திப்புகள் வெவ்வேறு வெப்பநிலைகளில் வைக்கப்படும் போது மின்னியக்கு விசை தூண்டப்படும் நிகழ்வு:",
+      "options_en": {
+        "a": "Peltier effect",
+        "b": "Seebeck effect",
+        "c": "Thomson effect",
+        "d": "Joule effect"
+      },
+      "options_ta": {
+        "a": "பெல்டியர் விளைவு",
+        "b": "சீபெக் விளைவு",
+        "c": "தாம்சன் விளைவு",
+        "d": "ஜூல் விளைவு"
+      },
+      "correct_option": "b",
+      "answer_en": "Seebeck effect",
+      "answer_ta": "சீபெக் விளைவு",
+      "explanation_en": "Seebeck discovered that maintaining the junctions of a thermocouple at two different temperatures generates a thermoelectric current (Seebeck effect).",
+      "explanation_ta": "வெப்பநிலை வேறுபாட்டினால் மின்னியக்கு விசை தூண்டப்படும் விளைவு சீபெக் விளைவு எனப்படும்."
+    },
+    {
+      "id": "PHY12-SET2-Q11",
+      "unit": 3,
+      "topic": "Magnetism & Magnetic Effects / காந்தவியல்",
+      "question_en": "The magnetic Lorentz force acting on a charge q moving with velocity v in a magnetic field B is given by:",
+      "question_ta": "B காந்தப்புலத்தில் v திசைவேகத்துடன் இயங்கும் q மின்னூட்டம் கொண்ட துகள் உணரும் காந்த லாரன்ஸ் விசை:",
+      "options_en": {
+        "a": "F = q (v · B)",
+        "b": "F = q (v × B)",
+        "c": "F = q (B × v)",
+        "d": "F = (v × B) / q"
+      },
+      "options_ta": {
+        "a": "F = q (v · B)",
+        "b": "F = q (v × B)",
+        "c": "F = q (B × v)",
+        "d": "F = (v × B) / q"
+      },
+      "correct_option": "b",
+      "answer_en": "F = q (v × B)",
+      "answer_ta": "F = q (v × B)",
+      "explanation_en": "The magnetic Lorentz force vector equation is F_m = q (v × B) with magnitude F = q v B sin θ.",
+      "explanation_ta": "காந்த லாரன்ஸ் விசையின் வெக்டர் வடிவம் F = q (v × B) ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q12",
+      "unit": 3,
+      "topic": "Magnetism & Magnetic Effects / காந்தவியல்",
+      "question_en": "To convert a moving coil galvanometer into a voltmeter, one should connect:",
+      "question_ta": "இயங்குசுருள் கால்வனோமீட்டரை வோல்ட்மீட்டராக மாற்ற நாம் இணைக்க வேண்டியது:",
+      "options_en": {
+        "a": "A low resistance in parallel",
+        "b": "A high resistance in series",
+        "c": "A high resistance in parallel",
+        "d": "A low resistance in series"
+      },
+      "options_ta": {
+        "a": "குறைந்த மின்தடையை பக்க இணைப்பில்",
+        "b": "உயர் மின்தடையை தொடர் இணைப்பில்",
+        "c": "உயர் மின்தடையை பக்க இணைப்பில்",
+        "d": "குறைந்த மின்தடையை தொடர் இணைப்பில்"
+      },
+      "correct_option": "b",
+      "answer_en": "A high resistance in series",
+      "answer_ta": "உயர் மின்தடையை தொடர் இணைப்பில்",
+      "explanation_en": "A voltmeter must have a very high total resistance so it draws negligible current; thus a high resistance is connected in series with the galvanometer.",
+      "explanation_ta": "வோல்ட்மீட்டரின் மின்தடை மிக அதிகமாக இருக்க வேண்டும் என்பதால், கால்வனோமீட்டருடன் ஒரு உயர் மின்தடை தொடரிணைப்பில் இணைக்கப்படுகிறது."
+    },
+    {
+      "id": "PHY12-SET2-Q13",
+      "unit": 3,
+      "topic": "Magnetism & Magnetic Effects / காந்தவியல்",
+      "question_en": "Tangent galvanometer works based on the Tangent law, which is valid when:",
+      "question_ta": "டேன்ஜென்ட் விதி செல்லுபடியாகும் நிபந்தனையின்படி, இரு காந்தப்புலங்கள் எவ்வாறு அமைய வேண்டும்?",
+      "options_en": {
+        "a": "Two magnetic fields are parallel to each other",
+        "b": "Two uniform magnetic fields act perpendicular to each other",
+        "c": "The magnetic field is zero",
+        "d": "Two magnetic fields are anti-parallel"
+      },
+      "options_ta": {
+        "a": "இரு காந்தப்புலங்கள் ஒன்றுக்கொன்று இணையாக",
+        "b": "இரு சீரான காந்தப்புலங்கள் ஒன்றுக்கொன்று செங்குத்தாக",
+        "c": "காந்தப்புலம் சுழியாக இருக்கும்போது",
+        "d": "இரு காந்தப்புலங்கள் எதிர் இணையாக"
+      },
+      "correct_option": "b",
+      "answer_en": "Two uniform magnetic fields act perpendicular to each other",
+      "answer_ta": "இரு சீரான காந்தப்புலங்கள் ஒன்றுக்கொன்று செங்குத்தாக",
+      "explanation_en": "Tangent law (B = B_h tan θ) applies when a magnetic needle is suspended freely under two mutually perpendicular uniform magnetic fields.",
+      "explanation_ta": "டேன்ஜென்ட் விதி ஒன்றுக்கொன்று செங்குத்தான இரு சீரான காந்தப்புலங்களில் மட்டுமே செயல்படும் (B = B_h tan θ)."
+    },
+    {
+      "id": "PHY12-SET2-Q14",
+      "unit": 3,
+      "topic": "Magnetism & Magnetic Effects / காந்தவியல்",
+      "question_en": "The value of Bohr magneton (μ_B) is:",
+      "question_ta": "போர் மேக்னட்டானின் (μ_B) மதிப்பு:",
+      "options_en": {
+        "a": "9.27 × 10⁻²⁴ A m²",
+        "b": "9.27 × 10⁻²⁷ A m²",
+        "c": "1.6 × 10⁻¹⁹ A m²",
+        "d": "6.626 × 10⁻³⁴ A m²"
+      },
+      "options_ta": {
+        "a": "9.27 × 10⁻²⁴ A m²",
+        "b": "9.27 × 10⁻²⁷ A m²",
+        "c": "1.6 × 10⁻¹⁹ A m²",
+        "d": "6.626 × 10⁻³⁴ A m²"
+      },
+      "correct_option": "a",
+      "answer_en": "9.27 × 10⁻²⁴ A m²",
+      "answer_ta": "9.27 × 10⁻²⁴ A m²",
+      "explanation_en": "Bohr magneton μ_B = e·h / (4π m_e) = 9.27 × 10⁻²⁴ A m² (or J T⁻¹).",
+      "explanation_ta": "போர் மேக்னட்டான் மதிப்பு μ_B = 9.27 × 10⁻²⁴ A m² ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q15",
+      "unit": 3,
+      "topic": "Magnetism & Magnetic Effects / காந்தவியல்",
+      "question_en": "The torque acting on a magnetic dipole of magnetic dipole moment M placed in a uniform magnetic field B is:",
+      "question_ta": "B சீரான காந்தப்புலத்தில் வைக்கப்பட்டுள்ள M திருப்புத்திறன் கொண்ட காந்த இருமுனை உணரும் திருப்புவிசை:",
+      "options_en": {
+        "a": "τ = M · B",
+        "b": "τ = M × B",
+        "c": "τ = B × M",
+        "d": "τ = M / B"
+      },
+      "options_ta": {
+        "a": "τ = M · B",
+        "b": "τ = M × B",
+        "c": "τ = B × M",
+        "d": "τ = M / B"
+      },
+      "correct_option": "b",
+      "answer_en": "τ = M × B",
+      "answer_ta": "τ = M × B",
+      "explanation_en": "The vector torque on a magnetic dipole in an external field is τ = M × B = M B sin θ.",
+      "explanation_ta": "காந்த இருமுனை உணரும் திருப்புவிசை τ = M × B ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q16",
+      "unit": 4,
+      "topic": "Electromagnetic Induction & AC / மின்காந்தத் தூண்டல்",
+      "question_en": "The magnetic energy stored in an inductor of inductance L carrying a steady current I is:",
+      "question_ta": "I மின்னோட்டம் பாயும் L தன்மின்தூண்டல் எண் கொண்ட மின்தூண்டியில் சேமிக்கப்படும் காந்த ஆற்றல்:",
+      "options_en": {
+        "a": "½ L I²",
+        "b": "L I²",
+        "c": "½ L² I",
+        "d": "L / I²"
+      },
+      "options_ta": {
+        "a": "½ L I²",
+        "b": "L I²",
+        "c": "½ L² I",
+        "d": "L / I²"
+      },
+      "correct_option": "a",
+      "answer_en": "½ L I²",
+      "answer_ta": "½ L I²",
+      "explanation_en": "Work done in establishing current I against back emf in an inductor is U_B = ½ L I².",
+      "explanation_ta": "மின்தூண்டியில் சேமிக்கப்படும் காந்த ஆற்றல் U = ½ L I² ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q17",
+      "unit": 4,
+      "topic": "Electromagnetic Induction & AC / மின்காந்தத் தூண்டல்",
+      "question_en": "Eddy current energy losses in the core of a transformer are minimized by using:",
+      "question_ta": "மின்மாற்றியின் உள்ளகத்தில் சுழல் மின்னோட்டத்தினால் ஏற்படும் ஆற்றல் இழப்பைக் குறைக்க பயன்படுவது:",
+      "options_en": {
+        "a": "A thick solid copper core",
+        "b": "A laminated soft iron core insulated with varnish",
+        "c": "A hollow plastic core",
+        "d": "A core of high electrical resistance wire"
+      },
+      "options_ta": {
+        "a": "தடிமனான திட தாமிர உள்ளகம்",
+        "b": "வார்னிஷ் பூசப்பட்ட மெல்லிய மென் இரும்பு ஏடுகள் (Laminated core)",
+        "c": "வெற்று பிளாஸ்டிக் உள்ளகம்",
+        "d": "உயர் மின்தடை கம்பி உள்ளகம்"
+      },
+      "correct_option": "b",
+      "answer_en": "A laminated soft iron core insulated with varnish",
+      "answer_ta": "வார்னிஷ் பூசப்பட்ட மெல்லிய மென் இரும்பு ஏடுகள் (Laminated core)",
+      "explanation_en": "Laminating the core with thin sheets insulated from one another breaks up large eddy current loops, substantially reducing I²R heat loss.",
+      "explanation_ta": "மெல்லேடுகளாக்கப்பட்ட உள்ளகம் (laminated core) சுழல் மின்னோட்டத்தின் பரப்பளவைச் சுருக்கி ஆற்றல் இழப்பைக் குறைக்கிறது."
+    },
+    {
+      "id": "PHY12-SET2-Q18",
+      "unit": 4,
+      "topic": "Electromagnetic Induction & AC / மின்காந்தத் தூண்டல்",
+      "question_en": "The power factor (cos φ) of a pure inductive or pure capacitive AC circuit is:",
+      "question_ta": "தூய மின்தூண்டி அல்லது தூய மின்தேக்கி மட்டுமே உள்ள மாறுதிசை மின்னோட்டச் சுற்றின் திறன் காரணி (cos φ):",
+      "options_en": {
+        "a": "1",
+        "b": "0",
+        "c": "0.5",
+        "d": "Infinity"
+      },
+      "options_ta": {
+        "a": "1",
+        "b": "0",
+        "c": "0.5",
+        "d": "முடிவிலி"
+      },
+      "correct_option": "b",
+      "answer_en": "0",
+      "answer_ta": "0",
+      "explanation_en": "In purely inductive or capacitive circuits, the phase difference φ = 90° (π/2). Hence power factor cos(90°) = 0, meaning average power consumed is zero.",
+      "explanation_ta": "தூய L அல்லது C சுற்றுகளில் கட்ட வேறுபாடு φ = 90° என்பதால் திறன் காரணி cos 90° = 0 ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q19",
+      "unit": 4,
+      "topic": "Electromagnetic Induction & AC / மின்காந்தத் தூண்டல்",
+      "question_en": "In an AC circuit containing only a capacitor, the alternating current:",
+      "question_ta": "தூய மின்தேக்கி மட்டுமே உள்ள மாறுதிசை மின்னோட்டச் சுற்றில், மின்னோட்டமானது மின்னழுத்தத்தை விட:",
+      "options_en": {
+        "a": "Lags behind voltage by π/2",
+        "b": "Leads voltage by π/2",
+        "c": "Is in phase with voltage",
+        "d": "Leads voltage by π"
+      },
+      "options_ta": {
+        "a": "மின்னழுத்தத்தை விட π/2 கட்டம் பின்தங்கியிருக்கும்",
+        "b": "மின்னழுத்தத்தை விட π/2 கட்டம் முந்தியிருக்கும்",
+        "c": "ஒரே கட்டத்தில் இருக்கும்",
+        "d": "π கட்டம் முந்தியிருக்கும்"
+      },
+      "correct_option": "b",
+      "answer_en": "Leads voltage by π/2",
+      "answer_ta": "மின்னழுத்தத்தை விட π/2 கட்டம் முந்தியிருக்கும்",
+      "explanation_en": "For a pure capacitor, i = I_m sin(ωt + π/2) when v = V_m sin(ωt); thus current leads voltage by π/2 (90°).",
+      "explanation_ta": "மின்தேக்கி சுற்றில் மின்னோட்டம் மின்னழுத்தத்தை விட π/2 (90°) கட்டம் முந்தி இருக்கும்."
+    },
+    {
+      "id": "PHY12-SET2-Q20",
+      "unit": 4,
+      "topic": "Electromagnetic Induction & AC / மின்காந்தத் தூண்டல்",
+      "question_en": "For a step-down transformer, the transformation ratio (k = N_s / N_p) is:",
+      "question_ta": "ஒரு இறக்கு மின்மாற்றிக்கு (Step-down transformer), அதன் உருமாற்று விகிதம் (k = N_s / N_p):",
+      "options_en": {
+        "a": "k > 1",
+        "b": "k = 1",
+        "c": "k < 1",
+        "d": "k = 0"
+      },
+      "options_ta": {
+        "a": "k > 1",
+        "b": "k = 1",
+        "c": "k < 1",
+        "d": "k = 0"
+      },
+      "correct_option": "c",
+      "answer_en": "k < 1",
+      "answer_ta": "k < 1",
+      "explanation_en": "In a step-down transformer, secondary turns N_s are less than primary turns N_p, so k = N_s / N_p < 1.",
+      "explanation_ta": "இறக்கு மின்மாற்றியில் துணைச் சுருளின் சுற்று எண்ணிக்கை முதன்மைச் சுருளை விடக் குறைவு (N_s < N_p), எனவே k < 1 ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q21",
+      "unit": 5,
+      "topic": "Electromagnetic Waves / மின்காந்த அலைகள்",
+      "question_en": "Which electromagnetic wave is widely used in radar systems and microwave ovens?",
+      "question_ta": "ரேடார் அமைப்புகள் மற்றும் நுண்ணலை அடுப்புகளில் பயன்படும் மின்காந்த அலை எது?",
+      "options_en": {
+        "a": "Ultraviolet rays",
+        "b": "Microwaves",
+        "c": "X-rays",
+        "d": "Infrared waves"
+      },
+      "options_ta": {
+        "a": "புறஊதாக் கதிர்கள்",
+        "b": "நுண்ணலைகள் (Microwaves)",
+        "c": "எக்ஸ் கதிர்கள்",
+        "d": "அகச்சிவப்புக் கதிர்கள்"
+      },
+      "correct_option": "b",
+      "answer_en": "Microwaves",
+      "answer_ta": "நுண்ணலைகள் (Microwaves)",
+      "explanation_en": "Microwaves (wavelength 1 mm to 0.1 m) are used for aircraft radar navigation and heating food molecules in microwave ovens.",
+      "explanation_ta": "ரேடார் தொலைத்தொடர்பு மற்றும் நுண்ணலை அடுப்புகளில் பயன்படுவது நுண்ணலைகள் (Microwaves) ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q22",
+      "unit": 5,
+      "topic": "Electromagnetic Waves / மின்காந்த அலைகள்",
+      "question_en": "In an electromagnetic wave propagating in free space, the ratio of the amplitudes of the electric field (E₀) and magnetic field (B₀) is equal to:",
+      "question_ta": "வெற்றிடத்தில் பரவும் மின்காந்த அலையில், மின்புல வீச்சு (E₀) மற்றும் காந்தப்புல வீச்சு (B₀) ஆகியவற்றின் தகவு எதற்குச் சமம்?",
+      "options_en": {
+        "a": "Speed of light (c)",
+        "b": "1 / c",
+        "c": "c²",
+        "d": "1 / c²"
+      },
+      "options_ta": {
+        "a": "ஒளியின் திசைவேகம் (c)",
+        "b": "1 / c",
+        "c": "c²",
+        "d": "1 / c²"
+      },
+      "correct_option": "a",
+      "answer_en": "Speed of light (c)",
+      "answer_ta": "ஒளியின் திசைவேகம் (c)",
+      "explanation_en": "For electromagnetic radiation in free space, E₀ / B₀ = c, the speed of light.",
+      "explanation_ta": "வெற்றிடத்தில் மின்காந்த அலையின் மின்புல மற்றும் காந்தப்புல வீச்சுகளின் விகிதம் ஒளியின் திசைவேகத்திற்குச் சமம்: E₀ / B₀ = c."
+    },
+    {
+      "id": "PHY12-SET2-Q23",
+      "unit": 5,
+      "topic": "Electromagnetic Waves / மின்காந்த அலைகள்",
+      "question_en": "Infrared radiation is often referred to as:",
+      "question_ta": "அகச்சிவப்புக் கதிர்கள் பொதுவாக இவ்வாறு அழைக்கப்படுகின்றன:",
+      "options_en": {
+        "a": "Cooling rays",
+        "b": "Heat waves",
+        "c": "Ionizing waves",
+        "d": "Sound waves"
+      },
+      "options_ta": {
+        "a": "குளிரூட்டும் கதிர்கள்",
+        "b": "வெப்பக் கதிர்கள் (Heat waves)",
+        "c": "அயனியாக்கும் கதிர்கள்",
+        "d": "ஒலி அலைகள்"
+      },
+      "correct_option": "b",
+      "answer_en": "Heat waves",
+      "answer_ta": "வெப்பக் கதிர்கள் (Heat waves)",
+      "explanation_en": "Water molecules and atoms readily absorb infrared radiation and increase thermal agitation, making them effectively heat waves.",
+      "explanation_ta": "அகச்சிவப்புக் கதிர்கள் பொருட்களால் உறிஞ்சப்பட்டு வெப்பத்தை உருவாக்குவதால் வெப்பக் கதிர்கள் என அழைக்கப்படுகின்றன."
+    },
+    {
+      "id": "PHY12-SET2-Q24",
+      "unit": 6,
+      "topic": "Optics / ஒளியியல்",
+      "question_en": "The critical angle (i_c) of a medium of refractive index n with respect to air is given by:",
+      "question_ta": "காற்றுடன் ஒப்பிடும் போது n ஒளிவிலகல் எண் கொண்ட ஒரு ஊடகத்தின் மாறுநிலைக்கோணம் (i_c):",
+      "options_en": {
+        "a": "sin i_c = n",
+        "b": "sin i_c = 1 / n",
+        "c": "cos i_c = 1 / n",
+        "d": "tan i_c = n"
+      },
+      "options_ta": {
+        "a": "sin i_c = n",
+        "b": "sin i_c = 1 / n",
+        "c": "cos i_c = 1 / n",
+        "d": "tan i_c = n"
+      },
+      "correct_option": "b",
+      "answer_en": "sin i_c = 1 / n",
+      "answer_ta": "sin i_c = 1 / n",
+      "explanation_en": "By Snell's law at critical incidence into air: n · sin(i_c) = 1 · sin(90°) = 1, so sin(i_c) = 1 / n.",
+      "explanation_ta": "ஸ்நெல் விதியின்படி மாறுநிலைக் கோணத்தில் ஒளிவிலகல் கோணம் 90° என்பதால் sin i_c = 1 / n ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q25",
+      "unit": 6,
+      "topic": "Optics / ஒளியியல்",
+      "question_en": "When two thin lenses of focal lengths f₁ and f₂ are kept in contact, the equivalent focal length F of the combination is:",
+      "question_ta": "f₁ மற்றும் f₂ குவியத்தூரம் கொண்ட இரு மெல்லிய லென்ஸ்கள் ஒன்றோடொன்று தொடுமாறு வைக்கப்படும் போது அதன் தொகுபயன் குவியத்தூரம் F:",
+      "options_en": {
+        "a": "F = f₁ + f₂",
+        "b": "1 / F = 1 / f₁ + 1 / f₂",
+        "c": "F = f₁ · f₂",
+        "d": "1 / F = 1 / f₁ - 1 / f₂"
+      },
+      "options_ta": {
+        "a": "F = f₁ + f₂",
+        "b": "1 / F = 1 / f₁ + 1 / f₂",
+        "c": "F = f₁ · f₂",
+        "d": "1 / F = 1 / f₁ - 1 / f₂"
+      },
+      "correct_option": "b",
+      "answer_en": "1 / F = 1 / f₁ + 1 / f₂",
+      "answer_ta": "1 / F = 1 / f₁ + 1 / f₂",
+      "explanation_en": "The net optical power is P = P₁ + P₂, which gives 1/F = 1/f₁ + 1/f₂.",
+      "explanation_ta": "லென்சுகளின் தொகுபயன் திறன் P = P₁ + P₂ என்பதால் 1/F = 1/f₁ + 1/f₂ ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q26",
+      "unit": 6,
+      "topic": "Optics / ஒளியியல்",
+      "question_en": "The resolving power of an astronomical telescope can be increased by:",
+      "question_ta": "ஒரு வானியல் தொலைநோக்கியின் பிரிதிறனை (Resolving power) அதிகரிக்க நாம் செய்ய வேண்டியது:",
+      "options_en": {
+        "a": "Decreasing the diameter of the objective lens",
+        "b": "Increasing the diameter (aperture) of the objective lens",
+        "c": "Increasing the wavelength of light",
+        "d": "Decreasing the focal length of the eyepiece"
+      },
+      "options_ta": {
+        "a": "பொருளருகு லென்சின் விட்டத்தைக் குறைத்தல்",
+        "b": "பொருளருகு லென்சின் விட்டத்தை (துளை) அதிகரித்தல்",
+        "c": "ஒளியின் அலைநீளத்தை அதிகரித்தல்",
+        "d": "விழியருகு லென்சின் குவியத்தூரத்தைக் குறைத்தல்"
+      },
+      "correct_option": "b",
+      "answer_en": "Increasing the diameter (aperture) of the objective lens",
+      "answer_ta": "பொருளருகு லென்சின் விட்டத்தை (துளை) அதிகரித்தல்",
+      "explanation_en": "Resolving power of a telescope = D / (1.22 λ). It increases directly with the aperture/diameter D of the objective lens.",
+      "explanation_ta": "தொலைநோக்கியின் பிரிதிறன் = D / (1.22 λ) ஆகும். எனவே பொருளருகு லென்சின் விட்டம் (D) அதிகரிக்கும் போது பிரிதிறன் அதிகரிக்கிறது."
+    },
+    {
+      "id": "PHY12-SET2-Q27",
+      "unit": 6,
+      "topic": "Optics / ஒளியியல்",
+      "question_en": "Astigmatism, a vision defect where horizontal and vertical lines cannot be focused simultaneously, is corrected using:",
+      "question_ta": "கிடைமட்ட மற்றும் செங்குத்துக் கோடுகளை ஒரே நேரத்தில் தெளிவாகக் காண இயலாத அஸ்டிக்மேட்டிஸம் (விழிக் குறைபாடு) சரிசெய்ய பயன்படும் லென்ஸ்:",
+      "options_en": {
+        "a": "Bifocal lenses",
+        "b": "Cylindrical lenses",
+        "c": "Convex lenses",
+        "d": "Concave lenses"
+      },
+      "options_ta": {
+        "a": "இரு குவிய லென்ஸ்கள்",
+        "b": "உருளை லென்ஸ்கள் (Cylindrical lenses)",
+        "c": "குவி லென்ஸ்கள்",
+        "d": "குழி லென்ஸ்கள்"
+      },
+      "correct_option": "b",
+      "answer_en": "Cylindrical lenses",
+      "answer_ta": "உருளை லென்ஸ்கள் (Cylindrical lenses)",
+      "explanation_en": "Astigmatism is caused by non-spherical cornea curvature and is rectified using cylindrical lenses with specified orientation axis.",
+      "explanation_ta": "கண் விழியின் சீரற்ற வளைவுத்தன்மையால் ஏற்படும் அஸ்டிக்மேட்டிஸம் குறைபாட்டை சரிசெய்ய உருளை லென்ஸ்கள் பயன்படுகின்றன."
+    },
+    {
+      "id": "PHY12-SET2-Q28",
+      "unit": 6,
+      "topic": "Optics / ஒளியியல்",
+      "question_en": "The phenomenon of polarization demonstrates that light waves are:",
+      "question_ta": "ஒளி அலைகளில் நடைபெறும் தளவிளைவு (Polarization) நிகழ்வு, ஒளி அலைகள் எத்தகைய அலைகள் என்பதை நிரூபிக்கிறது?",
+      "options_en": {
+        "a": "Longitudinal waves",
+        "b": "Transverse waves",
+        "c": "Mechanical waves",
+        "d": "Stationary waves"
+      },
+      "options_ta": {
+        "a": "நெட்டலைகள்",
+        "b": "குறுக்கலைகள் (Transverse waves)",
+        "c": "இயந்திர அலைகள்",
+        "d": "நிலையான அலைகள்"
+      },
+      "correct_option": "b",
+      "answer_en": "Transverse waves",
+      "answer_ta": "குறுக்கலைகள் (Transverse waves)",
+      "explanation_en": "Only transverse waves (oscillating perpendicular to the direction of propagation) can be polarized; longitudinal waves cannot be polarized.",
+      "explanation_ta": "குறுக்கலைகளை மட்டுமே தளவிளைவிற்கு உட்படுத்த முடியும் என்பதால், தளவிளைவு நிகழ்வு ஒளி ஒரு குறுக்கலை என்பதை உறுதிப்படுத்துகிறது."
+    },
+    {
+      "id": "PHY12-SET2-Q29",
+      "unit": 6,
+      "topic": "Optics / ஒளியியல்",
+      "question_en": "If the ratio of intensities of two interfering coherent light waves is 9 : 1, the ratio of their amplitudes is:",
+      "question_ta": "குறுக்கீட்டு விளைவை ஏற்படுத்தும் இரு ஒத்திசைவு ஒளி அலைகளின் செறிவுகளின் தகவு 9 : 1 எனில், அவற்றின் வீச்சுகளின் தகவு:",
+      "options_en": {
+        "a": "81 : 1",
+        "b": "3 : 1",
+        "c": "9 : 1",
+        "d": "1 : 3"
+      },
+      "options_ta": {
+        "a": "81 : 1",
+        "b": "3 : 1",
+        "c": "9 : 1",
+        "d": "1 : 3"
+      },
+      "correct_option": "b",
+      "answer_en": "3 : 1",
+      "answer_ta": "3 : 1",
+      "explanation_en": "Intensity I is proportional to amplitude squared (I ∝ a²). Thus a₁ / a₂ = √(I₁ / I₂) = √(9 / 1) = 3 : 1.",
+      "explanation_ta": "செறிவு வீச்சின் இருமடிக்கு நேர்விகிதத்தில் இருக்கும் (I ∝ a²). எனவே a₁ / a₂ = √(9/1) = 3 : 1 ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q30",
+      "unit": 7,
+      "topic": "Dual Nature of Radiation & Matter / கதிர்வீச்சு",
+      "question_en": "The photoelectric work function (W₀) is the lowest for which of the following metals?",
+      "question_ta": "பின்வரும் உலோகங்களுள் ஒளிமின் வெளியேற்று ஆற்றல் (Work function) மிகக் குறைவாக உள்ள உலோகம் எது?",
+      "options_en": {
+        "a": "Platinum",
+        "b": "Copper",
+        "c": "Caesium (Cesium)",
+        "d": "Iron"
+      },
+      "options_ta": {
+        "a": "பிளாட்டினம்",
+        "b": "தாமிரம்",
+        "c": "சீசியம் (Caesium)",
+        "d": "இரும்பு"
+      },
+      "correct_option": "c",
+      "answer_en": "Caesium (Cesium)",
+      "answer_ta": "சீசியம் (Caesium)",
+      "explanation_en": "Caesium has the lowest work function (~2.14 eV) among metals, making it highly sensitive to visible light for photocells.",
+      "explanation_ta": "கார உலோகமான சீசியத்தின் வெளியேற்று ஆற்றல் மிகக் குறைவு (~2.14 eV)."
+    },
+    {
+      "id": "PHY12-SET2-Q31",
+      "unit": 7,
+      "topic": "Dual Nature of Radiation & Matter / கதிர்வீச்சு",
+      "question_en": "In a photoelectric experiment, the photoelectric current is directly proportional to:",
+      "question_ta": "ஒளிமின் விளைவு சோதனையில், ஒளிமின் மின்னோட்டம் எதற்கு நேர்விகிதத்தில் அமையும்?",
+      "options_en": {
+        "a": "Frequency of incident light",
+        "b": "Intensity of incident light",
+        "c": "Stopping potential",
+        "d": "Work function of the metal"
+      },
+      "options_ta": {
+        "a": "படுகதிரின் அதிர்வெண்",
+        "b": "படுகதிரின் செறிவு",
+        "c": "நிறுத்து மின்னழுத்தம்",
+        "d": "உலோகத்தின் வெளியேற்று ஆற்றல்"
+      },
+      "correct_option": "b",
+      "answer_en": "Intensity of incident light",
+      "answer_ta": "படுகதிரின் செறிவு",
+      "explanation_en": "Higher light intensity means more incident photons per second, yielding more emitted photoelectrons per second and hence higher current.",
+      "explanation_ta": "படுகதிரின் செறிவு அதிகரிக்கும் போது வினாடிக்கு உமிழப்படும் எலக்ட்ரான்களின் எண்ணிக்கை அதிகரிப்பதால் ஒளிமின் மின்னோட்டம் அதிகரிக்கும்."
+    },
+    {
+      "id": "PHY12-SET2-Q32",
+      "unit": 7,
+      "topic": "Dual Nature of Radiation & Matter / கதிர்வீச்சு",
+      "question_en": "The minimum frequency of incident light below which no photoelectric emission takes place is called:",
+      "question_ta": "ஒளிமின் உமிழ்வு ஏற்படுவதற்குத் தேவையான படுகதிரின் குறைந்தபட்ச அதிர்வெண் எவ்வாறு அழைக்கப்படுகிறது?",
+      "options_en": {
+        "a": "Critical frequency",
+        "b": "Threshold frequency",
+        "c": "Resonant frequency",
+        "d": "Cut-off wavelength"
+      },
+      "options_ta": {
+        "a": "மாறுநிலை அதிர்வெண்",
+        "b": "பயன்தொடக்க அதிர்வெண் (Threshold frequency)",
+        "c": "ஒத்ததிர்வு அதிர்வெண்",
+        "d": "வெட்டு அலைநீளம்"
+      },
+      "correct_option": "b",
+      "answer_en": "Threshold frequency",
+      "answer_ta": "பயன்தொடக்க அதிர்வெண் (Threshold frequency)",
+      "explanation_en": "Threshold frequency (ν₀) is the characteristic minimum frequency needed to overcome the metal's work function (W₀ = h ν₀).",
+      "explanation_ta": "வெளியேற்று ஆற்றலை ஈடுசெய்யத் தேவையான குறைந்தபட்ச அதிர்வெண் பயன்தொடக்க அதிர்வெண் (ν₀) ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q33",
+      "unit": 7,
+      "topic": "Dual Nature of Radiation & Matter / கதிர்வீச்சு",
+      "question_en": "The de Broglie wavelength of a neutron of mass m in thermal equilibrium at absolute temperature T is:",
+      "question_ta": "T தனி வெப்பநிலையில் உள்ள m நிறை கொண்ட வெப்ப நியூட்ரானின் டி பிராய் அலைநீளம்:",
+      "options_en": {
+        "a": "λ = h / √(3 m k T)",
+        "b": "λ = h / √(2 m k T)",
+        "c": "λ = h / (3 m k T)",
+        "d": "λ = √(3 m k T) / h"
+      },
+      "options_ta": {
+        "a": "λ = h / √(3 m k T)",
+        "b": "λ = h / √(2 m k T)",
+        "c": "λ = h / (3 m k T)",
+        "d": "λ = √(3 m k T) / h"
+      },
+      "correct_option": "a",
+      "answer_en": "λ = h / √(3 m k T)",
+      "answer_ta": "λ = h / √(3 m k T)",
+      "explanation_en": "Average kinetic energy of a thermal neutron is E = (3/2) k T, giving momentum p = √(2 m E) = √(3 m k T) and λ = h / √(3 m k T).",
+      "explanation_ta": "வெப்ப நியூட்ரானின் இயக்க ஆற்றல் E = (3/2) k T என்பதால் உந்தம் p = √(3 m k T). எனவே அலைநீளம் λ = h / √(3 m k T) ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q34",
+      "unit": 8,
+      "topic": "Atomic & Nuclear Physics / அணு மற்றும் அணுக்கரு",
+      "question_en": "According to Bohr's atom model, the radius (r_n) of the n-th stationary orbit of hydrogen atom is proportional to:",
+      "question_ta": "போர் அணு மாதிரியின்படி, ஹைட்ரஜன் அணுவின் n-வது நிலையான சுற்றுப்பாதையின் ஆரம் (r_n) எதற்கு நேர்விகிதத்தில் இருக்கும்?",
+      "options_en": {
+        "a": "n",
+        "b": "n²",
+        "c": "1 / n",
+        "d": "1 / n²"
+      },
+      "options_ta": {
+        "a": "n",
+        "b": "n²",
+        "c": "1 / n",
+        "d": "1 / n²"
+      },
+      "correct_option": "b",
+      "answer_en": "n²",
+      "answer_ta": "n²",
+      "explanation_en": "Bohr's radius equation is r_n = (ε₀ n² h²) / (π m e² Z), hence r_n ∝ n².",
+      "explanation_ta": "போர் சுற்றுப்பாதை ஆரம் r_n = n² · a₀ என்பதால் முதன்மை குவாண்டம் எண் n-ன் இருமடிக்கு (n²) நேர்விகிதத்தில் இருக்கும்."
+    },
+    {
+      "id": "PHY12-SET2-Q35",
+      "unit": 8,
+      "topic": "Atomic & Nuclear Physics / அணு மற்றும் அணுக்கரு",
+      "question_en": "Which spectral series of hydrogen atom falls in the visible region of the electromagnetic spectrum?",
+      "question_ta": "ஹைட்ரஜன் அணுவின் நிறமாலையில் கண்ணுறு ஒளிப் பகுதியில் (Visible region) அமையும் நிறமாலைத் தொடர் எது?",
+      "options_en": {
+        "a": "Lyman series",
+        "b": "Balmer series",
+        "c": "Paschen series",
+        "d": "Pfund series"
+      },
+      "options_ta": {
+        "a": "லைமன் தொடர்",
+        "b": "பாமர் தொடர் (Balmer series)",
+        "c": "பாஷன் தொடர்",
+        "d": "ஃபண்ட் தொடர்"
+      },
+      "correct_option": "b",
+      "answer_en": "Balmer series",
+      "answer_ta": "பாமர் தொடர் (Balmer series)",
+      "explanation_en": "Balmer series transitions end at n₁ = 2 and produce wavelengths between 400 nm and 700 nm in the visible region.",
+      "explanation_ta": "பாமர் தொடர் மட்டுமே ஹைட்ரஜன் நிறமாலையில் கண்ணுறு ஒளிப் பகுதியில் அமைகிறது."
+    },
+    {
+      "id": "PHY12-SET2-Q36",
+      "unit": 8,
+      "topic": "Atomic & Nuclear Physics / அணு மற்றும் அணுக்கரு",
+      "question_en": "The mean life (τ) of a radioactive substance is related to its decay constant (λ) by:",
+      "question_ta": "கதிரியக்கப் பொருளின் சராசரி ஆயுட்காலம் (τ) மற்றும் சிதைவு மாறிலி (λ) ஆகியவற்றிற்கிடையேயான தொடர்பு:",
+      "options_en": {
+        "a": "τ = λ",
+        "b": "τ = 1 / λ",
+        "c": "τ = 0.6931 / λ",
+        "d": "τ = λ / 0.6931"
+      },
+      "options_ta": {
+        "a": "τ = λ",
+        "b": "τ = 1 / λ",
+        "c": "τ = 0.6931 / λ",
+        "d": "τ = λ / 0.6931"
+      },
+      "correct_option": "b",
+      "answer_en": "τ = 1 / λ",
+      "answer_ta": "τ = 1 / λ",
+      "explanation_en": "Mean life τ is defined as the reciprocal of the radioactive decay constant: τ = 1 / λ.",
+      "explanation_ta": "சராசரி ஆயுட்காலம் என்பது சிதைவு மாறிலியின் தலைகீழி ஆகும்: τ = 1 / λ."
+    },
+    {
+      "id": "PHY12-SET2-Q37",
+      "unit": 8,
+      "topic": "Atomic & Nuclear Physics / அணு மற்றும் அணுக்கரு",
+      "question_en": "One Curie (Ci), a traditional unit of radioactivity, is defined as:",
+      "question_ta": "ஒரு கியூரி (Curie) என்ற கதிரியக்கச் செயல்பாட்டின் அளவு எதற்குச் சமம்?",
+      "options_en": {
+        "a": "1 disintegration per second",
+        "b": "3.7 × 10¹⁰ disintegrations per second",
+        "c": "10⁶ disintegrations per second",
+        "d": "3.7 × 10⁷ disintegrations per second"
+      },
+      "options_ta": {
+        "a": "வினாடிக்கு 1 சிதைவு",
+        "b": "வினாடிக்கு 3.7 × 10¹⁰ சிதைவுகள்",
+        "c": "வினாடிக்கு 10⁶ சிதைவுகள்",
+        "d": "வினாடிக்கு 3.7 × 10⁷ சிதைவுகள்"
+      },
+      "correct_option": "b",
+      "answer_en": "3.7 × 10¹⁰ disintegrations per second",
+      "answer_ta": "வினாடிக்கு 3.7 × 10¹⁰ சிதைவுகள்",
+      "explanation_en": "1 Curie = 3.7 × 10¹⁰ Bq (disintegrations per second), originally based on the activity of 1 gram of Radium-226.",
+      "explanation_ta": "1 கியூரி = 3.7 × 10¹⁰ பெக்கொரல் (வினாடிக்கு நிகழும் சிதைவுகள்) ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q38",
+      "unit": 8,
+      "topic": "Atomic & Nuclear Physics / அணு மற்றும் அணுக்கரு",
+      "question_en": "Which of the following is an essential characteristic of nuclear forces?",
+      "question_ta": "பின்வருவனவற்றுள் அணுக்கரு விசையின் மிக முக்கியமான சிறப்பியல்பு எது?",
+      "options_en": {
+        "a": "They are long-range gravitational forces",
+        "b": "They are charge-dependent forces",
+        "c": "They are strong attractive, short-range, and charge-independent forces",
+        "d": "They obey inverse square law"
+      },
+      "options_ta": {
+        "a": "அவை நீண்ட தொலைவு ஈர்ப்பு விசைகள்",
+        "b": "அவை மின்னூட்டத்தை சார்ந்து செயல்படும்",
+        "c": "அவை வலிமையான, குறுகிய நெடுக்கை கொண்ட, மின்னூட்டம் சாரா விசைகள்",
+        "d": "அவை எதிர் இருமடி விதியை பின்பற்றும்"
+      },
+      "correct_option": "c",
+      "answer_en": "They are strong attractive, short-range, and charge-independent forces",
+      "answer_ta": "அவை வலிமையான, குறுகிய நெடுக்கை கொண்ட, மின்னூட்டம் சாரா விசைகள்",
+      "explanation_en": "Nuclear forces act equally between p-p, n-n, and p-n within ~1-2 fermi and are independent of electric charge.",
+      "explanation_ta": "அணுக்கரு விசைகள் இயற்கை விசைகளிலேயே மிக வலிமையானவை, மிகக் குறுகிய தொலைவில் (10⁻¹⁵ m) செயல்படுபவை மற்றும் மின்னூட்டத்தைச் சாராதவை."
+    },
+    {
+      "id": "PHY12-SET2-Q39",
+      "unit": 8,
+      "topic": "Atomic & Nuclear Physics / அணு மற்றும் அணுக்கரு",
+      "question_en": "The Paschen series lines in the hydrogen spectrum are produced when electrons jump from higher energy states to the level:",
+      "question_ta": "ஹைட்ரஜன் அணுவில் பாஷன் தொடர் உருவாக எலக்ட்ரான்கள் உயர் ஆற்றல் மட்டங்களிலிருந்து எந்த முதன்மை ஆற்றல் மட்டத்திற்கு தாவ வேண்டும்?",
+      "options_en": {
+        "a": "n = 1",
+        "b": "n = 2",
+        "c": "n = 3",
+        "d": "n = 4"
+      },
+      "options_ta": {
+        "a": "n = 1",
+        "b": "n = 2",
+        "c": "n = 3",
+        "d": "n = 4"
+      },
+      "correct_option": "c",
+      "answer_en": "n = 3",
+      "answer_ta": "n = 3",
+      "explanation_en": "In Paschen series, n₁ = 3 and n₂ = 4, 5, 6... emitting radiation in the infrared region.",
+      "explanation_ta": "பாஷன் தொடரில் எலக்ட்ரான் உயர் மட்டங்களிலிருந்து n₁ = 3 மட்டத்திற்குத் தாவுகிறது (அகச்சிவப்புப் பகுதி)."
+    },
+    {
+      "id": "PHY12-SET2-Q40",
+      "unit": 9,
+      "topic": "Semiconductor Electronics / குறைக்கடத்தி எலக்ட்ரானிக்ஸ்",
+      "question_en": "The forbidden energy band gap (E_g) for Silicon at room temperature is approximately:",
+      "question_ta": "அறை வெப்பநிலையில் சிலிகான் (Si) படிகத்தின் விலக்கப்பட்ட ஆற்றல் இடைவெளி (E_g):",
+      "options_en": {
+        "a": "0.7 eV",
+        "b": "1.1 eV",
+        "c": "3.0 eV",
+        "d": "0 eV"
+      },
+      "options_ta": {
+        "a": "0.7 eV",
+        "b": "1.1 eV",
+        "c": "3.0 eV",
+        "d": "0 eV"
+      },
+      "correct_option": "b",
+      "answer_en": "1.1 eV",
+      "answer_ta": "1.1 eV",
+      "explanation_en": "At room temperature (300 K), the forbidden band gap E_g is 1.1 eV for Silicon and 0.7 eV for Germanium.",
+      "explanation_ta": "சிலிகானின் ஆற்றல் பட்டை இடைவெளி 1.1 eV மற்றும் ஜெர்மானியத்திற்கு 0.7 eV ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q41",
+      "unit": 9,
+      "topic": "Semiconductor Electronics / குறைக்கடத்தி எலக்ட்ரானிக்ஸ்",
+      "question_en": "The depletion region in an unbiased p-n junction diode consists exclusively of:",
+      "question_ta": "மின்னழுத்தம் அளிக்கப்படாத p-n சந்தி டையோடின் இயக்கமில்லாப் பகுதியில் (Depletion region) காணப்படுபவை:",
+      "options_en": {
+        "a": "Mobile electrons only",
+        "b": "Mobile holes only",
+        "c": "Immobile positive and negative ions",
+        "d": "Neutral semiconductor atoms only"
+      },
+      "options_ta": {
+        "a": "நகரும் எலக்ட்ரான்கள் மட்டும்",
+        "b": "நகரும் துளைகள் மட்டும்",
+        "c": "இயக்கமற்ற நேர் மற்றும் எதிர் அயனிகள்",
+        "d": "நடுநிலை குறைக்கடத்தி அணுக்கள் மட்டும்"
+      },
+      "correct_option": "c",
+      "answer_en": "Immobile positive and negative ions",
+      "answer_ta": "இயக்கமற்ற நேர் மற்றும் எதிர் அயனிகள்",
+      "explanation_en": "Diffusion of carriers leaves uncompensated donor ions (+ve) on the n-side and acceptor ions (-ve) on the p-side, which are fixed in the crystal lattice.",
+      "explanation_ta": "இயக்கமில்லாப் பகுதியில் நகரும் மின்னூட்ட ஊர்திகள் இன்றி படிக அமைப்பில் நிலையான நேர் மற்றும் எதிர் அயனிகள் மட்டுமே இருக்கும்."
+    },
+    {
+      "id": "PHY12-SET2-Q42",
+      "unit": 9,
+      "topic": "Semiconductor Electronics / குறைக்கடத்தி எலக்ட்ரானிக்ஸ்",
+      "question_en": "When a p-n junction diode is forward biased, the width of the depletion layer:",
+      "question_ta": "p-n சந்தி டையோடு முன்னோக்கு சார்புடையதாக இருக்கும் போது, அதன் இயக்கமில்லாப் பகுதியின் தடிமன்:",
+      "options_en": {
+        "a": "Increases",
+        "b": "Decreases",
+        "c": "Remains unchanged",
+        "d": "Becomes infinite"
+      },
+      "options_ta": {
+        "a": "அதிகரிக்கும்",
+        "b": "குறையும்",
+        "c": "மாறாது",
+        "d": "முடிவிலியாகும்"
+      },
+      "correct_option": "b",
+      "answer_en": "Decreases",
+      "answer_ta": "குறையும்",
+      "explanation_en": "Forward bias opposes the internal built-in potential barrier, pushing majority carriers toward the junction and reducing the depletion width.",
+      "explanation_ta": "முன்னோக்குச் சார்பில் தரப்படும் மின்னழுத்தம் தடை மின்னழுத்தத்தை எதிர்ப்பதால் இயக்கமில்லாப் பகுதியின் தடிமன் குறைகிறது."
+    },
+    {
+      "id": "PHY12-SET2-Q43",
+      "unit": 9,
+      "topic": "Semiconductor Electronics / குறைக்கடத்தி எலக்ட்ரானிக்ஸ்",
+      "question_en": "An n-type semiconductor is obtained by doping pure silicon or germanium with:",
+      "question_ta": "தூய சிலிகான் அல்லது ஜெர்மானியத்துடன் எதை மாசூட்டுவதன் மூலம் n-வகை குறைக்கடத்தி பெறப்படுகிறது?",
+      "options_en": {
+        "a": "Trivalent impurity atoms (e.g., Boron)",
+        "b": "Pentavalent impurity atoms (e.g., Phosphorus)",
+        "c": "Tetravalent impurity atoms (e.g., Carbon)",
+        "d": "Monovalent alkali atoms"
+      },
+      "options_ta": {
+        "a": "மூவிணைதிறன் அணுக்கள் (எ.கா. போரான்)",
+        "b": "ஐந்திணைதிறன் அணுக்கள் (எ.கா. பாஸ்பரஸ்)",
+        "c": "நான்கிணைதிறன் அணுக்கள்",
+        "d": "ஒற்றையிணைதிறன் அணுக்கள்"
+      },
+      "correct_option": "b",
+      "answer_en": "Pentavalent impurity atoms (e.g., Phosphorus)",
+      "answer_ta": "ஐந்திணைதிறன் அணுக்கள் (எ.கா. பாஸ்பரஸ்)",
+      "explanation_en": "Pentavalent atoms (P, As, Sb) provide extra donor electrons, creating an n-type semiconductor where electrons are majority carriers.",
+      "explanation_ta": "ஐந்திணைதிறன் கொண்ட பாஸ்பரஸ், ஆர்சனிக் போன்ற அணுக்களைச் சேர்க்கும் போது n-வகை குறைக்கடத்தி உருவாகிறது."
+    },
+    {
+      "id": "PHY12-SET2-Q44",
+      "unit": 9,
+      "topic": "Semiconductor Electronics / குறைக்கடத்தி எலக்ட்ரானிக்ஸ்",
+      "question_en": "The relation between common base current gain (α) and common emitter current gain (β) of a transistor is:",
+      "question_ta": "டிரான்சிஸ்டரின் பொது அடிவாய் மின்னோட்டப் பெருக்கம் (α) மற்றும் பொது உமிழ்ப்பான் மின்னோட்டப் பெருக்கம் (β) இடையேயான தொடர்பு:",
+      "options_en": {
+        "a": "β = α / (1 - α)",
+        "b": "β = α / (1 + α)",
+        "c": "α = β / (1 - β)",
+        "d": "α · β = 1"
+      },
+      "options_ta": {
+        "a": "β = α / (1 - α)",
+        "b": "β = α / (1 + α)",
+        "c": "α = β / (1 - β)",
+        "d": "α · β = 1"
+      },
+      "correct_option": "a",
+      "answer_en": "β = α / (1 - α)",
+      "answer_ta": "β = α / (1 - α)",
+      "explanation_en": "Since I_E = I_B + I_C and α = I_C/I_E while β = I_C/I_B, dividing yields β = α / (1 - α).",
+      "explanation_ta": "மின்னோட்டப் பெருக்கங்களுக்கிடையேயான தொடர்பு β = α / (1 - α) மற்றும் α = β / (1 + β) ஆகும்."
+    },
+    {
+      "id": "PHY12-SET2-Q45",
+      "unit": 9,
+      "topic": "Semiconductor Electronics / குறைக்கடத்தி எலக்ட்ரானிக்ஸ்",
+      "question_en": "A photodiode used for detecting optical signals is always operated in:",
+      "question_ta": "ஒளி சமிக்ஞைகளைக் கண்டறிய பயன்படும் ஒளி டையோடு (Photodiode) எப்போதும் எவ்வகைச் சார்பில் இயக்கப்படுகிறது?",
+      "options_en": {
+        "a": "Forward bias",
+        "b": "Reverse bias",
+        "c": "Zero bias",
+        "d": "Avalanche breakdown"
+      },
+      "options_ta": {
+        "a": "முன்னோக்கு சார்பு",
+        "b": "பின்னோக்கு சார்பு",
+        "c": "சுழி சார்பு",
+        "d": "அவலாஞ்சி முறிவு"
+      },
+      "correct_option": "b",
+      "answer_en": "Reverse bias",
+      "answer_ta": "பின்னோக்கு சார்பு",
+      "explanation_en": "A photodiode is operated in reverse bias because the fractional change in reverse saturation current upon illumination is much larger and easily detectable.",
+      "explanation_ta": "ஒளி சமிக்ஞைகளைக் கண்டறிய ஒளி டையோடு பின்னோக்கு சார்பில் இயக்கப்படுகிறது, ஏனெனில் இதில் ஏற்படும் மின்னோட்ட மாற்றம் மிக எளிதில் உணரத்தக்கது."
+    }
+  ]
+}

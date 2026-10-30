@@ -32,7 +32,12 @@ import {
   Zap,
   FileCheck,
   BookOpen,
-  Award
+  Award,
+  CheckSquare,
+  Square,
+  Edit3,
+  Sliders,
+  Filter
 } from "lucide-react";
 import { ExamLifecycleStepper, calculateExamPhase } from "@/components/admin/ExamLifecycleStepper";
 
@@ -133,17 +138,28 @@ function COEAdminExamsContent() {
   const [selectedSubjectIds, setSelectedSubjectIds] = useState([]);
   const [perSubjectRows, setPerSubjectRows] = useState({});
 
-  // Question Bank & Random Swapper state (Phase 6)
+  // Question Bank & Random Swapper state (Phase 6 & 100-QB Pool Manager)
   const [randomSwapperExam, setRandomSwapperExam] = useState(null);
   const [randomPoolData, setRandomPoolData] = useState(null);
   const [loadingPool, setLoadingPool] = useState(false);
   const [swappingId, setSwappingId] = useState(null);
   const [regenerating, setRegenerating] = useState(false);
+  const [swapperTab, setSwapperTab] = useState("CURRENT"); // "CURRENT" | "BROWSE_BANK"
+  const [swapperPoolRange, setSwapperPoolRange] = useState("FIRST_50"); // "FIRST_50" | "SECOND_50" | "ALL" | "FIRST_25"
+  const [swapperCount, setSwapperCount] = useState(25);
+  const [swapperTotalMarks, setSwapperTotalMarks] = useState(25);
+  const [swapperSelectionMode, setSwapperSelectionMode] = useState("random"); // "random" | "sequential" | "policy"
+  const [swapperPolicyId, setSwapperPolicyId] = useState(1);
+  const [selectedBankCheckboxes, setSelectedBankCheckboxes] = useState(new Set());
+  const [editingQuestion, setEditingQuestion] = useState(null);
+  const [savingEdit, setSavingEdit] = useState(false);
 
-  // Reschedule Date & Time state
+  // Reschedule Date, Time, Duration & Marks state
   const [rescheduleModal, setRescheduleModal] = useState(null);
   const [rescheduleDate, setRescheduleDate] = useState("");
   const [rescheduleTime, setRescheduleTime] = useState("");
+  const [rescheduleDuration, setRescheduleDuration] = useState(45);
+  const [rescheduleTotalMarks, setRescheduleTotalMarks] = useState(25);
   const [rescheduleReason, setRescheduleReason] = useState("");
   const [rescheduleResultPolicy, setRescheduleResultPolicy] = useState("0"); // "0", "1", "5", "10", "custom", "date"
   const [rescheduleCustomMinutes, setRescheduleCustomMinutes] = useState(5);
@@ -298,6 +314,8 @@ function COEAdminExamsContent() {
     const d = new Date(exam.examDate);
     setRescheduleDate(d.toISOString().slice(0, 10));
     setRescheduleTime(d.toTimeString().slice(0, 5));
+    setRescheduleDuration(exam.durationMinutes || 45);
+    setRescheduleTotalMarks(exam.totalMarks || 25);
     setRescheduleReason("");
     setRescheduleAuditLogs([]);
 
@@ -348,9 +366,11 @@ function COEAdminExamsContent() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           examDate: combinedIso,
-          reason: rescheduleReason || "Scheduled date modified by Controller of Examinations",
+          reason: rescheduleReason || "Scheduled date, duration & marks modified by Controller of Examinations",
           resultPublishDelayMinutes: delayMinutes,
           resultPublishDate: targetPublishDate,
+          totalMarks: parseInt(rescheduleTotalMarks, 10) || rescheduleModal.totalMarks || 25,
+          durationMinutes: parseInt(rescheduleDuration, 10) || rescheduleModal.durationMinutes || 45,
         }),
       });
       const data = await res.json();
@@ -371,6 +391,12 @@ function COEAdminExamsContent() {
   const openRandomSwapper = async (exam) => {
     setRandomSwapperExam(exam);
     setLoadingPool(true);
+    setEditingQuestion(null);
+    setSelectedBankCheckboxes(new Set());
+    setSwapperTab("CURRENT");
+    const initialCount = exam._count?.questions || 25;
+    setSwapperCount(initialCount);
+    setSwapperTotalMarks(exam.totalMarks || initialCount);
     try {
       const res = await fetch(`/api/admin/exams/${exam.id}/random-questions`);
       const data = await res.json();
@@ -386,28 +412,141 @@ function COEAdminExamsContent() {
     }
   };
 
-  const handleRegenerateRandomSelection = async () => {
+  const handleGenerateFromPool = async (overrideParams = {}) => {
     if (!randomSwapperExam || regenerating) return;
     setRegenerating(true);
     try {
+      const payload = {
+        action: "regenerate",
+        poolRange: overrideParams.poolRange || swapperPoolRange,
+        count: overrideParams.count || swapperCount,
+        totalMarks: overrideParams.totalMarks || swapperTotalMarks || swapperCount,
+        selectionMode: overrideParams.selectionMode || swapperSelectionMode,
+        policyId: overrideParams.policyId || swapperPolicyId,
+        selectedBankItemIds: overrideParams.selectedBankItemIds || Array.from(selectedBankCheckboxes),
+      };
+
       const res = await fetch(`/api/admin/exams/${randomSwapperExam.id}/random-questions`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "regenerate", count: 10 }),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
       if (res.ok) {
-        showMsg("Random questions regenerated from Question Bank without duplicates!");
+        showMsg(data.message || "Questions successfully generated from pool and applied!");
         openRandomSwapper(randomSwapperExam);
         fetchExams();
       } else {
-        alert(data.error || "Failed to regenerate questions.");
+        alert(data.error || "Failed to generate questions from pool.");
       }
     } catch {
-      alert("Network error regenerating questions.");
+      alert("Network error generating questions.");
     } finally {
       setRegenerating(false);
     }
+  };
+
+  const startEditQuestion = (q) => {
+    let optA = "", optB = "", optC = "", optD = "";
+    if (Array.isArray(q.options)) {
+      q.options.forEach((opt) => {
+        const id = String(opt.id || "").toUpperCase();
+        if (id === "A") optA = opt.text || "";
+        if (id === "B") optB = opt.text || "";
+        if (id === "C") optC = opt.text || "";
+        if (id === "D") optD = opt.text || "";
+      });
+    } else if (q.options && typeof q.options === "object") {
+      optA = q.options.A || q.options.a || "";
+      optB = q.options.B || q.options.b || "";
+      optC = q.options.C || q.options.c || "";
+      optD = q.options.D || q.options.d || "";
+    }
+
+    setEditingQuestion({
+      id: q.id,
+      questionNumber: q.questionNumber,
+      questionText: q.questionText,
+      marks: q.marks || 2,
+      optA,
+      optB,
+      optC,
+      optD,
+      correctAnswer: q.correctAnswer || "A",
+      explanation: q.explanation || "",
+      difficulty: q.difficulty || "MEDIUM",
+    });
+  };
+
+  const handleSaveQuestionEdit = async (e) => {
+    if (e) e.preventDefault();
+    if (!editingQuestion || !randomSwapperExam || savingEdit) return;
+    setSavingEdit(true);
+    try {
+      const optionsArr = [
+        { id: "A", text: editingQuestion.optA },
+        { id: "B", text: editingQuestion.optB },
+        { id: "C", text: editingQuestion.optC },
+        { id: "D", text: editingQuestion.optD },
+      ];
+      const payload = {
+        action: "edit_question",
+        questionId: editingQuestion.id,
+        questionText: editingQuestion.questionText,
+        marks: editingQuestion.marks,
+        options: optionsArr,
+        correctAnswer: editingQuestion.correctAnswer,
+        explanation: editingQuestion.explanation,
+        difficulty: editingQuestion.difficulty,
+      };
+
+      const res = await fetch(`/api/admin/exams/${randomSwapperExam.id}/random-questions`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        showMsg("Question updated successfully!");
+        setEditingQuestion(null);
+        openRandomSwapper(randomSwapperExam);
+      } else {
+        alert(data.error || "Failed to update question.");
+      }
+    } catch {
+      alert("Network error updating question.");
+    } finally {
+      setSavingEdit(false);
+    }
+  };
+
+  const toggleBankCheckbox = (id) => {
+    setSelectedBankCheckboxes((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const selectBankPreset = (preset) => {
+    if (!randomPoolData?.bankItems) return;
+    const items = randomPoolData.bankItems;
+    const next = new Set();
+    if (preset === "FIRST_25") {
+      items.filter((b) => b.questionNumber <= 25).forEach((b) => next.add(b.id));
+    } else if (preset === "FIRST_50") {
+      items.filter((b) => b.questionNumber <= 50).forEach((b) => next.add(b.id));
+    } else if (preset === "SECOND_50") {
+      items.filter((b) => b.questionNumber > 50).forEach((b) => next.add(b.id));
+    } else if (preset === "ALL") {
+      items.forEach((b) => next.add(b.id));
+    }
+    setSelectedBankCheckboxes(next);
+  };
+
+  const handleRegenerateRandomSelection = async () => {
+    handleGenerateFromPool();
   };
 
   const handleSwapQuestion = async (qId) => {
@@ -712,6 +851,16 @@ function COEAdminExamsContent() {
         </div>
 
         <div className="flex items-center gap-2">
+          <Link href="/coe-admin/live-monitoring">
+            <Button
+              size="sm"
+              variant="outline"
+              className="gap-1.5 text-xs border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10 font-bold"
+            >
+              <Radio className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
+              Live Test-Takers
+            </Button>
+          </Link>
           <Button
             size="sm"
             onClick={() => setShowCreateModal(true)}
@@ -1267,10 +1416,11 @@ function COEAdminExamsContent() {
         </div>
       )}
 
-      {/* Random Question Bank Pool & Swapper Modal (Phase 6) */}
+      {/* Random Question Bank Pool & Swapper Modal (Phase 6 & 100-QB Pool Manager) */}
       {randomSwapperExam && (
-        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
-          <Card className="max-w-3xl w-full p-5 sm:p-6 border-emerald-500/30 animate-in fade-in-50 zoom-in-95 my-auto max-h-[92vh] flex flex-col">
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+          <Card className="max-w-4xl w-full p-5 sm:p-6 border-emerald-500/30 animate-in fade-in-50 zoom-in-95 my-auto max-h-[94vh] flex flex-col shadow-2xl">
+            {/* Modal Header */}
             <div className="flex items-center justify-between pb-3 mb-3 border-b border-border flex-shrink-0">
               <div>
                 <h3 className="text-base sm:text-lg font-black text-foreground flex items-center gap-2">
@@ -1278,96 +1428,590 @@ function COEAdminExamsContent() {
                   Question Bank &amp; Random Swapper
                 </h3>
                 <p className="text-[11px] text-muted-foreground mt-0.5">
-                  Exam: <strong>{randomSwapperExam.subject?.name}</strong> ({randomSwapperExam.subject?.code}) · 100-Question Pool
+                  Exam: <strong className="text-foreground">{randomSwapperExam.subject?.name}</strong> ({randomSwapperExam.subject?.code}) · 100-Question Pool · Class {randomSwapperExam.prepClass}
                 </p>
               </div>
-              <button
-                type="button"
-                onClick={() => setRandomSwapperExam(null)}
-                className="p-1 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-2">
+                <Link
+                  href={`/coe-admin/exam-setter?examId=${randomSwapperExam.id}&sub=${randomSwapperExam.subject?.code || ""}&date=${safeISODate(randomSwapperExam.examDate)}&time=${safeFormatTime(randomSwapperExam.examDate, { hour: "2-digit", minute: "2-digit", hour12: false })}&marks=${randomSwapperExam.totalMarks || 100}&count=${randomSwapperExam._count?.questions || 25}`}
+                >
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="text-xs py-1 px-2.5 text-violet-300 border-violet-500/30 hover:bg-violet-500/15 gap-1.5"
+                    title="Open live questions in AI JSON Exam Setter"
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                    Open in JSON Setter
+                  </Button>
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setRandomSwapperExam(null)}
+                  className="p-1 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
             {loadingPool ? (
-              <div className="py-12 text-center text-xs text-muted-foreground">
-                <Loader2 className="w-6 h-6 animate-spin mx-auto mb-2 text-emerald-400" />
-                Loading question bank pool...
+              <div className="py-16 text-center text-xs text-muted-foreground">
+                <Loader2 className="w-7 h-7 animate-spin mx-auto mb-3 text-emerald-400" />
+                Loading question bank pool and active questions...
               </div>
             ) : (
               <div className="space-y-4 overflow-y-auto pr-1 flex-1 text-xs">
-                {/* Stats & Action Bar */}
-                <div className="p-3.5 rounded-xl bg-secondary/50 border border-border flex flex-wrap items-center justify-between gap-3">
-                  <div>
-                    <span className="font-bold text-foreground block">
-                      Currently Selected: {randomPoolData?.currentQuestions?.length || 0} Questions
+                {/* Top Generator Control Ribbon */}
+                <div className="p-4 rounded-xl bg-secondary/40 border border-emerald-500/20 space-y-3">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <span className="font-bold text-foreground text-xs flex items-center gap-1.5">
+                      <Sliders className="w-4 h-4 text-emerald-400" />
+                      Question Bank Selector &amp; Policy Generator:
                     </span>
-                    <span className="text-[11px] text-muted-foreground">
-                      Total 100-Question Bank Pool: {randomPoolData?.bankTotal || 0} Questions Available
+                    <span className="text-[11px] text-muted-foreground font-mono">
+                      Active: <strong className="text-emerald-300">{randomPoolData?.currentQuestions?.length || 0} Qs</strong> / Bank Pool: <strong className="text-sky-300">{randomPoolData?.bankTotal || 0} Qs</strong>
                     </span>
                   </div>
 
-                  <Button
-                    type="button"
-                    variant="primary"
-                    size="sm"
-                    onClick={handleRegenerateRandomSelection}
-                    disabled={regenerating}
-                    className="gap-1.5 font-bold text-xs bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-600/25"
-                  >
-                    {regenerating ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <RefreshCw className="w-3.5 h-3.5" />}
-                    Regenerate Random Selection (No Duplicates)
-                  </Button>
-                </div>
-
-                {/* List of current questions with Swap controls */}
-                <div className="space-y-2.5">
-                  <span className="font-bold text-foreground block">Active Questions in This Exam:</span>
-                  {randomPoolData?.currentQuestions?.map((q) => (
-                    <div key={q.id} className="p-3.5 rounded-xl bg-card border border-border space-y-2">
-                      <div className="flex items-start justify-between gap-3">
-                        <span className="font-bold text-foreground flex-1">
-                          Q{q.questionNumber}. {q.questionText}
-                        </span>
-                        <Button
+                  {/* Range and Count Selector Controls */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    {/* 1. Pool Range */}
+                    <div>
+                      <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">
+                        1. Select Pool Range (From 100 QB)
+                      </label>
+                      <div className="grid grid-cols-2 gap-1.5">
+                        <button
                           type="button"
-                          variant="outline"
-                          size="sm"
-                          onClick={() => handleSwapQuestion(q.id)}
-                          disabled={swappingId === q.id}
-                          className="text-[11px] py-0.5 px-2.5 border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/15 gap-1 font-semibold flex-shrink-0"
-                          title="Replace this question with another unused question from the bank"
+                          onClick={() => setSwapperPoolRange("FIRST_50")}
+                          className={`px-2 py-1.5 rounded-lg border text-[11px] font-semibold transition-all ${
+                            swapperPoolRange === "FIRST_50"
+                              ? "bg-emerald-500/20 border-emerald-500 text-emerald-300 font-bold shadow-sm"
+                              : "border-border bg-card/60 text-muted-foreground hover:text-foreground"
+                          }`}
                         >
-                          {swappingId === q.id ? <Loader2 className="w-3 h-3 animate-spin" /> : <RefreshCw className="w-3 h-3 text-emerald-400" />}
-                          Swap Question
-                        </Button>
+                          First 50 (Set A / Q1-50)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setSwapperPoolRange("SECOND_50")}
+                          className={`px-2 py-1.5 rounded-lg border text-[11px] font-semibold transition-all ${
+                            swapperPoolRange === "SECOND_50"
+                              ? "bg-emerald-500/20 border-emerald-500 text-emerald-300 font-bold shadow-sm"
+                              : "border-border bg-card/60 text-muted-foreground hover:text-foreground"
+                          }`}
+                        >
+                          Remaining 50 (Set B / Q51-100)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setSwapperPoolRange("FIRST_25")}
+                          className={`px-2 py-1.5 rounded-lg border text-[11px] font-semibold transition-all ${
+                            swapperPoolRange === "FIRST_25"
+                              ? "bg-emerald-500/20 border-emerald-500 text-emerald-300 font-bold shadow-sm"
+                              : "border-border bg-card/60 text-muted-foreground hover:text-foreground"
+                          }`}
+                        >
+                          First 25 (Q1-25)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setSwapperPoolRange("ALL")}
+                          className={`px-2 py-1.5 rounded-lg border text-[11px] font-semibold transition-all ${
+                            swapperPoolRange === "ALL"
+                              ? "bg-emerald-500/20 border-emerald-500 text-emerald-300 font-bold shadow-sm"
+                              : "border-border bg-card/60 text-muted-foreground hover:text-foreground"
+                          }`}
+                        >
+                          All 100 Questions Pool
+                        </button>
                       </div>
+                    </div>
 
-                      {q.options && (
-                        <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground pt-1">
-                          {Array.isArray(q.options)
-                            ? q.options.map((opt) => (
-                                <div key={opt.id} className={`px-2 py-1 rounded-md border ${
-                                  opt.id === q.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border bg-secondary/30"
-                                }`}>
-                                  <span className="font-bold font-mono mr-1.5">{opt.id}:</span>
-                                  <span>{opt.text}</span>
-                                </div>
-                              ))
-                            : Object.keys(q.options).map((key) => (
-                                <div key={key} className={`px-2 py-1 rounded-md border ${
-                                  key === q.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border bg-secondary/30"
-                                }`}>
-                                  <span className="font-bold font-mono mr-1.5">{key}:</span>
-                                  <span>{q.options[key]}</span>
-                                </div>
-                              ))}
+                    {/* 2. Count & Marks Presets */}
+                    <div>
+                      <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">
+                        2. Presets (Questions &amp; Total Marks)
+                      </label>
+                      <div className="grid grid-cols-2 gap-1.5">
+                        {[
+                          { q: 10, m: 10, label: "10 Qs (10 Marks)" },
+                          { q: 25, m: 25, label: "25 Qs (25 Marks)" },
+                          { q: 50, m: 50, label: "50 Qs (50 Marks)" },
+                          { q: 15, m: 15, label: "15 Qs (15 Marks)" },
+                        ].map((preset) => (
+                          <button
+                            key={preset.q}
+                            type="button"
+                            onClick={() => {
+                              setSwapperCount(preset.q);
+                              setSwapperTotalMarks(preset.m);
+                            }}
+                            className={`py-1.5 px-2 rounded-lg border text-xs font-mono font-bold transition-all text-center ${
+                              swapperCount === preset.q && swapperTotalMarks === preset.m
+                                ? "bg-amber-500/20 border-amber-500 text-amber-300 shadow-sm"
+                                : "border-border bg-card/60 text-muted-foreground hover:text-foreground"
+                            }`}
+                          >
+                            {preset.label}
+                          </button>
+                        ))}
+                      </div>
+                      <div className="mt-2 flex items-center justify-between text-[11px] text-muted-foreground bg-secondary/40 p-1.5 rounded-lg border border-border/50">
+                        <span>Selected: <strong className="text-amber-300">{swapperCount} Qs</strong></span>
+                        <div className="flex items-center gap-1 font-mono">
+                          <span>Max Marks:</span>
+                          <input
+                            type="number"
+                            min="1"
+                            max="200"
+                            value={swapperTotalMarks}
+                            onChange={(e) => setSwapperTotalMarks(parseInt(e.target.value, 10) || swapperCount)}
+                            className="w-14 px-1.5 py-0.5 rounded bg-secondary border border-border text-amber-300 font-bold text-xs text-center"
+                          />
                         </div>
+                      </div>
+                    </div>
+
+                    {/* 3. Selection Method & Policies */}
+                    <div>
+                      <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">
+                        3. Method &amp; Policy Strategy
+                      </label>
+                      <select
+                        value={swapperSelectionMode}
+                        onChange={(e) => setSwapperSelectionMode(e.target.value)}
+                        className="input-field text-xs mb-1.5"
+                      >
+                        <option value="random">Any {swapperCount} Random (Non-Duplicate)</option>
+                        <option value="sequential">Sequential (Order 1..{swapperCount})</option>
+                        <option value="policy">10 TN Policies Sorted/Balanced</option>
+                      </select>
+
+                      {swapperSelectionMode === "policy" && (
+                        <select
+                          value={swapperPolicyId}
+                          onChange={(e) => setSwapperPolicyId(Number(e.target.value))}
+                          className="input-field text-[11px] border-violet-500/40 text-violet-300"
+                        >
+                          <option value={1}>Policy 1: Easy-Only (Recall &amp; Definitions)</option>
+                          <option value={2}>Policy 2: Moderate Standard (Application)</option>
+                          <option value={3}>Policy 3: Challenging Paper (Hard Problems)</option>
+                          <option value={4}>Policy 4: Real-Life Application</option>
+                          <option value={5}>Policy 5: Diagram &amp; Visual Representation</option>
+                          <option value={6}>Policy 6: Balanced Blueprint (30% Easy, 50% Med, 20% Hard)</option>
+                          <option value={7}>Policy 7: Numerical &amp; Derivations</option>
+                          <option value={8}>Policy 8: Case-Based Assertion-Reason</option>
+                          <option value={9}>Policy 9: Fast-Paced Speed Test</option>
+                          <option value={10}>Policy 10: Remedial &amp; Confidence Booster</option>
+                        </select>
                       )}
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Action Buttons Row */}
+                  <div className="flex items-center justify-between pt-2 border-t border-border flex-wrap gap-2">
+                    <span className="text-[11px] text-muted-foreground">
+                      Will replace active questions with <strong>{swapperCount} questions</strong> from <strong>{swapperPoolRange}</strong> ({swapperSelectionMode}).
+                    </span>
+                    <Button
+                      type="button"
+                      variant="primary"
+                      size="sm"
+                      onClick={() => handleGenerateFromPool()}
+                      disabled={regenerating}
+                      className="gap-1.5 font-bold text-xs bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-600/25 py-1.5 px-4"
+                    >
+                      {regenerating ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <RefreshCw className="w-3.5 h-3.5" />}
+                      Generate &amp; Apply {swapperCount} Questions to Exam
+                    </Button>
+                  </div>
                 </div>
+
+                {/* Sub-Navigation Tabs */}
+                <div className="flex items-center gap-2 border-b border-border pb-2">
+                  <button
+                    type="button"
+                    onClick={() => { setSwapperTab("CURRENT"); setEditingQuestion(null); }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                      swapperTab === "CURRENT"
+                        ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    <FileText className="w-3.5 h-3.5" />
+                    Active Exam Questions ({randomPoolData?.currentQuestions?.length || 0})
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => { setSwapperTab("BROWSE_BANK"); setEditingQuestion(null); }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                      swapperTab === "BROWSE_BANK"
+                        ? "bg-sky-500/20 text-sky-300 border border-sky-500/40"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    <BookOpen className="w-3.5 h-3.5" />
+                    Browse 100-QB Pool ({randomPoolData?.bankTotal || 0}) [Multi-Select]
+                  </button>
+                  {editingQuestion && (
+                    <span className="badge badge-amber text-[10px] ml-auto">
+                      Editing Q#{editingQuestion.questionNumber}
+                    </span>
+                  )}
+                </div>
+
+                {/* Inline Question Editor Card (when active) */}
+                {editingQuestion && (
+                  <form onSubmit={handleSaveQuestionEdit} className="p-4 rounded-xl bg-card border border-amber-500/40 space-y-3 animate-in fade-in-50">
+                    <div className="flex items-center justify-between border-b border-border pb-2">
+                      <span className="font-bold text-amber-300 text-xs flex items-center gap-1.5">
+                        <Edit3 className="w-4 h-4 text-amber-400" />
+                        Edit Question #{editingQuestion.questionNumber}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setEditingQuestion(null)}
+                        className="text-xs text-muted-foreground hover:text-foreground"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+
+                    <div>
+                      <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">Question Text</label>
+                      <textarea
+                        rows={2}
+                        value={editingQuestion.questionText}
+                        onChange={(e) => setEditingQuestion((q) => ({ ...q, questionText: e.target.value }))}
+                        className="input-field text-xs font-medium"
+                        required
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2 text-xs">
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">Option A</label>
+                        <input
+                          type="text"
+                          value={editingQuestion.optA}
+                          onChange={(e) => setEditingQuestion((q) => ({ ...q, optA: e.target.value }))}
+                          className="input-field text-xs"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">Option B</label>
+                        <input
+                          type="text"
+                          value={editingQuestion.optB}
+                          onChange={(e) => setEditingQuestion((q) => ({ ...q, optB: e.target.value }))}
+                          className="input-field text-xs"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">Option C</label>
+                        <input
+                          type="text"
+                          value={editingQuestion.optC}
+                          onChange={(e) => setEditingQuestion((q) => ({ ...q, optC: e.target.value }))}
+                          className="input-field text-xs"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">Option D</label>
+                        <input
+                          type="text"
+                          value={editingQuestion.optD}
+                          onChange={(e) => setEditingQuestion((q) => ({ ...q, optD: e.target.value }))}
+                          className="input-field text-xs"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-3">
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">Correct Answer</label>
+                        <select
+                          value={editingQuestion.correctAnswer}
+                          onChange={(e) => setEditingQuestion((q) => ({ ...q, correctAnswer: e.target.value }))}
+                          className="input-field text-xs font-bold"
+                        >
+                          <option value="A">A</option>
+                          <option value="B">B</option>
+                          <option value="C">C</option>
+                          <option value="D">D</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">Marks</label>
+                        <input
+                          type="number"
+                          value={editingQuestion.marks}
+                          onChange={(e) => setEditingQuestion((q) => ({ ...q, marks: parseInt(e.target.value, 10) || 2 }))}
+                          className="input-field text-xs"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">Difficulty</label>
+                        <select
+                          value={editingQuestion.difficulty}
+                          onChange={(e) => setEditingQuestion((q) => ({ ...q, difficulty: e.target.value }))}
+                          className="input-field text-xs"
+                        >
+                          <option value="EASY">EASY</option>
+                          <option value="MEDIUM">MEDIUM</option>
+                          <option value="HARD">HARD</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="text-[10px] uppercase font-bold text-muted-foreground block mb-1">Explanation</label>
+                      <input
+                        type="text"
+                        value={editingQuestion.explanation}
+                        onChange={(e) => setEditingQuestion((q) => ({ ...q, explanation: e.target.value }))}
+                        className="input-field text-xs"
+                        placeholder="Detailed solution or syllabus rationale"
+                      />
+                    </div>
+
+                    <div className="flex justify-end gap-2 pt-2 border-t border-border">
+                      <Button
+                        type="button"
+                        variant="secondary"
+                        size="sm"
+                        onClick={() => setEditingQuestion(null)}
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        type="submit"
+                        variant="primary"
+                        size="sm"
+                        disabled={savingEdit}
+                        className="bg-amber-600 hover:bg-amber-500 font-bold"
+                      >
+                        {savingEdit ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <CheckCircle2 className="w-3.5 h-3.5" />}
+                        Save Question Edits
+                      </Button>
+                    </div>
+                  </form>
+                )}
+
+                {/* TAB 1: Active Exam Questions */}
+                {swapperTab === "CURRENT" && (
+                  <div className="space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-foreground block">
+                        Currently Configured Questions ({randomPoolData?.currentQuestions?.length || 0}):
+                      </span>
+                    </div>
+
+                    {randomPoolData?.currentQuestions?.map((q) => (
+                      <div key={q.id} className="p-3.5 rounded-xl bg-card border border-border space-y-2 hover:border-emerald-500/30 transition-colors">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className="font-mono text-emerald-400 font-bold">Q{q.questionNumber}.</span>
+                              <Badge variant={q.difficulty === "HARD" ? "destructive" : q.difficulty === "EASY" ? "success" : "purple"}>
+                                {q.difficulty || "MEDIUM"}
+                              </Badge>
+                              <span className="text-[10px] text-muted-foreground font-mono">{q.marks} Marks</span>
+                            </div>
+                            <p className="font-medium text-foreground text-xs leading-relaxed">
+                              {q.questionText}
+                            </p>
+                          </div>
+
+                          <div className="flex items-center gap-1.5 flex-shrink-0">
+                            <Button
+                              type="button"
+                              variant="outline"
+                              size="sm"
+                              onClick={() => startEditQuestion(q)}
+                              className="text-[11px] py-0.5 px-2.5 border-amber-500/30 text-amber-300 hover:bg-amber-500/15 gap-1 font-semibold"
+                              title="Edit this question inline"
+                            >
+                              <Edit3 className="w-3 h-3 text-amber-400" />
+                              Edit
+                            </Button>
+                            <Button
+                              type="button"
+                              variant="outline"
+                              size="sm"
+                              onClick={() => handleSwapQuestion(q.id)}
+                              disabled={swappingId === q.id}
+                              className="text-[11px] py-0.5 px-2.5 border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/15 gap-1 font-semibold"
+                              title="Replace this question with another unused question from the bank"
+                            >
+                              {swappingId === q.id ? <Loader2 className="w-3 h-3 animate-spin" /> : <RefreshCw className="w-3 h-3 text-emerald-400" />}
+                              Swap
+                            </Button>
+                          </div>
+                        </div>
+
+                        {q.options && (
+                          <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground pt-1">
+                            {Array.isArray(q.options)
+                              ? q.options.map((opt) => (
+                                  <div key={opt.id} className={`px-2 py-1 rounded-md border ${
+                                    opt.id === q.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border bg-secondary/30"
+                                  }`}>
+                                    <span className="font-bold font-mono mr-1.5">{opt.id}:</span>
+                                    <span>{opt.text}</span>
+                                  </div>
+                                ))
+                              : Object.keys(q.options).map((key) => (
+                                  <div key={key} className={`px-2 py-1 rounded-md border ${
+                                    key === q.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border bg-secondary/30"
+                                  }`}>
+                                    <span className="font-bold font-mono mr-1.5">{key}:</span>
+                                    <span>{q.options[key]}</span>
+                                  </div>
+                                ))}
+                          </div>
+                        )}
+
+                        {q.explanation && (
+                          <div className="text-[10px] text-muted-foreground bg-secondary/30 p-2 rounded-lg font-mono">
+                            <span className="font-bold text-slate-400 mr-1">Explanation:</span>
+                            {q.explanation}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* TAB 2: Browse 100-QB Pool with Multi-Select Checkboxes */}
+                {swapperTab === "BROWSE_BANK" && (
+                  <div className="space-y-3">
+                    {/* Quick selection toolbar */}
+                    <div className="p-3 rounded-xl bg-card border border-border flex items-center justify-between flex-wrap gap-2">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <span className="text-[11px] font-bold text-muted-foreground mr-1">Quick Select:</span>
+                        <button
+                          type="button"
+                          onClick={() => selectBankPreset("FIRST_25")}
+                          className="px-2 py-1 rounded border border-border hover:bg-secondary text-[11px] font-semibold text-foreground"
+                        >
+                          First 25
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => selectBankPreset("FIRST_50")}
+                          className="px-2 py-1 rounded border border-emerald-500/30 hover:bg-emerald-500/10 text-[11px] font-semibold text-emerald-300"
+                        >
+                          First 50 (Set A)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => selectBankPreset("SECOND_50")}
+                          className="px-2 py-1 rounded border border-sky-500/30 hover:bg-sky-500/10 text-[11px] font-semibold text-sky-300"
+                        >
+                          Remaining 50 (Set B)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => selectBankPreset("ALL")}
+                          className="px-2 py-1 rounded border border-border hover:bg-secondary text-[11px] font-semibold text-foreground"
+                        >
+                          All 100
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setSelectedBankCheckboxes(new Set())}
+                          className="px-2 py-1 rounded border border-rose-500/30 hover:bg-rose-500/10 text-[11px] font-semibold text-rose-300"
+                        >
+                          Clear
+                        </button>
+                      </div>
+
+                      <Button
+                        type="button"
+                        variant="primary"
+                        size="sm"
+                        disabled={selectedBankCheckboxes.size === 0 || regenerating}
+                        onClick={() => handleGenerateFromPool({ selectionMode: "custom", count: selectedBankCheckboxes.size })}
+                        className="bg-sky-600 hover:bg-sky-500 font-bold gap-1 text-xs"
+                      >
+                        <CheckSquare className="w-3.5 h-3.5" />
+                        Apply Selected ({selectedBankCheckboxes.size} Qs) to Exam
+                      </Button>
+                    </div>
+
+                    {/* Bank Items List */}
+                    <div className="space-y-2">
+                      {randomPoolData?.bankItems?.map((b) => {
+                        const isChecked = selectedBankCheckboxes.has(b.id);
+                        return (
+                          <div
+                            key={b.id}
+                            onClick={() => toggleBankCheckbox(b.id)}
+                            className={`p-3 rounded-xl border transition-all cursor-pointer ${
+                              isChecked
+                                ? "bg-sky-500/10 border-sky-500/50"
+                                : "bg-card border-border hover:border-slate-600"
+                            }`}
+                          >
+                            <div className="flex items-start gap-3">
+                              <button
+                                type="button"
+                                className="mt-0.5 text-sky-400"
+                                onClick={(e) => { e.stopPropagation(); toggleBankCheckbox(b.id); }}
+                              >
+                                {isChecked ? <CheckSquare className="w-4 h-4 text-sky-400" /> : <Square className="w-4 h-4 text-muted-foreground" />}
+                              </button>
+                              <div className="flex-1 space-y-1">
+                                <div className="flex items-center gap-2">
+                                  <span className="font-mono font-bold text-sky-300">#Q{b.questionNumber}</span>
+                                  <Badge variant={b.difficulty === "HARD" ? "destructive" : b.difficulty === "EASY" ? "success" : "purple"}>
+                                    {b.difficulty || "MEDIUM"}
+                                  </Badge>
+                                  {b.isSelected && (
+                                    <span className="badge badge-emerald text-[9px] py-0">In Current Exam</span>
+                                  )}
+                                  {b.topic && (
+                                    <span className="text-[10px] text-muted-foreground font-medium">{b.topic}</span>
+                                  )}
+                                </div>
+                                <p className="text-xs text-foreground font-medium">{b.questionText}</p>
+
+                                {b.options && (
+                                  <div className="grid grid-cols-2 gap-1.5 pt-1 text-[11px] text-muted-foreground">
+                                    {Array.isArray(b.options)
+                                      ? b.options.map((opt) => (
+                                          <div key={opt.id} className={`px-2 py-0.5 rounded border text-[10px] ${
+                                            opt.id === b.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border"
+                                          }`}>
+                                            <span className="font-bold mr-1">{opt.id}:</span>
+                                            <span>{opt.text}</span>
+                                          </div>
+                                        ))
+                                      : Object.keys(b.options).map((key) => (
+                                          <div key={key} className={`px-2 py-0.5 rounded border text-[10px] ${
+                                            key === b.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border"
+                                          }`}>
+                                            <span className="font-bold mr-1">{key}:</span>
+                                            <span>{b.options[key]}</span>
+                                          </div>
+                                        ))}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </Card>
@@ -2103,6 +2747,69 @@ function COEAdminExamsContent() {
                     onChange={(e) => setRescheduleTime(e.target.value)}
                     className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground font-mono text-xs"
                   />
+                </div>
+              </div>
+
+              {/* Duration and Total Marks Settings */}
+              <div className="grid grid-cols-2 gap-3 p-3 rounded-xl bg-secondary/30 border border-border">
+                <div>
+                  <label className="block text-muted-foreground font-semibold mb-1">
+                    Duration (Minutes)
+                  </label>
+                  <input
+                    type="number"
+                    min="5"
+                    max="360"
+                    value={rescheduleDuration}
+                    onChange={(e) => setRescheduleDuration(e.target.value)}
+                    className="w-full px-3 py-1.5 rounded-lg bg-secondary border border-border text-foreground font-mono text-xs"
+                  />
+                  <div className="flex gap-1 mt-1.5">
+                    {[30, 45, 60, 90].map((mins) => (
+                      <button
+                        key={mins}
+                        type="button"
+                        onClick={() => setRescheduleDuration(mins)}
+                        className={`px-1.5 py-0.5 rounded text-[10px] font-mono border ${
+                          Number(rescheduleDuration) === mins
+                            ? "bg-amber-500/20 border-amber-500 text-amber-300 font-bold"
+                            : "border-border text-muted-foreground hover:text-foreground"
+                        }`}
+                      >
+                        {mins}m
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-muted-foreground font-semibold mb-1">
+                    Maximum Total Marks
+                  </label>
+                  <input
+                    type="number"
+                    min="1"
+                    max="200"
+                    value={rescheduleTotalMarks}
+                    onChange={(e) => setRescheduleTotalMarks(e.target.value)}
+                    className="w-full px-3 py-1.5 rounded-lg bg-secondary border border-border text-foreground font-mono text-xs"
+                  />
+                  <div className="flex gap-1 mt-1.5">
+                    {[10, 25, 50, 100].map((m) => (
+                      <button
+                        key={m}
+                        type="button"
+                        onClick={() => setRescheduleTotalMarks(m)}
+                        className={`px-1.5 py-0.5 rounded text-[10px] font-mono border ${
+                          Number(rescheduleTotalMarks) === m
+                            ? "bg-emerald-500/20 border-emerald-500 text-emerald-300 font-bold"
+                            : "border-border text-muted-foreground hover:text-foreground"
+                        }`}
+                      >
+                        {m}M
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
 

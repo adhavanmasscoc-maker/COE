@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense, useMemo } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { StatCard } from "@/components/ui/Card";
+import { sortExams } from "@/lib/config/engine.config";
+import { sortExamsByUpcomingPriority } from "@/lib/algorithms/examSorting";
 import {
   GraduationCap,
   BookOpen,
@@ -78,6 +80,18 @@ function SubjectCard({ sub, isPreview, previewRoll }) {
   );
 }
 
+function formatCountdown(targetMs, nowMs) {
+  const diffSecs = Math.max(0, Math.floor((targetMs - nowMs) / 1000));
+  if (diffSecs <= 0) return null;
+  const days = Math.floor(diffSecs / 86400);
+  const hours = Math.floor((diffSecs % 86400) / 3600);
+  const mins = Math.floor((diffSecs % 3600) / 60);
+  const secs = diffSecs % 60;
+  if (days > 0) return `${days}d ${hours}h ${mins}m ${secs}s`;
+  if (hours > 0) return `${hours}h ${mins}m ${secs}s`;
+  return `${mins}m ${secs}s`;
+}
+
 function StudentDashboardContent() {
   const searchParams = useSearchParams();
   const { isTamil, t } = useLanguage();
@@ -85,6 +99,13 @@ function StudentDashboardContent() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [previewRoll, setPreviewRoll] = useState(searchParams.get("previewRollNo") || null);
+  const [currentTime, setCurrentTime] = useState(Date.now());
+
+  // Live ticking clock for exact countdown updates every second
+  useEffect(() => {
+    const timer = setInterval(() => setCurrentTime(Date.now()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   const fetchDashboardData = async (rollNo) => {
     setLoading(true);
@@ -137,6 +158,13 @@ function StudentDashboardContent() {
 
   const { profile, subjects, upcomingExams, notices, isPreview } = data;
   const overallPct = profile.overallCompletion || 0;
+
+  // Data structure: Array decoration with integer rank tuple { e, rank, examAt, subject, id }.
+  // Time complexity: O(N log N) single-pass deterministic sort: live first, upcoming by nearest date/time asc, completed at bottom.
+  // If rules change: Update statusRank or add tie-breakers in engine.config.js.
+  const sortedExams = useMemo(() => {
+    return sortExams(upcomingExams);
+  }, [upcomingExams]);
 
   return (
     <div className="page-content space-y-6">
@@ -322,10 +350,11 @@ function StudentDashboardContent() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border">
-                  {upcomingExams.map((exam) => {
+                  {sortedExams.map((exam) => {
                     const examTime = new Date(exam.examDate).getTime();
-                    const nowTime = Date.now();
+                    const nowTime = currentTime;
                     const isUnlocked = nowTime >= examTime;
+                    const countdownStr = formatCountdown(examTime, nowTime);
                     const diffMs = examTime - nowTime;
                     const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
                     const isTodayOrTomorrow = diffMs > 0 && diffMs <= (36 * 3600 * 1000);
@@ -379,7 +408,7 @@ function StudentDashboardContent() {
                           </span>
                         </td>
 
-                        {/* 3. Days Left / Schedule Status */}
+                        {/* 3. Days Left / Schedule Status & Live Countdown */}
                         <td className="py-4 px-4 align-middle">
                           {exam.isSubmitted ? (
                             <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
@@ -389,15 +418,15 @@ function StudentDashboardContent() {
                           ) : isUnlocked ? (
                             <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400 animate-pulse">
                               <Sparkles className="w-3 h-3 text-emerald-400" />
-                              {isTamil ? "தேர்வு நேரம் வந்துவிட்டது" : "Exam Active"}
+                              {isTamil ? "தேர்வு தொடங்கியது" : "Exam Active"}
                             </span>
-                          ) : isTodayOrTomorrow ? (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-400">
-                              <Clock className="w-3 h-3 text-amber-400" />
-                              {isTamil ? "நாளை / இன்று" : "Tomorrow / Today"}
+                          ) : countdownStr ? (
+                            <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-300 border border-amber-400/40 font-mono shadow-sm">
+                              <Clock className="w-3 h-3 text-amber-400 animate-pulse" />
+                              <span>{isTamil ? `இன்னும் ${countdownStr}` : `Starts in ${countdownStr}`}</span>
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-violet-500/15 text-violet-300 border border-violet-500/30">
+                            <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-violet-500/15 text-violet-300 border border-violet-500/30 font-mono">
                               <Calendar className="w-3 h-3 text-violet-400" />
                               {isTamil ? `${diffDays} நாட்களில்` : `In ${diffDays} days`}
                             </span>
@@ -426,8 +455,8 @@ function StudentDashboardContent() {
                               {isTamil ? "பயிற்சி A (50 வினாக்கள்)" : "Practice Set A (Part 1 & 2 — 50 Qs)"}
                             </Link>
 
-                            {/* Set B for Chemistry & large question banks */}
-                            {exam.code === "CHE-12" && (
+                            {/* Set B for Chemistry, Physics & English 100 Q banks */}
+                            {(exam.code === "CHE-12" || exam.code === "PHY-12" || exam.code === "ENG-12" || exam.code === "ENG-10") && (
                               <Link
                                 href={`/student/practice/${encodeURIComponent(exam.code)}/set-b${
                                   isPreview ? `?previewRollNo=${previewRoll}` : ""
@@ -520,27 +549,27 @@ function StudentDashboardContent() {
                               <Button
                                 variant="success"
                                 size="sm"
-                                className="font-bold gap-1.5 shadow-md shadow-emerald-500/20 py-2"
+                                className="font-bold gap-1.5 shadow-md shadow-emerald-500/20 py-2 animate-pulse"
                               >
                                 <PlayCircle className="w-4 h-4" />
-                                {isTamil ? "தேர்வைத் தொடங்குக" : "Start Exam Now"}
+                                {isTamil ? "தேர்வு கூடம் நுழை" : "Live Now - Enter Exam"}
                               </Button>
                             </Link>
                           ) : (
-                            <div className="inline-flex flex-col items-end">
+                            <div className="inline-flex flex-col items-end gap-1">
                               <Button
-                                variant="ghost"
+                                variant="secondary"
                                 size="sm"
                                 disabled
-                                className="gap-1.5 text-xs opacity-60 cursor-not-allowed bg-secondary/40 border border-border text-muted-foreground"
+                                className="gap-1.5 text-xs opacity-75 cursor-not-allowed bg-secondary border border-border text-foreground font-mono"
                               >
-                                <Lock className="w-3.5 h-3.5" />
-                                {isTamil ? "நேரம் வந்தபின் திறக்கும்" : "Locked Until Date"}
+                                <Clock className="w-3.5 h-3.5 text-amber-400" />
+                                {countdownStr ? `Starts in ${countdownStr}` : isTamil ? "பூட்டப்பட்டது" : "Locked"}
                               </Button>
-                              <span className="text-[10px] text-muted-foreground mt-0.5">
+                              <span className="text-[10px] text-muted-foreground font-mono">
                                 {isTamil
-                                  ? "குறிப்பிட்ட நேரத்திற்குப் பிறகே எழுத முடியும்"
-                                  : "Opens after scheduled start time"}
+                                  ? `${new Date(exam.examDate).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })} மணிக்கு தொடங்கும்`
+                                  : `Opens at ${new Date(exam.examDate).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })}`}
                               </span>
                             </div>
                           )}
@@ -554,10 +583,11 @@ function StudentDashboardContent() {
 
             {/* Mobile Responsive Stacked Cards (visible only on small screens < md) */}
             <div className="md:hidden space-y-4">
-              {upcomingExams.map((exam) => {
+              {sortedExams.map((exam) => {
                 const examTime = new Date(exam.examDate).getTime();
-                const nowTime = Date.now();
+                const nowTime = currentTime;
                 const isUnlocked = nowTime >= examTime;
+                const countdownStr = formatCountdown(examTime, nowTime);
                 const diffMs = examTime - nowTime;
                 const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
                 const isTodayOrTomorrow = diffMs > 0 && diffMs <= (36 * 3600 * 1000);
@@ -590,8 +620,8 @@ function StudentDashboardContent() {
                         <span className="badge badge-emerald text-[10px]">Submitted</span>
                       ) : isUnlocked ? (
                         <span className="badge badge-emerald text-[10px] animate-pulse">Live Now</span>
-                      ) : isTodayOrTomorrow ? (
-                        <span className="badge badge-amber text-[10px]">Tomorrow / Today</span>
+                      ) : countdownStr ? (
+                        <span className="badge badge-amber text-[10px] font-mono">Starts in {countdownStr}</span>
                       ) : (
                         <span className="badge badge-violet text-[10px]">{diffDays} days left</span>
                       )}
@@ -634,7 +664,7 @@ function StudentDashboardContent() {
                         </Link>
                       </div>
 
-                      {exam.code === "CHE-12" && (
+                      {(exam.code === "CHE-12" || exam.code === "PHY-12" || exam.code === "ENG-12" || exam.code === "ENG-10") && (
                         <Link
                           href={`/student/practice/${encodeURIComponent(exam.code)}/set-b${
                             isPreview ? `?previewRollNo=${previewRoll}` : ""
@@ -691,17 +721,17 @@ function StudentDashboardContent() {
                           href={`/student/exam-mock?examId=${exam.id}${
                             isPreview ? `&previewRollNo=${previewRoll}` : ""
                           }`}
-                          className="w-full min-h-[44px] flex items-center justify-center gap-1.5 text-xs font-bold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-500/20"
+                          className="w-full min-h-[44px] flex items-center justify-center gap-1.5 text-xs font-bold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-500/20 animate-pulse"
                         >
-                          <PlayCircle className="w-4 h-4" /> {isTamil ? "தேர்வைத் தொடங்குக" : "Start Exam Now"}
+                          <PlayCircle className="w-4 h-4" /> {isTamil ? "தேர்வு கூடம் நுழை" : "Live Now - Enter Exam"}
                         </Link>
                       ) : (
                         <button
                           disabled
-                          className="w-full min-h-[44px] flex items-center justify-center gap-1.5 text-xs font-medium rounded-lg bg-secondary/50 text-muted-foreground border border-border cursor-not-allowed"
+                          className="w-full min-h-[44px] flex items-center justify-center gap-1.5 text-xs font-mono font-bold rounded-lg bg-secondary/50 text-amber-300 border border-border cursor-not-allowed"
                         >
-                          <Lock className="w-3.5 h-3.5" />
-                          {isTamil ? "நேரம் வந்தபின் திறக்கும்" : "Locked Until Scheduled Time"}
+                          <Clock className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+                          <span>{countdownStr ? `Starts in ${countdownStr}` : isTamil ? "பூட்டப்பட்டது" : "Locked"}</span>
                         </button>
                       )}
                     </div>

@@ -169,6 +169,8 @@ model ExamQuestion {
   reviewStatus   String       @default("approved") // "needs_review", "approved", "rejected"
   source         String       @default("manual") // "manual", "gemini"
   createdAt      DateTime     @default(now())
+
+  @@unique([examScheduleId, questionNumber])
 }
 
 model ExamSubmission {
@@ -231,6 +233,8 @@ model StudentActivityLog {
   durationSeconds Int             @default(0) // Total duration in site (seconds)
   tabSwitchCount  Int             @default(0) // Suspicious tab switch count for help prevention
   createdAt       DateTime        @default(now())
+
+  @@index([rollNo, action, createdAt])
 }
 
 model ExamHeartbeat {
@@ -276,6 +280,7 @@ model QuestionBankItem {
   sourceFormat   String   @default("JSON") // "JSON" or "MARKDOWN"
   createdAt      DateTime @default(now())
 
+  @@unique([subjectId, questionNumber])
   @@index([subjectId])
 }
 

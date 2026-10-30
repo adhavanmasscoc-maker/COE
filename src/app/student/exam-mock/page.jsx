@@ -28,6 +28,7 @@ import {
   CalendarDays
 } from "lucide-react";
 import { translateQuestion, translateOption, getLocalizedQuestion, getLocalizedOption } from "@/lib/questionTranslations";
+import { pick, pickQuestion, pickOption, pickExplanation } from "@/lib/config/engine.config";
 
 function normalizeOptionsList(options) {
   if (!options) return [];
@@ -115,6 +116,7 @@ function ExamHallContent() {
   const [isPracticeMode, setIsPracticeMode] = useState(urlMode === "practice");
   const [officialSubmission, setOfficialSubmission] = useState(null);
   const [practiceResult, setPracticeResult] = useState(null);
+  const [mockPracticeFilter, setMockPracticeFilter] = useState("INCORRECT");
 
   // Live screen proctoring state
   const [isSharingScreen, setIsSharingScreen] = useState(false);
@@ -245,7 +247,7 @@ function ExamHallContent() {
     }
   }, [answers, reviewed, exam, candidate, submittedData]);
 
-  // 4. Heartbeat every 20 seconds during active exam
+  // 4. Heartbeat every 15 seconds during active exam (Heartbeat & Telemetry)
   useEffect(() => {
     if (!exam || submittedData || loading) return;
     const beat = setInterval(async () => {
@@ -259,12 +261,35 @@ function ExamHallContent() {
             timeLeftSecs: timeLeft,
           }),
         });
+
+        // Also ping student activity for unified active test-takers monitoring on COE admin panel
+        const roll = candidate?.rollNo || previewRollNo;
+        if (roll) {
+          fetch("/api/student/activity", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              rollNo: roll,
+              studentName: candidate?.fullName || "Exam Candidate",
+              action: isPracticeMode ? "PRACTICE_ACTIVE" : "EXAM_ACTIVE",
+              details: JSON.stringify({
+                examId: exam.id,
+                subjectCode: exam.subject?.code,
+                subjectName: exam.subject?.name,
+                answeredCount: Object.keys(answers).length,
+                totalQuestions: questions?.length || exam.questions?.length || 25,
+                timeLeftSecs: timeLeft,
+              }),
+              tabSwitchCount: tabSwitchCount || 0,
+            }),
+          }).catch(() => {});
+        }
       } catch {
         // Heartbeat failure is silent to student — COE is alerted server-side
       }
-    }, 20000);
+    }, 15000);
     return () => clearInterval(beat);
-  }, [exam, submittedData, loading, answers, timeLeft]);
+  }, [exam, submittedData, loading, answers, timeLeft, candidate, previewRollNo, isPracticeMode, questions, tabSwitchCount]);
 
   // 5. Anti-Cheat: Tab Switch Tracker
   useEffect(() => {
@@ -631,61 +656,164 @@ function ExamHallContent() {
           </div>
         </Card>
 
-        {/* Detailed Question Review with Explanations */}
-        <div className="space-y-4">
-          <h3 className="font-bold text-sm text-foreground flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-            <span>Practice Paper Solution Key & Explanations ({practiceResult.breakdown.length} Questions)</span>
-          </h3>
+        {/* Detailed Question Review with Explanations - Mistakes First (No Scrolling Needed) */}
+        {(() => {
+          const incorrectCount = practiceResult.breakdown.filter((q) => q.chosen && !q.isCorrect).length;
+          const unattemptedCount = practiceResult.breakdown.filter((q) => !q.chosen).length;
+          const correctCount = practiceResult.breakdown.filter((q) => q.isCorrect).length;
 
-          {practiceResult.breakdown.map((q) => (
-            <Card key={q.id} className="p-5 border-border space-y-3 text-xs">
-              <div className="flex items-start justify-between gap-2">
-                <span className="font-bold text-foreground">
-                  Q{q.index}. {getLocalizedQuestion(q, isExamTamil)}
-                </span>
-                <span className={`px-2 py-0.5 rounded-full font-mono text-[10px] font-bold ${
-                  q.isCorrect
-                    ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
-                    : q.chosen
-                    ? "bg-rose-500/20 text-rose-300 border border-rose-500/30"
-                    : "bg-slate-700 text-slate-300"
-                }`}>
-                  {q.isCorrect ? `+${q.marks || 1} Marks (Correct)` : q.chosen ? "0 Marks (Incorrect)" : "Unattempted"}
-                </span>
-              </div>
+          const filteredPracticeQuestions = practiceResult.breakdown.filter((q) => {
+            if (mockPracticeFilter === "INCORRECT") return q.chosen && !q.isCorrect;
+            if (mockPracticeFilter === "UNATTEMPTED") return !q.chosen;
+            if (mockPracticeFilter === "CORRECT") return q.isCorrect;
+            return true;
+          });
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
-                {normalizeOptionsList(q.options).map((opt) => {
-                  const isUserChosen = q.chosen === opt.id;
-                  const isCorrectAns = q.correctAnswer === opt.id;
-
-                  let optStyle = "bg-secondary/40 border-border text-muted-foreground";
-                  if (isCorrectAns) {
-                    optStyle = "bg-emerald-500/15 border-emerald-500/40 text-emerald-300 font-semibold";
-                  } else if (isUserChosen && !isCorrectAns) {
-                    optStyle = "bg-rose-500/15 border-rose-500/40 text-rose-300 font-semibold line-through";
-                  }
-
-                  return (
-                    <div key={opt.id} className={`p-2.5 rounded-xl border flex items-center justify-between ${optStyle}`}>
-                      <span><strong>{opt.id}.</strong> {getLocalizedOption(opt, isExamTamil)}</span>
-                      {isCorrectAns && <span className="text-[10px] text-emerald-400 font-bold ml-2">✓ {isExamTamil ? "சரியான விடை" : "Correct Answer"}</span>}
-                      {isUserChosen && !isCorrectAns && <span className="text-[10px] text-rose-400 font-bold ml-2">✗ Your Choice</span>}
-                    </div>
-                  );
-                })}
-              </div>
-
-              {q.explanation && (
-                <div className="p-3 rounded-xl bg-violet-500/10 border border-violet-500/20 text-[11px] text-[#a8a8d0]">
-                  <strong className="text-violet-300 block mb-0.5">Explanation & Rationale:</strong>
-                  {q.explanation}
+          return (
+            <div className="space-y-4">
+              {/* Alert Banner for Mistakes */}
+              {incorrectCount > 0 ? (
+                <div className="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" />
+                  <div className="space-y-0.5">
+                    <h4 className="font-bold text-rose-200 text-sm">
+                      {isExamTamil
+                        ? `தவறாக விடையளிக்கப்பட்ட வினாக்கள் (${incorrectCount}) — உடனடியாக கீழே சரிபார்க்கவும்`
+                        : `Wrongly Answered Questions (${incorrectCount}) — Review Directly Without Scrolling`}
+                    </h4>
+                    <p className="text-xs text-rose-300/80">
+                      {isExamTamil
+                        ? "நீங்கள் தவறாக தேர்வு செய்த விடைகள் உடனடியாக கீழே காட்டப்பட்டுள்ளன."
+                        : "Your incorrect answers are prioritized directly below with official solution keys and rationales."}
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-bold text-emerald-200 text-sm">
+                      {isExamTamil ? "அற்புதம்! 100% சரியான விடைகள்!" : "100% Correct! All questions answered accurately!"}
+                    </h4>
+                  </div>
                 </div>
               )}
-            </Card>
-          ))}
-        </div>
+
+              {/* Filter Tabs */}
+              <div className="flex items-center gap-2 flex-wrap pb-1 border-b border-border">
+                <button
+                  type="button"
+                  onClick={() => setMockPracticeFilter("INCORRECT")}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                    mockPracticeFilter === "INCORRECT"
+                      ? "bg-rose-500/20 text-rose-300 border border-rose-500/40"
+                      : "bg-secondary/40 text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  <XCircle className="w-3.5 h-3.5 text-rose-400" />
+                  {isExamTamil ? `தவறானவை (${incorrectCount})` : `Wrong Answers (${incorrectCount})`}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMockPracticeFilter("UNATTEMPTED")}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                    mockPracticeFilter === "UNATTEMPTED"
+                      ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
+                      : "bg-secondary/40 text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  <HelpCircle className="w-3.5 h-3.5 text-amber-400" />
+                  {isExamTamil ? `விடையளிக்காதவை (${unattemptedCount})` : `Skipped (${unattemptedCount})`}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMockPracticeFilter("CORRECT")}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                    mockPracticeFilter === "CORRECT"
+                      ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40"
+                      : "bg-secondary/40 text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                  {isExamTamil ? `சரியானவை (${correctCount})` : `Correct (${correctCount})`}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMockPracticeFilter("ALL")}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                    mockPracticeFilter === "ALL"
+                      ? "bg-violet-500/20 text-violet-300 border border-violet-500/40"
+                      : "bg-secondary/40 text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  <BookOpen className="w-3.5 h-3.5 text-violet-400" />
+                  {isExamTamil ? `அனைத்தும் (${practiceResult.breakdown.length})` : `All (${practiceResult.breakdown.length})`}
+                </button>
+              </div>
+
+              {/* Questions List */}
+              {filteredPracticeQuestions.length === 0 ? (
+                <div className="p-8 text-center rounded-2xl bg-secondary/30 border border-border">
+                  <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
+                  <p className="text-sm font-bold text-foreground">
+                    {mockPracticeFilter === "INCORRECT"
+                      ? isExamTamil ? "அற்புதம்! தவறான விடைகள் ஏதுமில்லை!" : "Brilliant! No incorrect answers!"
+                      : "No questions in this filter."}
+                  </p>
+                </div>
+              ) : (
+                filteredPracticeQuestions.map((q) => (
+                  <Card key={q.id} className="p-5 border-border space-y-3 text-xs">
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="font-bold text-foreground text-sm">
+                        <span className="font-mono text-violet-400 mr-1.5">Q{q.index}.</span>
+                        {getLocalizedQuestion(q, isExamTamil)}
+                      </span>
+                      <span className={`px-2 py-0.5 rounded-full font-mono text-[10px] font-bold flex-shrink-0 ${
+                        q.isCorrect
+                          ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                          : q.chosen
+                          ? "bg-rose-500/20 text-rose-300 border border-rose-500/30"
+                          : "bg-amber-500/20 text-amber-300 border border-amber-500/30"
+                      }`}>
+                        {q.isCorrect ? `+${q.marks || 1} Marks (Correct)` : q.chosen ? "0 Marks (Incorrect)" : "Unattempted"}
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                      {normalizeOptionsList(q.options).map((opt) => {
+                        const isUserChosen = q.chosen === opt.id;
+                        const isCorrectAns = q.correctAnswer === opt.id;
+
+                        let optStyle = "bg-secondary/40 border-border text-muted-foreground";
+                        if (isCorrectAns) {
+                          optStyle = "bg-emerald-500/15 border-emerald-500/40 text-emerald-300 font-semibold";
+                        } else if (isUserChosen && !isCorrectAns) {
+                          optStyle = "bg-rose-500/15 border-rose-500/40 text-rose-300 font-semibold line-through";
+                        }
+
+                        return (
+                          <div key={opt.id} className={`p-2.5 rounded-xl border flex items-center justify-between ${optStyle}`}>
+                            <span><strong>{opt.id}.</strong> {pickOption(opt, isExamTamil ? "ta" : "en")}</span>
+                            {isCorrectAns && <span className="text-[10px] text-emerald-400 font-bold ml-2">✓ {isExamTamil ? "சரியான விடை" : "Correct Answer"}</span>}
+                            {isUserChosen && !isCorrectAns && <span className="text-[10px] text-rose-400 font-bold ml-2">✗ Your Choice</span>}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {pickExplanation(q, isExamTamil ? "ta" : "en") && (
+                      <div className="p-3 rounded-xl bg-violet-500/10 border border-violet-500/20 text-[11px] text-[#a8a8d0]">
+                        <strong className="text-violet-300 block mb-0.5">{isExamTamil ? "விளக்கம் & தர்க்கம்:" : "Explanation & Rationale:"}</strong>
+                        {pickExplanation(q, isExamTamil ? "ta" : "en")}
+                      </div>
+                    )}
+                  </Card>
+                ))
+              )}
+            </div>
+          );
+        })()}
       </div>
     );
   }
@@ -956,14 +1084,14 @@ function ExamHallContent() {
 
                 {/* Question Text */}
                 <div className="text-sm sm:text-base font-medium text-foreground mb-6 leading-relaxed">
-                  {getLocalizedQuestion(currentQ, isExamTamil)}
+                  {pickQuestion(currentQ, isExamTamil ? "ta" : "en")}
                 </div>
 
                 {/* Multiple Choice Options */}
                 <div className="space-y-3">
                   {normalizeOptionsList(currentQ.options).map((opt) => {
                     const isSelected = answers[currentQ.id] === opt.id;
-                    const optText = getLocalizedOption(opt, isExamTamil);
+                    const optText = pickOption(opt, isExamTamil ? "ta" : "en");
                     return (
                       <button
                         key={opt.id}

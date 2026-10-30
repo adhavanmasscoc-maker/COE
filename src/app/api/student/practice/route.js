@@ -214,83 +214,78 @@ export async function GET(request) {
 
     let questionsList = [];
 
-    // Check if target subject is Class 12 Chemistry
+    // 1. Universal Question Bank Loader for Class 12 (Chemistry, Physics, English)
     const isSetB = setParam === "2" || setParam === "set-b" || setParam === "set2";
     const isSetA = setParam === "1" || setParam === "set-a" || setParam === "set1" || !isSetB;
+    const targetCode = (targetSubject.code || "").toUpperCase();
 
-    if (targetSubject.code === "CHE-12" || targetSubject.name.toLowerCase().includes("chemistry")) {
-      const allChem = loadChemistry100();
-      let pool = allChem;
-
-      if (isSetB) {
-        pool = pool.slice(50, 100);
-      } else if (isSetA && setParam !== "all") {
-        pool = pool.slice(0, 50);
-      }
-
-      if (unitParam && unitParam !== "all") {
-        const uNum = parseInt(unitParam, 10);
-        pool = pool.filter((q) => q.unit === uNum);
-      }
-
-      // If pool is non-empty, format from the 100 question bank
-      if (pool.length > 0) {
-        let selected = [...pool];
-        if (shuffle && count < pool.length && !unitParam && setParam === "all") {
-          selected = selected.sort(() => Math.random() - 0.5);
-        }
-        selected = selected.slice(0, count);
-
-        questionsList = selected.map((q, idx) => ({
-          id: q.id || `CHE12_PRACTICE_${idx + 1}`,
-          questionNumber: idx + 1,
-          unit: q.unit,
-          topic: q.topic,
-          questionText: q.question_en,
-          questionTextTa: q.question_ta,
-          marks: 1,
-          options: [
-            { id: "A", text: q.options_en?.a || "", textEn: q.options_en?.a || "", textTa: q.options_ta?.a || "" },
-            { id: "B", text: q.options_en?.b || "", textEn: q.options_en?.b || "", textTa: q.options_ta?.b || "" },
-            { id: "C", text: q.options_en?.c || "", textEn: q.options_en?.c || "", textTa: q.options_ta?.c || "" },
-            { id: "D", text: q.options_en?.d || "", textEn: q.options_en?.d || "", textTa: q.options_ta?.d || "" },
-          ],
-          correctAnswer: (q.correct_option || "a").toUpperCase(),
-          answerTextEn: q.answer_en,
-          answerTextTa: q.answer_ta,
-          explanation: q.explanation_en,
-          explanationTa: q.explanation_ta,
-        }));
-      }
+    let bankFileName = null;
+    if (targetCode === "CHE-12" || targetSubject.name.toLowerCase().includes("chemistry")) {
+      bankFileName = isSetB ? "CHEMISTRY-12-50-SET2.json" : "CHEMISTRY-12-50-SET1.json";
+    } else if (targetCode === "PHY-12" || targetSubject.name.toLowerCase().includes("physics")) {
+      bankFileName = isSetB ? "PHYSICS-12-50-SET2.json" : "PHYSICS-12-50-SET1.json";
+    } else if (targetCode === "ENG-10" || (targetCode.includes("ENG") && targetSubject.prepClass === 10)) {
+      bankFileName = isSetB ? "ENGLISH-10-50-SET2.json" : "ENGLISH-10-50-SET1.json";
+    } else if (targetCode === "ENG-12" || targetSubject.name.toLowerCase().includes("english")) {
+      bankFileName = isSetB ? "ENGLISH-12-50-SET2.json" : "ENGLISH-12-50-SET1.json";
     }
 
-    // Check if target subject is Physics (PHY-12)
-    if (questionsList.length === 0 && (targetSubject.code === "PHY-12" || targetSubject.name.toLowerCase().includes("physics"))) {
+    if (bankFileName) {
       try {
-        const phyPath = path.join(process.cwd(), "questions", "exams", "PHYSICS-12-15-SET1.json");
-        if (fs.existsSync(phyPath)) {
-          const phyData = JSON.parse(fs.readFileSync(phyPath, "utf8"));
-          const qArr = phyData.questions || [];
-          questionsList = qArr.slice(0, count).map((q, idx) => ({
-            id: `PHY12_PRACTICE_${idx + 1}`,
-            questionNumber: idx + 1,
-            unit: 1,
-            topic: q.syllabus_ref || "Physics Section A",
-            questionText: q.question,
-            marks: q.marks || 1,
-            options: (q.options || []).map(o => ({
-              id: o.id,
-              text: o.text,
-              textEn: o.text,
-              textTa: o.textTa || null,
-            })),
-            correctAnswer: (q.correct_answer || "A").toUpperCase(),
-            explanation: q.explanation,
-            explanationTa: q.explanationTa || null,
-          }));
+        const filePath = path.join(process.cwd(), "questions", "exams", bankFileName);
+        if (fs.existsSync(filePath)) {
+          const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
+          const qArr = raw.questions || (isSetB ? raw.set2 : raw.set1) || [];
+
+          let pool = [...qArr];
+          if (unitParam && unitParam !== "all") {
+            const uNum = parseInt(unitParam, 10);
+            pool = pool.filter((q) => q.unit === uNum);
+          }
+
+          if (pool.length > 0) {
+            let selected = [...pool];
+            if (shuffle && count < pool.length && !unitParam && setParam === "all") {
+              selected = selected.sort(() => Math.random() - 0.5);
+            }
+            selected = selected.slice(0, count);
+
+            questionsList = selected.map((q, idx) => {
+              // Handle English format vs Bilingual format
+              const isBilingual = Boolean(q.options_en || q.question_en || q.question_ta);
+              
+              const opts = isBilingual ? [
+                { id: "A", text: q.options_en?.a || "", textEn: q.options_en?.a || "", textTa: q.options_ta?.a || "" },
+                { id: "B", text: q.options_en?.b || "", textEn: q.options_en?.b || "", textTa: q.options_ta?.b || "" },
+                { id: "C", text: q.options_en?.c || "", textEn: q.options_en?.c || "", textTa: q.options_ta?.c || "" },
+                { id: "D", text: q.options_en?.d || "", textEn: q.options_en?.d || "", textTa: q.options_ta?.d || "" },
+              ] : [
+                { id: "A", text: q.options?.a || "", textEn: q.options?.a || "", textTa: null },
+                { id: "B", text: q.options?.b || "", textEn: q.options?.b || "", textTa: null },
+                { id: "C", text: q.options?.c || "", textEn: q.options?.c || "", textTa: null },
+                { id: "D", text: q.options?.d || "", textEn: q.options?.d || "", textTa: null },
+              ];
+
+              return {
+                id: q.id || `${targetCode}_PRACTICE_${idx + 1}`,
+                questionNumber: idx + 1,
+                unit: q.unit || 1,
+                topic: q.topic || q.category || q.prose_lesson || "Standard Board Questions",
+                questionText: q.question_en || q.question || "",
+                questionTextTa: q.question_ta || null,
+                marks: q.marks || 1,
+                options: opts,
+                correctAnswer: (q.correct_option || q.correct_answer || "a").toUpperCase(),
+                answerTextEn: q.answer_en || q.answer || "",
+                answerTextTa: q.answer_ta || null,
+                explanation: q.explanation_en || q.explanation || "",
+                explanationTa: q.explanation_ta || null,
+              };
+            });
+          }
         }
-      } catch (e) {
-        console.warn("Could not read PHYSICS JSON file:", e.message);
+      } catch (bankErr) {
+        console.warn(`[practice] Could not load ${bankFileName}:`, bankErr.message);
       }
     }
 
