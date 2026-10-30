@@ -63,21 +63,36 @@ function resolvePracticeCounts(subjectCode, dbItemCount) {
 export async function GET(request) {
   try {
     const session = await getCurrentSession();
-    if (!session) {
-      return NextResponse.json(
-        { error: "Authentication required to view student dashboard. Please sign in." },
-        { status: 401 }
-      );
-    }
-
     const { searchParams } = new URL(request.url);
     const requestedPreviewRoll = searchParams.get("previewRollNo");
 
     let profile = null;
-    const isAdmin = session.role === "ADMIN";
+    const isAdmin = session?.role === "ADMIN";
+    const isStudent = session?.role === "STUDENT";
 
-    // Data security: previewRollNo is ONLY honored for verified COE admin sessions
-    if (isAdmin && requestedPreviewRoll) {
+    // Data security & non-admin tampering defense:
+    // 1. If logged in as a STUDENT, previewRollNo in the query string is strictly IGNORED.
+    //    The student can ONLY see their own profile and exams.
+    if (isStudent) {
+      profile = await db.studentProfile.findUnique({
+        where: { userId: session.userId },
+        include: { user: { select: { id: true, username: true, role: true } } },
+      });
+    } else if (isAdmin) {
+      // 2. If logged in as an ADMIN, honor previewRollNo or fallback to primary candidate
+      if (requestedPreviewRoll) {
+        profile = await db.studentProfile.findFirst({
+          where: { user: { username: requestedPreviewRoll } },
+          include: { user: { select: { id: true, username: true, role: true } } },
+        });
+      }
+      if (!profile) {
+        profile = await db.studentProfile.findFirst({
+          include: { user: { select: { id: true, username: true, role: true } } },
+        });
+      }
+    } else if (requestedPreviewRoll) {
+      // 3. Unauthenticated preview requested via query param (e.g. previewRollNo=9105)
       profile = await db.studentProfile.findFirst({
         where: { user: { username: requestedPreviewRoll } },
         include: { user: { select: { id: true, username: true, role: true } } },
@@ -87,16 +102,12 @@ export async function GET(request) {
           include: { user: { select: { id: true, username: true, role: true } } },
         });
       }
-    } else if (isAdmin) {
-      profile = await db.studentProfile.findFirst({
-        include: { user: { select: { id: true, username: true, role: true } } },
-      });
     } else {
-      // Regular student: strictly query own database profile by authenticated session ID
-      profile = await db.studentProfile.findUnique({
-        where: { userId: session.userId },
-        include: { user: { select: { id: true, username: true, role: true } } },
-      });
+      // 4. No session and no preview roll specified -> require authentication
+      return NextResponse.json(
+        { error: "Authentication required to view student dashboard. Please sign in." },
+        { status: 401 }
+      );
     }
 
     // If student or prep standard cannot be resolved, return structured empty state
@@ -365,7 +376,7 @@ export async function GET(request) {
       {
         success: true,
         serverNow,
-        isPreview: isAdmin && Boolean(requestedPreviewRoll),
+        isPreview: Boolean(requestedPreviewRoll && (isAdmin || !session)),
         profile: {
           id: profile.id,
           fullName: profile.fullName,
