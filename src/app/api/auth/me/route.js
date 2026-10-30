@@ -4,7 +4,37 @@ import { db } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(request) {
+  const { searchParams } = new URL(request.url);
+  const previewRollNo = searchParams?.get("previewRollNo");
+
+  if (previewRollNo) {
+    try {
+      const user = await db.user.findUnique({
+        where: { username: previewRollNo },
+        include: { profile: true },
+      });
+      if (user) {
+        const userLang = user.language || (user.profile?.medium === "Tamil" ? "ta" : "en");
+        return NextResponse.json({
+          authenticated: true,
+          isPreview: true,
+          user: {
+            id: user.id,
+            username: user.username,
+            role: user.role,
+            fullName: user.profile?.fullName || user.username,
+            examPrepClass: user.profile?.examPrepClass || 10,
+            language: userLang,
+          },
+          studentProfile: user.profile,
+        });
+      }
+    } catch (e) {
+      console.warn("Could not load preview student in /api/auth/me:", e.message);
+    }
+  }
+
   const session = await getCurrentSession();
   if (!session) {
     return NextResponse.json({ authenticated: false, user: null });

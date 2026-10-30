@@ -39,7 +39,8 @@ import {
   Sliders,
   Filter,
   Radio,
-  Send
+  Send,
+  Shuffle
 } from "lucide-react";
 import { ExamLifecycleStepper, calculateExamPhase } from "@/components/admin/ExamLifecycleStepper";
 
@@ -155,6 +156,8 @@ function COEAdminExamsContent() {
   const [selectedBankCheckboxes, setSelectedBankCheckboxes] = useState(new Set());
   const [editingQuestion, setEditingQuestion] = useState(null);
   const [savingEdit, setSavingEdit] = useState(false);
+  const [swapperShuffleOptions, setSwapperShuffleOptions] = useState(false);
+  const [shufflingActive, setShufflingActive] = useState(false);
 
   // Reschedule Date, Time, Duration & Marks state
   const [rescheduleModal, setRescheduleModal] = useState(null);
@@ -426,6 +429,7 @@ function COEAdminExamsContent() {
         selectionMode: overrideParams.selectionMode || swapperSelectionMode,
         policyId: overrideParams.policyId || swapperPolicyId,
         selectedBankItemIds: overrideParams.selectedBankItemIds || Array.from(selectedBankCheckboxes),
+        shuffleOptions: overrideParams.shuffleOptions !== undefined ? overrideParams.shuffleOptions : swapperShuffleOptions,
       };
 
       const res = await fetch(`/api/admin/exams/${randomSwapperExam.id}/random-questions`, {
@@ -445,6 +449,30 @@ function COEAdminExamsContent() {
       alert("Network error generating questions.");
     } finally {
       setRegenerating(false);
+    }
+  };
+
+  const handleTriggerShuffle = async (mode = "shuffle_questions") => {
+    if (!randomSwapperExam || shufflingActive) return;
+    setShufflingActive(true);
+    try {
+      const res = await fetch(`/api/admin/exams/${randomSwapperExam.id}/random-questions`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: mode }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        showMsg(data.message || "Questions successfully scrambled!");
+        openRandomSwapper(randomSwapperExam);
+        fetchExams();
+      } else {
+        alert(data.error || "Failed to shuffle.");
+      }
+    } catch {
+      alert("Network error shuffling questions.");
+    } finally {
+      setShufflingActive(false);
     }
   };
 
@@ -1614,9 +1642,20 @@ function COEAdminExamsContent() {
 
                   {/* Action Buttons Row */}
                   <div className="flex items-center justify-between pt-2 border-t border-border flex-wrap gap-2">
-                    <span className="text-[11px] text-muted-foreground">
-                      Will replace active questions with <strong>{swapperCount} questions</strong> from <strong>{swapperPoolRange}</strong> ({swapperSelectionMode}).
-                    </span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-[11px] text-muted-foreground">
+                        Will replace active questions with <strong>{swapperCount} questions</strong> from <strong>{swapperPoolRange}</strong> ({swapperSelectionMode}).
+                      </span>
+                      <label className="inline-flex items-center gap-1.5 cursor-pointer text-[11px] font-semibold text-muted-foreground hover:text-foreground">
+                        <input
+                          type="checkbox"
+                          checked={swapperShuffleOptions}
+                          onChange={(e) => setSwapperShuffleOptions(e.target.checked)}
+                          className="rounded border-border accent-emerald-500"
+                        />
+                        <span>Also Scramble ABCD Options</span>
+                      </label>
+                    </div>
                     <Button
                       type="button"
                       variant="primary"
@@ -1627,6 +1666,58 @@ function COEAdminExamsContent() {
                     >
                       {regenerating ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <RefreshCw className="w-3.5 h-3.5" />}
                       Generate &amp; Apply {swapperCount} Questions to Exam
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Quick Sequence & Option Randomizer Toolbar (Phase 6.5) */}
+                <div className="p-3 rounded-xl bg-violet-500/10 border border-violet-500/25 flex items-center justify-between flex-wrap gap-2.5">
+                  <div className="flex items-center gap-2">
+                    <Shuffle className="w-4 h-4 text-violet-400" />
+                    <div>
+                      <span className="text-xs font-bold text-violet-200 block">Randomize Question Sequence &amp; Choices</span>
+                      <span className="text-[10px] text-muted-foreground">Scramble Q1 ↔ Q10 order and option placements each time for authentic anti-cheat variability.</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="outline"
+                      onClick={() => handleTriggerShuffle("shuffle_questions")}
+                      disabled={shufflingActive || regenerating}
+                      className="text-xs py-1 px-2.5 text-violet-300 border-violet-500/30 hover:bg-violet-500/20 font-bold gap-1"
+                      title="Randomize Question Order (e.g. Q1 becomes Q10, Q10 becomes Q1)"
+                    >
+                      {shufflingActive ? <Loader2 className="w-3 h-3 animate-spin" /> : <Shuffle className="w-3 h-3 text-violet-400" />}
+                      Shuffle Question Numbers (1..N)
+                    </Button>
+
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="outline"
+                      onClick={() => handleTriggerShuffle("shuffle_options")}
+                      disabled={shufflingActive || regenerating}
+                      className="text-xs py-1 px-2.5 text-cyan-300 border-cyan-500/30 hover:bg-cyan-500/20 font-bold gap-1"
+                      title="Scramble ABCD option choices for every question while preserving official correct answer"
+                    >
+                      {shufflingActive ? <Loader2 className="w-3 h-3 animate-spin" /> : <Shuffle className="w-3 h-3 text-cyan-400" />}
+                      Shuffle Options (A, B, C, D)
+                    </Button>
+
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="primary"
+                      onClick={() => handleTriggerShuffle("shuffle_all")}
+                      disabled={shufflingActive || regenerating}
+                      className="text-xs py-1 px-3 bg-violet-600 hover:bg-violet-500 text-white font-bold gap-1 shadow-md shadow-violet-600/30"
+                      title="Shuffle both question order AND ABCD options in one click"
+                    >
+                      {shufflingActive ? <Loader2 className="w-3 h-3 animate-spin" /> : <Zap className="w-3 h-3 text-amber-300" />}
+                      Shuffle Everything (Questions + Options)
                     </Button>
                   </div>
                 </div>

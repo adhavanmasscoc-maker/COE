@@ -9,10 +9,6 @@ export const dynamic = "force-dynamic";
 export async function POST(request) {
   try {
     const session = await getCurrentSession();
-    if (!session) {
-      return NextResponse.json({ error: "Authentication required." }, { status: 401 });
-    }
-
     const body = await request.json();
     const {
       subjectCode,
@@ -26,6 +22,10 @@ export async function POST(request) {
       totalMarks,
       previewRollNo,
     } = body;
+
+    if (!session && !previewRollNo) {
+      return NextResponse.json({ error: "Authentication required." }, { status: 401 });
+    }
 
     const studentProfile = await getOrRestoreStudentProfile(session, previewRollNo);
     if (!studentProfile) {
@@ -91,13 +91,13 @@ export async function POST(request) {
 export async function GET(request) {
   try {
     const session = await getCurrentSession();
-    if (!session) {
-      return NextResponse.json({ error: "Authentication required." }, { status: 401 });
-    }
-
     const { searchParams } = new URL(request.url);
     const previewRollNo = searchParams.get("previewRollNo");
     const subjectCode = searchParams.get("subjectCode");
+
+    if (!session && !previewRollNo) {
+      return NextResponse.json({ error: "Authentication required." }, { status: 401 });
+    }
 
     const studentProfile = await getOrRestoreStudentProfile(session, previewRollNo);
     if (!studentProfile) {

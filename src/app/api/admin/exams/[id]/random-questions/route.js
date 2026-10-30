@@ -13,6 +13,47 @@ function sampleRandom(array, count) {
   return shuffled.slice(0, Math.min(count, array.length));
 }
 
+// Scramble options array and compute updated correct answer key letter
+function scrambleQuestionOptions(optionsRaw, correctAnswer) {
+  let parsedOptions = [];
+  try {
+    const rawOpts = typeof optionsRaw === "string" ? JSON.parse(optionsRaw) : optionsRaw;
+    parsedOptions = Array.isArray(rawOpts)
+      ? rawOpts
+      : Object.keys(rawOpts).map((k) => ({ id: k.toUpperCase(), text: rawOpts[k] }));
+  } catch {
+    return { options: optionsRaw, correctAnswer };
+  }
+
+  if (parsedOptions.length <= 1) return { options: parsedOptions, correctAnswer };
+
+  // Identify correct text and English/Tamil values
+  const correctOpt = parsedOptions.find((o) => o.id === String(correctAnswer).toUpperCase());
+  const correctText = correctOpt ? correctOpt.text : null;
+  const correctTextEn = correctOpt ? (correctOpt.textEn || correctOpt.text) : null;
+
+  // Shuffle options order
+  const shuffled = [...parsedOptions].sort(() => 0.5 - Math.random());
+
+  // Re-index letters A, B, C, D
+  const newOptions = shuffled.map((opt, idx) => ({
+    ...opt,
+    id: String.fromCharCode(65 + idx),
+  }));
+
+  // Find which new letter contains the correct text
+  let newCorrectLetter = "A";
+  if (correctText) {
+    const found = newOptions.find((o) => o.text === correctText || (correctTextEn && o.textEn === correctTextEn));
+    if (found) newCorrectLetter = found.id;
+  }
+
+  return {
+    options: newOptions,
+    correctAnswer: newCorrectLetter,
+  };
+}
+
 // GET: View currently selected questions alongside all available questions in the subject's bank
 export async function GET(request, { params }) {
   try {
@@ -252,6 +293,87 @@ export async function POST(request, { params }) {
       });
     }
 
+    // Action: SHUFFLE ACTIVE QUESTIONS (Order e.g. Q1 to Q10 and Q10 to Q1)
+    if (action === "shuffle_questions" || action === "shuffle_all") {
+      const activeQuestions = await db.examQuestion.findMany({
+        where: { examScheduleId: examId },
+        orderBy: { questionNumber: "asc" },
+      });
+
+      if (activeQuestions.length === 0) {
+        return NextResponse.json({ error: "No active questions found in this exam to shuffle." }, { status: 400 });
+      }
+
+      // Shuffle the order of questions
+      const shuffledQuestions = [...activeQuestions].sort(() => 0.5 - Math.random());
+      const alsoShuffleOptions = action === "shuffle_all" || body.shuffleOptions === true;
+
+      // Two-step transaction to avoid unique constraint collisions on (examScheduleId, questionNumber)
+      await db.$transaction(async (tx) => {
+        // Step 1: Assign temporary non-colliding question numbers
+        for (let i = 0; i < shuffledQuestions.length; i++) {
+          await tx.examQuestion.update({
+            where: { id: shuffledQuestions[i].id },
+            data: { questionNumber: 10000 + i + 1 },
+          });
+        }
+
+        // Step 2: Assign final randomized 1..N order (and scrambled options if requested)
+        for (let i = 0; i < shuffledQuestions.length; i++) {
+          const q = shuffledQuestions[i];
+          const updateData = { questionNumber: i + 1 };
+
+          if (alsoShuffleOptions) {
+            const scrambled = scrambleQuestionOptions(q.options, q.correctAnswer);
+            updateData.options = JSON.stringify(scrambled.options);
+            updateData.correctAnswer = scrambled.correctAnswer;
+          }
+
+          await tx.examQuestion.update({
+            where: { id: q.id },
+            data: updateData,
+          });
+        }
+      });
+
+      return NextResponse.json({
+        success: true,
+        message: alsoShuffleOptions
+          ? `Successfully shuffled all ${shuffledQuestions.length} questions AND their ABCD options!`
+          : `Successfully randomized question order (1..${shuffledQuestions.length})!`,
+      });
+    }
+
+    // Action: SHUFFLE ABCD OPTIONS ONLY
+    if (action === "shuffle_options") {
+      const activeQuestions = await db.examQuestion.findMany({
+        where: { examScheduleId: examId },
+        orderBy: { questionNumber: "asc" },
+      });
+
+      if (activeQuestions.length === 0) {
+        return NextResponse.json({ error: "No active questions found to shuffle options." }, { status: 400 });
+      }
+
+      await db.$transaction(async (tx) => {
+        for (const q of activeQuestions) {
+          const scrambled = scrambleQuestionOptions(q.options, q.correctAnswer);
+          await tx.examQuestion.update({
+            where: { id: q.id },
+            data: {
+              options: JSON.stringify(scrambled.options),
+              correctAnswer: scrambled.correctAnswer,
+            },
+          });
+        }
+      });
+
+      return NextResponse.json({
+        success: true,
+        message: `Successfully scrambled ABCD options for all ${activeQuestions.length} questions with 100% accurate answer keys!`,
+      });
+    }
+
     // Action: REGENERATE / SELECT questions from pool with multiple options
     // 1. Filter pool by range (First 50, Second 50, First 25, or All 100)
     let pool = [...bankItems];
@@ -320,6 +442,8 @@ export async function POST(request, { params }) {
       where: { examScheduleId: examId },
     });
 
+    const shouldShuffleOpts = body.shuffleOptions === true;
+
     const createPayload = sampled.map((bq, i) => {
       let parsedOptions = [];
       try {
@@ -336,13 +460,22 @@ export async function POST(request, { params }) {
         ];
       }
 
+      let finalOptions = parsedOptions;
+      let finalCorrect = bq.correctAnswer;
+
+      if (shouldShuffleOpts) {
+        const scrambled = scrambleQuestionOptions(parsedOptions, bq.correctAnswer);
+        finalOptions = scrambled.options;
+        finalCorrect = scrambled.correctAnswer;
+      }
+
       return {
         examScheduleId: examId,
         questionNumber: i + 1,
         questionText: bq.questionText,
         marks: marksPerQ,
-        options: JSON.stringify(parsedOptions),
-        correctAnswer: bq.correctAnswer,
+        options: JSON.stringify(finalOptions),
+        correctAnswer: finalCorrect,
         explanation: bq.explanation,
         difficulty: bq.difficulty || "MEDIUM",
         reviewStatus: "approved",

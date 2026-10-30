@@ -7,15 +7,34 @@ export const dynamic = "force-dynamic";
 export async function GET(request) {
   try {
     const session = await getCurrentSession();
-    if (!session) {
+    const { searchParams } = new URL(request.url);
+    const previewRollNo = searchParams.get("previewRollNo");
+
+    if (!session && !previewRollNo) {
       return NextResponse.json({ error: "Authentication required." }, { status: 401 });
     }
 
-    const { searchParams } = new URL(request.url);
-    const targetPrepClass =
-      session.role === "ADMIN"
-        ? parseInt(searchParams.get("prepClass") || "10", 10)
-        : session.examPrepClass;
+    let defaultClass = 10;
+    let studentProfileId = null;
+
+    if (previewRollNo) {
+      const p = await db.studentProfile.findFirst({
+        where: { user: { username: previewRollNo } },
+      });
+      if (p) {
+        defaultClass = p.examPrepClass || 10;
+        studentProfileId = p.id;
+      } else {
+        const is12th = /1[12]\d{2}/.test(previewRollNo);
+        defaultClass = is12th ? 12 : 10;
+      }
+    } else if (session) {
+      defaultClass = session.examPrepClass || (session.role === "ADMIN" ? 10 : 10);
+      studentProfileId = session.profileId || null;
+    }
+
+    const requestedClass = searchParams.get("prepClass");
+    const targetPrepClass = requestedClass ? parseInt(requestedClass, 10) : defaultClass;
 
     // 1. Fetch subjects matching the target preparation standard
     const subjects = await db.subject.findMany({
@@ -35,10 +54,11 @@ export async function GET(request) {
 
     // 2. If student, fetch their completion records
     let completedChapterIds = new Set();
-    if (session.role === "STUDENT" && session.profileId) {
+    const activeStudentId = studentProfileId || (session?.role === "STUDENT" ? session.profileId : null);
+    if (activeStudentId) {
       const progressRecords = await db.chapterProgress.findMany({
         where: {
-          studentId: session.profileId,
+          studentId: activeStudentId,
           isCompleted: true,
         },
         select: { chapterId: true },

@@ -93,8 +93,10 @@ export default function PracticeExamPage() {
       setLoading(true);
       try {
         const setQuery = rawSet.includes("b") || rawSet.includes("2") ? "2" : "1";
-        const countQuery = rawSubject.includes("CHE") ? "50" : "15";
-        const url = `/api/student/practice?code=${rawSubject}&set=${setQuery}&count=${countQuery}`;
+        const countQuery = (rawSubject.includes("CHE") || rawSubject.includes("ENG") || rawSubject.includes("PHY")) ? "50" : "25";
+        const url = `/api/student/practice?code=${rawSubject}&set=${setQuery}&count=${countQuery}${
+          previewRollNo ? `&previewRollNo=${encodeURIComponent(previewRollNo)}` : ""
+        }`;
         const res = await fetch(url);
         const data = await res.json();
 

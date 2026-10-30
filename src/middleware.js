@@ -20,9 +20,9 @@ export async function middleware(request) {
     return NextResponse.next();
   }
 
-  // Allow read-only COE preview for student routes with previewRollNo parameter
+  // Allow read-only COE preview for student pages and student APIs with previewRollNo parameter
   const hasPreviewRoll = request.nextUrl.searchParams.has("previewRollNo");
-  if (isStudentRoute && hasPreviewRoll) {
+  if ((isStudentRoute || isStudentApiRoute) && hasPreviewRoll) {
     return NextResponse.next();
   }
 

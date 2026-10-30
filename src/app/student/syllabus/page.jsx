@@ -31,6 +31,7 @@ import {
   EyeOff,
   Globe,
   CalendarDays,
+  GraduationCap
 } from "lucide-react";
 
 function normalizeOptionsList(options) {
@@ -77,19 +78,27 @@ function SyllabusExplorerContent() {
   const searchParams = useSearchParams();
   const initialSubjectCode = searchParams.get("code") || searchParams.get("subjectCode");
   const initialTab = searchParams.get("tab") || "syllabus";
+  const previewRoll = searchParams.get("previewRollNo") || null;
+
+  // Determine initial standard: Class 10 if roll matches or explicit, else check subject code
+  const is10thSubject = initialSubjectCode && initialSubjectCode.endsWith("-10");
+  const is10thRoll = previewRoll && (/^(?:TN2026-09|TN2026-10|91)/.test(previewRoll) || !/1[12]\d{2}/.test(previewRoll));
+  const initialPrepClass = searchParams.get("prepClass")
+    ? parseInt(searchParams.get("prepClass"), 10)
+    : (is10thSubject || is10thRoll) ? 10 : 12;
 
   const [mainTab, setMainTab] = useState(
     initialTab === "qbank" || initialTab === "practice" ? initialTab : "syllabus"
   );
   const [subjects, setSubjects] = useState([]);
   const [selectedSubId, setSelectedSubId] = useState(null);
-  const [prepClass, setPrepClass] = useState(12);
+  const [prepClass, setPrepClass] = useState(initialPrepClass);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [togglingId, setTogglingId] = useState(null);
   const [toastMessage, setToastMessage] = useState("");
 
-  // Question Bank States (50+50 Chemistry / Curated Questions)
+  // Question Bank States (100 Questions Pool)
   const [qbankQuestions, setQbankQuestions] = useState([]);
   const [qbankUnits, setQbankUnits] = useState([]);
   const [qbankStats, setQbankStats] = useState(null);
@@ -144,28 +153,38 @@ function SyllabusExplorerContent() {
     }
   };
 
-  const fetchSyllabus = async () => {
+  const fetchSyllabus = async (targetStandard = prepClass) => {
     setLoading(true);
+    setError("");
     try {
-      const res = await fetch("/api/syllabus");
+      const params = new URLSearchParams();
+      params.set("prepClass", String(targetStandard));
+      if (previewRoll) params.set("previewRollNo", previewRoll);
+
+      const res = await fetch(`/api/syllabus?${params.toString()}`);
       const json = await res.json();
       if (!res.ok) {
         setError(json.error || "Failed to load syllabus records.");
       } else {
-        setSubjects(json.subjects || []);
-        setPrepClass(json.prepClass || 12);
+        const subs = json.subjects || [];
+        setSubjects(subs);
+        setPrepClass(json.prepClass || targetStandard);
 
-        if (json.subjects?.length > 0) {
+        if (subs.length > 0) {
+          let chosen = null;
           if (initialSubjectCode) {
-            const matched = json.subjects.find((s) => s.code === initialSubjectCode);
-            const chosenId = matched ? matched.id : json.subjects[0].id;
-            setSelectedSubId(chosenId);
-            setPracticeSubjectId(chosenId);
-          } else {
-            const chemSub = json.subjects.find((s) => s.code === "CHE-12") || json.subjects[0];
-            setSelectedSubId(chemSub.id);
-            setPracticeSubjectId(chemSub.id);
+            chosen = subs.find((s) => s.code === initialSubjectCode);
           }
+          if (!chosen) {
+            // Strict Standard Default:
+            // Class 10 strictly defaults to ENG-10 (or first 10th subject), NEVER Chemistry 12!
+            // Class 12 strictly defaults to ENG-12 or CHE-12
+            chosen = targetStandard === 10
+              ? (subs.find((s) => s.code === "ENG-10") || subs[0])
+              : (subs.find((s) => s.code === "ENG-12" || s.code === "CHE-12") || subs[0]);
+          }
+          setSelectedSubId(chosen.id);
+          setPracticeSubjectId(chosen.id);
         }
       }
     } catch {
@@ -175,8 +194,13 @@ function SyllabusExplorerContent() {
     }
   };
 
+  const handleSelectStandard = (std) => {
+    setPrepClass(std);
+    fetchSyllabus(std);
+  };
+
   useEffect(() => {
-    fetchSyllabus();
+    fetchSyllabus(prepClass);
     fetchPracticeHistory();
   }, []);
 
@@ -187,9 +211,12 @@ function SyllabusExplorerContent() {
   const fetchQBank = async (unitVal = qbankUnit, setVal = qbankSet, searchVal = qbankSearch) => {
     setQbankLoading(true);
     try {
-      const code = currentSubject?.code || "CHE-12";
+      const defaultCode = prepClass === 10 ? "ENG-10" : "CHE-12";
+      const code = currentSubject?.code || defaultCode;
       const params = new URLSearchParams();
       params.set("code", code);
+      params.set("prepClass", String(prepClass));
+      if (previewRoll) params.set("previewRollNo", previewRoll);
       if (unitVal !== "all") params.set("unit", unitVal);
       if (setVal !== "all") params.set("set", setVal);
       if (searchVal) params.set("search", searchVal);
@@ -212,7 +239,7 @@ function SyllabusExplorerContent() {
     if (mainTab === "qbank") {
       fetchQBank();
     }
-  }, [mainTab, selectedSubId, qbankUnit, qbankSet]);
+  }, [mainTab, selectedSubId, qbankUnit, qbankSet, prepClass]);
 
   const toggleReveal = (qId) => {
     setRevealedAnswers((prev) => ({ ...prev, [qId]: !prev[qId] }));
@@ -287,10 +314,12 @@ function SyllabusExplorerContent() {
 
     try {
       const targetId = practiceSubjectId || currentSubject.id;
-      const targetCode = currentSubject?.code || "CHE-12";
+      const targetCode = activePracticeSubject?.code || currentSubject?.code || (prepClass === 10 ? "ENG-10" : "CHE-12");
       const params = new URLSearchParams();
       params.set("subjectId", targetId);
       params.set("code", targetCode);
+      params.set("prepClass", String(prepClass));
+      if (previewRoll) params.set("previewRollNo", previewRoll);
       params.set("count", String(countToUse));
       if (unitToUse !== "all") params.set("unit", String(unitToUse));
       if (setToUse !== "all") params.set("set", String(setToUse));
@@ -352,7 +381,7 @@ function SyllabusExplorerContent() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          subjectCode: activePracticeSubject?.code || "CHE-12",
+          subjectCode: activePracticeSubject?.code || (prepClass === 10 ? "ENG-10" : "CHE-12"),
           setName: `Unit ${practiceUnit === "all" ? "Curriculum" : practiceUnit} (${practiceCount} Qs)`,
           medium: "Bilingual",
           totalTimeSpent: 0,
@@ -393,7 +422,7 @@ function SyllabusExplorerContent() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Link href="/student/history">
+          <Link href={`/student/history${previewRoll ? `?previewRollNo=${encodeURIComponent(previewRoll)}` : ""}`}>
             <Button size="sm" variant="outline" className="gap-1.5 text-xs">
               <CalendarDays className="w-4 h-4 text-violet-400" /> Exam History
             </Button>
@@ -407,6 +436,51 @@ function SyllabusExplorerContent() {
           >
             <Zap className="w-4 h-4 text-amber-300" /> Start Practice
           </button>
+        </div>
+      </div>
+
+      {/* ── Separate Standard Windows (Strict Class 10 & 12 Isolation) ── */}
+      <div className="p-3.5 rounded-2xl bg-gradient-to-r from-secondary/80 to-secondary/40 border border-border flex items-center justify-between flex-wrap gap-3">
+        <div className="flex items-center gap-2.5 flex-wrap">
+          <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
+            <GraduationCap className="w-4 h-4 text-amber-400" />
+            Standard Window:
+          </span>
+          <div className="flex items-center gap-1.5 bg-card/80 p-1 rounded-xl border border-border">
+            <button
+              type="button"
+              onClick={() => handleSelectStandard(10)}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                prepClass === 10
+                  ? "bg-sky-500 text-slate-950 font-black shadow-md shadow-sky-500/25"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/60"
+              }`}
+            >
+              Class 10 (SSLC Examination)
+            </button>
+            <button
+              type="button"
+              onClick={() => handleSelectStandard(12)}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                prepClass === 12
+                  ? "bg-purple-600 text-white font-black shadow-md shadow-purple-600/25"
+                  : "text-muted-foreground hover:text-foreground hover:bg-secondary/60"
+              }`}
+            >
+              Class 12 (HSE Higher Secondary)
+            </button>
+          </div>
+        </div>
+
+        <div className="text-[11px] text-muted-foreground font-mono flex items-center gap-2">
+          <span>Active Curriculum:</span>
+          <span className={`px-2.5 py-0.5 rounded-md font-bold text-xs ${
+            prepClass === 10
+              ? "bg-sky-500/20 text-sky-300 border border-sky-500/30"
+              : "bg-purple-500/20 text-purple-300 border border-purple-500/30"
+          }`}>
+            Class {prepClass} ({subjects.length} Subjects Active)
+          </span>
         </div>
       </div>
 
@@ -638,12 +712,12 @@ function SyllabusExplorerContent() {
               <div>
                 <div className="flex items-center gap-2">
                   <h2 className="text-xl font-black text-foreground">
-                    12th Standard Chemistry Question Bank
+                    Class {prepClass} {currentSubject?.name || "Subject"} Question Bank
                   </h2>
-                  <Badge variant="warning">50 + 50 Sets</Badge>
+                  <Badge variant="warning">{qbankStats?.totalQuestions || 100} Questions Pool</Badge>
                 </div>
                 <p className="text-xs text-muted-foreground mt-1">
-                  100 Questions Covering all 15 Tamil Nadu Samacheer Kalvi Units with Bilingual Explanations
+                  100 Authentic Objective Questions for Tamil Nadu {prepClass === 10 ? "SSLC Board" : "HSE Higher Secondary"} with Answer Keys &amp; Rationale
                 </p>
               </div>
 
@@ -653,14 +727,39 @@ function SyllabusExplorerContent() {
                   variant="primary"
                   onClick={() => {
                     setMainTab("practice");
-                    setPracticeCount(50);
-                    startPracticeTest(50);
+                    setPracticeCount(25);
+                    startPracticeTest(25);
                   }}
                   className="gap-1.5 text-xs shadow-lg shadow-violet-600/30"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-amber-300" /> Launch 50-Question Practice Test
+                  <Sparkles className="w-3.5 h-3.5 text-amber-300" /> Launch {currentSubject?.name} Practice Test
                 </Button>
               </div>
+            </div>
+
+            {/* Subject Selector Buttons in Question Bank Tab */}
+            <div className="pt-2 border-t border-border flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+              <span className="text-[11px] font-bold text-muted-foreground flex-shrink-0">Subject:</span>
+              {subjects.map((sub) => {
+                const isSelected = sub.id === currentSubject?.id;
+                return (
+                  <button
+                    key={sub.id}
+                    type="button"
+                    onClick={() => {
+                      setSelectedSubId(sub.id);
+                      setPracticeSubjectId(sub.id);
+                    }}
+                    className={`flex-shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold border transition-all ${
+                      isSelected
+                        ? "bg-violet-600 text-white border-violet-500 shadow-sm"
+                        : "bg-secondary/60 border-border text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {sub.name} ({sub.code})
+                  </button>
+                );
+              })}
             </div>
 
             {/* Quick Stat Badges */}

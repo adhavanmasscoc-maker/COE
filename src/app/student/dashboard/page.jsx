@@ -63,14 +63,14 @@ function SubjectCard({ sub, isPreview, previewRoll }) {
 
       <div className="flex items-center justify-between pt-1 border-t border-[rgba(124,58,237,0.1)] text-xs">
         <Link
-          href="/student/papers"
+          href={`/student/papers${isPreview ? `?previewRollNo=${encodeURIComponent(previewRoll)}` : ""}`}
           className="flex items-center gap-1 text-[#5c5c8a] hover:text-violet-300 transition-colors"
         >
           <FileText className="w-3.5 h-3.5" />
           {sub.publishedPapersCount} {isTamil ? "வினாத்தாள்கள்" : "Papers"}
         </Link>
         <Link
-          href={`/student/syllabus?code=${encodeURIComponent(sub.code)}`}
+          href={`/student/syllabus?code=${encodeURIComponent(sub.code)}${isPreview ? `&previewRollNo=${encodeURIComponent(previewRoll)}` : ""}`}
           className="flex items-center gap-1 text-violet-400 hover:text-violet-300 font-semibold transition-colors"
         >
           {isTamil ? "பாடக்குறிப்புகள்" : "Study"} <ChevronRight className="w-3 h-3" />
@@ -129,6 +129,14 @@ function StudentDashboardContent() {
     fetchDashboardData(previewRoll);
   }, [previewRoll]);
 
+  // Data structure: Array decoration with integer rank tuple { e, rank, examAt, subject, id }.
+  // Time complexity: O(N log N) single-pass deterministic sort: live first, upcoming by nearest date/time asc, completed at bottom.
+  // Note: Must be invoked unconditionally at top-level before early returns to comply with React Hooks rules.
+  const rawExams = data?.upcomingExams;
+  const sortedExams = useMemo(() => {
+    return sortExams(rawExams || []);
+  }, [rawExams]);
+
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
@@ -157,14 +165,7 @@ function StudentDashboardContent() {
   }
 
   const { profile, subjects, upcomingExams, notices, isPreview } = data;
-  const overallPct = profile.overallCompletion || 0;
-
-  // Data structure: Array decoration with integer rank tuple { e, rank, examAt, subject, id }.
-  // Time complexity: O(N log N) single-pass deterministic sort: live first, upcoming by nearest date/time asc, completed at bottom.
-  // If rules change: Update statusRank or add tie-breakers in engine.config.js.
-  const sortedExams = useMemo(() => {
-    return sortExams(upcomingExams);
-  }, [upcomingExams]);
+  const overallPct = profile?.overallCompletion || 0;
 
   return (
     <div className="page-content space-y-6">
@@ -437,7 +438,9 @@ function StudentDashboardContent() {
                         <td className="py-4 px-4 align-middle">
                           <div className="flex items-center gap-2 flex-wrap">
                             <Link
-                              href={`/student/syllabus?code=${encodeURIComponent(exam.code)}`}
+                              href={`/student/syllabus?code=${encodeURIComponent(exam.code)}${
+                                isPreview ? `&previewRollNo=${encodeURIComponent(previewRoll)}` : ""
+                              }`}
                               className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-violet-500/30 text-violet-300 hover:bg-violet-500/15 transition-all"
                             >
                               <BookOpen className="w-3 h-3 text-violet-400" />
@@ -649,7 +652,9 @@ function StudentDashboardContent() {
                     <div className="flex flex-col gap-2 pt-1">
                       <div className="flex gap-2">
                         <Link
-                          href={`/student/syllabus?code=${encodeURIComponent(exam.code)}`}
+                          href={`/student/syllabus?code=${encodeURIComponent(exam.code)}${
+                            isPreview ? `&previewRollNo=${encodeURIComponent(previewRoll)}` : ""
+                          }`}
                           className="flex-1 min-h-[44px] flex items-center justify-center gap-1 text-xs font-bold rounded-lg border border-violet-500/30 text-violet-300 bg-violet-500/5 hover:bg-violet-500/15"
                         >
                           <BookOpen className="w-3.5 h-3.5" /> {isTamil ? "பாடத்திட்டம்" : "Syllabus"}

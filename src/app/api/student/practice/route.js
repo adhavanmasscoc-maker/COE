@@ -170,11 +170,13 @@ function loadChemistry100() {
 export async function GET(request) {
   try {
     const session = await getCurrentSession();
-    if (!session) {
+    const { searchParams } = new URL(request.url);
+    const previewRollNo = searchParams.get("previewRollNo");
+
+    if (!session && !previewRollNo) {
       return NextResponse.json({ error: "Authentication required." }, { status: 401 });
     }
 
-    const { searchParams } = new URL(request.url);
     const subjectId = searchParams.get("subjectId");
     const subjectCode = searchParams.get("code");
     const unitParam = searchParams.get("unit"); // e.g. "1" or "all"
@@ -196,8 +198,12 @@ export async function GET(request) {
     }
 
     if (!targetSubject) {
+      const defaultClass = searchParams.get("prepClass")
+        ? parseInt(searchParams.get("prepClass"), 10)
+        : (session?.examPrepClass || (previewRollNo && !/1[12]\d{2}/.test(previewRollNo) ? 10 : 12));
+
       targetSubject = await db.subject.findFirst({
-        where: { prepClass: session.examPrepClass || 12 },
+        where: { prepClass: defaultClass },
         include: { units: { include: { chapters: true } } },
       });
     }
