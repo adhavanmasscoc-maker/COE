@@ -6,8 +6,9 @@ import path from "path";
 
 export const dynamic = "force-dynamic";
 
-// In-memory cache for fast file loading
-// Universal Question Bank Loader for Class 10 & 12
+// Data structure: Hash table (Object) for O(1) set slicing and deterministic array partitioning.
+// Time complexity: O(N) file read and single-pass JSON parse where N = 100 questions.
+// If rules change: Update canonical file mapping in questions/exams/ directory.
 function loadSubjectQuestions(subjectCode, setParam = "all") {
   const code = (subjectCode || "").toUpperCase();
   let fileName = null;
@@ -17,15 +18,10 @@ function loadSubjectQuestions(subjectCode, setParam = "all") {
   else if (code === "CHE-12") fileName = "CHEMISTRY-12-100-ALL.json";
 
   if (fileName) {
-    const candidatePaths = [
-      path.join(process.cwd(), "questions", "exams", fileName),
-      path.join(process.cwd(), "exams", "questions", fileName),
-    ];
-
-    for (const p of candidatePaths) {
-      try {
-        if (fs.existsSync(p)) {
-          const raw = JSON.parse(fs.readFileSync(p, "utf8"));
+    const canonicalPath = path.join(process.cwd(), "questions", "exams", fileName);
+    try {
+      if (fs.existsSync(canonicalPath)) {
+        const raw = JSON.parse(fs.readFileSync(canonicalPath, "utf8"));
           let all = [];
           if (Array.isArray(raw.questions)) {
             all = raw.questions;
@@ -42,17 +38,16 @@ function loadSubjectQuestions(subjectCode, setParam = "all") {
           if (setParam === "1" || setParam === "set1" || setParam === "set-a") questions = set1;
           else if (setParam === "2" || setParam === "set2" || setParam === "set-b") questions = set2;
 
-          return {
-            totalQuestions: all.length,
-            set1Count: set1.length,
-            set2Count: set2.length,
-            questions,
-            allQuestions: all,
-          };
-        }
-      } catch (e) {
-        console.warn(`Could not load ${fileName} from ${p}:`, e.message);
+        return {
+          totalQuestions: all.length,
+          set1Count: set1.length,
+          set2Count: set2.length,
+          questions,
+          allQuestions: all,
+        };
       }
+    } catch (e) {
+      console.warn(`Could not load ${fileName} from ${canonicalPath}:`, e.message);
     }
   }
 

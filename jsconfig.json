@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@questions/*": ["./questions/exams/*"],
+      "@exams/*": ["./questions/exams/*"]
     }
   },
   "include": ["**/*.js", "**/*.jsx"],
