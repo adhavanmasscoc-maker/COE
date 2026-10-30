@@ -202,3 +202,4 @@ export function translateOption(text, lang = "en") {
 
 fs.writeFileSync(path.join(__dirname, '../src/lib/questionTranslations.js'), out, 'utf-8');
 console.log('✅ Generated src/lib/questionTranslations.js with', Object.keys(qMap).length, 'questions and', Object.keys(optMap).length, 'options!');
+

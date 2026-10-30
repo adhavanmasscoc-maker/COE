@@ -1,0 +1,376 @@
+{
+  "subject": "Mathematics",
+  "code": "MAT-10",
+  "standard": 10,
+  "total_questions": 14,
+  "set_number": "SET1",
+  "duration_minutes": 180,
+  "total_marks": 14,
+  "instructions": "Tamil Nadu Samacheer Kalvi Board Examination. Attempt all questions. Results will be verified and published by the Controller of Examinations.",
+  "questions": [
+    {
+      "question_number": 1,
+      "question": "If n(A x B) = 12 and n(A) = 4, then n(B) is equal to:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "3"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "8"
+        },
+        {
+          "id": "D",
+          "text": "12"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official DGE Key: Correct answer is A under Unit 1: Relations & Functions.",
+      "syllabus_ref": "Unit 1: Relations & Functions"
+    },
+    {
+      "question_number": 2,
+      "question": "The modular arithmetic expression 17 ≡ x (mod 5) yields x as:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "1"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official DGE Key: Correct answer is B under Unit 2: Numbers & Sequences.",
+      "syllabus_ref": "Unit 2: Numbers & Sequences"
+    },
+    {
+      "question_number": 3,
+      "question": "If a, b, c are in A.P., then (a - b) / (b - c) is equal to:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "a / b"
+        },
+        {
+          "id": "B",
+          "text": "b / c"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "c / a"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Official DGE Key: Correct answer is C under Unit 2: Numbers & Sequences.",
+      "syllabus_ref": "Unit 2: Numbers & Sequences"
+    },
+    {
+      "question_number": 4,
+      "question": "If the ordered pairs (a + 2, 4) and (5, 2a + b) are equal, then (a, b) is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "(2, -2)"
+        },
+        {
+          "id": "B",
+          "text": "(5, 1)"
+        },
+        {
+          "id": "C",
+          "text": "(2, 3)"
+        },
+        {
+          "id": "D",
+          "text": "(3, -2)"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Official DGE Key: Correct answer is D under Unit 1: Relations & Functions.",
+      "syllabus_ref": "Unit 1: Relations & Functions"
+    },
+    {
+      "question_number": 5,
+      "question": "If the HCF of 65 and 117 is expressible in the form 65m - 117, then the value of m is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "1"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official DGE Key: Correct answer is B under Unit 2: Numbers & Sequences.",
+      "syllabus_ref": "Unit 2: Numbers & Sequences"
+    },
+    {
+      "question_number": 6,
+      "question": "If ΔABC ~ ΔPQR such that Area(ΔABC) = 9 cm² and Area(ΔPQR) = 16 cm² with BC = 2.1 cm, then QR is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "2.8 cm"
+        },
+        {
+          "id": "B",
+          "text": "3.2 cm"
+        },
+        {
+          "id": "C",
+          "text": "4.2 cm"
+        },
+        {
+          "id": "D",
+          "text": "1.8 cm"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official DGE Key: Correct answer is A under Unit 4: Geometry.",
+      "syllabus_ref": "Unit 4: Geometry"
+    },
+    {
+      "question_number": 7,
+      "question": "The slope of the line which is perpendicular to a line with slope 2/3 is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "2/3"
+        },
+        {
+          "id": "B",
+          "text": "-2/3"
+        },
+        {
+          "id": "C",
+          "text": "3/2"
+        },
+        {
+          "id": "D",
+          "text": "-3/2"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Official DGE Key: Correct answer is D under Unit 5: Coordinate Geometry.",
+      "syllabus_ref": "Unit 5: Coordinate Geometry"
+    },
+    {
+      "question_number": 8,
+      "question": "If the points (3, p), (5, 7) and (6, 6) are collinear, then p is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "7"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "9"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Official DGE Key: Correct answer is C under Unit 5: Coordinate Geometry.",
+      "syllabus_ref": "Unit 5: Coordinate Geometry"
+    },
+    {
+      "question_number": 9,
+      "question": "The value of sin²θ + 1 / (1 + tan²θ) is equal to:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        },
+        {
+          "id": "C",
+          "text": "tan²θ"
+        },
+        {
+          "id": "D",
+          "text": "cos²θ"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official DGE Key: Correct answer is B under Unit 6: Trigonometry.",
+      "syllabus_ref": "Unit 6: Trigonometry"
+    },
+    {
+      "question_number": 10,
+      "question": "A tower is 60 m high. Its shadow is x metres when the sun's altitude is 45°. The value of x is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "30 m"
+        },
+        {
+          "id": "B",
+          "text": "45 m"
+        },
+        {
+          "id": "C",
+          "text": "60√3 m"
+        },
+        {
+          "id": "D",
+          "text": "60 m"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Official DGE Key: Correct answer is D under Unit 6: Trigonometry.",
+      "syllabus_ref": "Unit 6: Trigonometry"
+    },
+    {
+      "question_number": 11,
+      "question": "The total surface area of a hemisphere of radius r is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "2πr² sq. units"
+        },
+        {
+          "id": "B",
+          "text": "3πr² sq. units"
+        },
+        {
+          "id": "C",
+          "text": "4πr² sq. units"
+        },
+        {
+          "id": "D",
+          "text": "6πr² sq. units"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official DGE Key: Correct answer is B under Unit 7: Mensuration.",
+      "syllabus_ref": "Unit 7: Mensuration"
+    },
+    {
+      "question_number": 12,
+      "question": "The ratio of the volumes of two spheres of radii r1 and r2 is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "r1 : r2"
+        },
+        {
+          "id": "B",
+          "text": "r1² : r2²"
+        },
+        {
+          "id": "C",
+          "text": "r1³ : r2³"
+        },
+        {
+          "id": "D",
+          "text": "3r1 : 3r2"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Official DGE Key: Correct answer is C under Unit 7: Mensuration.",
+      "syllabus_ref": "Unit 7: Mensuration"
+    },
+    {
+      "question_number": 13,
+      "question": "Which of the following is not a measure of dispersion?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Range"
+        },
+        {
+          "id": "B",
+          "text": "Standard deviation"
+        },
+        {
+          "id": "C",
+          "text": "Variance"
+        },
+        {
+          "id": "D",
+          "text": "Arithmetic Mean"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Official DGE Key: Correct answer is D under Unit 8: Statistics & Probability.",
+      "syllabus_ref": "Unit 8: Statistics & Probability"
+    },
+    {
+      "question_number": 14,
+      "question": "If P(A) = 0.37, P(B) = 0.42, and P(A ∩ B) = 0.09, then P(A ∪ B) is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "0.70"
+        },
+        {
+          "id": "B",
+          "text": "0.88"
+        },
+        {
+          "id": "C",
+          "text": "0.69"
+        },
+        {
+          "id": "D",
+          "text": "0.79"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official DGE Key: Correct answer is A under Unit 8: Statistics & Probability.",
+      "syllabus_ref": "Unit 8: Statistics & Probability"
+    }
+  ]
+}

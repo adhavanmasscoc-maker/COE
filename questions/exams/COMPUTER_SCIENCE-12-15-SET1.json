@@ -1,0 +1,402 @@
+{
+  "subject": "Computer Science",
+  "code": "CSC-12",
+  "standard": 12,
+  "total_questions": 15,
+  "set_number": "SET1",
+  "duration_minutes": 180,
+  "total_marks": 15,
+  "instructions": "Tamil Nadu Samacheer Kalvi Higher Secondary Examination. All questions compulsory in Part I. Official evaluation strictly enforced.",
+  "questions": [
+    {
+      "question_number": 1,
+      "question": "Which of the following is an organized collection of data?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Database"
+        },
+        {
+          "id": "B",
+          "text": "DBMS"
+        },
+        {
+          "id": "C",
+          "text": "SQL"
+        },
+        {
+          "id": "D",
+          "text": "Table"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official DGE Computer Science Key: Option A is correct.",
+      "syllabus_ref": "Unit 3: Database Management"
+    },
+    {
+      "question_number": 2,
+      "question": "The private members of a class can be accessed from outside the class using:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Public functions"
+        },
+        {
+          "id": "B",
+          "text": "Private functions"
+        },
+        {
+          "id": "C",
+          "text": "Scope resolution operator"
+        },
+        {
+          "id": "D",
+          "text": "Directly"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official DGE Computer Science Key: Option A is correct.",
+      "syllabus_ref": "Unit 2: OOP Python"
+    },
+    {
+      "question_number": 3,
+      "question": "Which of the following algorithm design techniques uses a top-down approach?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Divide and Conquer"
+        },
+        {
+          "id": "B",
+          "text": "Dynamic Programming"
+        },
+        {
+          "id": "C",
+          "text": "Greedy Approach"
+        },
+        {
+          "id": "D",
+          "text": "Backtracking"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official DGE Computer Science Key: Option A is correct.",
+      "syllabus_ref": "Unit 1: Algorithms"
+    },
+    {
+      "question_number": 4,
+      "question": "What is the worst-case time complexity of Bubble Sort?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "O(n)"
+        },
+        {
+          "id": "B",
+          "text": "O(n log n)"
+        },
+        {
+          "id": "C",
+          "text": "O(n^2)"
+        },
+        {
+          "id": "D",
+          "text": "O(1)"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Official DGE Computer Science Key: Option C is correct.",
+      "syllabus_ref": "Unit 1: Algorithms"
+    },
+    {
+      "question_number": 5,
+      "question": "Which operator is used for Exponentiation in Python?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "*"
+        },
+        {
+          "id": "B",
+          "text": "**"
+        },
+        {
+          "id": "C",
+          "text": "^"
+        },
+        {
+          "id": "D",
+          "text": "//"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official DGE Computer Science Key: Option B is correct.",
+      "syllabus_ref": "Unit 2: Python Core"
+    },
+    {
+      "question_number": 6,
+      "question": "Which control statement in Python is used as a placeholder for future code?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "break"
+        },
+        {
+          "id": "B",
+          "text": "continue"
+        },
+        {
+          "id": "C",
+          "text": "pass"
+        },
+        {
+          "id": "D",
+          "text": "exit"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Official DGE Computer Science Key: Option C is correct.",
+      "syllabus_ref": "Unit 2: Control Structures"
+    },
+    {
+      "question_number": 7,
+      "question": "In Python, which function is used to find the length of a string/list?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "length()"
+        },
+        {
+          "id": "B",
+          "text": "size()"
+        },
+        {
+          "id": "C",
+          "text": "len()"
+        },
+        {
+          "id": "D",
+          "text": "count()"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Official DGE Computer Science Key: Option C is correct.",
+      "syllabus_ref": "Unit 2: Data Structures"
+    },
+    {
+      "question_number": 8,
+      "question": "Which data type in Python is immutable?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "List"
+        },
+        {
+          "id": "B",
+          "text": "Dictionary"
+        },
+        {
+          "id": "C",
+          "text": "Set"
+        },
+        {
+          "id": "D",
+          "text": "Tuple"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Official DGE Computer Science Key: Option D is correct.",
+      "syllabus_ref": "Unit 2: Data Structures"
+    },
+    {
+      "question_number": 9,
+      "question": "Which class method is automatically executed when an object of a class is created in Python?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "__init__()"
+        },
+        {
+          "id": "B",
+          "text": "__del__()"
+        },
+        {
+          "id": "C",
+          "text": "__new__()"
+        },
+        {
+          "id": "D",
+          "text": "__create__()"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official DGE Computer Science Key: Option A is correct.",
+      "syllabus_ref": "Unit 2: OOP Python"
+    },
+    {
+      "question_number": 10,
+      "question": "What is the full form of DBMS?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Data Base Management System"
+        },
+        {
+          "id": "B",
+          "text": "Data Management System"
+        },
+        {
+          "id": "C",
+          "text": "Database Mining System"
+        },
+        {
+          "id": "D",
+          "text": "Database Multiple System"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official DGE Computer Science Key: Option A is correct.",
+      "syllabus_ref": "Unit 3: Database Concepts"
+    },
+    {
+      "question_number": 11,
+      "question": "Which key uniquely identifies each record in a relational table?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Foreign Key"
+        },
+        {
+          "id": "B",
+          "text": "Primary Key"
+        },
+        {
+          "id": "C",
+          "text": "Candidate Key"
+        },
+        {
+          "id": "D",
+          "text": "Alternate Key"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official DGE Computer Science Key: Option B is correct.",
+      "syllabus_ref": "Unit 3: Relational Model"
+    },
+    {
+      "question_number": 12,
+      "question": "Which SQL command is used to remove a table permanently from a database?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "DELETE"
+        },
+        {
+          "id": "B",
+          "text": "TRUNCATE"
+        },
+        {
+          "id": "C",
+          "text": "DROP"
+        },
+        {
+          "id": "D",
+          "text": "REMOVE"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Official DGE Computer Science Key: Option C is correct.",
+      "syllabus_ref": "Unit 3: SQL DDL"
+    },
+    {
+      "question_number": 13,
+      "question": "Which CSV module function is used to write data into a CSV file line by line?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "writerow()"
+        },
+        {
+          "id": "B",
+          "text": "writeall()"
+        },
+        {
+          "id": "C",
+          "text": "append()"
+        },
+        {
+          "id": "D",
+          "text": "writer()"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official DGE Computer Science Key: Option A is correct.",
+      "syllabus_ref": "Unit 4: CSV Handling"
+    },
+    {
+      "question_number": 14,
+      "question": "Which Python module provides functions for interfacing with the operating system?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "sys"
+        },
+        {
+          "id": "B",
+          "text": "os"
+        },
+        {
+          "id": "C",
+          "text": "getopt"
+        },
+        {
+          "id": "D",
+          "text": "csv"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official DGE Computer Science Key: Option B is correct.",
+      "syllabus_ref": "Unit 4: C++ Integration"
+    },
+    {
+      "question_number": 15,
+      "question": "Which SQL function returns the largest value of the selected column?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "HIGH()"
+        },
+        {
+          "id": "B",
+          "text": "MAX()"
+        },
+        {
+          "id": "C",
+          "text": "MAXIMUM()"
+        },
+        {
+          "id": "D",
+          "text": "LARGE()"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official DGE Computer Science Key: Option B is correct.",
+      "syllabus_ref": "Unit 3: SQL Functions"
+    }
+  ]
+}

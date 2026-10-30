@@ -1,0 +1,402 @@
+{
+  "subject": "Physics",
+  "code": "PHY-12",
+  "standard": 12,
+  "total_questions": 15,
+  "set_number": "SET1",
+  "duration_minutes": 180,
+  "total_marks": 15,
+  "instructions": "Tamil Nadu Samacheer Kalvi Board Physics Examination. Attempt all questions in Section A.",
+  "questions": [
+    {
+      "question_number": 1,
+      "question": "The electric flux through a closed surface depends upon:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Shape of surface"
+        },
+        {
+          "id": "B",
+          "text": "Net charge enclosed"
+        },
+        {
+          "id": "C",
+          "text": "Permittivity of outer medium only"
+        },
+        {
+          "id": "D",
+          "text": "Surface area"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official TN Board Physics Key: Option B is correct under Unit 1: Electrostatics.",
+      "syllabus_ref": "Unit 1: Electrostatics"
+    },
+    {
+      "question_number": 2,
+      "question": "Kirchhoff's first law (junction rule) expresses the conservation of:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Energy"
+        },
+        {
+          "id": "B",
+          "text": "Momentum"
+        },
+        {
+          "id": "C",
+          "text": "Electric charge"
+        },
+        {
+          "id": "D",
+          "text": "Angular momentum"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Official TN Board Physics Key: Option C is correct under Unit 2: Current Electricity.",
+      "syllabus_ref": "Unit 2: Current Electricity"
+    },
+    {
+      "question_number": 3,
+      "question": "A step-up transformer converts:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Low voltage into high voltage"
+        },
+        {
+          "id": "B",
+          "text": "High voltage into low voltage"
+        },
+        {
+          "id": "C",
+          "text": "AC into DC"
+        },
+        {
+          "id": "D",
+          "text": "DC into AC"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official TN Board Physics Key: Option A is correct under Unit 4: Electromagnetic Induction.",
+      "syllabus_ref": "Unit 4: Electromagnetic Induction"
+    },
+    {
+      "question_number": 4,
+      "question": "Which of the following electromagnetic waves has the highest frequency?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "X-rays"
+        },
+        {
+          "id": "B",
+          "text": "Gamma rays"
+        },
+        {
+          "id": "C",
+          "text": "Ultraviolet rays"
+        },
+        {
+          "id": "D",
+          "text": "Microwaves"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official TN Board Physics Key: Option B is correct under Unit 5: Electromagnetic Waves.",
+      "syllabus_ref": "Unit 5: Electromagnetic Waves"
+    },
+    {
+      "question_number": 5,
+      "question": "The phenomenon responsible for the twinkling of stars is:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Refraction by atmosphere"
+        },
+        {
+          "id": "B",
+          "text": "Total internal reflection"
+        },
+        {
+          "id": "C",
+          "text": "Scattering of light"
+        },
+        {
+          "id": "D",
+          "text": "Interference"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official TN Board Physics Key: Option A is correct under Unit 6: Optics.",
+      "syllabus_ref": "Unit 6: Optics"
+    },
+    {
+      "question_number": 6,
+      "question": "The work function of a metal depends on:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Nature of the metal surface"
+        },
+        {
+          "id": "B",
+          "text": "Frequency of incident light"
+        },
+        {
+          "id": "C",
+          "text": "Intensity of light"
+        },
+        {
+          "id": "D",
+          "text": "Potential difference"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official TN Board Physics Key: Option A is correct under Unit 7: Dual Nature of Radiation.",
+      "syllabus_ref": "Unit 7: Dual Nature of Radiation"
+    },
+    {
+      "question_number": 7,
+      "question": "In nuclear fission of U-235, the average number of neutrons released per fission is about:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "1.5"
+        },
+        {
+          "id": "B",
+          "text": "2.5"
+        },
+        {
+          "id": "C",
+          "text": "3.5"
+        },
+        {
+          "id": "D",
+          "text": "4.5"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official TN Board Physics Key: Option B is correct under Unit 8: Atomic & Nuclear Physics.",
+      "syllabus_ref": "Unit 8: Atomic & Nuclear Physics"
+    },
+    {
+      "question_number": 8,
+      "question": "In an unbiased p-n junction, the width of the depletion region is of the order of:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "1 mm"
+        },
+        {
+          "id": "B",
+          "text": "1 µm"
+        },
+        {
+          "id": "C",
+          "text": "1 nm"
+        },
+        {
+          "id": "D",
+          "text": "1 cm"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Official TN Board Physics Key: Option B is correct under Unit 9: Semiconductor Devices.",
+      "syllabus_ref": "Unit 9: Semiconductor Devices"
+    },
+    {
+      "question_number": 9,
+      "question": "The ratio of magnetic length to geometric length of a bar magnet is approximately:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "0.84"
+        },
+        {
+          "id": "B",
+          "text": "0.5"
+        },
+        {
+          "id": "C",
+          "text": "1.0"
+        },
+        {
+          "id": "D",
+          "text": "1.2"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official TN Board Physics Key: Option A is correct under Unit 3: Magnetism.",
+      "syllabus_ref": "Unit 3: Magnetism"
+    },
+    {
+      "question_number": 10,
+      "question": "Self-inductance of a coil does not depend on:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Number of turns"
+        },
+        {
+          "id": "B",
+          "text": "Area of cross-section"
+        },
+        {
+          "id": "C",
+          "text": "Current flowing through it"
+        },
+        {
+          "id": "D",
+          "text": "Permeability of core"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Official TN Board Physics Key: Option C is correct under Unit 4: Electromagnetic Induction.",
+      "syllabus_ref": "Unit 4: Electromagnetic Induction"
+    },
+    {
+      "question_number": 11,
+      "question": "Light waves can be polarized because they are:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Transverse waves"
+        },
+        {
+          "id": "B",
+          "text": "Longitudinal waves"
+        },
+        {
+          "id": "C",
+          "text": "Mechanical waves"
+        },
+        {
+          "id": "D",
+          "text": "Electromagnetic waves"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official TN Board Physics Key: Option A is correct under Unit 6: Optics.",
+      "syllabus_ref": "Unit 6: Optics"
+    },
+    {
+      "question_number": 12,
+      "question": "The de Broglie wavelength of an electron accelerated through V volts is given by:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "12.27 / √V Å"
+        },
+        {
+          "id": "B",
+          "text": "1.227 / √V Å"
+        },
+        {
+          "id": "C",
+          "text": "0.1227 / √V Å"
+        },
+        {
+          "id": "D",
+          "text": "122.7 / √V Å"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official TN Board Physics Key: Option A is correct under Unit 7: Dual Nature.",
+      "syllabus_ref": "Unit 7: Dual Nature"
+    },
+    {
+      "question_number": 13,
+      "question": "The mass defect per nucleon in a nucleus is called its:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Packing fraction"
+        },
+        {
+          "id": "B",
+          "text": "Binding energy"
+        },
+        {
+          "id": "C",
+          "text": "Binding energy per nucleon"
+        },
+        {
+          "id": "D",
+          "text": "Nuclear density"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official TN Board Physics Key: Option A is correct under Unit 8: Nuclear Physics.",
+      "syllabus_ref": "Unit 8: Nuclear Physics"
+    },
+    {
+      "question_number": 14,
+      "question": "A zener diode is primarily used as a:",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Voltage regulator"
+        },
+        {
+          "id": "B",
+          "text": "Rectifier"
+        },
+        {
+          "id": "C",
+          "text": "Amplifier"
+        },
+        {
+          "id": "D",
+          "text": "Oscillator"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official TN Board Physics Key: Option A is correct under Unit 9: Electronics.",
+      "syllabus_ref": "Unit 9: Electronics"
+    },
+    {
+      "question_number": 15,
+      "question": "Which modulation technique is most immune to atmospheric noise?",
+      "marks": 1,
+      "options": [
+        {
+          "id": "A",
+          "text": "Frequency Modulation (FM)"
+        },
+        {
+          "id": "B",
+          "text": "Amplitude Modulation (AM)"
+        },
+        {
+          "id": "C",
+          "text": "Phase Modulation (PM)"
+        },
+        {
+          "id": "D",
+          "text": "Pulse Width Modulation"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Official TN Board Physics Key: Option A is correct under Unit 10: Communication Systems.",
+      "syllabus_ref": "Unit 10: Communication Systems"
+    }
+  ]
+}
