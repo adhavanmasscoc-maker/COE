@@ -140,6 +140,14 @@ function COEAdminExamsContent() {
   const [swappingId, setSwappingId] = useState(null);
   const [regenerating, setRegenerating] = useState(false);
 
+  // Reschedule Date & Time state
+  const [rescheduleModal, setRescheduleModal] = useState(null);
+  const [rescheduleDate, setRescheduleDate] = useState("");
+  const [rescheduleTime, setRescheduleTime] = useState("");
+  const [rescheduleReason, setRescheduleReason] = useState("");
+  const [rescheduleSubmitting, setRescheduleSubmitting] = useState(false);
+  const [rescheduleAuditLogs, setRescheduleAuditLogs] = useState([]);
+
   // New Exam Form State (12-hour clock with AM/PM & supportive instructions)
   const [examDateOnly, setExamDateOnly] = useState(
     new Date(Date.now() + 86400000 * 2).toISOString().slice(0, 10)
@@ -280,6 +288,51 @@ function COEAdminExamsContent() {
       });
       return updated;
     });
+  };
+
+  const openRescheduleModal = async (exam) => {
+    setRescheduleModal(exam);
+    const d = new Date(exam.examDate);
+    setRescheduleDate(d.toISOString().slice(0, 10));
+    setRescheduleTime(d.toTimeString().slice(0, 5));
+    setRescheduleReason("");
+    setRescheduleAuditLogs([]);
+    try {
+      const res = await fetch(`/api/admin/exams/${exam.id}/date`);
+      const data = await res.json();
+      if (res.ok && data.logs) {
+        setRescheduleAuditLogs(data.logs);
+      }
+    } catch {}
+  };
+
+  const handleSaveReschedule = async (e) => {
+    e.preventDefault();
+    if (!rescheduleModal || !rescheduleDate || !rescheduleTime) return;
+    setRescheduleSubmitting(true);
+    try {
+      const combinedIso = new Date(`${rescheduleDate}T${rescheduleTime}:00`).toISOString();
+      const res = await fetch(`/api/admin/exams/${rescheduleModal.id}/date`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          examDate: combinedIso,
+          reason: rescheduleReason || "Scheduled date modified by Controller of Examinations",
+        }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        showMsg(`Exam date updated to ${safeFormatDate(combinedIso)} ${safeFormatTime(combinedIso)}!`);
+        setRescheduleModal(null);
+        fetchExams();
+      } else {
+        alert(data.error || "Failed to update date.");
+      }
+    } catch {
+      alert("Network error updating date.");
+    } finally {
+      setRescheduleSubmitting(false);
+    }
   };
 
   const openRandomSwapper = async (exam) => {
@@ -753,7 +806,7 @@ function COEAdminExamsContent() {
                       <Badge variant="purple">Class {exam.prepClass}</Badge>
                     </td>
                     <td className="py-3 px-4 font-mono text-muted-foreground">
-                      <div className="flex items-center gap-1.5">
+                      <div className="flex items-center gap-1.5 flex-wrap">
                         <Calendar className="w-3.5 h-3.5 text-sky-400" />
                         <span>
                           {safeFormatDate(exam.examDate, {
@@ -769,6 +822,14 @@ function COEAdminExamsContent() {
                             hour12: true,
                           })}
                         </span>
+                        <button
+                          type="button"
+                          onClick={() => openRescheduleModal(exam)}
+                          className="px-1.5 py-0.5 rounded text-[10px] font-bold text-amber-400 hover:text-amber-300 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/25 ml-1"
+                          title="Reschedule Exam Date & Time"
+                        >
+                          Edit
+                        </button>
                       </div>
                     </td>
                     <td className="py-3 px-4 text-muted-foreground font-medium">
@@ -1942,6 +2003,130 @@ function COEAdminExamsContent() {
                 Close Solutions Viewer
               </Button>
             </div>
+          </Card>
+        </div>
+      )}
+
+      {/* Reschedule Exam Date Modal */}
+      {rescheduleModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-in fade-in-50">
+          <Card className="max-w-lg w-full p-6 space-y-4 border-amber-500/30 bg-card shadow-2xl">
+            <div className="flex items-center justify-between pb-3 border-b border-border">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-5 h-5 text-amber-400" />
+                <h3 className="font-bold text-base text-foreground">
+                  Reschedule Examination Date & Time
+                </h3>
+              </div>
+              <button
+                onClick={() => setRescheduleModal(null)}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-3 rounded-xl bg-secondary/50 border border-border text-xs space-y-1">
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Subject:</span>
+                <span className="font-bold text-foreground">
+                  {rescheduleModal.subject?.name} ({rescheduleModal.subject?.code})
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Standard:</span>
+                <span className="font-semibold text-foreground">Class {rescheduleModal.prepClass}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Current Date & Time:</span>
+                <span className="font-mono text-amber-400 font-bold">
+                  {safeFormatDate(rescheduleModal.examDate)} at {safeFormatTime(rescheduleModal.examDate)}
+                </span>
+              </div>
+            </div>
+
+            <form onSubmit={handleSaveReschedule} className="space-y-4 text-xs">
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-muted-foreground font-semibold mb-1">
+                    New Date *
+                  </label>
+                  <input
+                    type="date"
+                    required
+                    value={rescheduleDate}
+                    onChange={(e) => setRescheduleDate(e.target.value)}
+                    className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground font-mono text-xs"
+                  />
+                </div>
+                <div>
+                  <label className="block text-muted-foreground font-semibold mb-1">
+                    New Time (24h) *
+                  </label>
+                  <input
+                    type="time"
+                    required
+                    value={rescheduleTime}
+                    onChange={(e) => setRescheduleTime(e.target.value)}
+                    className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground font-mono text-xs"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-muted-foreground font-semibold mb-1">
+                  Reason for Rescheduling (Audit Log) *
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="e.g. Physics rescheduled from Nov 3 to Nov 2 per COE directive"
+                  value={rescheduleReason}
+                  onChange={(e) => setRescheduleReason(e.target.value)}
+                  className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground text-xs"
+                />
+              </div>
+
+              {rescheduleAuditLogs.length > 0 && (
+                <div className="space-y-1.5 pt-2 border-t border-border">
+                  <span className="text-[11px] font-bold text-muted-foreground block">
+                    Previous Schedule Change Audit Logs:
+                  </span>
+                  <div className="max-h-28 overflow-y-auto space-y-1 pr-1">
+                    {rescheduleAuditLogs.map((log) => (
+                      <div key={log.id} className="p-2 rounded bg-secondary/30 border border-border text-[10px] space-y-0.5">
+                        <div className="flex justify-between text-muted-foreground font-mono">
+                          <span>{safeFormatDate(log.newDate)} {safeFormatTime(log.newDate)}</span>
+                          <span>by {log.changedBy}</span>
+                        </div>
+                        <p className="text-foreground italic">&ldquo;{log.reason}&rdquo;</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="pt-2 flex justify-end gap-2 border-t border-border">
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setRescheduleModal(null)}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  size="sm"
+                  variant="primary"
+                  disabled={rescheduleSubmitting}
+                  className="gap-1.5 font-bold bg-amber-600 hover:bg-amber-500 text-white"
+                >
+                  {rescheduleSubmitting ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Calendar className="w-3.5 h-3.5" />}
+                  Confirm Reschedule
+                </Button>
+              </div>
+            </form>
           </Card>
         </div>
       )}

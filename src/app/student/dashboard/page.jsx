@@ -25,6 +25,9 @@ import {
   Zap,
   Users,
   BarChart3,
+  Lock,
+  Sparkles,
+  CheckCircle2,
 } from "lucide-react";
 
 function SubjectCard({ sub, isPreview, previewRoll }) {
@@ -275,113 +278,360 @@ function StudentDashboardContent() {
         </div>
       </div>
 
-      {/* Exam Timetable */}
+      {/* Exam Timetable (Row & Column Table Format with Upcoming Exam Priority) */}
       <div>
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-4">
           <div>
-            <h2 className="text-base font-bold text-[#f0f0ff]">{isTamil ? "அதிகாரப்பூர்வ அரசு தேர்வு கால அட்டவணை" : "Official Examination Timetable"}</h2>
-            <p className="text-xs text-[#5c5c8a] mt-0.5">{isTamil ? "அரசுத் தேர்வுகள் இயக்ககத்தால் வெளியிடப்பட்டது" : "Published by Controller of Examinations"}</p>
+            <h2 className="text-base font-bold text-[#f0f0ff]">
+              {isTamil ? "அதிகாரப்பூர்வ அரசு தேர்வு கால அட்டவணை" : "Official Examination Timetable & Practice Hub"}
+            </h2>
+            <p className="text-xs text-[#5c5c8a] mt-0.5">
+              {isTamil
+                ? "அரசுத் தேர்வுகள் இயக்ககம் — அடுத்தடுத்த தேர்வுகள் வரிசைப்படி பட்டியலிடப்பட்டுள்ளன"
+                : "Organized by earliest upcoming exam date. Attend official exams when scheduled or practice 50 Qs sets anytime."}
+            </p>
           </div>
-          <span className="badge badge-emerald">{isTamil ? "அங்கீகரிக்கப்பட்டது" : "COE Approved"}</span>
+          <span className="badge badge-emerald flex items-center gap-1 font-mono text-[11px]">
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+            {isTamil ? "அங்கீகரிக்கப்பட்டது" : "COE Verified"}
+          </span>
         </div>
 
         {upcomingExams.length === 0 ? (
           <div className="glass rounded-xl p-8 text-center border border-[rgba(124,58,237,0.15)]">
             <Calendar className="w-8 h-8 text-[#5c5c8a] mx-auto mb-2" />
             <p className="text-sm text-[#5c5c8a]">
-              {isTamil ? `வகுப்பு ${profile.examPrepClass}-க்கு இன்னும் தேர்வுகள் வெளியிடப்படவில்லை.` : `No exams published yet for Class ${profile.examPrepClass}. Drafts are being prepared by the COE.`}
+              {isTamil
+                ? `வகுப்பு ${profile.examPrepClass}-க்கு இன்னும் தேர்வுகள் வெளியிடப்படவில்லை.`
+                : `No exams published yet for Class ${profile.examPrepClass}. Drafts are being prepared by the COE.`}
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {upcomingExams.map((exam, i) => (
-              <div
-                key={exam.id}
-                className={`glass rounded-xl p-5 card-glow border flex flex-col justify-between gap-4 ${
-                  exam.isSubmitted
-                    ? "border-emerald-500/30 bg-emerald-950/10"
-                    : "border-[rgba(124,58,237,0.2)]"
-                }`}
-                style={{ animationDelay: `${i * 60}ms` }}
-              >
-                <div className="space-y-2 flex-1">
-                  <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-[#f0f0ff]">{exam.subject}</span>
-                      <span className="badge badge-violet">{isTamil ? `வகுப்பு ${exam.prepClass}` : `Class ${exam.prepClass}`}</span>
-                    </div>
-                    {exam.isSubmitted ? (
-                      <span className="badge badge-emerald flex items-center gap-1 font-mono text-[10px]">
-                        <CheckCircle className="w-3 h-3 text-emerald-400" /> {isTamil ? "சமர்ப்பிக்கப்பட்டது" : "SUBMITTED"}
-                      </span>
-                    ) : (
-                      <span className="badge badge-amber text-[10px]">{isTamil ? "அட்டவணைப்படுத்தப்பட்டது" : "Scheduled"}</span>
-                    )}
-                  </div>
+          <>
+            {/* Desktop / Tablet Table View (hidden on small mobile) */}
+            <div className="hidden md:block overflow-x-auto rounded-2xl border border-[rgba(124,58,237,0.2)] bg-card/60 backdrop-blur-md shadow-xl">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="border-b border-border bg-secondary/50 text-[#a8a8d0] font-bold uppercase tracking-wider text-[11px]">
+                    <th className="py-3.5 px-4">{isTamil ? "பாடம் & குறியீடு" : "Subject & Code"}</th>
+                    <th className="py-3.5 px-4">{isTamil ? "தேர்வு நாள் & நேரம்" : "Date & Scheduled Time"}</th>
+                    <th className="py-3.5 px-4">{isTamil ? "ஆயத்த நிலை" : "Days Left"}</th>
+                    <th className="py-3.5 px-4">{isTamil ? "பாடத்திட்டம் & 50 வினாக்கள் பயிற்சி" : "Study & Practice 50 Qs Bank"}</th>
+                    <th className="py-3.5 px-4 text-right">{isTamil ? "அரசுத் தேர்வு கூடம்" : "Official Exam Hall"}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border">
+                  {upcomingExams.map((exam) => {
+                    const examTime = new Date(exam.examDate).getTime();
+                    const nowTime = Date.now();
+                    const isUnlocked = nowTime >= examTime;
+                    const diffMs = examTime - nowTime;
+                    const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+                    const isTodayOrTomorrow = diffMs > 0 && diffMs <= (36 * 3600 * 1000);
 
-                  <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#5c5c8a]">
-                    <span className="flex items-center gap-1 font-mono">
-                      <Calendar className="w-3 h-3 text-violet-400" />
-                      {new Date(exam.examDate).toLocaleDateString(isTamil ? "ta-IN" : "en-IN", {
-                        day: "numeric", month: "short", year: "numeric",
-                      })} · {new Date(exam.examDate).toLocaleTimeString("en-IN", {
-                        hour: "numeric", minute: "2-digit", hour12: true,
-                      })}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-amber-400" />
-                      {exam.durationMinutes} {isTamil ? "நிமிடங்கள்" : "mins"}
-                    </span>
-                    <span className="font-semibold text-[#a8a8d0]">
-                      {exam.totalMarks} {isTamil ? "மதிப்பெண்கள்" : "Marks"}
-                    </span>
-                  </div>
-
-                  {exam.isSubmitted ? (
-                    <div className="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                      <span>
-                        <strong>{isTamil ? "சமர்ப்பிக்கப்பட்டது!" : "Submitted!"}</strong> {isTamil ? "உங்கள் தேர்வு மதிப்பீட்டில் உள்ளது; முடிவுகள் விரைவில் வெளியாகும்." : "Your exam is under COE evaluation and results will publish soon."}
-                      </span>
-                    </div>
-                  ) : exam.instructions ? (
-                    <p className="text-[11px] text-[#5c5c8a] italic">* {exam.instructions}</p>
-                  ) : null}
-                </div>
-
-                <div className="flex items-center gap-2 pt-2 border-t border-white/5 flex-wrap">
-                  {exam.isSubmitted ? (
-                    <>
-                      <Link
-                        href={`/student/exam-mock?examId=${exam.id}${isPreview ? `&previewRollNo=${previewRoll}` : ""}&mode=practice`}
-                        className="flex-1"
+                    return (
+                      <tr
+                        key={exam.id}
+                        className={`hover:bg-secondary/30 transition-colors ${
+                          exam.isSubmitted
+                            ? "bg-emerald-950/5 opacity-85"
+                            : isUnlocked
+                            ? "bg-emerald-500/5"
+                            : ""
+                        }`}
                       >
-                        <Button variant="outline" size="sm" className="w-full text-xs font-semibold gap-1.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/15">
-                          <Zap className="w-3.5 h-3.5 text-amber-400" /> {isTamil ? "மாதிரி பயிற்சி தேர்வு (மதிப்பெண் பாதிக்காது)" : "Practice Mode (Non-Evaluated)"}
-                        </Button>
-                      </Link>
-                      <Link
-                        href={`/student/history${isPreview ? `?previewRollNo=${previewRoll}` : ""}`}
-                      >
-                        <Button variant="secondary" size="sm" className="text-xs">
-                          {isTamil ? "தேர்வு வரலாறு & விடைகள்" : "Exam History & Keys"}
-                        </Button>
-                      </Link>
-                    </>
-                  ) : (
-                    <Link
-                      href={`/student/exam-mock?examId=${exam.id}${isPreview ? `&previewRollNo=${previewRoll}` : ""}`}
-                      className="w-full"
-                    >
-                      <Button variant="success" size="sm" className="w-full justify-center gap-2 font-bold">
-                        <PlayCircle className="w-4 h-4" /> {isTamil ? "தேர்வைத் தொடங்குக" : "Start Examination"}
-                      </Button>
-                    </Link>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+                        {/* 1. Subject & Code */}
+                        <td className="py-4 px-4 align-middle">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="font-bold text-sm text-[#f0f0ff]">{exam.subject}</span>
+                            <span className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-violet-500/15 border border-violet-500/30 text-violet-300">
+                              {exam.code}
+                            </span>
+                            <span className="badge badge-purple text-[10px] py-0">
+                              Cl. {exam.prepClass}
+                            </span>
+                          </div>
+                          <span className="text-[11px] text-[#5c5c8a] block mt-0.5">
+                            {exam.durationMinutes} {isTamil ? "நிமிடங்கள்" : "mins"} • {exam.totalMarks} {isTamil ? "மதிப்பெண்கள்" : "Marks"}
+                          </span>
+                        </td>
+
+                        {/* 2. Date & Time */}
+                        <td className="py-4 px-4 align-middle">
+                          <div className="font-mono text-xs font-semibold text-foreground flex items-center gap-1.5">
+                            <Calendar className="w-3.5 h-3.5 text-violet-400 flex-shrink-0" />
+                            <span>
+                              {new Date(exam.examDate).toLocaleDateString(isTamil ? "ta-IN" : "en-IN", {
+                                day: "2-digit",
+                                month: "short",
+                                year: "numeric",
+                              })}
+                            </span>
+                          </div>
+                          <span className="text-[11px] text-muted-foreground font-mono flex items-center gap-1 mt-0.5">
+                            <Clock className="w-3 h-3 text-amber-400 flex-shrink-0" />
+                            {new Date(exam.examDate).toLocaleTimeString("en-IN", {
+                              hour: "numeric",
+                              minute: "2-digit",
+                              hour12: true,
+                            })}
+                          </span>
+                        </td>
+
+                        {/* 3. Days Left / Schedule Status */}
+                        <td className="py-4 px-4 align-middle">
+                          {exam.isSubmitted ? (
+                            <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                              <CheckCircle className="w-3 h-3 text-emerald-400" />
+                              {isTamil ? "முடிந்தது" : "Submitted"}
+                            </span>
+                          ) : isUnlocked ? (
+                            <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400 animate-pulse">
+                              <Sparkles className="w-3 h-3 text-emerald-400" />
+                              {isTamil ? "தேர்வு நேரம் வந்துவிட்டது" : "Exam Active"}
+                            </span>
+                          ) : isTodayOrTomorrow ? (
+                            <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-400">
+                              <Clock className="w-3 h-3 text-amber-400" />
+                              {isTamil ? "நாளை / இன்று" : "Tomorrow / Today"}
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-violet-500/15 text-violet-300 border border-violet-500/30">
+                              <Calendar className="w-3 h-3 text-violet-400" />
+                              {isTamil ? `${diffDays} நாட்களில்` : `In ${diffDays} days`}
+                            </span>
+                          )}
+                        </td>
+
+                        {/* 4. Syllabus & Practice 50 Qs Buttons */}
+                        <td className="py-4 px-4 align-middle">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <Link
+                              href={`/student/syllabus?code=${encodeURIComponent(exam.code)}`}
+                              className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-violet-500/30 text-violet-300 hover:bg-violet-500/15 transition-all"
+                            >
+                              <BookOpen className="w-3 h-3 text-violet-400" />
+                              {isTamil ? "பாடத்திட்டம்" : "Syllabus"}
+                            </Link>
+
+                            <Link
+                              href={`/student/practice/${encodeURIComponent(exam.code)}/set-a${
+                                isPreview ? `?previewRollNo=${previewRoll}` : ""
+                              }`}
+                              className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-amber-500/30 text-amber-300 hover:bg-amber-500/15 transition-all"
+                              title="Practice first 50 questions (Part 1 & 2)"
+                            >
+                              <Zap className="w-3 h-3 text-amber-400" />
+                              {isTamil ? "பயிற்சி A (50 வினாக்கள்)" : "Practice Set A (Part 1 & 2 — 50 Qs)"}
+                            </Link>
+
+                            {/* Set B for Chemistry & large question banks */}
+                            {exam.code === "CHE-12" && (
+                              <Link
+                                href={`/student/practice/${encodeURIComponent(exam.code)}/set-b${
+                                  isPreview ? `?previewRollNo=${previewRoll}` : ""
+                                }`}
+                                className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1.5 rounded-lg border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/15 transition-all"
+                                title="Practice remaining 50 questions (Part 3 & 4)"
+                              >
+                                <Zap className="w-3 h-3 text-cyan-400" />
+                                {isTamil ? "பயிற்சி B (50 வினாக்கள்)" : "Practice Set B (Part 3 & 4 — 50 Qs)"}
+                              </Link>
+                            )}
+                          </div>
+                        </td>
+
+                        {/* 5. Official Exam Hall Action */}
+                        <td className="py-4 px-4 align-middle text-right">
+                          {exam.isSubmitted ? (
+                            <div className="flex items-center justify-end gap-2">
+                              <Link
+                                href={`/student/history${isPreview ? `?previewRollNo=${previewRoll}` : ""}`}
+                              >
+                                <Button variant="secondary" size="sm" className="text-xs">
+                                  {isTamil ? "விடைக்குறிப்பு" : "View Submission"}
+                                </Button>
+                              </Link>
+                              <Link
+                                href={`/student/practice/${encodeURIComponent(exam.code)}/set-a${
+                                  isPreview ? `?previewRollNo=${previewRoll}` : ""
+                                }`}
+                              >
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  className="text-xs border-violet-500/30 text-violet-300"
+                                >
+                                  {isTamil ? "மீண்டும் பயிற்சி" : "Practice"}
+                                </Button>
+                              </Link>
+                            </div>
+                          ) : isUnlocked ? (
+                            <Link
+                              href={`/student/exam-mock?examId=${exam.id}${
+                                isPreview ? `&previewRollNo=${previewRoll}` : ""
+                              }`}
+                            >
+                              <Button
+                                variant="success"
+                                size="sm"
+                                className="font-bold gap-1.5 shadow-md shadow-emerald-500/20 py-2"
+                              >
+                                <PlayCircle className="w-4 h-4" />
+                                {isTamil ? "தேர்வைத் தொடங்குக" : "Start Exam Now"}
+                              </Button>
+                            </Link>
+                          ) : (
+                            <div className="inline-flex flex-col items-end">
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                disabled
+                                className="gap-1.5 text-xs opacity-60 cursor-not-allowed bg-secondary/40 border border-border text-muted-foreground"
+                              >
+                                <Lock className="w-3.5 h-3.5" />
+                                {isTamil ? "நேரம் வந்தபின் திறக்கும்" : "Locked Until Date"}
+                              </Button>
+                              <span className="text-[10px] text-muted-foreground mt-0.5">
+                                {isTamil
+                                  ? "குறிப்பிட்ட நேரத்திற்குப் பிறகே எழுத முடியும்"
+                                  : "Opens after scheduled start time"}
+                              </span>
+                            </div>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Mobile Responsive Stacked Cards (visible only on small screens < md) */}
+            <div className="md:hidden space-y-4">
+              {upcomingExams.map((exam) => {
+                const examTime = new Date(exam.examDate).getTime();
+                const nowTime = Date.now();
+                const isUnlocked = nowTime >= examTime;
+                const diffMs = examTime - nowTime;
+                const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+                const isTodayOrTomorrow = diffMs > 0 && diffMs <= (36 * 3600 * 1000);
+
+                return (
+                  <div
+                    key={exam.id}
+                    className={`glass rounded-xl p-4 border space-y-3 ${
+                      exam.isSubmitted
+                        ? "border-emerald-500/30 bg-emerald-950/10"
+                        : isUnlocked
+                        ? "border-emerald-500/40 bg-emerald-500/5"
+                        : "border-[rgba(124,58,237,0.2)]"
+                    }`}
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-bold text-sm text-foreground">{exam.subject}</span>
+                          <span className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-violet-500/15 text-violet-300 border border-violet-500/25">
+                            {exam.code}
+                          </span>
+                        </div>
+                        <p className="text-[11px] text-muted-foreground mt-0.5">
+                          {exam.durationMinutes} mins • {exam.totalMarks} Marks
+                        </p>
+                      </div>
+
+                      {exam.isSubmitted ? (
+                        <span className="badge badge-emerald text-[10px]">Submitted</span>
+                      ) : isUnlocked ? (
+                        <span className="badge badge-emerald text-[10px] animate-pulse">Live Now</span>
+                      ) : isTodayOrTomorrow ? (
+                        <span className="badge badge-amber text-[10px]">Tomorrow / Today</span>
+                      ) : (
+                        <span className="badge badge-violet text-[10px]">{diffDays} days left</span>
+                      )}
+                    </div>
+
+                    <div className="p-2.5 rounded-lg bg-secondary/40 border border-border text-xs flex items-center justify-between font-mono">
+                      <span className="flex items-center gap-1.5 text-foreground">
+                        <Calendar className="w-3.5 h-3.5 text-violet-400" />
+                        {new Date(exam.examDate).toLocaleDateString(isTamil ? "ta-IN" : "en-IN", {
+                          day: "numeric",
+                          month: "short",
+                        })}
+                      </span>
+                      <span className="flex items-center gap-1 text-muted-foreground">
+                        <Clock className="w-3 h-3 text-amber-400" />
+                        {new Date(exam.examDate).toLocaleTimeString("en-IN", {
+                          hour: "numeric",
+                          minute: "2-digit",
+                          hour12: true,
+                        })}
+                      </span>
+                    </div>
+
+                    {/* Mobile Practice Buttons (Touch targets >= 44px) */}
+                    <div className="flex flex-col gap-2 pt-1">
+                      <div className="flex gap-2">
+                        <Link
+                          href={`/student/syllabus?code=${encodeURIComponent(exam.code)}`}
+                          className="flex-1 min-h-[44px] flex items-center justify-center gap-1 text-xs font-bold rounded-lg border border-violet-500/30 text-violet-300 bg-violet-500/5 hover:bg-violet-500/15"
+                        >
+                          <BookOpen className="w-3.5 h-3.5" /> {isTamil ? "பாடத்திட்டம்" : "Syllabus"}
+                        </Link>
+                        <Link
+                          href={`/student/practice/${encodeURIComponent(exam.code)}/set-a${
+                            isPreview ? `?previewRollNo=${previewRoll}` : ""
+                          }`}
+                          className="flex-1 min-h-[44px] flex items-center justify-center gap-1 text-xs font-bold rounded-lg border border-amber-500/30 text-amber-300 bg-amber-500/5 hover:bg-amber-500/15"
+                        >
+                          <Zap className="w-3.5 h-3.5 text-amber-400" /> {isTamil ? "பயிற்சி A (50)" : "Practice Set A"}
+                        </Link>
+                      </div>
+
+                      {exam.code === "CHE-12" && (
+                        <Link
+                          href={`/student/practice/${encodeURIComponent(exam.code)}/set-b${
+                            isPreview ? `?previewRollNo=${previewRoll}` : ""
+                          }`}
+                          className="w-full min-h-[44px] flex items-center justify-center gap-1 text-xs font-bold rounded-lg border border-cyan-500/30 text-cyan-300 bg-cyan-500/5 hover:bg-cyan-500/15"
+                        >
+                          <Zap className="w-3.5 h-3.5 text-cyan-400" /> {isTamil ? "பயிற்சி B (50 வினாக்கள்)" : "Practice Set B (50 Qs)"}
+                        </Link>
+                      )}
+
+                      {/* Official Exam Hall Button */}
+                      {exam.isSubmitted ? (
+                        <Link
+                          href={`/student/history${isPreview ? `?previewRollNo=${previewRoll}` : ""}`}
+                          className="w-full min-h-[44px] flex items-center justify-center text-xs font-bold rounded-lg border border-emerald-500/30 text-emerald-300 bg-emerald-500/10"
+                        >
+                          {isTamil ? "தேர்வு சமர்ப்பிப்பு அறிக்கை" : "View Official Submission"}
+                        </Link>
+                      ) : isUnlocked ? (
+                        <Link
+                          href={`/student/exam-mock?examId=${exam.id}${
+                            isPreview ? `&previewRollNo=${previewRoll}` : ""
+                          }`}
+                          className="w-full min-h-[44px] flex items-center justify-center gap-1.5 text-xs font-bold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-500/20"
+                        >
+                          <PlayCircle className="w-4 h-4" /> {isTamil ? "தேர்வைத் தொடங்குக" : "Start Exam Now"}
+                        </Link>
+                      ) : (
+                        <button
+                          disabled
+                          className="w-full min-h-[44px] flex items-center justify-center gap-1.5 text-xs font-medium rounded-lg bg-secondary/50 text-muted-foreground border border-border cursor-not-allowed"
+                        >
+                          <Lock className="w-3.5 h-3.5" />
+                          {isTamil ? "நேரம் வந்தபின் திறக்கும்" : "Locked Until Scheduled Time"}
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </>
         )}
       </div>
     </div>

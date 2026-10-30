@@ -16,7 +16,7 @@ export async function POST(request) {
     }
 
     const body = await request.json();
-    const { examId, answers, timeTakenSecs, previewRollNo } = body;
+    const { examId, answers, timeTakenSecs, previewRollNo, attemptId } = body;
 
     if (!examId) {
       return NextResponse.json({ error: "Exam ID is required." }, { status: 400 });
@@ -63,6 +63,36 @@ export async function POST(request) {
     });
 
     if (existingSubmission && existingSubmission.isSubmitted) {
+      // Idempotency check: if this is a retry of the same attempt within a short window or matching attemptId
+      const isSameAttempt = attemptId && existingSubmission.attemptId === attemptId;
+      const isRecentSubmission = (Date.now() - new Date(existingSubmission.submittedAt).getTime()) < 60000;
+
+      if (isSameAttempt || isRecentSubmission) {
+        return NextResponse.json({
+          success: true,
+          submissionId: existingSubmission.id,
+          candidate: {
+            fullName: studentProfile.fullName,
+            rollNo: studentProfile.user.username,
+          },
+          exam: {
+            id: exam.id,
+            subject: exam.subject.name,
+            code: exam.subject.code,
+            prepClass: exam.prepClass,
+          },
+          stats: {
+            totalQuestions: exam.questions.length,
+            answeredCount: Object.keys(answers || {}).length,
+            timeTakenSecs: existingSubmission.timeTakenSecs || 0,
+            score: existingSubmission.score,
+            totalMarks: exam.totalMarks,
+          },
+          submittedAt: existingSubmission.submittedAt,
+          idempotent: true,
+        });
+      }
+
       return NextResponse.json(
         {
           error: "Official Board Examination already submitted. Retakes are strictly prohibited for official board exams.",
@@ -124,14 +154,16 @@ export async function POST(request) {
           examScheduleId: exam.id,
           studentId: studentProfile.id,
           answersJson: encryptedAnswersJson,
-          timeTakenSecs: timeSpent,
-          score: calculatedScore,
+          timeTakenSecs: isNaN(timeSpent) ? 0 : timeSpent,
+          score: isNaN(calculatedScore) ? 0 : calculatedScore,
           isSubmitted: true,
+          isGraded: true,
+          attemptId: attemptId || null,
           submittedAt: new Date(),
         },
       });
 
-      // Auto-publish ExamResult so the candidate can immediately view results and certified grade
+      // Prepare ExamResult (held as unpublished until COE clicks 'Publish Results')
       const maxMarks = totalExamMarks || exam.totalMarks || 25;
       await db.examResult.upsert({
         where: {
@@ -143,14 +175,14 @@ export async function POST(request) {
         update: {
           marksObtained: calculatedScore,
           maxMarks: maxMarks,
-          isPublished: true,
+          isPublished: false,
         },
         create: {
           examScheduleId: exam.id,
           studentId: studentProfile.id,
           marksObtained: calculatedScore,
           maxMarks: maxMarks,
-          isPublished: true,
+          isPublished: false,
           remarks: calculatedScore >= (maxMarks * 0.4) ? "Passed Examination" : "Candidate Appeared",
         },
       }).catch((resErr) => console.warn("[exam-submit] Auto-create ExamResult warn:", resErr.message));

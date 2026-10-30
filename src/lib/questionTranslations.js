@@ -162,7 +162,62 @@ export const OPTION_TRANSLATION_MAP = {
   "11": "11",
   "12": "12",
   "14": "14",
-  "Low voltage into high voltage": "குறைந்த மின்னழுத்தத்தை அதிக மின்னழுத்தமாக",
+  "Shape of surface": "பரப்பின் வடிவம்",
+  "Net charge enclosed": "உள்ளடக்கிய மொத்த மின்னூட்டம்",
+  "Permittivity of outer medium only": "வெளி ஊடகத்தின் விடுதிறன் மட்டுமே",
+  "Surface area": "பரப்பளவு",
+  "Electric charge": "மின்னூட்டம்",
+  "Angular momentum": "கோண உந்தம்",
+  "Low voltage into high voltage": "குறைந்த மின்னழுத்தத்தை உயர் மின்னழுத்தமாக",
+  "High voltage into low voltage": "உயர் மின்னழுத்தத்தை குறைந்த மின்னழுத்தமாக",
+  "AC into DC": "மாறுதிசை மின்னோட்டத்தை நேர்திசை மின்னோட்டமாக",
+  "DC into AC": "நேர்திசை மின்னோட்டத்தை மாறுதிசை மின்னோட்டமாக",
+  "Ultraviolet rays": "புறஊதாக் கதிர்கள்",
+  "Microwaves": "நுண்ணலைகள்",
+  "Refraction by atmosphere": "வளிமண்டல ஒளிவிலகல்",
+  "Total internal reflection": "முழு அக எதிரொளிப்பு",
+  "Scattering of light": "ஒளிச்சிதறல்",
+  "Interference": "குறுக்கீட்டு விளைவு",
+  "Nature of the metal surface": "உலோகப் பரப்பின் தன்மை",
+  "Frequency of incident light": "படுகின்ற ஒளியின் அதிர்வெண்",
+  "Intensity of light": "ஒளியின் செறிவு",
+  "Potential difference": "மின்னழுத்த வேறுபாடு",
+  "1.5": "1.5",
+  "2.5": "2.5",
+  "3.5": "3.5",
+  "4.5": "4.5",
+  "1 mm": "1 மி.மீ",
+  "1 µm": "1 மைக்ரோமீட்டர் (1 µm)",
+  "1 nm": "1 நானோமீட்டர் (1 nm)",
+  "1 cm": "1 செ.மீ",
+  "0.84": "0.84 (அதாவது 5/6)",
+  "0.5": "0.5",
+  "1.0": "1.0",
+  "1.2": "1.2",
+  "Number of turns": "சுற்றுகளின் எண்ணிக்கை",
+  "Area of cross-section": "குறுக்குவெட்டுப் பரப்பு",
+  "Current flowing through it": "பாயும் மின்னோட்டம்",
+  "Permeability of core": "உள்ளகத்தின் உட்புகுதிறன்",
+  "Transverse waves": "குறுக்கலைகள்",
+  "Longitudinal waves": "நெட்டலைகள்",
+  "Mechanical waves": "இயந்திர அலைகள்",
+  "Electromagnetic waves": "மின்காந்த அலைகள்",
+  "12.27 / √V Å": "12.27 / √V Å",
+  "1.227 / √V Å": "1.227 / √V Å",
+  "0.1227 / √V Å": "0.1227 / √V Å",
+  "122.7 / √V Å": "122.7 / √V Å",
+  "Packing fraction": "பொதிவுக் பின்னம்",
+  "Binding energy": "பிணைப்பு ஆற்றல்",
+  "Binding energy per nucleon": "ஒரு நியூக்ளியானுக்கான பிணைப்பு ஆற்றல்",
+  "Nuclear density": "அணுக்கரு அடர்த்தி",
+  "Voltage regulator": "மின்னழுத்த சீரமைப்பி",
+  "Rectifier": "திருத்தி",
+  "Amplifier": "பெருக்கி",
+  "Oscillator": "அலைஇயற்றி",
+  "Frequency Modulation (FM)": "அதிர்வெண் பண்பேற்றம் (FM)",
+  "Amplitude Modulation (AM)": "வீச்சுப் பண்பேற்றம் (AM)",
+  "Phase Modulation (PM)": "கட்டப் பண்பேற்றம் (PM)",
+  "Pulse Width Modulation": "துடிப்பு அகலப் பண்பேற்றம் (PWM)",
   "Charge": "மின்னூட்டம்",
   "Energy": "ஆற்றல்",
   "Momentum": "உந்தம்",
@@ -591,3 +646,32 @@ export function translateOption(text, lang = "en") {
 
   return trimmed;
 }
+
+/**
+ * Strictly localizes a question text according to medium without English leakage.
+ */
+export function getLocalizedQuestion(q, isTamil) {
+  if (!q) return "";
+  if (!isTamil) return q.questionTextEn || q.questionText || "";
+  if (q.questionTextTa && q.questionTextTa.trim()) return q.questionTextTa;
+  const translated = translateQuestion(q.questionText || q.text, "ta");
+  if (/[\u0B80-\u0BFF]/.test(translated)) return translated;
+  return translated || "பாடக்குறிப்புகள் மற்றும் விடைகள் தயாரிக்கப்பட்டு வருகின்றன.";
+}
+
+/**
+ * Strictly localizes an option text according to medium without English leakage.
+ */
+export function getLocalizedOption(opt, isTamil) {
+  if (!opt) return "";
+  if (!isTamil) return opt.textEn || opt.text || "";
+  if (opt.textTa && opt.textTa.trim()) return opt.textTa;
+  const raw = opt.text || opt.label || "";
+  const translated = translateOption(raw, "ta");
+  if (/[\u0B80-\u0BFF]/.test(translated)) return translated;
+  if (/^[\d\s\.\+\-\/\(\)\=\>\<\,\:A-Za-z0-9\^₂₃₄₅₆]+$/.test(raw) && raw.length <= 15) {
+    return translated || raw;
+  }
+  return translated || "பாடக்குறிப்புகள் மற்றும் விடைகள் தயாரிக்கப்பட்டு வருகின்றன.";
+}
+

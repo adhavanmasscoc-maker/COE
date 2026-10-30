@@ -221,6 +221,15 @@ export async function GET(request) {
       };
     });
 
+    // Sort by nearest upcoming exam date (unsubmitted exams first, then submitted)
+    enrichedUpcomingExams.sort((a, b) => {
+      if (a.isSubmitted && !b.isSubmitted) return 1;
+      if (!a.isSubmitted && b.isSubmitted) return -1;
+      const tA = new Date(a.examDate).getTime();
+      const tB = new Date(b.examDate).getTime();
+      return tA - tB;
+    });
+
     // 4. Fetch applicable notices
     const notices = await db.notice.findMany({
       where: {

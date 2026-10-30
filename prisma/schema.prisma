@@ -35,6 +35,7 @@ model StudentProfile {
   chapterProgress   ChapterProgress[]
   examResults       ExamResult[]
   examSubmissions   ExamSubmission[]
+  practiceAttempts  PracticeAttempt[]
   activityLogs      StudentActivityLog[]
 }
 
@@ -147,6 +148,7 @@ model ExamSchedule {
   questions       ExamQuestion[]
   submissions     ExamSubmission[]
   heartbeats      ExamHeartbeat[]
+  dateAuditLogs   ExamDateAuditLog[]
 }
 
 model ExamQuestion {
@@ -176,6 +178,8 @@ model ExamSubmission {
   answersJson    String         // JSON stringified object of { [questionId]: optionId }
   timeTakenSecs  Int            @default(0)
   score          Float?         // Calculated preliminary score if applicable
+  attemptId      String?        // Idempotency submission token
+  isGraded       Boolean        @default(false) // Auto-graded indicator
   isSubmitted    Boolean        @default(true)
   submittedAt    DateTime       @default(now())
 
@@ -272,4 +276,42 @@ model QuestionBankItem {
 
   @@index([subjectId])
 }
+
+model PracticeAttempt {
+  id              String         @id @default(cuid())
+  attemptId       String         @unique // Client idempotency uuid
+  studentId       String
+  student         StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  subjectCode     String         // e.g. "CHE-12", "PHY-12"
+  setName         String         // e.g. "Set A", "Set B", "Part 1 & 2", "All"
+  medium          String         @default("English") // "English" or "Tamil"
+  attemptNumber   Int            @default(1)
+  startTime       DateTime       @default(now())
+  submittedAt     DateTime       @default(now())
+  totalTimeSpent  Int            @default(0) // seconds
+  timePerQuestion String?        // JSON: { [qId]: seconds }
+  answersJson     String         // JSON: { [qId]: { selected, correct, isCorrect, topic } }
+  score           Float          @default(0)
+  totalMarks      Float          @default(50)
+  percentage      Float          @default(0)
+  mode            String         @default("PRACTICE") // "PRACTICE" or "EXAM"
+  createdAt       DateTime       @default(now())
+
+  @@index([studentId])
+  @@index([subjectCode])
+}
+
+model ExamDateAuditLog {
+  id             String       @id @default(cuid())
+  examScheduleId String
+  examSchedule   ExamSchedule @relation(fields: [examScheduleId], references: [id], onDelete: Cascade)
+  oldDate        DateTime
+  newDate        DateTime
+  changedBy      String       // Admin username or ID
+  reason         String?
+  createdAt      DateTime     @default(now())
+
+  @@index([examScheduleId])
+}
+
 

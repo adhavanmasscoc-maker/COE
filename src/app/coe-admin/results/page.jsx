@@ -28,9 +28,54 @@ function COEAdminResultsContent() {
   const [selectedClass, setSelectedClass] = useState("ALL");
   const [notification, setNotification] = useState("");
   const [savingKey, setSavingKey] = useState(null);
+  const [actionLoadingId, setActionLoadingId] = useState(null);
 
   // Form states keyed by `${examId}_${studentId}`
   const [formInputs, setFormInputs] = useState({});
+
+  const handleAutoGradeAll = async (examId) => {
+    setActionLoadingId(examId + "_grade");
+    try {
+      const res = await fetch("/api/admin/results/auto-grade", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ examScheduleId: examId }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        showMsg(data.message || "Submissions auto-graded successfully! Results are held privately.");
+        fetchResults();
+      } else {
+        alert(data.error || "Failed to auto-grade submissions.");
+      }
+    } catch {
+      alert("Network error auto-grading submissions.");
+    } finally {
+      setActionLoadingId(null);
+    }
+  };
+
+  const handlePublishAllResults = async (examId, isPublished) => {
+    setActionLoadingId(examId + "_pub");
+    try {
+      const res = await fetch("/api/admin/results/publish", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ examScheduleId: examId, isPublished }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        showMsg(data.message || (isPublished ? "Results officially published to students!" : "Results withdrawn."));
+        fetchResults();
+      } else {
+        alert(data.error || "Failed to publish results.");
+      }
+    } catch {
+      alert("Network error updating publication status.");
+    } finally {
+      setActionLoadingId(null);
+    }
+  };
 
   const fetchResults = async () => {
     setLoading(true);
@@ -255,9 +300,43 @@ function COEAdminResultsContent() {
                   </div>
                 </div>
 
-                <Badge variant="warning" className="text-xs py-1">
-                  Candidates: {exam.candidates?.length || 0} Assigned
-                </Badge>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <Badge variant="warning" className="text-xs py-1">
+                    Candidates: {exam.candidates?.length || 0} Assigned
+                  </Badge>
+
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => handleAutoGradeAll(exam.id)}
+                    disabled={actionLoadingId === exam.id + "_grade"}
+                    className="text-xs font-bold gap-1.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/10"
+                    title="Auto-grade all candidate answers against answer keys"
+                  >
+                    {actionLoadingId === exam.id + "_grade" ? (
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                    ) : (
+                      <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                    )}
+                    Auto-Grade All
+                  </Button>
+
+                  <Button
+                    size="sm"
+                    variant="primary"
+                    onClick={() => handlePublishAllResults(exam.id, true)}
+                    disabled={actionLoadingId === exam.id + "_pub"}
+                    className="text-xs font-bold gap-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white shadow-sm"
+                    title="Publish evaluated marks to student portal"
+                  >
+                    {actionLoadingId === exam.id + "_pub" ? (
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                    ) : (
+                      <Award className="w-3.5 h-3.5" />
+                    )}
+                    Publish Results
+                  </Button>
+                </div>
               </div>
 
               {/* Candidates Evaluation Rows */}

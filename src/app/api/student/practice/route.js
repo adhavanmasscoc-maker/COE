@@ -215,14 +215,17 @@ export async function GET(request) {
     let questionsList = [];
 
     // Check if target subject is Class 12 Chemistry
+    const isSetB = setParam === "2" || setParam === "set-b" || setParam === "set2";
+    const isSetA = setParam === "1" || setParam === "set-a" || setParam === "set1" || !isSetB;
+
     if (targetSubject.code === "CHE-12" || targetSubject.name.toLowerCase().includes("chemistry")) {
       const allChem = loadChemistry100();
       let pool = allChem;
 
-      if (setParam === "1") {
-        pool = pool.slice(0, 50);
-      } else if (setParam === "2") {
+      if (isSetB) {
         pool = pool.slice(50, 100);
+      } else if (isSetA && setParam !== "all") {
+        pool = pool.slice(0, 50);
       }
 
       if (unitParam && unitParam !== "all") {
@@ -233,7 +236,7 @@ export async function GET(request) {
       // If pool is non-empty, format from the 100 question bank
       if (pool.length > 0) {
         let selected = [...pool];
-        if (shuffle && count < pool.length) {
+        if (shuffle && count < pool.length && !unitParam && setParam === "all") {
           selected = selected.sort(() => Math.random() - 0.5);
         }
         selected = selected.slice(0, count);
@@ -258,6 +261,36 @@ export async function GET(request) {
           explanation: q.explanation_en,
           explanationTa: q.explanation_ta,
         }));
+      }
+    }
+
+    // Check if target subject is Physics (PHY-12)
+    if (questionsList.length === 0 && (targetSubject.code === "PHY-12" || targetSubject.name.toLowerCase().includes("physics"))) {
+      try {
+        const phyPath = path.join(process.cwd(), "questions", "exams", "PHYSICS-12-15-SET1.json");
+        if (fs.existsSync(phyPath)) {
+          const phyData = JSON.parse(fs.readFileSync(phyPath, "utf8"));
+          const qArr = phyData.questions || [];
+          questionsList = qArr.slice(0, count).map((q, idx) => ({
+            id: `PHY12_PRACTICE_${idx + 1}`,
+            questionNumber: idx + 1,
+            unit: 1,
+            topic: q.syllabus_ref || "Physics Section A",
+            questionText: q.question,
+            marks: q.marks || 1,
+            options: (q.options || []).map(o => ({
+              id: o.id,
+              text: o.text,
+              textEn: o.text,
+              textTa: o.textTa || null,
+            })),
+            correctAnswer: (q.correct_answer || "A").toUpperCase(),
+            explanation: q.explanation,
+            explanationTa: q.explanationTa || null,
+          }));
+        }
+      } catch (e) {
+        console.warn("Could not read PHYSICS JSON file:", e.message);
       }
     }
 

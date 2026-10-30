@@ -23,7 +23,9 @@ import {
   Sparkles,
   Monitor,
   Radio,
-  X
+  X,
+  Award,
+  CalendarDays
 } from "lucide-react";
 import { translateQuestion, translateOption } from "@/lib/questionTranslations";
 
@@ -481,6 +483,10 @@ function ExamHallContent() {
 
   // Submit test to SQLite — only sets submitted state on confirmed server success
   const [submitError, setSubmitError] = useState("");
+  const attemptIdRef = React.useRef(null);
+  if (!attemptIdRef.current) {
+    attemptIdRef.current = "att_" + Date.now() + "_" + Math.random().toString(36).substring(2, 9);
+  }
 
   const handleSubmitExam = async () => {
     if (isPracticeMode) {
@@ -492,14 +498,16 @@ function ExamHallContent() {
     setSubmitting(true);
     setSubmitError("");
     try {
+      const timeSpent = Math.max(0, (exam.durationMinutes * 60) - (timeLeft || 0));
       const res = await fetch("/api/student/exam-submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           examId: exam.id,
           answers,
-          timeTakenSecs: (exam.durationMinutes * 60) - timeLeft,
+          timeTakenSecs: isNaN(timeSpent) ? 0 : timeSpent,
           previewRollNo,
+          attemptId: attemptIdRef.current,
         }),
       });
 
