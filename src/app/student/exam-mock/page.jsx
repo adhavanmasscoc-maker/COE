@@ -25,7 +25,9 @@ import {
   Radio,
   X,
   Award,
-  CalendarDays
+  CalendarDays,
+  XCircle,
+  BookOpen
 } from "lucide-react";
 import { translateQuestion, translateOption, getLocalizedQuestion, getLocalizedOption } from "@/lib/questionTranslations";
 import { pick, pickQuestion, pickOption, pickExplanation } from "@/lib/config/engine.config";
