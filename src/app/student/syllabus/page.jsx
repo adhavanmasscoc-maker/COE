@@ -196,6 +196,12 @@ function SyllabusExplorerContent() {
 
   const handleSelectStandard = (std) => {
     setPrepClass(std);
+    setSelectedSubId(null);
+    setPracticeSubjectId(null);
+    setPracticeState("idle");
+    setPracticeQuestions([]);
+    setPracticeResults(null);
+    setQbankQuestions([]);
     fetchSyllabus(std);
   };
 
@@ -313,10 +319,11 @@ function SyllabusExplorerContent() {
     const setToUse = overrideSet !== undefined ? overrideSet : practiceSet;
 
     try {
-      const targetId = practiceSubjectId || currentSubject.id;
-      const targetCode = activePracticeSubject?.code || currentSubject?.code || (prepClass === 10 ? "ENG-10" : "CHE-12");
+      const activeSub = subjects.find((s) => s.id === practiceSubjectId) || currentSubject || (prepClass === 10 ? subjects.find((s) => s.code === "ENG-10") : subjects[0]);
+      const targetId = activeSub?.id;
+      const targetCode = activeSub?.code || (prepClass === 10 ? "ENG-10" : "CHE-12");
       const params = new URLSearchParams();
-      params.set("subjectId", targetId);
+      if (targetId) params.set("subjectId", targetId);
       params.set("code", targetCode);
       params.set("prepClass", String(prepClass));
       if (previewRoll) params.set("previewRollNo", previewRoll);

@@ -37,9 +37,11 @@ export default function PracticeExamPage() {
   const router = useRouter();
   const { isTamil: globalIsTamil } = useLanguage();
 
-  const rawSubject = (params?.subject || "CHE-12").toUpperCase();
-  const rawSet = (params?.set || "set-a").toLowerCase();
   const previewRollNo = searchParams.get("previewRollNo");
+  const is10thCandidate = previewRollNo && (previewRollNo === "9105" || /^(?:TN2026-09|TN2026-10|91)/.test(previewRollNo));
+  const fallbackSubject = is10thCandidate ? "ENG-10" : "CHE-12";
+  const rawSubject = (params?.subject || fallbackSubject).toUpperCase();
+  const rawSet = (params?.set || "set-a").toLowerCase();
 
   // Step state: "WELCOME" | "PRACTICE" | "RESULT"
   const [step, setStep] = useState("WELCOME");

@@ -218,6 +218,21 @@ export async function GET(request) {
       return NextResponse.json({ error: "No subject found." }, { status: 404 });
     }
 
+    // Strict Standard Isolation Guard:
+    // If student/session is Class 10, NEVER allow Class 12 subjects (like Chemistry) to leak through!
+    const reqPrepClass = searchParams.get("prepClass") ? parseInt(searchParams.get("prepClass"), 10) : null;
+    const isExplicitClass10 = reqPrepClass === 10 || (previewRollNo && (previewRollNo === "9105" || /^(?:TN2026-09|TN2026-10|91)/.test(previewRollNo)));
+    if (isExplicitClass10 && targetSubject.prepClass === 12) {
+      const class10Subject = await db.subject.findFirst({
+        where: { prepClass: 10, code: "ENG-10" },
+        include: { units: { include: { chapters: true } } },
+      }) || await db.subject.findFirst({
+        where: { prepClass: 10 },
+        include: { units: { include: { chapters: true } } },
+      });
+      if (class10Subject) targetSubject = class10Subject;
+    }
+
     let questionsList = [];
 
     // 1. Universal Question Bank Loader for Class 12 (Chemistry, Physics, English)

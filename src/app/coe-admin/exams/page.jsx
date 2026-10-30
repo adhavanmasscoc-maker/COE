@@ -399,9 +399,10 @@ function COEAdminExamsContent() {
     setEditingQuestion(null);
     setSelectedBankCheckboxes(new Set());
     setSwapperTab("CURRENT");
-    const initialCount = exam._count?.questions || 25;
+    const initialMarks = exam.totalMarks || 25;
+    const initialCount = initialMarks === 25 ? 25 : (exam._count?.questions || initialMarks || 25);
     setSwapperCount(initialCount);
-    setSwapperTotalMarks(exam.totalMarks || initialCount);
+    setSwapperTotalMarks(initialMarks);
     try {
       const res = await fetch(`/api/admin/exams/${exam.id}/random-questions`);
       const data = await res.json();
@@ -1569,7 +1570,8 @@ function COEAdminExamsContent() {
                           { q: 10, m: 10, label: "10 Qs (10 Marks)" },
                           { q: 25, m: 25, label: "25 Qs (25 Marks)" },
                           { q: 50, m: 50, label: "50 Qs (50 Marks)" },
-                          { q: 15, m: 15, label: "15 Qs (15 Marks)" },
+                          { q: 10, m: 10, label: "10 Qs (10 Marks)" },
+                          { q: 100, m: 100, label: "100 Qs (100 Marks)" },
                         ].map((preset) => (
                           <button
                             key={preset.q}

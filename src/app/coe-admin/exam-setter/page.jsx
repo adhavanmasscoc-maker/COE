@@ -25,12 +25,14 @@ import {
   RefreshCw,
   Code2,
   BookOpen,
-  Sliders
+  Sliders,
+  Shuffle,
+  Zap
 } from "lucide-react";
 
 // Generate exact template matching Phase 5.2
 function generateExactTemplate({ sub, date, time, total_marks, language, level, count }) {
-  const qCount = parseInt(count, 10) || (total_marks <= 25 ? 10 : 20);
+  const qCount = parseInt(count, 10) || parseInt(total_marks, 10) || 25;
   const questions = [];
 
   for (let i = 1; i <= qCount; i++) {
@@ -286,6 +288,129 @@ function ExamSetterContent() {
       const jsonStr = JSON.stringify(updated, null, 2);
       setPastedJson(jsonStr);
       setValidationSuccess(`✓ Shuffled ${renumbered.length} questions randomly without duplicates!`);
+    } catch (e) {
+      alert("Please ensure valid JSON before shuffling: " + e.message);
+    }
+  };
+
+  // Quick Action: Scramble ABCD options for every question while preserving the official answer key
+  const handleShufflePastedOptions = () => {
+    try {
+      const parsed = JSON.parse(pastedJson || generatedJson);
+      if (!parsed.questions || !Array.isArray(parsed.questions)) return;
+
+      const updatedQuestions = parsed.questions.map((q) => {
+        const opts = q.options;
+        if (!opts || typeof opts !== "object") return q;
+
+        let entries = [];
+        if (Array.isArray(opts)) {
+          entries = opts.map((opt, i) => ({
+            id: String(opt.id || String.fromCharCode(65 + i)).toUpperCase(),
+            text: opt.text || "",
+          }));
+        } else {
+          entries = Object.entries(opts).map(([k, v]) => ({
+            id: k.toUpperCase(),
+            text: typeof v === "object" ? v?.text || "" : String(v || ""),
+          }));
+        }
+
+        const currentAnswer = String(q.answer || q.correctAnswer || "A").trim().toUpperCase();
+        let correctText = "";
+        const match = entries.find((e) => e.id === currentAnswer);
+        if (match) {
+          correctText = match.text;
+        } else {
+          correctText = entries[0]?.text || "";
+        }
+
+        // Shuffle options array
+        const shuffled = [...entries].sort(() => 0.5 - Math.random());
+        const newOptions = {};
+        let newCorrectLetter = "A";
+
+        shuffled.forEach((entry, idx) => {
+          const letter = String.fromCharCode(65 + idx);
+          newOptions[letter] = entry.text;
+          if (entry.text === correctText) {
+            newCorrectLetter = letter;
+          }
+        });
+
+        return {
+          ...q,
+          options: newOptions,
+          answer: newCorrectLetter,
+        };
+      });
+
+      const updated = { ...parsed, questions: updatedQuestions };
+      const jsonStr = JSON.stringify(updated, null, 2);
+      setPastedJson(jsonStr);
+      setValidationSuccess(`✓ Scrambled ABCD options across all ${updatedQuestions.length} questions with 100% key accuracy!`);
+    } catch (e) {
+      alert("Please ensure valid JSON before shuffling options: " + e.message);
+    }
+  };
+
+  // Quick Action: Shuffle both question order (1..N) and ABCD options
+  const handleShuffleEverything = () => {
+    try {
+      const parsed = JSON.parse(pastedJson || generatedJson);
+      if (!parsed.questions || !Array.isArray(parsed.questions)) return;
+
+      const shuffled = [...parsed.questions].sort(() => 0.5 - Math.random());
+      const fullyScrambled = shuffled.map((q, idx) => {
+        const opts = q.options;
+        if (!opts || typeof opts !== "object") return { ...q, id: idx + 1 };
+
+        let entries = [];
+        if (Array.isArray(opts)) {
+          entries = opts.map((opt, i) => ({
+            id: String(opt.id || String.fromCharCode(65 + i)).toUpperCase(),
+            text: opt.text || "",
+          }));
+        } else {
+          entries = Object.entries(opts).map(([k, v]) => ({
+            id: k.toUpperCase(),
+            text: typeof v === "object" ? v?.text || "" : String(v || ""),
+          }));
+        }
+
+        const currentAnswer = String(q.answer || q.correctAnswer || "A").trim().toUpperCase();
+        let correctText = "";
+        const match = entries.find((e) => e.id === currentAnswer);
+        if (match) {
+          correctText = match.text;
+        } else {
+          correctText = entries[0]?.text || "";
+        }
+
+        const shuffledOpts = [...entries].sort(() => 0.5 - Math.random());
+        const newOptions = {};
+        let newCorrectLetter = "A";
+
+        shuffledOpts.forEach((entry, oIdx) => {
+          const letter = String.fromCharCode(65 + oIdx);
+          newOptions[letter] = entry.text;
+          if (entry.text === correctText) {
+            newCorrectLetter = letter;
+          }
+        });
+
+        return {
+          ...q,
+          id: idx + 1,
+          options: newOptions,
+          answer: newCorrectLetter,
+        };
+      });
+
+      const updated = { ...parsed, questions: fullyScrambled };
+      const jsonStr = JSON.stringify(updated, null, 2);
+      setPastedJson(jsonStr);
+      setValidationSuccess(`✓ Fully scrambled question sequence (1..${fullyScrambled.length}) and ABCD options!`);
     } catch (e) {
       alert("Please ensure valid JSON before shuffling: " + e.message);
     }
@@ -700,10 +825,28 @@ function ExamSetterContent() {
                 type="button"
                 onClick={handleShufflePastedQuestions}
                 className="px-2.5 py-1 rounded-lg border border-amber-500/40 bg-amber-500/15 text-amber-300 font-bold hover:bg-amber-500/25 transition-all flex items-center gap-1"
-                title="Shuffle current questions randomly without duplicates"
+                title="Shuffle question sequence (e.g. Q1 to Q10, Q10 to Q1)"
               >
-                <RefreshCw className="w-3 h-3" />
-                Shuffle Random
+                <Shuffle className="w-3 h-3" />
+                Shuffle Questions
+              </button>
+              <button
+                type="button"
+                onClick={handleShufflePastedOptions}
+                className="px-2.5 py-1 rounded-lg border border-cyan-500/40 bg-cyan-500/15 text-cyan-300 font-bold hover:bg-cyan-500/25 transition-all flex items-center gap-1"
+                title="Scramble ABCD option choices for every question while preserving correct answer"
+              >
+                <Shuffle className="w-3 h-3 text-cyan-400" />
+                Shuffle Options
+              </button>
+              <button
+                type="button"
+                onClick={handleShuffleEverything}
+                className="px-2.5 py-1 rounded-lg border border-violet-500/40 bg-violet-600 text-white font-bold hover:bg-violet-500 transition-all flex items-center gap-1 shadow-sm"
+                title="Shuffle both question order and ABCD options in one click"
+              >
+                <Zap className="w-3 h-3 text-amber-300" />
+                Shuffle Everything
               </button>
 
               <div className="flex items-center gap-1.5 ml-auto">
