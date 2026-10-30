@@ -70,36 +70,68 @@
     --border: rgba(124, 58, 237, 0.2);
   }
 
-  /* Eye-friendly Dim Light Mode (Phase 7.2 & 7.3: Soft warm slate backgrounds, comfortable, no pure white) */
+  /* Eye-friendly Dim Light Mode (Phase 7.2 & 7.3: Soft warm slate backgrounds, comfortable, WCAG AA compliant) */
   html:not(.dark),
   .light {
+    --background: #E6E3DC;
+    --foreground: #1c1c28;
     --bg-base: #E6E3DC;
     --bg-surface: #EDEAE3;
     --bg-elevated: #F3F0EA;
     --bg-overlay: rgba(230, 227, 220, 0.92);
 
-    --fg-primary: #2B2B2B;
-    --fg-secondary: #4A4A4A;
-    --fg-muted: #5E5E5E;
-    --fg-accent: #5F87C6;
+    --fg-primary: #1c1c28;
+    --fg-secondary: #3b3b4f;
+    --fg-muted: #495057;
+    --fg-accent: #0056b3;
 
     --border-subtle: rgba(201, 197, 187, 0.5);
     --border-default: #C9C5BB;
     --border-strong: #A8A49A;
 
     --card: #EDEAE3;
-    --card-foreground: #2B2B2B;
+    --card-foreground: #1c1c28;
     --card-border: #C9C5BB;
 
-    --primary: #5F87C6;
+    --primary: #0056b3;
     --primary-foreground: #ffffff;
-    --primary-hover: #4B73B2;
+    --primary-hover: #004494;
 
     --secondary: #DFDBD3;
-    --secondary-foreground: #2B2B2B;
-    --muted: #5E5E5E;
-    --muted-foreground: #5E5E5E;
+    --secondary-foreground: #1c1c28;
+    --muted: #DFDBD3;
+    --muted-foreground: #495057;
     --border: #C9C5BB;
+  }
+
+  /* WCAG AA High Contrast Guarantee for Light Theme (Fixes 1.06:1 text invisibility) */
+  html:not(.dark) tbody.divide-y span.font-bold,
+  html:not(.dark) tr.hover span.text-foreground,
+  html:not(.dark) .text-\[\#f0f0ff\],
+  html:not(.dark) h1.text-\[\#f0f0ff\],
+  html:not(.dark) h2.text-\[\#f0f0ff\],
+  html:not(.dark) h3.text-\[\#f0f0ff\],
+  html:not(.dark) span.text-\[\#f0f0ff\] {
+    color: var(--foreground) !important;
+  }
+
+  html:not(.dark) .text-\[\#5c5c8a\] {
+    color: #495057 !important;
+  }
+
+  html:not(.dark) .text-\[\#a8a8d0\] {
+    color: #212529 !important;
+  }
+
+  html:not(.dark) .btn-ghost,
+  html:not(.dark) .btn-secondary {
+    color: var(--primary) !important;
+    border-color: var(--border-default) !important;
+  }
+
+  html:not(.dark) th,
+  html:not(.dark) td {
+    color: var(--foreground);
   }
 
   html[lang="ta"],

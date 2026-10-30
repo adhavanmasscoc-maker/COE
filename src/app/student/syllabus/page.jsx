@@ -411,7 +411,9 @@ function SyllabusExplorerContent() {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 rounded-2xl bg-secondary/80 border border-border">
         <div className="flex items-center gap-3">
           <Link
-            href="/student/dashboard"
+            href={`/student/dashboard${previewRoll ? `?previewRollNo=${encodeURIComponent(previewRoll)}` : ""}`}
+            aria-label="Back to Student Dashboard"
+            title="Back to Student Dashboard"
             className="p-2 rounded-xl border border-border text-muted-foreground hover:text-foreground hover:bg-card transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
