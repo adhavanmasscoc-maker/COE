@@ -1959,23 +1959,14 @@ function COEAdminExamsContent() {
 
                         {q.options && (
                           <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground pt-1">
-                            {Array.isArray(q.options)
-                              ? q.options.map((opt) => (
-                                  <div key={opt.id} className={`px-2 py-1 rounded-md border ${
-                                    opt.id === q.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border bg-secondary/30"
-                                  }`}>
-                                    <span className="font-bold font-mono mr-1.5">{opt.id}:</span>
-                                    <span>{opt.text}</span>
-                                  </div>
-                                ))
-                              : Object.keys(q.options).map((key) => (
-                                  <div key={key} className={`px-2 py-1 rounded-md border ${
-                                    key === q.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border bg-secondary/30"
-                                  }`}>
-                                    <span className="font-bold font-mono mr-1.5">{key}:</span>
-                                    <span>{q.options[key]}</span>
-                                  </div>
-                                ))}
+                            {normalizeOptionsList(q.options).map((opt) => (
+                              <div key={opt.id} className={`px-2 py-1 rounded-md border ${
+                                opt.id === q.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border bg-secondary/30"
+                              }`}>
+                                <span className="font-bold font-mono mr-1.5">{opt.id}:</span>
+                                <span>{typeof opt.text === "object" ? JSON.stringify(opt.text) : String(opt.text || "")}</span>
+                              </div>
+                            ))}
                           </div>
                         )}
 
@@ -2086,23 +2077,14 @@ function COEAdminExamsContent() {
 
                                 {b.options && (
                                   <div className="grid grid-cols-2 gap-1.5 pt-1 text-[11px] text-muted-foreground">
-                                    {Array.isArray(b.options)
-                                      ? b.options.map((opt) => (
-                                          <div key={opt.id} className={`px-2 py-0.5 rounded border text-[10px] ${
-                                            opt.id === b.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border"
-                                          }`}>
-                                            <span className="font-bold mr-1">{opt.id}:</span>
-                                            <span>{opt.text}</span>
-                                          </div>
-                                        ))
-                                      : Object.keys(b.options).map((key) => (
-                                          <div key={key} className={`px-2 py-0.5 rounded border text-[10px] ${
-                                            key === b.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border"
-                                          }`}>
-                                            <span className="font-bold mr-1">{key}:</span>
-                                            <span>{b.options[key]}</span>
-                                          </div>
-                                        ))}
+                                    {normalizeOptionsList(b.options).map((opt) => (
+                                      <div key={opt.id} className={`px-2 py-0.5 rounded border text-[10px] ${
+                                        opt.id === b.correctAnswer ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-semibold" : "border-border"
+                                      }`}>
+                                        <span className="font-bold mr-1">{opt.id}:</span>
+                                        <span>{typeof opt.text === "object" ? JSON.stringify(opt.text) : String(opt.text || "")}</span>
+                                      </div>
+                                    ))}
                                   </div>
                                 )}
                               </div>

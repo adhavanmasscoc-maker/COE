@@ -234,13 +234,13 @@ function StudentDashboardContent() {
           </div>
           <div>
             <div className="flex items-center gap-2 flex-wrap">
-              <h1 className="text-xl font-black text-[#f0f0ff]">{profile.fullName}</h1>
-              <span className={`badge ${profile.medium === "Tamil" ? "badge-amber" : "badge-cyan"}`}>
-                {profile.medium === "Tamil" ? "தமிழ் வழி" : "English Medium"}
+              <h1 className="text-xl font-black text-[#f0f0ff]">{profile?.fullName || "Candidate"}</h1>
+              <span className={`badge ${profile?.medium === "Tamil" ? "badge-amber" : "badge-cyan"}`}>
+                {profile?.medium === "Tamil" ? "தமிழ் வழி" : "English Medium"}
               </span>
             </div>
             <p className="text-xs text-[#5c5c8a] font-mono mt-0.5">
-              {profile.rollNo} · {profile.board}
+              {profile?.rollNo || ""} · {profile?.board || "Tamil Nadu State Board"}
             </p>
           </div>
         </div>
@@ -294,11 +294,11 @@ function StudentDashboardContent() {
             </h2>
             <p className="text-xs text-[#5c5c8a] mt-0.5">{isTamil ? "அரசு தேர்வு வாரியத்தால் ஒதுக்கப்பட்ட பாடங்கள்" : "Assigned official curriculum subjects"}</p>
           </div>
-          <span className="badge badge-muted">{subjects.length} {isTamil ? "பாடங்கள்" : "Subjects"}</span>
+          <span className="badge badge-muted">{(subjects || []).length} {isTamil ? "பாடங்கள்" : "Subjects"}</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-          {subjects.map((sub, i) => (
+          {(subjects || []).map((sub, i) => (
             <div key={sub.id} style={{ animationDelay: `${i * 60}ms` }}>
               <SubjectCard sub={sub} isPreview={isPreview} previewRoll={previewRoll} />
             </div>
