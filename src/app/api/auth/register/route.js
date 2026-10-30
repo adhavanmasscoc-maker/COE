@@ -147,10 +147,12 @@ export async function POST(request) {
     try {
       const timestamp = new Date().toISOString();
       const credRecord = `[${timestamp}] REGISTERED_CANDIDATE: RollNo="${rollNo}", Name="${name}", DOB="${dob}", CurrentClass=${currentClass}, PrepClass=${examPrepClass}, Medium="${language}"\n`;
-      const scriptLogPath = path.join(process.cwd(), "scripts", "registered_candidates.txt");
+      const scriptLogPath = process.env.VERCEL
+        ? path.join("/tmp", "registered_candidates.txt")
+        : path.join(process.cwd(), "scripts", "registered_candidates.txt");
       fs.appendFileSync(scriptLogPath, credRecord, "utf8");
     } catch (fsErr) {
-      console.warn("Could not write to registered_candidates.txt:", fsErr.message);
+      console.warn("Audit log notice (safe to ignore in cloud serverless):", fsErr.message);
     }
 
     // --- Create active student user and profile ---
@@ -210,16 +212,24 @@ export async function POST(request) {
     );
   } catch (error) {
     console.error("[Registration API Error]", error);
-    await createIncident({
-      route: "/api/auth/register",
-      rollNo: rollNo || "UNKNOWN",
-      step: "registration_exception",
-      message: error?.message || "Internal server error during registration",
-      raw: error?.stack,
-    }).catch(() => {});
+    let incidentId = null;
+    try {
+      incidentId = await createIncident({
+        route: "/api/auth/register",
+        rollNo: rollNo || "UNKNOWN_CANDIDATE",
+        step: "registration_exception",
+        message: `Registration failed for ${rollNo || "candidate"}: ${error?.message || "Internal error"}`,
+        raw: error?.stack,
+      });
+    } catch (incErr) {
+      console.warn("Could not record incident:", incErr?.message);
+    }
 
     return NextResponse.json(
-      { error: "An internal error occurred during registration. The COE Help Panel has been notified." },
+      {
+        error: `Registration issue: ${error?.message || "Internal server error"}. Reference Ticket #${incidentId || "INC-RECORDED"} has been forwarded to the COE Help Desk.`,
+        incidentId: incidentId || undefined,
+      },
       { status: 500 }
     );
   }

@@ -101,14 +101,43 @@ function COEIncidentPanelContent() {
             </p>
           </div>
         </div>
-        <Button
-          size="sm"
-          variant="outline"
-          onClick={fetchData}
-          className="gap-1.5 text-xs"
-        >
-          <RefreshCw className="w-4 h-4" /> Refresh
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={async () => {
+              try {
+                const res = await fetch("/api/admin/incidents", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({
+                    route: "/coe-admin/help-panel",
+                    rollNo: "COE_AUDIT_PING",
+                    step: "manual_verification",
+                    message: `Verified incident pipeline alive at ${new Date().toLocaleTimeString("en-IN")}.`,
+                  }),
+                });
+                if (res.ok) {
+                  showMsg("Test incident dispatched successfully.");
+                  fetchData();
+                }
+              } catch {
+                showMsg("Failed to dispatch test incident.");
+              }
+            }}
+            className="gap-1.5 text-xs text-amber-300 border-amber-500/30 hover:bg-amber-500/10"
+          >
+            <ShieldAlert className="w-3.5 h-3.5" /> Dispatch Test Ping
+          </Button>
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={fetchData}
+            className="gap-1.5 text-xs"
+          >
+            <RefreshCw className="w-4 h-4" /> Refresh
+          </Button>
+        </div>
       </div>
 
       {/* Notification */}

@@ -33,3 +33,5 @@ prisma/*.db-journal
 
 .vercel
 .env*
+
+incidents_fallback.json

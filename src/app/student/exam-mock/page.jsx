@@ -769,6 +769,16 @@ function ExamHallContent() {
               </Button>
             </Link>
 
+            <Link href="/student/history" className="block w-full">
+              <Button
+                variant="outline"
+                className="w-full justify-center text-xs font-bold gap-2 py-2.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/10"
+              >
+                <CalendarDays className="w-4 h-4 text-violet-400" />
+                {isExamTamil ? "தேர்வு வரலாறு & முழு விடைக்குறிப்பு காண்க" : "View Exam History & Answer Breakdown"}
+              </Button>
+            </Link>
+
             <Button
               variant="outline"
               onClick={() => {

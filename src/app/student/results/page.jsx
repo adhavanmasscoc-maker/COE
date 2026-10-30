@@ -104,6 +104,11 @@ function StudentResultsContent() {
           </div>
         </div>
         <div className="flex items-center gap-2 print:hidden">
+          <Link href="/student/history">
+            <Button variant="outline" size="sm" className="gap-1.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/10">
+              <Calendar className="w-4 h-4 text-violet-400" />Exam History
+            </Button>
+          </Link>
           <Button variant="secondary" size="sm" onClick={() => window.print()} className="gap-1.5">
             <Printer className="w-4 h-4" />Print
           </Button>

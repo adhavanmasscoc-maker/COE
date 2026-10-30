@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getCurrentSession } from "@/lib/auth";
 import { db } from "@/lib/db";
+import fs from "fs";
+import path from "path";
 
 export const dynamic = "force-dynamic";
 
@@ -116,7 +118,7 @@ const CURRICULUM_PRACTICE_BANK = {
         ],
         correctAnswer: "A",
         marks: 1,
-        explanation: "Initial charges q1=3, q2=4 (product = +12, F=10N). New charges: q1'= -3, q2'= -2 (product = +6). Since product is halved, magnitude is halved to 5 N. Both are negative so force is repulsive; if sign opposite attractive."
+        explanation: "Initial charges q1=3, q2=4 (product = +12, F=10N). New charges: q1'= -3, q2'= -2 (product = +6). Since product is halved, magnitude is halved to 5 N."
       },
       {
         questionNumber: 2,
@@ -150,6 +152,21 @@ const CURRICULUM_PRACTICE_BANK = {
   }
 };
 
+function loadChemistry100() {
+  try {
+    const filePath = path.join(process.cwd(), "questions", "exams", "CHEMISTRY-12-100-ALL.json");
+    if (fs.existsSync(filePath)) {
+      const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      const set1 = Array.isArray(raw.set1) ? raw.set1 : Object.values(raw.set1 || {});
+      const set2 = Array.isArray(raw.set2) ? raw.set2 : Object.values(raw.set2 || {});
+      return [...set1, ...set2];
+    }
+  } catch (err) {
+    console.warn("loadChemistry100 error:", err.message);
+  }
+  return [];
+}
+
 export async function GET(request) {
   try {
     const session = await getCurrentSession();
@@ -159,12 +176,28 @@ export async function GET(request) {
 
     const { searchParams } = new URL(request.url);
     const subjectId = searchParams.get("subjectId");
-    const count = parseInt(searchParams.get("count"), 10) || 5;
+    const subjectCode = searchParams.get("code");
+    const unitParam = searchParams.get("unit"); // e.g. "1" or "all"
+    const setParam = searchParams.get("set"); // "1", "2", "all"
+    const count = Math.min(100, Math.max(1, parseInt(searchParams.get("count"), 10) || 10));
+    const shuffle = searchParams.get("shuffle") !== "false";
 
     let targetSubject = null;
     if (subjectId) {
       targetSubject = await db.subject.findUnique({
         where: { id: subjectId },
+        include: { units: { include: { chapters: true } } },
+      });
+    } else if (subjectCode) {
+      targetSubject = await db.subject.findUnique({
+        where: { code: subjectCode },
+        include: { units: { include: { chapters: true } } },
+      });
+    }
+
+    if (!targetSubject) {
+      targetSubject = await db.subject.findFirst({
+        where: { prepClass: session.examPrepClass || 12 },
         include: { units: { include: { chapters: true } } },
       });
     }
@@ -179,43 +212,121 @@ export async function GET(request) {
       return NextResponse.json({ error: "No subject found." }, { status: 404 });
     }
 
-    // 1. Try to fetch questions from existing ExamQuestions for this subject
-    const existingQuestions = await db.examQuestion.findMany({
-      where: {
-        examSchedule: {
-          subjectId: targetSubject.id,
-        },
-      },
-      take: count * 2,
-    });
-
     let questionsList = [];
 
-    if (existingQuestions.length >= 3) {
-      // Shuffle and format
-      questionsList = existingQuestions.slice(0, count).map((q, idx) => ({
-        id: q.id,
-        questionNumber: idx + 1,
-        questionText: q.questionText,
-        marks: q.marks,
-        options: JSON.parse(q.options || "[]"),
-        correctAnswer: q.correctAnswer,
-        explanation: q.explanation,
-      }));
-    } else {
-      // Use rich curriculum question bank
-      const classBank = CURRICULUM_PRACTICE_BANK[targetSubject.prepClass] || CURRICULUM_PRACTICE_BANK[10];
-      const subjectQuestions = classBank[targetSubject.code] || classBank["MAT-10"] || [];
+    // Check if target subject is Class 12 Chemistry
+    if (targetSubject.code === "CHE-12" || targetSubject.name.toLowerCase().includes("chemistry")) {
+      const allChem = loadChemistry100();
+      let pool = allChem;
 
-      questionsList = subjectQuestions.slice(0, count).map((q, idx) => ({
-        id: `practice_${targetSubject.code}_${idx + 1}`,
-        questionNumber: idx + 1,
-        questionText: q.questionText,
-        marks: q.marks || 1,
-        options: q.options,
-        correctAnswer: q.correctAnswer,
-        explanation: q.explanation,
-      }));
+      if (setParam === "1") {
+        pool = pool.slice(0, 50);
+      } else if (setParam === "2") {
+        pool = pool.slice(50, 100);
+      }
+
+      if (unitParam && unitParam !== "all") {
+        const uNum = parseInt(unitParam, 10);
+        pool = pool.filter((q) => q.unit === uNum);
+      }
+
+      // If pool is non-empty, format from the 100 question bank
+      if (pool.length > 0) {
+        let selected = [...pool];
+        if (shuffle && count < pool.length) {
+          selected = selected.sort(() => Math.random() - 0.5);
+        }
+        selected = selected.slice(0, count);
+
+        questionsList = selected.map((q, idx) => ({
+          id: q.id || `CHE12_PRACTICE_${idx + 1}`,
+          questionNumber: idx + 1,
+          unit: q.unit,
+          topic: q.topic,
+          questionText: q.question_en,
+          questionTextTa: q.question_ta,
+          marks: 1,
+          options: [
+            { id: "A", text: q.options_en?.a || "", textEn: q.options_en?.a || "", textTa: q.options_ta?.a || "" },
+            { id: "B", text: q.options_en?.b || "", textEn: q.options_en?.b || "", textTa: q.options_ta?.b || "" },
+            { id: "C", text: q.options_en?.c || "", textEn: q.options_en?.c || "", textTa: q.options_ta?.c || "" },
+            { id: "D", text: q.options_en?.d || "", textEn: q.options_en?.d || "", textTa: q.options_ta?.d || "" },
+          ],
+          correctAnswer: (q.correct_option || "a").toUpperCase(),
+          answerTextEn: q.answer_en,
+          answerTextTa: q.answer_ta,
+          explanation: q.explanation_en,
+          explanationTa: q.explanation_ta,
+        }));
+      }
+    }
+
+    // If questionsList is still empty, check DB QuestionBankItem
+    if (questionsList.length === 0) {
+      const dbItems = await db.questionBankItem.findMany({
+        where: { subjectId: targetSubject.id },
+        take: count * 2,
+      });
+
+      if (dbItems.length > 0) {
+        let selected = [...dbItems];
+        if (shuffle && count < dbItems.length) {
+          selected = selected.sort(() => Math.random() - 0.5);
+        }
+        selected = selected.slice(0, count);
+
+        questionsList = selected.map((q, idx) => {
+          let opts = [];
+          try {
+            opts = JSON.parse(q.options || "[]");
+          } catch {
+            opts = [];
+          }
+          return {
+            id: q.id,
+            questionNumber: idx + 1,
+            topic: q.topic,
+            questionText: q.questionText,
+            marks: q.marks || 1,
+            options: opts,
+            correctAnswer: (q.correctAnswer || "A").toUpperCase(),
+            explanation: q.explanation,
+          };
+        });
+      }
+    }
+
+    // Fallback to ExamQuestion or Curriculum Bank
+    if (questionsList.length === 0) {
+      const existingExamQuestions = await db.examQuestion.findMany({
+        where: { examSchedule: { subjectId: targetSubject.id } },
+        take: count * 2,
+      });
+
+      if (existingExamQuestions.length >= 2) {
+        questionsList = existingExamQuestions.slice(0, count).map((q, idx) => ({
+          id: q.id,
+          questionNumber: idx + 1,
+          questionText: q.questionText,
+          marks: q.marks,
+          options: JSON.parse(q.options || "[]"),
+          correctAnswer: q.correctAnswer,
+          explanation: q.explanation,
+        }));
+      } else {
+        const classBank = CURRICULUM_PRACTICE_BANK[targetSubject.prepClass] || CURRICULUM_PRACTICE_BANK[10];
+        const subjectQuestions = classBank[targetSubject.code] || classBank["MAT-10"] || [];
+
+        questionsList = subjectQuestions.slice(0, count).map((q, idx) => ({
+          id: `practice_${targetSubject.code}_${idx + 1}`,
+          questionNumber: idx + 1,
+          questionText: q.questionText,
+          marks: q.marks || 1,
+          options: q.options,
+          correctAnswer: q.correctAnswer,
+          explanation: q.explanation,
+        }));
+      }
     }
 
     return NextResponse.json({

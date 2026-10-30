@@ -46,10 +46,19 @@ export async function GET(request) {
       completedChapterIds = new Set(progressRecords.map((p) => p.chapterId));
     }
 
+    // 2b. Fetch QuestionBank counts per subject
+    const qbGroup = await db.questionBankItem.groupBy({
+      by: ["subjectId"],
+      _count: { id: true },
+    }).catch(() => []);
+    const qbCounts = new Map(qbGroup.map((g) => [g.subjectId, g._count.id]));
+
     // 3. Format response with completion status
     const formattedSubjects = subjects.map((sub) => {
       let subChaptersCount = 0;
       let subCompletedCount = 0;
+
+      const qbCount = qbCounts.get(sub.id) || (sub.code === "CHE-12" ? 100 : 0);
 
       const units = sub.units.map((unit) => {
         const chapters = unit.chapters.map((ch) => {
@@ -85,6 +94,7 @@ export async function GET(request) {
         totalChapters: subChaptersCount,
         completedChapters: subCompletedCount,
         progressPercent,
+        questionBankCount: qbCount,
         units,
       };
     });

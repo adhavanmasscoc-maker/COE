@@ -36,14 +36,16 @@ export function useAuth() { return useContext(AuthContext); }
 
 // ─── Nav config ───────────────────────────────────────────────────────
 const studentNav = [
-  { href: "/student/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/student/syllabus",  label: "Syllabus",  icon: BookOpen },
-  { href: "/student/papers",    label: "Papers",    icon: FileText },
-  { href: "/student/results",   label: "Results",   icon: Award },
+  { href: "/student/dashboard", label: "Dashboard",     icon: LayoutDashboard },
+  { href: "/student/history",   label: "Exam History",  icon: CalendarDays },
+  { href: "/student/syllabus",  label: "Syllabus & Bank", icon: BookOpen },
+  { href: "/student/papers",    label: "Papers",        icon: FileText },
+  { href: "/student/results",   label: "Results",       icon: Award },
 ];
 
 const adminNav = [
   { href: "/coe-admin/dashboard",    label: "Overview",            icon: LayoutDashboard },
+  { href: "/coe-admin/help-panel",   label: "COE Help Desk",       icon: ShieldCheck },
   { href: "/coe-admin/curriculum",   label: "Curriculum Archive",  icon: FolderArchive },
   { href: "/coe-admin/ai-questions", label: "AI Exam Setter",      icon: Sparkles },
   { href: "/coe-admin/history",      label: "History & Clicks",    icon: Activity },
@@ -66,6 +68,7 @@ const adminMobileBottomNav = [
 
 const studentMobileBottomNav = [
   { href: "/student/dashboard", label: "Home",     icon: LayoutDashboard },
+  { href: "/student/history",   label: "History",  icon: CalendarDays },
   { href: "/student/syllabus",  label: "Syllabus", icon: BookOpen },
   { href: "/student/papers",    label: "Papers",   icon: FileText },
   { href: "/student/results",   label: "Results",  icon: Award },

@@ -189,11 +189,18 @@ function StudentDashboardContent() {
             </p>
           </div>
         </div>
-        <Link href={`/student/results${isPreview ? `?previewRollNo=${previewRoll}` : ""}`}>
-          <Button variant="secondary" size="sm" className="gap-1.5 font-semibold text-xs">
-            <Award className="w-4 h-4" />{t("btn_view_result", "View Marksheet")}
-          </Button>
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link href={`/student/history${isPreview ? `?previewRollNo=${previewRoll}` : ""}`}>
+            <Button variant="outline" size="sm" className="gap-1.5 font-semibold text-xs border-violet-500/30 text-violet-300 hover:bg-violet-500/10">
+              <Calendar className="w-4 h-4 text-violet-400" />{isTamil ? "தேர்வு வரலாறு" : "Exam History"}
+            </Button>
+          </Link>
+          <Link href={`/student/results${isPreview ? `?previewRollNo=${previewRoll}` : ""}`}>
+            <Button variant="secondary" size="sm" className="gap-1.5 font-semibold text-xs">
+              <Award className="w-4 h-4" />{t("btn_view_result", "View Marksheet")}
+            </Button>
+          </Link>
+        </div>
       </div>
 
       {/* Stat cards */}
@@ -354,10 +361,10 @@ function StudentDashboardContent() {
                         </Button>
                       </Link>
                       <Link
-                        href={`/student/exam-mock?examId=${exam.id}${isPreview ? `&previewRollNo=${previewRoll}` : ""}`}
+                        href={`/student/history${isPreview ? `?previewRollNo=${previewRoll}` : ""}`}
                       >
                         <Button variant="secondary" size="sm" className="text-xs">
-                          {isTamil ? "சமர்ப்பிப்பு சான்றிதழ்" : "View Receipt"}
+                          {isTamil ? "தேர்வு வரலாறு & விடைகள்" : "Exam History & Keys"}
                         </Button>
                       </Link>
                     </>
