@@ -35,3 +35,6 @@ prisma/*.db-journal
 .env*
 
 incidents_fallback.json
+
+*.bak
+backup/

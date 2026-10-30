@@ -60,9 +60,11 @@ function normalizeOptionsList(options) {
         return { id: String.fromCharCode(65 + idx), text: item };
       }
       if (item && typeof item === "object") {
+        const rawText = item.text !== undefined ? item.text : item.textEn !== undefined ? item.textEn : item.textTa !== undefined ? item.textTa : item.label !== undefined ? item.label : item.value !== undefined ? item.value : "";
+        const cleanText = typeof rawText === "object" && rawText !== null ? (rawText.text || rawText.textEn || rawText.en || JSON.stringify(rawText)) : String(rawText || "");
         return {
           id: String(item.id || item.key || String.fromCharCode(65 + idx)).toUpperCase(),
-          text: String(item.text !== undefined ? item.text : item.label !== undefined ? item.label : item.value !== undefined ? item.value : ""),
+          text: cleanText,
         };
       }
       return { id: String.fromCharCode(65 + idx), text: String(item || "") };
@@ -73,7 +75,7 @@ function normalizeOptionsList(options) {
       const val = parsed[k];
       return {
         id: k.toUpperCase(),
-        text: typeof val === "object" && val !== null ? String(val.text || val.label || "") : String(val !== undefined && val !== null ? val : ""),
+        text: typeof val === "object" && val !== null ? String(val.text || val.textEn || val.en || val.label || JSON.stringify(val)) : String(val !== undefined && val !== null ? val : ""),
       };
     });
   }
@@ -484,20 +486,25 @@ function COEAdminExamsContent() {
   };
 
   const startEditQuestion = (q) => {
+    const stringifyOpt = (v) => {
+      if (typeof v === "object" && v !== null) return v.text || v.textEn || v.en || JSON.stringify(v);
+      return String(v || "");
+    };
+
     let optA = "", optB = "", optC = "", optD = "";
     if (Array.isArray(q.options)) {
       q.options.forEach((opt) => {
         const id = String(opt.id || "").toUpperCase();
-        if (id === "A") optA = opt.text || "";
-        if (id === "B") optB = opt.text || "";
-        if (id === "C") optC = opt.text || "";
-        if (id === "D") optD = opt.text || "";
+        if (id === "A") optA = stringifyOpt(opt.text !== undefined ? opt.text : opt);
+        if (id === "B") optB = stringifyOpt(opt.text !== undefined ? opt.text : opt);
+        if (id === "C") optC = stringifyOpt(opt.text !== undefined ? opt.text : opt);
+        if (id === "D") optD = stringifyOpt(opt.text !== undefined ? opt.text : opt);
       });
     } else if (q.options && typeof q.options === "object") {
-      optA = q.options.A || q.options.a || "";
-      optB = q.options.B || q.options.b || "";
-      optC = q.options.C || q.options.c || "";
-      optD = q.options.D || q.options.d || "";
+      optA = stringifyOpt(q.options.A || q.options.a);
+      optB = stringifyOpt(q.options.B || q.options.b);
+      optC = stringifyOpt(q.options.C || q.options.c);
+      optD = stringifyOpt(q.options.D || q.options.d);
     }
 
     setEditingQuestion({
@@ -2220,7 +2227,7 @@ function COEAdminExamsContent() {
                                   }`}
                                 >
                                   <span className="font-bold">{opt.id}.</span>
-                                  <span>{opt.text}</span>
+                                  <span>{typeof opt.text === "object" ? JSON.stringify(opt.text) : String(opt.text || "")}</span>
                                   {opt.id === q.correctAnswer && (
                                     <span className="ml-auto text-[10px] text-emerald-400 font-bold">(Correct)</span>
                                   )}
@@ -2621,7 +2628,7 @@ function COEAdminExamsContent() {
 
                                   return (
                                     <div key={opt.id} className={`p-2 rounded-lg border flex items-center justify-between ${optClass}`}>
-                                      <span><strong>{opt.id}.</strong> {opt.text}</span>
+                                      <span><strong>{opt.id}.</strong> {typeof opt.text === "object" ? JSON.stringify(opt.text) : String(opt.text || "")}</span>
                                       {isCorrectOpt && <span className="text-[10px] text-emerald-400 font-bold ml-1">✓ Correct</span>}
                                       {isCandidateOpt && !isCorrectOpt && <span className="text-[10px] text-rose-400 font-bold ml-1">✗ Candidate</span>}
                                     </div>
@@ -2735,7 +2742,7 @@ function COEAdminExamsContent() {
                               : "bg-card border-border text-muted-foreground"
                           }`}
                         >
-                          <span><strong>{opt.id}.</strong> {opt.text}</span>
+                          <span><strong>{opt.id}.</strong> {typeof opt.text === "object" ? JSON.stringify(opt.text) : String(opt.text || "")}</span>
                           {opt.id === q.correctAnswer && (
                             <span className="text-[10px] text-emerald-400 font-bold">✓ Official Key</span>
                           )}
