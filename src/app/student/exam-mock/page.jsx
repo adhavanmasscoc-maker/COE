@@ -25,7 +25,7 @@ import {
   Radio,
   X
 } from "lucide-react";
-import { translateQuestion } from "@/lib/questionTranslations";
+import { translateQuestion, translateOption } from "@/lib/questionTranslations";
 
 function normalizeOptionsList(options) {
   if (!options) return [];
@@ -39,24 +39,41 @@ function normalizeOptionsList(options) {
   }
   if (Array.isArray(parsed)) {
     return parsed.map((item, idx) => {
+      const id = String(item?.id || item?.key || String.fromCharCode(65 + idx)).toUpperCase();
       if (typeof item === "string") {
-        return { id: String.fromCharCode(65 + idx), text: item };
+        return { id, text: item, textEn: item, textTa: null };
       }
       if (item && typeof item === "object") {
+        const text = String(item.text !== undefined ? item.text : item.label !== undefined ? item.label : item.value !== undefined ? item.value : "");
+        const textTa = item.textTa || item.ta || null;
+        const textEn = item.textEn || item.en || text;
         return {
-          id: String(item.id || item.key || String.fromCharCode(65 + idx)).toUpperCase(),
-          text: String(item.text !== undefined ? item.text : item.label !== undefined ? item.label : item.value !== undefined ? item.value : ""),
+          id,
+          text,
+          textTa,
+          textEn,
         };
       }
-      return { id: String.fromCharCode(65 + idx), text: String(item || "") };
+      return { id, text: String(item || ""), textEn: String(item || ""), textTa: null };
     });
   }
   if (parsed && typeof parsed === "object") {
     return Object.keys(parsed).map((k) => {
       const val = parsed[k];
+      const id = k.toUpperCase();
+      if (typeof val === "object" && val !== null) {
+        return {
+          id,
+          text: String(val.text || val.label || val.en || ""),
+          textTa: val.textTa || val.ta || null,
+          textEn: val.textEn || val.en || String(val.text || ""),
+        };
+      }
       return {
-        id: k.toUpperCase(),
-        text: typeof val === "object" && val !== null ? String(val.text || val.label || "") : String(val !== undefined && val !== null ? val : ""),
+        id,
+        text: String(val !== undefined && val !== null ? val : ""),
+        textEn: String(val !== undefined && val !== null ? val : ""),
+        textTa: null,
       };
     });
   }
@@ -639,8 +656,8 @@ function ExamHallContent() {
 
                   return (
                     <div key={opt.id} className={`p-2.5 rounded-xl border flex items-center justify-between ${optStyle}`}>
-                      <span><strong>{opt.id}.</strong> {opt.text}</span>
-                      {isCorrectAns && <span className="text-[10px] text-emerald-400 font-bold ml-2">✓ Correct Answer</span>}
+                      <span><strong>{opt.id}.</strong> {(isExamTamil && (opt.textTa || translateOption(opt.text))) ? (opt.textTa || translateOption(opt.text)) : (opt.textEn || opt.text)}</span>
+                      {isCorrectAns && <span className="text-[10px] text-emerald-400 font-bold ml-2">✓ {isExamTamil ? "சரியான விடை" : "Correct Answer"}</span>}
                       {isUserChosen && !isCorrectAns && <span className="text-[10px] text-rose-400 font-bold ml-2">✗ Your Choice</span>}
                     </div>
                   );
@@ -662,6 +679,10 @@ function ExamHallContent() {
 
   // Submitted Receipt View (Official submission lock + virtual practice launcher)
   if (submittedData && !isPracticeMode) {
+    const scoreVal = submittedData.stats?.score ?? 0;
+    const totalMarksVal = submittedData.stats?.totalMarks ?? exam.totalMarks ?? 25;
+    const percentageVal = Math.round((scoreVal / totalMarksVal) * 100);
+
     return (
       <div className="min-h-screen flex items-center justify-center p-4 bg-background">
         <Card className="max-w-lg w-full text-center p-8 border-emerald-500/40 shadow-2xl bg-card space-y-4">
@@ -670,60 +691,86 @@ function ExamHallContent() {
           </div>
 
           <div className="flex items-center justify-center gap-2">
-            <Badge variant="success">Official Examination Sealed</Badge>
+            <Badge variant="success">
+              {isExamTamil ? "அரசுத் தேர்வு பாதுகாக்கப்பட்டது" : "Official Examination Sealed"}
+            </Badge>
             <Badge variant="secondary" className="text-[10px] font-mono">AES-256 Vault</Badge>
           </div>
 
-          <h2 className="text-2xl font-black text-foreground">Responses Encrypted & Sealed!</h2>
+          <h2 className="text-2xl font-black text-foreground">
+            {isExamTamil ? "விடைத்தாள் சமர்ப்பிக்கப்பட்டது!" : "Responses Encrypted & Sealed!"}
+          </h2>
 
           {/* User Requested Post-Submission Status */}
           <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs text-left space-y-1.5">
             <div className="flex items-center gap-2 font-bold text-sm">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-              <span>Current Status: Submitted — Under COE Evaluation</span>
+              <span>
+                {isExamTamil
+                  ? "மதிப்பீடு நிலை: தேர்வு முடிவுகள் தயாராக உள்ளன"
+                  : "Current Status: Evaluation Completed & Certified"}
+              </span>
             </div>
             <p className="text-[11px] text-[#a8a8d0] leading-relaxed">
-              Your official examination answers have been securely received and recorded. They will be evaluated by the Controller of Examinations and results will be published soon once Phase 10 is officially released.
+              {isExamTamil
+                ? "உங்கள் விடைகள் பதிவு செய்யப்பட்டு மதிப்பீடு செய்யப்பட்டுள்ளன. உங்களது உத்தியோகபூர்வ மதிப்பெண் மற்றும் தேர்வுச் சான்றிதழை உடனடி அறிக்கையாகப் பெறலாம்."
+                : "Your official examination answers have been securely received and evaluated. You can now inspect your official statement of marks and performance statement."}
             </p>
           </div>
 
           <div className="bg-secondary/60 rounded-2xl p-4 text-left text-xs space-y-2.5 border border-border">
             <div className="flex justify-between pb-2 border-b border-border font-medium">
-              <span className="text-muted-foreground">Subject:</span>
+              <span className="text-muted-foreground">{isExamTamil ? "பாடம்:" : "Subject:"}</span>
               <span className="font-bold text-foreground">{exam.subject} ({exam.code})</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Candidate Roll No:</span>
+              <span className="text-muted-foreground">{isExamTamil ? "தேர்வர் பதிவு எண்:" : "Candidate Roll No:"}</span>
               <span className="font-mono font-bold text-sky-400">{candidate?.rollNo || "Candidate"}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Standard / Syllabus:</span>
+              <span className="text-muted-foreground">{isExamTamil ? "வகுப்பு / பாடத்திட்டம்:" : "Standard / Syllabus:"}</span>
               <span className="font-semibold text-foreground">Class {exam.prepClass} TN Samacheer</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Total Questions:</span>
+              <span className="text-muted-foreground">{isExamTamil ? "மொத்த வினாக்கள்:" : "Total Questions:"}</span>
               <span className="font-bold text-foreground">{questions.length}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Questions Answered:</span>
+              <span className="text-muted-foreground">{isExamTamil ? "விடையளித்தவை:" : "Questions Answered:"}</span>
               <span className="font-bold text-emerald-400">{submittedData.stats?.answeredCount ?? counts.answered}</span>
             </div>
+            <div className="flex justify-between p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/25">
+              <span className="font-bold text-emerald-300">{isExamTamil ? "பெற்ற மதிப்பெண்:" : "Score Obtained:"}</span>
+              <span className="font-mono font-black text-emerald-400 text-sm">
+                {scoreVal} / {totalMarksVal} ({percentageVal}%)
+              </span>
+            </div>
             <div className="flex justify-between">
-              <span className="text-muted-foreground">Recorded Submission Time:</span>
+              <span className="text-muted-foreground">{isExamTamil ? "சமர்ப்பிக்கப்பட்ட நேரம்:" : "Recorded Submission Time:"}</span>
               <span className="font-mono text-muted-foreground">
-                {new Date(submittedData.submittedAt || Date.now()).toLocaleTimeString("en-IN")}
+                {new Date(submittedData.submittedAt || Date.now()).toLocaleTimeString(isExamTamil ? "ta-IN" : "en-IN")}
               </span>
             </div>
             <div className="flex justify-between pt-2 border-t border-border">
-              <span className="text-muted-foreground">Security Vault:</span>
+              <span className="text-muted-foreground">{isExamTamil ? "பாதுகாப்பு பெட்டகம்:" : "Security Vault:"}</span>
               <span className="font-mono text-[10px] text-emerald-400 font-bold">AES-256-CBC • SHA-256 HMAC Sealed</span>
             </div>
           </div>
 
-          {/* Action buttons: Virtual practice retake & dashboard */}
+          {/* Action buttons: Statement of Marks, Virtual practice retake & dashboard */}
           <div className="space-y-2 pt-2">
+            <Link href="/student/results" className="block w-full">
+              <Button
+                variant="primary"
+                className="w-full justify-center text-xs font-bold gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 shadow-md shadow-emerald-500/25 py-2.5"
+              >
+                <Award className="w-4 h-4 text-emerald-200" />
+                {isExamTamil ? "உத்தியோகபூர்வ மதிப்பெண் அறிக்கை காண்க" : "View Official Statement of Marks"}
+              </Button>
+            </Link>
+
             <Button
-              variant="primary"
+              variant="outline"
               onClick={() => {
                 setIsPracticeMode(true);
                 setSubmittedData(null);
@@ -732,15 +779,15 @@ function ExamHallContent() {
                 setCurrentIdx(0);
                 setTimeLeft((exam.durationMinutes || 90) * 60);
               }}
-              className="w-full justify-center text-xs font-bold gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 shadow-md shadow-violet-500/25 py-2.5"
+              className="w-full justify-center text-xs font-bold gap-2 py-2.5"
             >
               <Sparkles className="w-4 h-4 text-amber-300" />
-              Take Virtual Practice Exam (Non-Evaluated)
+              {isExamTamil ? "இத்தேர்வை மீண்டும் பயிற்சி செய்க (அளவற்ற முறை)" : "Take Virtual Practice Exam (Unlimited Retakes)"}
             </Button>
 
             <Link href="/student/dashboard" className="block w-full">
-              <Button variant="outline" className="w-full justify-center text-xs">
-                Return to Dashboard
+              <Button variant="ghost" className="w-full justify-center text-xs text-muted-foreground">
+                {isExamTamil ? "முகப்புக்குத் திரும்பு" : "Return to Dashboard"}
               </Button>
             </Link>
           </div>
@@ -881,13 +928,16 @@ function ExamHallContent() {
 
                 {/* Question Text */}
                 <div className="text-sm sm:text-base font-medium text-foreground mb-6 leading-relaxed">
-                  {translateQuestion(currentQ.questionText, isExamTamil ? "ta" : "en")}
+                  {(isExamTamil && currentQ.questionTextTa) ? currentQ.questionTextTa : translateQuestion(currentQ.questionText, isExamTamil ? "ta" : "en")}
                 </div>
 
                 {/* Multiple Choice Options */}
                 <div className="space-y-3">
                   {normalizeOptionsList(currentQ.options).map((opt) => {
                     const isSelected = answers[currentQ.id] === opt.id;
+                    const optText = (isExamTamil && (opt.textTa || translateOption(opt.text)))
+                      ? (opt.textTa || translateOption(opt.text))
+                      : (opt.textEn || opt.text);
                     return (
                       <button
                         key={opt.id}
@@ -908,7 +958,7 @@ function ExamHallContent() {
                         >
                           {opt.id}
                         </span>
-                        <span className="text-sm">{opt.text}</span>
+                        <span className="text-sm">{optText}</span>
                       </button>
                     );
                   })}

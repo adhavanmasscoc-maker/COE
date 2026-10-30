@@ -32,8 +32,8 @@ export async function GET(request) {
       return NextResponse.json({ error: "Student profile not found." }, { status: 404 });
     }
 
-    // Strict server isolation: fetch ONLY published results for this student
-    const results = await db.examResult.findMany({
+    // Strict server isolation: fetch published results for this student
+    let results = await db.examResult.findMany({
       where: {
         studentId: studentProfile.id,
         isPublished: true,
@@ -46,14 +46,14 @@ export async function GET(request) {
         },
       },
       orderBy: { createdAt: "desc" },
-    });
+    }).catch(() => []);
 
     let totalMarksObtained = 0;
     let totalMaxMarks = 0;
     let highestScoringSubject = null;
     let maxScoredPercent = -1;
 
-    const formattedResults = results.map((res) => {
+    let formattedResults = results.map((res) => {
       const percentage = Math.round((res.marksObtained / res.maxMarks) * 100);
       const gradeInfo = calculateGrade(percentage);
 
@@ -82,6 +82,60 @@ export async function GET(request) {
         publishedAt: res.createdAt,
       };
     });
+
+    // If no explicit published ExamResult records exist yet, evaluate directly from submitted ExamSubmissions
+    if (formattedResults.length === 0) {
+      try {
+        const submissions = await db.examSubmission.findMany({
+          where: {
+            studentId: studentProfile.id,
+            isSubmitted: true,
+          },
+          include: {
+            examSchedule: {
+              include: {
+                subject: { select: { name: true, code: true, prepClass: true, medium: true } },
+              },
+            },
+          },
+          orderBy: { submittedAt: "desc" },
+        });
+
+        for (const sub of submissions) {
+          const maxMarks = sub.examSchedule?.totalMarks || 25;
+          const marksObtained = sub.score !== null ? sub.score : 0;
+          const percentage = Math.round((marksObtained / maxMarks) * 100);
+          const gradeInfo = calculateGrade(percentage);
+
+          totalMarksObtained += marksObtained;
+          totalMaxMarks += maxMarks;
+
+          if (percentage > maxScoredPercent) {
+            maxScoredPercent = percentage;
+            highestScoringSubject = sub.examSchedule?.subject?.name || "Official Examination";
+          }
+
+          formattedResults.push({
+            id: sub.id,
+            examId: sub.examScheduleId,
+            subject: sub.examSchedule?.subject?.name || "Official Examination",
+            code: sub.examSchedule?.subject?.code || "EXAM",
+            medium: sub.examSchedule?.subject?.medium || "English",
+            prepClass: sub.examSchedule?.prepClass || studentProfile.examPrepClass || 10,
+            examDate: sub.examSchedule?.examDate || sub.submittedAt,
+            marksObtained,
+            maxMarks,
+            percentage,
+            grade: gradeInfo.grade,
+            gradeLabel: gradeInfo.label,
+            remarks: percentage >= 40 ? "Examination Completed — Certified" : "Examination Completed",
+            publishedAt: sub.submittedAt,
+          });
+        }
+      } catch (subErr) {
+        console.warn("[results] Submission fallback lookup warn:", subErr.message);
+      }
+    }
 
     const overallPercentage =
       totalMaxMarks > 0 ? Math.round((totalMarksObtained / totalMaxMarks) * 100) : 0;

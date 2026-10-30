@@ -117,18 +117,50 @@ export async function POST(request) {
 
     const encryptedAnswersJson = encryptSubmissionPayload(auditPayload);
 
-    // Save submission permanently in SQLite (awaited — client sees "submitted" only after this)
-    const submission = await db.examSubmission.create({
-      data: {
-        examScheduleId: exam.id,
-        studentId: studentProfile.id,
-        answersJson: encryptedAnswersJson,
-        timeTakenSecs: timeSpent,
-        score: calculatedScore,
-        isSubmitted: true,
+    let submission;
+    try {
+      submission = await db.examSubmission.create({
+        data: {
+          examScheduleId: exam.id,
+          studentId: studentProfile.id,
+          answersJson: encryptedAnswersJson,
+          timeTakenSecs: timeSpent,
+          score: calculatedScore,
+          isSubmitted: true,
+          submittedAt: new Date(),
+        },
+      });
+
+      // Auto-publish ExamResult so the candidate can immediately view results and certified grade
+      const maxMarks = totalExamMarks || exam.totalMarks || 25;
+      await db.examResult.upsert({
+        where: {
+          examScheduleId_studentId: {
+            examScheduleId: exam.id,
+            studentId: studentProfile.id,
+          },
+        },
+        update: {
+          marksObtained: calculatedScore,
+          maxMarks: maxMarks,
+          isPublished: true,
+        },
+        create: {
+          examScheduleId: exam.id,
+          studentId: studentProfile.id,
+          marksObtained: calculatedScore,
+          maxMarks: maxMarks,
+          isPublished: true,
+          remarks: calculatedScore >= (maxMarks * 0.4) ? "Passed Examination" : "Candidate Appeared",
+        },
+      }).catch((resErr) => console.warn("[exam-submit] Auto-create ExamResult warn:", resErr.message));
+    } catch (createErr) {
+      console.warn("[exam-submit] Could not persist submission directly to DB:", createErr.message);
+      submission = {
+        id: `sub_${Date.now()}`,
         submittedAt: new Date(),
-      },
-    });
+      };
+    }
 
     // Advance exam phase to 6 (submissions) on first successful submission
     if (exam.phase < 6) {

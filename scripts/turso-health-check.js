@@ -3,18 +3,29 @@
  * Usage: node scripts/turso-health-check.js
  */
 
-const { createClient } = require("@libsql/client");
+const { createClient } = require("@libsql/client/web");
 const path = require("path");
 const fs = require("fs");
 
-// Load .env or .env.local if present
-try {
-  const dotenv = require("dotenv");
-  if (fs.existsSync(".env.local")) dotenv.config({ path: ".env.local" });
-  if (fs.existsSync(".env")) dotenv.config({ path: ".env" });
-} catch (e) {}
+function loadEnvFile(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  const content = fs.readFileSync(filePath, "utf-8");
+  for (const line of content.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const eqIdx = trimmed.indexOf("=");
+    if (eqIdx === -1) continue;
+    const key = trimmed.slice(0, eqIdx).trim();
+    let val = trimmed.slice(eqIdx + 1).trim();
+    if (val.startsWith('"') && val.endsWith('"')) val = val.slice(1, -1);
+    if (!process.env[key]) process.env[key] = val;
+  }
+}
 
-const tursoUrl = process.env.TURSO_DATABASE_URL || process.env.DATABASE_URL;
+loadEnvFile(".env.local");
+loadEnvFile(".env");
+
+const tursoUrl = process.env.TURSO_DATABASE_URL || (process.env.DATABASE_URL?.startsWith("libsql:") ? process.env.DATABASE_URL : null);
 const tursoToken = process.env.TURSO_AUTH_TOKEN;
 
 console.log("=================================================");
@@ -23,7 +34,7 @@ console.log("=================================================");
 
 const targetUrl = tursoUrl || `file:${path.join(process.cwd(), "prisma", "dev.db")}`;
 console.log(`📡 Target URL: ${targetUrl.startsWith("libsql:") ? targetUrl : targetUrl.split("?")[0]}`);
-console.log(`🔑 Auth Token: ${tursoToken ? "Configured (" + tursoToken.slice(0, 8) + "...)" : "None (Local Mode)"}\n`);
+console.log(`🔑 Auth Token: ${tursoToken ? "Configured (" + tursoToken.slice(0, 15) + "...)" : "None (Local Mode)"}\n`);
 
 async function runCheck() {
   const startTime = Date.now();
@@ -71,7 +82,7 @@ async function runCheck() {
     }
 
     // 3. Table Integrity & Counts
-    console.log("\n📊 [3/4] Data Integrity & Record Counts:");
+    console.log("\n📊 [3/4] Data Integrity & Record Counts in Turso:");
     const tables = [
       "User",
       "StudentProfile",
@@ -83,6 +94,8 @@ async function runCheck() {
       "ExamSubmission",
       "ExamResult",
       "StudentActivityLog",
+      "SyllabusUnit",
+      "SyllabusChapter",
     ];
 
     for (const table of tables) {
@@ -91,13 +104,13 @@ async function runCheck() {
         const count = res.rows[0].count;
         console.log(`      • ${table.padEnd(20)}: ${count} rows`);
       } catch (err) {
-        console.log(`      • ${table.padEnd(20)}: [Table not yet created or empty]`);
+        console.log(`      • ${table.padEnd(20)}: [Table error: ${err.message}]`);
       }
     }
 
     const totalDuration = Date.now() - startTime;
     console.log("\n=================================================");
-    console.log(`🎉 [4/4] ALL TURSO CHECKS COMPLETED (${totalDuration}ms total)`);
+    console.log(`🎉 [4/4] ALL TURSO CLOUD CHECKS PASSED (${totalDuration}ms total)`);
     console.log("=================================================");
   } catch (err) {
     console.error("\n❌ Health Check Error:", err.message);

@@ -157,24 +157,41 @@ function normalizeOptionsList(options) {
   }
   if (Array.isArray(parsed)) {
     return parsed.map((item, idx) => {
+      const id = String(item?.id || item?.key || String.fromCharCode(65 + idx)).toUpperCase();
       if (typeof item === "string") {
-        return { id: String.fromCharCode(65 + idx), text: item };
+        return { id, text: item, textEn: item, textTa: null };
       }
       if (item && typeof item === "object") {
+        const text = String(item.text !== undefined ? item.text : item.label !== undefined ? item.label : item.value !== undefined ? item.value : "");
+        const textTa = item.textTa || item.ta || null;
+        const textEn = item.textEn || item.en || text;
         return {
-          id: String(item.id || item.key || String.fromCharCode(65 + idx)).toUpperCase(),
-          text: String(item.text !== undefined ? item.text : item.label !== undefined ? item.label : item.value !== undefined ? item.value : ""),
+          id,
+          text,
+          textTa,
+          textEn,
         };
       }
-      return { id: String.fromCharCode(65 + idx), text: String(item || "") };
+      return { id, text: String(item || ""), textEn: String(item || ""), textTa: null };
     });
   }
   if (parsed && typeof parsed === "object") {
     return Object.keys(parsed).map((k) => {
       const val = parsed[k];
+      const id = k.toUpperCase();
+      if (typeof val === "object" && val !== null) {
+        return {
+          id,
+          text: String(val.text || val.label || val.en || ""),
+          textTa: val.textTa || val.ta || null,
+          textEn: val.textEn || val.en || String(val.text || ""),
+        };
+      }
       return {
-        id: k.toUpperCase(),
-        text: typeof val === "object" && val !== null ? String(val.text || val.label || "") : String(val !== undefined && val !== null ? val : ""),
+        id,
+        text: String(val !== undefined && val !== null ? val : ""),
+        textEn: String(val !== undefined && val !== null ? val : ""),
+        textTa: null,
       };
     });
   }
