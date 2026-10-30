@@ -3,6 +3,7 @@ import { getCurrentSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { decryptSubmissionPayload } from "@/lib/encryption";
 import { normalizeOptionsList } from "@/lib/questionBankParser";
+import { getOrRestoreStudentProfile } from "@/lib/studentProfileHelper";
 
 // GET /api/exams/[id]: Fetch exam hall data with anti-cheat sanitization
 export async function GET(request, { params }) {
@@ -12,49 +13,17 @@ export async function GET(request, { params }) {
     const { searchParams } = new URL(request.url);
     const previewRollNo = searchParams.get("previewRollNo");
 
-    let studentProfile = null;
     const isPreview = Boolean(previewRollNo);
     const isAdmin = session?.role === "ADMIN" || isPreview;
 
-    if (!session) {
-      if (previewRollNo) {
-        studentProfile = await db.studentProfile.findFirst({
-          where: { user: { username: previewRollNo } },
-          include: { user: { select: { username: true } } },
-        });
-        if (!studentProfile) {
-          studentProfile = await db.studentProfile.findFirst({
-            include: { user: { select: { username: true } } },
-          });
-        }
-      }
-      if (!studentProfile) {
-        return NextResponse.json({ error: "Authentication required to enter examination hall." }, { status: 401 });
-      }
-    } else if (session.role !== "ADMIN") {
-      studentProfile = await db.studentProfile.findUnique({
-        where: { userId: session.userId },
-        include: { user: { select: { username: true } } },
-      });
-      if (!studentProfile && previewRollNo) {
-        studentProfile = await db.studentProfile.findFirst({
-          where: { user: { username: previewRollNo } },
-          include: { user: { select: { username: true } } },
-        });
-      }
-      if (!studentProfile) {
-        return NextResponse.json({ error: "Student profile not found." }, { status: 404 });
-      }
-    } else if (previewRollNo) {
-      studentProfile = await db.studentProfile.findFirst({
-        where: { user: { username: previewRollNo } },
-        include: { user: { select: { username: true } } },
-      });
-      if (!studentProfile) {
-        studentProfile = await db.studentProfile.findFirst({
-          include: { user: { select: { username: true } } },
-        });
-      }
+    const studentProfile = await getOrRestoreStudentProfile(session, previewRollNo);
+
+    if (!session && !studentProfile) {
+      return NextResponse.json({ error: "Authentication required to enter examination hall." }, { status: 401 });
+    }
+
+    if (!studentProfile && !isAdmin) {
+      return NextResponse.json({ error: "Student profile not found." }, { status: 404 });
     }
 
     // Query exam from SQLite

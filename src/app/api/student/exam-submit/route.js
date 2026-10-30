@@ -3,6 +3,7 @@ import { getCurrentSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { encryptSubmissionPayload } from "@/lib/encryption";
 import { createIncident } from "@/lib/incident";
+import { getOrRestoreStudentProfile } from "@/lib/studentProfileHelper";
 
 export const dynamic = "force-dynamic";
 
@@ -21,19 +22,8 @@ export async function POST(request) {
       return NextResponse.json({ error: "Exam ID is required." }, { status: 400 });
     }
 
-    let studentProfile;
-    if (session.role === "STUDENT") {
-      studentProfile = await db.studentProfile.findUnique({
-        where: { userId: session.userId },
-        include: { user: { select: { username: true } } },
-      });
-    } else if (session.role === "ADMIN") {
-      const targetRoll = previewRollNo || "TN2026-0901";
-      studentProfile = await db.studentProfile.findFirst({
-        where: { user: { username: targetRoll } },
-        include: { user: { select: { username: true } } },
-      });
-    }
+    // Resolve or restore student profile
+    const studentProfile = await getOrRestoreStudentProfile(session, previewRollNo);
 
     if (!studentProfile) {
       return NextResponse.json({ error: "Student profile not found." }, { status: 404 });

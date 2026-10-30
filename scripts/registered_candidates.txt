@@ -1,0 +1,2 @@
+[2026-10-29T08:25:41.746Z] REGISTERED_CANDIDATE: RollNo="TN2026-TEST1", Name="Test Student", DOB="2010-06-15", CurrentClass=10, PrepClass=10, Medium="English"
+[2026-10-29T08:25:58.473Z] REGISTERED_CANDIDATE: RollNo="TN2026-FUT1", Name="Future Test", DOB="2026-10-28", CurrentClass=12, PrepClass=12, Medium="Tamil"

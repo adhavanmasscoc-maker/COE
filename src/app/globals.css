@@ -510,10 +510,60 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
+  padding-top: env(safe-area-inset-top, 0px);
   position: sticky;
   top: 0;
   z-index: 40;
+}
+
+html:not(.dark) .topbar,
+.light .topbar {
+  background: rgba(237, 234, 227, 0.92);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* ─── Bottom Navigation Bar (Mobile Native Look & Safe Area) ────────── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(60px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: rgba(13, 13, 26, 0.94);
+  border-top: 1px solid var(--border-subtle);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 45;
+}
+
+html:not(.dark) .bottom-nav,
+.light .bottom-nav {
+  background: rgba(237, 234, 227, 0.95);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 52px;
+  min-height: 44px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--fg-muted);
+  transition: all 0.15s ease;
+}
+
+.bottom-nav-item.active {
+  color: var(--fg-primary);
 }
 
 /* ─── Page Content Centering & Responsive Container ───────────────────── */
@@ -526,13 +576,51 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .page-content {
     padding: 1rem 0.75rem;
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* ─── 44px Minimum Touch Targets & Accessibility ────────────────────── */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Visible focus states for WCAG AA compliance */
+:focus-visible {
+  outline: 2px solid var(--accent-violet, #7c3aed);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 /* ─── Exam Hall Override ─────────────────────────────────────────────── */
 .exam-mode .sidebar,
-.exam-mode .topbar { display: none !important; }
+.exam-mode .topbar,
+.exam-mode .bottom-nav { display: none !important; }
 .exam-mode .main-content { margin-left: 0 !important; }

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getCurrentSession } from "@/lib/auth";
 import { db } from "@/lib/db";
+import { getOrRestoreStudentProfile } from "@/lib/studentProfileHelper";
 
 export const dynamic = "force-dynamic";
 
@@ -25,19 +26,7 @@ export async function GET(request) {
     const { searchParams } = new URL(request.url);
     const previewRollNo = searchParams.get("previewRollNo");
 
-    let studentProfile;
-    if (session.role === "STUDENT") {
-      studentProfile = await db.studentProfile.findUnique({
-        where: { userId: session.userId },
-        include: { user: { select: { username: true } } },
-      });
-    } else if (session.role === "ADMIN") {
-      const targetRoll = previewRollNo || "TN2026-0901";
-      studentProfile = await db.studentProfile.findFirst({
-        where: { user: { username: targetRoll } },
-        include: { user: { select: { username: true } } },
-      });
-    }
+    const studentProfile = await getOrRestoreStudentProfile(session, previewRollNo);
 
     if (!studentProfile) {
       return NextResponse.json({ error: "Student profile not found." }, { status: 404 });

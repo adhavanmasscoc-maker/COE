@@ -77,7 +77,7 @@ export async function POST(request) {
 
   let examId, subjectName, prepClass, totalMarks, questionCount, policyId, optionId,
       policyIndex = 3, customPolicy, customPolicyText, syllabusText = "", samplePaperText = "",
-      selectedCurriculumFiles = [], uploadedFilesCount = 0;
+      selectedCurriculumFiles = [], uploadedFilesCount = 0, markBreakdown = null;
 
   const contentType = request.headers.get("content-type") || "";
 
@@ -92,6 +92,10 @@ export async function POST(request) {
       policyId = formData.get("policyId");
       optionId = formData.get("optionId");
       customPolicyText = formData.get("customPolicyText") || formData.get("customPolicy") || "";
+      const mbRaw = formData.get("markBreakdown");
+      if (mbRaw) {
+        try { markBreakdown = JSON.parse(mbRaw); } catch {}
+      }
 
       // Handle server files selection passed as string or JSON
       const serverFilesRaw = formData.get("selectedCurriculumFiles");
@@ -136,6 +140,7 @@ export async function POST(request) {
       syllabusText = body.syllabusText || "";
       samplePaperText = body.samplePaperText || "";
       selectedCurriculumFiles = Array.isArray(body.selectedCurriculumFiles) ? body.selectedCurriculumFiles : [];
+      markBreakdown = body.markBreakdown || null;
     } catch {
       return NextResponse.json({ error: "Invalid JSON body." }, { status: 400 });
     }
@@ -180,11 +185,24 @@ export async function POST(request) {
 
   // Build prompt from fixed template
   const marksPerQ = totalMarks ? Math.round(totalMarks / questionCount) : 2;
+  
+  let markDistributionText = `Marks per question: ${marksPerQ}`;
+  if (markBreakdown && typeof markBreakdown === "object") {
+    const parts = [];
+    if (markBreakdown["1"]) parts.push(`- 1-mark questions (MCQ with 4 options A, B, C, D): exactly ${markBreakdown["1"]} questions (marks: 1 each)`);
+    if (markBreakdown["2"]) parts.push(`- 2-mark questions (Very Short Answer): exactly ${markBreakdown["2"]} questions (marks: 2 each)`);
+    if (markBreakdown["3"]) parts.push(`- 3-mark questions (Short Answer): exactly ${markBreakdown["3"]} questions (marks: 3 each)`);
+    if (markBreakdown["5"]) parts.push(`- 5-mark questions (Long/Essay Answer): exactly ${markBreakdown["5"]} questions (marks: 5 each)`);
+    if (parts.length > 0) {
+      markDistributionText = `Strict Question Mark Distribution:\n${parts.join("\n")}`;
+    }
+  }
+
   const prompt = `You are the Chief Exam Setter for Class ${prepClass} ${subjectName} under the Tamil Nadu Samacheer Kalvi curriculum.
 
 Target Total Marks: ${totalMarks ?? questionCount * marksPerQ}
 Target Question Count: ${questionCount}
-Marks per question: ${marksPerQ}
+${markDistributionText}
 Policy Category: ${EXAM_POLICY_CONFIG[effectivePolicyId]?.name || "Standard Examination Policy"}
 Exact Policy Directive: ${policyText}
 
@@ -193,7 +211,7 @@ ${samplePaperText ? `Sample Paper (style reference only, do not copy):\n${sample
 
 Instructions:
 1. Ensure the sum of marks of all questions equals exactly ${totalMarks ?? questionCount * marksPerQ}.
-2. Ensure every MCQ has exactly 4 options with single distinct keys: A, B, C, D.
+2. Ensure every MCQ has exactly 4 options with single distinct keys: A, B, C, D. For non-MCQ questions (2-mark, 3-mark, 5-mark), set "options": [] and "correctAnswer": null.
 3. Every question must include a valid 'syllabusRef' citing the unit/chapter.
 4. Return ONLY a valid JSON array (no markdown code fences, no extra text). Each element must have:
 {
@@ -202,7 +220,7 @@ Instructions:
   "qType": "<MCQ|SHORT_ANSWER|NUMERICAL>",
   "difficulty": "<EASY|MEDIUM|HARD>",
   "syllabusRef": "<Unit X, Chapter Y: topic>",
-  "marks": ${marksPerQ},
+  "marks": <marks as per required distribution>,
   "options": [{"id":"A","text":"..."},{"id":"B","text":"..."},{"id":"C","text":"..."},{"id":"D","text":"..."}],
   "correctAnswer": "<A|B|C|D>",
   "explanation": "<brief explanation>"

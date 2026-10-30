@@ -25,6 +25,7 @@ import {
   Radio,
   X
 } from "lucide-react";
+import { translateQuestion } from "@/lib/questionTranslations";
 
 function normalizeOptionsList(options) {
   if (!options) return [];
@@ -611,7 +612,7 @@ function ExamHallContent() {
             <Card key={q.id} className="p-5 border-border space-y-3 text-xs">
               <div className="flex items-start justify-between gap-2">
                 <span className="font-bold text-foreground">
-                  Q{q.index}. {q.questionText}
+                  Q{q.index}. {translateQuestion(q.questionText, isExamTamil ? "ta" : "en")}
                 </span>
                 <span className={`px-2 py-0.5 rounded-full font-mono text-[10px] font-bold ${
                   q.isCorrect
@@ -880,7 +881,7 @@ function ExamHallContent() {
 
                 {/* Question Text */}
                 <div className="text-sm sm:text-base font-medium text-foreground mb-6 leading-relaxed">
-                  {currentQ.questionText}
+                  {translateQuestion(currentQ.questionText, isExamTamil ? "ta" : "en")}
                 </div>
 
                 {/* Multiple Choice Options */}
