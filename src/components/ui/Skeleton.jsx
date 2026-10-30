@@ -36,3 +36,4 @@ export function SkeletonCard({ lines = 3, className = "" }) {
 }
 
 export default Skeleton;
+

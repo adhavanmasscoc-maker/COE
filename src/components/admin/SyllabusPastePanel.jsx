@@ -449,3 +449,4 @@ export function SyllabusPastePanel({ onSyllabusImported, onApplySyllabus }) {
 }
 
 export default SyllabusPastePanel;
+

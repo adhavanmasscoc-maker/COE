@@ -72,3 +72,4 @@ export function translateQuestion(text, lang = "en") {
 
   return translated;
 }
+
