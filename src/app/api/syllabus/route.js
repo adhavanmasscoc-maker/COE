@@ -122,7 +122,7 @@ export async function GET(request) {
     return NextResponse.json({
       success: true,
       prepClass: targetPrepClass,
-      role: session.role,
+      role: session?.role || "STUDENT",
       subjects: formattedSubjects,
     });
   } catch (error) {

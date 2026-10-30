@@ -17,36 +17,42 @@ function loadSubjectQuestions(subjectCode, setParam = "all") {
   else if (code === "CHE-12") fileName = "CHEMISTRY-12-100-ALL.json";
 
   if (fileName) {
-    try {
-      const p = path.join(process.cwd(), "questions", "exams", fileName);
-      if (fs.existsSync(p)) {
-        const raw = JSON.parse(fs.readFileSync(p, "utf8"));
-        let all = [];
-        if (Array.isArray(raw.questions)) {
-          all = raw.questions;
-        } else if (raw.set1 && raw.set2) {
-          const s1 = Array.isArray(raw.set1) ? raw.set1 : Object.values(raw.set1);
-          const s2 = Array.isArray(raw.set2) ? raw.set2 : Object.values(raw.set2);
-          all = [...s1, ...s2];
+    const candidatePaths = [
+      path.join(process.cwd(), "questions", "exams", fileName),
+      path.join(process.cwd(), "exams", "questions", fileName),
+    ];
+
+    for (const p of candidatePaths) {
+      try {
+        if (fs.existsSync(p)) {
+          const raw = JSON.parse(fs.readFileSync(p, "utf8"));
+          let all = [];
+          if (Array.isArray(raw.questions)) {
+            all = raw.questions;
+          } else if (raw.set1 && raw.set2) {
+            const s1 = Array.isArray(raw.set1) ? raw.set1 : Object.values(raw.set1);
+            const s2 = Array.isArray(raw.set2) ? raw.set2 : Object.values(raw.set2);
+            all = [...s1, ...s2];
+          }
+
+          const set1 = all.slice(0, 50);
+          const set2 = all.slice(50, 100);
+
+          let questions = all;
+          if (setParam === "1" || setParam === "set1" || setParam === "set-a") questions = set1;
+          else if (setParam === "2" || setParam === "set2" || setParam === "set-b") questions = set2;
+
+          return {
+            totalQuestions: all.length,
+            set1Count: set1.length,
+            set2Count: set2.length,
+            questions,
+            allQuestions: all,
+          };
         }
-
-        const set1 = all.slice(0, 50);
-        const set2 = all.slice(50, 100);
-
-        let questions = all;
-        if (setParam === "1" || setParam === "set1" || setParam === "set-a") questions = set1;
-        else if (setParam === "2" || setParam === "set2" || setParam === "set-b") questions = set2;
-
-        return {
-          totalQuestions: all.length,
-          set1Count: set1.length,
-          set2Count: set2.length,
-          questions,
-          allQuestions: all,
-        };
+      } catch (e) {
+        console.warn(`Could not load ${fileName} from ${p}:`, e.message);
       }
-    } catch (e) {
-      console.warn(`Could not load ${fileName}:`, e.message);
     }
   }
 
@@ -77,18 +83,16 @@ export async function GET(request) {
       rawQuestions = fileData.questions;
       allQuestions = fileData.allQuestions;
     } else {
-      // Fallback: Query database questionBankItems for this subject
-      const dbSubject = await db.subject.findFirst({
-        where: { code: subjectCode },
-        include: {
-          questionBankItems: {
-            orderBy: { questionNumber: "asc" },
-          },
+      // Fallback: Query database questionBank for this subject
+      const dbItems = await db.questionBankItem.findMany({
+        where: {
+          subject: { code: subjectCode },
         },
+        orderBy: { questionNumber: "asc" },
       });
 
-      if (dbSubject && dbSubject.questionBankItems.length > 0) {
-        allQuestions = dbSubject.questionBankItems.map((item) => {
+      if (dbItems && dbItems.length > 0) {
+        allQuestions = dbItems.map((item) => {
           let parsedOpts = {};
           try {
             const raw = JSON.parse(item.options);
