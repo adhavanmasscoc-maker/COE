@@ -441,7 +441,13 @@ function COEAdminExamsContent() {
       const data = await res.json();
       if (res.ok) {
         showMsg(data.message || "Questions successfully generated from pool and applied!");
-        openRandomSwapper(randomSwapperExam);
+        const updatedExam = {
+          ...randomSwapperExam,
+          totalMarks: data.totalMarks || payload.totalMarks,
+          _count: { ...(randomSwapperExam._count || {}), questions: data.count || payload.count }
+        };
+        setRandomSwapperExam(updatedExam);
+        openRandomSwapper(updatedExam);
         fetchExams();
       } else {
         alert(data.error || "Failed to generate questions from pool.");
@@ -1568,13 +1574,13 @@ function COEAdminExamsContent() {
                       <div className="grid grid-cols-2 gap-1.5">
                         {[
                           { q: 10, m: 10, label: "10 Qs (10 Marks)" },
+                          { q: 15, m: 15, label: "15 Qs (15 Marks)" },
                           { q: 25, m: 25, label: "25 Qs (25 Marks)" },
                           { q: 50, m: 50, label: "50 Qs (50 Marks)" },
-                          { q: 10, m: 10, label: "10 Qs (10 Marks)" },
                           { q: 100, m: 100, label: "100 Qs (100 Marks)" },
                         ].map((preset) => (
                           <button
-                            key={preset.q}
+                            key={`${preset.q}-${preset.m}`}
                             type="button"
                             onClick={() => {
                               setSwapperCount(preset.q);

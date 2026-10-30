@@ -81,6 +81,7 @@ function SubjectCard({ sub, isPreview, previewRoll }) {
 }
 
 function formatCountdown(targetMs, nowMs) {
+  if (!targetMs || isNaN(targetMs)) return null;
   const diffSecs = Math.max(0, Math.floor((targetMs - nowMs) / 1000));
   if (diffSecs <= 0) return null;
   const days = Math.floor(diffSecs / 86400);
@@ -90,6 +91,28 @@ function formatCountdown(targetMs, nowMs) {
   if (days > 0) return `${days}d ${hours}h ${mins}m ${secs}s`;
   if (hours > 0) return `${hours}h ${mins}m ${secs}s`;
   return `${mins}m ${secs}s`;
+}
+
+function safeDateStr(val, isTamil, options = {}) {
+  try {
+    if (!val) return "TBD";
+    const d = new Date(val);
+    if (isNaN(d.getTime())) return "TBD";
+    return d.toLocaleDateString(isTamil ? "ta-IN" : "en-IN", options);
+  } catch {
+    return "TBD";
+  }
+}
+
+function safeTimeStr(val, options = {}) {
+  try {
+    if (!val) return "TBD";
+    const d = new Date(val);
+    if (isNaN(d.getTime())) return "TBD";
+    return d.toLocaleTimeString("en-IN", options);
+  } catch {
+    return "TBD";
+  }
 }
 
 function StudentDashboardContent() {
@@ -392,7 +415,7 @@ function StudentDashboardContent() {
                           <div className="font-mono text-xs font-semibold text-foreground flex items-center gap-1.5">
                             <Calendar className="w-3.5 h-3.5 text-violet-400 flex-shrink-0" />
                             <span>
-                              {new Date(exam.examDate).toLocaleDateString(isTamil ? "ta-IN" : "en-IN", {
+                              {safeDateStr(exam.examDate, isTamil, {
                                 day: "2-digit",
                                 month: "short",
                                 year: "numeric",
@@ -401,7 +424,7 @@ function StudentDashboardContent() {
                           </div>
                           <span className="text-[11px] text-muted-foreground font-mono flex items-center gap-1 mt-0.5">
                             <Clock className="w-3 h-3 text-amber-400 flex-shrink-0" />
-                            {new Date(exam.examDate).toLocaleTimeString("en-IN", {
+                            {safeTimeStr(exam.examDate, {
                               hour: "numeric",
                               minute: "2-digit",
                               hour12: true,
@@ -506,7 +529,7 @@ function StudentDashboardContent() {
                                 </span>
                                 {exam.expectedPublishAt && (
                                   <span className="text-[10px] text-muted-foreground mt-0.5 font-mono">
-                                    {new Date(exam.expectedPublishAt).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })}
+                                    {safeTimeStr(exam.expectedPublishAt, { hour: "numeric", minute: "2-digit", hour12: true })}
                                   </span>
                                 )}
                               </div>
@@ -571,8 +594,8 @@ function StudentDashboardContent() {
                               </Button>
                               <span className="text-[10px] text-muted-foreground font-mono">
                                 {isTamil
-                                  ? `${new Date(exam.examDate).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })} மணிக்கு தொடங்கும்`
-                                  : `Opens at ${new Date(exam.examDate).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })}`}
+                                  ? `${safeTimeStr(exam.examDate, { hour: "numeric", minute: "2-digit", hour12: true })} மணிக்கு தொடங்கும்`
+                                  : `Opens at ${safeTimeStr(exam.examDate, { hour: "numeric", minute: "2-digit", hour12: true })}`}
                               </span>
                             </div>
                           )}
@@ -633,14 +656,14 @@ function StudentDashboardContent() {
                     <div className="p-2.5 rounded-lg bg-secondary/40 border border-border text-xs flex items-center justify-between font-mono">
                       <span className="flex items-center gap-1.5 text-foreground">
                         <Calendar className="w-3.5 h-3.5 text-violet-400" />
-                        {new Date(exam.examDate).toLocaleDateString(isTamil ? "ta-IN" : "en-IN", {
+                        {safeDateStr(exam.examDate, isTamil, {
                           day: "numeric",
                           month: "short",
                         })}
                       </span>
                       <span className="flex items-center gap-1 text-muted-foreground">
                         <Clock className="w-3 h-3 text-amber-400" />
-                        {new Date(exam.examDate).toLocaleTimeString("en-IN", {
+                        {safeTimeStr(exam.examDate, {
                           hour: "numeric",
                           minute: "2-digit",
                           hour12: true,
@@ -706,7 +729,7 @@ function StudentDashboardContent() {
                             </span>
                             {exam.expectedPublishAt && (
                               <span className="font-mono text-[10px]">
-                                {new Date(exam.expectedPublishAt).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })}
+                                {safeTimeStr(exam.expectedPublishAt, { hour: "numeric", minute: "2-digit", hour12: true })}
                               </span>
                             )}
                           </div>
