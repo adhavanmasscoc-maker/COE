@@ -114,6 +114,36 @@ function SyllabusExplorerContent() {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [practiceResults, setPracticeResults] = useState(null);
 
+  // Attended Practice History & Q&A Inspection State
+  const [practiceHistory, setPracticeHistory] = useState([]);
+  const [practiceHistoryStats, setPracticeHistoryStats] = useState({
+    totalAttempts: 0,
+    averagePercentage: 0,
+    highestPercentage: 0,
+  });
+  const [historyLoading, setHistoryLoading] = useState(false);
+  const [expandedAttemptId, setExpandedAttemptId] = useState(null);
+
+  const fetchPracticeHistory = async () => {
+    setHistoryLoading(true);
+    try {
+      const res = await fetch("/api/student/practice/attempt");
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setPracticeHistory(data.attempts || []);
+        setPracticeHistoryStats({
+          totalAttempts: data.totalAttempts || 0,
+          averagePercentage: data.averagePercentage || 0,
+          highestPercentage: data.highestPercentage || 0,
+        });
+      }
+    } catch {
+      console.warn("Could not load practice history");
+    } finally {
+      setHistoryLoading(false);
+    }
+  };
+
   const fetchSyllabus = async () => {
     setLoading(true);
     try {
@@ -147,6 +177,7 @@ function SyllabusExplorerContent() {
 
   useEffect(() => {
     fetchSyllabus();
+    fetchPracticeHistory();
   }, []);
 
   const currentSubject = subjects.find((s) => s.id === selectedSubId) || subjects[0];
@@ -314,6 +345,28 @@ function SyllabusExplorerContent() {
     });
 
     setPracticeState("evaluated");
+
+    // Persist practice attempt into database with full questions and answers breakdown
+    try {
+      fetch("/api/student/practice/attempt", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          subjectCode: activePracticeSubject?.code || "CHE-12",
+          setName: `Unit ${practiceUnit === "all" ? "Curriculum" : practiceUnit} (${practiceCount} Qs)`,
+          medium: "Bilingual",
+          totalTimeSpent: 0,
+          answers: selectedAnswers,
+          questionsWithAnswers: breakdown,
+          score,
+          totalMarks: maxMarks,
+        }),
+      }).then(() => {
+        fetchPracticeHistory();
+      }).catch((e) => console.warn("Could not persist practice attempt:", e));
+    } catch (e) {
+      console.warn("Could not persist practice attempt:", e);
+    }
   };
 
   return (
@@ -974,6 +1027,245 @@ function SyllabusExplorerContent() {
                 </Button>
               </div>
             </Card>
+          )}
+
+          {/* Attended Practice Tests & Analytics History (Persistent in Database) */}
+          {practiceState === "idle" && (
+            <div className="space-y-6 pt-4">
+              {/* Metric Summary Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <Card className="p-5 border-violet-500/20 bg-card/60 backdrop-blur-sm flex items-center justify-between">
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground block">
+                      Practice Tests Attended
+                    </span>
+                    <span className="text-2xl font-black text-foreground mt-0.5 block">
+                      {practiceHistoryStats.totalAttempts} Sessions
+                    </span>
+                    <span className="text-[11px] text-violet-400 mt-1 block">
+                      Unlimited Self-Study Attempts
+                    </span>
+                  </div>
+                  <div className="w-12 h-12 rounded-2xl bg-violet-500/15 border border-violet-500/30 flex items-center justify-center text-violet-400">
+                    <Layers className="w-6 h-6" />
+                  </div>
+                </Card>
+
+                <Card className="p-5 border-emerald-500/20 bg-card/60 backdrop-blur-sm flex items-center justify-between">
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground block">
+                      Average Practice Score
+                    </span>
+                    <span className="text-2xl font-black text-emerald-400 mt-0.5 block">
+                      {practiceHistoryStats.averagePercentage}%
+                    </span>
+                    <span className="text-[11px] text-emerald-300 mt-1 block">
+                      Across All Attempted Quizzes
+                    </span>
+                  </div>
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                    <TrendingUp className="w-6 h-6" />
+                  </div>
+                </Card>
+
+                <Card className="p-5 border-amber-500/20 bg-card/60 backdrop-blur-sm flex items-center justify-between">
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground block">
+                      Highest Mastery Score
+                    </span>
+                    <span className="text-2xl font-black text-amber-400 mt-0.5 block">
+                      {practiceHistoryStats.highestPercentage}%
+                    </span>
+                    <span className="text-[11px] text-amber-300 mt-1 block">
+                      Personal Best Record
+                    </span>
+                  </div>
+                  <div className="w-12 h-12 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                    <Award className="w-6 h-6" />
+                  </div>
+                </Card>
+              </div>
+
+              {/* History Table & Q&A Inspector */}
+              <Card className="p-6 border-border space-y-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pb-4 border-b border-border">
+                  <div>
+                    <h3 className="text-sm font-bold text-foreground flex items-center gap-2">
+                      <CalendarDays className="w-4 h-4 text-violet-400" />
+                      Attended Practice Assessments & Detailed Question-Answer Archive
+                    </h3>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      Review all past practice attempts. Click &ldquo;Inspect Questions & Answers&rdquo; to view each question, your chosen option, and official solutions.
+                    </p>
+                  </div>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    onClick={fetchPracticeHistory}
+                    disabled={historyLoading}
+                    className="text-xs text-violet-400 hover:text-violet-300 gap-1"
+                  >
+                    <RotateCcw className={`w-3.5 h-3.5 ${historyLoading ? "animate-spin" : ""}`} />
+                    Refresh Log
+                  </Button>
+                </div>
+
+                {practiceHistory.length === 0 ? (
+                  <div className="text-center py-8 text-muted-foreground text-xs space-y-2">
+                    <Zap className="w-8 h-8 mx-auto text-muted-foreground/40" />
+                    <p>No practice assessments attended yet.</p>
+                    <p className="text-[11px] text-muted-foreground/70">
+                      Launch your first practice assessment above to build your question review archive!
+                    </p>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {practiceHistory.map((att) => {
+                      const isExpanded = expandedAttemptId === att.id;
+                      const hasQnA = Array.isArray(att.questionsWithAnswers) && att.questionsWithAnswers.length > 0;
+
+                      return (
+                        <div
+                          key={att.id}
+                          className="rounded-xl border border-border bg-secondary/30 overflow-hidden transition-all"
+                        >
+                          {/* Row Header */}
+                          <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                            <div className="flex items-center gap-3">
+                              <span className="w-9 h-9 rounded-xl bg-violet-500/15 text-violet-300 border border-violet-500/30 flex items-center justify-center font-mono font-bold text-xs">
+                                #{att.attemptNumber}
+                              </span>
+                              <div>
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <span className="font-bold text-sm text-foreground">
+                                    {att.subjectCode}
+                                  </span>
+                                  <span className="badge badge-purple text-[10px]">
+                                    {att.setName}
+                                  </span>
+                                  <span className="badge badge-secondary text-[10px]">
+                                    {att.medium}
+                                  </span>
+                                </div>
+                                <span className="text-[11px] text-muted-foreground flex items-center gap-2 mt-0.5">
+                                  <span>{new Date(att.createdAt).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })}</span>
+                                  <span>•</span>
+                                  <span>{new Date(att.createdAt).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })}</span>
+                                </span>
+                              </div>
+                            </div>
+
+                            <div className="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                              <div className="text-right">
+                                <span className="font-mono font-black text-sm text-emerald-400 block">
+                                  {att.score} / {att.totalMarks}
+                                </span>
+                                <span className="text-[10px] font-bold text-muted-foreground">
+                                  {att.percentage}% Score
+                                </span>
+                              </div>
+
+                              <Button
+                                size="sm"
+                                variant={isExpanded ? "secondary" : "outline"}
+                                onClick={() => setExpandedAttemptId(isExpanded ? null : att.id)}
+                                className="text-xs font-semibold gap-1.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/15"
+                              >
+                                {isExpanded ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                                {isExpanded ? "Hide Review" : "Inspect Q&A"}
+                              </Button>
+                            </div>
+                          </div>
+
+                          {/* Expanded Questions & Answers Review */}
+                          {isExpanded && (
+                            <div className="p-4 border-t border-border bg-card/70 space-y-3">
+                              <div className="flex items-center justify-between text-xs text-muted-foreground pb-2 border-b border-border">
+                                <span className="font-bold text-foreground">
+                                  Question-by-Question Detailed Response Sheet ({hasQnA ? att.questionsWithAnswers.length : Object.keys(att.answers || {}).length} Items)
+                                </span>
+                                <span className="text-[11px] font-mono">Instant Self-Assessment Record</span>
+                              </div>
+
+                              {hasQnA ? (
+                                <div className="space-y-3 pt-2">
+                                  {att.questionsWithAnswers.map((q, qIdx) => {
+                                    const studentChoice = q.chosen || q.studentAnswer || att.answers?.[q.id];
+                                    const isCorrect = q.isCorrect !== undefined
+                                      ? q.isCorrect
+                                      : Boolean(studentChoice && String(studentChoice).toUpperCase() === String(q.correctAnswer || q.correct_option || "").toUpperCase());
+
+                                    return (
+                                      <div
+                                        key={q.id || qIdx}
+                                        className={`p-3.5 rounded-xl border text-xs space-y-2 ${
+                                          isCorrect
+                                            ? "border-emerald-500/30 bg-emerald-500/5"
+                                            : "border-rose-500/30 bg-rose-500/5"
+                                        }`}
+                                      >
+                                        <div className="flex items-start justify-between gap-2">
+                                          <div>
+                                            <span className="font-bold text-foreground">
+                                              Q{qIdx + 1}. {q.questionText || q.question_en || q.question}
+                                            </span>
+                                            {(q.questionTextTa || q.question_ta) && (
+                                              <p className="text-cyan-300 font-sans mt-0.5 text-[11px]">
+                                                {q.questionTextTa || q.question_ta}
+                                              </p>
+                                            )}
+                                          </div>
+                                          <span className={`px-2 py-0.5 rounded font-mono text-[10px] font-bold ${
+                                            isCorrect
+                                              ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40"
+                                              : "bg-rose-500/20 text-rose-300 border border-rose-500/40"
+                                          }`}>
+                                            {isCorrect ? "Correct" : "Incorrect / Unattempted"}
+                                          </span>
+                                        </div>
+
+                                        <div className="flex flex-wrap gap-4 text-[11px] pt-1 border-t border-border/50">
+                                          <div>
+                                            <span className="text-muted-foreground">Your Selected Option: </span>
+                                            <strong className={isCorrect ? "text-emerald-400" : "text-rose-400"}>
+                                              {studentChoice ? `Option ${String(studentChoice).toUpperCase()}` : "Not Answered"}
+                                            </strong>
+                                          </div>
+                                          <div>
+                                            <span className="text-muted-foreground">Official Answer Key: </span>
+                                            <strong className="text-emerald-400">
+                                              Option {String(q.correctAnswer || q.correct_option || "").toUpperCase()}
+                                            </strong>
+                                          </div>
+                                        </div>
+
+                                        {(q.explanation || q.answer_en || q.answer_ta) && (
+                                          <div className="p-2.5 rounded-lg bg-secondary/70 border border-border text-[11px] text-muted-foreground space-y-1">
+                                            <strong className="text-violet-300 block">Explanation / Solution:</strong>
+                                            <p>{q.explanation || q.answer_en || q.answer_ta}</p>
+                                            {q.answer_ta && q.answer_en && (
+                                              <p className="text-cyan-400 font-sans">{q.answer_ta}</p>
+                                            )}
+                                          </div>
+                                        )}
+                                      </div>
+                                    );
+                                  })}
+                                </div>
+                              ) : (
+                                <div className="p-4 text-center text-xs text-muted-foreground">
+                                  <span>Responses logged: {JSON.stringify(att.answers || {})}</span>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </Card>
+            </div>
           )}
 
           {/* Practice Loading */}

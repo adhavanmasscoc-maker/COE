@@ -204,8 +204,52 @@ export async function GET(request) {
     });
     const subMap = new Map(existingSubmissions.map((s) => [s.examScheduleId, s]));
 
+    // Query exam result publication states
+    const existingResults = await db.examResult.findMany({
+      where: {
+        studentId: profile.id,
+        examScheduleId: { in: examIds },
+      },
+      select: {
+        examScheduleId: true,
+        isPublished: true,
+        marksObtained: true,
+        maxMarks: true,
+      },
+    });
+    const resMap = new Map(existingResults.map((r) => [r.examScheduleId, r]));
+
+    const now = Date.now();
+
     const enrichedUpcomingExams = upcomingExams.map((exam) => {
       const sub = subMap.get(exam.id);
+      const res = resMap.get(exam.id);
+
+      let isResultPublished = Boolean(res?.isPublished);
+      let expectedPublishAt = null;
+
+      if (sub?.isSubmitted && !isResultPublished) {
+        if (exam.resultPublishDate) {
+          expectedPublishAt = new Date(exam.resultPublishDate);
+          if (now >= expectedPublishAt.getTime()) {
+            isResultPublished = true;
+          }
+        } else if (exam.resultPublishDelayMinutes && exam.resultPublishDelayMinutes > 0) {
+          const subTime = new Date(sub.submittedAt).getTime();
+          expectedPublishAt = new Date(subTime + exam.resultPublishDelayMinutes * 60 * 1000);
+          if (now >= expectedPublishAt.getTime()) {
+            isResultPublished = true;
+          }
+        } else if (res) {
+          // 0 minute delay means immediate publish once evaluated
+          isResultPublished = true;
+        }
+      }
+
+      const remainingSeconds = expectedPublishAt
+        ? Math.max(0, Math.round((expectedPublishAt.getTime() - now) / 1000))
+        : null;
+
       return {
         id: exam.id,
         subject: exam.subject.name,
@@ -217,7 +261,10 @@ export async function GET(request) {
         instructions: exam.instructions,
         isSubmitted: Boolean(sub?.isSubmitted),
         submittedAt: sub?.submittedAt || null,
-        score: sub?.score ?? null,
+        isResultPublished,
+        expectedPublishAt: expectedPublishAt ? expectedPublishAt.toISOString() : null,
+        remainingSeconds,
+        score: isResultPublished ? (res?.marksObtained ?? sub?.score ?? null) : null,
       };
     });
 

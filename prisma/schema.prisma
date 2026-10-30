@@ -130,9 +130,11 @@ model ExamSchedule {
   id              String       @id @default(cuid())
   subjectId       String
   subject         Subject      @relation(fields: [subjectId], references: [id], onDelete: Cascade)
-  prepClass       Int          // 10 or 12
-  examDate        DateTime
-  durationMinutes Int          @default(150)
+  prepClass                 Int          // 10 or 12
+  examDate                  DateTime
+  resultPublishDate         DateTime?
+  resultPublishDelayMinutes Int?         @default(0)
+  durationMinutes           Int          @default(150)
   totalMarks      Int          @default(100)
   requiredQuestions Int        @default(0)  // minimum question count before publish is allowed
   instructions    String?

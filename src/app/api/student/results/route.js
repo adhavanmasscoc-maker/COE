@@ -15,7 +15,7 @@ function calculateGrade(percentage) {
   return { grade: "E", label: "Needs Improvement", gpa: 0 };
 }
 
-// GET /api/student/results: Fetch published performance statement
+// GET /api/student/results: Fetch published statement of marks and list scheduled / pending result releases
 export async function GET(request) {
   try {
     const session = await getCurrentSession();
@@ -27,113 +27,123 @@ export async function GET(request) {
     const previewRollNo = searchParams.get("previewRollNo");
 
     const studentProfile = await getOrRestoreStudentProfile(session, previewRollNo);
-
     if (!studentProfile) {
       return NextResponse.json({ error: "Student profile not found." }, { status: 404 });
     }
 
-    // Strict server isolation: fetch published results for this student
-    let results = await db.examResult.findMany({
+    const now = Date.now();
+
+    // 1. Fetch all submissions by this student
+    const submissions = await db.examSubmission.findMany({
       where: {
         studentId: studentProfile.id,
-        isPublished: true,
+        isSubmitted: true,
       },
       include: {
         examSchedule: {
           include: {
-            subject: { select: { name: true, code: true, prepClass: true, medium: true } },
+            subject: { select: { id: true, name: true, code: true, prepClass: true, medium: true } },
           },
         },
       },
-      orderBy: { createdAt: "desc" },
-    }).catch(() => []);
+      orderBy: { submittedAt: "desc" },
+    });
+
+    // 2. Fetch all ExamResult records for this student
+    const existingResults = await db.examResult.findMany({
+      where: { studentId: studentProfile.id },
+    });
+    const resultMap = new Map(existingResults.map((r) => [r.examScheduleId, r]));
+
+    const formattedResults = [];
+    const pendingResults = [];
 
     let totalMarksObtained = 0;
     let totalMaxMarks = 0;
     let highestScoringSubject = null;
     let maxScoredPercent = -1;
 
-    let formattedResults = results.map((res) => {
-      const percentage = Math.round((res.marksObtained / res.maxMarks) * 100);
-      const gradeInfo = calculateGrade(percentage);
+    for (const sub of submissions) {
+      const exam = sub.examSchedule;
+      const res = resultMap.get(exam.id);
 
-      totalMarksObtained += res.marksObtained;
-      totalMaxMarks += res.maxMarks;
+      // Evaluate result publication rules
+      let isReleased = Boolean(res?.isPublished);
+      let expectedPublishAt = null;
 
-      if (percentage > maxScoredPercent) {
-        maxScoredPercent = percentage;
-        highestScoringSubject = res.examSchedule.subject.name;
+      if (!isReleased) {
+        if (exam.resultPublishDate) {
+          expectedPublishAt = new Date(exam.resultPublishDate);
+          if (now >= expectedPublishAt.getTime()) {
+            isReleased = true;
+          }
+        } else if (exam.resultPublishDelayMinutes && exam.resultPublishDelayMinutes > 0) {
+          const subTime = new Date(sub.submittedAt).getTime();
+          expectedPublishAt = new Date(subTime + exam.resultPublishDelayMinutes * 60 * 1000);
+          if (now >= expectedPublishAt.getTime()) {
+            isReleased = true;
+          }
+        }
       }
 
-      return {
-        id: res.id,
-        examId: res.examScheduleId,
-        subject: res.examSchedule.subject.name,
-        code: res.examSchedule.subject.code,
-        medium: res.examSchedule.subject.medium,
-        prepClass: res.examSchedule.prepClass,
-        examDate: res.examSchedule.examDate,
-        marksObtained: res.marksObtained,
-        maxMarks: res.maxMarks,
-        percentage,
-        grade: gradeInfo.grade,
-        gradeLabel: gradeInfo.label,
-        remarks: res.remarks,
-        publishedAt: res.createdAt,
-      };
-    });
+      // If condition has arrived, auto-update isPublished to true in DB
+      if (isReleased && res && !res.isPublished) {
+        await db.examResult.update({
+          where: { id: res.id },
+          data: { isPublished: true },
+        }).catch(() => {});
+      }
 
-    // If no explicit published ExamResult records exist yet, evaluate directly from submitted ExamSubmissions
-    if (formattedResults.length === 0) {
-      try {
-        const submissions = await db.examSubmission.findMany({
-          where: {
-            studentId: studentProfile.id,
-            isSubmitted: true,
-          },
-          include: {
-            examSchedule: {
-              include: {
-                subject: { select: { name: true, code: true, prepClass: true, medium: true } },
-              },
-            },
-          },
-          orderBy: { submittedAt: "desc" },
-        });
+      if (isReleased) {
+        const marksObtained = res ? res.marksObtained : (sub.score || 0);
+        const maxMarks = res ? res.maxMarks : (exam.totalMarks || 25);
+        const percentage = maxMarks > 0 ? Math.round((marksObtained / maxMarks) * 100) : 0;
+        const gradeInfo = calculateGrade(percentage);
 
-        for (const sub of submissions) {
-          const maxMarks = sub.examSchedule?.totalMarks || 25;
-          const marksObtained = sub.score !== null ? sub.score : 0;
-          const percentage = Math.round((marksObtained / maxMarks) * 100);
-          const gradeInfo = calculateGrade(percentage);
+        totalMarksObtained += marksObtained;
+        totalMaxMarks += maxMarks;
 
-          totalMarksObtained += marksObtained;
-          totalMaxMarks += maxMarks;
-
-          if (percentage > maxScoredPercent) {
-            maxScoredPercent = percentage;
-            highestScoringSubject = sub.examSchedule?.subject?.name || "Official Examination";
-          }
-
-          formattedResults.push({
-            id: sub.id,
-            examId: sub.examScheduleId,
-            subject: sub.examSchedule?.subject?.name || "Official Examination",
-            code: sub.examSchedule?.subject?.code || "EXAM",
-            medium: sub.examSchedule?.subject?.medium || "English",
-            prepClass: sub.examSchedule?.prepClass || studentProfile.examPrepClass || 10,
-            examDate: sub.examSchedule?.examDate || sub.submittedAt,
-            marksObtained,
-            maxMarks,
-            percentage,
-            grade: gradeInfo.grade,
-            gradeLabel: gradeInfo.label,
-            remarks: percentage >= 40 ? "Examination Completed — Certified" : "Examination Completed",
-            publishedAt: sub.submittedAt,
-          });
+        if (percentage > maxScoredPercent) {
+          maxScoredPercent = percentage;
+          highestScoringSubject = exam.subject?.name || "Official Examination";
         }
-      } catch (subErr) {
-        console.warn("[results] Submission fallback lookup warn:", subErr.message);
+
+        formattedResults.push({
+          id: res?.id || sub.id,
+          submissionId: sub.id,
+          examId: exam.id,
+          subject: exam.subject?.name || "Official Examination",
+          code: exam.subject?.code || "EXAM",
+          medium: exam.subject?.medium || "English",
+          prepClass: exam.prepClass,
+          examDate: exam.examDate,
+          marksObtained,
+          maxMarks,
+          percentage,
+          grade: gradeInfo.grade,
+          gradeLabel: gradeInfo.label,
+          remarks: res?.remarks || (percentage >= 40 ? "Passed Examination" : "Candidate Appeared"),
+          publishedAt: res?.createdAt || sub.submittedAt,
+        });
+      } else {
+        // Pending release: do NOT expose score yet to prevent early leaks
+        const remainingSeconds = expectedPublishAt
+          ? Math.max(0, Math.round((expectedPublishAt.getTime() - now) / 1000))
+          : null;
+
+        pendingResults.push({
+          examId: exam.id,
+          submissionId: sub.id,
+          subject: exam.subject?.name || "Official Examination",
+          code: exam.subject?.code || "EXAM",
+          prepClass: exam.prepClass,
+          submittedAt: sub.submittedAt,
+          expectedPublishAt: expectedPublishAt ? expectedPublishAt.toISOString() : null,
+          remainingSeconds,
+          statusMessage: expectedPublishAt
+            ? `Result scheduled for release at ${expectedPublishAt.toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })}`
+            : "Under private evaluation by the Controller of Examinations",
+        });
       }
     }
 
@@ -162,6 +172,7 @@ export async function GET(request) {
         highestScoringSubject: highestScoringSubject || "N/A",
       },
       results: formattedResults,
+      pendingResults,
     });
   } catch (error) {
     console.error("Student results GET error:", error);

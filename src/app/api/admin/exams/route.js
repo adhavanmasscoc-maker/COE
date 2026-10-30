@@ -91,6 +91,8 @@ export async function POST(request) {
         subjectId,
         prepClass,
         examDate,
+        resultPublishDelayMinutes,
+        resultPublishDate,
         durationMinutes,
         totalMarks,
         instructions,
@@ -106,12 +108,14 @@ export async function POST(request) {
       const marks = parseInt(totalMarks, 10) || 100;
       const duration = parseInt(durationMinutes, 10) || 150;
 
-      // 1. Create the exam schedule
+      // 1. Create the exam schedule with result publication timing controls
       const newSchedule = await db.examSchedule.create({
         data: {
           subjectId,
           prepClass: pClass,
           examDate: new Date(examDate),
+          resultPublishDelayMinutes: resultPublishDelayMinutes !== undefined ? parseInt(resultPublishDelayMinutes, 10) : 0,
+          resultPublishDate: resultPublishDate ? new Date(resultPublishDate) : null,
           durationMinutes: duration,
           totalMarks: marks,
           instructions: instructions || null,

@@ -21,6 +21,7 @@ export async function POST(request) {
       totalTimeSpent,
       timePerQuestion,
       answers,
+      questionsWithAnswers,
       score,
       totalMarks,
       previewRollNo,
@@ -45,6 +46,12 @@ export async function POST(request) {
     const earnedScore = Number(score) || 0;
     const percentage = maxMarks > 0 ? Math.round((earnedScore / maxMarks) * 1000) / 10 : 0;
 
+    // Store raw answers along with full question breakdown for syllabus practice review
+    const answersPayload = {
+      rawAnswers: answers || {},
+      questionsWithAnswers: Array.isArray(questionsWithAnswers) ? questionsWithAnswers : null,
+    };
+
     const record = await db.practiceAttempt.create({
       data: {
         studentId: studentProfile.id,
@@ -54,7 +61,7 @@ export async function POST(request) {
         attemptNumber,
         totalTimeSpent: Number(totalTimeSpent) || 0,
         timePerQuestion: typeof timePerQuestion === "string" ? timePerQuestion : JSON.stringify(timePerQuestion || {}),
-        answersJson: typeof answers === "string" ? answers : JSON.stringify(answers || {}),
+        answersJson: JSON.stringify(answersPayload),
         score: earnedScore,
         totalMarks: maxMarks,
         percentage,
@@ -123,18 +130,32 @@ export async function GET(request) {
       totalAttempts,
       averagePercentage: avgScore,
       highestPercentage: highestScore,
-      attempts: attempts.map((a) => ({
-        id: a.id,
-        subjectCode: a.subjectCode,
-        setName: a.setName,
-        medium: a.medium,
-        attemptNumber: a.attemptNumber,
-        score: a.score,
-        totalMarks: a.totalMarks,
-        percentage: a.percentage,
-        totalTimeSpent: a.totalTimeSpent,
-        createdAt: a.createdAt,
-      })),
+      attempts: attempts.map((a) => {
+        let parsedPayload = {};
+        try {
+          parsedPayload = JSON.parse(a.answersJson || "{}");
+        } catch {
+          parsedPayload = {};
+        }
+
+        const rawAnswers = parsedPayload.rawAnswers || parsedPayload || {};
+        const questionsWithAnswers = parsedPayload.questionsWithAnswers || null;
+
+        return {
+          id: a.id,
+          subjectCode: a.subjectCode,
+          setName: a.setName,
+          medium: a.medium,
+          attemptNumber: a.attemptNumber,
+          score: a.score,
+          totalMarks: a.totalMarks,
+          percentage: a.percentage,
+          totalTimeSpent: a.totalTimeSpent,
+          answers: rawAnswers,
+          questionsWithAnswers,
+          createdAt: a.createdAt,
+        };
+      }),
     });
   } catch (error) {
     console.error("[Practice Attempt GET Error]:", error);
@@ -144,3 +165,4 @@ export async function GET(request) {
     );
   }
 }
+

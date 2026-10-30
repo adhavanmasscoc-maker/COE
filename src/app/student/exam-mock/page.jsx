@@ -27,7 +27,7 @@ import {
   Award,
   CalendarDays
 } from "lucide-react";
-import { translateQuestion, translateOption } from "@/lib/questionTranslations";
+import { translateQuestion, translateOption, getLocalizedQuestion, getLocalizedOption } from "@/lib/questionTranslations";
 
 function normalizeOptionsList(options) {
   if (!options) return [];
@@ -91,8 +91,13 @@ function ExamHallContent() {
   const urlMode = searchParams.get("mode");
 
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
   const [error, setError] = useState("");
   const [exam, setExam] = useState(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const [candidate, setCandidate] = useState(null);
   const [questions, setQuestions] = useState([]);
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -534,7 +539,7 @@ function ExamHallContent() {
     }
   };
 
-  if (loading) {
+  if (!mounted || loading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-6 space-y-3 bg-background text-foreground">
         <Loader2 className="w-10 h-10 animate-spin text-sky-400" />
@@ -637,7 +642,7 @@ function ExamHallContent() {
             <Card key={q.id} className="p-5 border-border space-y-3 text-xs">
               <div className="flex items-start justify-between gap-2">
                 <span className="font-bold text-foreground">
-                  Q{q.index}. {translateQuestion(q.questionText, isExamTamil ? "ta" : "en")}
+                  Q{q.index}. {getLocalizedQuestion(q, isExamTamil)}
                 </span>
                 <span className={`px-2 py-0.5 rounded-full font-mono text-[10px] font-bold ${
                   q.isCorrect
@@ -664,7 +669,7 @@ function ExamHallContent() {
 
                   return (
                     <div key={opt.id} className={`p-2.5 rounded-xl border flex items-center justify-between ${optStyle}`}>
-                      <span><strong>{opt.id}.</strong> {(isExamTamil && (opt.textTa || translateOption(opt.text))) ? (opt.textTa || translateOption(opt.text)) : (opt.textEn || opt.text)}</span>
+                      <span><strong>{opt.id}.</strong> {getLocalizedOption(opt, isExamTamil)}</span>
                       {isCorrectAns && <span className="text-[10px] text-emerald-400 font-bold ml-2">✓ {isExamTamil ? "சரியான விடை" : "Correct Answer"}</span>}
                       {isUserChosen && !isCorrectAns && <span className="text-[10px] text-rose-400 font-bold ml-2">✗ Your Choice</span>}
                     </div>
@@ -687,9 +692,12 @@ function ExamHallContent() {
 
   // Submitted Receipt View (Official submission lock + virtual practice launcher)
   if (submittedData && !isPracticeMode) {
-    const scoreVal = submittedData.stats?.score ?? 0;
-    const totalMarksVal = submittedData.stats?.totalMarks ?? exam.totalMarks ?? 25;
+    const scoreVal = submittedData.stats?.score ?? submittedData.score ?? 0;
+    const totalMarksVal = submittedData.stats?.totalMarks ?? submittedData.totalMarks ?? exam?.totalMarks ?? 25;
     const percentageVal = Math.round((scoreVal / totalMarksVal) * 100);
+
+    const subjectDisplayName = typeof exam?.subject === "object" ? exam.subject.name : (exam?.subject || "Examination");
+    const subjectCodeDisplay = exam?.code || (typeof exam?.subject === "object" ? exam.subject.code : "") || "EXAM";
 
     return (
       <div className="min-h-screen flex items-center justify-center p-4 bg-background">
@@ -729,7 +737,7 @@ function ExamHallContent() {
           <div className="bg-secondary/60 rounded-2xl p-4 text-left text-xs space-y-2.5 border border-border">
             <div className="flex justify-between pb-2 border-b border-border font-medium">
               <span className="text-muted-foreground">{isExamTamil ? "பாடம்:" : "Subject:"}</span>
-              <span className="font-bold text-foreground">{exam.subject} ({exam.code})</span>
+              <span className="font-bold text-foreground">{subjectDisplayName} ({subjectCodeDisplay})</span>
             </div>
             <div className="flex justify-between">
               <span className="text-muted-foreground">{isExamTamil ? "தேர்வர் பதிவு எண்:" : "Candidate Roll No:"}</span>
@@ -737,7 +745,7 @@ function ExamHallContent() {
             </div>
             <div className="flex justify-between">
               <span className="text-muted-foreground">{isExamTamil ? "வகுப்பு / பாடத்திட்டம்:" : "Standard / Syllabus:"}</span>
-              <span className="font-semibold text-foreground">Class {exam.prepClass} TN Samacheer</span>
+              <span className="font-semibold text-foreground">Class {exam?.prepClass || 12} TN Samacheer</span>
             </div>
             <div className="flex justify-between">
               <span className="text-muted-foreground">{isExamTamil ? "மொத்த வினாக்கள்:" : "Total Questions:"}</span>
@@ -756,7 +764,7 @@ function ExamHallContent() {
             <div className="flex justify-between">
               <span className="text-muted-foreground">{isExamTamil ? "சமர்ப்பிக்கப்பட்ட நேரம்:" : "Recorded Submission Time:"}</span>
               <span className="font-mono text-muted-foreground">
-                {new Date(submittedData.submittedAt || Date.now()).toLocaleTimeString(isExamTamil ? "ta-IN" : "en-IN")}
+                {new Date(submittedData.submittedAt || Date.now()).toLocaleTimeString("en-IN")}
               </span>
             </div>
             <div className="flex justify-between pt-2 border-t border-border">
@@ -865,7 +873,9 @@ function ExamHallContent() {
             </Link>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-sm text-foreground">{exam.subject}</span>
+                <span className="font-bold text-sm text-foreground">
+                  {typeof exam?.subject === "object" ? exam.subject.name : (exam?.subject || "Examination")}
+                </span>
                 <Badge variant="purple" className="text-[10px] py-0">Class {exam.prepClass}</Badge>
                 <Badge variant="secondary" className="text-[10px] py-0">{exam.medium || "English"} Medium</Badge>
               </div>
@@ -946,16 +956,14 @@ function ExamHallContent() {
 
                 {/* Question Text */}
                 <div className="text-sm sm:text-base font-medium text-foreground mb-6 leading-relaxed">
-                  {(isExamTamil && currentQ.questionTextTa) ? currentQ.questionTextTa : translateQuestion(currentQ.questionText, isExamTamil ? "ta" : "en")}
+                  {getLocalizedQuestion(currentQ, isExamTamil)}
                 </div>
 
                 {/* Multiple Choice Options */}
                 <div className="space-y-3">
                   {normalizeOptionsList(currentQ.options).map((opt) => {
                     const isSelected = answers[currentQ.id] === opt.id;
-                    const optText = (isExamTamil && (opt.textTa || translateOption(opt.text)))
-                      ? (opt.textTa || translateOption(opt.text))
-                      : (opt.textEn || opt.text);
+                    const optText = getLocalizedOption(opt, isExamTamil);
                     return (
                       <button
                         key={opt.id}
@@ -1283,10 +1291,59 @@ function ExamHallContent() {
 
 }
 
+class ExamErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("Exam Hall client-side boundary catch:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center p-6 bg-background">
+          <Card className="max-w-md w-full p-6 text-center border-rose-500/30 space-y-4">
+            <ShieldAlert className="w-14 h-14 text-rose-400 mx-auto" />
+            <h2 className="text-lg font-bold text-foreground">Examination Session Safe</h2>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Your exam session encountered an unexpected browser state. All your answered questions remain safely encrypted and preserved in your session.
+            </p>
+            <div className="flex gap-2">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => this.setState({ hasError: false })}
+                className="flex-1 justify-center text-xs"
+              >
+                Retry Exam
+              </Button>
+              <Link href="/student/dashboard" className="flex-1">
+                <Button size="sm" variant="primary" className="w-full justify-center text-xs">
+                  Return to Dashboard
+                </Button>
+              </Link>
+            </div>
+          </Card>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 export default function ExamMockPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center p-6 text-xs text-muted-foreground">Loading test hall...</div>}>
-      <ExamHallContent />
-    </Suspense>
+    <ExamErrorBoundary>
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center p-6 text-xs text-muted-foreground">Loading test hall...</div>}>
+        <ExamHallContent />
+      </Suspense>
+    </ExamErrorBoundary>
   );
 }

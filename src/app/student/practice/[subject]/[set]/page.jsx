@@ -249,6 +249,7 @@ export default function PracticeExamPage() {
           totalTimeSpent: secondsElapsed,
           timePerQuestion: questionTimeMap,
           answers,
+          questionsWithAnswers: breakdown,
           score: calculatedScore,
           totalMarks,
           previewRollNo,
@@ -740,3 +741,4 @@ export default function PracticeExamPage() {
     </div>
   );
 }
+

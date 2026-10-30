@@ -145,6 +145,9 @@ function COEAdminExamsContent() {
   const [rescheduleDate, setRescheduleDate] = useState("");
   const [rescheduleTime, setRescheduleTime] = useState("");
   const [rescheduleReason, setRescheduleReason] = useState("");
+  const [rescheduleResultPolicy, setRescheduleResultPolicy] = useState("0"); // "0", "1", "5", "10", "custom", "date"
+  const [rescheduleCustomMinutes, setRescheduleCustomMinutes] = useState(5);
+  const [reschedulePublishDate, setReschedulePublishDate] = useState("");
   const [rescheduleSubmitting, setRescheduleSubmitting] = useState(false);
   const [rescheduleAuditLogs, setRescheduleAuditLogs] = useState([]);
 
@@ -297,6 +300,23 @@ function COEAdminExamsContent() {
     setRescheduleTime(d.toTimeString().slice(0, 5));
     setRescheduleReason("");
     setRescheduleAuditLogs([]);
+
+    // Pre-populate result release policy
+    if (exam.resultPublishDate) {
+      setRescheduleResultPolicy("date");
+      setReschedulePublishDate(new Date(exam.resultPublishDate).toISOString().slice(0, 16));
+    } else if (exam.resultPublishDelayMinutes !== undefined && exam.resultPublishDelayMinutes !== null) {
+      const mins = exam.resultPublishDelayMinutes;
+      if ([0, 1, 5, 10].includes(mins)) {
+        setRescheduleResultPolicy(String(mins));
+      } else {
+        setRescheduleResultPolicy("custom");
+        setRescheduleCustomMinutes(mins);
+      }
+    } else {
+      setRescheduleResultPolicy("0");
+    }
+
     try {
       const res = await fetch(`/api/admin/exams/${exam.id}/date`);
       const data = await res.json();
@@ -312,17 +332,30 @@ function COEAdminExamsContent() {
     setRescheduleSubmitting(true);
     try {
       const combinedIso = new Date(`${rescheduleDate}T${rescheduleTime}:00`).toISOString();
+
+      let delayMinutes = 0;
+      let targetPublishDate = null;
+      if (rescheduleResultPolicy === "custom") {
+        delayMinutes = parseInt(rescheduleCustomMinutes, 10) || 0;
+      } else if (rescheduleResultPolicy === "date") {
+        targetPublishDate = reschedulePublishDate ? new Date(reschedulePublishDate).toISOString() : null;
+      } else {
+        delayMinutes = parseInt(rescheduleResultPolicy, 10) || 0;
+      }
+
       const res = await fetch(`/api/admin/exams/${rescheduleModal.id}/date`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           examDate: combinedIso,
           reason: rescheduleReason || "Scheduled date modified by Controller of Examinations",
+          resultPublishDelayMinutes: delayMinutes,
+          resultPublishDate: targetPublishDate,
         }),
       });
       const data = await res.json();
       if (res.ok) {
-        showMsg(`Exam date updated to ${safeFormatDate(combinedIso)} ${safeFormatTime(combinedIso)}!`);
+        showMsg(`Exam schedule & result policy updated for ${rescheduleModal.subject?.name}!`);
         setRescheduleModal(null);
         fetchExams();
       } else {
@@ -2085,6 +2118,54 @@ function COEAdminExamsContent() {
                   onChange={(e) => setRescheduleReason(e.target.value)}
                   className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground text-xs"
                 />
+              </div>
+
+              {/* COE Phase 0 Result Release Policy */}
+              <div className="p-3 rounded-xl bg-violet-500/10 border border-violet-500/20 space-y-2">
+                <label className="block text-foreground font-bold">
+                  Result Publication Policy (COE Phase 0 Release Timing)
+                </label>
+                <p className="text-[11px] text-muted-foreground">
+                  Determine when evaluated marks and answer sheets unlock for student viewing.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <select
+                    value={rescheduleResultPolicy}
+                    onChange={(e) => setRescheduleResultPolicy(e.target.value)}
+                    className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground text-xs font-semibold"
+                  >
+                    <option value="0">Immediate Release (0 mins delay)</option>
+                    <option value="1">1 Minute after student submits</option>
+                    <option value="5">5 Minutes after student submits</option>
+                    <option value="10">10 Minutes after student submits</option>
+                    <option value="custom">Custom Delay (in Minutes)</option>
+                    <option value="date">Specific Date & Time Release</option>
+                  </select>
+
+                  {rescheduleResultPolicy === "custom" && (
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="number"
+                        min="1"
+                        max="1440"
+                        value={rescheduleCustomMinutes}
+                        onChange={(e) => setRescheduleCustomMinutes(e.target.value)}
+                        placeholder="Minutes"
+                        className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground text-xs font-mono"
+                      />
+                      <span className="text-[11px] text-muted-foreground whitespace-nowrap">mins after submit</span>
+                    </div>
+                  )}
+
+                  {rescheduleResultPolicy === "date" && (
+                    <input
+                      type="datetime-local"
+                      value={reschedulePublishDate}
+                      onChange={(e) => setReschedulePublishDate(e.target.value)}
+                      className="w-full px-3 py-2 rounded-xl bg-secondary border border-border text-foreground text-xs font-mono"
+                    />
+                  )}
+                </div>
               </div>
 
               {rescheduleAuditLogs.length > 0 && (

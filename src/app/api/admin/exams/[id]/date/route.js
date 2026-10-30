@@ -14,7 +14,7 @@ export async function PATCH(request, { params }) {
 
     const { id } = params;
     const body = await request.json();
-    const { examDate, reason } = body;
+    const { examDate, reason, resultPublishDelayMinutes, resultPublishDate } = body;
 
     if (!examDate) {
       return NextResponse.json({ error: "New examDate is required." }, { status: 400 });
@@ -33,12 +33,21 @@ export async function PATCH(request, { params }) {
     const newDateObj = new Date(examDate);
     const newDateStr = newDateObj.toISOString();
 
+    const updateData = {
+      examDate: newDateObj,
+    };
+
+    if (resultPublishDelayMinutes !== undefined) {
+      updateData.resultPublishDelayMinutes = parseInt(resultPublishDelayMinutes, 10);
+    }
+    if (resultPublishDate !== undefined) {
+      updateData.resultPublishDate = resultPublishDate ? new Date(resultPublishDate) : null;
+    }
+
     // Update the exam schedule
     const updatedExam = await db.examSchedule.update({
       where: { id },
-      data: {
-        examDate: newDateObj,
-      },
+      data: updateData,
       include: {
         subject: { select: { name: true, code: true } },
       },
@@ -93,3 +102,4 @@ export async function GET(request, { params }) {
     return NextResponse.json({ error: "Failed to load audit history." }, { status: 500 });
   }
 }
+

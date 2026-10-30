@@ -317,6 +317,7 @@ function StudentDashboardContent() {
                     <th className="py-3.5 px-4">{isTamil ? "தேர்வு நாள் & நேரம்" : "Date & Scheduled Time"}</th>
                     <th className="py-3.5 px-4">{isTamil ? "ஆயத்த நிலை" : "Days Left"}</th>
                     <th className="py-3.5 px-4">{isTamil ? "பாடத்திட்டம் & 50 வினாக்கள் பயிற்சி" : "Study & Practice 50 Qs Bank"}</th>
+                    <th className="py-3.5 px-4">{isTamil ? "தேர்வு முடிவு" : "Result"}</th>
                     <th className="py-3.5 px-4 text-right">{isTamil ? "அரசுத் தேர்வு கூடம்" : "Official Exam Hall"}</th>
                   </tr>
                 </thead>
@@ -441,7 +442,51 @@ function StudentDashboardContent() {
                           </div>
                         </td>
 
-                        {/* 5. Official Exam Hall Action */}
+                        {/* 5. Official Result Column */}
+                        <td className="py-4 px-4 align-middle">
+                          {exam.isSubmitted ? (
+                            exam.isResultPublished ? (
+                              <Link
+                                href={`/student/results?examId=${exam.id}${
+                                  isPreview ? `&previewRollNo=${previewRoll}` : ""
+                                }`}
+                              >
+                                <Button
+                                  variant="primary"
+                                  size="sm"
+                                  className="text-[11px] font-bold gap-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white shadow-md shadow-emerald-500/20 py-1.5 px-3"
+                                >
+                                  <Award className="w-3.5 h-3.5 text-emerald-200" />
+                                  {isTamil ? "மதிப்பெண் & விடைத்தாள்" : "View Result & Paper"}
+                                </Button>
+                              </Link>
+                            ) : (
+                              <div className="inline-flex flex-col">
+                                <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                                  <Clock className="w-3 h-3 text-amber-400" />
+                                  {exam.remainingSeconds && exam.remainingSeconds > 0
+                                    ? isTamil
+                                      ? `முடிவு இன்னும் ${Math.ceil(exam.remainingSeconds / 60)} நிமிடங்களில்`
+                                      : `Result in ~${Math.ceil(exam.remainingSeconds / 60)} mins`
+                                    : isTamil
+                                    ? "மதிப்பீட்டில் உள்ளது"
+                                    : "Under Evaluation"}
+                                </span>
+                                {exam.expectedPublishAt && (
+                                  <span className="text-[10px] text-muted-foreground mt-0.5 font-mono">
+                                    {new Date(exam.expectedPublishAt).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })}
+                                  </span>
+                                )}
+                              </div>
+                            )
+                          ) : (
+                            <span className="text-[11px] text-muted-foreground font-mono">
+                              {isTamil ? "தேர்வு நிலுவையில்" : "Awaiting Exam"}
+                            </span>
+                          )}
+                        </td>
+
+                        {/* 6. Official Exam Hall Action */}
                         <td className="py-4 px-4 align-middle text-right">
                           {exam.isSubmitted ? (
                             <div className="flex items-center justify-end gap-2">
@@ -598,6 +643,39 @@ function StudentDashboardContent() {
                         >
                           <Zap className="w-3.5 h-3.5 text-cyan-400" /> {isTamil ? "பயிற்சி B (50 வினாக்கள்)" : "Practice Set B (50 Qs)"}
                         </Link>
+                      )}
+
+                      {/* Official Result Banner / Link for Mobile */}
+                      {exam.isSubmitted && (
+                        exam.isResultPublished ? (
+                          <Link
+                            href={`/student/results?examId=${exam.id}${
+                              isPreview ? `&previewRollNo=${previewRoll}` : ""
+                            }`}
+                            className="w-full min-h-[44px] flex items-center justify-center gap-2 text-xs font-bold rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-md shadow-emerald-500/20"
+                          >
+                            <Award className="w-4 h-4 text-emerald-200" />
+                            {isTamil ? "உத்தியோகபூர்வ தேர்வு முடிவு & விடைத்தாள்" : "View Evaluated Result & Paper"}
+                          </Link>
+                        ) : (
+                          <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs flex items-center justify-between">
+                            <span className="flex items-center gap-1.5 font-bold">
+                              <Clock className="w-3.5 h-3.5 text-amber-400" />
+                              {exam.remainingSeconds && exam.remainingSeconds > 0
+                                ? isTamil
+                                  ? `முடிவு இன்னும் ${Math.ceil(exam.remainingSeconds / 60)} நிமிடங்களில்`
+                                  : `Result in ~${Math.ceil(exam.remainingSeconds / 60)} mins`
+                                : isTamil
+                                ? "மதிப்பீட்டில் உள்ளது"
+                                : "Result Under Evaluation"}
+                            </span>
+                            {exam.expectedPublishAt && (
+                              <span className="font-mono text-[10px]">
+                                {new Date(exam.expectedPublishAt).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", hour12: true })}
+                              </span>
+                            )}
+                          </div>
+                        )
                       )}
 
                       {/* Official Exam Hall Button */}
