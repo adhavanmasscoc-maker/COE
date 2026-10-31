@@ -79,10 +79,25 @@ export function getLifecycle(exam, nowMs) {
 
   const startMs = new Date(exam.examDate).getTime();
   const durationMs = (exam.durationMinutes || 45) * 60 * 1000;
-  const endMs = startMs + durationMs;
+  const endMs = exam.windowEnd ? new Date(exam.windowEnd).getTime() : startMs + durationMs;
 
+  // 1. Not yet reached start date/time
+  if (nowMs < startMs) return "UPCOMING";
+
+  // 2. Explicit closed/cancelled states
+  if (exam.status === "CLOSED" || exam.status === "ARCHIVED" || exam.status === "CANCELLED") {
+    return "CLOSED";
+  }
+
+  // 3. Active COE Phase Override:
+  // If exam has reached student dispatch / live testing (phase >= 4) or explicit isLive flag,
+  // the testing hall remains active and open for candidate attendance
+  if ((typeof exam.phase === "number" && exam.phase >= 4) || exam.isLive) {
+    return "LIVE";
+  }
+
+  // 4. Default window-based gating for unphased mock exams
   if (nowMs >= endMs) return "CLOSED";
-  if (nowMs >= startMs) return "LIVE";
-  return "UPCOMING";
+  return "LIVE";
 }
 

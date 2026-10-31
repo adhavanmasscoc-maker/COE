@@ -334,6 +334,8 @@ export async function GET(request) {
         durationMinutes: exam.durationMinutes,
         totalMarks: exam.totalMarks,
         instructions: exam.instructions,
+        phase: exam.phase,
+        status: exam.status,
         isSubmitted: Boolean(sub?.isSubmitted),
         submittedAt: sub?.submittedAt || null,
         isResultPublished,
