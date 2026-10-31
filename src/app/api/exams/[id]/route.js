@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { decryptSubmissionPayload } from "@/lib/encryption";
 import { normalizeOptionsList } from "@/lib/questionBankParser";
 import { getOrRestoreStudentProfile } from "@/lib/studentProfileHelper";
+import { translateQuestion } from "@/lib/questionTranslations";
 
 // GET /api/exams/[id]: Fetch exam hall data with anti-cheat sanitization
 export async function GET(request, { params }) {
@@ -98,14 +99,21 @@ export async function GET(request, { params }) {
       }
     }
 
+    const candidateMedium = studentProfile?.medium || exam.subject.medium || "English";
+    const isStudentTamil = candidateMedium === "Tamil" || exam.examLanguage === "ta";
+
     // Parse question options & sanitize answers for student anti-cheat
     const sanitizedQuestions = exam.questions.map((q) => {
       const parsedOptions = normalizeOptionsList(q.options);
+      const questionTextTa = translateQuestion(q.questionText, "ta");
 
       const qData = {
         id: q.id,
         questionNumber: q.questionNumber,
         questionText: q.questionText,
+        question_en: q.questionText,
+        question_ta: questionTextTa,
+        questionTextTa: questionTextTa,
         marks: q.marks,
         options: parsedOptions,
       };
@@ -126,6 +134,7 @@ export async function GET(request, { params }) {
         subject: exam.subject.name,
         code: exam.subject.code,
         medium: exam.subject.medium,
+        examLanguage: exam.examLanguage || (isStudentTamil ? "ta" : "en"),
         prepClass: exam.prepClass,
         examDate: exam.examDate,
         durationMinutes: exam.durationMinutes,
@@ -139,6 +148,8 @@ export async function GET(request, { params }) {
             rollNo: studentProfile.user.username,
             currentClass: studentProfile.currentClass,
             examPrepClass: studentProfile.examPrepClass,
+            medium: candidateMedium,
+            language: studentProfile.user?.language || (candidateMedium === "Tamil" ? "ta" : "en"),
           }
         : null,
       questions: sanitizedQuestions,

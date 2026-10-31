@@ -28,7 +28,7 @@ import {
   Loader2,
   Send,
 } from "lucide-react";
-import { getLocalizedQuestion, getLocalizedOption } from "@/lib/questionTranslations";
+import { getLocalizedQuestion, getLocalizedOption, getLocalizedExplanation } from "@/lib/questionTranslations";
 import { pick, pickQuestion, pickOption, pickExplanation } from "@/lib/config/engine.config";
 
 export default function PracticeExamPage() {
@@ -447,8 +447,8 @@ export default function PracticeExamPage() {
 
   // 2. PRACTICE STEP
   const currentQ = questions[currentIdx];
-  const qText = pickQuestion(currentQ, isTamil ? "ta" : "en");
-  const rawExplanation = pickExplanation(currentQ, isTamil ? "ta" : "en");
+  const qText = getLocalizedQuestion(currentQ, isTamil);
+  const rawExplanation = getLocalizedExplanation(currentQ, isTamil);
 
   return (
     <div className="max-w-4xl mx-auto py-6 px-4 space-y-5 animate-float-up">
@@ -562,7 +562,7 @@ export default function PracticeExamPage() {
             {(currentQ.options || []).map((opt) => {
               const optId = opt.id?.toUpperCase();
               const isChosen = answers[currentQ.id] === optId;
-              const optText = pickOption(opt, isTamil ? "ta" : "en");
+              const optText = getLocalizedOption(opt, isTamil);
 
               return (
                 <button
@@ -869,21 +869,21 @@ export default function PracticeExamPage() {
                     return true;
                   })
                   .map((item) => {
-                    const itemQText = pickQuestion(item, isTamil ? "ta" : "en");
-                    const itemExplanation = pickExplanation(item, isTamil ? "ta" : "en");
+                    const itemQText = getLocalizedQuestion(item, isTamil);
+                    const itemExplanation = getLocalizedExplanation(item, isTamil);
 
                     let chosenOptText = "";
                     let correctOptText = "";
                     if (Array.isArray(item.options)) {
                       const cOpt = item.options.find(o => String(o.id || "").toUpperCase() === String(item.chosen || "").toUpperCase());
-                      if (cOpt) chosenOptText = pickOption(cOpt, isTamil ? "ta" : "en");
+                      if (cOpt) chosenOptText = getLocalizedOption(cOpt, isTamil);
                       const kOpt = item.options.find(o => String(o.id || "").toUpperCase() === String(item.correctAnswer || "").toUpperCase());
-                      if (kOpt) correctOptText = pickOption(kOpt, isTamil ? "ta" : "en");
+                      if (kOpt) correctOptText = getLocalizedOption(kOpt, isTamil);
                     } else if (item.options && typeof item.options === "object") {
                       const cVal = item.options[item.chosen?.toLowerCase()] || item.options[item.chosen?.toUpperCase()];
-                      if (cVal) chosenOptText = typeof cVal === "string" ? cVal : pickOption(cVal, isTamil ? "ta" : "en");
+                      if (cVal) chosenOptText = typeof cVal === "string" ? getLocalizedOption(cVal, isTamil) : getLocalizedOption(cVal, isTamil);
                       const kVal = item.options[item.correctAnswer?.toLowerCase()] || item.options[item.correctAnswer?.toUpperCase()];
-                      if (kVal) correctOptText = typeof kVal === "string" ? kVal : pickOption(kVal, isTamil ? "ta" : "en");
+                      if (kVal) correctOptText = typeof kVal === "string" ? getLocalizedOption(kVal, isTamil) : getLocalizedOption(kVal, isTamil);
                     }
 
                     return (

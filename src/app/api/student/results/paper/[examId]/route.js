@@ -88,7 +88,7 @@ export async function GET(request, { params }) {
 
     // If not published and caller is student (not admin previewing), block access
     const isAdmin = session.role === "ADMIN" || Boolean(previewRollNo);
-    if (!isPublished && !isAdmin) {
+    if (!isPublished && !isAdmin && !submission?.isSubmitted) {
       const remainingSeconds = expectedPublishAt
         ? Math.max(0, Math.round((expectedPublishAt.getTime() - now) / 1000))
         : null;
@@ -130,10 +130,12 @@ export async function GET(request, { params }) {
 
       const opts = normalizeOptionsList(q.options).map((opt) => ({
         id: opt.id,
-        text: pickOption(opt, isTamil ? "ta" : "en"),
+        text: getLocalizedOption(opt, isTamil),
+        textEn: opt.textEn || opt.text,
+        textTa: opt.textTa,
       }));
 
-      const localizedQuestionText = pickQuestion(q, isTamil ? "ta" : "en");
+      const localizedQuestionText = getLocalizedQuestion(q, isTamil);
       const localizedExplanation = pickExplanation(q, isTamil ? "ta" : "en");
 
       return {

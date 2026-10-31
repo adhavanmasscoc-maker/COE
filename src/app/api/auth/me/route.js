@@ -15,7 +15,7 @@ export async function GET(request) {
         include: { profile: true },
       });
       if (user) {
-        const userLang = user.language || (user.profile?.medium === "Tamil" ? "ta" : "en");
+        const userLang = user.profile?.medium === "Tamil" ? "ta" : (user.language || "en");
         return NextResponse.json({
           authenticated: true,
           isPreview: true,
@@ -26,6 +26,7 @@ export async function GET(request) {
             fullName: user.profile?.fullName || user.username,
             examPrepClass: user.profile?.examPrepClass || 10,
             language: userLang,
+            medium: user.profile?.medium || (userLang === "ta" ? "Tamil" : "English"),
           },
           studentProfile: user.profile,
         });
@@ -47,8 +48,10 @@ export async function GET(request) {
       where: { id: session.userId || session.id },
       include: { profile: true },
     });
+    let userMedium = "English";
     if (user) {
-      userLang = user.language || (user.profile?.medium === "Tamil" ? "ta" : "en");
+      userLang = user.profile?.medium === "Tamil" ? "ta" : (user.language || "en");
+      userMedium = user.profile?.medium || (userLang === "ta" ? "Tamil" : "English");
     }
   } catch (err) {
     console.error("Error fetching user profile language:", err.message);
@@ -59,6 +62,7 @@ export async function GET(request) {
     user: {
       ...session,
       language: userLang,
+      medium: userMedium,
     },
   });
 }

@@ -6,8 +6,10 @@ import { useSearchParams } from "next/navigation";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { StatCard } from "@/components/ui/Card";
+import { useLanguage } from "@/context/LanguageContext";
+import { getLocalizedQuestion, getLocalizedOption, getLocalizedExplanation } from "@/lib/questionTranslations";
 import {
-  Award, ArrowLeft, Calendar, Clock, CheckCircle2,
+  Award, ArrowLeft, Calendar, Clock, CheckCircle2, XCircle, HelpCircle,
   AlertCircle, FileText, Printer, TrendingUp,
   GraduationCap, Eye, Loader2, BookOpen,
   FileCheck, X, Sparkles, Check,
@@ -27,7 +29,9 @@ function StudentResultsContent() {
   const [previewRoll, setPreviewRoll] = useState(searchParams.get("previewRollNo") || null);
 
   // Evaluated Paper Modal state
+  const { isTamil: globalIsTamil } = useLanguage();
   const [selectedExamPaper, setSelectedExamPaper] = useState(null);
+  const [paperFilter, setPaperFilter] = useState('INCORRECT');
   const [paperLoading, setPaperLoading] = useState(false);
   const [paperError, setPaperError] = useState("");
 
@@ -422,88 +426,202 @@ function StudentResultsContent() {
                     </div>
                   </div>
 
-                  {/* Question-by-Question breakdown */}
-                  <div className="space-y-4">
-                    <h4 className="font-bold text-sm text-foreground">
-                      Question-by-Question Response Audit & Official Keys
-                    </h4>
+                  {/* User Requested Categorized Result Review: Correct vs Wrong Separately */}
+                  {(() => {
+                    const isPaperTamil = globalIsTamil || selectedExamPaper?.candidate?.medium === "Tamil";
+                    const allQs = selectedExamPaper?.questions || [];
+                    const incorrectCount = allQs.filter(q => q.chosenAnswer && !q.isCorrect).length;
+                    const unattemptedCount = allQs.filter(q => !q.chosenAnswer).length;
+                    const correctCount = allQs.filter(q => q.isCorrect).length;
 
-                    {selectedExamPaper.questions?.map((q) => (
-                      <div
-                        key={q.id}
-                        className={`p-4 rounded-xl border space-y-3 ${
-                          q.isCorrect
-                            ? "bg-emerald-500/5 border-emerald-500/30"
-                            : q.chosenAnswer
-                            ? "bg-rose-500/5 border-rose-500/30"
-                            : "bg-secondary/30 border-border"
-                        }`}
-                      >
-                        <div className="flex items-start justify-between gap-3">
-                          <span className="font-bold text-foreground text-sm">
-                            Q{q.questionNumber}. {q.questionText}
-                          </span>
-                          <span
-                            className={`font-mono font-bold text-[10px] px-2 py-0.5 rounded flex-shrink-0 ${
-                              q.isCorrect
-                                ? "bg-emerald-500/20 text-emerald-300"
-                                : q.chosenAnswer
-                                ? "bg-rose-500/20 text-rose-300"
-                                : "bg-secondary text-muted-foreground"
-                            }`}
-                          >
-                            {q.isCorrect
-                              ? `+${q.marksAwarded} Marks (Correct)`
-                              : q.chosenAnswer
-                              ? "0 Marks (Incorrect)"
-                              : "Unattempted"}
-                          </span>
-                        </div>
+                    const filteredPaperQs = allQs.filter(q => {
+                      if (paperFilter === "INCORRECT") return q.chosenAnswer && !q.isCorrect;
+                      if (paperFilter === "UNATTEMPTED") return !q.chosenAnswer;
+                      if (paperFilter === "CORRECT") return q.isCorrect;
+                      return true;
+                    });
 
-                        {/* Options */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
-                          {(q.options || []).map((opt) => {
-                            const isChosen = q.chosenAnswer === opt.id;
-                            const isKey = q.correctAnswer === opt.id;
-
-                            let optClass = "bg-secondary/40 border-border text-muted-foreground";
-                            if (isKey) {
-                              optClass = "bg-emerald-500/15 border-emerald-500/40 text-emerald-300 font-semibold";
-                            } else if (isChosen && !isKey) {
-                              optClass = "bg-rose-500/15 border-rose-500/40 text-rose-300 font-semibold line-through";
-                            }
-
-                            return (
-                              <div
-                                key={opt.id}
-                                className={`p-2.5 rounded-lg border flex items-center justify-between ${optClass}`}
-                              >
-                                <span><strong>{opt.id}.</strong> {opt.text}</span>
-                                {isKey && (
-                                  <span className="text-[10px] text-emerald-400 font-bold ml-2">
-                                    ✓ Official Key
-                                  </span>
-                                )}
-                                {isChosen && !isKey && (
-                                  <span className="text-[10px] text-rose-400 font-bold ml-2">
-                                    ✗ Your Choice
-                                  </span>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
-
-                        {/* Explanation Box */}
-                        {q.explanation && (
-                          <div className="p-3 rounded-lg bg-violet-500/10 border border-violet-500/20 text-[11px] text-[#a8a8d0]">
-                            <strong className="text-violet-300 block mb-0.5">Step-by-Step Worked Solution:</strong>
-                            {q.explanation}
+                    return (
+                      <div className="space-y-4">
+                        {/* Alert Banner */}
+                        {incorrectCount > 0 ? (
+                          <div className="p-3.5 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-start gap-3">
+                            <AlertCircle className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" />
+                            <div className="space-y-0.5 text-left">
+                              <h4 className="font-bold text-rose-200 text-xs sm:text-sm">
+                                {isPaperTamil
+                                  ? `தவறாக விடையளிக்கப்பட்ட வினாக்கள் (${incorrectCount}) — கீழே சரிபார்க்கவும்`
+                                  : `Wrongly Answered Questions (${incorrectCount}) — Review Directly Below`}
+                              </h4>
+                              <p className="text-[11px] text-rose-300/80">
+                                {isPaperTamil
+                                  ? "நீங்கள் தவறாக தேர்வு செய்த விடைகள் மற்றும் அரசு தேர்வு விடைக்குறிப்புகள் கீழே காட்டப்பட்டுள்ளன."
+                                  : "Your mistakes are prioritized below with official answer keys, highlighted choices, and worked explanations."}
+                              </p>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-3">
+                            <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                            <div className="text-left">
+                              <h4 className="font-bold text-emerald-200 text-xs sm:text-sm">
+                                {isPaperTamil ? "அற்புதம்! 100% சரியான விடைகள்!" : "100% Correct! All questions answered accurately!"}
+                              </h4>
+                              <p className="text-[11px] text-emerald-300/80">
+                                {isPaperTamil ? "நீங்கள் அனைத்து வினாக்களுக்கும் சரியான விடையளித்துள்ளீர்கள்." : "Outstanding work! You got every attended question right."}
+                              </p>
+                            </div>
                           </div>
                         )}
+
+                        {/* Filter Tabs */}
+                        <div className="flex items-center gap-2 flex-wrap pb-1 border-b border-border">
+                          <button
+                            type="button"
+                            onClick={() => setPaperFilter("INCORRECT")}
+                            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                              paperFilter === "INCORRECT"
+                                ? "bg-rose-500/20 text-rose-300 border border-rose-500/40 shadow-sm"
+                                : "bg-secondary/40 text-muted-foreground hover:text-foreground border border-transparent"
+                            }`}
+                          >
+                            <XCircle className="w-3.5 h-3.5 text-rose-400" />
+                            {isPaperTamil ? `தவறானவை (${incorrectCount})` : `Wrong Answers (${incorrectCount})`}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setPaperFilter("CORRECT")}
+                            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                              paperFilter === "CORRECT"
+                                ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm"
+                                : "bg-secondary/40 text-muted-foreground hover:text-foreground border border-transparent"
+                            }`}
+                          >
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                            {isPaperTamil ? `சரியானவை (${correctCount})` : `Correct (${correctCount})`}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setPaperFilter("UNATTEMPTED")}
+                            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                              paperFilter === "UNATTEMPTED"
+                                ? "bg-amber-500/20 text-amber-300 border border-amber-500/40 shadow-sm"
+                                : "bg-secondary/40 text-muted-foreground hover:text-foreground border border-transparent"
+                            }`}
+                          >
+                            <HelpCircle className="w-3.5 h-3.5 text-amber-400" />
+                            {isPaperTamil ? `விடையளிக்காதவை (${unattemptedCount})` : `Skipped (${unattemptedCount})`}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setPaperFilter("ALL")}
+                            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                              paperFilter === "ALL"
+                                ? "bg-violet-500/20 text-violet-300 border border-violet-500/40 shadow-sm"
+                                : "bg-secondary/40 text-muted-foreground hover:text-foreground border border-transparent"
+                            }`}
+                          >
+                            <BookOpen className="w-3.5 h-3.5 text-violet-400" />
+                            {isPaperTamil ? `அனைத்தும் (${allQs.length})` : `All (${allQs.length})`}
+                          </button>
+                        </div>
+
+                        {/* Filtered Question Cards */}
+                        <div className="space-y-3 pt-1">
+                          {filteredPaperQs.length === 0 ? (
+                            <div className="p-8 text-center border border-border rounded-xl bg-card text-muted-foreground text-xs">
+                              {paperFilter === "INCORRECT"
+                                ? isPaperTamil ? "அற்புதம்! தவறான விடைகள் ஏதுமில்லை!" : "Brilliant! No incorrect answers!"
+                                : paperFilter === "UNATTEMPTED"
+                                ? isPaperTamil ? "நீங்கள் அனைத்து வினாக்களுக்கும் விடையளித்துள்ளீர்கள்!" : "All questions were attempted!"
+                                : isPaperTamil ? "வினாக்கள் இல்லை" : "No questions in this filter"}
+                            </div>
+                          ) : (
+                            filteredPaperQs.map((q) => (
+                              <div
+                                key={q.id}
+                                className={`p-4 rounded-xl border space-y-3 text-left ${
+                                  q.isCorrect
+                                    ? "bg-emerald-500/5 border-emerald-500/30"
+                                    : q.chosenAnswer
+                                    ? "bg-rose-500/5 border-rose-500/30"
+                                    : "bg-secondary/30 border-border"
+                                }`}
+                              >
+                                <div className="flex items-start justify-between gap-3">
+                                  <span className="font-bold text-foreground text-sm">
+                                    {isPaperTamil ? `வினா எண் ${q.questionNumber}: ` : `Q${q.questionNumber}. `}
+                                    {getLocalizedQuestion(q, isPaperTamil)}
+                                  </span>
+                                  <span
+                                    className={`font-mono font-bold text-[10px] px-2 py-0.5 rounded flex-shrink-0 ${
+                                      q.isCorrect
+                                        ? "bg-emerald-500/20 text-emerald-300"
+                                        : q.chosenAnswer
+                                        ? "bg-rose-500/20 text-rose-300"
+                                        : "bg-secondary text-muted-foreground"
+                                    }`}
+                                  >
+                                    {q.isCorrect
+                                      ? isPaperTamil ? `+${q.marksAwarded} மதிப்பெண் (சரி)` : `+${q.marksAwarded} Marks (Correct)`
+                                      : q.chosenAnswer
+                                      ? isPaperTamil ? "0 மதிப்பெண் (தவறு)" : "0 Marks (Incorrect)"
+                                      : isPaperTamil ? "விடையளிக்கவில்லை" : "Unattempted"}
+                                  </span>
+                                </div>
+
+                                {/* Options with explicit comparison */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                                  {(q.options || []).map((opt) => {
+                                    const isChosen = q.chosenAnswer === opt.id;
+                                    const isKey = q.correctAnswer === opt.id;
+
+                                    let optClass = "bg-secondary/40 border-border text-muted-foreground";
+                                    if (isKey) {
+                                      optClass = "bg-emerald-500/15 border-emerald-500/40 text-emerald-300 font-semibold";
+                                    } else if (isChosen && !isKey) {
+                                      optClass = "bg-rose-500/15 border-rose-500/40 text-rose-300 font-semibold line-through";
+                                    }
+
+                                    return (
+                                      <div
+                                        key={opt.id}
+                                        className={`p-2.5 rounded-lg border flex items-center justify-between ${optClass}`}
+                                      >
+                                        <span>
+                                          <strong>{opt.id}.</strong> {getLocalizedOption(opt, isPaperTamil)}
+                                        </span>
+                                        {isKey && (
+                                          <span className="text-[10px] text-emerald-400 font-bold ml-2">
+                                            ✓ {isPaperTamil ? "சரியான விடை (அரசு விடைக்குறிப்பு)" : "Official Key"}
+                                          </span>
+                                        )}
+                                        {isChosen && !isKey && (
+                                          <span className="text-[10px] text-rose-400 font-bold ml-2">
+                                            ✗ {isPaperTamil ? "உங்கள் விடை (தவறானது)" : "Your Choice (Incorrect)"}
+                                          </span>
+                                        )}
+                                      </div>
+                                    );
+                                  })}
+                                </div>
+
+                                {/* Explanation Box */}
+                                {getLocalizedExplanation(q, isPaperTamil) && (
+                                  <div className="p-3 rounded-lg bg-violet-500/10 border border-violet-500/20 text-[11px] text-[#a8a8d0]">
+                                    <strong className="text-violet-300 block mb-0.5">
+                                      {isPaperTamil ? "விளக்கம் & தர்க்கம்:" : "Step-by-Step Worked Solution:"}
+                                    </strong>
+                                    {getLocalizedExplanation(q, isPaperTamil)}
+                                  </div>
+                                )}
+                              </div>
+                            ))
+                          )}
+                        </div>
                       </div>
-                    ))}
-                  </div>
+                    );
+                  })()}
                 </>
               )}
             </div>

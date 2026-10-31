@@ -74,7 +74,7 @@ function SubjectCard({ sub, isPreview, previewRoll }) {
 
 function StudentDashboardContent() {
   const searchParams = useSearchParams();
-  const { isTamil, t } = useLanguage();
+  const { isTamil, setLanguage, t } = useLanguage();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -101,6 +101,14 @@ function StudentDashboardContent() {
   useEffect(() => {
     fetchDashboardData(previewRoll);
   }, [previewRoll]);
+
+  useEffect(() => {
+    if (data?.profile?.medium === "Tamil" || data?.profile?.user?.language === "ta") {
+      if (!isTamil && setLanguage) {
+        setLanguage("ta");
+      }
+    }
+  }, [data, isTamil, setLanguage]);
 
   if (loading) {
     return (

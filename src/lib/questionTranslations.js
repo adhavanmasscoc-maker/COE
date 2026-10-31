@@ -653,31 +653,46 @@ import { pick, pickQuestion, pickOption, pickExplanation } from "./config/engine
 // Time complexity: O(1) constant time dictionary + pick lookup.
 // If rules change: Adjust field normalization or fallback message in engine.config.js.
 export function getLocalizedQuestion(q, isTamil) {
-  if (!q) return pick(null, isTamil ? "ta" : "en");
+  if (!q) return isTamil ? "பாடக்குறிப்புகள் மற்றும் விடைகள் தயாரிப்பில் உள்ளன." : "Content is being prepared by the examination cell.";
   const en = q.question_en || q.questionTextEn || q.questionText || q.question || q.text || "";
+  if (!isTamil) return en;
   let ta = q.question_ta || q.questionTextTa || "";
   if (!ta && en) {
     const candidate = translateQuestion(en, "ta");
     if (/[\u0B80-\u0BFF]/.test(candidate)) ta = candidate;
   }
-  return pick({ en, ta }, isTamil ? "ta" : "en");
+  return (ta && ta.trim()) ? ta : en;
 }
 
 // Data structure: Plain object field bundle { en, ta }.
 // Time complexity: O(1) constant time dictionary + pick lookup.
-// If rules change: Adjust field normalization or fallback message in engine.config.js.
 export function getLocalizedOption(opt, isTamil) {
-  if (!opt) return pick(null, isTamil ? "ta" : "en");
-  if (typeof opt === "string") return opt;
+  if (!opt) return "";
+  if (typeof opt === "string") {
+    if (!isTamil) return opt;
+    const trans = translateOption(opt, "ta");
+    return trans || opt;
+  }
   const en = opt.textEn || opt.en || opt.text || opt.label || opt.value || "";
+  if (!isTamil) return en;
   let ta = opt.textTa || opt.ta || "";
   if (!ta && en) {
     const candidate = translateOption(en, "ta");
     if (/[\u0B80-\u0BFF]/.test(candidate)) ta = candidate;
     else if (/^[\d\s\.\+\-\/\(\)\=\>\<\,\:A-Za-z0-9\^₂₃₄₅₆]+$/.test(en) && en.length <= 15) ta = en;
   }
-  return pick({ en, ta }, isTamil ? "ta" : "en");
+  return (ta && ta.trim()) ? ta : en;
+}
+
+export function getLocalizedExplanation(q, isTamil) {
+  if (!q) return "";
+  const exp = typeof q === "string" ? q : (q.explanation || q.exp || "");
+  if (!exp) return "";
+  if (exp.includes(" / ")) {
+    const parts = exp.split(" / ");
+    return isTamil ? (parts[1]?.trim() || parts[0]?.trim()) : parts[0]?.trim();
+  }
+  return exp;
 }
 
 export { pick, pickQuestion, pickOption, pickExplanation };
-

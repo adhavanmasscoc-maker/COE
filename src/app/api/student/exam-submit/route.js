@@ -4,6 +4,8 @@ import { db } from "@/lib/db";
 import { encryptSubmissionPayload } from "@/lib/encryption";
 import { createIncident } from "@/lib/incident";
 import { getOrRestoreStudentProfile } from "@/lib/studentProfileHelper";
+import { normalizeOptionsList } from "@/lib/questionBankParser";
+import { translateQuestion } from "@/lib/questionTranslations";
 
 export const dynamic = "force-dynamic";
 
@@ -43,7 +45,7 @@ export async function POST(request) {
     }
 
     // Strict Class Isolation check
-    if (session.role === "STUDENT" && exam.prepClass !== studentProfile.examPrepClass) {
+    if (session?.role === "STUDENT" && exam.prepClass !== studentProfile.examPrepClass) {
       return NextResponse.json(
         { error: `Class isolation violation: This exam belongs to Class ${exam.prepClass}.` },
         { status: 403 }
@@ -205,6 +207,24 @@ export async function POST(request) {
       }).catch(() => {});
     }
 
+    const breakdown = exam.questions.map((q) => {
+      const chosen = answeredMap[q.id] || null;
+      const isCorrect = q.correctAnswer ? (chosen === q.correctAnswer) : null;
+      const parsedOptions = normalizeOptionsList(q.options);
+      return {
+        id: q.id,
+        questionNumber: q.questionNumber,
+        questionText: q.questionText,
+        questionTextTa: translateQuestion(q.questionText, "ta"),
+        marks: q.marks,
+        options: parsedOptions,
+        chosen,
+        correctAnswer: q.correctAnswer,
+        isCorrect,
+        explanation: q.explanation,
+      };
+    });
+
     return NextResponse.json({
       success: true,
       submissionId: submission.id,
@@ -225,6 +245,7 @@ export async function POST(request) {
         score: calculatedScore,
         totalMarks: totalExamMarks || exam.totalMarks,
       },
+      breakdown,
       submittedAt: submission.submittedAt,
     });
   } catch (error) {
