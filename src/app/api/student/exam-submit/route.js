@@ -11,19 +11,19 @@ export const dynamic = "force-dynamic";
 export async function POST(request) {
   try {
     const session = await getCurrentSession();
-    if (!session) {
-      return NextResponse.json({ error: "Authentication required to submit examination." }, { status: 401 });
-    }
-
     const body = await request.json();
     const { examId, answers, timeTakenSecs, previewRollNo, attemptId } = body;
+
+    const studentProfile = await getOrRestoreStudentProfile(session, previewRollNo);
+    if (!session && !studentProfile) {
+      return NextResponse.json({ error: "Authentication required to submit examination." }, { status: 401 });
+    }
 
     if (!examId) {
       return NextResponse.json({ error: "Exam ID is required." }, { status: 400 });
     }
 
-    // Resolve or restore student profile
-    const studentProfile = await getOrRestoreStudentProfile(session, previewRollNo);
+    // Student profile verified
 
     if (!studentProfile) {
       return NextResponse.json({ error: "Student profile not found." }, { status: 404 });

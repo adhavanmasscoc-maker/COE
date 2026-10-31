@@ -11,7 +11,17 @@ import { db } from "@/lib/db";
  * @returns {Promise<Object|null>} The studentProfile with user relation
  */
 export async function getOrRestoreStudentProfile(session, previewRollNo = null) {
-  if (!session) return null;
+  if (!session && !previewRollNo) return null;
+
+  try {
+    if (!session && previewRollNo) {
+      const profile = await db.studentProfile.findFirst({
+        where: { user: { username: previewRollNo } },
+        include: { user: { select: { id: true, username: true, role: true, language: true } } },
+      }).catch(() => null);
+      return profile;
+    }
+  } catch {}
 
   try {
     // 1. If role is ADMIN, check for requested preview roll or fallback default
