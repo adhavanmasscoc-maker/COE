@@ -245,6 +245,14 @@ export async function GET(request) {
       bankFileName = isSetB ? "CHEMISTRY-12-50-SET2.json" : "CHEMISTRY-12-50-SET1.json";
     } else if (targetCode === "PHY-12" || targetSubject.name.toLowerCase().includes("physics")) {
       bankFileName = isSetB ? "PHYSICS-12-50-SET2.json" : "PHYSICS-12-50-SET1.json";
+    } else if (targetCode === "MAT-10" || (targetCode.includes("MAT") && targetSubject.prepClass === 10)) {
+      bankFileName = isSetB ? "MATHEMATICS-10-50-SET2.json" : "MATHEMATICS-10-50-SET1.json";
+    } else if (targetCode === "SCI-10" || (targetCode.includes("SCI") && targetSubject.prepClass === 10)) {
+      bankFileName = isSetB ? "SCIENCE-10-50-SET2.json" : "SCIENCE-10-50-SET1.json";
+    } else if (targetCode === "SOC-10" || (targetCode.includes("SOC") && targetSubject.prepClass === 10)) {
+      bankFileName = isSetB ? "SOCIAL_SCIENCE-10-50-SET2.json" : "SOCIAL_SCIENCE-10-50-SET1.json";
+    } else if (targetCode === "MAT-12" || (targetCode.includes("MAT") && targetSubject.prepClass === 12)) {
+      bankFileName = isSetB ? "MATHEMATICS-12-50-SET2.json" : "MATHEMATICS-12-50-SET1.json";
     } else if (targetCode === "ENG-10" || (targetCode.includes("ENG") && targetSubject.prepClass === 10)) {
       bankFileName = isSetB ? "ENGLISH-10-50-SET2.json" : "ENGLISH-10-50-SET1.json";
     } else if (targetCode === "ENG-12" || targetSubject.name.toLowerCase().includes("english")) {

@@ -187,7 +187,7 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          placeholder="e.g. Adhavan S or Vikram"
+          placeholder="Enter full name"
           className="input-field text-xs"
         />
       </div>
@@ -211,7 +211,7 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
           type="text"
           value={rollNo}
           onChange={(e) => setRollNo(e.target.value.toUpperCase())}
-          placeholder="e.g. TN2026-0901, 1001, or ADHA2026"
+          placeholder="Sample: TN2026-0901"
           className="input-field font-mono text-xs"
         />
       </div>
@@ -544,7 +544,7 @@ function LoginPanel() {
             </label>
             <input id="student-roll-no" type="text" value={rollNo}
               onChange={(e) => setRollNo(e.target.value)} required
-              placeholder="e.g. TN2026-0901, 11203, or Vikram" className="input-field font-mono" />
+              placeholder="Sample: TN2026-0901" className="input-field font-mono" />
             <p className="text-[11px] text-[#5c5c8a] mt-1.5 flex items-center gap-1">
               <CheckCircle2 className="w-3 h-3 text-emerald-400" />{isTamil ? "பதிவு எண் மட்டுமே போதுமானது" : "Roll number alone is sufficient to sign in"}
             </p>
@@ -574,30 +574,14 @@ function LoginPanel() {
 
           <div>
             <label htmlFor="coe-code" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />COE Master Access Code
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />COE Master Authorization Key
             </label>
-            <input id="coe-code" type="text" value={adminPasscode}
+            <input id="coe-code" type="password" value={adminPasscode}
               onChange={(e) => setAdminPasscode(e.target.value)} required
-              placeholder="Enter 1 or 0" autoFocus className="input-field font-mono font-bold text-center tracking-wider text-sm" />
-            <div className="flex items-center justify-between mt-2 text-[11px] text-[#5c5c8a]">
-              <span>Quick Access:</span>
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  onClick={() => setAdminPasscode("1")}
-                  className="px-2.5 py-0.5 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-300 font-mono text-xs hover:bg-amber-500/30 font-bold"
-                >
-                  Key 1
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setAdminPasscode("0")}
-                  className="px-2.5 py-0.5 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-300 font-mono text-xs hover:bg-amber-500/30 font-bold"
-                >
-                  Key 0
-                </button>
-              </div>
-            </div>
+              placeholder="Enter 8-digit key" autoFocus className="input-field font-mono font-bold text-center tracking-wider text-sm" />
+            <p className="text-[11px] text-[#5c5c8a] mt-1.5 flex items-center justify-center gap-1 font-mono">
+              <Lock className="w-3 h-3 text-amber-400" />AES-256 Administrative Clearance Protected
+            </p>
           </div>
 
           <Button id="btn-coe-login" type="submit" variant="amber" disabled={loading} className="w-full justify-center !py-2.5 font-bold">

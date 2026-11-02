@@ -12,10 +12,14 @@ export const dynamic = "force-dynamic";
 function loadSubjectQuestions(subjectCode, setParam = "all") {
   const code = (subjectCode || "").toUpperCase();
   let fileName = null;
-  if (code === "ENG-10") fileName = "ENGLISH-10-100-ALL.json";
+  if (code === "MAT-10" || code === "MATHEMATICS-10") fileName = "MATHEMATICS-10-50-SET1.json";
+  else if (code === "SCI-10" || code === "SCIENCE-10") fileName = "SCIENCE-10-50-SET1.json";
+  else if (code === "SOC-10" || code === "SOCIAL_SCIENCE-10" || code === "SOCSCI-10") fileName = "SOCIAL_SCIENCE-10-50-SET1.json";
+  else if (code === "MAT-12" || code === "MATHEMATICS-12") fileName = "MATHEMATICS-12-50-SET1.json";
+  else if (code === "PHY-12" || code === "PHYSICS-12") fileName = "PHYSICS-12-50-SET1.json";
+  else if (code === "CHE-12" || code === "CHEMISTRY-12") fileName = "CHEMISTRY-12-50-SET1.json";
+  else if (code === "ENG-10") fileName = "ENGLISH-10-100-ALL.json";
   else if (code === "ENG-12") fileName = "ENGLISH-12-100-ALL.json";
-  else if (code === "PHY-12") fileName = "PHYSICS-12-100-ALL.json";
-  else if (code === "CHE-12") fileName = "CHEMISTRY-12-100-ALL.json";
 
   if (fileName) {
     const canonicalPath = path.join(process.cwd(), "questions", "exams", fileName);
@@ -32,7 +36,7 @@ function loadSubjectQuestions(subjectCode, setParam = "all") {
           }
 
           const set1 = all.slice(0, 50);
-          const set2 = all.slice(50, 100);
+          const set2 = all.length > 50 ? all.slice(50, 100) : (Array.isArray(raw.set2) ? raw.set2 : all.slice(0, 50));
 
           let questions = all;
           if (setParam === "1" || setParam === "set1" || setParam === "set-a") questions = set1;
@@ -166,14 +170,26 @@ export async function GET(request) {
         success: true,
         subject: {
           code: subjectCode,
-          name: subjectCode.startsWith("ENG") ? "English" : subjectCode.startsWith("PHY") ? "Physics" : "Chemistry",
+          name: subjectCode.startsWith("MAT")
+            ? "Mathematics"
+            : subjectCode.startsWith("SCI")
+            ? "Science"
+            : subjectCode.startsWith("SOC")
+            ? "Social Science"
+            : subjectCode.startsWith("PHY")
+            ? "Physics"
+            : subjectCode.startsWith("CHE")
+            ? "Chemistry"
+            : subjectCode.startsWith("ENG")
+            ? "English"
+            : "Curriculum Subject",
           prepClass: isClass10 ? 10 : 12,
           board: isClass10 ? "Tamil Nadu State Board SSLC Examination" : "Tamil Nadu Samacheer Kalvi HSE",
         },
         stats: {
           totalQuestions: allQuestions.length,
           set1Count: Math.min(50, allQuestions.length),
-          set2Count: Math.max(0, allQuestions.length - 50),
+          set2Count: Math.max(0, allQuestions.length > 50 ? allQuestions.length - 50 : allQuestions.length),
           filteredCount: filtered.length,
           totalUnits: Object.keys(unitGroups).length,
         },
@@ -182,13 +198,18 @@ export async function GET(request) {
           id: q.id || `${subjectCode}-Q${idx + 1}`,
           globalNumber: idx + 1,
           unit: q.unit || Math.floor(idx / 10) + 1,
-          topic: q.category || q.topic || q.prose_lesson || "Objective Standard Questions",
+          topic: q.category || q.topic || q.chapter || q.prose_lesson || "Objective Standard Questions",
           questionEn: q.question_en || q.question || "",
-          questionTa: q.question_ta || null,
+          questionTa: q.question_ta || q.questionTa || null,
           optionsEn: q.options_en || q.options || {},
-          optionsTa: q.options_ta || null,
-          correctOption: (q.correct_option || q.correct_answer || "a").toUpperCase(),
+          optionsTa: q.options_ta || q.optionsTa || null,
+          options: q.options || [],
+          correctOption: (q.correct_option || q.correct_answer || q.answer || "a").toString().toUpperCase(),
           answerEn: q.answer_en || q.answer || "",
+          answerTa: q.answer_ta || q.answerTa || null,
+          explanation: q.explanation || "",
+          explanationEn: q.explanation_en || q.explanation || "",
+          explanationTa: q.explanation_ta || q.explanationTa || null,
           answerTa: q.answer_ta || null,
           explanation: q.explanation || "",
         })),

@@ -48,9 +48,20 @@ function resolvePracticeCounts(subjectCode, dbItemCount) {
       countA = readCount("ENGLISH-12-50-SET1.json") || 50;
       countB = readCount("ENGLISH-12-50-SET2.json") || 50;
     } else if (code === "MAT-10") {
-      countA = readCount("MATHEMATICS-10-14-SET1.json") || 14;
+      countA = readCount("MATHEMATICS-10-50-SET1.json") || 50;
+      countB = readCount("MATHEMATICS-10-50-SET2.json") || 50;
+    } else if (code === "SCI-10") {
+      countA = readCount("SCIENCE-10-50-SET1.json") || 50;
+      countB = readCount("SCIENCE-10-50-SET2.json") || 50;
+    } else if (code === "SOC-10") {
+      countA = readCount("SOCIAL_SCIENCE-10-50-SET1.json") || 50;
+      countB = readCount("SOCIAL_SCIENCE-10-50-SET2.json") || 50;
+    } else if (code === "MAT-12") {
+      countA = readCount("MATHEMATICS-12-50-SET1.json") || 50;
+      countB = readCount("MATHEMATICS-12-50-SET2.json") || 50;
     } else if (code === "CSC-12") {
       countA = readCount("COMPUTER_SCIENCE-12-15-SET1.json") || 15;
+      countB = 0;
     }
   }
 

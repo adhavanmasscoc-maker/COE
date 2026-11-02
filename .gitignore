@@ -38,3 +38,4 @@ incidents_fallback.json
 
 *.bak
 backup/
+scratch/
