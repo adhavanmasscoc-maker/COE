@@ -1,0 +1,337 @@
+{
+  "day": 3,
+  "standard": "12th TN State Board",
+  "stream": "Science",
+  "subject": "Chemistry",
+  "subjectCode": "CHE-12",
+  "examDate": "2026-11-05T12:30:00.000Z",
+  "duration_minutes": 45,
+  "total_marks": 25,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Basic Concepts of Chemistry and Chemical Calculations",
+      "chapterTa": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+      "question": "The number of moles of hydrogen gas present in 22.4 litres of H2 gas at STP is:",
+      "questionTa": "திட்ட வெப்ப அழுத்த நிலையில் 22.4 லிட்டர் H2 வாயுவில் உள்ள மோல்களின் எண்ணிக்கை:",
+      "options": ["0.5 mole", "1.0 mole", "2.0 moles", "6.023 moles"],
+      "optionsTa": ["0.5 மோல்", "1.0 மோல்", "2.0 மோல்கள்", "6.023 மோல்கள்"],
+      "answer": "1.0 mole",
+      "explanation": "At STP, 1 mole of any ideal gas occupies 22.4 litres. / திட்ட வெப்ப அழுத்த நிலையில் 22.4 லிட்டர் வாயு 1.0 மோல் ஆகும்."
+    },
+    {
+      "id": 2,
+      "chapter": "Basic Concepts of Chemistry and Chemical Calculations",
+      "chapterTa": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+      "question": "What is the mass of one single atom of carbon-12 in grams?",
+      "questionTa": "ஒரு கார்பன்-12 அணுவின் உண்மையான நிறை கிராமில்:",
+      "options": ["1.9926 x 10^-23 g", "1.66 x 10^-24 g", "12 g", "6.023 x 10^-23 g"],
+      "optionsTa": ["1.9926 x 10^-23 g", "1.66 x 10^-24 g", "12 g", "6.023 x 10^-23 g"],
+      "answer": "1.9926 x 10^-23 g",
+      "explanation": "Mass of 1 atom = 12 / (6.022 x 10^23) = 1.9926 x 10^-23 g. / 12 ஐ அவகாட்ரோ எண்ணால் வகுக்க 1.9926 x 10^-23 கிராம் கிடைக்கும்."
+    },
+    {
+      "id": 3,
+      "chapter": "Basic Concepts of Chemistry and Chemical Calculations",
+      "chapterTa": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+      "question": "The empirical formula of a compound containing 40% carbon, 6.7% hydrogen and 53.3% oxygen by mass is:",
+      "questionTa": "40% கார்பன், 6.7% ஹைட்ரஜன் மற்றும் 53.3% ஆக்ஸிஜன் கொண்ட சேர்மத்தின் எளிய விகித வாய்ப்பாடு (Empirical formula):",
+      "options": ["CH2O", "C2H4O2", "CHO", "CH4O"],
+      "optionsTa": ["CH2O", "C2H4O2", "CHO", "CH4O"],
+      "answer": "CH2O",
+      "explanation": "Molar ratio: C = 40/12 = 3.33; H = 6.7/1 = 6.7; O = 53.3/16 = 3.33. Ratio = 1 : 2 : 1 => CH2O. / மோல் விகிதம் C:H:O = 1:2:1, ஆகவே எளிய விகித வாய்ப்பாடு CH2O."
+    },
+    {
+      "id": 4,
+      "chapter": "Basic Concepts of Chemistry and Chemical Calculations",
+      "chapterTa": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+      "question": "The oxidation state of chromium in potassium dichromate (K2Cr2O7) is:",
+      "questionTa": "பொட்டாசியம் டைக்ரோமேட்டில் (K2Cr2O7) குரோமியத்தின் ஆக்ஸிஜனேற்ற எண்:",
+      "options": ["+3", "+6", "+4", "+7"],
+      "optionsTa": ["+3", "+6", "+4", "+7"],
+      "answer": "+6",
+      "explanation": "2(+1) + 2x + 7(-2) = 0 => 2 + 2x - 14 = 0 => 2x = 12 => x = +6. / 2(1) + 2x - 14 = 0 => 2x = 12 => x = +6."
+    },
+    {
+      "id": 5,
+      "chapter": "Basic Concepts of Chemistry and Chemical Calculations",
+      "chapterTa": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+      "question": "In the redox reaction MnO4^- + 5Fe^2+ + 8H^+ -> Mn^2+ + 5Fe^3+ + 4H2O, the equivalent weight of KMnO4 is:",
+      "questionTa": "அமில ஊடகத்தில் MnO4^- + 5Fe^2+ + 8H^+ -> Mn^2+ + 5Fe^3+ + 4H2O வினையில் KMnO4-ன் இணைதிறன் நிறை (Equivalent weight):",
+      "options": ["M / 5", "M / 3", "M / 1", "M / 6"],
+      "optionsTa": ["M / 5", "M / 3", "M / 1", "M / 6"],
+      "answer": "M / 5",
+      "explanation": "In acidic medium, Mn changes from +7 to +2, gaining 5 electrons. Equivalent weight = M / 5. / அமில ஊடகத்தில் மாங்கனீசு 5 எலக்ட்ரான்களை ஏற்பதால் இணைதிறன் நிறை = M / 5."
+    },
+    {
+      "id": 6,
+      "chapter": "Basic Concepts of Chemistry and Chemical Calculations",
+      "chapterTa": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+      "question": "The molarity of a solution obtained by mixing 750 mL of 0.5 M HCl with 250 mL of 2 M HCl will be:",
+      "questionTa": "750 மி.லி 0.5 M HCl கரைசலுடன் 250 மி.லி 2 M HCl கரைசலைக் கலக்கும் போது கிடைக்கும் கரைசலின் மொலாரிட்டி:",
+      "options": ["0.875 M", "1.00 M", "1.75 M", "0.50 M"],
+      "optionsTa": ["0.875 M", "1.00 M", "1.75 M", "0.50 M"],
+      "answer": "0.875 M",
+      "explanation": "M = (M1V1 + M2V2)/(V1 + V2) = (0.5*750 + 2*250)/1000 = (375 + 500)/1000 = 0.875 M. / M = (375 + 500)/1000 = 0.875 M."
+    },
+    {
+      "id": 7,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "The ratio of the mass of an electron to that of a proton is approximately:",
+      "questionTa": "புரோட்டானின் நிறையுடன் எலக்ட்ரானின் நிறையின் தோராயமான விகிதம்:",
+      "options": ["1 : 1836", "1 : 1", "1836 : 1", "1 : 100"],
+      "optionsTa": ["1 : 1836", "1 : 1", "1836 : 1", "1 : 100"],
+      "answer": "1 : 1836",
+      "explanation": "Mass of proton is approximately 1836 times greater than the mass of an electron. / புரோட்டான் எலக்ட்ரானை விட 1836 மடங்கு அதிக நிறை கொண்டது."
+    },
+    {
+      "id": 8,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "Which experiment established that the mass of an atom is concentrated in a tiny nucleus?",
+      "questionTa": "அணுவின் பெரும்பான்மை நிறை அதன் மிகச்சிறிய உட்கருவில் குவிந்துள்ளது என்பதை நிரூபித்த ஆய்வு எது?",
+      "options": [
+        "Thomson's cathode ray experiment",
+        "Rutherford's alpha-particle scattering experiment",
+        "Millikan's oil drop experiment",
+        "Davisson-Germer experiment"
+      ],
+      "optionsTa": [
+        "தாம்சனின் கேத்தோடு கதிர் ஆய்வு",
+        "ரூதர்போர்டின் ஆல்பா கதிர் சிதறல் ஆய்வு",
+        "மில்லிகனின் எண்ணெய் துளி ஆய்வு",
+        "டேவிசன்-ஜெர்மர் ஆய்வு"
+      ],
+      "answer": "Rutherford's alpha-particle scattering experiment",
+      "explanation": "Rutherford's alpha-particle gold foil experiment discovered the atomic nucleus. / ரூதர்போர்டின் ஆல்பா கதிர் சிதறல் ஆய்வு அணுக்கருவைக் கண்டறிய வழிவகுத்தது."
+    },
+    {
+      "id": 9,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "The maximum number of electrons that can be accommodated in a subshell with azimuthal quantum number l = 3 is:",
+      "questionTa": "கோண உந்த குவாண்டம் எண் l = 3 கொண்ட துணைக்கூட்டில் நிரப்பப்படக்கூடிய அதிகபட்ச எலக்ட்ரான்களின் எண்ணிக்கை:",
+      "options": ["6", "10", "14", "18"],
+      "optionsTa": ["6", "10", "14 (f-துணைக்கூடு)", "18"],
+      "answer": "14",
+      "explanation": "Max electrons = 2(2l + 1) = 2(2*3 + 1) = 14 (f-subshell). / l = 3 என்பது f-கூடு; அதிகபட்ச எலக்ட்ரான்கள் 2(2l + 1) = 14."
+    },
+    {
+      "id": 10,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "The total number of orbitals associated with the principal quantum number n = 3 is:",
+      "questionTa": "முதன்மை குவாண்டம் எண் n = 3 உடன் தொடர்புடைய மொத்த ஆர்பிட்டால்களின் எண்ணிக்கை:",
+      "options": ["3", "6", "9", "18"],
+      "optionsTa": ["3", "6", "9", "18"],
+      "answer": "9",
+      "explanation": "Total number of orbitals in shell n is n^2 = 3^2 = 9 (1 s + 3 p + 5 d). / n கூட்டில் உள்ள ஆர்பிட்டால்கள் = n^2 = 3^2 = 9."
+    },
+    {
+      "id": 11,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "The de Broglie wavelength associated with a ball of mass 0.1 kg moving with a speed of 10 m/s is (h = 6.626 x 10^-34 J s):",
+      "questionTa": "10 m/s வேகத்தில் செல்லும் 0.1 கிகி நிறையுள்ள பந்தின் டி-பிராய் அலைநீளம் (h = 6.626 x 10^-34 J s):",
+      "options": ["6.626 x 10^-34 m", "6.626 x 10^-33 m", "6.626 x 10^-35 m", "3.313 x 10^-34 m"],
+      "optionsTa": ["6.626 x 10^-34 m", "6.626 x 10^-33 m", "6.626 x 10^-35 m", "3.313 x 10^-34 m"],
+      "answer": "6.626 x 10^-34 m",
+      "explanation": "lambda = h / (mv) = 6.626 x 10^-34 / (0.1 x 10) = 6.626 x 10^-34 m. / lambda = h/mv = 6.626 x 10^-34 மீ."
+    },
+    {
+      "id": 12,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "According to Heisenberg's uncertainty principle, the mathematical relation between position and momentum uncertainty is:",
+      "questionTa": "ஹைசன்பர்க்கின் நிச்சயமற்ற தன்மைக் கொள்கையின்படி நிலை மற்றும் உந்த நிச்சயமற்ற தன்மைக்கான தொடர்பு:",
+      "options": ["Delta x . Delta p >= h / (4 pi)", "Delta x . Delta p >= h / (2 pi)", "Delta x . Delta p <= h / (4 pi)", "Delta x . Delta p = h"],
+      "optionsTa": ["Delta x . Delta p >= h / (4 pi)", "Delta x . Delta p >= h / (2 pi)", "Delta x . Delta p <= h / (4 pi)", "Delta x . Delta p = h"],
+      "answer": "Delta x . Delta p >= h / (4 pi)",
+      "explanation": "Heisenberg principle: Delta x * Delta p >= h / (4 pi). / ஹைசன்பர்க்கின் சமன்பாடு: Delta x . Delta p >= h / (4 pi)."
+    },
+    {
+      "id": 13,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "The electronic configuration of copper (Z = 29) in its ground state is:",
+      "questionTa": "தாமிரத்தின் (Cu, Z = 29) அடிநிலை எலக்ட்ரான் அமைப்பு:",
+      "options": ["[Ar] 3d^9 4s^2", "[Ar] 3d^10 4s^1", "[Ar] 3d^8 4s^2 4p^1", "[Ar] 3d^10 4s^2"],
+      "optionsTa": ["[Ar] 3d^9 4s^2", "[Ar] 3d^10 4s^1", "[Ar] 3d^8 4s^2 4p^1", "[Ar] 3d^10 4s^2"],
+      "answer": "[Ar] 3d^10 4s^1",
+      "explanation": "Completely filled 3d^10 subshell provides extra stability, giving [Ar] 3d^10 4s^1. / முழுவதும் நிரப்பப்பட்ட 3d^10 கூடு கூடுதல் நிலைப்புத்தன்மை தருவதால் [Ar] 3d^10 4s^1."
+    },
+    {
+      "id": 14,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "The orbital angular momentum of an electron in a 2s orbital is:",
+      "questionTa": "2s ஆர்பிட்டாலில் உள்ள எலக்ட்ரானின் ஆர்பிட்டால் கோண உந்தம்:",
+      "options": ["0", "h / (2 pi)", "sqrt(2) h / (2 pi)", "h / (4 pi)"],
+      "optionsTa": ["0", "h / (2 pi)", "sqrt(2) h / (2 pi)", "h / (4 pi)"],
+      "answer": "0",
+      "explanation": "L = sqrt(l(l + 1)) * (h / (2 pi)). For s-orbital, l = 0, so L = 0. / s-ஆர்பிட்டாலுக்கு l = 0 என்பதால் கோண உந்தம் சுழியாகும்."
+    },
+    {
+      "id": 15,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "Which quantum number specifies the spatial orientation of an atomic orbital?",
+      "questionTa": "ஒரு அணு ஆர்பிட்டாலின் முப்பரிமாண வெளியமைவு திசையமைப்பைக் குறிப்பிடும் குவாண்டம் எண்:",
+      "options": [
+        "Principal quantum number (n)",
+        "Azimuthal quantum number (l)",
+        "Magnetic quantum number (m)",
+        "Spin quantum number (s)"
+      ],
+      "optionsTa": [
+        "முதன்மை குவாண்டம் எண் (n)",
+        "கோண உந்த குவாண்டம் எண் (l)",
+        "காந்த குவாண்டம் எண் (m)",
+        "சுழற்சி குவாண்டம் எண் (s)"
+      ],
+      "answer": "Magnetic quantum number (m)",
+      "explanation": "Magnetic quantum number (m) determines the spatial orientation of the orbital. / காந்த குவாண்டம் எண் (m) ஆர்பிட்டாலின் வெளியமைவு திசையை நிர்ணயிக்கிறது."
+    },
+    {
+      "id": 16,
+      "chapter": "Periodic Classification of Elements",
+      "chapterTa": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+      "question": "The modern periodic law states that the physical and chemical properties of elements are periodic functions of their:",
+      "questionTa": "நவீன ஆவர்த்தன விதியின்படி தனிமங்களின் இயற்பியல் மற்றும் வேதியியல் பண்புகள் அவற்றின் எதன் ஆவர்த்தன சார்பாக அமைகின்றன?",
+      "options": ["Atomic masses", "Atomic numbers", "Mass numbers", "Neutron numbers"],
+      "optionsTa": ["அணு நிறைகள்", "அணு எண்கள் (Atomic numbers)", "நிறை எண்கள்", "நியூட்ரான்களின் எண்ணிக்கை"],
+      "answer": "Atomic numbers",
+      "explanation": "Moseley's modern periodic law states properties depend periodically on atomic numbers (Z). / மோஸ்லேயின் கூற்றுப்படி பண்புகள் அணு எண்களின் ஆவர்த்தன சார்பாகும்."
+    },
+    {
+      "id": 17,
+      "chapter": "Periodic Classification of Elements",
+      "chapterTa": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+      "question": "Which element has the highest first ionization enthalpy in the entire periodic table?",
+      "questionTa": "ஆவர்த்தன அட்டவணையில் மிக அதிக முதல் அயனியாக்கும் என்தால்பி கொண்ட தனிமம் எது?",
+      "options": ["Hydrogen", "Helium", "Fluorine", "Neon"],
+      "optionsTa": ["ஹைட்ரஜன்", "ஹீலியம் (Helium)", "புளூரின்", "நியான்"],
+      "answer": "Helium",
+      "explanation": "Helium has the smallest size and completely filled 1s^2 shell, requiring highest ionization energy (2372 kJ/mol). / ஹீலியம் மிகச்சிறிய உருவளவும் முழுமையாக நிரம்பிய 1s^2 அமைப்பும் கொண்டதால் மிக அதிக அயனியாக்கும் ஆற்றல் உடையது."
+    },
+    {
+      "id": 18,
+      "chapter": "Periodic Classification of Elements",
+      "chapterTa": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+      "question": "The correct order of increasing electronegativity according to Pauling's scale is:",
+      "questionTa": "பாலிங் அளவீட்டின்படி எலக்ட்ரான் கவர்தன்மையில் சரியான ஏறுவரிசை எது?",
+      "options": ["C < N < O < F", "F < O < N < C", "C < O < N < F", "N < C < O < F"],
+      "optionsTa": ["C < N < O < F", "F < O < N < C", "C < O < N < F", "N < C < O < F"],
+      "answer": "C < N < O < F",
+      "explanation": "Electronegativity increases across a period: C (2.5) < N (3.0) < O (3.5) < F (4.0). / ஆவர்த்தன வரிசையில் எலக்ட்ரான் கவர்தன்மை அதிகரிக்கிறது: C < N < O < F."
+    },
+    {
+      "id": 19,
+      "chapter": "Periodic Classification of Elements",
+      "chapterTa": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+      "question": "Which of the following isoelectronic ions has the smallest ionic radius?",
+      "questionTa": "பின்வரும் ஒத்த எலக்ட்ரான் எண்ணிக்கை கொண்ட அயனிகளில் மிகச்சிறிய அயனி ஆரம் கொண்டது எது?",
+      "options": ["N^3-", "O^2-", "F^-", "Al^3+"],
+      "optionsTa": ["N^3-", "O^2-", "F^-", "Al^3+ (அதிக அணுக்கரு மின்சுமை)"],
+      "answer": "Al^3+",
+      "explanation": "Greater nuclear charge (+13) pulls the 10 electrons tighter, giving Al^3+ the smallest radius. / அதிக அணுக்கரு மின்சுமை கொண்ட Al^3+ மிகச்சிறிய அயனி ஆரத்தைக் கொண்டிருக்கும்."
+    },
+    {
+      "id": 20,
+      "chapter": "Periodic Classification of Elements",
+      "chapterTa": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+      "question": "The electron gain enthalpy of noble gases is:",
+      "questionTa": "மந்த வாயுக்களின் எலக்ட்ரான் நாட்டம் / ஏற்பு என்தால்பி மதிப்பு:",
+      "options": ["Highly negative", "Zero", "Positive", "Variable"],
+      "optionsTa": ["அதிக எதிர்க்குறி", "சுழி", "நேர்க்குறி (Positive)", "மாறக்கூடியது"],
+      "answer": "Positive",
+      "explanation": "Noble gases have stable octet configurations; adding an electron requires energy (positive Delta_eg H). / நிலையான எலக்ட்ரான் அமைப்பு கொண்டதால் எலக்ட்ரானைச் சேர்க்க ஆற்றல் தேவைப்படும் (நேர்க்குறி)."
+    },
+    {
+      "id": 21,
+      "chapter": "Periodic Classification of Elements",
+      "chapterTa": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+      "question": "A diagonal relationship is exhibited between which pair of elements?",
+      "questionTa": "மூலைவிட்ட தொடர்பு (Diagonal relationship) காணப்படும் தனிமங்களின் ஜோடி எது?",
+      "options": ["Lithium and Sodium", "Lithium and Magnesium", "Beryllium and Carbon", "Boron and Calcium"],
+      "optionsTa": ["லித்தியம் மற்றும் சோடியம்", "லித்தியம் மற்றும் மெக்னீசியம்", "பெரிலியம் மற்றும் கார்பன்", "போரான் மற்றும் கால்சியம்"],
+      "answer": "Lithium and Magnesium",
+      "explanation": "Lithium (group 1) and Magnesium (group 2, period 3) exhibit a strong diagonal relationship due to similar charge-to-size ratio. / ஒத்த மின்சுமை-ஆர விகிதத்தால் லித்தியம் மற்றும் மெக்னீசியம் மூலைவிட்ட தொடர்பைக் காட்டுகின்றன."
+    },
+    {
+      "id": 22,
+      "chapter": "Structure of Atom",
+      "chapterTa": "அணுவின் கட்டமைப்பு",
+      "question": "Assertion (A): Half-filled and completely filled subshells possess extra stability. Reason (R): Symmetrical distribution of electrons and greater exchange energy provide stabilization.",
+      "questionTa": "கூற்று (A): பாதி நிரப்பப்பட்ட மற்றும் முழுமையாக நிரப்பப்பட்ட துணைக்கூடுகள் கூடுதல் நிலைப்புத்தன்மை கொண்டுள்ளன. காரணம் (R): சமச்சீரான எலக்ட்ரான் அமைப்பும் அதிக பரிமாற்ற ஆற்றலும் நிலைப்புத்தன்மையை வழங்குகின்றன.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "optionsTa": [
+        "A மற்றும் R இரண்டும் சரி, R என்பது A-ன் சரியான விளக்கம்",
+        "A மற்றும் R இரண்டும் சரி, ஆனால் R என்பது A-ன் சரியான விளக்கமல்ல",
+        "A சரி ஆனால் R தவறு",
+        "A தவறு ஆனால் R சரி"
+      ],
+      "answer": "Both A and R are true and R is the correct explanation of A",
+      "explanation": "Symmetry and maximum exchange energy stabilize half-filled and full subshells. / சமச்சீர் அமைப்பும் பரிமாற்ற ஆற்றலும் நிலைப்புத்தன்மையை அளிக்கின்றன."
+    },
+    {
+      "id": 23,
+      "chapter": "Periodic Classification of Elements",
+      "chapterTa": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+      "question": "Assertion (A): The first ionization enthalpy of nitrogen is greater than that of oxygen. Reason (R): Nitrogen has a stable half-filled 2p^3 electronic configuration.",
+      "questionTa": "கூற்று (A): நைட்ரஜனின் முதல் அயனியாக்கும் என்தால்பி ஆக்ஸிஜனை விட அதிகம். காரணம் (R): நைட்ரஜன் நிலையான பாதி நிரம்பிய 2p^3 எலக்ட்ரான் அமைப்பைப் பெற்றுள்ளது.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "optionsTa": [
+        "A மற்றும் R இரண்டும் சரி, R என்பது A-ன் சரியான விளக்கம்",
+        "A மற்றும் R இரண்டும் சரி, ஆனால் R என்பது A-ன் சரியான விளக்கமல்ல",
+        "A சரி ஆனால் R தவறு",
+        "A தவறு ஆனால் R சரி"
+      ],
+      "answer": "Both A and R are true and R is the correct explanation of A",
+      "explanation": "N (2p^3) has extra stability compared to O (2p^4), so removing an electron from N requires more energy. / பாதி நிரம்பிய 2p^3 கூடு நிலைப்புத்தன்மை உடையதால் நைட்ரஜனின் அயனியாக்கும் என்தால்பி அதிகம்."
+    },
+    {
+      "id": 24,
+      "chapter": "Periodic Classification of Elements",
+      "chapterTa": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+      "question": "Assertion (A): Fluorine has a less negative electron gain enthalpy than chlorine. Reason (R): The incoming electron in fluorine experiences strong interelectronic repulsions in the small 2p subshell.",
+      "questionTa": "கூற்று (A): புளூரினின் எலக்ட்ரான் ஏற்பு என்தால்பி குளோரினை விடக் குறைவான எதிர்க்குறி மதிப்புடையது. காரணம் (R): புளூரினில் சேரும் எலக்ட்ரான் அதன் சிறிய 2p கூட்டில் கடுமையான எலக்ட்ரான்-எலக்ட்ரான் விலக்குவிசைக்கு உள்ளாகிறது.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "optionsTa": [
+        "A மற்றும் R இரண்டும் சரி, R என்பது A-ன் சரியான விளக்கம்",
+        "A மற்றும் R இரண்டும் சரி, ஆனால் R என்பது A-ன் சரியான விளக்கமல்ல",
+        "A சரி ஆனால் R தவறு",
+        "A தவறு ஆனால் R சரி"
+      ],
+      "answer": "Both A and R are true and R is the correct explanation of A",
+      "explanation": "Due to compact 2p orbital in fluorine, interelectronic repulsion is high, making Delta_eg H of Cl more negative than F. / புளூரினின் சிறிய 2p கூட்டில் விலக்குவிசை அதிகம் என்பதால் கூற்று மற்றும் காரணம் சரி."
+    },
+    {
+      "id": 25,
+      "chapter": "Periodic Classification of Elements",
+      "chapterTa": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+      "question": "Which 3d transition series element exhibits the maximum number of oxidation states?",
+      "questionTa": "3d இடைநிலை வரிசையில் அதிக எண்ணிக்கையிலான ஆக்ஸிஜனேற்ற நிலைகளைக் காட்டும் தனிமம் எது?",
+      "options": ["Scandium", "Manganese (+2 to +7)", "Iron", "Zinc"],
+      "optionsTa": ["ஸ்காண்டியம்", "மாங்கனீசு (+2 முதல் +7 வரை)", "இரும்பு", "துத்தநாகம்"],
+      "answer": "Manganese (+2 to +7)",
+      "explanation": "Manganese (3d^5 4s^2) can lose up to 7 electrons, showing oxidation states from +2 to +7. / மாங்கனீசு +2 முதல் +7 வரை அதிகபட்ச ஆக்ஸிஜனேற்ற நிலைகளைக் காட்டுகிறது."
+    }
+  ]
+}

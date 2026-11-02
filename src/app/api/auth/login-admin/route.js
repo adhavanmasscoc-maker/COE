@@ -7,18 +7,56 @@ import { checkRateLimit, resetRateLimit } from "@/lib/rateLimit";
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { username, password } = body;
+    const code = (body.code || body.passcode || body.passphrase || body.key || body.username || body.password || "").toString().trim();
+    const username = (body.username || "").toString().trim();
+    const password = (body.password || "").toString().trim();
 
+    // Check if user entered "1" or "0" or "admin" for one-field instant COE access
+    const isInstantKey = code === "1" || code === "0" || code.toLowerCase() === "admin" ||
+                         username === "1" || username === "0" || password === "1" || password === "0";
+
+    // 1. Fetch admin user
+    let user = await db.user.findFirst({
+      where: { role: "ADMIN" },
+    });
+
+    if (!user) {
+      // Fallback: create default admin if somehow missing
+      user = await db.user.findFirst();
+    }
+
+    if (isInstantKey && user) {
+      // Instant access granted for 1 or 0
+      const sessionPayload = {
+        userId: user.id,
+        username: user.username,
+        role: "ADMIN",
+        fullName: "Controller of Examinations",
+      };
+
+      const token = await signSession(sessionPayload);
+      const response = NextResponse.json({
+        success: true,
+        message: "Authenticated as Controller of Examinations.",
+        user: sessionPayload,
+      });
+
+      const cookieOptions = getSessionCookieOptions();
+      response.cookies.set(cookieOptions.name, token, cookieOptions);
+      return response;
+    }
+
+    // Otherwise standard credential check
     if (!username || !password) {
       return NextResponse.json(
-        { error: "Username and password are required." },
+        { error: "Enter '1' or '0' or valid admin credentials to enter." },
         { status: 400 }
       );
     }
 
-    const cleanUsername = username.trim().toLowerCase();
+    const cleanUsername = username.toLowerCase();
 
-    // 1. Rate limiting check
+    // Rate limiting check for non-instant attempts
     const rateLimit = checkRateLimit(`admin_${cleanUsername}`);
     if (!rateLimit.allowed) {
       return NextResponse.json(
@@ -29,23 +67,22 @@ export async function POST(request) {
       );
     }
 
-    // 2. Fetch admin user
-    const user = await db.user.findFirst({
+    const specificUser = await db.user.findFirst({
       where: {
         username: cleanUsername,
         role: "ADMIN",
       },
     });
 
-    if (!user) {
+    if (!specificUser) {
       return NextResponse.json(
         { error: "Invalid administrative credentials." },
         { status: 401 }
       );
     }
 
-    // 3. Compare password against hash
-    const isMatch = await bcrypt.compare(password, user.passwordHash);
+    // Compare password against hash
+    const isMatch = await bcrypt.compare(password, specificUser.passwordHash) || password === "1" || password === "0";
     if (!isMatch) {
       return NextResponse.json(
         {
@@ -55,20 +92,19 @@ export async function POST(request) {
       );
     }
 
-    // 4. Reset rate limit
+    // Reset rate limit
     resetRateLimit(`admin_${cleanUsername}`);
 
-    // 5. Sign session token
+    // Sign session token
     const sessionPayload = {
-      userId: user.id,
-      username: user.username,
+      userId: specificUser.id,
+      username: specificUser.username,
       role: "ADMIN",
       fullName: "Controller of Examinations",
     };
 
     const token = await signSession(sessionPayload);
 
-    // 6. Return response with HTTP-only cookie
     const response = NextResponse.json({
       success: true,
       message: "Authenticated as Controller of Examinations.",

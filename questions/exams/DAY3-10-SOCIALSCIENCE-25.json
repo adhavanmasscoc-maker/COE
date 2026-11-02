@@ -1,0 +1,306 @@
+{
+  "day": 3,
+  "standard": "10th TN State Board",
+  "subject": "Social Science",
+  "subjectCode": "SOC-10",
+  "examDate": "2026-11-05T12:30:00.000Z",
+  "duration_minutes": 45,
+  "total_marks": 25,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Indian Constitution",
+      "chapterTa": "இந்திய அரசியலமைப்பு",
+      "question": "Which Article of the Indian Constitution provides for the Right to Constitutional Remedies?",
+      "questionTa": "அரசியலமைப்புக்குட்பட்டு தீர்வு காணும் உரிமையை வழங்கும் இந்திய அரசியலமைப்பின் பிரிவு எது?",
+      "options": ["Article 31", "Article 32", "Article 226", "Article 19"],
+      "optionsTa": ["பிரிவு 31", "பிரிவு 32", "பிரிவு 226", "பிரிவு 19"],
+      "answer": "Article 32",
+      "explanation": "Article 32 is called the 'Heart and Soul of the Constitution' by Dr. B.R. Ambedkar. / டாக்டர் பி.ஆர். அம்பேத்கர் பிரிவு 32-ஐ அரசியலமைப்பின் 'இதயம் மற்றும் ஆன்மா' எனக் குறிப்பிட்டார்."
+    },
+    {
+      "id": 2,
+      "chapter": "Indian Constitution",
+      "chapterTa": "இந்திய அரசியலமைப்பு",
+      "question": "The Constitution of India was adopted by the Constituent Assembly on:",
+      "questionTa": "இந்திய அரசியலமைப்பு நிர்ணய சபையால் இந்திய அரசியலமைப்பு ஏற்றுக்கொள்ளப்பட்ட நாள்:",
+      "options": ["26th January 1950", "26th November 1949", "15th August 1947", "9th December 1946"],
+      "optionsTa": ["26 ஜனவரி 1950", "26 நவம்பர் 1949", "15 ஆகஸ்ட் 1947", "9 டிசம்பர் 1946"],
+      "answer": "26th November 1949",
+      "explanation": "The Constitution was adopted on 26th November 1949 and came into full effect on 26th January 1950. / 1949 நவம்பர் 26 அன்று ஏற்றுக்கொள்ளப்பட்டு, 1950 ஜனவரி 26 அன்று நடைமுறைக்கு வந்தது."
+    },
+    {
+      "id": 3,
+      "chapter": "Central Government",
+      "chapterTa": "மத்திய அரசு",
+      "question": "The minimum age eligible to become the President of India is:",
+      "questionTa": "இந்தியக் குடியரசுத் தலைவராக போட்டியிடுவதற்குரிய குறைந்தபட்ச வயது வரம்பு:",
+      "options": ["25 years", "30 years", "35 years", "40 years"],
+      "optionsTa": ["25 வயது", "30 வயது", "35 வயது", "40 வயது"],
+      "answer": "35 years",
+      "explanation": "Under Article 58, a candidate must have completed 35 years of age. / பிரிவு 58-ன் படி குடியரசுத் தலைவராக போட்டியிட குறைந்தபட்சம் 35 வயது பூர்த்தியாகியிருக்க வேண்டும்."
+    },
+    {
+      "id": 4,
+      "chapter": "Central Government",
+      "chapterTa": "மத்திய அரசு",
+      "question": "Who acts as the ex-officio Chairman of the Rajya Sabha?",
+      "questionTa": "ராஜ்யசபாவின் (மாநிலங்களவை) பதவி வழித் தலைவராக செயல்படுபவர் யார்?",
+      "options": ["President of India", "Vice-President of India", "Prime Minister", "Speaker of Lok Sabha"],
+      "optionsTa": ["குடியரசுத் தலைவர்", "துணைக் குடியரசுத் தலைவர்", "பிரதமர்", "மக்களவைத் தலைவர்"],
+      "answer": "Vice-President of India",
+      "explanation": "The Vice-President of India is the ex-officio Chairman of the Rajya Sabha. / இந்தியத் துணைக் குடியரசுத் தலைவர் மாநிலங்களவையின் பதவி வழித் தலைவராவார்."
+    },
+    {
+      "id": 5,
+      "chapter": "Central Government",
+      "chapterTa": "மத்திய அரசு",
+      "question": "The Council of Ministers is collectively responsible to the:",
+      "questionTa": "மத்திய அமைச்சரவை கூட்டாக யாருக்குப் பொறுப்புடையது?",
+      "options": ["President", "Lok Sabha", "Rajya Sabha", "Supreme Court"],
+      "optionsTa": ["குடியரசுத் தலைவர்", "மக்களவை (Lok Sabha)", "மாநிலங்களவை", "உச்ச நீதிமன்றம்"],
+      "answer": "Lok Sabha",
+      "explanation": "Under Article 75(3), the Council of Ministers is collectively responsible to the Lok Sabha. / பிரிவு 75(3)-ன் படி அமைச்சரவை மக்களவைக்கு கூட்டாக பொறுப்பானது."
+    },
+    {
+      "id": 6,
+      "chapter": "Central Government",
+      "chapterTa": "மத்திய அரசு",
+      "question": "The power of the Supreme Court to declare a law unconstitutional is called:",
+      "questionTa": "நாடாளுமன்றம் இயற்றும் சட்டங்கள் அரசியலமைப்பிற்கு முரணானவை என அறிவிக்கும் உச்ச நீதிமன்றத்தின் அதிகாரம்:",
+      "options": ["Advisory Jurisdiction", "Judicial Review", "Appellate Jurisdiction", "Original Jurisdiction"],
+      "optionsTa": ["ஆலோசனை அதிகார வரம்பு", "நீதிப் புனராய்வு (Judicial Review)", "மேல்முறையீட்டு வரம்பு", "முதன்மை அதிகார வரம்பு"],
+      "answer": "Judicial Review",
+      "explanation": "Judicial review empowers the judiciary to strike down unconstitutional legislation. / அரசியலமைப்பிற்கு முரணான சட்டங்களை செல்லாது என அறிவிக்கும் அதிகாரம் நீதிப் புனராய்வு ஆகும்."
+    },
+    {
+      "id": 7,
+      "chapter": "Central Government",
+      "chapterTa": "மத்திய அரசு",
+      "question": "The Chief Justice and other Judges of the Supreme Court of India hold office until they attain the age of:",
+      "questionTa": "இந்திய உச்ச நீதிமன்றத்தின் தலைமை நீதிபதி மற்றும் பிற நீதிபதிகள் எந்த வயது வரை பதவியில் நீடிப்பர்?",
+      "options": ["62 years", "65 years", "60 years", "70 years"],
+      "optionsTa": ["62 வயது", "65 வயது", "60 வயது", "70 வயது"],
+      "answer": "65 years",
+      "explanation": "Supreme Court judges retire at 65 years, while High Court judges retire at 62 years. / உச்ச நீதிமன்ற நீதிபதிகள் 65 வயது வரையிலும், உயர் நீதிமன்ற நீதிபதிகள் 62 வயது வரையிலும் பதவி வகிப்பர்."
+    },
+    {
+      "id": 8,
+      "chapter": "Indian Constitution",
+      "chapterTa": "இந்திய அரசியலமைப்பு",
+      "question": "Under which Article can the President declare a Financial Emergency?",
+      "questionTa": "நிதி நெருக்கடி நிலையை பிரகடனம் செய்ய குடியரசுத் தலைவருக்கு அதிகாரம் அளிக்கும் சட்டப்பிரிவு எது?",
+      "options": ["Article 352", "Article 356", "Article 360", "Article 368"],
+      "optionsTa": ["பிரிவு 352", "பிரிவு 356", "பிரிவு 360", "பிரிவு 368"],
+      "answer": "Article 360",
+      "explanation": "Article 360 deals with Financial Emergency. / பிரிவு 360 நிதி நெருக்கடி நிலையைப் பிரகடனம் செய்ய வகை செய்கிறது."
+    },
+    {
+      "id": 9,
+      "chapter": "India: Location, Relief and Drainage",
+      "chapterTa": "இந்தியா: அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு",
+      "question": "The southernmost point of the Indian Union is:",
+      "questionTa": "இந்திய ஒன்றியத்தின் மிகத் தென்கோடி முனை:",
+      "options": ["Kanyakumari", "Indira Point", "Indira Col", "Rann of Kutch"],
+      "optionsTa": ["கன்னியாகுமரி", "இந்திரா முனை (Indira Point)", "இந்திரா கோல்", "ரான் ஆஃப் கட்ச்"],
+      "answer": "Indira Point",
+      "explanation": "Indira Point in the Great Nicobar island is the southernmost point of India. / அந்தமான் நிக்கோபாரில் உள்ள இந்திரா முனை இந்தியாவின் தென்கோடி முனையாகும்."
+    },
+    {
+      "id": 10,
+      "chapter": "India: Location, Relief and Drainage",
+      "chapterTa": "இந்தியா: அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு",
+      "question": "The standard meridian of India (82°30' E) passes through which city?",
+      "questionTa": "இந்தியாவின் திட்ட தீர்க்கரேகை (82°30' கி) எந்த நகரின் வழியாகச் செல்கிறது?",
+      "options": ["Mirzapur (Prayagraj)", "New Delhi", "Kolkata", "Ahmedabad"],
+      "optionsTa": ["மிர்சாபூர் (பிரயாக்ராஜ்)", "புது தில்லி", "கொல்கத்தா", "அகமதாபாத்"],
+      "answer": "Mirzapur (Prayagraj)",
+      "explanation": "The 82°30' E meridian passes through Mirzapur near Prayagraj, UP. / இந்திய திட்ட நேரம் கணக்கிடப்படும் 82°30' கிழக்கு தீர்க்கரேகை மிர்சாபூர் வழியாகச் செல்கிறது."
+    },
+    {
+      "id": 11,
+      "chapter": "India: Location, Relief and Drainage",
+      "chapterTa": "இந்தியா: அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு",
+      "question": "The highest peak in South India and the Western Ghats is:",
+      "questionTa": "தென்னிந்தியாவின் மற்றும் மேற்குத் தொடர்ச்சி மலையின் மிக உயரமான சிகரம்:",
+      "options": ["Doddabetta", "Anaimudi", "Mahendragiri", "Kalsubai"],
+      "optionsTa": ["தொட்டபெட்டா", "ஆனைமுடி (2695 மீ)", "மகேந்திரகிரி", "கல்சுபாய்"],
+      "answer": "Anaimudi",
+      "explanation": "Anaimudi (2,695 m) in Kerala is the highest peak in the Western Ghats and Peninsular India. / ஆனைமுடி (2,695 மீ) தென்னிந்தியாவின் மிக உயரமான சிகரமாகும்."
+    },
+    {
+      "id": 12,
+      "chapter": "India: Location, Relief and Drainage",
+      "chapterTa": "இந்தியா: அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு",
+      "question": "The major river of Peninsular India that flows westward into the Arabian Sea through a rift valley is:",
+      "questionTa": "பிளவுப் பள்ளத்தாக்கு வழியாக மேற்கு நோக்கிப் பாய்ந்து அரபிக்கடலில் கலக்கும் தீபகற்ப நதி எது?",
+      "options": ["Godavari", "Krishna", "Narmada", "Mahanadi"],
+      "optionsTa": ["கோதாவரி", "கிருஷ்ணா", "நர்மதை", "மகாநதி"],
+      "answer": "Narmada",
+      "explanation": "Narmada and Tapti flow westward through rift valleys into the Arabian Sea. / நர்மதை மற்றும் தபதி ஆறுகள் பிளவுப் பள்ளத்தாக்கு வழியாக மேற்கு நோக்கி அரபிக்கடலில் கலக்கின்றன."
+    },
+    {
+      "id": 13,
+      "chapter": "India: Location, Relief and Drainage",
+      "chapterTa": "இந்தியா: அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு",
+      "question": "The longitudinal valleys lying between the Lesser Himalayas and the Shiwaliks are known as:",
+      "questionTa": "இமயமலையின் இமாச்சலுக்கும் சிவாலிக்குக்கும் இடையே அமைந்துள்ள நீளமான பள்ளத்தாக்குகள் எவ்வாறு அழைக்கப்படுகின்றன?",
+      "options": ["Duns", "Kangs", "Terai", "Bhabar"],
+      "optionsTa": ["டூன்கள் (Duns)", "காங்க்ஸ்", "தராய்", "பாபர்"],
+      "answer": "Duns",
+      "explanation": "These longitudinal valleys in the west are called Duns (e.g. Dehradun). / மேற்கு பகுதியில் உள்ள நீளமான பள்ளத்தாக்குகள் டூன்கள் எனப்படுகின்றன."
+    },
+    {
+      "id": 14,
+      "chapter": "India: Location, Relief and Drainage",
+      "chapterTa": "இந்தியா: அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு",
+      "question": "The delta formed by the Ganga and Brahmaputra rivers is known as:",
+      "questionTa": "கங்கை மற்றும் பிரம்மபுத்திரா ஆறுகளால் உருவாக்கப்படும் உலகின் மிகப்பெரிய டெல்டா:",
+      "options": ["Mahanadi Delta", "Sundarbans Delta", "Cauvery Delta", "Godavari Delta"],
+      "optionsTa": ["மகாநதி டெல்டா", "சுந்தரவன டெல்டா (Sundarbans)", "காவிரி டெல்டா", "கோதாவரி டெல்டா"],
+      "answer": "Sundarbans Delta",
+      "explanation": "Sundarbans Delta is the world's largest and fastest-growing mangrove delta. / சுந்தரவன டெல்டா உலகின் மிகப்பெரிய சதுப்புநில டெல்டாவாகும்."
+    },
+    {
+      "id": 15,
+      "chapter": "India: Location, Relief and Drainage",
+      "chapterTa": "இந்தியா: அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு",
+      "question": "Pulicat Lake is a lagoon situated on the border between Tamil Nadu and which state?",
+      "questionTa": "பழவேற்காடு ஏரி (Pulicat Lake) தமிழ்நாடு மற்றும் எந்த மாநிலத்தின் எல்லையில் அமைந்துள்ள உப்பங்கழியாகும்?",
+      "options": ["Kerala", "Karnataka", "Andhra Pradesh", "Odisha"],
+      "optionsTa": ["கேரளா", "கர்நாடகா", "ஆந்திரப் பிரதேசம்", "ஒடிசா"],
+      "answer": "Andhra Pradesh",
+      "explanation": "Pulicat Lake is situated on the border between Tamil Nadu and Andhra Pradesh. / பழவேற்காடு ஏரி தமிழ்நாடு மற்றும் ஆந்திரப் பிரதேச எல்லைகளுக்கிடையே அமைந்துள்ளது."
+    },
+    {
+      "id": 16,
+      "chapter": "India: Location, Relief and Drainage",
+      "chapterTa": "இந்தியா: அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு",
+      "question": "The monsoon that brings maximum rainfall to the Coromandel Coast of Tamil Nadu is:",
+      "questionTa": "தமிழ்நாட்டின் சோழமண்டலக் கடற்கரைக்கு அதிக மழையைத் தரும் பருவக்காற்று எது?",
+      "options": ["South-West Monsoon", "North-East Monsoon", "Western Disturbances", "Mango Showers"],
+      "optionsTa": ["தென்மேற்கு பருவக்காற்று", "வடகிழக்கு பருவக்காற்று", "மேற்கத்திய இடையூறுகள்", "மாஞ்சாரல்"],
+      "answer": "North-East Monsoon",
+      "explanation": "North-East monsoon (retreating monsoon) brings nearly 50% of annual rainfall to coastal Tamil Nadu. / வடகிழக்கு பருவக்காற்று தமிழ்நாட்டிற்கு அதிக மழையைத் தருகிறது."
+    },
+    {
+      "id": 17,
+      "chapter": "Core English Grammar",
+      "chapterTa": "ஆங்கில இலக்கணம் (Grammar)",
+      "question": "Identify the correct tense: 'The train had left before we reached the railway station.'",
+      "questionTa": "'The train had left before we reached the railway station.' என்ற வாக்கியத்தில் உள்ள முதன்மை வினைச்சொல்லின் காலம் (Tense):",
+      "options": ["Simple Past Tense", "Past Continuous Tense", "Past Perfect Tense", "Present Perfect Tense"],
+      "optionsTa": ["Simple Past Tense", "Past Continuous Tense", "Past Perfect Tense (இறந்தகால முழுமை)", "Present Perfect Tense"],
+      "answer": "Past Perfect Tense",
+      "explanation": "'had left' indicates an action completed before another past event (Past Perfect). / 'had left' என்பது மற்றொரு இறந்தகால நிகழ்வுக்கு முன் முடிந்ததைக் குறிப்பதால் Past Perfect Tense ஆகும்."
+    },
+    {
+      "id": 18,
+      "chapter": "Core English Grammar",
+      "chapterTa": "ஆங்கில இலக்கணம் (Grammar)",
+      "question": "Fill in the blank with the appropriate preposition: 'The candidate has been preparing for the exam _____ three months.'",
+      "questionTa": "'The candidate has been preparing for the exam _____ three months.' — சரியான முன்விபக்தியை (Preposition) தேர்ந்தெடுக்கவும்:",
+      "options": ["since", "for", "from", "during"],
+      "optionsTa": ["since", "for (கால அளவிற்கு)", "from", "during"],
+      "answer": "for",
+      "explanation": "'for' is used to denote a period/duration of time ('three months'). / கால அளவைக் (Period of time) குறிக்க 'for' பயன்படுகிறது."
+    },
+    {
+      "id": 19,
+      "chapter": "Core English Grammar",
+      "chapterTa": "ஆங்கில இலக்கணம் (Grammar)",
+      "question": "Convert to Passive Voice: 'The Controller of Examinations announced the results yesterday.'",
+      "questionTa": "'The Controller of Examinations announced the results yesterday.' என்ற வாக்கியத்தின் சரியான செயப்பாட்டு வினை (Passive Voice):",
+      "options": [
+        "The results are announced by the Controller of Examinations yesterday.",
+        "The results were announced by the Controller of Examinations yesterday.",
+        "The results had been announced by the Controller of Examinations yesterday.",
+        "The Controller of Examinations was announcing the results yesterday."
+      ],
+      "optionsTa": [
+        "The results are announced by the Controller of Examinations yesterday.",
+        "The results were announced by the Controller of Examinations yesterday.",
+        "The results had been announced by the Controller of Examinations yesterday.",
+        "The Controller of Examinations was announcing the results yesterday."
+      ],
+      "answer": "The results were announced by the Controller of Examinations yesterday.",
+      "explanation": "Simple past active 'announced' transforms into 'were announced' in passive voice with plural object 'results'. / 'announced' என்பது பன்மை எழுவாய் 'results' உடன் 'were announced' என மாறும்."
+    },
+    {
+      "id": 20,
+      "chapter": "Core English Grammar",
+      "chapterTa": "ஆங்கில இலக்கணம் (Grammar)",
+      "question": "Choose the correct modal verb: 'Candidates _____ adhere to the examination rules strictly.'",
+      "questionTa": "'Candidates _____ adhere to the examination rules strictly.' — கட்டாயத்தைக் குறிக்கும் சரியான Modal Verb:",
+      "options": ["may", "might", "must", "could"],
+      "optionsTa": ["may", "might", "must (கட்டாயம்)", "could"],
+      "answer": "must",
+      "explanation": "'must' denotes obligation and mandatory compliance in rules. / விதிகளில் கட்டாயத்தைக் குறிக்க 'must' பயன்படுகிறது."
+    },
+    {
+      "id": 21,
+      "chapter": "Core English Grammar",
+      "chapterTa": "ஆங்கில இலக்கணம் (Grammar)",
+      "question": "Fill in the blank with subject-verb agreement: 'Neither of the boys _____ present in the hall.'",
+      "questionTa": "'Neither of the boys _____ present in the hall.' — எழுவாய்-வினை பொருத்தத்திற்குரிய சரியான வினைச்சொல்:",
+      "options": ["was", "were", "are", "have been"],
+      "optionsTa": ["was (ஒருமை)", "were", "are", "have been"],
+      "answer": "was",
+      "explanation": "'Neither of' takes a singular verb ('was'). / 'Neither of' ஒருமை வினைச்சொல்லான 'was' ஐ ஏற்கும்."
+    },
+    {
+      "id": 22,
+      "chapter": "Core English Grammar",
+      "chapterTa": "ஆங்கில இலக்கணம் (Grammar)",
+      "question": "Choose the antonym of the underlined word: 'The examination evaluation process is completely transparent.'",
+      "questionTa": "'transparent' (வெளிப்படையான) என்ற சொல்லின் எதிர்ச்சொல் (Antonym):",
+      "options": ["Clear", "Lucid", "Opaque", "Vivid"],
+      "optionsTa": ["Clear", "Lucid", "Opaque (தெளிவற்ற / மறைமுகமான)", "Vivid"],
+      "answer": "Opaque",
+      "explanation": "Opposite of transparent is opaque. / 'transparent' என்பதன் எதிர்ச்சொல் 'opaque' ஆகும்."
+    },
+    {
+      "id": 23,
+      "chapter": "Core English Grammar",
+      "chapterTa": "ஆங்கில இலக்கணம் (Grammar)",
+      "question": "Identify the sentence pattern/type: 'Though he studied hard, he could not clear the cutoff.'",
+      "questionTa": "'Though he studied hard, he could not clear the cutoff.' — இது எவ்வகை வாக்கியம்?",
+      "options": ["Simple Sentence", "Compound Sentence", "Complex Sentence", "Optative Sentence"],
+      "optionsTa": ["Simple Sentence", "Compound Sentence", "Complex Sentence (கலவை வாக்கியம்)", "Optative Sentence"],
+      "answer": "Complex Sentence",
+      "explanation": "A sentence with a subordinate clause ('Though he studied hard') and a main clause is a Complex Sentence. / துணை வாக்கியமும் முதன்மை வாக்கியமும் இணைந்துள்ளதால் இது Complex Sentence ஆகும்."
+    },
+    {
+      "id": 24,
+      "chapter": "Core English Grammar",
+      "chapterTa": "ஆங்கில இலக்கணம் (Grammar)",
+      "question": "Change into indirect speech: The teacher said to the students, 'Complete your test quietly.'",
+      "questionTa": "'The teacher said to the students, Complete your test quietly.' — சரியான நேர்முகத்திலிருந்து மறைமுக வாக்கிய மாற்றம் (Indirect Speech):",
+      "options": [
+        "The teacher told that students should complete test quietly.",
+        "The teacher instructed the students to complete their test quietly.",
+        "The teacher asked students if they complete test quietly.",
+        "The teacher said students complete your test quietly."
+      ],
+      "optionsTa": [
+        "The teacher told that students should complete test quietly.",
+        "The teacher instructed the students to complete their test quietly.",
+        "The teacher asked students if they complete test quietly.",
+        "The teacher said students complete your test quietly."
+      ],
+      "answer": "The teacher instructed the students to complete their test quietly.",
+      "explanation": "Imperative sentence commands convert with reporting verb 'instructed/ordered' and infinitive 'to complete'. / கட்டளை வாக்கியம் 'instructed ... to complete' என மாறும்."
+    },
+    {
+      "id": 25,
+      "chapter": "Core English Grammar",
+      "chapterTa": "ஆங்கில இலக்கணம் (Grammar)",
+      "question": "Choose the correct question tag: 'You have verified your roll number, _____?'",
+      "questionTa": "'You have verified your roll number, _____?' — சரியான வினா வினாத்தொங்கலைத் (Question Tag) தேர்ந்தெடுக்கவும்:",
+      "options": ["haven't you", "have you", "didn't you", "won't you"],
+      "optionsTa": ["haven't you", "have you", "didn't you", "won't you"],
+      "answer": "haven't you",
+      "explanation": "Positive statement with auxiliary 'have' takes negative tag 'haven't you?'. / உடன்பாட்டு வாக்கியத்திற்கு எதிர்மறை வினாத்தொங்கலான 'haven't you?' வரும்."
+    }
+  ]
+}

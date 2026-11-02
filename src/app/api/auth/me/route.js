@@ -43,12 +43,12 @@ export async function GET(request) {
 
   // Fetch full user record including language
   let userLang = "en";
+  let userMedium = "English";
   try {
     const user = await db.user.findUnique({
       where: { id: session.userId || session.id },
       include: { profile: true },
     });
-    let userMedium = "English";
     if (user) {
       userLang = user.profile?.medium === "Tamil" ? "ta" : (user.language || "en");
       userMedium = user.profile?.medium || (userLang === "ta" ? "Tamil" : "English");

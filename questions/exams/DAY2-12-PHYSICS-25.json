@@ -1,0 +1,337 @@
+{
+  "day": 2,
+  "standard": "12th TN State Board",
+  "stream": "Science",
+  "subject": "Physics",
+  "subjectCode": "PHY-12",
+  "examDate": "2026-11-04T12:30:00.000Z",
+  "duration_minutes": 45,
+  "total_marks": 25,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Nature of Physical World and Measurement",
+      "chapterTa": "இயல் உலகத்தின் தன்மையும் அளவீட்டியலும்",
+      "question": "The dimensional formula of Planck's constant (h) is identical to that of:",
+      "questionTa": "பிளாங்க் மாறிலியின் (h) பரிமாண வாய்ப்பாடு பின்வருவனவற்றுள் எதற்குச் சமமானது?",
+      "options": ["Linear momentum", "Angular momentum", "Work", "Power"],
+      "optionsTa": ["நேர்க்கோட்டு உந்தம்", "கோண உந்தம் [M L^2 T^-1]", "வேலை", "திறன்"],
+      "answer": "Angular momentum",
+      "explanation": "[h] = E / nu = [M L^2 T^-2] / [T^-1] = [M L^2 T^-1], which is the dimension of angular momentum (mvr). / பிளாங்க் மாறிலி மற்றும் கோண உந்தம் இரண்டிற்கும் பரிமாணம் [M L^2 T^-1] ஆகும்."
+    },
+    {
+      "id": 2,
+      "chapter": "Nature of Physical World and Measurement",
+      "chapterTa": "இயல் உலகத்தின் தன்மையும் அளவீட்டியலும்",
+      "question": "Which of the following pairs of physical quantities have the same dimensions?",
+      "questionTa": "பின்வரும் இயற்பியல் அளவுகளில் ஒரே பரிமாணத்தைக் கொண்ட ஜோடி எது?",
+      "options": ["Force and Torque", "Work and Torque", "Torque and Power", "Momentum and Force"],
+      "optionsTa": ["விசை மற்றும் முறுக்குவிசை", "வேலை மற்றும் முறுக்குவிசை (Torque)", "முறுக்குவிசை மற்றும் திறன்", "உந்தம் மற்றும் விசை"],
+      "answer": "Work and Torque",
+      "explanation": "Both work and torque have the dimensional formula [M L^2 T^-2]. / வேலை மற்றும் திருப்புவிசை இரண்டும் [M L^2 T^-2] பரிமாணத்தைக் கொண்டுள்ளன."
+    },
+    {
+      "id": 3,
+      "chapter": "Nature of Physical World and Measurement",
+      "chapterTa": "இயல் உலகத்தின் தன்மையும் அளவீட்டியலும்",
+      "question": "The length of a rod is measured as (25.2 +- 0.1) cm. The percentage error in the measurement is:",
+      "questionTa": "ஒரு கம்பியின் நீளம் (25.2 +- 0.1) செ.மீ என அளவிடப்படுகிறது எனில், அளவீட்டின் விழுக்காடுப் பிழை:",
+      "options": ["0.4%", "0.8%", "1.2%", "0.1%"],
+      "optionsTa": ["0.4%", "0.8%", "1.2%", "0.1%"],
+      "answer": "0.4%",
+      "explanation": "Percentage error = (Delta L / L) x 100 = (0.1 / 25.2) x 100 = 0.397% ~ 0.4%. / விழுக்காடுப் பிழை = (0.1 / 25.2) x 100 = 0.4%."
+    },
+    {
+      "id": 4,
+      "chapter": "Nature of Physical World and Measurement",
+      "chapterTa": "இயல் உலகத்தின் தன்மையும் அளவீட்டியலும்",
+      "question": "If the error in the measurement of radius of a sphere is 2%, then the error in the determination of its volume is:",
+      "questionTa": "ஒரு கோளத்தின் ஆரம் அளவிடுதலில் ஏற்படும் பிழை 2% எனில், அதன் கனஅளவைக் கணக்கிடுவதில் ஏற்படும் பிழை:",
+      "options": ["2%", "4%", "6%", "8%"],
+      "optionsTa": ["2%", "4%", "6%", "8%"],
+      "answer": "6%",
+      "explanation": "V = (4/3) pi r^3 => Delta V / V = 3 (Delta r / r) = 3 x 2% = 6%. / V proportional to r^3 என்பதால் பிழை = 3 x 2% = 6%."
+    },
+    {
+      "id": 5,
+      "chapter": "Kinematics",
+      "chapterTa": "இயக்கவியல்",
+      "question": "A body travels along a straight line with uniform acceleration. If its velocity changes from 10 m/s to 20 m/s in 5 seconds, the distance covered is:",
+      "questionTa": "ஒரு பொருள் சீரான முடுக்கத்துடன் நேர்க்கோட்டில் இயங்குகிறது. 5 விநாடிகளில் அதன் திசைவேகம் 10 m/s-லிருந்து 20 m/s ஆக மாறினால், பொருள் கடந்த தொலைவு:",
+      "options": ["50 m", "75 m", "100 m", "150 m"],
+      "optionsTa": ["50 m", "75 m", "100 m", "150 m"],
+      "answer": "75 m",
+      "explanation": "s = ((u + v)/2) * t = ((10 + 20)/2) * 5 = 15 * 5 = 75 m. / s = ((u + v)/2) * t = (15) * 5 = 75 மீ."
+    },
+    {
+      "id": 6,
+      "chapter": "Kinematics",
+      "chapterTa": "இயக்கவியல்",
+      "question": "The angle of projection for which the horizontal range of a projectile is equal to its maximum height is:",
+      "questionTa": "ஒரு எறிபொருளின் கிடைத்தள வீச்சும் பெரும உயரமும் சமமாக இருக்கும் போது அதன் எறிகோணம்:",
+      "options": ["theta = 45°", "theta = tan^-1(4)", "theta = tan^-1(2)", "theta = 60°"],
+      "optionsTa": ["theta = 45°", "theta = tan^-1(4)", "theta = tan^-1(2)", "theta = 60°"],
+      "answer": "theta = tan^-1(4)",
+      "explanation": "R = 4 H cot theta. If R = H, cot theta = 1/4 => tan theta = 4 => theta = tan^-1(4) ~ 76°. / R = H எனில் tan theta = 4, ஆகவே theta = tan^-1(4)."
+    },
+    {
+      "id": 7,
+      "chapter": "Kinematics",
+      "chapterTa": "இயக்கவியல்",
+      "question": "A particle moves in a circle of radius 20 cm with a constant linear speed of 10 m/s. Its centripetal acceleration is:",
+      "questionTa": "20 செ.மீ ஆரம் கொண்ட வட்டப்பாதையில் ஒரு துகள் 10 m/s மாறா நேர்க்கோட்டு வேகத்தில் இயங்குகிறது எனில், அதன் மையநோக்கு முடுக்கம்:",
+      "options": ["200 m/s^2", "500 m/s^2", "50 m/s^2", "25 m/s^2"],
+      "optionsTa": ["200 m/s^2", "500 m/s^2", "50 m/s^2", "25 m/s^2"],
+      "answer": "500 m/s^2",
+      "explanation": "a_c = v^2 / r = 10^2 / 0.20 = 100 / 0.20 = 500 m/s^2. / மையநோக்கு முடுக்கம் a_c = v^2 / r = 100 / 0.2 = 500 m/s^2."
+    },
+    {
+      "id": 8,
+      "chapter": "Kinematics",
+      "chapterTa": "இயக்கவியல்",
+      "question": "Two bullets are fired simultaneously, horizontally and with different speeds from the same place. Which bullet will hit the ground first?",
+      "questionTa": "ஒரே இடத்திலிருந்து வெவ்வேறு கிடைமட்ட வேகங்களுடன் இரு துப்பாக்கி குண்டுகள் ஒரே நேரத்தில் சுடப்படுகின்றன. எந்த குண்டு முதலில் தரையைத் தொடும்?",
+      "options": [
+        "The faster bullet",
+        "The slower bullet",
+        "Both will hit the ground simultaneously",
+        "Depends on their masses"
+      ],
+      "optionsTa": [
+        "வேகமாகச் சென்ற குண்டு",
+        "மெதுவாகச் சென்ற குண்டு",
+        "இரண்டும் ஒரே நேரத்தில் தரையைத் தொடும்",
+        "அவற்றின் நிறையைப் பொறுத்தது"
+      ],
+      "answer": "Both will hit the ground simultaneously",
+      "explanation": "Vertical motion is independent of horizontal velocity: t = sqrt(2h / g) for both. / செங்குத்து இயக்கம் கிடைமட்ட வேகத்தைச் சார்ந்தது அல்ல என்பதால் இரண்டும் ஒரே நேரத்தில் தரையைத் தொடும்."
+    },
+    {
+      "id": 9,
+      "chapter": "Laws of Motion",
+      "chapterTa": "இயக்க விதிகள்",
+      "question": "A mass of 5 kg is suspended by a rope of length 2 m from the ceiling. A force of 50 N in the horizontal direction is applied at the midpoint of the rope. The angle that the rope makes with the vertical in equilibrium is (g = 10 m/s^2):",
+      "questionTa": "2 மீ நீளமுள்ள கயிற்றினால் 5 கிகி நிறை கூரையிலிருந்து தொங்கவிடப்பட்டுள்ளது. கயிற்றின் மையத்தில் 50 N கிடைமட்ட விசை செலுத்தப்படுகிறது. சமநிலையில் கயிறு செங்குத்துடன் ஏற்படுத்தும் கோணம் (g = 10 m/s^2):",
+      "options": ["30°", "45°", "60°", "0°"],
+      "optionsTa": ["30°", "45°", "60°", "0°"],
+      "answer": "45°",
+      "explanation": "T sin theta = F = 50 N, T cos theta = W = mg = 5 x 10 = 50 N. tan theta = 1 => theta = 45°. / tan theta = F/mg = 50/50 = 1 => theta = 45°."
+    },
+    {
+      "id": 10,
+      "chapter": "Laws of Motion",
+      "chapterTa": "இயக்க விதிகள்",
+      "question": "When a bus turns a corner sharply, the passengers are thrown outwards due to:",
+      "questionTa": "பேருந்து ஒன்று கூர்மையான வளைவில் திரும்பும் போது பயணிகள் வெளிப்புறமாகத் தள்ளப்படுவது எதனால்?",
+      "options": ["Inertia of rest", "Inertia of motion", "Inertia of direction", "Gravitational force"],
+      "optionsTa": ["ஓய்வில் நிலைமம்", "இயக்கத்தில் நிலைமம்", "திசையில் நிலைமம்", "ஈர்ப்பு விசை"],
+      "answer": "Inertia of direction",
+      "explanation": "Inability of passengers to change their direction of motion instantaneously is inertia of direction. / உடலின் இயங்கும் திசையை உடனடியாக மாற்ற முடியாத தன்மை திசையில் நிலைமம் எனப்படும்."
+    },
+    {
+      "id": 11,
+      "chapter": "Laws of Motion",
+      "chapterTa": "இயக்க விதிகள்",
+      "question": "A constant retarding force of 50 N is applied to a body of mass 20 kg moving initially with a speed of 15 m/s. How long does the body take to stop?",
+      "questionTa": "15 m/s ஆரம்ப வேகத்தில் இயங்கும் 20 கிகி நிறையுள்ள ஒரு பொருளின் மீது 50 N சீரான எதிர்விசை செலுத்தப்படுகிறது. அப்பொருள் நிற்க எடுத்துக் கொள்ளும் நேரம்:",
+      "options": ["4 s", "6 s", "8 s", "10 s"],
+      "optionsTa": ["4 வினாடி", "6 வினாடி", "8 வினாடி", "10 வினாடி"],
+      "answer": "6 s",
+      "explanation": "Retardation a = F / m = 50 / 20 = 2.5 m/s^2. t = u / a = 15 / 2.5 = 6 s. / எதிர் முடுக்கம் a = 2.5 m/s^2. நேரம் t = 15 / 2.5 = 6 வினாடிகள்."
+    },
+    {
+      "id": 12,
+      "chapter": "Laws of Motion",
+      "chapterTa": "இயக்க விதிகள்",
+      "question": "The coefficient of static friction between a block of mass 2 kg and the floor is 0.4. A horizontal force of 2.5 N is applied on the block. The frictional force between the block and the floor is (g = 9.8 m/s^2):",
+      "questionTa": "2 கிகி நிறையுள்ள மரக்கட்டைக்கும் தரைக்கும் இடையேயான நிலை உராய்வுக் குணகம் 0.4. மரக்கட்டையின் மீது 2.5 N கிடைமட்ட விசை செலுத்தப்பட்டால், தரைக்கும் மரக்கட்டைக்கும் இடையிலான உராய்வு விசை:",
+      "options": ["7.84 N", "2.5 N", "0.8 N", "4.9 N"],
+      "optionsTa": ["7.84 N", "2.5 N", "0.8 N", "4.9 N"],
+      "answer": "2.5 N",
+      "explanation": "Limiting friction fs(max) = mu_s * mg = 0.4 x 2 x 9.8 = 7.84 N. Since applied force 2.5 N < 7.84 N, static friction = applied force = 2.5 N. / செலுத்தப்படும் விசை எல்லை உராய்வை விடக் குறைவாக இருப்பதால் உராய்வு விசை = 2.5 N."
+    },
+    {
+      "id": 13,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "Work done by the centripetal force on a particle moving along a circular path of radius R in one complete revolution is:",
+      "questionTa": "R ஆரம் கொண்ட வட்டப்பாதையில் இயங்கும் ஒரு துகளின் மீது மையநோக்கு விசை ஒரு முழு சுற்றில் செய்த வேலை:",
+      "options": ["2 pi R * F", "pi R * F", "Zero", "F * R"],
+      "optionsTa": ["2 pi R * F", "pi R * F", "சுழி (Zero)", "F * R"],
+      "answer": "Zero",
+      "explanation": "Centripetal force is always perpendicular to displacement (theta = 90°), so W = F d cos 90° = 0. / மையநோக்கு விசை இடப்பெயர்ச்சிக்கு செங்குத்தாக அமைவதால் செய்த வேலை சுழியாகும்."
+    },
+    {
+      "id": 14,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "A force F = (5i + 3j + 2k) N moves a particle from r1 = (2i + j) m to r2 = (4i + 3j - k) m. The work done by the force is:",
+      "questionTa": "F = (5i + 3j + 2k) N என்ற விசை ஒரு துகளை r1 = (2i + j) m-லிருந்து r2 = (4i + 3j - k) m-க்கு நகர்த்தினால், அவ்விசை செய்த வேலை:",
+      "options": ["10 J", "14 J", "16 J", "20 J"],
+      "optionsTa": ["10 J", "14 J", "16 J", "20 J"],
+      "answer": "14 J",
+      "explanation": "dr = r2 - r1 = 2i + 2j - k. W = F . dr = 5(2) + 3(2) + 2(-1) = 10 + 6 - 2 = 14 J. / W = F . dr = 10 + 6 - 2 = 14 ஜூல்."
+    },
+    {
+      "id": 15,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "If the kinetic energy of a body is increased by 300%, then the percentage increase in its momentum is:",
+      "questionTa": "ஒரு பொருளின் இயக்க ஆற்றல் 300% அதிகரிக்கப்பட்டால், அதன் உந்தத்தில் ஏற்படும் விழுக்காடு உயர்வு:",
+      "options": ["100%", "200%", "50%", "300%"],
+      "optionsTa": ["100%", "200%", "50%", "300%"],
+      "answer": "100%",
+      "explanation": "p = sqrt(2mK). If K2 = 4 K1, then p2 = 2 p1. Percentage increase = ((2 - 1)/1) x 100 = 100%. / K நான்கு மடங்காகும்போது p இருமடங்காகும், ஆகவே உந்தத்தின் உயர்வு 100%."
+    },
+    {
+      "id": 16,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "A pump on the ground floor of a building can pump up water to fill a tank of volume 30 m^3 in 15 min. If the tank is 40 m above the ground, the power of the pump is (g = 10 m/s^2, density = 1000 kg/m^3):",
+      "questionTa": "தரைத்தளத்தில் உள்ள நீரேற்றி 40 மீ உயரத்தில் உள்ள 30 மீ³ கொள்ளளவு கொண்ட தொட்டியை 15 நிமிடங்களில் நிரப்பினால், நீரேற்றியின் திறன் (g = 10 m/s^2):",
+      "options": ["13.3 kW", "20 kW", "10 kW", "25 kW"],
+      "optionsTa": ["13.3 kW", "20 kW", "10 kW", "25 kW"],
+      "answer": "13.3 kW",
+      "explanation": "m = 30 x 1000 = 30000 kg. W = mgh = 30000 x 10 x 40 = 1.2 x 10^7 J. P = W / t = 1.2 x 10^7 / (15 x 60) = 13333 W = 13.3 kW. / திறன் P = mgh/t = 13.3 kW."
+    },
+    {
+      "id": 17,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "The potential energy of a spring when stretched through a distance x is U. The work required to stretch it further through an additional distance x is:",
+      "questionTa": "சுருள்வில் ஒன்று x தொலைவு நீட்டிக்கப்படும் போது அதன் நிலை ஆற்றல் U. அதை மேலும் x தொலைவு நீட்டிக்கத் தேவையான கூடுதல் வேலை:",
+      "options": ["U", "2 U", "3 U", "4 U"],
+      "optionsTa": ["U", "2 U", "3 U", "4 U"],
+      "answer": "3 U",
+      "explanation": "Total energy at 2x is (1/2) k (2x)^2 = 4 U. Additional work = 4 U - U = 3 U. / 2x நீட்சிக்கு ஆற்றல் 4U. கூடுதல் வேலை = 4U - U = 3U."
+    },
+    {
+      "id": 18,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "In an elastic one-dimensional collision between two equal masses, one of which is initially at rest, after collision:",
+      "questionTa": "ஓய்வு நிலையிலுள்ள சம நிறையுள்ள ஒரு பொருளின் மீது மற்றொரு சம நிறையுள்ள பொருள் மீட்சி மோதல் ஏற்படுத்தினால், மோதலுக்குப் பின்:",
+      "options": [
+        "Both stick together and move",
+        "The incident particle comes to rest and the target particle moves with the velocity of incident particle",
+        "Both rebound with half the initial velocity",
+        "Both come to rest"
+      ],
+      "optionsTa": [
+        "இரண்டும் இணைந்து இயங்கும்",
+        "மோதும் பொருள் ஓய்வு நிலையை அடையும், ஓய்விலிருந்த பொருள் மோதும் பொருளின் திசைவேகத்துடன் இயங்கும்",
+        "இரண்டும் பாதியளவு திசைவேகத்துடன் பின்னோக்கி இயங்கும்",
+        "இரண்டும் ஓய்வடையும்"
+      ],
+      "answer": "The incident particle comes to rest and the target particle moves with the velocity of incident particle",
+      "explanation": "When two equal masses collide elastically in one dimension, their velocities are completely exchanged. / சம நிறைகள் நேர்க்கோட்டில் மீட்சி மோதல் கொள்ளும்போது அவற்றின் திசைவேகங்கள் பரிமாறிக்கொள்ளப்படும்."
+    },
+    {
+      "id": 19,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "A body of mass 1 kg is dropped from a height of 20 m. Its kinetic energy just before hitting the ground is (g = 10 m/s^2):",
+      "questionTa": "1 கிகி நிறையுள்ள ஒரு பொருள் 20 மீ உயரத்திலிருந்து கீழே போடப்படுகிறது. தரை தொடும் முன் அதன் இயக்க ஆற்றல் (g = 10 m/s^2):",
+      "options": ["100 J", "200 J", "400 J", "50 J"],
+      "optionsTa": ["100 J", "200 J", "400 J", "50 J"],
+      "answer": "200 J",
+      "explanation": "By conservation of mechanical energy: KE = PE_initial = mgh = 1 x 10 x 20 = 200 J. / ஆற்றல் மாறா விதியின்படி தரை தொடும் போது இயக்க ஆற்றல் = mgh = 200 ஜூல்."
+    },
+    {
+      "id": 20,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "Which of the following is a non-conservative force?",
+      "questionTa": "பின்வருவனவற்றுள் மாறா விசை அல்லாதது (ஆற்றல் மாற்றும் விசை / Non-conservative force) எது?",
+      "options": ["Gravitational force", "Electrostatic force", "Friction", "Spring force"],
+      "optionsTa": ["புவியீர்ப்பு விசை", "நிலைமின்னியல் விசை", "உராய்வு விசை (Friction)", "சுருள்வில் விசை"],
+      "answer": "Friction",
+      "explanation": "Work done by friction depends on the path taken and dissipates mechanical energy into heat. / உராய்வு விசை பாதையைச் சார்ந்தது மற்றும் இயந்திர ஆற்றலை வெப்பமாக சிதறடிக்கும்."
+    },
+    {
+      "id": 21,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "A machine gun fires 240 bullets per minute with a velocity of 500 m/s. If the mass of each bullet is 10 g, the power developed by the gun is:",
+      "questionTa": "ஒரு தானியங்கி துப்பாக்கி நிமிடத்திற்கு 240 குண்டுகளை 500 m/s வேகத்தில் சுடுகிறது. ஒவ்வொரு குண்டின் நிறையும் 10 கிராம் எனில், துப்பாக்கியின் திறன்:",
+      "options": ["25 kW", "50 kW", "5 kW", "10 kW"],
+      "optionsTa": ["25 kW", "50 kW", "5 kW", "10 kW"],
+      "answer": "50 kW",
+      "explanation": "Bullets/sec n = 240 / 60 = 4. Power = (1/2) * n * m * v^2 = 0.5 * 4 * 0.010 * 250000 = 50,000 W = 50 kW. / P = 0.5 * (4) * (0.01) * (250000) = 50 kW."
+    },
+    {
+      "id": 22,
+      "chapter": "Laws of Motion",
+      "chapterTa": "இயக்க விதிகள்",
+      "question": "Assertion (A): A cyclist leans inward while taking a turn on a horizontal road. Reason (R): Leaning inward provides the necessary horizontal component of normal reaction which acts as the centripetal force.",
+      "questionTa": "கூற்று (A): கிடைத்தள சாலையில் வளைவில் திரும்பும் போது மிதிவண்டி ஓட்டுபவர் உட்புறமாக சாய்கிறார். காரணம் (R): உட்புறமாக சாய்வது மையநோக்கு விசையை அளிக்கும் செங்குத்து எதிர்வினையின் கிடைத்தளக் கூறினை வழங்குகிறது.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "optionsTa": [
+        "A மற்றும் R இரண்டும் சரி, R என்பது A-ன் சரியான விளக்கம்",
+        "A மற்றும் R இரண்டும் சரி, ஆனால் R என்பது A-ன் சரியான விளக்கமல்ல",
+        "A சரி ஆனால் R தவறு",
+        "A தவறு ஆனால் R சரி"
+      ],
+      "answer": "Both A and R are true and R is the correct explanation of A",
+      "explanation": "N sin theta provides the centripetal force mv^2/r to prevent toppling. Both A and R are true. / N sin theta தேவையான மையநோக்கு விசையை வழங்குகிறது. கூற்று மற்றும் காரணம் சரி."
+    },
+    {
+      "id": 23,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "Assertion (A): Work done in moving a body over a closed loop in a gravitational field is zero. Reason (R): Gravitational force is a conservative force.",
+      "questionTa": "கூற்று (A): ஈர்ப்புப் புலத்தில் ஒரு மூடிய சுற்றில் ஒரு பொருளை நகர்த்த செய்யப்படும் வேலை சுழியாகும். காரணம் (R): ஈர்ப்பு விசை ஒரு ஆற்றல் மாறா விசை (Conservative Force) ஆகும்.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "optionsTa": [
+        "A மற்றும் R இரண்டும் சரி, R என்பது A-ன் சரியான விளக்கம்",
+        "A மற்றும் R இரண்டும் சரி, ஆனால் R என்பது A-ன் சரியான விளக்கமல்ல",
+        "A சரி ஆனால் R தவறு",
+        "A தவறு ஆனால் R சரி"
+      ],
+      "answer": "Both A and R are true and R is the correct explanation of A",
+      "explanation": "Work done by any conservative force in a closed cycle is identically zero. / ஆற்றல் மாறா விசை ஒரு மூடிய பாதையில் செய்யும் வேலை எப்போதும் சுழியாகும்."
+    },
+    {
+      "id": 24,
+      "chapter": "Work, Energy and Power",
+      "chapterTa": "வேலை, ஆற்றல் மற்றும் திறன்",
+      "question": "Assertion (A): Kinetic energy of a system of particles can be negative. Reason (R): Kinetic energy depends on the square of velocity.",
+      "questionTa": "கூற்று (A): ஒரு துகளமைப்பின் இயக்க ஆற்றல் எதிர்க்குறியாக (negative) அமையலாம். காரணம் (R): இயக்க ஆற்றல் திசைவேகத்தின் வர்க்கத்தைச் சார்ந்தது.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "optionsTa": [
+        "A மற்றும் R இரண்டும் சரி, R என்பது A-ன் சரியான விளக்கம்",
+        "A மற்றும் R இரண்டும் சரி, ஆனால் R என்பது A-ன் சரியான விளக்கமல்ல",
+        "A சரி ஆனால் R தவறு",
+        "A தவறு ஆனால் R சரி"
+      ],
+      "answer": "A is false but R is true",
+      "explanation": "Kinetic energy = (1/2)mv^2 is always non-negative. Hence A is false and R is true. / v^2 எப்போதும் மிகை என்பதால் இயக்க ஆற்றல் ஒருபோதும் எதிர்க்குறியாகாது. கூற்று தவறு, காரணம் சரி."
+    },
+    {
+      "id": 25,
+      "chapter": "Laws of Motion",
+      "chapterTa": "இயக்க விதிகள்",
+      "question": "The maximum speed with which a car can negotiate a curve of radius 50 m on a level road with friction coefficient 0.5 without skidding is (g = 9.8 m/s^2):",
+      "questionTa": "50 மீ ஆரம் கொண்ட கிடைத்தள வளைவுச் சாலையில் சறுக்காமல் திரும்ப ஒரு மகிழுந்தின் பெரும வேகம் (உராய்வுக் குணகம் mu = 0.5, g = 9.8 m/s^2):",
+      "options": ["15.65 m/s", "12.5 m/s", "24.5 m/s", "9.8 m/s"],
+      "optionsTa": ["15.65 m/s", "12.5 m/s", "24.5 m/s", "9.8 m/s"],
+      "answer": "15.65 m/s",
+      "explanation": "v_max = sqrt(mu * r * g) = sqrt(0.5 * 50 * 9.8) = sqrt(245) = 15.65 m/s. / பெரும வேகம் v_max = sqrt(mu r g) = sqrt(245) = 15.65 m/s."
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "day": 1,
+  "standard": "12th TN State Board",
+  "stream": "Science",
+  "subject": "Mathematics",
+  "subjectCode": "MAT-12",
+  "examDate": "2026-11-03T12:30:00.000Z",
+  "duration_minutes": 45,
+  "total_marks": 25,
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "Matrices and Determinants",
+      "chapterTa": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்",
+      "question": "If A is a square matrix of order 3 and |A| = 4, then the value of |adj A| is:",
+      "questionTa": "A என்பது வரிசை 3 உடைய சதுர அணி மற்றும் |A| = 4 எனில், |adj A| இன் மதிப்பு:",
+      "options": ["4", "16", "64", "1"],
+      "optionsTa": ["4", "16", "64", "1"],
+      "answer": "16",
+      "explanation": "For an n x n matrix, |adj A| = |A|^(n - 1). Here n = 3, so |adj A| = 4^(3 - 1) = 4^2 = 16. / n வரிசை கொண்ட சதுர அணிக்கு |adj A| = |A|^(n-1). இங்கு n = 3 என்பதால் 4^2 = 16."
+    },
+    {
+      "id": 2,
+      "chapter": "Matrices and Determinants",
+      "chapterTa": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்",
+      "question": "If A is a non-singular matrix of order n, then |adj(adj A)| is equal to:",
+      "questionTa": "வரிசை n கொண்ட பூச்சியமற்ற அணிக்கோவை அணி A-க்கு, |adj(adj A)| இன் மதிப்பு:",
+      "options": ["|A|^(n-1)", "|A|^(n-2)", "|A|^(n-1)^2", "|A|^n"],
+      "optionsTa": ["|A|^(n-1)", "|A|^(n-2)", "|A|^(n-1)^2", "|A|^n"],
+      "answer": "|A|^(n-1)^2",
+      "explanation": "By matrix properties, |adj(adj A)| = |A|^((n - 1)^2). / அணிக் கோட்பாட்டின்படி |adj(adj A)| = |A|^((n - 1)^2) ஆகும்."
+    },
+    {
+      "id": 3,
+      "chapter": "Matrices and Determinants",
+      "chapterTa": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்",
+      "question": "If A = [[cos theta, -sin theta], [sin theta, cos theta]], then A + A^T = I if theta is equal to:",
+      "questionTa": "A = [[cos theta, -sin theta], [sin theta, cos theta]] எனில், A + A^T = I ஆக அமைய theta இன் மதிப்பு:",
+      "options": ["pi/6", "pi/3", "pi", "3pi/2"],
+      "optionsTa": ["pi/6", "pi/3", "pi", "3pi/2"],
+      "answer": "pi/3",
+      "explanation": "A + A^T = 2 cos theta * I = I => 2 cos theta = 1 => cos theta = 1/2 => theta = pi/3. / 2 cos theta = 1 => cos theta = 1/2 => theta = pi/3 (60°)."
+    },
+    {
+      "id": 4,
+      "chapter": "Matrices and Determinants",
+      "chapterTa": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்",
+      "question": "The inverse of the matrix [[2, 3], [1, 4]] is:",
+      "questionTa": "[[2, 3], [1, 4]] என்ற அணியின் நேர்மாறு அணி:",
+      "options": ["1/5 [[4, -3], [-1, 2]]", "1/5 [[2, -3], [-1, 4]]", "1/5 [[4, 3], [1, 2]]", "[[4, -3], [-1, 2]]"],
+      "optionsTa": ["1/5 [[4, -3], [-1, 2]]", "1/5 [[2, -3], [-1, 4]]", "1/5 [[4, 3], [1, 2]]", "[[4, -3], [-1, 2]]"],
+      "answer": "1/5 [[4, -3], [-1, 2]]",
+      "explanation": "|A| = 8 - 3 = 5. adj A = [[4, -3], [-1, 2]]. A^-1 = (1/5) * adj A. / |A| = 5. நேர்மாறு அணி A^-1 = (1/5)[[4, -3], [-1, 2]]."
+    },
+    {
+      "id": 5,
+      "chapter": "Matrices and Determinants",
+      "chapterTa": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்",
+      "question": "If the rank of a 3 x 3 matrix A is 2, then the determinant |A| is:",
+      "questionTa": "வரிசை 3 x 3 கொண்ட அணி A-ன் தரம் (Rank) 2 எனில், அதன் அணிக்கோவை மதிப்பு |A|:",
+      "options": ["1", "2", "0", "Non-zero"],
+      "optionsTa": ["1", "2", "0", "பூச்சியமற்ற எண்"],
+      "answer": "0",
+      "explanation": "If rank < order n, then |A| must be 0. / அணியின் தரம் அதன் வரிசையை விடக் குறைவாக இருந்தால் அணிக்கோவை மதிப்பு 0 ஆகும்."
+    },
+    {
+      "id": 6,
+      "chapter": "Matrices and Determinants",
+      "chapterTa": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்",
+      "question": "The system of linear equations x + y + z = 6, x + 2y + 3z = 10, x + 2y + lambda z = mu has a unique solution if:",
+      "questionTa": "x + y + z = 6, x + 2y + 3z = 10, x + 2y + lambda z = mu என்ற சமன்பாட்டுத் தொகுப்பு ஒரேயொரு தீர்வைப் பெற்றிருக்க நிபந்தனை:",
+      "options": ["lambda = 3, mu = 10", "lambda != 3, mu in R", "lambda = 3, mu != 10", "lambda != 3, mu = 10"],
+      "optionsTa": ["lambda = 3, mu = 10", "lambda != 3, mu in R", "lambda = 3, mu != 10", "lambda != 3, mu = 10"],
+      "answer": "lambda != 3, mu in R",
+      "explanation": "For a unique solution, rank(A) = 3, requiring lambda - 3 != 0 => lambda != 3 for any real mu. / ஒரேயொரு தீர்வுக்கு lambda - 3 != 0, ஆகவே lambda != 3."
+    },
+    {
+      "id": 7,
+      "chapter": "Matrices and Determinants",
+      "chapterTa": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்",
+      "question": "If A is an orthogonal matrix, then the determinant |A| is equal to:",
+      "questionTa": "A என்பது ஒரு செங்குத்து அணி (Orthogonal Matrix) எனில், |A| இன் மதிப்பு:",
+      "options": ["0", "+-1", "2", "Infinitely many"],
+      "optionsTa": ["0", "+-1", "2", "முடிவிலி"],
+      "answer": "+-1",
+      "explanation": "A A^T = I => |A A^T| = |A|^2 = |I| = 1 => |A| = +-1. / A A^T = I என்பதால் |A|^2 = 1, ஆகவே |A| = +-1."
+    },
+    {
+      "id": 8,
+      "chapter": "Sets, Relations and Functions",
+      "chapterTa": "கணங்கள், தொடர்புகள் மற்றும் சார்புகள்",
+      "question": "If f: R -> R is defined by f(x) = 3x - 5, then the inverse function f^-1(x) is:",
+      "questionTa": "f: R -> R என்ற சார்பு f(x) = 3x - 5 என வரையறுக்கப்பட்டால், அதன் நேர்மாறு சார்பு f^-1(x):",
+      "options": ["(x + 5)/3", "(x - 5)/3", "3x + 5", "1/(3x - 5)"],
+      "optionsTa": ["(x + 5)/3", "(x - 5)/3", "3x + 5", "1/(3x - 5)"],
+      "answer": "(x + 5)/3",
+      "explanation": "y = 3x - 5 => 3x = y + 5 => x = (y + 5)/3. Thus f^-1(x) = (x + 5)/3. / y = 3x - 5 எனில் x = (y + 5)/3, ஆகவே f^-1(x) = (x + 5)/3."
+    },
+    {
+      "id": 9,
+      "chapter": "Sets, Relations and Functions",
+      "chapterTa": "கணங்கள், தொடர்புகள் மற்றும் சார்புகள்",
+      "question": "Let R be a relation on the set of natural numbers N defined by aRb iff a + b = 10. Then R is:",
+      "questionTa": "இயல் எண்கள் கணம் N-ல் aRb <=> a + b = 10 என வரையறுக்கப்படும் தொடர்பு R என்பது:",
+      "options": ["Reflexive", "Symmetric only", "Transitive", "Equivalence relation"],
+      "optionsTa": ["தற்சுட்டு", "சமச்சீர் மட்டுமே", "கடப்பு", "சமானத் தொடர்பு"],
+      "answer": "Symmetric only",
+      "explanation": "a + b = 10 => b + a = 10 (Symmetric). Not reflexive since 1+1 != 10. Not transitive since (1,9) and (9,1) in R but (1,1) not in R. / a+b = 10 எனில் b+a = 10 சமச்சீர் மட்டுமே பொருந்தும்."
+    },
+    {
+      "id": 10,
+      "chapter": "Sets, Relations and Functions",
+      "chapterTa": "கணங்கள், தொடர்புகள் மற்றும் சார்புகள்",
+      "question": "The domain of the function f(x) = sin^-1(2x - 1) is:",
+      "questionTa": "f(x) = sin^-1(2x - 1) என்ற சார்பின் சார்பகம் (Domain):",
+      "options": ["[-1, 1]", "[0, 1]", "[-1, 0]", "[0, pi]"],
+      "optionsTa": ["[-1, 1]", "[0, 1]", "[-1, 0]", "[0, pi]"],
+      "answer": "[0, 1]",
+      "explanation": "-1 <= 2x - 1 <= 1 => 0 <= 2x <= 2 => 0 <= x <= 1. Domain is [0, 1]. / -1 <= 2x - 1 <= 1 => 0 <= x <= 1 ஆகும்."
+    },
+    {
+      "id": 11,
+      "chapter": "Sets, Relations and Functions",
+      "chapterTa": "கணங்கள், தொடர்புகள் மற்றும் சார்புகள்",
+      "question": "The range of the function f(x) = |x - 3| / (x - 3) is:",
+      "questionTa": "f(x) = |x - 3| / (x - 3) என்ற சார்பின் வீச்சகம் (Range):",
+      "options": ["R - {3}", "{-1, 1}", "[ -1, 1 ]", "{-1, 0, 1}"],
+      "optionsTa": ["R - {3}", "{-1, 1}", "[ -1, 1 ]", "{-1, 0, 1}"],
+      "answer": "{-1, 1}",
+      "explanation": "When x > 3, f(x) = 1; when x < 3, f(x) = -1. Range is {-1, 1}. / x > 3 எனில் f(x) = 1, x < 3 எனில் f(x) = -1. வீச்சகம் {-1, 1}."
+    },
+    {
+      "id": 12,
+      "chapter": "Sets, Relations and Functions",
+      "chapterTa": "கணங்கள், தொடர்புகள் மற்றும் சார்புகள்",
+      "question": "If f(x) = x / (1 - x), then f(f(x)) is equal to:",
+      "questionTa": "f(x) = x / (1 - x) எனில், f(f(x)) இன் மதிப்பு:",
+      "options": ["x / (1 - 2x)", "x / (2x - 1)", "2x / (1 - x)", "-x"],
+      "optionsTa": ["x / (1 - 2x)", "x / (2x - 1)", "2x / (1 - x)", "-x"],
+      "answer": "x / (1 - 2x)",
+      "explanation": "f(f(x)) = (x/(1-x)) / (1 - x/(1-x)) = (x/(1-x)) / ((1 - 2x)/(1-x)) = x / (1 - 2x). / f(f(x)) = x / (1 - 2x) ஆகும்."
+    },
+    {
+      "id": 13,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "The derivative of sin(x^2) with respect to x is:",
+      "questionTa": "x-ஐப் பொறுத்து sin(x^2)-ன் வகைக்கெழு:",
+      "options": ["cos(x^2)", "2x cos(x^2)", "2x sin(x)", "x^2 cos(x)"],
+      "optionsTa": ["cos(x^2)", "2x cos(x^2)", "2x sin(x)", "x^2 cos(x)"],
+      "answer": "2x cos(x^2)",
+      "explanation": "By chain rule, d/dx[sin(x^2)] = cos(x^2) * d/dx(x^2) = 2x cos(x^2). / சங்கிலி விதியைப் பயன்படுத்த d/dx[sin(x^2)] = 2x cos(x^2)."
+    },
+    {
+      "id": 14,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "The derivative of e^(sqrt(x)) with respect to x is:",
+      "questionTa": "x-ஐப் பொறுத்து e^(sqrt(x))-ன் வகைக்கெழு:",
+      "options": ["e^(sqrt(x)) / (2 sqrt(x))", "e^(sqrt(x)) * 2 sqrt(x)", "e^(sqrt(x)) / sqrt(x)", "sqrt(x) * e^(sqrt(x))"],
+      "optionsTa": ["e^(sqrt(x)) / (2 sqrt(x))", "e^(sqrt(x)) * 2 sqrt(x)", "e^(sqrt(x)) / sqrt(x)", "sqrt(x) * e^(sqrt(x))"],
+      "answer": "e^(sqrt(x)) / (2 sqrt(x))",
+      "explanation": "d/dx[e^u] = e^u * u' => e^(sqrt(x)) * (1/(2 sqrt(x))). / e^(sqrt(x)) * (1/(2 sqrt(x))) ஆகும்."
+    },
+    {
+      "id": 15,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "If y = log(sec x + tan x), then dy/dx is:",
+      "questionTa": "y = log(sec x + tan x) எனில், dy/dx இன் மதிப்பு:",
+      "options": ["sec x", "tan x", "sec x + tan x", "sec^2 x"],
+      "optionsTa": ["sec x", "tan x", "sec x + tan x", "sec^2 x"],
+      "answer": "sec x",
+      "explanation": "dy/dx = (sec x tan x + sec^2 x) / (sec x + tan x) = sec x(tan x + sec x)/(sec x + tan x) = sec x. / வகைக்கெழு காண sec x கிடைக்கும்."
+    },
+    {
+      "id": 16,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "If x = a cos^3 theta, y = a sin^3 theta, then dy/dx is:",
+      "questionTa": "x = a cos^3 theta, y = a sin^3 theta எனில், dy/dx இன் மதிப்பு:",
+      "options": ["tan theta", "-tan theta", "cot theta", "-cot theta"],
+      "optionsTa": ["tan theta", "-tan theta", "cot theta", "-cot theta"],
+      "answer": "-tan theta",
+      "explanation": "dy/dtheta = 3a sin^2 theta cos theta; dx/dtheta = -3a cos^2 theta sin theta. dy/dx = -tan theta. / துணை அலகு வகையீட்டின்படி dy/dx = -tan theta."
+    },
+    {
+      "id": 17,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "The derivative of tan^-1( (3x - x^3)/(1 - 3x^2) ) with respect to x is:",
+      "questionTa": "tan^-1( (3x - x^3)/(1 - 3x^2) ) இன் x-ஐப் பொறுத்த வகைக்கெழு:",
+      "options": ["1 / (1 + x^2)", "3 / (1 + x^2)", "3 / (1 + 9x^2)", "1 / (1 + 9x^2)"],
+      "optionsTa": ["1 / (1 + x^2)", "3 / (1 + x^2)", "3 / (1 + 9x^2)", "1 / (1 + 9x^2)"],
+      "answer": "3 / (1 + x^2)",
+      "explanation": "Let x = tan theta. The expression is 3 theta = 3 tan^-1(x). Derivative is 3 / (1 + x^2). / x = tan theta என பிரதியிட 3 tan^-1(x) கிடைக்கும்; இதன் வகைக்கெழு 3 / (1 + x^2)."
+    },
+    {
+      "id": 18,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "If y = x^x, then dy/dx is:",
+      "questionTa": "y = x^x எனில், dy/dx இன் மதிப்பு:",
+      "options": ["x^x (1 + log x)", "x^x log x", "x * x^(x - 1)", "1 + log x"],
+      "optionsTa": ["x^x (1 + log x)", "x^x log x", "x * x^(x - 1)", "1 + log x"],
+      "answer": "x^x (1 + log x)",
+      "explanation": "Taking log on both sides: log y = x log x. Differentiating: (1/y) dy/dx = 1 + log x => dy/dx = x^x(1 + log x). / மடக்கை வகையீட்டின்படி dy/dx = x^x(1 + log x)."
+    },
+    {
+      "id": 19,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "The slope of the tangent to the curve y = 3x^4 - 4x at x = 4 is:",
+      "questionTa": "y = 3x^4 - 4x என்ற வளைவரைக்கு x = 4 என்ற புள்ளியில் தொடுகோட்டின் சாய்வு:",
+      "options": ["764", "768", "772", "760"],
+      "optionsTa": ["764", "768", "772", "760"],
+      "answer": "764",
+      "explanation": "dy/dx = 12x^3 - 4. At x = 4, slope = 12(64) - 4 = 768 - 4 = 764. / dy/dx = 12(4)^3 - 4 = 768 - 4 = 764."
+    },
+    {
+      "id": 20,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "The point on the curve y = x^2 - 4x + 5 where the tangent is parallel to the line 2x - y + 1 = 0 is:",
+      "questionTa": "y = x^2 - 4x + 5 என்ற வளைவரையின் தொடுகோடு 2x - y + 1 = 0 என்ற கோட்டிற்கு இணையாக இருக்கும் புள்ளி:",
+      "options": ["(3, 2)", "(2, 1)", "(1, 2)", "(3, 5)"],
+      "optionsTa": ["(3, 2)", "(2, 1)", "(1, 2)", "(3, 5)"],
+      "answer": "(3, 2)",
+      "explanation": "Slope of line = 2. dy/dx = 2x - 4 = 2 => 2x = 6 => x = 3. y = 3^2 - 4(3) + 5 = 2. Point is (3, 2). / 2x - 4 = 2 => x = 3, y = 2. புள்ளி (3, 2)."
+    },
+    {
+      "id": 21,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "The rate of change of area of a circle with respect to its radius r when r = 6 cm is:",
+      "questionTa": "ஆரம் r = 6 செ.மீ ஆக இருக்கும் போது, வட்டத்தின் பரப்பளவு அதன் ஆரத்தைப் பொறுத்து மாறும் வீதம்:",
+      "options": ["10 pi cm^2/cm", "12 pi cm^2/cm", "36 pi cm^2/cm", "6 pi cm^2/cm"],
+      "optionsTa": ["10 pi cm^2/cm", "12 pi cm^2/cm", "36 pi cm^2/cm", "6 pi cm^2/cm"],
+      "answer": "12 pi cm^2/cm",
+      "explanation": "A = pi r^2 => dA/dr = 2 pi r. When r = 6, dA/dr = 12 pi cm^2/cm. / dA/dr = 2 pi (6) = 12 pi செ.மீ²/செ.மீ."
+    },
+    {
+      "id": 22,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "Assertion (A): The function f(x) = |x| is continuous at x = 0. Reason (R): Every continuous function is differentiable at that point.",
+      "questionTa": "கூற்று (A): f(x) = |x| என்ற சார்பு x = 0-ல் தொடர்ச்சியானது. காரணம் (R): ஒவ்வொரு தொடர்ச்சியான சார்பும் அந்தப் புள்ளியில் வகையிடத்தக்கது.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "optionsTa": [
+        "A மற்றும் R இரண்டும் சரி, R என்பது A-ன் சரியான விளக்கம்",
+        "A மற்றும் R இரண்டும் சரி, ஆனால் R என்பது A-ன் சரியான விளக்கமல்ல",
+        "A சரி ஆனால் R தவறு",
+        "A தவறு ஆனால் R சரி"
+      ],
+      "answer": "A is true but R is false",
+      "explanation": "f(x) = |x| is continuous at x = 0 but not differentiable at x = 0. Continuous functions need not be differentiable. / |x| x=0-ல் தொடர்ச்சியானது, ஆனால் வகையிடத்தக்கதல்ல. ஆகவே கூற்று சரி, காரணம் தவறு."
+    },
+    {
+      "id": 23,
+      "chapter": "Matrices and Determinants",
+      "chapterTa": "அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்",
+      "question": "Assertion (A): If A is an invertible symmetric matrix, then A^-1 is also symmetric. Reason (R): (A^-1)^T = (A^T)^-1.",
+      "questionTa": "கூற்று (A): A என்பது பூச்சியமற்ற சமச்சீர் அணி எனில், A^-1 அணியும் ஒரு சமச்சீர் அணியாகும். காரணம் (R): (A^-1)^T = (A^T)^-1.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "optionsTa": [
+        "A மற்றும் R இரண்டும் சரி, R என்பது A-ன் சரியான விளக்கம்",
+        "A மற்றும் R இரண்டும் சரி, ஆனால் R என்பது A-ன் சரியான விளக்கமல்ல",
+        "A சரி ஆனால் R தவறு",
+        "A தவறு ஆனால் R சரி"
+      ],
+      "answer": "Both A and R are true and R is the correct explanation of A",
+      "explanation": "Since A^T = A, (A^-1)^T = (A^T)^-1 = A^-1. Thus A^-1 is symmetric. / A^T = A என்பதால் (A^-1)^T = A^-1. ஆகவே கூற்று மற்றும் காரணம் இரண்டும் சரி."
+    },
+    {
+      "id": 24,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "Assertion (A): The derivative of a constant function is zero. Reason (R): The rate of change of a constant quantity with respect to any variable is always zero.",
+      "questionTa": "கூற்று (A): ஒரு மாறிலிச் சார்பின் வகைக்கெழு சுழியாகும் (0). காரணம் (R): எந்தவொரு மாறியைப் பொறுத்தும் மாறிலி அளவு மாறும் வீதம் எப்போதும் சுழியாகும்.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "optionsTa": [
+        "A மற்றும் R இரண்டும் சரி, R என்பது A-ன் சரியான விளக்கம்",
+        "A மற்றும் R இரண்டும் சரி, ஆனால் R என்பது A-ன் சரியான விளக்கமல்ல",
+        "A சரி ஆனால் R தவறு",
+        "A தவறு ஆனால் R சரி"
+      ],
+      "answer": "Both A and R are true and R is the correct explanation of A",
+      "explanation": "Constant functions do not vary, so their rate of change is zero. / மாறிலியின் மாற்ற வீதம் சுழி என்பதால் அதன் வகைக்கெழு சுழியாகும்."
+    },
+    {
+      "id": 25,
+      "chapter": "Differential Calculus",
+      "chapterTa": "வகை நுண்கணிதம்",
+      "question": "The maximum value of the function f(x) = sin x + cos x in [0, pi/2] is:",
+      "questionTa": "[0, pi/2] இடைவெளியில் f(x) = sin x + cos x என்ற சார்பின் பெரும மதிப்பு:",
+      "options": ["1", "sqrt(2)", "2", "1/sqrt(2)"],
+      "optionsTa": ["1", "sqrt(2)", "2", "1/sqrt(2)"],
+      "answer": "sqrt(2)",
+      "explanation": "f'(x) = cos x - sin x = 0 => x = pi/4. f(pi/4) = 1/sqrt(2) + 1/sqrt(2) = 2/sqrt(2) = sqrt(2). / x = pi/4 எனில் பெரும மதிப்பு sqrt(2) ஆகும்."
+    }
+  ]
+}

@@ -395,8 +395,7 @@ function LoginPanel() {
   const [tab, setTab] = useState("student"); // student | admin | register
   const [rollNo, setRollNo] = useState("");
   const [dob, setDob] = useState("");
-  const [adminUser, setAdminUser] = useState("");
-  const [adminPass, setAdminPass] = useState("");
+  const [adminPasscode, setAdminPasscode] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -444,7 +443,7 @@ function LoginPanel() {
     try {
       const res = await fetch("/api/auth/login-admin", {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username: adminUser, password: adminPass }),
+        body: JSON.stringify({ code: adminPasscode, username: adminPasscode, password: adminPasscode }),
       });
       const data = await res.json();
       if (!res.ok) { setError(data.error || "Authentication failed."); setLoading(false); return; }
@@ -536,7 +535,7 @@ function LoginPanel() {
         <form onSubmit={handleStudentLogin} className="space-y-4">
           <div className="mb-5">
             <h2 className="text-xl font-bold text-[#f0f0ff]">{isTamil ? "மாணவர் உள்நுழைவு" : "Student Sign In"}</h2>
-            <p className="text-xs text-[#5c5c8a] mt-0.5">{isTamil ? "உங்கள் பதிவு எண் மற்றும் பிறந்த தேதியைப் பயன்படுத்தவும்" : "Use your Roll Number and Date of Birth"}</p>
+            <p className="text-xs text-[#5c5c8a] mt-0.5">{isTamil ? "பதிவு செய்த மாணவர்கள் தங்கள் பதிவு எண்ணை உள்ளிட்டு நுழையவும்" : "Registered candidates: enter your Roll Number to enter"}</p>
           </div>
 
           <div>
@@ -545,17 +544,9 @@ function LoginPanel() {
             </label>
             <input id="student-roll-no" type="text" value={rollNo}
               onChange={(e) => setRollNo(e.target.value)} required
-              placeholder="e.g. TN2026-0901" className="input-field font-mono" />
-          </div>
-
-          <div>
-            <label htmlFor="student-dob" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1.5">
-              <Calendar className="w-3.5 h-3.5 text-violet-400" />{isTamil ? "பிறந்த தேதி" : "Date of Birth"}
-            </label>
-            <input id="student-dob" type="date" value={dob}
-              onChange={(e) => setDob(e.target.value)} required className="input-field font-mono" />
+              placeholder="e.g. TN2026-0901, 11203, or Vikram" className="input-field font-mono" />
             <p className="text-[11px] text-[#5c5c8a] mt-1.5 flex items-center gap-1">
-              <Lock className="w-3 h-3 text-emerald-400" />{isTamil ? "bcrypt மூலம் பாதுகாக்கப்பட்டது" : "Hashed with bcrypt — never stored as plaintext"}
+              <CheckCircle2 className="w-3 h-3 text-emerald-400" />{isTamil ? "பதிவு எண் மட்டுமே போதுமானது" : "Roll number alone is sufficient to sign in"}
             </p>
           </div>
 
@@ -578,28 +569,38 @@ function LoginPanel() {
         <form onSubmit={handleAdminLogin} className="space-y-4">
           <div className="mb-5">
             <h2 className="text-xl font-bold text-[#f0f0ff]">COE Administration</h2>
-            <p className="text-xs text-[#5c5c8a] mt-0.5">Controller of Examinations secure access</p>
+            <p className="text-xs text-[#5c5c8a] mt-0.5">Controller of Examinations instant master access</p>
           </div>
 
           <div>
-            <label htmlFor="coe-username" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />COE Admin Username
+            <label htmlFor="coe-code" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1.5">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />COE Master Access Code
             </label>
-            <input id="coe-username" type="text" value={adminUser}
-              onChange={(e) => setAdminUser(e.target.value)} required
-              placeholder="e.g. 1" autoComplete="username" className="input-field font-mono" />
+            <input id="coe-code" type="text" value={adminPasscode}
+              onChange={(e) => setAdminPasscode(e.target.value)} required
+              placeholder="Enter 1 or 0" autoFocus className="input-field font-mono font-bold text-center tracking-wider text-sm" />
+            <div className="flex items-center justify-between mt-2 text-[11px] text-[#5c5c8a]">
+              <span>Quick Access:</span>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => setAdminPasscode("1")}
+                  className="px-2.5 py-0.5 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-300 font-mono text-xs hover:bg-amber-500/30 font-bold"
+                >
+                  Key 1
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setAdminPasscode("0")}
+                  className="px-2.5 py-0.5 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-300 font-mono text-xs hover:bg-amber-500/30 font-bold"
+                >
+                  Key 0
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <label htmlFor="coe-password" className="flex items-center gap-1.5 text-xs font-semibold text-[#a8a8d0] mb-1.5">
-              <KeyRound className="w-3.5 h-3.5 text-amber-400" />Master Passphrase
-            </label>
-            <input id="coe-password" type="password" value={adminPass}
-              onChange={(e) => setAdminPass(e.target.value)} required
-              placeholder="Passphrase" autoComplete="current-password" className="input-field font-mono" />
-          </div>
-
-          <Button id="btn-coe-login" type="submit" variant="amber" disabled={loading} className="w-full justify-center !py-2.5">
+          <Button id="btn-coe-login" type="submit" variant="amber" disabled={loading} className="w-full justify-center !py-2.5 font-bold">
             {loading ? <><Loader2 className="w-4 h-4 animate-spin" />Verifying…</> : <>Access Control Center <ArrowRight className="w-4 h-4" /></>}
           </Button>
         </form>

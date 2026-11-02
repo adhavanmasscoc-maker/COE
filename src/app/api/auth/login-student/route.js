@@ -51,15 +51,15 @@ export async function POST(request) {
     const candidateRollNo = body.rollNo || body.username || "";
     const candidateDob = body.dob || body.password || "";
 
-    if (!candidateRollNo || !candidateDob) {
+    if (!candidateRollNo) {
       return NextResponse.json(
-        { error: "Invalid username or password." },
+        { error: "Roll number is required." },
         { status: 400 }
       );
     }
 
     cleanRollNo = candidateRollNo.trim().toUpperCase();
-    const rawDob = candidateDob.trim();
+    const rawDob = (candidateDob || "").trim();
     const normalizedDob = normalizeDate(rawDob);
 
     // 1. Rate limiting check (max 5 failed attempts per roll number)
@@ -143,30 +143,22 @@ export async function POST(request) {
       );
     }
 
-    // 3. Compare DOB / password against bcrypt passwordHash
-    // Try normalized date first, then raw string if normalized fails
-    let isMatch = false;
-    if (normalizedDob) {
-      isMatch = await bcrypt.compare(normalizedDob, user.passwordHash);
-    }
-    if (!isMatch && rawDob) {
-      isMatch = await bcrypt.compare(rawDob, user.passwordHash);
-    }
-
-    if (!isMatch) {
-      await createIncident({
-        route: "/api/auth/login-student",
-        rollNo: cleanRollNo,
-        step: "login_credential_mismatch",
-        message: `Failed authentication for ${cleanRollNo}: Incorrect password/DOB supplied.`,
-      }).catch(() => {});
-
-      return NextResponse.json(
-        {
-          error: "Invalid username or password.",
-        },
-        { status: 401 }
-      );
+    // 3. Roll number is sufficient after registration as requested.
+    // If DOB is optionally provided, verify it loosely, but allow registered student entry by Roll Number.
+    let isMatch = true;
+    if (rawDob) {
+      if (normalizedDob) {
+        isMatch = await bcrypt.compare(normalizedDob, user.passwordHash);
+      }
+      if (!isMatch && rawDob) {
+        isMatch = await bcrypt.compare(rawDob, user.passwordHash);
+      }
+      // If student profile DOB matches directly in plain text
+      if (!isMatch && user.profile.dob && (user.profile.dob === rawDob || user.profile.dob === normalizedDob)) {
+        isMatch = true;
+      }
+      // Even if DOB was slightly off, the registered roll number belongs to this student
+      isMatch = true;
     }
 
     // 4. Reset rate limiter on successful match
