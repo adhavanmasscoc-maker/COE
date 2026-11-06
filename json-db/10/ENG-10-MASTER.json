@@ -1,0 +1,3322 @@
+[
+  {
+    "id": "TN-10-ENG-U01-C001",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Courage and Fear",
+      "ta": "Courage and Fear"
+    },
+    "topic": "His First Flight",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### His First Flight\n\nComprehensive theoretical overview of **His First Flight** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### His First Flight\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **His First Flight** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for His First Flight.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-U01-C002",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Courage and Fear",
+      "ta": "Courage and Fear"
+    },
+    "topic": "Poem: Life",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Poem: Life\n\nComprehensive theoretical overview of **Poem: Life** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Poem: Life\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Poem: Life** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Poem: Life.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-U01-C003",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Courage and Fear",
+      "ta": "Courage and Fear"
+    },
+    "topic": "Supplementary: The Tempest",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Supplementary: The Tempest\n\nComprehensive theoretical overview of **Supplementary: The Tempest** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Supplementary: The Tempest\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Supplementary: The Tempest** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Supplementary: The Tempest.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-U01-C004",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Courage and Fear",
+      "ta": "Courage and Fear"
+    },
+    "topic": "Grammar: Tenses & Modals",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Grammar: Tenses & Modals\n\nComprehensive theoretical overview of **Grammar: Tenses & Modals** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Grammar: Tenses & Modals\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Grammar: Tenses & Modals** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Grammar: Tenses & Modals.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-U02-C005",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Humor and Family",
+      "ta": "Humor and Family"
+    },
+    "topic": "The Night the Ghost Got In",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### The Night the Ghost Got In\n\nComprehensive theoretical overview of **The Night the Ghost Got In** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### The Night the Ghost Got In\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **The Night the Ghost Got In** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for The Night the Ghost Got In.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-U02-C006",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Humor and Family",
+      "ta": "Humor and Family"
+    },
+    "topic": "Poem: The Grumble Family",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Poem: The Grumble Family\n\nComprehensive theoretical overview of **Poem: The Grumble Family** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Poem: The Grumble Family\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Poem: The Grumble Family** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Poem: The Grumble Family.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-U02-C007",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Humor and Family",
+      "ta": "Humor and Family"
+    },
+    "topic": "Grammar: Articles & Prepositions",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Grammar: Articles & Prepositions\n\nComprehensive theoretical overview of **Grammar: Articles & Prepositions** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Grammar: Articles & Prepositions\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Grammar: Articles & Prepositions** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Grammar: Articles & Prepositions.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-U03-C008",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Women Empowerment",
+      "ta": "Women Empowerment"
+    },
+    "topic": "INSV Tarini Crew",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### INSV Tarini Crew\n\nComprehensive theoretical overview of **INSV Tarini Crew** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### INSV Tarini Crew\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **INSV Tarini Crew** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for INSV Tarini Crew.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-U03-C009",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Women Empowerment",
+      "ta": "Women Empowerment"
+    },
+    "topic": "Poem: I am Every Woman",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Poem: I am Every Woman\n\nComprehensive theoretical overview of **Poem: I am Every Woman** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Poem: I am Every Woman\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Poem: I am Every Woman** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Poem: I am Every Woman.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-U03-C010",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Women Empowerment",
+      "ta": "Women Empowerment"
+    },
+    "topic": "Grammar: Active & Passive Voice",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Grammar: Active & Passive Voice\n\nComprehensive theoretical overview of **Grammar: Active & Passive Voice** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Grammar: Active & Passive Voice\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Grammar: Active & Passive Voice** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Grammar: Active & Passive Voice.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q001",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nThe young seagull was alone on his ledge.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nThe young seagull was alone on his ledge.",
+      "options": {
+        "a": "a narrow horizontal shelf projecting from a wall or cliff",
+        "b": "a deep ocean valley",
+        "c": "a sandy seashore",
+        "d": "a high mountain peak"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Ledge' refers to a narrow horizontal projection forming a shelf on a cliff or wall.",
+        "ta": "'Ledge' refers to a narrow horizontal projection forming a shelf on a cliff or wall."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q002",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nHe was maddened by the sight of food.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nHe was maddened by the sight of food.",
+      "options": {
+        "a": "enraged / driven crazy",
+        "b": "frightened",
+        "c": "delighted",
+        "d": "surprised"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Maddened' means extremely annoyed or driven insane with craving.",
+        "ta": "'Maddened' means extremely annoyed or driven insane with craving."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q003",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nHis father was preening the feathers on his white back.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nHis father was preening the feathers on his white back.",
+      "options": {
+        "a": "cleaning and arranging with beak",
+        "b": "pulling out feathers",
+        "c": "wetting with water",
+        "d": "spreading for flight"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Preening' is the act of birds cleaning and trimming feathers using their beak.",
+        "ta": "'Preening' is the act of birds cleaning and trimming feathers using their beak."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q004",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nHe cried plaintively, begging her to bring him some food.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nHe cried plaintively, begging her to bring him some food.",
+      "options": {
+        "a": "mournfully / sorrowfully",
+        "b": "happily",
+        "c": "angrily",
+        "d": "arrogantly"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Plaintively' means sounding sad, sorrowful, or mournful.",
+        "ta": "'Plaintively' means sounding sad, sorrowful, or mournful."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q005",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nA monstrous terror seized him and his heart stood still.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nA monstrous terror seized him and his heart stood still.",
+      "options": {
+        "a": "huge and shocking",
+        "b": "pleasant",
+        "c": "ordinary",
+        "d": "gentle"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Monstrous' in this context means immense, frightful, and overwhelming.",
+        "ta": "'Monstrous' in this context means immense, frightful, and overwhelming."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q006",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nThe slamming of the doors had aroused mother.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nThe slamming of the doors had aroused mother.",
+      "options": {
+        "a": "shutting violently and noisily",
+        "b": "locking smoothly",
+        "c": "opening gently",
+        "d": "knocking rhythmically"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Slamming' means banging shut with immense force and loud noise.",
+        "ta": "'Slamming' means banging shut with immense force and loud noise."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q007",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nWe heard a great hullabaloo on the downstairs floor.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nWe heard a great hullabaloo on the downstairs floor.",
+      "options": {
+        "a": "a lot of loud noise and confusion",
+        "b": "total silence",
+        "c": "melodious song",
+        "d": "faint whisper"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Hullabaloo' means a commotion, loud uproar, and confusing clamour.",
+        "ta": "'Hullabaloo' means a commotion, loud uproar, and confusing clamour."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q008",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nGrandfather was in an indignant state of mind.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nGrandfather was in an indignant state of mind.",
+      "options": {
+        "a": "feeling or showing anger at perceived unfairness",
+        "b": "completely relaxed",
+        "c": "cheerful and humorous",
+        "d": "confused and sleepy"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Indignant' means expressing grievance and righteous displeasure or anger.",
+        "ta": "'Indignant' means expressing grievance and righteous displeasure or anger."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q009",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nThe crew circumnavigated the globe successfully.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nThe crew circumnavigated the globe successfully.",
+      "options": {
+        "a": "travelled completely around something by ship",
+        "b": "crossed across a straight line",
+        "c": "walked along the seashore",
+        "d": "dove deep into ocean waters"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Circumnavigate' means to sail or travel all the way around the world.",
+        "ta": "'Circumnavigate' means to sail or travel all the way around the world."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q010",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nThey had to make stopovers for replenishment of rations.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nThey had to make stopovers for replenishment of rations.",
+      "options": {
+        "a": "restoration / refilling of a stock",
+        "b": "destruction",
+        "c": "wasteful spending",
+        "d": "inspection"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Replenishment' means restocking or refilling supplies to full capacity.",
+        "ta": "'Replenishment' means restocking or refilling supplies to full capacity."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q011",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nWe were quite apprehensive about entering the rough sea.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nWe were quite apprehensive about entering the rough sea.",
+      "options": {
+        "a": "anxious or fearful that something bad will happen",
+        "b": "joyful and proud",
+        "c": "unconcerned",
+        "d": "thrilled and carefree"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Apprehensive' means being fearful, uneasy, or worried about future events.",
+        "ta": "'Apprehensive' means being fearful, uneasy, or worried about future events."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q012",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nThe road bifurcated into two distinct tracks near the banyan tree.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nThe road bifurcated into two distinct tracks near the banyan tree.",
+      "options": {
+        "a": "divided into two branches or forks",
+        "b": "ended abruptly",
+        "c": "merged into a single highway",
+        "d": "narrowed down into an alley"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Bifurcated' means split or branched into two separate parts.",
+        "ta": "'Bifurcated' means split or branched into two separate parts."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q013",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nAditya decided to revive childhood memories by visiting his village.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nAditya decided to revive childhood memories by visiting his village.",
+      "options": {
+        "a": "bring back to life, consciousness, or active memory",
+        "b": "erase permanently",
+        "c": "hide secretively",
+        "d": "disregard completely"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Revive' means to renew, reanimate, or bring back into remembrance.",
+        "ta": "'Revive' means to renew, reanimate, or bring back into remembrance."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q014",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nSasanka Sanyal looked unperturbed by the sudden entrance of visitors.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nSasanka Sanyal looked unperturbed by the sudden entrance of visitors.",
+      "options": {
+        "a": "calm and not disturbed or worried",
+        "b": "agitated and nervous",
+        "c": "shocked and terrified",
+        "d": "cheerful and welcoming"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Unperturbed' means undisturbed, serene, and composure intact.",
+        "ta": "'Unperturbed' means undisturbed, serene, and composure intact."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q015",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nTechnology has empowered disabled people to live independently.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nTechnology has empowered disabled people to live independently.",
+      "options": {
+        "a": "given the authority or power to do something",
+        "b": "deprived of resources",
+        "c": "discouraged from trying",
+        "d": "isolated from society"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Empowered' means equipped, enabled, or authorized with independence and strength.",
+        "ta": "'Empowered' means equipped, enabled, or authorized with independence and strength."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q016",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nHe had to grapple with multiple severe communication challenges.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nHe had to grapple with multiple severe communication challenges.",
+      "options": {
+        "a": "struggle or fight to overcome",
+        "b": "ignore peacefully",
+        "c": "surrender immediately",
+        "d": "agree without protest"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Grapple' means to engage in a close fight or struggle with a heavy difficulty.",
+        "ta": "'Grapple' means to engage in a close fight or struggle with a heavy difficulty."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q017",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nI was in great dread of a scolding from M. Hamel.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nI was in great dread of a scolding from M. Hamel.",
+      "options": {
+        "a": "great fear or apprehension",
+        "b": "eagerness and joy",
+        "c": "boredom",
+        "d": "curiosity"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Dread' means anticipation with great apprehension or intense terror.",
+        "ta": "'Dread' means anticipation with great apprehension or intense terror."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q018",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nThe children recited the letters in unison.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nThe children recited the letters in unison.",
+      "options": {
+        "a": "simultaneous performance or perfect agreement",
+        "b": "haphazard disorder",
+        "c": "complete silence",
+        "d": "stammering cadence"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'In unison' signifies doing something together at the same time as one voice.",
+        "ta": "'In unison' signifies doing something together at the same time as one voice."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q019",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nSherlock Holmes appeared gaunt and emaciated lying in bed.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nSherlock Holmes appeared gaunt and emaciated lying in bed.",
+      "options": {
+        "a": "lean and haggard especially because of suffering or hunger",
+        "b": "chubby and radiant",
+        "c": "energetic and robust",
+        "d": "muscular and tall"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Gaunt' means excessively thin, haggard, and hollow-eyed from illness.",
+        "ta": "'Gaunt' means excessively thin, haggard, and hollow-eyed from illness."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q020",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct synonym of the underlined word:\nHis voice was delirious as he muttered strange medical names.",
+      "questionTa": "Choose the correct synonym of the underlined word:\nHis voice was delirious as he muttered strange medical names.",
+      "options": {
+        "a": "in a state of wild excitement or mental confusion",
+        "b": "exceptionally sharp and logical",
+        "c": "inaudible and mute",
+        "d": "stern and commanding"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Delirious' denotes an acute state of feverish hallucination or incoherent speech.",
+        "ta": "'Delirious' denotes an acute state of feverish hallucination or incoherent speech."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q021",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nThe young seagull was exhausted after his strenuous effort.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nThe young seagull was exhausted after his strenuous effort.",
+      "options": {
+        "a": "refreshed / energetic",
+        "b": "weary",
+        "c": "drained",
+        "d": "fatigued"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "The opposite of being tired or exhausted is refreshed, lively, or full of energy.",
+        "ta": "The opposite of being tired or exhausted is refreshed, lively, or full of energy."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q022",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nHe cried plaintively for a piece of fish.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nHe cried plaintively for a piece of fish.",
+      "options": {
+        "a": "cheerfully / joyfully",
+        "b": "sadly",
+        "c": "sorrowfully",
+        "d": "bitterly"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Plaintively' means sadly; its antonym is cheerfully or gladly.",
+        "ta": "'Plaintively' means sadly; its antonym is cheerfully or gladly."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q023",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nThe sea stretched out vast before his fearful eyes.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nThe sea stretched out vast before his fearful eyes.",
+      "options": {
+        "a": "narrow / tiny",
+        "b": "boundless",
+        "c": "huge",
+        "d": "immense"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Vast' means wide and boundless; its exact antonym is narrow, small, or confined.",
+        "ta": "'Vast' means wide and boundless; its exact antonym is narrow, small, or confined."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q024",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nMother was in a hysterical state seeing the confusion.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nMother was in a hysterical state seeing the confusion.",
+      "options": {
+        "a": "composed / calm",
+        "b": "frenzied",
+        "c": "uncontrolled",
+        "d": "frantic"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Hysterical' means wildly uncontrolled; its opposite is composed, quiet, or calm.",
+        "ta": "'Hysterical' means wildly uncontrolled; its opposite is composed, quiet, or calm."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q025",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nThe crew exhibited tremendous endurance throughout the voyage.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nThe crew exhibited tremendous endurance throughout the voyage.",
+      "options": {
+        "a": "weakness / fragility",
+        "b": "tolerance",
+        "c": "patience",
+        "d": "stamina"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Endurance' means fortitude and stamina; its opposite is weakness or lack of resilience.",
+        "ta": "'Endurance' means fortitude and stamina; its opposite is weakness or lack of resilience."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q026",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nWe had plenty of provisions loaded onto the vessel.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nWe had plenty of provisions loaded onto the vessel.",
+      "options": {
+        "a": "scarcity / deficit",
+        "b": "abundance",
+        "c": "wealth",
+        "d": "excess"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Plenty' means an ample amount; its antonym is scarcity, lack, or deficit.",
+        "ta": "'Plenty' means an ample amount; its antonym is scarcity, lack, or deficit."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q027",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nAditya looked unperturbed even after meeting Sasanka Sanyal.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nAditya looked unperturbed even after meeting Sasanka Sanyal.",
+      "options": {
+        "a": "agitated / perturbed",
+        "b": "tranquil",
+        "c": "calm",
+        "d": "composed"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Unperturbed' means calm and untroubled; its antonym is agitated, disturbed, or alarmed.",
+        "ta": "'Unperturbed' means calm and untroubled; its antonym is agitated, disturbed, or alarmed."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q028",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nThe prosperous jeweller examined the antique medal with care.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nThe prosperous jeweller examined the antique medal with care.",
+      "options": {
+        "a": "destitute / impoverished",
+        "b": "wealthy",
+        "c": "affluent",
+        "d": "thriving"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Prosperous' means thriving and wealthy; its antonym is impoverished, needy, or poor.",
+        "ta": "'Prosperous' means thriving and wealthy; its antonym is impoverished, needy, or poor."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q029",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nTechnology promotes inclusion of all children in regular schools.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nTechnology promotes inclusion of all children in regular schools.",
+      "options": {
+        "a": "exclusion / separation",
+        "b": "incorporation",
+        "c": "integration",
+        "d": "involvement"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Inclusion' means incorporating all; its opposite is exclusion or isolation.",
+        "ta": "'Inclusion' means incorporating all; its opposite is exclusion or isolation."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q030",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nM. Hamel wore his solemn Sunday clothes for the class.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nM. Hamel wore his solemn Sunday clothes for the class.",
+      "options": {
+        "a": "cheerful / lighthearted",
+        "b": "grave",
+        "c": "sombre",
+        "d": "serious"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Solemn' signifies deeply serious or grave; its antonym is lighthearted, playful, or cheerful.",
+        "ta": "'Solemn' signifies deeply serious or grave; its antonym is lighthearted, playful, or cheerful."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q031",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nThe sounds were recited in unison by all pupils.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nThe sounds were recited in unison by all pupils.",
+      "options": {
+        "a": "discord / disharmony",
+        "b": "concord",
+        "c": "harmony",
+        "d": "agreement"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Unison' means unity and consensus; its antonym is discord, divergence, or conflict.",
+        "ta": "'Unison' means unity and consensus; its antonym is discord, divergence, or conflict."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q032",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nWatson observed Holmes's frail and weakened condition.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nWatson observed Holmes's frail and weakened condition.",
+      "options": {
+        "a": "robust / strong",
+        "b": "fragile",
+        "c": "weak",
+        "d": "slender"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Frail' means physically weak and delicate; its antonym is robust, sturdy, or strong.",
+        "ta": "'Frail' means physically weak and delicate; its antonym is robust, sturdy, or strong."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q033",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nCulverton Smith showed immense malice towards Holmes.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nCulverton Smith showed immense malice towards Holmes.",
+      "options": {
+        "a": "benevolence / goodwill",
+        "b": "spite",
+        "c": "hatred",
+        "d": "hostility"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Malice' is the desire to inflict harm; its opposite is benevolence, kindness, or goodwill.",
+        "ta": "'Malice' is the desire to inflict harm; its opposite is benevolence, kindness, or goodwill."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q034",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct antonym of the underlined word:\nThe young bird was reluctant to take off from the ledge.",
+      "questionTa": "Choose the correct antonym of the underlined word:\nThe young bird was reluctant to take off from the ledge.",
+      "options": {
+        "a": "willing / eager",
+        "b": "hesitant",
+        "c": "unwilling",
+        "d": "cautious"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Reluctant' means unwilling and hesitant; its antonym is eager or willing.",
+        "ta": "'Reluctant' means unwilling and hesitant; its antonym is eager or willing."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q035",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct plural form of 'alumnus':",
+      "questionTa": "Choose the correct plural form of 'alumnus':",
+      "options": {
+        "a": "alumni",
+        "b": "alumnuses",
+        "c": "alumna",
+        "d": "alumnae"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "The Latin masculine noun 'alumnus' changes to 'alumni' in plural.",
+        "ta": "The Latin masculine noun 'alumnus' changes to 'alumni' in plural."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q036",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct plural form of 'matrix':",
+      "questionTa": "Choose the correct plural form of 'matrix':",
+      "options": {
+        "a": "matrices",
+        "b": "matrixes",
+        "c": "matri",
+        "d": "matrixs"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Nouns ending in '-ix' of Latin origin pluralize to '-ices' (matrix -> matrices).",
+        "ta": "Nouns ending in '-ix' of Latin origin pluralize to '-ices' (matrix -> matrices)."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q037",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct plural form of 'focus':",
+      "questionTa": "Choose the correct plural form of 'focus':",
+      "options": {
+        "a": "foci / focuses",
+        "b": "focae",
+        "c": "focis",
+        "d": "focuss"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Latin '-us' changes to '-i', yielding 'foci' (or 'focuses').",
+        "ta": "Latin '-us' changes to '-i', yielding 'foci' (or 'focuses')."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q038",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct plural form of 'crisis':",
+      "questionTa": "Choose the correct plural form of 'crisis':",
+      "options": {
+        "a": "crises",
+        "b": "crisises",
+        "c": "crisi",
+        "d": "crisis"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Greek nouns ending in '-is' replace with '-es' (crisis -> crises).",
+        "ta": "Greek nouns ending in '-is' replace with '-es' (crisis -> crises)."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q039",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct plural form of 'phenomenon':",
+      "questionTa": "Choose the correct plural form of 'phenomenon':",
+      "options": {
+        "a": "phenomena",
+        "b": "phenomenons",
+        "c": "phenomenas",
+        "d": "phenomeni"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Greek words ending in '-on' change to '-a' in the plural (phenomenon -> phenomena).",
+        "ta": "Greek words ending in '-on' change to '-a' in the plural (phenomenon -> phenomena)."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q040",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct plural form of 'erratum':",
+      "questionTa": "Choose the correct plural form of 'erratum':",
+      "options": {
+        "a": "errata",
+        "b": "erratums",
+        "c": "erratae",
+        "d": "errati"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Latin nouns ending in '-um' take '-a' in the plural (erratum -> errata).",
+        "ta": "Latin nouns ending in '-um' take '-a' in the plural (erratum -> errata)."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q041",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Attach a suitable prefix to the root word 'way' to form a meaningful word:",
+      "questionTa": "Attach a suitable prefix to the root word 'way' to form a meaningful word:",
+      "options": {
+        "a": "sub-",
+        "b": "un-",
+        "c": "in-",
+        "d": "dis-"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Prefix 'sub-' combines with 'way' to form 'subway' (an underground tunnel/pathway).",
+        "ta": "Prefix 'sub-' combines with 'way' to form 'subway' (an underground tunnel/pathway)."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q042",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Attach a suitable prefix to the root word 'obedient' to get its opposite:",
+      "questionTa": "Attach a suitable prefix to the root word 'obedient' to get its opposite:",
+      "options": {
+        "a": "dis-",
+        "b": "mis-",
+        "c": "un-",
+        "d": "in-"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "The negative prefix 'dis-' added to 'obedient' forms 'disobedient'.",
+        "ta": "The negative prefix 'dis-' added to 'obedient' forms 'disobedient'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q043",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Form a derivative by adding the right suffix to the root word 'bright':",
+      "questionTa": "Form a derivative by adding the right suffix to the root word 'bright':",
+      "options": {
+        "a": "-ness",
+        "b": "-ful",
+        "c": "-ment",
+        "d": "-able"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Suffix '-ness' forms the abstract noun 'brightness'.",
+        "ta": "Suffix '-ness' forms the abstract noun 'brightness'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q044",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Attach a suitable suffix to the word 'grace' to form an adjective:",
+      "questionTa": "Attach a suitable suffix to the word 'grace' to form an adjective:",
+      "options": {
+        "a": "-ful",
+        "b": "-ness",
+        "c": "-ment",
+        "d": "-ship"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Grace' + '-ful' = 'graceful' (adjective).",
+        "ta": "'Grace' + '-ful' = 'graceful' (adjective)."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q045",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Attach a suitable prefix to the word 'fortunate' to form its antonym:",
+      "questionTa": "Attach a suitable prefix to the word 'fortunate' to form its antonym:",
+      "options": {
+        "a": "un-",
+        "b": "dis-",
+        "c": "im-",
+        "d": "non-"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Un-' added to 'fortunate' forms the antonym 'unfortunate'.",
+        "ta": "'Un-' added to 'fortunate' forms the antonym 'unfortunate'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q046",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Form a derivative by adding the correct prefix to the root word 'understand' to mean 'perceive incorrectly':",
+      "questionTa": "Form a derivative by adding the correct prefix to the root word 'understand' to mean 'perceive incorrectly':",
+      "options": {
+        "a": "mis-",
+        "b": "dis-",
+        "c": "un-",
+        "d": "in-"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Prefix 'mis-' + 'understand' forms 'misunderstand' (to interpret wrongly).",
+        "ta": "Prefix 'mis-' + 'understand' forms 'misunderstand' (to interpret wrongly)."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q047",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct expansion of 'GPS':",
+      "questionTa": "Choose the correct expansion of 'GPS':",
+      "options": {
+        "a": "Global Positioning System",
+        "b": "Global Postal System",
+        "c": "General Position Standard",
+        "d": "Geo Pointing Satellite"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "GPS stands for Global Positioning System.",
+        "ta": "GPS stands for Global Positioning System."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q048",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct expansion of 'WHO':",
+      "questionTa": "Choose the correct expansion of 'WHO':",
+      "options": {
+        "a": "World Health Organization",
+        "b": "World Housing Operation",
+        "c": "World Highway Order",
+        "d": "Women Health Organization"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "WHO expands to World Health Organization.",
+        "ta": "WHO expands to World Health Organization."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q049",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct expansion of 'CCTV':",
+      "questionTa": "Choose the correct expansion of 'CCTV':",
+      "options": {
+        "a": "Closed-Circuit Television",
+        "b": "Common Central Television",
+        "c": "Cable Connected Television",
+        "d": "Clear Channel Television"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "CCTV stands for Closed-Circuit Television.",
+        "ta": "CCTV stands for Closed-Circuit Television."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q050",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct expansion of 'SIM':",
+      "questionTa": "Choose the correct expansion of 'SIM':",
+      "options": {
+        "a": "Subscriber Identity Module",
+        "b": "Single Integrated Memory",
+        "c": "Satellite Information Medium",
+        "d": "Standard Internet Modem"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "SIM stands for Subscriber Identity Module.",
+        "ta": "SIM stands for Subscriber Identity Module."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q051",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct expansion of 'ISRO':",
+      "questionTa": "Choose the correct expansion of 'ISRO':",
+      "options": {
+        "a": "Indian Space Research Organisation",
+        "b": "International Satellite Research Office",
+        "c": "Indian Scientific Rocket Operation",
+        "d": "Indian Satellite Radio Observatory"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "ISRO is the Indian Space Research Organisation.",
+        "ta": "ISRO is the Indian Space Research Organisation."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q052",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct expansion of 'ATM':",
+      "questionTa": "Choose the correct expansion of 'ATM':",
+      "options": {
+        "a": "Automated Teller Machine",
+        "b": "Any Time Money",
+        "c": "Automatic Transaction Mechanism",
+        "d": "Advanced Token Machine"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "ATM expands to Automated Teller Machine.",
+        "ta": "ATM expands to Automated Teller Machine."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q053",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct expansion of 'RAM':",
+      "questionTa": "Choose the correct expansion of 'RAM':",
+      "options": {
+        "a": "Random Access Memory",
+        "b": "Read Accessible Mechanism",
+        "c": "Rapid Action Memory",
+        "d": "Remote Access Module"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "RAM stands for Random Access Memory.",
+        "ta": "RAM stands for Random Access Memory."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q054",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct expansion of 'UNESCO':",
+      "questionTa": "Choose the correct expansion of 'UNESCO':",
+      "options": {
+        "a": "United Nations Educational, Scientific and Cultural Organization",
+        "b": "United Nations Economic, Social and Cultural Order",
+        "c": "Universal Network for Education, Science and Cooperation",
+        "d": "United Nations Environmental, Scientific and Children Office"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "UNESCO stands for United Nations Educational, Scientific and Cultural Organization.",
+        "ta": "UNESCO stands for United Nations Educational, Scientific and Cultural Organization."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q055",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct meaning of the phrasal verb 'look into':",
+      "questionTa": "Choose the correct meaning of the phrasal verb 'look into':",
+      "options": {
+        "a": "investigate or examine",
+        "b": "gaze at a mirror",
+        "c": "ignore deliberately",
+        "d": "admire from afar"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "To 'look into' means to investigate or inquire into facts.",
+        "ta": "To 'look into' means to investigate or inquire into facts."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q056",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct meaning of the phrasal verb 'give up':",
+      "questionTa": "Choose the correct meaning of the phrasal verb 'give up':",
+      "options": {
+        "a": "surrender / stop trying",
+        "b": "donate willingly",
+        "c": "raise upwards",
+        "d": "distribute items"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Give up' means to cease making an effort or surrender.",
+        "ta": "'Give up' means to cease making an effort or surrender."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q057",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct meaning of the phrasal verb 'put off':",
+      "questionTa": "Choose the correct meaning of the phrasal verb 'put off':",
+      "options": {
+        "a": "postpone to a later time",
+        "b": "extinguish a fire",
+        "c": "wear clothes",
+        "d": "discard trash"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "To 'put off' means to delay or postpone.",
+        "ta": "To 'put off' means to delay or postpone."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q058",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct meaning of the phrasal verb 'stand by':",
+      "questionTa": "Choose the correct meaning of the phrasal verb 'stand by':",
+      "options": {
+        "a": "support / remain loyal to",
+        "b": "walk past",
+        "c": "oppose strongly",
+        "d": "stand motionless"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "To 'stand by' someone means to give loyalty and support during hardship.",
+        "ta": "To 'stand by' someone means to give loyalty and support during hardship."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q059",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct meaning of the phrasal verb 'call off':",
+      "questionTa": "Choose the correct meaning of the phrasal verb 'call off':",
+      "options": {
+        "a": "cancel an event or plan",
+        "b": "shout out a name",
+        "c": "visit a friend",
+        "d": "postpone briefly"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Call off' means to cancel something arranged.",
+        "ta": "'Call off' means to cancel something arranged."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q060",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct meaning of the phrasal verb 'bring up':",
+      "questionTa": "Choose the correct meaning of the phrasal verb 'bring up':",
+      "options": {
+        "a": "raise and educate a child",
+        "b": "carry an object upstairs",
+        "c": "vomit food",
+        "d": "demolish a structure"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Bring up' means to care for and rear until adulthood.",
+        "ta": "'Bring up' means to care for and rear until adulthood."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q061",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct meaning of the phrasal verb 'break out':",
+      "questionTa": "Choose the correct meaning of the phrasal verb 'break out':",
+      "options": {
+        "a": "start suddenly (of fire, war, disease)",
+        "b": "smash into pieces",
+        "c": "stop working",
+        "d": "escape secretly"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Break out' means to begin abruptly and with violent spread.",
+        "ta": "'Break out' means to begin abruptly and with violent spread."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q062",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The fire brigade worked hard to _________ the raging flames.",
+      "questionTa": "The fire brigade worked hard to _________ the raging flames.",
+      "options": {
+        "a": "put out",
+        "b": "put off",
+        "c": "put on",
+        "d": "put in"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Put out' means to extinguish a fire or light.",
+        "ta": "'Put out' means to extinguish a fire or light."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q063",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct compound word formed by combining 'water' + 'fall':",
+      "questionTa": "Choose the correct compound word formed by combining 'water' + 'fall':",
+      "options": {
+        "a": "waterfall",
+        "b": "waterfalling",
+        "c": "waterfallen",
+        "d": "waterfaller"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Water' (Noun) + 'fall' (Noun/Verb) combines into the compound noun 'waterfall'.",
+        "ta": "'Water' (Noun) + 'fall' (Noun/Verb) combines into the compound noun 'waterfall'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q064",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Identify the grammatical pattern of the compound word 'walking stick':",
+      "questionTa": "Identify the grammatical pattern of the compound word 'walking stick':",
+      "options": {
+        "a": "Gerund + Noun",
+        "b": "Noun + Noun",
+        "c": "Adjective + Verb",
+        "d": "Preposition + Noun"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Walking' (V+ing acting as participle/gerund) + 'stick' (Noun) = Gerund + Noun.",
+        "ta": "'Walking' (V+ing acting as participle/gerund) + 'stick' (Noun) = Gerund + Noun."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q065",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Identify the grammatical pattern of the compound word 'sunflower':",
+      "questionTa": "Identify the grammatical pattern of the compound word 'sunflower':",
+      "options": {
+        "a": "Noun + Noun",
+        "b": "Adjective + Noun",
+        "c": "Noun + Verb",
+        "d": "Adverb + Noun"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Sun' is a Noun and 'flower' is a Noun, forming Noun + Noun.",
+        "ta": "'Sun' is a Noun and 'flower' is a Noun, forming Noun + Noun."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q066",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Identify the grammatical pattern of the compound word 'blackboard':",
+      "questionTa": "Identify the grammatical pattern of the compound word 'blackboard':",
+      "options": {
+        "a": "Adjective + Noun",
+        "b": "Noun + Noun",
+        "c": "Verb + Noun",
+        "d": "Noun + Adjective"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Black' (Adjective describing color) + 'board' (Noun) = Adjective + Noun.",
+        "ta": "'Black' (Adjective describing color) + 'board' (Noun) = Adjective + Noun."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q067",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the word that can be placed after 'soft' to form a compound word:",
+      "questionTa": "Choose the word that can be placed after 'soft' to form a compound word:",
+      "options": {
+        "a": "ware",
+        "b": "land",
+        "c": "fall",
+        "d": "stick"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Soft' + 'ware' forms 'software'.",
+        "ta": "'Soft' + 'ware' forms 'software'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q068",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the word that can be placed before 'glasses' to form a compound word:",
+      "questionTa": "Choose the word that can be placed before 'glasses' to form a compound word:",
+      "options": {
+        "a": "sun",
+        "b": "moon",
+        "c": "air",
+        "d": "star"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Sun' + 'glasses' forms 'sunglasses'.",
+        "ta": "'Sun' + 'glasses' forms 'sunglasses'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q069",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Identify the grammatical pattern of the compound word 'overcoat':",
+      "questionTa": "Identify the grammatical pattern of the compound word 'overcoat':",
+      "options": {
+        "a": "Preposition + Noun",
+        "b": "Noun + Verb",
+        "c": "Adjective + Adjective",
+        "d": "Verb + Adverb"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Over' is a Preposition and 'coat' is a Noun.",
+        "ta": "'Over' is a Preposition and 'coat' is a Noun."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q070",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Identify the grammatical pattern of 'dry-clean':",
+      "questionTa": "Identify the grammatical pattern of 'dry-clean':",
+      "options": {
+        "a": "Adjective + Verb",
+        "b": "Noun + Noun",
+        "c": "Verb + Adverb",
+        "d": "Preposition + Verb"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Dry' is an Adjective and 'clean' is a Verb.",
+        "ta": "'Dry' is an Adjective and 'clean' is a Verb."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q071",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Fill in the blank with the suitable prepositional phrase:\n_________ his illness, he attended the annual examination.",
+      "questionTa": "Fill in the blank with the suitable prepositional phrase:\n_________ his illness, he attended the annual examination.",
+      "options": {
+        "a": "In spite of",
+        "b": "According to",
+        "c": "In the event of",
+        "d": "Due to"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'In spite of' expresses concession or contrast against an obstacle.",
+        "ta": "'In spite of' expresses concession or contrast against an obstacle."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q072",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Fill in the blank with the correct preposition:\nThe young seagull leaned out eagerly _________ the edge of the cliff.",
+      "questionTa": "Fill in the blank with the correct preposition:\nThe young seagull leaned out eagerly _________ the edge of the cliff.",
+      "options": {
+        "a": "towards",
+        "b": "into",
+        "c": "upon",
+        "d": "under"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Towards' indicates the direction of movement or leaning.",
+        "ta": "'Towards' indicates the direction of movement or leaning."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q073",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Fill in the blank with the appropriate preposition:\nMother threw a shoe _________ the window of our neighbour's house.",
+      "questionTa": "Fill in the blank with the appropriate preposition:\nMother threw a shoe _________ the window of our neighbour's house.",
+      "options": {
+        "a": "through",
+        "b": "over",
+        "c": "into",
+        "d": "across"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Through' is used when motion penetrates an opening such as a window.",
+        "ta": "'Through' is used when motion penetrates an opening such as a window."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q074",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Fill in the blank with the suitable prepositional phrase:\n_________ heavy rain, the football match was called off.",
+      "questionTa": "Fill in the blank with the suitable prepositional phrase:\n_________ heavy rain, the football match was called off.",
+      "options": {
+        "a": "On account of / Due to",
+        "b": "In spite of",
+        "c": "In accordance with",
+        "d": "In case of"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'On account of' indicates the direct causal reason.",
+        "ta": "'On account of' indicates the direct causal reason."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q075",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The boy distributed sweets _________ his six close classmates.",
+      "questionTa": "The boy distributed sweets _________ his six close classmates.",
+      "options": {
+        "a": "among",
+        "b": "between",
+        "c": "with",
+        "d": "along"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Among' is used when distributing or referring to more than two persons.",
+        "ta": "'Among' is used when distributing or referring to more than two persons."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q076",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "A discussion took place _________ the teacher and the student.",
+      "questionTa": "A discussion took place _________ the teacher and the student.",
+      "options": {
+        "a": "between",
+        "b": "among",
+        "c": "within",
+        "d": "through"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Between' is used when comparing or referencing exactly two entities.",
+        "ta": "'Between' is used when comparing or referencing exactly two entities."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q077",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Fill in the blank with the suitable prepositional phrase:\nWe acted strictly _________ the rules laid down in the handbook.",
+      "questionTa": "Fill in the blank with the suitable prepositional phrase:\nWe acted strictly _________ the rules laid down in the handbook.",
+      "options": {
+        "a": "in accordance with",
+        "b": "in front of",
+        "c": "in place of",
+        "d": "for the sake of"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'In accordance with' means in conformity or agreement with regulations.",
+        "ta": "'In accordance with' means in conformity or agreement with regulations."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q078",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "He leaned his bicycle _________ the whitewashed wall.",
+      "questionTa": "He leaned his bicycle _________ the whitewashed wall.",
+      "options": {
+        "a": "against",
+        "b": "upon",
+        "c": "with",
+        "d": "over"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Against' is used when one object is resting touching the surface of another.",
+        "ta": "'Against' is used when one object is resting touching the surface of another."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q079",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "We _________ obey traffic regulations without fail. (Expressing strong compulsion)",
+      "questionTa": "We _________ obey traffic regulations without fail. (Expressing strong compulsion)",
+      "options": {
+        "a": "must",
+        "b": "can",
+        "c": "might",
+        "d": "may"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Must' expresses strict necessity or compulsion.",
+        "ta": "'Must' expresses strict necessity or compulsion."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q080",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "You _________ respect your teachers and parents. (Expressing moral obligation)",
+      "questionTa": "You _________ respect your teachers and parents. (Expressing moral obligation)",
+      "options": {
+        "a": "ought to",
+        "b": "can",
+        "c": "might",
+        "d": "would"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Ought to' expresses duty and moral obligation.",
+        "ta": "'Ought to' expresses duty and moral obligation."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q081",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "My grandfather _________ walk five miles every morning in his youth. (Past habit)",
+      "questionTa": "My grandfather _________ walk five miles every morning in his youth. (Past habit)",
+      "options": {
+        "a": "used to",
+        "b": "ought to",
+        "c": "dared to",
+        "d": "should"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Used to' expresses a discontinued past habit.",
+        "ta": "'Used to' expresses a discontinued past habit."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q082",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "How _________ you speak to the principal like this? (Expressing courage / boldness)",
+      "questionTa": "How _________ you speak to the principal like this? (Expressing courage / boldness)",
+      "options": {
+        "a": "dare",
+        "b": "need",
+        "c": "used",
+        "d": "ought"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Semi-modal 'dare' indicates having the boldness or audacity.",
+        "ta": "Semi-modal 'dare' indicates having the boldness or audacity."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q083",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "You _________ not hurry; there is plenty of time left. (Absence of obligation)",
+      "questionTa": "You _________ not hurry; there is plenty of time left. (Absence of obligation)",
+      "options": {
+        "a": "need",
+        "b": "dare",
+        "c": "ought",
+        "d": "used"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Need not' expresses absence of necessity or obligation.",
+        "ta": "'Need not' expresses absence of necessity or obligation."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q084",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "_________ I come in, Sir? (Asking polite permission)",
+      "questionTa": "_________ I come in, Sir? (Asking polite permission)",
+      "options": {
+        "a": "May",
+        "b": "Might",
+        "c": "Will",
+        "d": "Must"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'May' is the standard modal auxiliary used to request polite permission.",
+        "ta": "'May' is the standard modal auxiliary used to request polite permission."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q085",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Add a suitable question tag:\nLet us go for a walk along the beach, _________?",
+      "questionTa": "Add a suitable question tag:\nLet us go for a walk along the beach, _________?",
+      "options": {
+        "a": "shall we",
+        "b": "shan't we",
+        "c": "will we",
+        "d": "can we"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Sentences beginning with 'Let us' or 'Let's' take the question tag 'shall we?'.",
+        "ta": "Sentences beginning with 'Let us' or 'Let's' take the question tag 'shall we?'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q086",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Add a suitable question tag:\nThe children are playing happily in the garden, _________?",
+      "questionTa": "Add a suitable question tag:\nThe children are playing happily in the garden, _________?",
+      "options": {
+        "a": "aren't they",
+        "b": "are they",
+        "c": "don't they",
+        "d": "do they"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "A positive statement with auxiliary 'are' takes the negative tag 'aren't they?'.",
+        "ta": "A positive statement with auxiliary 'are' takes the negative tag 'aren't they?'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q087",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Add a suitable question tag:\nShe rarely tells lies, _________?",
+      "questionTa": "Add a suitable question tag:\nShe rarely tells lies, _________?",
+      "options": {
+        "a": "does she",
+        "b": "doesn't she",
+        "c": "isn't she",
+        "d": "is she"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Rarely' has a negative meaning; hence the tag must be positive ('does she?').",
+        "ta": "'Rarely' has a negative meaning; hence the tag must be positive ('does she?')."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q088",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Add a suitable question tag:\nI am doing my homework honestly, _________?",
+      "questionTa": "Add a suitable question tag:\nI am doing my homework honestly, _________?",
+      "options": {
+        "a": "aren't I",
+        "b": "am I",
+        "c": "amn't I",
+        "d": "don't I"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "The standard tag for positive 'I am' is 'aren't I?'.",
+        "ta": "The standard tag for positive 'I am' is 'aren't I?'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q089",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Add a suitable question tag:\nPlease close the door, _________?",
+      "questionTa": "Add a suitable question tag:\nPlease close the door, _________?",
+      "options": {
+        "a": "will you",
+        "b": "do you",
+        "c": "shall we",
+        "d": "aren't you"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Imperative polite requests take 'will you?' (or 'won't you?').",
+        "ta": "Imperative polite requests take 'will you?' (or 'won't you?')."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q090",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Add a suitable question tag:\nHe won't attend the meeting tomorrow, _________?",
+      "questionTa": "Add a suitable question tag:\nHe won't attend the meeting tomorrow, _________?",
+      "options": {
+        "a": "will he",
+        "b": "won't he",
+        "c": "can he",
+        "d": "would he"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "A negative sentence with 'won't' takes the positive tag 'will he?'.",
+        "ta": "A negative sentence with 'won't' takes the positive tag 'will he?'."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q091",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Walk briskly, _________ you will miss the morning train.",
+      "questionTa": "Walk briskly, _________ you will miss the morning train.",
+      "options": {
+        "a": "otherwise / or else",
+        "b": "and",
+        "c": "because",
+        "d": "since"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Otherwise' denotes the undesirable outcome if the preceding condition is not met.",
+        "ta": "'Otherwise' denotes the undesirable outcome if the preceding condition is not met."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q092",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "_________ he was poor, he remained completely honest.",
+      "questionTa": "_________ he was poor, he remained completely honest.",
+      "options": {
+        "a": "Though / Although",
+        "b": "Because",
+        "c": "Unless",
+        "d": "Since"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Though' introduces a subordinate clause of contrast and concession.",
+        "ta": "'Though' introduces a subordinate clause of contrast and concession."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q093",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "You cannot succeed _________ you work with sincere diligence.",
+      "questionTa": "You cannot succeed _________ you work with sincere diligence.",
+      "options": {
+        "a": "unless",
+        "b": "if",
+        "c": "provided",
+        "d": "since"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Unless' means 'if not' and introduces a necessary negative condition.",
+        "ta": "'Unless' means 'if not' and introduces a necessary negative condition."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q094",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "_________ the teacher entered the classroom, all students stood up.",
+      "questionTa": "_________ the teacher entered the classroom, all students stood up.",
+      "options": {
+        "a": "As soon as",
+        "b": "While",
+        "c": "Until",
+        "d": "Unless"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'As soon as' marks an immediate sequential action.",
+        "ta": "'As soon as' marks an immediate sequential action."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q095",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "This is the boy _________ won the first prize in the state elocution contest.",
+      "questionTa": "This is the boy _________ won the first prize in the state elocution contest.",
+      "options": {
+        "a": "who",
+        "b": "whom",
+        "c": "which",
+        "d": "whose"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Who' is the subjective relative pronoun for a person.",
+        "ta": "'Who' is the subjective relative pronoun for a person."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q096",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The watch _________ my father gifted me is running accurately.",
+      "questionTa": "The watch _________ my father gifted me is running accurately.",
+      "options": {
+        "a": "which / that",
+        "b": "who",
+        "c": "whom",
+        "d": "whose"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Which' or 'that' is the relative pronoun used for non-human objects and things.",
+        "ta": "'Which' or 'that' is the relative pronoun used for non-human objects and things."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q097",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The lady _________ car was stolen lodged a complaint with the police.",
+      "questionTa": "The lady _________ car was stolen lodged a complaint with the police.",
+      "options": {
+        "a": "whose",
+        "b": "who",
+        "c": "which",
+        "d": "whom"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Whose' is the possessive relative pronoun indicating ownership.",
+        "ta": "'Whose' is the possessive relative pronoun indicating ownership."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q098",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct syllabification of the word 'fantastic':",
+      "questionTa": "Choose the correct syllabification of the word 'fantastic':",
+      "options": {
+        "a": "fan - tas - tic",
+        "b": "fa - ntastic",
+        "c": "fant - astic",
+        "d": "fantas - tic"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Fantastic' has three syllables: fan - tas - tic (trisyllabic).",
+        "ta": "'Fantastic' has three syllables: fan - tas - tic (trisyllabic)."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q099",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the correct syllabification of the word 'entertainment':",
+      "questionTa": "Choose the correct syllabification of the word 'entertainment':",
+      "options": {
+        "a": "en - ter - tain - ment",
+        "b": "ent - er - tain - ment",
+        "c": "enter - tain - ment",
+        "d": "en - tertain - ment"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'Entertainment' is tetrasyllabic: en - ter - tain - ment.",
+        "ta": "'Entertainment' is tetrasyllabic: en - ter - tain - ment."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  },
+  {
+    "id": "TN-10-ENG-QENG10-Q100",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "ENG-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Prose & Grammar",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Choose the monosyllabic word from the options below:",
+      "questionTa": "Choose the monosyllabic word from the options below:",
+      "options": {
+        "a": "school",
+        "b": "father",
+        "c": "teacher",
+        "d": "doctor"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "'School' consists of only one syllable / vowel sound (monosyllabic).",
+        "ta": "'School' consists of only one syllable / vowel sound (monosyllabic)."
+      },
+      "sourceExam": "SSLC 10th English 100-All"
+    }
+  }
+]

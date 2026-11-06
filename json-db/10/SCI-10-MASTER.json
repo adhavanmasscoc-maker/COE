@@ -1,0 +1,1816 @@
+[
+  {
+    "id": "TN-10-SCI-U01-C001",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion",
+      "ta": "Laws of Motion"
+    },
+    "topic": "Inertia Types",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Inertia Types\n\nComprehensive theoretical overview of **Inertia Types** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Inertia Types\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Inertia Types** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Inertia Types.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U01-C002",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion",
+      "ta": "Laws of Motion"
+    },
+    "topic": "Newton's Laws",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Newton's Laws\n\nComprehensive theoretical overview of **Newton's Laws** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Newton's Laws\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Newton's Laws** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Newton's Laws.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U01-C003",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion",
+      "ta": "Laws of Motion"
+    },
+    "topic": "Linear Momentum",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Linear Momentum\n\nComprehensive theoretical overview of **Linear Momentum** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Linear Momentum\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Linear Momentum** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Linear Momentum.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U01-C004",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion",
+      "ta": "Laws of Motion"
+    },
+    "topic": "Principle of Conservation of Momentum",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Principle of Conservation of Momentum\n\nComprehensive theoretical overview of **Principle of Conservation of Momentum** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Principle of Conservation of Momentum\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Principle of Conservation of Momentum** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Principle of Conservation of Momentum.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U02-C005",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Optics",
+      "ta": "Optics"
+    },
+    "topic": "Refraction",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Refraction\n\nComprehensive theoretical overview of **Refraction** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Refraction\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Refraction** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Refraction.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U02-C006",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Optics",
+      "ta": "Optics"
+    },
+    "topic": "Lens Formula",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Lens Formula\n\nComprehensive theoretical overview of **Lens Formula** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Lens Formula\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Lens Formula** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Lens Formula.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U02-C007",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Optics",
+      "ta": "Optics"
+    },
+    "topic": "Human Eye Defects",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Human Eye Defects\n\nComprehensive theoretical overview of **Human Eye Defects** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Human Eye Defects\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Human Eye Defects** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Human Eye Defects.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U02-C008",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Optics",
+      "ta": "Optics"
+    },
+    "topic": "Telescope & Microscope",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Telescope & Microscope\n\nComprehensive theoretical overview of **Telescope & Microscope** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Telescope & Microscope\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Telescope & Microscope** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Telescope & Microscope.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U03-C009",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Electricity",
+      "ta": "Electricity"
+    },
+    "topic": "Ohm's Law",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Ohm's Law\n\nComprehensive theoretical overview of **Ohm's Law** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Ohm's Law\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Ohm's Law** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Ohm's Law.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U03-C010",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Electricity",
+      "ta": "Electricity"
+    },
+    "topic": "Resistors in Series & Parallel",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Resistors in Series & Parallel\n\nComprehensive theoretical overview of **Resistors in Series & Parallel** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Resistors in Series & Parallel\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Resistors in Series & Parallel** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Resistors in Series & Parallel.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U03-C011",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Electricity",
+      "ta": "Electricity"
+    },
+    "topic": "Joule's Heating Law",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Joule's Heating Law\n\nComprehensive theoretical overview of **Joule's Heating Law** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Joule's Heating Law\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Joule's Heating Law** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Joule's Heating Law.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-U03-C012",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Electricity",
+      "ta": "Electricity"
+    },
+    "topic": "Electric Power",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Electric Power\n\nComprehensive theoretical overview of **Electric Power** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Electric Power\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **Electric Power** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Electric Power.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q001",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion",
+      "ta": "இயக்க விதிகள்"
+    },
+    "topic": "Laws of Motion / இயக்க விதிகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The unit of momentum in SI system is:",
+      "questionTa": "SI முறையில் உந்தத்தின் அலகு:",
+      "options": {
+        "a": "kg m s^-1",
+        "b": "kg m s^-2",
+        "c": "kg m^2 s^-1",
+        "d": "N m"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Momentum p = mv. Unit = kg * m/s = kg m s^-1.",
+        "ta": "உந்தம் p = mv. அதன் அலகு kg m s^-1 ஆகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q002",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion",
+      "ta": "இயக்க விதிகள்"
+    },
+    "topic": "Laws of Motion / இயக்க விதிகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Inertia of a body depends on:",
+      "questionTa": "ஒரு பொருளின் நிலைமம் எதனைச் சார்ந்தது?",
+      "options": {
+        "a": "Weight of the body",
+        "b": "Acceleration due to gravity",
+        "c": "Mass of the body",
+        "d": "Speed of the body"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Mass is the quantitative measure of inertia.",
+        "ta": "நிலைமத்தின் அளவுசார்ந்த அளவீடு பொருளின் நிறையாகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q003",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion",
+      "ta": "இயக்க விதிகள்"
+    },
+    "topic": "Laws of Motion / இயக்க விதிகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "One Newton is the force that produces an acceleration of 1 m s^-2 in a body of mass:",
+      "questionTa": "ஒரு நியூட்டன் என்பது 1 m s^-2 முடுக்கத்தை எந்த நிறையுள்ள பொருளில் உருவாக்கும் விசையாகும்?",
+      "options": {
+        "a": "1 g",
+        "b": "1 kg",
+        "c": "10 kg",
+        "d": "100 g"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "F = ma => 1 N = 1 kg x 1 m s^-2.",
+        "ta": "F = ma சமன்பாட்டின்படி 1 N = 1 kg x 1 m s^-2."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q004",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion",
+      "ta": "இயக்க விதிகள்"
+    },
+    "topic": "Laws of Motion / இயக்க விதிகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "To project a rocket, which of the following conservation laws is utilized?",
+      "questionTa": "ராக்கெட் ஏவுதலில் பயன்படும் மாறா விதி எது?",
+      "options": {
+        "a": "Newton's law of gravitation",
+        "b": "Law of conservation of energy",
+        "c": "Law of conservation of linear momentum",
+        "d": "Newton's first law"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Rocket propulsion operates on Newton's third law and law of conservation of linear momentum.",
+        "ta": "ராக்கெட் ஏவுதல் நேர்க்கோட்டு உந்த மாறா விதியின் அடிப்படையில் செயல்படுகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q005",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion",
+      "ta": "இயக்க விதிகள்"
+    },
+    "topic": "Laws of Motion / இயக்க விதிகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The apparent weight of a person in an elevator moving downwards with acceleration equal to g is:",
+      "questionTa": "g என்ற புவியீர்ப்பு முடுக்கத்துடன் கீழ்நோக்கி நகரும் மின்தூக்கியில் ஒருவரின் தோற்ற எடை:",
+      "options": {
+        "a": "Double the actual weight",
+        "b": "Zero",
+        "c": "Equal to actual weight",
+        "d": "Half the actual weight"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "R = m(g - a). When a = g, R = m(g - g) = 0 (State of weightlessness).",
+        "ta": "a = g எனில் R = m(g - g) = 0 (எடையின்மை நிலை)."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q006",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Optics",
+      "ta": "ஒளியியல்"
+    },
+    "topic": "Optics / ஒளியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The refractive index of four substances A, B, C and D are 1.31, 1.43, 1.33 and 2.42 respectively. The speed of light is minimum in:",
+      "questionTa": "A, B, C, D என்ற நான்கு ஊடகங்களின் ஒளிவிலகல் எண்கள் முறையே 1.31, 1.43, 1.33, 2.42 எனில், ஒளியின் வேகம் மிகக் குறைவாக இருக்கும் ஊடகம்:",
+      "options": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Speed of light v = c",
+        "ta": "mu. Maximum refractive index means minimum speed. Here D (2.42) has minimum speed. / ஒளிவிலகல் எண் அதிகமாக உள்ள ஊடகத்தில் ஒளியின் வேகம் மிகக் குறைவாக இருக்கும் (ஊடகம் D)."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q007",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Optics",
+      "ta": "ஒளியியல்"
+    },
+    "topic": "Optics / ஒளியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Power of a lens is -2.0 D. Its focal length and nature are:",
+      "questionTa": "ஒரு லென்சின் திறன் -2.0 D எனில், அதன் குவியத்தொலைவு மற்றும் லென்சின் வகை:",
+      "options": {
+        "a": "-0.5 m, concave lens",
+        "b": "+0.5 m, convex lens",
+        "c": "-2 m, concave lens",
+        "d": "+2 m, convex lens"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "f = 1",
+        "ta": "P = 1 / (-2.0) = -0.5 m. Negative sign indicates a concave lens. / f = 1/P = -0.5 m. எதிர்க்குறி குழி லென்சைக் குறிக்கிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q008",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Optics",
+      "ta": "ஒளியியல்"
+    },
+    "topic": "Optics / ஒளியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Magnification of a convex lens is:",
+      "questionTa": "குவி லென்சின் உருப்பெருக்கம்:",
+      "options": {
+        "a": "Always positive",
+        "b": "Always negative",
+        "c": "Can be positive or negative",
+        "d": "Always less than 1"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Convex lens forms both real inverted (negative magnification) and virtual erect (positive magnification) images.",
+        "ta": "மெய் பிம்பத்திற்கு எதிர்க்குறி, மாய பிம்பத்திற்கு நேர்க்குறி என இரண்டும் அமையும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q009",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Atoms and Molecules",
+      "ta": "அணுக்களும் மூலக்கூறுகளும்"
+    },
+    "topic": "Atoms and Molecules / அணுக்களும் மூலக்கூறுகளும்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The gram molecular mass of water (H2O) is:",
+      "questionTa": "நீரின் (H2O) கிராம் மூலக்கூறு நிறை:",
+      "options": {
+        "a": "16 g",
+        "b": "18 g",
+        "c": "20 g",
+        "d": "32 g"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Mass = 2(1) + 16 = 18 g.",
+        "ta": "H2O = 2(1) + 16 = 18 கிராம்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q010",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Atoms and Molecules",
+      "ta": "அணுக்களும் மூலக்கூறுகளும்"
+    },
+    "topic": "Atoms and Molecules / அணுக்களும் மூலக்கூறுகளும்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The volume occupied by 1 mole of any gas at STP is called molar volume and is equal to:",
+      "questionTa": "திட்ட வெப்ப அழுத்த நிலையில் 1 மோல் எந்தவொரு வாயுவும் அடைத்துக்கொள்ளும் மோலார் பருமன்:",
+      "options": {
+        "a": "2.24 litres",
+        "b": "22.4 litres",
+        "c": "224 litres",
+        "d": "11.2 litres"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "1 mole of any gas at STP occupies 22.4 litres.",
+        "ta": "திட்ட வெப்ப அழுத்த நிலையில் 1 மோல் வாயு 22.4 லிட்டர் இடத்தை அடைக்கும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q011",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Atoms and Molecules",
+      "ta": "அணுக்களும் மூலக்கூறுகளும்"
+    },
+    "topic": "Atoms and Molecules / அணுக்களும் மூலக்கூறுகளும்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The number of molecules present in 4.4 g of CO2 is:",
+      "questionTa": "4.4 கிராம் CO2-ல் உள்ள மூலக்கூறுகளின் எண்ணிக்கை:",
+      "options": {
+        "a": "6.023 x 10^23",
+        "b": "6.023 x 10^22",
+        "c": "3.011 x 10^23",
+        "d": "1.204 x 10^23"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Moles = 4.4",
+        "ta": "44 = 0.1 mol. Molecules = 0.1 x 6.023 x 10^23 = 6.023 x 10^22. / மோல் = 4.4/44 = 0.1. மூலக்கூறுகள் = 0.1 x Avogadro எண் = 6.023 x 10^22."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q012",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Atoms and Molecules",
+      "ta": "அணுக்களும் மூலக்கூறுகளும்"
+    },
+    "topic": "Atoms and Molecules / அணுக்களும் மூலக்கூறுகளும்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following is a triatomic molecule?",
+      "questionTa": "பின்வருவனவற்றுள் மூவணு மூலக்கூறு எது?",
+      "options": {
+        "a": "Oxygen (O2)",
+        "b": "Ozone (O3)",
+        "c": "Nitrogen (N2)",
+        "d": "Methane (CH4)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Ozone (O3) has atomicity 3, so it is triatomic.",
+        "ta": "ஓசோன் (O3) மூன்று ஆக்ஸிஜன் அணுக்களைக் கொண்டுள்ளதால் மூவணு மூலக்கூறு ஆகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q013",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Types of Chemical Reactions",
+      "ta": "வேதிவினைகளின் வகைகள்"
+    },
+    "topic": "Types of Chemical Reactions / வேதிவினைகளின் வகைகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The reaction 2Mg + O2 -> 2MgO is an example of:",
+      "questionTa": "2Mg + O2 -> 2MgO என்ற வேதிவினை எவ்வகை வினைக்கு எடுத்துக்காட்டு?",
+      "options": {
+        "a": "Decomposition reaction",
+        "b": "Combination reaction",
+        "c": "Displacement reaction",
+        "d": "Double displacement reaction"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Two reactants combine to form a single product MgO, hence it is a combination reaction.",
+        "ta": "இரு வினையாடுபொருட்கள் இணைந்து ஒற்றை விளைபொருளைத் தருவதால் இது கூடுகை வினை."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q014",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Types of Chemical Reactions",
+      "ta": "வேதிவினைகளின் வகைகள்"
+    },
+    "topic": "Types of Chemical Reactions / வேதிவினைகளின் வகைகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "When zinc metal is placed in copper sulphate solution, the blue colour fades due to the formation of:",
+      "questionTa": "துத்தநாக உலோகத்தை காப்பர் சல்பேட் கரைசலில் வைக்கும் போது நீல நிறம் மங்குவதற்குக் காரணம்:",
+      "options": {
+        "a": "ZnSO4 (Displacement reaction)",
+        "b": "CuSO4",
+        "c": "ZnCl2",
+        "d": "CuO"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Zn displaces Cu from CuSO4 forming colourless ZnSO4 and copper deposit.",
+        "ta": "துத்தநாகம் காப்பரை இடப்பெயர்ச்சி செய்து நிறமற்ற ZnSO4-ஐ உருவாக்குகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q015",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Types of Chemical Reactions",
+      "ta": "வேதிவினைகளின் வகைகள்"
+    },
+    "topic": "Types of Chemical Reactions / வேதிவினைகளின் வகைகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "A solution turns red litmus blue; its pH is likely to be:",
+      "questionTa": "ஒரு கரைசல் சிவப்பு லிட்மஸை நீல நிறமாக மாற்றுகிறது எனில், அதன் pH மதிப்பு:",
+      "options": {
+        "a": "1",
+        "b": "4",
+        "c": "5",
+        "d": "10"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Bases turn red litmus blue and have pH > 7.",
+        "ta": "காரக் கரைசல்கள் சிவப்பு லிட்மஸை நீலமாக மாற்றும் மற்றும் அவற்றின் pH > 7 ஆகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q016",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Types of Chemical Reactions",
+      "ta": "வேதிவினைகளின் வகைகள்"
+    },
+    "topic": "Types of Chemical Reactions / வேதிவினைகளின் வகைகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The chemical formula of Rust is:",
+      "questionTa": "துருவின் வேதி வாய்ப்பாடு:",
+      "options": {
+        "a": "Fe2O3",
+        "b": "Fe3O4",
+        "c": "Fe2O3 . xH2O",
+        "d": "Fe(OH)2"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Rust is hydrated ferric oxide: Fe2O3 . xH2O.",
+        "ta": "துரு என்பது நீரேறிய பெர்ரிக் ஆக்சைடு (Fe2O3 . xH2O) ஆகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q017",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Types of Chemical Reactions",
+      "ta": "வேதிவினைகளின் வகைகள்"
+    },
+    "topic": "Types of Chemical Reactions / வேதிவினைகளின் வகைகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which metal is protected by an oxide layer forming naturally on its surface (Anodizing)?",
+      "questionTa": "எந்த உலோகம் தன் மேற்பரப்பில் ஆக்சைடு படலத்தை இயற்கையாக உருவாக்கி அரிமானத்திலிருந்து பாதுகாத்துக் கொள்கிறது?",
+      "options": {
+        "a": "Iron",
+        "b": "Aluminium",
+        "c": "Copper",
+        "d": "Silver"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Aluminium forms an impervious self-healing Al2O3 layer protecting it from further oxidation.",
+        "ta": "அலுமினியம் தன் மேற்பரப்பில் Al2O3 பாதுகாப்புப் படலத்தை உருவாக்குகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q018",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Plant Anatomy and Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் செயலியல்"
+    },
+    "topic": "Plant Anatomy and Physiology / தாவர உள்ளமைப்பியல் மற்றும் செயலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Casparian strips are present in which layer of the plant root?",
+      "questionTa": "தாவர வேரின் எந்த அடுக்கில் கேஸ்பாரியன் பட்டைகள் காணப்படுகின்றன?",
+      "options": {
+        "a": "Epiblema",
+        "b": "Cortex",
+        "c": "Endodermis",
+        "d": "Pericycle"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Casparian strips made of suberin are present in the radial and inner walls of root endodermis.",
+        "ta": "சுபரின் படலத்தாலான கேஸ்பாரியன் பட்டைகள் அகத்தோல் செல்களில் அமைந்துள்ளன."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q019",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Plant Anatomy and Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் செயலியல்"
+    },
+    "topic": "Plant Anatomy and Physiology / தாவர உள்ளமைப்பியல் மற்றும் செயலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The xylem and phloem arranged side by side on the same radius is called:",
+      "questionTa": "சைலமும் புளோயமும் ஒரே ஆரத்தில் அருகருகே அமைந்திருக்கும் வாஸ்குலார் கற்றை எவ்வாறு அழைக்கப்படுகிறது?",
+      "options": {
+        "a": "Radial",
+        "b": "Conjoint and Collateral",
+        "c": "Concentric",
+        "d": "Bicollateral"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "When xylem and phloem lie on the same radius, it is conjoint and collateral.",
+        "ta": "ஒரே ஆரத்தில் அமைந்த வாஸ்குலார் கற்றை ஒன்றிணைந்த ஒருங்கமைந்த கற்றை எனப்படும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q020",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Plant Anatomy and Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் செயலியல்"
+    },
+    "topic": "Plant Anatomy and Physiology / தாவர உள்ளமைப்பியல் மற்றும் செயலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "During the light reaction of photosynthesis, photolysis of water produces:",
+      "questionTa": "ஒளிச்சேர்க்கையின் ஒளிவினையின் போது நீரின் ஒளிச்சிதைவினால் வெளிப்படுவது:",
+      "options": {
+        "a": "Oxygen, Protons and Electrons",
+        "b": "CO2 and Water",
+        "c": "Glucose and ATP",
+        "d": "Lactic acid"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "2H2O -> 4H+ + 4e- + O2 during photolysis in granum.",
+        "ta": "2H2O -> 4H+ + 4e- + O2 என நீர் சிதைவுற்று ஆக்ஸிஜன் வெளியேறுகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q021",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Plant Anatomy and Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் செயலியல்"
+    },
+    "topic": "Plant Anatomy and Physiology / தாவர உள்ளமைப்பியல் மற்றும் செயலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Kreb's cycle takes place in which cell organelle?",
+      "questionTa": "கிரப்ஸ் சுழற்சி செல்லின் எந்த பகுதியில் நடைபெறுகிறது?",
+      "options": {
+        "a": "Cytoplasm",
+        "b": "Mitochondrial matrix",
+        "c": "Chloroplast stroma",
+        "d": "Ribosomes"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Kreb's (TCA) cycle enzymes are located in the mitochondrial matrix.",
+        "ta": "கிரப்ஸ் சுழற்சியின் நொதிகள் மைட்டோகாண்ட்ரியாவின் மேட்ரிக்ஸில் உள்ளன."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q022",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Plant Anatomy and Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் செயலியல்"
+    },
+    "topic": "Plant Anatomy and Physiology / தாவர உள்ளமைப்பியல் மற்றும் செயலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The respiratory quotient (RQ) of glucose during aerobic respiration is:",
+      "questionTa": "காற்றுச் சுவாசத்தின் போது குளுக்கோஸின் சுவாச ஈவு (RQ) மதிப்பு:",
+      "options": {
+        "a": "0.7",
+        "b": "1.0",
+        "c": "0.9",
+        "d": "Infinity"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "RQ = Vol of CO2 evolved",
+        "ta": "Vol of O2 consumed = 6 CO2 / 6 O2 = 1.0. / வெளிவிடப்பட்ட CO2 / உட்கொள்ளப்பட்ட O2 = 6/6 = 1.0."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q023",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Plant Anatomy and Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் செயலியல்"
+    },
+    "topic": "Plant Anatomy and Physiology / தாவர உள்ளமைப்பியல் மற்றும் செயலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which plant tissue is responsible for bidirectional translocation of organic food?",
+      "questionTa": "தாவரங்களில் கரிம உணவுப் பொருட்களை இரு திசைகளிலும் கடத்துவதற்கு பொறுப்பான திசு:",
+      "options": {
+        "a": "Xylem",
+        "b": "Phloem",
+        "c": "Collenchyma",
+        "d": "Sclerenchyma"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Phloem transports sucrose and organic solutes bidirectionally from source to sink.",
+        "ta": "புளோயம் உணவுப் பொருட்களை இரு திசைகளிலும் கடத்துகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q024",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Plant Anatomy and Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் செயலியல்"
+    },
+    "topic": "Plant Anatomy and Physiology / தாவர உள்ளமைப்பியல் மற்றும் செயலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The loss of water in the form of water droplets from the margin of leaves is known as:",
+      "questionTa": "இலைகளின் விளிம்புகளிலிருந்து நீர் துளிகளாக வெளியேறும் நிகழ்வு எவ்வாறு அழைக்கப்படுகிறது?",
+      "options": {
+        "a": "Transpiration",
+        "b": "Guttation",
+        "c": "Imbibition",
+        "d": "Plasmolysis"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Guttation is the exudation of drops of xylem sap on the tips or edges of leaves through hydathodes.",
+        "ta": "நீர் துளிகளாக ஹைடதோடுகள் வழியே வெளியேறுவது வடிதல் எனப்படும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q025",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Plant Anatomy and Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் செயலியல்"
+    },
+    "topic": "Plant Anatomy and Physiology / தாவர உள்ளமைப்பியல் மற்றும் செயலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The internal structural adaptation of monocot leaf with undifferentiated mesophyll is called:",
+      "questionTa": "இலை இடைத்திசு (மீசோபில்) பாலிசேட் மற்றும் ஸ்பாஞ்சி பாரன்கைமாவாக வேறுபடாத ஒருவித்திலை இலை எவ்வாறு அழைக்கப்படுகிறது?",
+      "options": {
+        "a": "Dorsiventral leaf",
+        "b": "Isobilateral leaf",
+        "c": "Centric leaf",
+        "d": "Succulent leaf"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Monocot leaves are isobilateral where mesophyll is uniform and not differentiated into palisade and spongy layers.",
+        "ta": "ஒருவித்திலை தாவர இலைகள் இருபக்க ஒருங்கமைந்த இலைகளாகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q026",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Laws of Motion & Gravitation",
+      "ta": "இயக்க விதிகள் மற்றும் ஈர்ப்பியல்"
+    },
+    "topic": "Laws of Motion & Gravitation / இயக்க விதிகள் மற்றும் ஈர்ப்பியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "If the distance between two masses is doubled, the gravitational force between them becomes:",
+      "questionTa": "இரண்டு நிறைகளுக்கு இடைப்பட்ட தொலைவு இருமடங்காக அதிகரிக்கப்பட்டால், அவற்றுக்கு இடையேயான ஈர்ப்பு விசை:",
+      "options": {
+        "a": "Doubled",
+        "b": "Halved",
+        "c": "One-fourth",
+        "d": "Four times"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step 1: Newton's Law of Universal Gravitation states F = G * (m1 * m2)",
+        "ta": "r^2. Step 2: When distance r becomes 2r, new force F' = G * (m1 * m2) / (2r)^2 = F / 4. Step 3: Therefore, the gravitational force reduces to one-fourth of its initial value. / படி 1: நியூட்டனின் ஈர்ப்பியல் விதிப்படி F = G(m1*m2)/r^2. படி 2: தொலைவு இருமடங்காகும்போது (2r)^2 = 4r^2. படி 3: ஆகவே ஈர்ப்பு விசை தொடக்க மதிப்பில் நான்கில் ஒரு பங்காகக் குறையும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q027",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Optics",
+      "ta": "ஒளியியல்"
+    },
+    "topic": "Optics / ஒளியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "According to Snell's law of refraction, the ratio of the sine of the angle of incidence to the sine of angle of refraction is equal to:",
+      "questionTa": "ஸ்நெல் விதிப்படி, படுகோணத்தின் சைன் மதிப்பிற்கும் விலகுகோணத்தின் சைன் மதிப்பிற்கும் இடையே உள்ள தகவு எதற்குச் சமம்?",
+      "options": {
+        "a": "Refractive index of the medium (mu)",
+        "b": "Speed of sound",
+        "c": "Critical angle",
+        "d": "Focal length"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Snell's second law of refraction states sin(i)",
+        "ta": "sin(r) = constant. Step 2: This constant ratio is the refractive index of the second medium with respect to the first medium (mu_21). Step 3: Thus, sin(i) / sin(r) = mu. / படி 1: ஸ்நெல் ஒளிவிலகல் இரண்டாம் விதிப்படி sin(i) / sin(r) = மாறிலி. படி 2: இம்மாறிலி இரண்டாம் ஊடகத்தின் ஒளிவிலகல் எண் (mu) ஆகும். படி 3: ஆகவே sin(i) / sin(r) = mu."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q028",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Optics",
+      "ta": "ஒளியியல்"
+    },
+    "topic": "Optics / ஒளியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which type of lens is used to correct the vision defect known as Myopia (short-sightedness)?",
+      "questionTa": "கிட்டப்பார்வை (மயோபியா) குறைபாட்டைச் சரிசெய்யப் பயன்படும் லென்ஸ் எது?",
+      "options": {
+        "a": "Concave lens",
+        "b": "Convex lens",
+        "c": "Cylindrical lens",
+        "d": "Bifocal lens"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: In myopia, light rays from distant objects converge in front of the retina due to excessive eye lens curvature or eyeball elongation. Step 2: A diverging (concave) lens of suitable focal length diverges parallel incident rays so that the image is formed precisely on the retina.",
+        "ta": "படி 1: கிட்டப்பார்வையில் விழிக்கோளம் நீள்வதால் பிம்பம் விழித்திரைக்கு முன்பாகவே குவிகிறது. படி 2: தகுந்த குவியத் தொலைவு கொண்ட குழி லென்ஸ் (Concave lens) கதிர்களை விரித்து விழித்திரையில் பிம்பத்தை உருவாக்குகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q029",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Electricity & Thermal Physics",
+      "ta": "மின்னியல் மற்றும் வெப்ப இயற்பியல்"
+    },
+    "topic": "Electricity & Thermal Physics / மின்னியல் மற்றும் வெப்ப இயற்பியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "According to Ohm's law, at constant temperature, the electric current (I) flowing through a conductor is directly proportional to:",
+      "questionTa": "ஓம் விதிப்படி, மாறா வெப்பநிலையில் ஒரு கடத்தியின் வழியே பாயும் மின்னோட்டம் (I) எதற்கு நேர்விகிதத்தில் இருக்கும்?",
+      "options": {
+        "a": "Potential difference (V)",
+        "b": "Resistance (R)",
+        "c": "Length of wire (L)",
+        "d": "Cross-sectional area (A)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Ohm's law states that at steady temperature, current I is directly proportional to potential difference V across ends: V prop I. Step 2: Introducing constant of proportionality R (resistance): V = I * R. Step 3: Hence I is directly proportional to potential difference V.",
+        "ta": "படி 1: ஓம் விதிப்படி மாறா வெப்பநிலையில் கடத்தியின் வழியே பாயும் மின்னோட்டம் அதன் முனைகளுக்கிடையேயான மின்னழுத்த வேறுபாட்டிற்கு (V) நேர்விகிதத்தில் இருக்கும்: V = IR. படி 2: ஆகவே மின்னோட்டம் மின்னழுத்த வேறுபாட்டிற்கு நேர்விகிதமாகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q030",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Electricity & Thermal Physics",
+      "ta": "மின்னியல் மற்றும் வெப்ப இயற்பியல்"
+    },
+    "topic": "Electricity & Thermal Physics / மின்னியல் மற்றும் வெப்ப இயற்பியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Joule's law of heating states that heat produced in a resistor of resistance R carrying current I for time t is given by:",
+      "questionTa": "ஜூல் வெப்ப விதியின்படி R மின்தடை கொண்ட கடத்தியில் t விநாடிகளுக்கு I மின்னோட்டம் பாயும்போது உருவாகும் வெப்பத்தின் (H) சமன்பாடு:",
+      "options": {
+        "a": "H = I^2 * R * t",
+        "b": "H = I * R^2 * t",
+        "c": "H = V * I^2 * t",
+        "d": "H = I * R / t"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Electrical energy dissipated as heat is work done W = V * I * t. Step 2: By Ohm's law V = I * R. Step 3: Substituting V yields H = (I * R) * I * t = I^2 * R * t Joules.",
+        "ta": "படி 1: மின் ஆற்றல் வெப்பமாக மாறும்போது W = V * I * t. படி 2: V = I * R என பிரதியிட H = (I*R)*I*t. படி 3: ஆகவே உருவாகும் வெப்பம் H = I^2 * R * t ஜூல்கள் ஆகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q031",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Solutions & Chemical Reactions",
+      "ta": "கரைசல்கள் மற்றும் வேதிவினைகளின் வகைகள்"
+    },
+    "topic": "Solutions & Chemical Reactions / கரைசல்கள் மற்றும் வேதிவினைகளின் வகைகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "A solution turns blue litmus paper to red. The pH value of this solution is most likely:",
+      "questionTa": "ஒரு கரைசல் நீல லிட்மஸ் தாளை சிவப்பாக மாற்றுகிறது எனில், அக்கரைசலின் pH மதிப்பு எவ்வாறாக இருக்கக்கூடும்?",
+      "options": {
+        "a": "Less than 7",
+        "b": "Equal to 7",
+        "c": "Greater than 7",
+        "d": "Equal to 14"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Substances that turn blue litmus paper red are acidic in nature. Step 2: The pH scale defines neutral solutions as pH = 7, basic solutions as pH > 7, and acidic solutions as pH < 7. Step 3: Therefore, the pH must be less than 7.",
+        "ta": "படி 1: நீல லிட்மஸ் தாளை சிவப்பாக மாற்றும் கரைசல்கள் அமிலத்தன்மை கொண்டவை. படி 2: அமிலக் கரைசல்களின் pH மதிப்பு 7-ஐ விடக் குறைவாகும். படி 3: ஆகவே pH < 7 என்பது சரியானது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q032",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Solutions & Chemical Reactions",
+      "ta": "கரைசல்கள் மற்றும் வேதிவினைகளின் வகைகள்"
+    },
+    "topic": "Solutions & Chemical Reactions / கரைசல்கள் மற்றும் வேதிவினைகளின் வகைகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following represents a decomposition reaction brought about by heat (thermal decomposition)?",
+      "questionTa": "வெப்பத்தினால் நிகழும் சிதைவு வினைக்கு (வெப்பச்சிதைவு வினை) பின்வருவனவற்றுள் சரியான எடுத்துக்காட்டு எது?",
+      "options": {
+        "a": "CaCO3 (s) -> CaO (s) + CO2 (g)",
+        "b": "2H2 + O2 -> 2H2O",
+        "c": "Zn + CuSO4 -> ZnSO4 + Cu",
+        "d": "NaOH + HCl -> NaCl + H2O"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: A thermal decomposition reaction occurs when a single reactant breaks down into two or more simpler products upon absorption of heat. Step 2: Heating limestone CaCO3 produces calcium oxide CaO (quicklime) and carbon dioxide gas CO2. Step 3: Hence CaCO3 -> CaO + CO2 is thermal decomposition.",
+        "ta": "படி 1: வெப்பத்தை உறிஞ்சி ஒரு சேர்மம் இரண்டு அல்லது அதற்கு மேற்பட்ட எளிய பொருட்களாகப் பிரியும் வினை வெப்பச்சிதைவு வினை. படி 2: சுண்ணாம்புக்கல் CaCO3 வெப்பத்தால் CaO மற்றும் CO2 ஆகச் சிதைகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q033",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification & Metallurgy",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு மற்றும் உலோகவியல்"
+    },
+    "topic": "Periodic Classification & Metallurgy / தனிமங்களின் ஆவர்த்தன வகைப்பாடு மற்றும் உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "According to Moseley's Modern Periodic Law, the physical and chemical properties of elements are periodic functions of their:",
+      "questionTa": "மோஸ்லேவின் நவீன ஆவர்த்தன விதிப்படி, தனிமங்களின் இயற்பியல் மற்றும் வேதியியல் பண்புகள் அவற்றின் எதன் ஆவர்த்தன செயல்பாடாகும்?",
+      "options": {
+        "a": "Atomic number",
+        "b": "Atomic mass",
+        "c": "Mass number",
+        "d": "Density"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Mendeleev's periodic law was based on atomic mass. Step 2: Henry Moseley in 1913 proved that X-ray frequency correlates directly with nuclear charge (atomic number Z). Step 3: Modern Periodic Law states properties of elements are periodic functions of their atomic numbers.",
+        "ta": "படி 1: மெண்டலீவ் விதி அணு நிறையை அடிப்படையாகக் கொண்டது. படி 2: மோஸ்லே 1913-ல் அணு எண்ணே (Z) அடிப்படை பண்பு என்பதை நிறுவினார். படி 3: ஆகவே நவீன ஆவர்த்தன விதி தனிமங்களின் பண்புகள் அவற்றின் அணு எண்ணைப் பொருத்து அமைகின்றன என்கிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q034",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification & Metallurgy",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு மற்றும் உலோகவியல்"
+    },
+    "topic": "Periodic Classification & Metallurgy / தனிமங்களின் ஆவர்த்தன வகைப்பாடு மற்றும் உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The method of concentrating sulphide ores by taking advantage of their preferential wetting by pine oil is:",
+      "questionTa": "பைன் எண்ணெயால் எளிதில் ஈரப்பதமாகும் பண்பைப் பயன்படுத்தி சல்பைடு தாதுக்களை அடர்ப்பிக்கும் முறை:",
+      "options": {
+        "a": "Froth floatation method",
+        "b": "Hydraulic washing",
+        "c": "Magnetic separation",
+        "d": "Chemical leaching"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Sulphide ore particles are preferentially wetted by oil (pine oil",
+        "ta": "collectors), while gangue impurities are wetted by water. Step 2: Compressed air blown into the slurry creates froths carrying light ore particles to the surface. Step 3: This process is Froth Floatation. / படி 1: சல்பைடு தாதுத் துகள்கள் பைன் எண்ணெயால் நனைக்கப்படுகின்றன, கனிமக் கழிவுகள் நீரால் நனைக்கப்படுகின்றன. படி 2: காற்று செலுத்தப்படும்போது தாதுத் துகள்கள் நுரையுடன் மிதந்து மேலே வருகின்றன. படி 3: இம்முறை நுரை மிதப்பு முறை எனப்படும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q035",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Carbon & Its Compounds",
+      "ta": "கார்பனும் அதன் சேர்மங்களும்"
+    },
+    "topic": "Carbon & Its Compounds / கார்பனும் அதன் சேர்மங்களும்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The unique property of carbon atoms to form strong covalent bonds with other carbon atoms to yield long chains is called:",
+      "questionTa": "கார்பன் அணுக்கள் பிற கார்பன் அணுக்களுடன் சகப்பிணைப்பை ஏற்படுத்தி நீண்ட சங்கிலித் தொடரை உருவாக்கும் தனித்துவப் பண்பு:",
+      "options": {
+        "a": "Catenation",
+        "b": "Tetravalency",
+        "c": "Isomerism",
+        "d": "Allotropy"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Carbon-carbon single bonds are exceptionally strong (348 kJ/mol) and stable due to small atomic size. Step 2: The self-linking ability of atoms of the same element to form open-chain or closed-ring structures is defined as catenation.",
+        "ta": "படி 1: கார்பன் அணுக்கள் தங்களுக்குள்ளேயே வலிமையான சகப்பிணைப்புகளை ஏற்படுத்திக்கொள்ளும் திறன் கொண்டவை. படி 2: ஒரே தனிமத்தின் அணுக்கள் ஒன்றோடொன்று இணைந்து நீண்ட சங்கிலித் தொடரை உருவாக்கும் இத்திறன் சங்கிலித் தொடராக்கம் எனப்படும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q036",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Plant Anatomy & Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் தாவர உடலியல்"
+    },
+    "topic": "Plant Anatomy & Physiology / தாவர உள்ளமைப்பியல் மற்றும் தாவர உடலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In vascular plants, which complex permanent tissue is responsible for the unidirectional upward transport of water and mineral salts?",
+      "questionTa": "தாவரங்களில் நீர் மற்றும் கனிம உப்புகளை வேரிலிருந்து மேல்நோக்கி ஒருதிசைப் பாதையில் கடத்துவதற்குப் பொறுப்பான திசு:",
+      "options": {
+        "a": "Xylem",
+        "b": "Phloem",
+        "c": "Parenchyma",
+        "d": "Collenchyma"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Vascular plants possess two conducting tissues: xylem and phloem. Step 2: Xylem vessels and tracheids carry water and dissolved minerals absorbed by roots unidirectionally upwards to the stem and leaves. Step 3: Phloem transports organic nutrients bidirectionally.",
+        "ta": "படி 1: தாவரங்களில் கடத்தும் திசுக்கள் சைலம் மற்றும் புளோயம் ஆகும். படி 2: சைலம் நீர் மற்றும் கனிமங்களை வேரிலிருந்து தாவரத்தின் மேற்பகுதிகளுக்கு மேல்நோக்கி ஒருதிசையில் கடத்துகிறது. படி 3: புளோயம் உணவை அனைத்துத் திசைகளிலும் கடத்துகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q037",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Plant Anatomy & Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் தாவர உடலியல்"
+    },
+    "topic": "Plant Anatomy & Physiology / தாவர உள்ளமைப்பியல் மற்றும் தாவர உடலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "During photosynthesis, the light-dependent photochemical reactions occur inside which part of the chloroplast?",
+      "questionTa": "ஒளிச்சேர்க்கையின் போது ஒளி சார்ந்த வேதிவினைகள் (ஒளி வினை) பசுங்கணிகத்தின் எந்தப் பகுதியில் நடைபெறுகின்றன?",
+      "options": {
+        "a": "Thylakoid membranes (Grana)",
+        "b": "Stroma matrix",
+        "c": "Outer envelope membrane",
+        "d": "Inner envelope membrane"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Chloroplast consists of membranous disc stacks called grana (composed of thylakoids) suspended in a fluid stroma. Step 2: Chlorophyll pigments and electron transport chains are embedded in thylakoid membranes where light reaction produces ATP and NADPH. Step 3: The dark reaction (Calvin cycle) occurs in the stroma.",
+        "ta": "படி 1: பசுங்கணிகத்தில் தைலகாய்டு தட்டு அடுக்குகளான கிரானா மற்றும் ஸ்ட்ரோமா உள்ளன. படி 2: பச்சைய நிறமிகள் கொண்ட கிரானாவின் தைலகாய்டு சவ்வில் ஒளி சார்ந்த வினைகள் நடைபெறுகின்றன. படி 3: இருள் வினை ஸ்ட்ரோமாவில் நடைபெறுகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q038",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Plant Anatomy & Physiology",
+      "ta": "தாவர உள்ளமைப்பியல் மற்றும் தாவர உடலியல்"
+    },
+    "topic": "Plant Anatomy & Physiology / தாவர உள்ளமைப்பியல் மற்றும் தாவர உடலியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In cellular respiration, the first stage (Glycolysis) converts one molecule of glucose into two molecules of:",
+      "questionTa": "செல் சுவாசத்தின் முதல் நிலையான கிளைக்காலிசிஸ் (Glycolysis) வினையில் ஒரு குளுக்கோஸ் மூலக்கூறு இரு மூலக்கூறு எவ்வாறாக உடைகிறது?",
+      "options": {
+        "a": "Pyruvic acid (Pyruvate)",
+        "b": "Lactic acid",
+        "c": "Citric acid",
+        "d": "Acetyl CoA"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Glycolysis (EMP pathway) occurs in the cytoplasm of all living cells independently of oxygen. Step 2: A 6-carbon glucose molecule undergoes a 10-step enzymatic pathway to yield two 3-carbon pyruvic acid molecules and a net gain of 2 ATP and 2 NADH.",
+        "ta": "படி 1: கிளைக்காலிசிஸ் சைட்டோபிளாசத்தில் நிகழ்கிறது. படி 2: 6-கார்பன் கொண்ட குளுக்கோஸ் மூலக்கூறு பிளவுபட்டு இரு 3-கார்பன் பைருவிக் அமில மூலக்கூறுகளாக மாறுகிறது. படி 3: இதனால் நிகர ஆதாயமாக 2 ATP கிடைக்கிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q039",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Circulation & Nervous System",
+      "ta": "சுற்றோட்டம் மற்றும் நரம்பு மண்டலம்"
+    },
+    "topic": "Circulation & Nervous System / சுற்றோட்டம் மற்றும் நரம்பு மண்டலம்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which blood vessel carries oxygen-rich blood from the lungs directly into the left atrium of the human heart?",
+      "questionTa": "நுரையீரலில் இருந்து ஆக்சிஜன் நிறைந்த தூய இரத்தத்தை மனித இதயத்தின் இடது ஏட்ரியத்திற்கு நேரடியாகக் கொண்டு செல்லும் இரத்தக் குழாய்:",
+      "options": {
+        "a": "Pulmonary vein",
+        "b": "Pulmonary artery",
+        "c": "Aorta",
+        "d": "Vena cava"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Generally, veins carry deoxygenated blood and arteries carry oxygenated blood. Step 2: The solitary exception among veins is the Pulmonary Vein, which carries freshly oxygenated blood from the alveolar capillary beds of lungs to the left atrium of the heart.",
+        "ta": "படி 1: பொதுவாக சிறைகள் ஆக்சிஜன் குறைந்த அசுத்த இரத்தத்தைக் கடத்தும். படி 2: இதற்கு ஒரே விதிவிலக்காக நுரையீரல் சிறை மட்டுமே நுரையீரலில் இருந்து ஆக்சிஜன் செறிந்த தூய இரத்தத்தை இதயத்தின் இடது ஏட்ரியத்திற்கு எடுத்துச் செல்கிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q040",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Circulation & Nervous System",
+      "ta": "சுற்றோட்டம் மற்றும் நரம்பு மண்டலம்"
+    },
+    "topic": "Circulation & Nervous System / சுற்றோட்டம் மற்றும் நரம்பு மண்டலம்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The structural and functional unit of the human nervous system is the:",
+      "questionTa": "மனித நரம்பு மண்டலத்தின் அமைப்பு மற்றும் செயல்பாட்டு அலகு:",
+      "options": {
+        "a": "Neuron (Nerve cell)",
+        "b": "Nephron",
+        "c": "Alveolus",
+        "d": "Myocyte"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Nephron is the structural unit of the kidney. Alveolus is the functional unit of lungs. Step 2: Neuron (nerve cell) composed of cyton, dendrites, and axon is the fundamental structural and functional unit that transmits electro-chemical nerve impulses.",
+        "ta": "படி 1: சிறுநீரகத்தின் அலகு நெப்ரான். படி 2: நரம்பு மண்டலத்தின் அடிப்படை அமைப்பு மற்றும் செயல்பாட்டு அலகு நியூரான்கள் (நரம்பு செல்கள்) ஆகும். இவை மின்-வேதியியல் தூண்டல்களைக் கடத்துகின்றன."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q041",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Circulation & Nervous System",
+      "ta": "சுற்றோட்டம் மற்றும் நரம்பு மண்டலம்"
+    },
+    "topic": "Circulation & Nervous System / சுற்றோட்டம் மற்றும் நரம்பு மண்டலம்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "An involuntary and immediate motor response to an external stimulus without conscious brain intervention is known as a:",
+      "questionTa": "மூளையின் தன்னிச்சையான சிந்தனை இன்றி ஒரு தூண்டலுக்கு உடனே வெளிப்படும் உடனடி மற்றும் கட்டுப்பாடற்ற தன்னிச்சை செயல்:",
+      "options": {
+        "a": "Reflex action",
+        "b": "Voluntary action",
+        "c": "Peristalsis",
+        "d": "Circadian rhythm"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: In reflex actions, sensory neurons carry the impulse to the spinal cord via dorsal horn. Step 2: Interneurons immediately synapse with motor neurons exiting via ventral horn to effector muscles, bypassing conscious cerebral cortex processing. Step 3: This rapid pathway is a reflex action.",
+        "ta": "படி 1: தூண்டல் உணர் நரம்புகள் மூலம் தண்டுவடத்திற்குச் செல்கிறது. படி 2: தண்டுவடம் உடனடியாக இயக்க நரம்புகள் மூலம் தசைக்கு கட்டளையிடுகிறது. படி 3: மூளையின் தாமதமின்றி நிகழும் இவ்வுடனடி செயல் அனிச்சை செயல் எனப்படும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q042",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Heredity & Reproduction",
+      "ta": "மரபியல் மற்றும் இனப்பெருக்கம்"
+    },
+    "topic": "Heredity & Reproduction / மரபியல் மற்றும் இனப்பெருக்கம்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In Mendel's monohybrid cross of pure tall (TT) and dwarf (tt) pea plants, the phenotypic ratio in the F2 generation is:",
+      "questionTa": "மெண்டலின் ஒருபண்புக் கலப்பில் தூய நெட்டை (TT) மற்றும் குட்டை (tt) பட்டாணி தாவரங்களின் F2 தலைமுறையின் புறத்தோற்ற விகிதம்:",
+      "options": {
+        "a": "3 : 1",
+        "b": "1 : 2 : 1",
+        "c": "9 : 3 : 3 : 1",
+        "d": "2 : 1"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Selfing F1 heterozygous tall plants (Tt x Tt) yields genotypes TT, Tt, Tt, tt. Step 2: Genotypic ratio is 1 TT : 2 Tt : 1 tt (1:2:1). Step 3: Phenotypically, both TT and Tt appear tall (3 tall) and tt appears dwarf (1 dwarf). Thus phenotypic ratio is 3:1.",
+        "ta": "படி 1: F1 தாவரங்களை (Tt x Tt) தன்மகரந்தச்சேர்க்கை செய்யும்போது கிடைக்கும் மரபணு விகிதம் 1:2:1. படி 2: புறத்தோற்றத்தில் 3 நெட்டையும் 1 குட்டையும் தோன்றும். படி 3: ஆகவே புறத்தோற்ற விகிதம் 3 : 1 ஆகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q043",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Heredity & Reproduction",
+      "ta": "மரபியல் மற்றும் இனப்பெருக்கம்"
+    },
+    "topic": "Heredity & Reproduction / மரபியல் மற்றும் இனப்பெருக்கம்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "During cell division, crossing over (genetic recombination) occurs during which specific substage of Meiosis I?",
+      "questionTa": "செல் பிரிதலின் போது குறுக்கே கலத்தல் (மரபணு மறுசேர்க்கை) மியாசிஸ் I இன் எந்த குறிப்பிட்ட துணை நிலையில் நிகழ்கிறது?",
+      "options": {
+        "a": "Pachytene",
+        "b": "Leptotene",
+        "c": "Zygotene",
+        "d": "Diplotene"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Prophase I of Meiosis I consists of Leptotene, Zygotene, Pachytene, Diplotene, Diakinesis. Step 2: In Pachytene, non-sister chromatids of homologous chromosomes exchange genetic segments mediated by the enzyme recombinase (crossing over).",
+        "ta": "படி 1: புரோபேஸ் I-ல் ஐந்து துணை நிலைகள் உள்ளன. படி 2: பாக்கிடீன் (Pachytene) நிலையில் அமைப்பொத்த குரோமோசோம்களின் சகோதரியல்லாத குரோமேட்டிடுகளுக்கிடையே குறுக்கே கலத்தல் மற்றும் மரபணு பரிமாற்றம் நிகழ்கிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q044",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Optics & Acoustics",
+      "ta": "ஒளியியல் மற்றும் ஒலியியல்"
+    },
+    "topic": "Optics & Acoustics / ஒளியியல் மற்றும் ஒலியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Ultrasonic sound waves have a frequency range of:",
+      "questionTa": "மீயொலி அலைகளின் அதிர்வெண் வரம்பு பின்வருவனவற்றுள் எது?",
+      "options": {
+        "a": "Greater than 20,000 Hz",
+        "b": "Less than 20 Hz",
+        "c": "Between 20 Hz and 20,000 Hz",
+        "d": "Exactly 0 Hz"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: The human audible sound range is 20 Hz to 20,000 Hz (20 kHz). Step 2: Frequencies below 20 Hz are infrasonic. Step 3: Sound waves with frequencies exceeding 20,000 Hz are ultrasonic waves (used in SONAR and medical ultrasonography).",
+        "ta": "படி 1: மனிதரால் கேட்கக்கூடிய வரம்பு 20 Hz முதல் 20,000 Hz வரை. படி 2: 20 Hz-க்கு குறைவானவை குற்றொலி. படி 3: 20,000 Hz-க்கு அதிகமான அதிர்வெண் கொண்டவை மீயொலி (Ultrasonic) அலைகள் ஆகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q045",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Optics & Acoustics",
+      "ta": "ஒளியியல் மற்றும் ஒலியியல்"
+    },
+    "topic": "Optics & Acoustics / ஒளியியல் மற்றும் ஒலியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The power of a lens with focal length -50 cm (-0.5 m) is:",
+      "questionTa": "-50 செ.மீ (-0.5 மீ) குவியத் தொலைவு கொண்ட லென்சின் திறன் (Power):",
+      "options": {
+        "a": "-2 D",
+        "b": "+2 D",
+        "c": "-0.5 D",
+        "d": "+0.5 D"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Power of a lens P = 1",
+        "ta": "f(in metres). Step 2: Given f = -50 cm = -0.5 m. Step 3: P = 1 / (-0.5) = -2 Dioptres (-2 D). / படி 1: லென்சின் திறன் P = 1 / f (மீட்டரில்). படி 2: குவியத் தொலைவு f = -0.5 மீ. படி 3: P = 1 / (-0.5) = -2 டையாப்டர் (-2 D)."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q046",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Acids, Bases and Salts",
+      "ta": "அமிலங்கள், காரங்கள் மற்றும் உப்புகள்"
+    },
+    "topic": "Acids, Bases and Salts / அமிலங்கள், காரங்கள் மற்றும் உப்புகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "What is the chemical formula of Plaster of Paris?",
+      "questionTa": "பாரிஸ் சாந்தின் (Plaster of Paris) சரியான வேதியியல் வாய்ப்பாடு எது?",
+      "options": {
+        "a": "CaSO4 . 1/2 H2O",
+        "b": "CaSO4 . 2 H2O",
+        "c": "CuSO4 . 5 H2O",
+        "d": "FeSO4 . 7 H2O"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Gypsum has formula CaSO4 . 2H2O. Step 2: Heating gypsum at 373 K (100 deg C) removes 1.5 water molecules: CaSO4.2H2O -> CaSO4.1/2H2O + 1.5H2O. Step 3: Calcium sulphate hemihydrate CaSO4.1/2H2O is Plaster of Paris.",
+        "ta": "படி 1: ஜிப்சத்தின் வாய்ப்பாடு CaSO4.2H2O. படி 2: ஜிப்சத்தை 373 K வெப்பநிலையில் சூடாக்கும்போது ஒன்றரை நீர் மூலக்கூறுகளை இழக்கிறது. படி 3: கிடைக்கும் கால்சியம் சல்பேட் அரை நீரேற்றி (CaSO4.1/2H2O) பாரிஸ் சாந்து ஆகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q047",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Acids, Bases and Salts",
+      "ta": "அமிலங்கள், காரங்கள் மற்றும் உப்புகள்"
+    },
+    "topic": "Acids, Bases and Salts / அமிலங்கள், காரங்கள் மற்றும் உப்புகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "When a metal reacts with dilute hydrochloric acid, which colourless gas burns with a 'pop' sound?",
+      "questionTa": "உலோகங்கள் நீர்த்த ஹைட்ரோகுளோரிக் அமிலத்துடன் வினைபுரியும் போது வெளிப்பட்டு, 'பாப்' என்ற ஒலியுடன் எரியும் வாயு எது?",
+      "options": {
+        "a": "Hydrogen (H2)",
+        "b": "Oxygen (O2)",
+        "c": "Carbon dioxide (CO2)",
+        "d": "Chlorine (Cl2)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Metal + Dilute Acid -> Metal Salt + Hydrogen gas. Example: Zn + 2HCl -> ZnCl2 + H2. Step 2: Hydrogen is highly flammable; bringing a burning splinter near it results in combustion with a characteristic 'pop' sound.",
+        "ta": "படி 1: உலோகம் + அமிலம் -> உலோக உப்பு + ஹைட்ரஜன் வாயு. படி 2: ஹைட்ரஜன் வாயு எரியும் தன்மை கொண்டது; எரியும் தீக்குச்சியை அருகினில் காட்டும்போது அது 'பாப்' என்ற ஒலியுடன் எரியும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q048",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Plant and Animal Hormones",
+      "ta": "தாவர மற்றும் விலங்கு ஹார்மோன்கள்"
+    },
+    "topic": "Plant and Animal Hormones / தாவர மற்றும் விலங்கு ஹார்மோன்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which plant hormone is primarily responsible for apical dominance, cell elongation, and phototropism?",
+      "questionTa": "தாவரங்களில் நுனி ஆதிக்கம், செல் நீட்சி மற்றும் ஒளிசார்பசைவுக்கு முக்கியக் காரணமாக விளங்கும் தாவர ஹார்மோன்:",
+      "options": {
+        "a": "Auxin",
+        "b": "Cytokinin",
+        "c": "Gibberellin",
+        "d": "Abscisic acid"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Auxin (indole-3-acetic acid",
+        "ta": "IAA) is synthesized at shoot and root apices. Step 2: It promotes stem elongation, inhibits lateral branch growth (apical dominance), and migrates to the shaded side causing phototropic bending towards light. / படி 1: ஆக்சின் தாவர நுனிப்பகுதியில் உற்பத்தியாகிறது. படி 2: இது செல்கள் நீட்சியடையவும், நுனி ஆதிக்கத்திற்கும் மற்றும் தாவர தண்டு ஒளியை நோக்கி வளையவும் (ஒளிசார்பசைவு) உதவுகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q049",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Plant and Animal Hormones",
+      "ta": "தாவர மற்றும் விலங்கு ஹார்மோன்கள்"
+    },
+    "topic": "Plant and Animal Hormones / தாவர மற்றும் விலங்கு ஹார்மோன்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which endocrine gland is commonly referred to as the 'Master Gland' of the human endocrine system?",
+      "questionTa": "மனித நாளமில்லாச் சுரப்பி மண்டலத்தின் 'தலைமைச் சுரப்பி' (Master Gland) என அழைக்கப்படும் சுரப்பி எது?",
+      "options": {
+        "a": "Pituitary gland",
+        "b": "Thyroid gland",
+        "c": "Adrenal gland",
+        "d": "Pancreas"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: The pituitary gland located at the base of the brain produces trophic hormones (TSH, ACTH, FSH, LH). Step 2: These hormones stimulate and regulate the secretions of other endocrine organs (thyroid, adrenal cortex, gonads). Step 3: Hence, it is known as the Master Gland.",
+        "ta": "படி 1: மூளையின் அடிப்பகுதியில் அமைந்துள்ள பிட்யூட்டரி சுரப்பி பிற நாளமில்லாச் சுரப்பிகளைக் கட்டுப்படுத்தும் தூண்டும் ஹார்மோன்களைச் சுரக்கிறது. படி 2: ஆகவே இது நாளமில்லாச் சுரப்பி மண்டலத்தின் தலைமைச் சுரப்பி என அழைக்கப்படுகிறது."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  },
+  {
+    "id": "TN-10-SCI-Q050",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "SCI-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Environmental Management & Life Processes",
+      "ta": "சுற்றுச்சூழல் மேலாண்மை மற்றும் வாழ்க்கை செயல்முறைகள்"
+    },
+    "topic": "Environmental Management & Life Processes / சுற்றுச்சூழல் மேலாண்மை மற்றும் வாழ்க்கை செயல்முறைகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The green pigment essential for trapping solar radiant energy during the process of photosynthesis is:",
+      "questionTa": "ஒளிச்சேர்க்கை வினையின் போது சூரியனின் கதிர்வீச்சு ஆற்றலை ஈர்ப்பதற்குத் தேவையான முதன்மைப் பசுமை நிறமி:",
+      "options": {
+        "a": "Chlorophyll-a",
+        "b": "Carotenoid",
+        "c": "Xanthophyll",
+        "d": "Anthocyanin"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Chlorophyll-a acts as the primary reaction centre (P680 and P700) in Photosystems II and I. Step 2: While accessory pigments (chlorophyll-b, carotenoids) absorb light across broader spectra, they transfer absorbed photons directly to chlorophyll-a to drive electron excitation.",
+        "ta": "படி 1: பச்சையம்-a ஒளி அமைப்பு I மற்றும் II இன் முதன்மை வினை மையமாக செயல்படுகிறது. படி 2: இது சூரிய ஒளி ஆற்றலை நேரடியாக வேதி ஆற்றலாக மாற்றும் முதன்மை நிறமியாகும்."
+      },
+      "sourceExam": "SSLC 10th Science Set 1"
+    }
+  }
+]

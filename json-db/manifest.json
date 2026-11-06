@@ -1,0 +1,116 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-11-06T13:01:14.825Z",
+  "system": "AKNEX AI Academic Vector & Retrieval Knowledge Database",
+  "schema": "AknexAcademicEntity",
+  "standards": [
+    12,
+    10
+  ],
+  "totals": {
+    "totalEntities": 1705,
+    "totalConcepts": 123,
+    "totalQuestions": 1582
+  },
+  "subjects": {
+    "MAT-12": {
+      "standard": 12,
+      "name": "Mathematics",
+      "stream": "CS2612",
+      "file": "json-db/12/MAT-12-MASTER.json",
+      "recordsCount": 392,
+      "conceptsCount": 11,
+      "questionsCount": 381
+    },
+    "PHY-12": {
+      "standard": 12,
+      "name": "Physics",
+      "stream": "CS2612",
+      "file": "json-db/12/PHY-12-MASTER.json",
+      "recordsCount": 282,
+      "conceptsCount": 8,
+      "questionsCount": 274
+    },
+    "CHE-12": {
+      "standard": 12,
+      "name": "Chemistry",
+      "stream": "CS2612",
+      "file": "json-db/12/CHE-12-MASTER.json",
+      "recordsCount": 157,
+      "conceptsCount": 8,
+      "questionsCount": 149
+    },
+    "ENG-12": {
+      "standard": 12,
+      "name": "English",
+      "stream": "GENERAL",
+      "file": "json-db/12/ENG-12-MASTER.json",
+      "recordsCount": 106,
+      "conceptsCount": 6,
+      "questionsCount": 100
+    },
+    "CSC-12": {
+      "standard": 12,
+      "name": "Computer Science",
+      "stream": "CS2612",
+      "file": "json-db/12/CSC-12-MASTER.json",
+      "recordsCount": 125,
+      "conceptsCount": 10,
+      "questionsCount": 115
+    },
+    "TAM-12": {
+      "standard": 12,
+      "name": "Tamil",
+      "stream": "GENERAL",
+      "file": "json-db/12/TAM-12-MASTER.json",
+      "recordsCount": 106,
+      "conceptsCount": 6,
+      "questionsCount": 100
+    },
+    "MAT-10": {
+      "standard": 10,
+      "name": "Mathematics",
+      "stream": "GENERAL",
+      "file": "json-db/10/MAT-10-MASTER.json",
+      "recordsCount": 183,
+      "conceptsCount": 20,
+      "questionsCount": 163
+    },
+    "SCI-10": {
+      "standard": 10,
+      "name": "Science",
+      "stream": "GENERAL",
+      "file": "json-db/10/SCI-10-MASTER.json",
+      "recordsCount": 62,
+      "conceptsCount": 12,
+      "questionsCount": 50
+    },
+    "SOC-10": {
+      "standard": 10,
+      "name": "Social Science",
+      "stream": "GENERAL",
+      "file": "json-db/10/SOC-10-MASTER.json",
+      "recordsCount": 62,
+      "conceptsCount": 12,
+      "questionsCount": 50
+    },
+    "ENG-10": {
+      "standard": 10,
+      "name": "English",
+      "stream": "GENERAL",
+      "file": "json-db/10/ENG-10-MASTER.json",
+      "recordsCount": 110,
+      "conceptsCount": 10,
+      "questionsCount": 100
+    },
+    "TAM-10": {
+      "standard": 10,
+      "name": "Tamil",
+      "stream": "GENERAL",
+      "file": "json-db/10/TAM-10-MASTER.json",
+      "recordsCount": 120,
+      "conceptsCount": 20,
+      "questionsCount": 100
+    }
+  }
+}

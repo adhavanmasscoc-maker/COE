@@ -311,3 +311,8 @@ DYNAMIC EXAM SITE/
    - Full 14-paper comprehensive collection: 2 papers per year (Annual March/May Public + June/July/August/September Supplementary) for each academic cycle from 2020 to 2026.
    - 100% Learning & Revision Focus: Zero timed CBT countdown timers or test-taking pressure; designed for study, step-by-step formula exploration, and self-paced revision.
    - Mobile-First & Accessible Layout: Warm paper theme (`#fbf9f4`) with high-contrast scholarly typography, responsive KaTeX math rendering, and resilient question number pills (`min-width: 44px; height: 32px`) preventing any badge truncation or clipping on compulsory questions (Q30, Q40, Q41–Q47).
+7. **Unified AI Academic Knowledge Database (json-db/)**:
+   - Structured JSON database combining metadata taxonomy with Markdown & KaTeX fields for high-efficiency LLM parsing and RAG vector retrieval.
+   - Master Catalog (json-db/manifest.json): 1,705 total academic entities (123 syllabus concepts + 1,582 authentic examination questions with bilingual step-by-step solutions).
+   - Partitioned by standard and subject code (json-db/12/ and json-db/10/) to eliminate oversized token transfers and guarantee low-latency retrieval.
+   - Grounded RAG integration via src/lib/ai/jsonDb.js directly injected into Gemini AI Tutor (src/app/api/ai/tutor/route.js).

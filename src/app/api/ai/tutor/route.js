@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getGeminiFlashModel, generateEmbedding } from "@/lib/ai/geminiClient";
 import { searchSimilarChunks } from "@/lib/ai/vectorStore";
+import { searchAcademicEntities, formatEntityForGemini } from "@/lib/ai/jsonDb";
 import {
   buildSystemPrompt,
   buildHintPrompt,
@@ -78,13 +79,25 @@ export async function POST(request) {
       timestamp: Date.now(),
     });
 
-    const contextSnippet = matchedChunks
-      .map(
-        (c) =>
-          `[Unit ${c.unitNumber}: ${c.chunkTitle}]\n` +
-          (language === "ta" ? c.contentTa : c.contentEn)
-      )
-      .join("\n\n");
+    // Ingest structured academic context from json-db
+    const structuredEntities = searchAcademicEntities(subjectCode, queryForSearch, { limit: 2 });
+    const structuredContext = structuredEntities
+      .map((e) => formatEntityForGemini(e, language))
+      .filter(Boolean)
+      .join("\n\n---\n\n");
+
+    const contextSnippet = [
+      matchedChunks
+        .map(
+          (c) =>
+            `[Unit ${c.unitNumber}: ${c.chunkTitle}]\n` +
+            (language === "ta" ? c.contentTa : c.contentEn)
+        )
+        .join("\n\n"),
+      structuredContext,
+    ]
+      .filter(Boolean)
+      .join("\n\n=== VERIFIED AI JSON-DB KNOWLEDGE ===\n\n");
 
     // 3. Construct prompt
     const systemPrompt = buildSystemPrompt({

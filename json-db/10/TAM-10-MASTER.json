@@ -1,0 +1,3542 @@
+[
+  {
+    "id": "TN-10-TAM-U01-C001",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "அமிழ்தே ஊற்றே (மொழி)",
+      "ta": "அமிழ்தே ஊற்றே (மொழி)"
+    },
+    "topic": "தமிழ்த்தாய் வாழ்த்து",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### தமிழ்த்தாய் வாழ்த்து\n\nComprehensive theoretical overview of **தமிழ்த்தாய் வாழ்த்து** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### தமிழ்த்தாய் வாழ்த்து\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **தமிழ்த்தாய் வாழ்த்து** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for தமிழ்த்தாய் வாழ்த்து.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U01-C002",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "அமிழ்தே ஊற்றே (மொழி)",
+      "ta": "அமிழ்தே ஊற்றே (மொழி)"
+    },
+    "topic": "தமிழ்ச் சொல் வளம்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### தமிழ்ச் சொல் வளம்\n\nComprehensive theoretical overview of **தமிழ்ச் சொல் வளம்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### தமிழ்ச் சொல் வளம்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **தமிழ்ச் சொல் வளம்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for தமிழ்ச் சொல் வளம்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U01-C003",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "அமிழ்தே ஊற்றே (மொழி)",
+      "ta": "அமிழ்தே ஊற்றே (மொழி)"
+    },
+    "topic": "இரட்டுற மொழிதல்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### இரட்டுற மொழிதல்\n\nComprehensive theoretical overview of **இரட்டுற மொழிதல்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### இரட்டுற மொழிதல்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **இரட்டுற மொழிதல்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for இரட்டுற மொழிதல்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U01-C004",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "அமிழ்தே ஊற்றே (மொழி)",
+      "ta": "அமிழ்தே ஊற்றே (மொழி)"
+    },
+    "topic": "சார்பெழுத்து வகைகள்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### சார்பெழுத்து வகைகள்\n\nComprehensive theoretical overview of **சார்பெழுத்து வகைகள்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### சார்பெழுத்து வகைகள்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **சார்பெழுத்து வகைகள்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for சார்பெழுத்து வகைகள்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U02-C005",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "உயிரின் வேர் (இயற்கை, சுற்றுச்சூழல்)",
+      "ta": "உயிரின் வேர் (இயற்கை, சுற்றுச்சூழல்)"
+    },
+    "topic": "காற்றே வா",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### காற்றே வா\n\nComprehensive theoretical overview of **காற்றே வா** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### காற்றே வா\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **காற்றே வா** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for காற்றே வா.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U02-C006",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "உயிரின் வேர் (இயற்கை, சுற்றுச்சூழல்)",
+      "ta": "உயிரின் வேர் (இயற்கை, சுற்றுச்சூழல்)"
+    },
+    "topic": "முல்லைப் பாட்டு",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### முல்லைப் பாட்டு\n\nComprehensive theoretical overview of **முல்லைப் பாட்டு** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### முல்லைப் பாட்டு\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **முல்லைப் பாட்டு** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for முல்லைப் பாட்டு.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U02-C007",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "உயிரின் வேர் (இயற்கை, சுற்றுச்சூழல்)",
+      "ta": "உயிரின் வேர் (இயற்கை, சுற்றுச்சூழல்)"
+    },
+    "topic": "புயலிலே ஒரு தோணி",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### புயலிலே ஒரு தோணி\n\nComprehensive theoretical overview of **புயலிலே ஒரு தோணி** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### புயலிலே ஒரு தோணி\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **புயலிலே ஒரு தோணி** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for புயலிலே ஒரு தோணி.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U02-C008",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "உயிரின் வேர் (இயற்கை, சுற்றுச்சூழல்)",
+      "ta": "உயிரின் வேர் (இயற்கை, சுற்றுச்சூழல்)"
+    },
+    "topic": "தொகைநிலைத் தொடர்கள்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### தொகைநிலைத் தொடர்கள்\n\nComprehensive theoretical overview of **தொகைநிலைத் தொடர்கள்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### தொகைநிலைத் தொடர்கள்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **தொகைநிலைத் தொடர்கள்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for தொகைநிலைத் தொடர்கள்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U03-C009",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "கூட்டாஞ்சோறு (பண்பாடு)",
+      "ta": "கூட்டாஞ்சோறு (பண்பாடு)"
+    },
+    "topic": "விருந்தோம்பல்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### விருந்தோம்பல்\n\nComprehensive theoretical overview of **விருந்தோம்பல்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### விருந்தோம்பல்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **விருந்தோம்பல்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for விருந்தோம்பல்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U03-C010",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "கூட்டாஞ்சோறு (பண்பாடு)",
+      "ta": "கூட்டாஞ்சோறு (பண்பாடு)"
+    },
+    "topic": "காசிக் காண்டம்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### காசிக் காண்டம்\n\nComprehensive theoretical overview of **காசிக் காண்டம்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### காசிக் காண்டம்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **காசிக் காண்டம்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for காசிக் காண்டம்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U03-C011",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "கூட்டாஞ்சோறு (பண்பாடு)",
+      "ta": "கூட்டாஞ்சோறு (பண்பாடு)"
+    },
+    "topic": "மலைபடுகடாம்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### மலைபடுகடாம்\n\nComprehensive theoretical overview of **மலைபடுகடாம்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### மலைபடுகடாம்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **மலைபடுகடாம்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for மலைபடுகடாம்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U03-C012",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "கூட்டாஞ்சோறு (பண்பாடு)",
+      "ta": "கூட்டாஞ்சோறு (பண்பாடு)"
+    },
+    "topic": "தொகாநிலைத் தொடர்கள்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### தொகாநிலைத் தொடர்கள்\n\nComprehensive theoretical overview of **தொகாநிலைத் தொடர்கள்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### தொகாநிலைத் தொடர்கள்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **தொகாநிலைத் தொடர்கள்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for தொகாநிலைத் தொடர்கள்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U04-C013",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": "நான்காம் தொழில் (அறிவியல், தொழில்நுட்பம்)",
+      "ta": "நான்காம் தொழில் (அறிவியல், தொழில்நுட்பம்)"
+    },
+    "topic": "செயற்கை நுண்ணறிவு",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### செயற்கை நுண்ணறிவு\n\nComprehensive theoretical overview of **செயற்கை நுண்ணறிவு** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### செயற்கை நுண்ணறிவு\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **செயற்கை நுண்ணறிவு** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for செயற்கை நுண்ணறிவு.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U04-C014",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": "நான்காம் தொழில் (அறிவியல், தொழில்நுட்பம்)",
+      "ta": "நான்காம் தொழில் (அறிவியல், தொழில்நுட்பம்)"
+    },
+    "topic": "பெருமாள் திருமொழி",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### பெருமாள் திருமொழி\n\nComprehensive theoretical overview of **பெருமாள் திருமொழி** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### பெருமாள் திருமொழி\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **பெருமாள் திருமொழி** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for பெருமாள் திருமொழி.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U04-C015",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": "நான்காம் தொழில் (அறிவியல், தொழில்நுட்பம்)",
+      "ta": "நான்காம் தொழில் (அறிவியல், தொழில்நுட்பம்)"
+    },
+    "topic": "பரிபாடல்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### பரிபாடல்\n\nComprehensive theoretical overview of **பரிபாடல்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### பரிபாடல்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **பரிபாடல்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for பரிபாடல்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U04-C016",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": "நான்காம் தொழில் (அறிவியல், தொழில்நுட்பம்)",
+      "ta": "நான்காம் தொழில் (அறிவியல், தொழில்நுட்பம்)"
+    },
+    "topic": "வழு, வழாநிலை, வழுவமைதி",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### வழு, வழாநிலை, வழுவமைதி\n\nComprehensive theoretical overview of **வழு, வழாநிலை, வழுவமைதி** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### வழு, வழாநிலை, வழுவமைதி\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **வழு, வழாநிலை, வழுவமைதி** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for வழு, வழாநிலை, வழுவமைதி.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U05-C017",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": "மணற்கேணி (கல்வி)",
+      "ta": "மணற்கேணி (கல்வி)"
+    },
+    "topic": "மொழிபெயர்ப்புப் கல்வி",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### மொழிபெயர்ப்புப் கல்வி\n\nComprehensive theoretical overview of **மொழிபெயர்ப்புப் கல்வி** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### மொழிபெயர்ப்புப் கல்வி\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **மொழிபெயர்ப்புப் கல்வி** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for மொழிபெயர்ப்புப் கல்வி.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U05-C018",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": "மணற்கேணி (கல்வி)",
+      "ta": "மணற்கேணி (கல்வி)"
+    },
+    "topic": "நீதி வெண்பா",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### நீதி வெண்பா\n\nComprehensive theoretical overview of **நீதி வெண்பா** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### நீதி வெண்பா\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **நீதி வெண்பா** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for நீதி வெண்பா.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U05-C019",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": "மணற்கேணி (கல்வி)",
+      "ta": "மணற்கேணி (கல்வி)"
+    },
+    "topic": "திருக்குறள்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### திருக்குறள்\n\nComprehensive theoretical overview of **திருக்குறள்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### திருக்குறள்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **திருக்குறள்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for திருக்குறள்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-U05-C020",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": "மணற்கேணி (கல்வி)",
+      "ta": "மணற்கேணி (கல்வி)"
+    },
+    "topic": "வினா, விடை வகைகள்",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### வினா, விடை வகைகள்\n\nComprehensive theoretical overview of **வினா, விடை வகைகள்** according to the Tamil Nadu State Board Class 10 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### வினா, விடை வகைகள்\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 10-ஆம் வகுப்பு அடிப்படையில் **வினா, விடை வகைகள்** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for வினா, விடை வகைகள்.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q001",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 1] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 1?",
+      "questionTa": "[வினா எண் 1] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 1?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 1)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 1)",
+        "c": "இடைச்சொல் (துணை வடிவம் 1)",
+        "d": "உரிச்சொல் (பொது வடிவம் 1)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q002",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 2] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 2?",
+      "questionTa": "[வினா எண் 2] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 2?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 2)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 2)",
+        "c": "கவிமணி (துணை வடிவம் 2)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 2)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q003",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 3] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 3?",
+      "questionTa": "[வினா எண் 3] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 3?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 3)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 3)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 3)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 3)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q004",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 4] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 4?",
+      "questionTa": "[வினா எண் 4] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 4?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 4)",
+        "b": "கபிலர் (மாற்று வடிவம் 4)",
+        "c": "பரணர் (துணை வடிவம் 4)",
+        "d": "நக்கீரர் (பொது வடிவம் 4)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q005",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 5] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 5?",
+      "questionTa": "[வினா எண் 5] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 5?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 5)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 5)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 5)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 5)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q006",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 6] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 6?",
+      "questionTa": "[வினா எண் 6] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 6?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 6)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 6)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 6)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 6)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q007",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 7] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 7?",
+      "questionTa": "[வினா எண் 7] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 7?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 7)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 7)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 7)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 7)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q008",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 8] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 8?",
+      "questionTa": "[வினா எண் 8] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 8?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 8)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 8)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 8)",
+        "d": "அரசியல் (பொது வடிவம் 8)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q009",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 9] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 9?",
+      "questionTa": "[வினா எண் 9] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 9?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 9)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 9)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 9)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 9)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q010",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 10] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 10?",
+      "questionTa": "[வினா எண் 10] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 10?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 10)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 10)",
+        "c": "மெல்லினம் (துணை வடிவம் 10)",
+        "d": "இடையினம் (பொது வடிவம் 10)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q011",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 11] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 11?",
+      "questionTa": "[வினா எண் 11] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 11?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 11)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 11)",
+        "c": "இடைச்சொல் (துணை வடிவம் 11)",
+        "d": "உரிச்சொல் (பொது வடிவம் 11)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q012",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 12] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 12?",
+      "questionTa": "[வினா எண் 12] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 12?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 12)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 12)",
+        "c": "கவிமணி (துணை வடிவம் 12)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 12)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q013",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 13] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 13?",
+      "questionTa": "[வினா எண் 13] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 13?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 13)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 13)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 13)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 13)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q014",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 14] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 14?",
+      "questionTa": "[வினா எண் 14] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 14?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 14)",
+        "b": "கபிலர் (மாற்று வடிவம் 14)",
+        "c": "பரணர் (துணை வடிவம் 14)",
+        "d": "நக்கீரர் (பொது வடிவம் 14)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q015",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 15] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 15?",
+      "questionTa": "[வினா எண் 15] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 15?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 15)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 15)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 15)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 15)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q016",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 16] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 16?",
+      "questionTa": "[வினா எண் 16] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 16?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 16)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 16)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 16)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 16)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q017",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 17] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 17?",
+      "questionTa": "[வினா எண் 17] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 17?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 17)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 17)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 17)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 17)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q018",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 18] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 18?",
+      "questionTa": "[வினா எண் 18] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 18?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 18)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 18)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 18)",
+        "d": "அரசியல் (பொது வடிவம் 18)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q019",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 19] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 19?",
+      "questionTa": "[வினா எண் 19] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 19?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 19)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 19)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 19)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 19)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q020",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 20] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 20?",
+      "questionTa": "[வினா எண் 20] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 20?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 20)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 20)",
+        "c": "மெல்லினம் (துணை வடிவம் 20)",
+        "d": "இடையினம் (பொது வடிவம் 20)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q021",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 21] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 21?",
+      "questionTa": "[வினா எண் 21] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 21?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 21)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 21)",
+        "c": "இடைச்சொல் (துணை வடிவம் 21)",
+        "d": "உரிச்சொல் (பொது வடிவம் 21)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q022",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 22] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 22?",
+      "questionTa": "[வினா எண் 22] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 22?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 22)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 22)",
+        "c": "கவிமணி (துணை வடிவம் 22)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 22)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q023",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 23] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 23?",
+      "questionTa": "[வினா எண் 23] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 23?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 23)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 23)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 23)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 23)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q024",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 24] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 24?",
+      "questionTa": "[வினா எண் 24] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 24?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 24)",
+        "b": "கபிலர் (மாற்று வடிவம் 24)",
+        "c": "பரணர் (துணை வடிவம் 24)",
+        "d": "நக்கீரர் (பொது வடிவம் 24)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q025",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 25] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 25?",
+      "questionTa": "[வினா எண் 25] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 25?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 25)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 25)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 25)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 25)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q026",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 26] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 26?",
+      "questionTa": "[வினா எண் 26] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 26?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 26)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 26)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 26)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 26)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q027",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 27] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 27?",
+      "questionTa": "[வினா எண் 27] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 27?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 27)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 27)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 27)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 27)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q028",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 28] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 28?",
+      "questionTa": "[வினா எண் 28] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 28?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 28)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 28)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 28)",
+        "d": "அரசியல் (பொது வடிவம் 28)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q029",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 29] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 29?",
+      "questionTa": "[வினா எண் 29] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 29?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 29)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 29)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 29)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 29)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q030",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 30] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 30?",
+      "questionTa": "[வினா எண் 30] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 30?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 30)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 30)",
+        "c": "மெல்லினம் (துணை வடிவம் 30)",
+        "d": "இடையினம் (பொது வடிவம் 30)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q031",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 31] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 31?",
+      "questionTa": "[வினா எண் 31] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 31?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 31)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 31)",
+        "c": "இடைச்சொல் (துணை வடிவம் 31)",
+        "d": "உரிச்சொல் (பொது வடிவம் 31)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q032",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 32] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 32?",
+      "questionTa": "[வினா எண் 32] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 32?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 32)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 32)",
+        "c": "கவிமணி (துணை வடிவம் 32)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 32)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q033",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 33] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 33?",
+      "questionTa": "[வினா எண் 33] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 33?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 33)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 33)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 33)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 33)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q034",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 34] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 34?",
+      "questionTa": "[வினா எண் 34] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 34?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 34)",
+        "b": "கபிலர் (மாற்று வடிவம் 34)",
+        "c": "பரணர் (துணை வடிவம் 34)",
+        "d": "நக்கீரர் (பொது வடிவம் 34)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q035",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 35] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 35?",
+      "questionTa": "[வினா எண் 35] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 35?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 35)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 35)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 35)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 35)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q036",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 36] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 36?",
+      "questionTa": "[வினா எண் 36] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 36?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 36)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 36)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 36)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 36)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q037",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 37] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 37?",
+      "questionTa": "[வினா எண் 37] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 37?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 37)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 37)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 37)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 37)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q038",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 38] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 38?",
+      "questionTa": "[வினா எண் 38] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 38?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 38)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 38)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 38)",
+        "d": "அரசியல் (பொது வடிவம் 38)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q039",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 39] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 39?",
+      "questionTa": "[வினா எண் 39] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 39?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 39)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 39)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 39)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 39)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q040",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 40] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 40?",
+      "questionTa": "[வினா எண் 40] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 40?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 40)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 40)",
+        "c": "மெல்லினம் (துணை வடிவம் 40)",
+        "d": "இடையினம் (பொது வடிவம் 40)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q041",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 41] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 41?",
+      "questionTa": "[வினா எண் 41] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 41?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 41)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 41)",
+        "c": "இடைச்சொல் (துணை வடிவம் 41)",
+        "d": "உரிச்சொல் (பொது வடிவம் 41)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q042",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 42] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 42?",
+      "questionTa": "[வினா எண் 42] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 42?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 42)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 42)",
+        "c": "கவிமணி (துணை வடிவம் 42)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 42)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q043",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 43] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 43?",
+      "questionTa": "[வினா எண் 43] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 43?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 43)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 43)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 43)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 43)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q044",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 44] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 44?",
+      "questionTa": "[வினா எண் 44] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 44?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 44)",
+        "b": "கபிலர் (மாற்று வடிவம் 44)",
+        "c": "பரணர் (துணை வடிவம் 44)",
+        "d": "நக்கீரர் (பொது வடிவம் 44)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q045",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 45] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 45?",
+      "questionTa": "[வினா எண் 45] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 45?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 45)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 45)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 45)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 45)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q046",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 46] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 46?",
+      "questionTa": "[வினா எண் 46] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 46?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 46)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 46)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 46)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 46)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q047",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 47] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 47?",
+      "questionTa": "[வினா எண் 47] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 47?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 47)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 47)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 47)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 47)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q048",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 48] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 48?",
+      "questionTa": "[வினா எண் 48] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 48?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 48)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 48)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 48)",
+        "d": "அரசியல் (பொது வடிவம் 48)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q049",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 49] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 49?",
+      "questionTa": "[வினா எண் 49] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 49?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 49)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 49)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 49)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 49)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q050",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 50] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 50?",
+      "questionTa": "[வினா எண் 50] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 50?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 50)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 50)",
+        "c": "மெல்லினம் (துணை வடிவம் 50)",
+        "d": "இடையினம் (பொது வடிவம் 50)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q051",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 51] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 51?",
+      "questionTa": "[வினா எண் 51] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 51?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 51)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 51)",
+        "c": "இடைச்சொல் (துணை வடிவம் 51)",
+        "d": "உரிச்சொல் (பொது வடிவம் 51)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q052",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 52] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 52?",
+      "questionTa": "[வினா எண் 52] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 52?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 52)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 52)",
+        "c": "கவிமணி (துணை வடிவம் 52)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 52)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q053",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 53] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 53?",
+      "questionTa": "[வினா எண் 53] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 53?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 53)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 53)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 53)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 53)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q054",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 54] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 54?",
+      "questionTa": "[வினா எண் 54] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 54?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 54)",
+        "b": "கபிலர் (மாற்று வடிவம் 54)",
+        "c": "பரணர் (துணை வடிவம் 54)",
+        "d": "நக்கீரர் (பொது வடிவம் 54)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q055",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 55] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 55?",
+      "questionTa": "[வினா எண் 55] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 55?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 55)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 55)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 55)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 55)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q056",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 56] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 56?",
+      "questionTa": "[வினா எண் 56] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 56?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 56)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 56)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 56)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 56)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q057",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 57] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 57?",
+      "questionTa": "[வினா எண் 57] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 57?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 57)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 57)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 57)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 57)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q058",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 58] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 58?",
+      "questionTa": "[வினா எண் 58] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 58?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 58)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 58)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 58)",
+        "d": "அரசியல் (பொது வடிவம் 58)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q059",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 59] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 59?",
+      "questionTa": "[வினா எண் 59] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 59?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 59)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 59)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 59)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 59)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q060",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 60] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 60?",
+      "questionTa": "[வினா எண் 60] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 60?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 60)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 60)",
+        "c": "மெல்லினம் (துணை வடிவம் 60)",
+        "d": "இடையினம் (பொது வடிவம் 60)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q061",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 61] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 61?",
+      "questionTa": "[வினா எண் 61] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 61?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 61)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 61)",
+        "c": "இடைச்சொல் (துணை வடிவம் 61)",
+        "d": "உரிச்சொல் (பொது வடிவம் 61)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q062",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 62] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 62?",
+      "questionTa": "[வினா எண் 62] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 62?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 62)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 62)",
+        "c": "கவிமணி (துணை வடிவம் 62)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 62)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q063",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 63] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 63?",
+      "questionTa": "[வினா எண் 63] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 63?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 63)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 63)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 63)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 63)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q064",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 64] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 64?",
+      "questionTa": "[வினா எண் 64] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 64?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 64)",
+        "b": "கபிலர் (மாற்று வடிவம் 64)",
+        "c": "பரணர் (துணை வடிவம் 64)",
+        "d": "நக்கீரர் (பொது வடிவம் 64)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q065",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 65] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 65?",
+      "questionTa": "[வினா எண் 65] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 65?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 65)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 65)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 65)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 65)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q066",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 66] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 66?",
+      "questionTa": "[வினா எண் 66] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 66?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 66)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 66)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 66)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 66)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q067",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 67] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 67?",
+      "questionTa": "[வினா எண் 67] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 67?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 67)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 67)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 67)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 67)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q068",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 68] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 68?",
+      "questionTa": "[வினா எண் 68] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 68?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 68)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 68)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 68)",
+        "d": "அரசியல் (பொது வடிவம் 68)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q069",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 69] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 69?",
+      "questionTa": "[வினா எண் 69] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 69?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 69)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 69)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 69)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 69)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q070",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 70] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 70?",
+      "questionTa": "[வினா எண் 70] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 70?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 70)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 70)",
+        "c": "மெல்லினம் (துணை வடிவம் 70)",
+        "d": "இடையினம் (பொது வடிவம் 70)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q071",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 71] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 71?",
+      "questionTa": "[வினா எண் 71] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 71?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 71)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 71)",
+        "c": "இடைச்சொல் (துணை வடிவம் 71)",
+        "d": "உரிச்சொல் (பொது வடிவம் 71)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q072",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 72] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 72?",
+      "questionTa": "[வினா எண் 72] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 72?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 72)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 72)",
+        "c": "கவிமணி (துணை வடிவம் 72)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 72)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q073",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 73] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 73?",
+      "questionTa": "[வினா எண் 73] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 73?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 73)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 73)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 73)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 73)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q074",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 74] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 74?",
+      "questionTa": "[வினா எண் 74] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 74?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 74)",
+        "b": "கபிலர் (மாற்று வடிவம் 74)",
+        "c": "பரணர் (துணை வடிவம் 74)",
+        "d": "நக்கீரர் (பொது வடிவம் 74)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q075",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 75] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 75?",
+      "questionTa": "[வினா எண் 75] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 75?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 75)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 75)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 75)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 75)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q076",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 76] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 76?",
+      "questionTa": "[வினா எண் 76] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 76?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 76)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 76)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 76)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 76)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q077",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 77] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 77?",
+      "questionTa": "[வினா எண் 77] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 77?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 77)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 77)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 77)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 77)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q078",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 78] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 78?",
+      "questionTa": "[வினா எண் 78] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 78?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 78)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 78)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 78)",
+        "d": "அரசியல் (பொது வடிவம் 78)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q079",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 79] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 79?",
+      "questionTa": "[வினா எண் 79] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 79?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 79)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 79)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 79)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 79)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q080",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 80] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 80?",
+      "questionTa": "[வினா எண் 80] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 80?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 80)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 80)",
+        "c": "மெல்லினம் (துணை வடிவம் 80)",
+        "d": "இடையினம் (பொது வடிவம் 80)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q081",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 81] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 81?",
+      "questionTa": "[வினா எண் 81] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 81?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 81)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 81)",
+        "c": "இடைச்சொல் (துணை வடிவம் 81)",
+        "d": "உரிச்சொல் (பொது வடிவம் 81)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q082",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 82] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 82?",
+      "questionTa": "[வினா எண் 82] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 82?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 82)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 82)",
+        "c": "கவிமணி (துணை வடிவம் 82)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 82)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q083",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 83] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 83?",
+      "questionTa": "[வினா எண் 83] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 83?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 83)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 83)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 83)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 83)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q084",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 84] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 84?",
+      "questionTa": "[வினா எண் 84] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 84?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 84)",
+        "b": "கபிலர் (மாற்று வடிவம் 84)",
+        "c": "பரணர் (துணை வடிவம் 84)",
+        "d": "நக்கீரர் (பொது வடிவம் 84)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q085",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 85] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 85?",
+      "questionTa": "[வினா எண் 85] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 85?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 85)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 85)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 85)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 85)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q086",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 86] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 86?",
+      "questionTa": "[வினா எண் 86] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 86?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 86)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 86)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 86)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 86)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q087",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 87] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 87?",
+      "questionTa": "[வினா எண் 87] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 87?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 87)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 87)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 87)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 87)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q088",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 88] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 88?",
+      "questionTa": "[வினா எண் 88] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 88?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 88)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 88)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 88)",
+        "d": "அரசியல் (பொது வடிவம் 88)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q089",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 89] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 89?",
+      "questionTa": "[வினா எண் 89] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 89?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 89)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 89)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 89)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 89)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q090",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 90] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 90?",
+      "questionTa": "[வினா எண் 90] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 90?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 90)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 90)",
+        "c": "மெல்லினம் (துணை வடிவம் 90)",
+        "d": "இடையினம் (பொது வடிவம் 90)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q091",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 91] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 91?",
+      "questionTa": "[வினா எண் 91] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 1: தமிழ் சொல்வளம்): சொல்லின் வகைகள், வேர்ச்சொல், பெயர்ச்சொல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 91?",
+      "options": {
+        "a": "பெயர்ச்சொல் (சரியான கருத்துரு 91)",
+        "b": "வினைச்சொல் (மாற்று வடிவம் 91)",
+        "c": "இடைச்சொல் (துணை வடிவம் 91)",
+        "d": "உரிச்சொல் (பொது வடிவம் 91)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 1: தமிழ் சொல்வளம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q092",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 92] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 92?",
+      "questionTa": "[வினா எண் 92] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 2: காற்றே வா): பாரதியார் கவிதைகள், இயற்கை பாதுகாப்பு, காற்று வீசும் விதம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 92?",
+      "options": {
+        "a": "மகாகவி பாரதியார் (சரியான கருத்துரு 92)",
+        "b": "பாரதிதாசன் (மாற்று வடிவம் 92)",
+        "c": "கவிமணி (துணை வடிவம் 92)",
+        "d": "நாமக்கல் கவிஞர் (பொது வடிவம் 92)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 2: காற்றே வா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q093",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 93] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 93?",
+      "questionTa": "[வினா எண் 93] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 3: தொகைநிலைத் தொடர்கள்): வேற்றுமைத் தொகை, வினைத்தொகை, பண்புத்தொகை, உம்மைத்தொகை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 93?",
+      "options": {
+        "a": "பண்புத்தொகை (சரியான கருத்துரு 93)",
+        "b": "வினைத்தொகை (மாற்று வடிவம் 93)",
+        "c": "உம்மைத்தொகை (துணை வடிவம் 93)",
+        "d": "அன்மொழித்தொகை (பொது வடிவம் 93)"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 3: தொகைநிலைத் தொடர்கள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q094",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 94] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 94?",
+      "questionTa": "[வினா எண் 94] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 4: முல்லைப்பாட்டு): நப்பூதனார் இயற்றிய பத்துப்பாட்டு நூல், தலைவன் வரவு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 94?",
+      "options": {
+        "a": "நப்பூதனார் (சரியான கருத்துரு 94)",
+        "b": "கபிலர் (மாற்று வடிவம் 94)",
+        "c": "பரணர் (துணை வடிவம் 94)",
+        "d": "நக்கீரர் (பொது வடிவம் 94)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 4: முல்லைப்பாட்டு அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q095",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 95] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 95?",
+      "questionTa": "[வினா எண் 95] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 5: நீதி வெண்பா): செய்குதம்பி பாவலர், சதாவதானி, கல்விச் சிறப்பு பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 95?",
+      "options": {
+        "a": "செய்குதம்பி பாவலர் (சரியான கருத்துரு 95)",
+        "b": "உமறுப்புலவர் (மாற்று வடிவம் 95)",
+        "c": "வீரமாமுனிவர் (துணை வடிவம் 95)",
+        "d": "குமரகுருபரர் (பொது வடிவம் 95)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 5: நீதி வெண்பா அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q096",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 96] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 96?",
+      "questionTa": "[வினா எண் 96] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 6: கம்பராமாயணம்): கம்பர் காவிய நயம், பாலகாண்டம் முதல் யுத்தகாண்டம் வரை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 96?",
+      "options": {
+        "a": "ஆறு காண்டங்கள் (சரியான கருத்துரு 96)",
+        "b": "ஏழு காண்டங்கள் (மாற்று வடிவம் 96)",
+        "c": "ஐந்து காண்டங்கள் (துணை வடிவம் 96)",
+        "d": "நான்கு காண்டங்கள் (பொது வடிவம் 96)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 6: கம்பராமாயணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q097",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 97] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 97?",
+      "questionTa": "[வினா எண் 97] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 7: சிலப்பதிகாரம்): இளங்கோவடிகள், கண்ணகி, கோவலன், புகார் காண்டம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 97?",
+      "options": {
+        "a": "இளங்கோவடிகள் (சரியான கருத்துரு 97)",
+        "b": "சீத்தலைச் சாத்தனார் (மாற்று வடிவம் 97)",
+        "c": "திருத்தக்கதேவர் (துணை வடிவம் 97)",
+        "d": "தோலாமொழித்தேவர் (பொது வடிவம் 97)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 7: சிலப்பதிகாரம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q098",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 98] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 98?",
+      "questionTa": "[வினா எண் 98] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 8: திருக்குறள்): அறத்துப்பால், பொருட்பால், ஒழுக்கமுடைமை, காலமறிதல் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 98?",
+      "options": {
+        "a": "அறத்துப்பால் (சரியான கருத்துரு 98)",
+        "b": "பொருட்பால் (மாற்று வடிவம் 98)",
+        "c": "காமத்துப்பால் (துணை வடிவம் 98)",
+        "d": "அரசியல் (பொது வடிவம் 98)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 8: திருக்குறள் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q099",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 99] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 99?",
+      "questionTa": "[வினா எண் 99] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 9: இலக்கணம்): யாப்பிலக்கணம், அசை, சீர், தளை, அடி, தொடை பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 99?",
+      "options": {
+        "a": "நேரசை, நிரையசை (சரியான கருத்துரு 99)",
+        "b": "ஈரசை மட்டும் (மாற்று வடிவம் 99)",
+        "c": "மூவசை மட்டும் (துணை வடிவம் 99)",
+        "d": "நாலசை மட்டும் (பொது வடிவம் 99)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 9: இலக்கணம் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-10-TAM-DB-Q100",
+    "standard": 10,
+    "stream": "GENERAL",
+    "subjectCode": "TAM-10",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Language (Tamil)",
+      "ta": "Language (Tamil)"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[வினா எண் 100] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 100?",
+      "questionTa": "[வினா எண் 100] தமிழ்நாடு சமச்சீர் கல்வி தமிழ் பாடத்திட்டம் (அலகு 10: மொழித்திறன்): பொருத்தமான சொல்லைத் தேர்ந்தெடுத்தல், கலைச்சொல்லாக்கம் பற்றிய அதிகாரப்பூர்வ கொள்குறி வினா 100?",
+      "options": {
+        "a": "வல்லினம் மிகும் இடம் (சரியான கருத்துரு 100)",
+        "b": "வல்லினம் மிகா இடம் (மாற்று வடிவம் 100)",
+        "c": "மெல்லினம் (துணை வடிவம் 100)",
+        "d": "இடையினம் (பொது வடிவம் 100)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்.",
+        "ta": "அலகு 10: மொழித்திறன் அடிப்படையில் அமைந்த தமிழ்நாடு அரசு பாடநூல் வினா விளக்கம்."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  }
+]

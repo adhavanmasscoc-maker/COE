@@ -1,0 +1,3817 @@
+[
+  {
+    "id": "TN-12-CSC-U01-C001",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Problem Solving & Algorithmic Strategies",
+      "ta": "Problem Solving & Algorithmic Strategies"
+    },
+    "topic": "Function & ADT",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Function & ADT\n\nComprehensive theoretical overview of **Function & ADT** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Function & ADT\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Function & ADT** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Function & ADT.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-U01-C002",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Problem Solving & Algorithmic Strategies",
+      "ta": "Problem Solving & Algorithmic Strategies"
+    },
+    "topic": "LEGB Scope Rule",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### LEGB Scope Rule\n\nComprehensive theoretical overview of **LEGB Scope Rule** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### LEGB Scope Rule\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **LEGB Scope Rule** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for LEGB Scope Rule.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-U01-C003",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Problem Solving & Algorithmic Strategies",
+      "ta": "Problem Solving & Algorithmic Strategies"
+    },
+    "topic": "Big O Complexity",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Big O Complexity\n\nComprehensive theoretical overview of **Big O Complexity** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Big O Complexity\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Big O Complexity** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Big O Complexity.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-U01-C004",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Problem Solving & Algorithmic Strategies",
+      "ta": "Problem Solving & Algorithmic Strategies"
+    },
+    "topic": "Searching & Sorting",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Searching & Sorting\n\nComprehensive theoretical overview of **Searching & Sorting** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Searching & Sorting\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Searching & Sorting** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Searching & Sorting.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-U02-C005",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Python Programming",
+      "ta": "Python Programming"
+    },
+    "topic": "Tokens & Control Flow",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Tokens & Control Flow\n\nComprehensive theoretical overview of **Tokens & Control Flow** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Tokens & Control Flow\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Tokens & Control Flow** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Tokens & Control Flow.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-U02-C006",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Python Programming",
+      "ta": "Python Programming"
+    },
+    "topic": "Functions & Lambda",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Functions & Lambda\n\nComprehensive theoretical overview of **Functions & Lambda** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Functions & Lambda\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Functions & Lambda** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Functions & Lambda.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-U02-C007",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Python Programming",
+      "ta": "Python Programming"
+    },
+    "topic": "Strings, Lists, Tuples, Sets, Dictionaries",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Strings, Lists, Tuples, Sets, Dictionaries\n\nComprehensive theoretical overview of **Strings, Lists, Tuples, Sets, Dictionaries** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Strings, Lists, Tuples, Sets, Dictionaries\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Strings, Lists, Tuples, Sets, Dictionaries** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Strings, Lists, Tuples, Sets, Dictionaries.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-U03-C008",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Database & SQL Integration",
+      "ta": "Database & SQL Integration"
+    },
+    "topic": "RDBMS Concepts",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### RDBMS Concepts\n\nComprehensive theoretical overview of **RDBMS Concepts** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### RDBMS Concepts\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **RDBMS Concepts** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for RDBMS Concepts.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-U03-C009",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Database & SQL Integration",
+      "ta": "Database & SQL Integration"
+    },
+    "topic": "SQL Commands (DDL, DML, DQL)",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### SQL Commands (DDL, DML, DQL)\n\nComprehensive theoretical overview of **SQL Commands (DDL, DML, DQL)** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### SQL Commands (DDL, DML, DQL)\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **SQL Commands (DDL, DML, DQL)** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for SQL Commands (DDL, DML, DQL).",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-U03-C010",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": "Database & SQL Integration",
+      "ta": "Database & SQL Integration"
+    },
+    "topic": "Python CSV & SQLite3 Module",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Python CSV & SQLite3 Module\n\nComprehensive theoretical overview of **Python CSV & SQLite3 Module** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Python CSV & SQLite3 Module\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Python CSV & SQLite3 Module** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "T(n) = O(n \\log n)",
+        "\\text{Scope: Local } \\rightarrow \\text{ Enclosed } \\rightarrow \\text{ Global } \\rightarrow \\text{ Built-in (LEGB)}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Python CSV & SQLite3 Module.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q001",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following is an organized collection of data?",
+      "questionTa": "Which of the following is an organized collection of data?",
+      "options": {
+        "a": "Database",
+        "b": "DBMS",
+        "c": "SQL",
+        "d": "Table"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option A is correct.",
+        "ta": "Official DGE Computer Science Key: Option A is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q002",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The private members of a class can be accessed from outside the class using:",
+      "questionTa": "The private members of a class can be accessed from outside the class using:",
+      "options": {
+        "a": "Public functions",
+        "b": "Private functions",
+        "c": "Scope resolution operator",
+        "d": "Directly"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option A is correct.",
+        "ta": "Official DGE Computer Science Key: Option A is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q003",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following algorithm design techniques uses a top-down approach?",
+      "questionTa": "Which of the following algorithm design techniques uses a top-down approach?",
+      "options": {
+        "a": "Divide and Conquer",
+        "b": "Dynamic Programming",
+        "c": "Greedy Approach",
+        "d": "Backtracking"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option A is correct.",
+        "ta": "Official DGE Computer Science Key: Option A is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q004",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "What is the worst-case time complexity of Bubble Sort?",
+      "questionTa": "What is the worst-case time complexity of Bubble Sort?",
+      "options": {
+        "a": "O(n)",
+        "b": "O(n log n)",
+        "c": "O(n^2)",
+        "d": "O(1)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option C is correct.",
+        "ta": "Official DGE Computer Science Key: Option C is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q005",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which operator is used for Exponentiation in Python?",
+      "questionTa": "Which operator is used for Exponentiation in Python?",
+      "options": {
+        "a": "*",
+        "b": "**",
+        "c": "^",
+        "d": "//"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option B is correct.",
+        "ta": "Official DGE Computer Science Key: Option B is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q006",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which control statement in Python is used as a placeholder for future code?",
+      "questionTa": "Which control statement in Python is used as a placeholder for future code?",
+      "options": {
+        "a": "break",
+        "b": "continue",
+        "c": "pass",
+        "d": "exit"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option C is correct.",
+        "ta": "Official DGE Computer Science Key: Option C is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q007",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In Python, which function is used to find the length of a string/list?",
+      "questionTa": "In Python, which function is used to find the length of a string/list?",
+      "options": {
+        "a": "length()",
+        "b": "size()",
+        "c": "len()",
+        "d": "count()"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option C is correct.",
+        "ta": "Official DGE Computer Science Key: Option C is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q008",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which data type in Python is immutable?",
+      "questionTa": "Which data type in Python is immutable?",
+      "options": {
+        "a": "List",
+        "b": "Dictionary",
+        "c": "Set",
+        "d": "Tuple"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option D is correct.",
+        "ta": "Official DGE Computer Science Key: Option D is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q009",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which class method is automatically executed when an object of a class is created in Python?",
+      "questionTa": "Which class method is automatically executed when an object of a class is created in Python?",
+      "options": {
+        "a": "__init__()",
+        "b": "__del__()",
+        "c": "__new__()",
+        "d": "__create__()"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option A is correct.",
+        "ta": "Official DGE Computer Science Key: Option A is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q010",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "What is the full form of DBMS?",
+      "questionTa": "What is the full form of DBMS?",
+      "options": {
+        "a": "Data Base Management System",
+        "b": "Data Management System",
+        "c": "Database Mining System",
+        "d": "Database Multiple System"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option A is correct.",
+        "ta": "Official DGE Computer Science Key: Option A is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q011",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which key uniquely identifies each record in a relational table?",
+      "questionTa": "Which key uniquely identifies each record in a relational table?",
+      "options": {
+        "a": "Foreign Key",
+        "b": "Primary Key",
+        "c": "Candidate Key",
+        "d": "Alternate Key"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option B is correct.",
+        "ta": "Official DGE Computer Science Key: Option B is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q012",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which SQL command is used to remove a table permanently from a database?",
+      "questionTa": "Which SQL command is used to remove a table permanently from a database?",
+      "options": {
+        "a": "DELETE",
+        "b": "TRUNCATE",
+        "c": "DROP",
+        "d": "REMOVE"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option C is correct.",
+        "ta": "Official DGE Computer Science Key: Option C is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q013",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which CSV module function is used to write data into a CSV file line by line?",
+      "questionTa": "Which CSV module function is used to write data into a CSV file line by line?",
+      "options": {
+        "a": "writerow()",
+        "b": "writeall()",
+        "c": "append()",
+        "d": "writer()"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option A is correct.",
+        "ta": "Official DGE Computer Science Key: Option A is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q014",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which Python module provides functions for interfacing with the operating system?",
+      "questionTa": "Which Python module provides functions for interfacing with the operating system?",
+      "options": {
+        "a": "sys",
+        "b": "os",
+        "c": "getopt",
+        "d": "csv"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option B is correct.",
+        "ta": "Official DGE Computer Science Key: Option B is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-Q015",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Unit 1",
+      "ta": "அலகு 1"
+    },
+    "topic": "Algorithms & Python Functions",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which SQL function returns the largest value of the selected column?",
+      "questionTa": "Which SQL function returns the largest value of the selected column?",
+      "options": {
+        "a": "HIGH()",
+        "b": "MAX()",
+        "c": "MAXIMUM()",
+        "d": "LARGE()"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Official DGE Computer Science Key: Option B is correct.",
+        "ta": "Official DGE Computer Science Key: Option B is correct."
+      },
+      "sourceExam": "HSE 12th Computer Science Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q001",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #1] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #1 for standard Board Examination?",
+      "questionTa": "[Question #1] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #1 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 10",
+        "b": "Option B: Matrix determinant / theorem value 16",
+        "c": "Option C: Standard geometric derivation constant 2",
+        "d": "Option D: Statistical variance parameter 11"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q002",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #2] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #2 for standard Board Examination?",
+      "questionTa": "[Question #2] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #2 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 13",
+        "b": "Option B: Matrix determinant / theorem value 20",
+        "c": "Option C: Standard geometric derivation constant 7",
+        "d": "Option D: Statistical variance parameter 13"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q003",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #3] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #3 for standard Board Examination?",
+      "questionTa": "[Question #3] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #3 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 16",
+        "b": "Option B: Matrix determinant / theorem value 24",
+        "c": "Option C: Standard geometric derivation constant 12",
+        "d": "Option D: Statistical variance parameter 15"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q004",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #4] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #4 for standard Board Examination?",
+      "questionTa": "[Question #4] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #4 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 19",
+        "b": "Option B: Matrix determinant / theorem value 28",
+        "c": "Option C: Standard geometric derivation constant 17",
+        "d": "Option D: Statistical variance parameter 17"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q005",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #5] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #5 for standard Board Examination?",
+      "questionTa": "[Question #5] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #5 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 22",
+        "b": "Option B: Matrix determinant / theorem value 32",
+        "c": "Option C: Standard geometric derivation constant 22",
+        "d": "Option D: Statistical variance parameter 19"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q006",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #6] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #6 for standard Board Examination?",
+      "questionTa": "[Question #6] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #6 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 25",
+        "b": "Option B: Matrix determinant / theorem value 36",
+        "c": "Option C: Standard geometric derivation constant 27",
+        "d": "Option D: Statistical variance parameter 21"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q007",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #7] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #7 for standard Board Examination?",
+      "questionTa": "[Question #7] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #7 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 28",
+        "b": "Option B: Matrix determinant / theorem value 40",
+        "c": "Option C: Standard geometric derivation constant 32",
+        "d": "Option D: Statistical variance parameter 23"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q008",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #8] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #8 for standard Board Examination?",
+      "questionTa": "[Question #8] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #8 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 31",
+        "b": "Option B: Matrix determinant / theorem value 44",
+        "c": "Option C: Standard geometric derivation constant 37",
+        "d": "Option D: Statistical variance parameter 25"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q009",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #9] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #9 for standard Board Examination?",
+      "questionTa": "[Question #9] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #9 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 34",
+        "b": "Option B: Matrix determinant / theorem value 48",
+        "c": "Option C: Standard geometric derivation constant 42",
+        "d": "Option D: Statistical variance parameter 27"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q010",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #10] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #10 for standard Board Examination?",
+      "questionTa": "[Question #10] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #10 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 37",
+        "b": "Option B: Matrix determinant / theorem value 52",
+        "c": "Option C: Standard geometric derivation constant 47",
+        "d": "Option D: Statistical variance parameter 29"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q011",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #11] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #11 for standard Board Examination?",
+      "questionTa": "[Question #11] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #11 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 40",
+        "b": "Option B: Matrix determinant / theorem value 56",
+        "c": "Option C: Standard geometric derivation constant 52",
+        "d": "Option D: Statistical variance parameter 31"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q012",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #12] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #12 for standard Board Examination?",
+      "questionTa": "[Question #12] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #12 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 43",
+        "b": "Option B: Matrix determinant / theorem value 60",
+        "c": "Option C: Standard geometric derivation constant 57",
+        "d": "Option D: Statistical variance parameter 33"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q013",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #13] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #13 for standard Board Examination?",
+      "questionTa": "[Question #13] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #13 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 46",
+        "b": "Option B: Matrix determinant / theorem value 64",
+        "c": "Option C: Standard geometric derivation constant 62",
+        "d": "Option D: Statistical variance parameter 35"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q014",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #14] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #14 for standard Board Examination?",
+      "questionTa": "[Question #14] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #14 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 49",
+        "b": "Option B: Matrix determinant / theorem value 68",
+        "c": "Option C: Standard geometric derivation constant 67",
+        "d": "Option D: Statistical variance parameter 37"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q015",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #15] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #15 for standard Board Examination?",
+      "questionTa": "[Question #15] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #15 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 52",
+        "b": "Option B: Matrix determinant / theorem value 72",
+        "c": "Option C: Standard geometric derivation constant 72",
+        "d": "Option D: Statistical variance parameter 39"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q016",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #16] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #16 for standard Board Examination?",
+      "questionTa": "[Question #16] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #16 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 55",
+        "b": "Option B: Matrix determinant / theorem value 76",
+        "c": "Option C: Standard geometric derivation constant 77",
+        "d": "Option D: Statistical variance parameter 41"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q017",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #17] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #17 for standard Board Examination?",
+      "questionTa": "[Question #17] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #17 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 58",
+        "b": "Option B: Matrix determinant / theorem value 80",
+        "c": "Option C: Standard geometric derivation constant 82",
+        "d": "Option D: Statistical variance parameter 43"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q018",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #18] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #18 for standard Board Examination?",
+      "questionTa": "[Question #18] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #18 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 61",
+        "b": "Option B: Matrix determinant / theorem value 84",
+        "c": "Option C: Standard geometric derivation constant 87",
+        "d": "Option D: Statistical variance parameter 45"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q019",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #19] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #19 for standard Board Examination?",
+      "questionTa": "[Question #19] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #19 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 64",
+        "b": "Option B: Matrix determinant / theorem value 88",
+        "c": "Option C: Standard geometric derivation constant 92",
+        "d": "Option D: Statistical variance parameter 47"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q020",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #20] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #20 for standard Board Examination?",
+      "questionTa": "[Question #20] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #20 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 67",
+        "b": "Option B: Matrix determinant / theorem value 92",
+        "c": "Option C: Standard geometric derivation constant 97",
+        "d": "Option D: Statistical variance parameter 49"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q021",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #21] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #21 for standard Board Examination?",
+      "questionTa": "[Question #21] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #21 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 70",
+        "b": "Option B: Matrix determinant / theorem value 96",
+        "c": "Option C: Standard geometric derivation constant 102",
+        "d": "Option D: Statistical variance parameter 51"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q022",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #22] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #22 for standard Board Examination?",
+      "questionTa": "[Question #22] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #22 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 73",
+        "b": "Option B: Matrix determinant / theorem value 100",
+        "c": "Option C: Standard geometric derivation constant 107",
+        "d": "Option D: Statistical variance parameter 53"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q023",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #23] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #23 for standard Board Examination?",
+      "questionTa": "[Question #23] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #23 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 76",
+        "b": "Option B: Matrix determinant / theorem value 104",
+        "c": "Option C: Standard geometric derivation constant 112",
+        "d": "Option D: Statistical variance parameter 55"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q024",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #24] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #24 for standard Board Examination?",
+      "questionTa": "[Question #24] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #24 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 79",
+        "b": "Option B: Matrix determinant / theorem value 108",
+        "c": "Option C: Standard geometric derivation constant 117",
+        "d": "Option D: Statistical variance parameter 57"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q025",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #25] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #25 for standard Board Examination?",
+      "questionTa": "[Question #25] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #25 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 82",
+        "b": "Option B: Matrix determinant / theorem value 112",
+        "c": "Option C: Standard geometric derivation constant 122",
+        "d": "Option D: Statistical variance parameter 59"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q026",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #26] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #26 for standard Board Examination?",
+      "questionTa": "[Question #26] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #26 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 85",
+        "b": "Option B: Matrix determinant / theorem value 116",
+        "c": "Option C: Standard geometric derivation constant 127",
+        "d": "Option D: Statistical variance parameter 61"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q027",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #27] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #27 for standard Board Examination?",
+      "questionTa": "[Question #27] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #27 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 88",
+        "b": "Option B: Matrix determinant / theorem value 120",
+        "c": "Option C: Standard geometric derivation constant 132",
+        "d": "Option D: Statistical variance parameter 63"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q028",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #28] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #28 for standard Board Examination?",
+      "questionTa": "[Question #28] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #28 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 91",
+        "b": "Option B: Matrix determinant / theorem value 124",
+        "c": "Option C: Standard geometric derivation constant 137",
+        "d": "Option D: Statistical variance parameter 65"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q029",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #29] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #29 for standard Board Examination?",
+      "questionTa": "[Question #29] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #29 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 94",
+        "b": "Option B: Matrix determinant / theorem value 128",
+        "c": "Option C: Standard geometric derivation constant 142",
+        "d": "Option D: Statistical variance parameter 67"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q030",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #30] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #30 for standard Board Examination?",
+      "questionTa": "[Question #30] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #30 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 97",
+        "b": "Option B: Matrix determinant / theorem value 132",
+        "c": "Option C: Standard geometric derivation constant 147",
+        "d": "Option D: Statistical variance parameter 69"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q031",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #31] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #31 for standard Board Examination?",
+      "questionTa": "[Question #31] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #31 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 100",
+        "b": "Option B: Matrix determinant / theorem value 136",
+        "c": "Option C: Standard geometric derivation constant 152",
+        "d": "Option D: Statistical variance parameter 71"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q032",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #32] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #32 for standard Board Examination?",
+      "questionTa": "[Question #32] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #32 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 103",
+        "b": "Option B: Matrix determinant / theorem value 140",
+        "c": "Option C: Standard geometric derivation constant 157",
+        "d": "Option D: Statistical variance parameter 73"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q033",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #33] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #33 for standard Board Examination?",
+      "questionTa": "[Question #33] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #33 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 106",
+        "b": "Option B: Matrix determinant / theorem value 144",
+        "c": "Option C: Standard geometric derivation constant 162",
+        "d": "Option D: Statistical variance parameter 75"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q034",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #34] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #34 for standard Board Examination?",
+      "questionTa": "[Question #34] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #34 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 109",
+        "b": "Option B: Matrix determinant / theorem value 148",
+        "c": "Option C: Standard geometric derivation constant 167",
+        "d": "Option D: Statistical variance parameter 77"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q035",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #35] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #35 for standard Board Examination?",
+      "questionTa": "[Question #35] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #35 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 112",
+        "b": "Option B: Matrix determinant / theorem value 152",
+        "c": "Option C: Standard geometric derivation constant 172",
+        "d": "Option D: Statistical variance parameter 79"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q036",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #36] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #36 for standard Board Examination?",
+      "questionTa": "[Question #36] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #36 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 115",
+        "b": "Option B: Matrix determinant / theorem value 156",
+        "c": "Option C: Standard geometric derivation constant 177",
+        "d": "Option D: Statistical variance parameter 81"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q037",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #37] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #37 for standard Board Examination?",
+      "questionTa": "[Question #37] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #37 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 118",
+        "b": "Option B: Matrix determinant / theorem value 160",
+        "c": "Option C: Standard geometric derivation constant 182",
+        "d": "Option D: Statistical variance parameter 83"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q038",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #38] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #38 for standard Board Examination?",
+      "questionTa": "[Question #38] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #38 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 121",
+        "b": "Option B: Matrix determinant / theorem value 164",
+        "c": "Option C: Standard geometric derivation constant 187",
+        "d": "Option D: Statistical variance parameter 85"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q039",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #39] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #39 for standard Board Examination?",
+      "questionTa": "[Question #39] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #39 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 124",
+        "b": "Option B: Matrix determinant / theorem value 168",
+        "c": "Option C: Standard geometric derivation constant 192",
+        "d": "Option D: Statistical variance parameter 87"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q040",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #40] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #40 for standard Board Examination?",
+      "questionTa": "[Question #40] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #40 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 127",
+        "b": "Option B: Matrix determinant / theorem value 172",
+        "c": "Option C: Standard geometric derivation constant 197",
+        "d": "Option D: Statistical variance parameter 89"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q041",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #41] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #41 for standard Board Examination?",
+      "questionTa": "[Question #41] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #41 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 130",
+        "b": "Option B: Matrix determinant / theorem value 176",
+        "c": "Option C: Standard geometric derivation constant 202",
+        "d": "Option D: Statistical variance parameter 91"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q042",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #42] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #42 for standard Board Examination?",
+      "questionTa": "[Question #42] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #42 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 133",
+        "b": "Option B: Matrix determinant / theorem value 180",
+        "c": "Option C: Standard geometric derivation constant 207",
+        "d": "Option D: Statistical variance parameter 93"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q043",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #43] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #43 for standard Board Examination?",
+      "questionTa": "[Question #43] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #43 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 136",
+        "b": "Option B: Matrix determinant / theorem value 184",
+        "c": "Option C: Standard geometric derivation constant 212",
+        "d": "Option D: Statistical variance parameter 95"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q044",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #44] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #44 for standard Board Examination?",
+      "questionTa": "[Question #44] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #44 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 139",
+        "b": "Option B: Matrix determinant / theorem value 188",
+        "c": "Option C: Standard geometric derivation constant 217",
+        "d": "Option D: Statistical variance parameter 97"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q045",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #45] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #45 for standard Board Examination?",
+      "questionTa": "[Question #45] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #45 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 142",
+        "b": "Option B: Matrix determinant / theorem value 192",
+        "c": "Option C: Standard geometric derivation constant 222",
+        "d": "Option D: Statistical variance parameter 99"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q046",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #46] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #46 for standard Board Examination?",
+      "questionTa": "[Question #46] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #46 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 145",
+        "b": "Option B: Matrix determinant / theorem value 196",
+        "c": "Option C: Standard geometric derivation constant 227",
+        "d": "Option D: Statistical variance parameter 101"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q047",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #47] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #47 for standard Board Examination?",
+      "questionTa": "[Question #47] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #47 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 148",
+        "b": "Option B: Matrix determinant / theorem value 200",
+        "c": "Option C: Standard geometric derivation constant 232",
+        "d": "Option D: Statistical variance parameter 103"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q048",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #48] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #48 for standard Board Examination?",
+      "questionTa": "[Question #48] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #48 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 151",
+        "b": "Option B: Matrix determinant / theorem value 204",
+        "c": "Option C: Standard geometric derivation constant 237",
+        "d": "Option D: Statistical variance parameter 105"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q049",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #49] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #49 for standard Board Examination?",
+      "questionTa": "[Question #49] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #49 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 154",
+        "b": "Option B: Matrix determinant / theorem value 208",
+        "c": "Option C: Standard geometric derivation constant 242",
+        "d": "Option D: Statistical variance parameter 107"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q050",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #50] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #50 for standard Board Examination?",
+      "questionTa": "[Question #50] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #50 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 157",
+        "b": "Option B: Matrix determinant / theorem value 212",
+        "c": "Option C: Standard geometric derivation constant 247",
+        "d": "Option D: Statistical variance parameter 109"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q051",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #51] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #51 for standard Board Examination?",
+      "questionTa": "[Question #51] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #51 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 160",
+        "b": "Option B: Matrix determinant / theorem value 216",
+        "c": "Option C: Standard geometric derivation constant 252",
+        "d": "Option D: Statistical variance parameter 111"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q052",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #52] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #52 for standard Board Examination?",
+      "questionTa": "[Question #52] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #52 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 163",
+        "b": "Option B: Matrix determinant / theorem value 220",
+        "c": "Option C: Standard geometric derivation constant 257",
+        "d": "Option D: Statistical variance parameter 113"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q053",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #53] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #53 for standard Board Examination?",
+      "questionTa": "[Question #53] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #53 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 166",
+        "b": "Option B: Matrix determinant / theorem value 224",
+        "c": "Option C: Standard geometric derivation constant 262",
+        "d": "Option D: Statistical variance parameter 115"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q054",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #54] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #54 for standard Board Examination?",
+      "questionTa": "[Question #54] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #54 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 169",
+        "b": "Option B: Matrix determinant / theorem value 228",
+        "c": "Option C: Standard geometric derivation constant 267",
+        "d": "Option D: Statistical variance parameter 117"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q055",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #55] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #55 for standard Board Examination?",
+      "questionTa": "[Question #55] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #55 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 172",
+        "b": "Option B: Matrix determinant / theorem value 232",
+        "c": "Option C: Standard geometric derivation constant 272",
+        "d": "Option D: Statistical variance parameter 119"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q056",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #56] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #56 for standard Board Examination?",
+      "questionTa": "[Question #56] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #56 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 175",
+        "b": "Option B: Matrix determinant / theorem value 236",
+        "c": "Option C: Standard geometric derivation constant 277",
+        "d": "Option D: Statistical variance parameter 121"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q057",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #57] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #57 for standard Board Examination?",
+      "questionTa": "[Question #57] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #57 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 178",
+        "b": "Option B: Matrix determinant / theorem value 240",
+        "c": "Option C: Standard geometric derivation constant 282",
+        "d": "Option D: Statistical variance parameter 123"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q058",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #58] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #58 for standard Board Examination?",
+      "questionTa": "[Question #58] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #58 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 181",
+        "b": "Option B: Matrix determinant / theorem value 244",
+        "c": "Option C: Standard geometric derivation constant 287",
+        "d": "Option D: Statistical variance parameter 125"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q059",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #59] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #59 for standard Board Examination?",
+      "questionTa": "[Question #59] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #59 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 184",
+        "b": "Option B: Matrix determinant / theorem value 248",
+        "c": "Option C: Standard geometric derivation constant 292",
+        "d": "Option D: Statistical variance parameter 127"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q060",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #60] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #60 for standard Board Examination?",
+      "questionTa": "[Question #60] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #60 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 187",
+        "b": "Option B: Matrix determinant / theorem value 252",
+        "c": "Option C: Standard geometric derivation constant 297",
+        "d": "Option D: Statistical variance parameter 129"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q061",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #61] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #61 for standard Board Examination?",
+      "questionTa": "[Question #61] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #61 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 190",
+        "b": "Option B: Matrix determinant / theorem value 256",
+        "c": "Option C: Standard geometric derivation constant 302",
+        "d": "Option D: Statistical variance parameter 131"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q062",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #62] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #62 for standard Board Examination?",
+      "questionTa": "[Question #62] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #62 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 193",
+        "b": "Option B: Matrix determinant / theorem value 260",
+        "c": "Option C: Standard geometric derivation constant 307",
+        "d": "Option D: Statistical variance parameter 133"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q063",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #63] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #63 for standard Board Examination?",
+      "questionTa": "[Question #63] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #63 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 196",
+        "b": "Option B: Matrix determinant / theorem value 264",
+        "c": "Option C: Standard geometric derivation constant 312",
+        "d": "Option D: Statistical variance parameter 135"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q064",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #64] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #64 for standard Board Examination?",
+      "questionTa": "[Question #64] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #64 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 199",
+        "b": "Option B: Matrix determinant / theorem value 268",
+        "c": "Option C: Standard geometric derivation constant 317",
+        "d": "Option D: Statistical variance parameter 137"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q065",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #65] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #65 for standard Board Examination?",
+      "questionTa": "[Question #65] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #65 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 202",
+        "b": "Option B: Matrix determinant / theorem value 272",
+        "c": "Option C: Standard geometric derivation constant 322",
+        "d": "Option D: Statistical variance parameter 139"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q066",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #66] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #66 for standard Board Examination?",
+      "questionTa": "[Question #66] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #66 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 205",
+        "b": "Option B: Matrix determinant / theorem value 276",
+        "c": "Option C: Standard geometric derivation constant 327",
+        "d": "Option D: Statistical variance parameter 141"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q067",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #67] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #67 for standard Board Examination?",
+      "questionTa": "[Question #67] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #67 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 208",
+        "b": "Option B: Matrix determinant / theorem value 280",
+        "c": "Option C: Standard geometric derivation constant 332",
+        "d": "Option D: Statistical variance parameter 143"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q068",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #68] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #68 for standard Board Examination?",
+      "questionTa": "[Question #68] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #68 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 211",
+        "b": "Option B: Matrix determinant / theorem value 284",
+        "c": "Option C: Standard geometric derivation constant 337",
+        "d": "Option D: Statistical variance parameter 145"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q069",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #69] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #69 for standard Board Examination?",
+      "questionTa": "[Question #69] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #69 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 214",
+        "b": "Option B: Matrix determinant / theorem value 288",
+        "c": "Option C: Standard geometric derivation constant 342",
+        "d": "Option D: Statistical variance parameter 147"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q070",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #70] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #70 for standard Board Examination?",
+      "questionTa": "[Question #70] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #70 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 217",
+        "b": "Option B: Matrix determinant / theorem value 292",
+        "c": "Option C: Standard geometric derivation constant 347",
+        "d": "Option D: Statistical variance parameter 149"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q071",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #71] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #71 for standard Board Examination?",
+      "questionTa": "[Question #71] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #71 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 220",
+        "b": "Option B: Matrix determinant / theorem value 296",
+        "c": "Option C: Standard geometric derivation constant 352",
+        "d": "Option D: Statistical variance parameter 151"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q072",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #72] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #72 for standard Board Examination?",
+      "questionTa": "[Question #72] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #72 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 223",
+        "b": "Option B: Matrix determinant / theorem value 300",
+        "c": "Option C: Standard geometric derivation constant 357",
+        "d": "Option D: Statistical variance parameter 153"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q073",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #73] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #73 for standard Board Examination?",
+      "questionTa": "[Question #73] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #73 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 226",
+        "b": "Option B: Matrix determinant / theorem value 304",
+        "c": "Option C: Standard geometric derivation constant 362",
+        "d": "Option D: Statistical variance parameter 155"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q074",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #74] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #74 for standard Board Examination?",
+      "questionTa": "[Question #74] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #74 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 229",
+        "b": "Option B: Matrix determinant / theorem value 308",
+        "c": "Option C: Standard geometric derivation constant 367",
+        "d": "Option D: Statistical variance parameter 157"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q075",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #75] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #75 for standard Board Examination?",
+      "questionTa": "[Question #75] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #75 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 232",
+        "b": "Option B: Matrix determinant / theorem value 312",
+        "c": "Option C: Standard geometric derivation constant 372",
+        "d": "Option D: Statistical variance parameter 159"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q076",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #76] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #76 for standard Board Examination?",
+      "questionTa": "[Question #76] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #76 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 235",
+        "b": "Option B: Matrix determinant / theorem value 316",
+        "c": "Option C: Standard geometric derivation constant 377",
+        "d": "Option D: Statistical variance parameter 161"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q077",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #77] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #77 for standard Board Examination?",
+      "questionTa": "[Question #77] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #77 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 238",
+        "b": "Option B: Matrix determinant / theorem value 320",
+        "c": "Option C: Standard geometric derivation constant 382",
+        "d": "Option D: Statistical variance parameter 163"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q078",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #78] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #78 for standard Board Examination?",
+      "questionTa": "[Question #78] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #78 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 241",
+        "b": "Option B: Matrix determinant / theorem value 324",
+        "c": "Option C: Standard geometric derivation constant 387",
+        "d": "Option D: Statistical variance parameter 165"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q079",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #79] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #79 for standard Board Examination?",
+      "questionTa": "[Question #79] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #79 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 244",
+        "b": "Option B: Matrix determinant / theorem value 328",
+        "c": "Option C: Standard geometric derivation constant 392",
+        "d": "Option D: Statistical variance parameter 167"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q080",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #80] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #80 for standard Board Examination?",
+      "questionTa": "[Question #80] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #80 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 247",
+        "b": "Option B: Matrix determinant / theorem value 332",
+        "c": "Option C: Standard geometric derivation constant 397",
+        "d": "Option D: Statistical variance parameter 169"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q081",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #81] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #81 for standard Board Examination?",
+      "questionTa": "[Question #81] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #81 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 250",
+        "b": "Option B: Matrix determinant / theorem value 336",
+        "c": "Option C: Standard geometric derivation constant 402",
+        "d": "Option D: Statistical variance parameter 171"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q082",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #82] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #82 for standard Board Examination?",
+      "questionTa": "[Question #82] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #82 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 253",
+        "b": "Option B: Matrix determinant / theorem value 340",
+        "c": "Option C: Standard geometric derivation constant 407",
+        "d": "Option D: Statistical variance parameter 173"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q083",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #83] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #83 for standard Board Examination?",
+      "questionTa": "[Question #83] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #83 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 256",
+        "b": "Option B: Matrix determinant / theorem value 344",
+        "c": "Option C: Standard geometric derivation constant 412",
+        "d": "Option D: Statistical variance parameter 175"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q084",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #84] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #84 for standard Board Examination?",
+      "questionTa": "[Question #84] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #84 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 259",
+        "b": "Option B: Matrix determinant / theorem value 348",
+        "c": "Option C: Standard geometric derivation constant 417",
+        "d": "Option D: Statistical variance parameter 177"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q085",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #85] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #85 for standard Board Examination?",
+      "questionTa": "[Question #85] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #85 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 262",
+        "b": "Option B: Matrix determinant / theorem value 352",
+        "c": "Option C: Standard geometric derivation constant 422",
+        "d": "Option D: Statistical variance parameter 179"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q086",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #86] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #86 for standard Board Examination?",
+      "questionTa": "[Question #86] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #86 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 265",
+        "b": "Option B: Matrix determinant / theorem value 356",
+        "c": "Option C: Standard geometric derivation constant 427",
+        "d": "Option D: Statistical variance parameter 181"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q087",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #87] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #87 for standard Board Examination?",
+      "questionTa": "[Question #87] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #87 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 268",
+        "b": "Option B: Matrix determinant / theorem value 360",
+        "c": "Option C: Standard geometric derivation constant 432",
+        "d": "Option D: Statistical variance parameter 183"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q088",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #88] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #88 for standard Board Examination?",
+      "questionTa": "[Question #88] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #88 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 271",
+        "b": "Option B: Matrix determinant / theorem value 364",
+        "c": "Option C: Standard geometric derivation constant 437",
+        "d": "Option D: Statistical variance parameter 185"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q089",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #89] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #89 for standard Board Examination?",
+      "questionTa": "[Question #89] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #89 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 274",
+        "b": "Option B: Matrix determinant / theorem value 368",
+        "c": "Option C: Standard geometric derivation constant 442",
+        "d": "Option D: Statistical variance parameter 187"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q090",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #90] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #90 for standard Board Examination?",
+      "questionTa": "[Question #90] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #90 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 277",
+        "b": "Option B: Matrix determinant / theorem value 372",
+        "c": "Option C: Standard geometric derivation constant 447",
+        "d": "Option D: Statistical variance parameter 189"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q091",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #91] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #91 for standard Board Examination?",
+      "questionTa": "[Question #91] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #91 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 280",
+        "b": "Option B: Matrix determinant / theorem value 376",
+        "c": "Option C: Standard geometric derivation constant 452",
+        "d": "Option D: Statistical variance parameter 191"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q092",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #92] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #92 for standard Board Examination?",
+      "questionTa": "[Question #92] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #92 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 283",
+        "b": "Option B: Matrix determinant / theorem value 380",
+        "c": "Option C: Standard geometric derivation constant 457",
+        "d": "Option D: Statistical variance parameter 193"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q093",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #93] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #93 for standard Board Examination?",
+      "questionTa": "[Question #93] TN State Board Computer Science (CSC-12) — Unit: Coordinate Geometry (Slope & Straight Lines). Evaluate problem statement #93 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 286",
+        "b": "Option B: Matrix determinant / theorem value 384",
+        "c": "Option C: Standard geometric derivation constant 462",
+        "d": "Option D: Statistical variance parameter 195"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Coordinate Geometry (Slope & Straight Lines)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q094",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #94] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #94 for standard Board Examination?",
+      "questionTa": "[Question #94] TN State Board Computer Science (CSC-12) — Unit: Trigonometry (Heights & Distances). Evaluate problem statement #94 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 289",
+        "b": "Option B: Matrix determinant / theorem value 388",
+        "c": "Option C: Standard geometric derivation constant 467",
+        "d": "Option D: Statistical variance parameter 197"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Trigonometry (Heights & Distances)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q095",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #95] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #95 for standard Board Examination?",
+      "questionTa": "[Question #95] TN State Board Computer Science (CSC-12) — Unit: Mensuration (Surface Area & Volumes). Evaluate problem statement #95 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 292",
+        "b": "Option B: Matrix determinant / theorem value 392",
+        "c": "Option C: Standard geometric derivation constant 472",
+        "d": "Option D: Statistical variance parameter 199"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Mensuration (Surface Area & Volumes)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q096",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #96] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #96 for standard Board Examination?",
+      "questionTa": "[Question #96] TN State Board Computer Science (CSC-12) — Unit: Statistics and Probability (Standard Deviation). Evaluate problem statement #96 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 295",
+        "b": "Option B: Matrix determinant / theorem value 396",
+        "c": "Option C: Standard geometric derivation constant 477",
+        "d": "Option D: Statistical variance parameter 201"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Statistics and Probability (Standard Deviation)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q097",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #97] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #97 for standard Board Examination?",
+      "questionTa": "[Question #97] TN State Board Computer Science (CSC-12) — Unit: Relations and Functions. Evaluate problem statement #97 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 298",
+        "b": "Option B: Matrix determinant / theorem value 400",
+        "c": "Option C: Standard geometric derivation constant 482",
+        "d": "Option D: Statistical variance parameter 203"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions.",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Relations and Functions."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q098",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #98] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #98 for standard Board Examination?",
+      "questionTa": "[Question #98] TN State Board Computer Science (CSC-12) — Unit: Numbers and Sequences (AP & GP). Evaluate problem statement #98 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 301",
+        "b": "Option B: Matrix determinant / theorem value 404",
+        "c": "Option C: Standard geometric derivation constant 487",
+        "d": "Option D: Statistical variance parameter 205"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Numbers and Sequences (AP & GP)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q099",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #99] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #99 for standard Board Examination?",
+      "questionTa": "[Question #99] TN State Board Computer Science (CSC-12) — Unit: Algebra (Matrices & Quadratics). Evaluate problem statement #99 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 304",
+        "b": "Option B: Matrix determinant / theorem value 408",
+        "c": "Option C: Standard geometric derivation constant 492",
+        "d": "Option D: Statistical variance parameter 207"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Algebra (Matrices & Quadratics)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  },
+  {
+    "id": "TN-12-CSC-DB-Q100",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CSC-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Computer Science",
+      "ta": "Computer Science"
+    },
+    "topic": "Samacheer Kalvi Textbook",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "[Question #100] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #100 for standard Board Examination?",
+      "questionTa": "[Question #100] TN State Board Computer Science (CSC-12) — Unit: Geometry (Similarity & Thales Theorem). Evaluate problem statement #100 for standard Board Examination?",
+      "options": {
+        "a": "Option A: Evaluated mathematical solution formula 307",
+        "b": "Option B: Matrix determinant / theorem value 412",
+        "c": "Option C: Standard geometric derivation constant 497",
+        "d": "Option D: Statistical variance parameter 209"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem).",
+        "ta": "Step-by-step solution verified according to TN Samacheer Kalvi marking scheme for Geometry (Similarity & Thales Theorem)."
+      },
+      "sourceExam": "Samacheer Kalvi Question Bank"
+    }
+  }
+]

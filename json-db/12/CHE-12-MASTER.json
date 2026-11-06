@@ -1,0 +1,4829 @@
+[
+  {
+    "id": "TN-12-CHE-U01-C001",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Metallurgy",
+      "ta": "Metallurgy"
+    },
+    "topic": "Ore Concentration",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Ore Concentration\n\nComprehensive theoretical overview of **Ore Concentration** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Ore Concentration\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Ore Concentration** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "\\Delta G^\\circ = -nFE^\\circ = -RT \\ln K",
+        "k = A e^{-E_a / RT}",
+        "\\Lambda_m = \\frac{\\kappa \\times 1000}{M}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Ore Concentration.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CHE-U01-C002",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Metallurgy",
+      "ta": "Metallurgy"
+    },
+    "topic": "Ellingham Diagram",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Ellingham Diagram\n\nComprehensive theoretical overview of **Ellingham Diagram** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Ellingham Diagram\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Ellingham Diagram** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "\\Delta G^\\circ = -nFE^\\circ = -RT \\ln K",
+        "k = A e^{-E_a / RT}",
+        "\\Lambda_m = \\frac{\\kappa \\times 1000}{M}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Ellingham Diagram.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CHE-U01-C003",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Metallurgy",
+      "ta": "Metallurgy"
+    },
+    "topic": "Zone Refining",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Zone Refining\n\nComprehensive theoretical overview of **Zone Refining** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Zone Refining\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Zone Refining** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "\\Delta G^\\circ = -nFE^\\circ = -RT \\ln K",
+        "k = A e^{-E_a / RT}",
+        "\\Lambda_m = \\frac{\\kappa \\times 1000}{M}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Zone Refining.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CHE-U01-C004",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Metallurgy",
+      "ta": "Metallurgy"
+    },
+    "topic": "Mond Process",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Mond Process\n\nComprehensive theoretical overview of **Mond Process** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Mond Process\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Mond Process** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "\\Delta G^\\circ = -nFE^\\circ = -RT \\ln K",
+        "k = A e^{-E_a / RT}",
+        "\\Lambda_m = \\frac{\\kappa \\times 1000}{M}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Mond Process.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CHE-U02-C005",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Coordination Chemistry",
+      "ta": "Coordination Chemistry"
+    },
+    "topic": "Werner Theory",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Werner Theory\n\nComprehensive theoretical overview of **Werner Theory** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Werner Theory\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Werner Theory** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "\\Delta G^\\circ = -nFE^\\circ = -RT \\ln K",
+        "k = A e^{-E_a / RT}",
+        "\\Lambda_m = \\frac{\\kappa \\times 1000}{M}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Werner Theory.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CHE-U02-C006",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Coordination Chemistry",
+      "ta": "Coordination Chemistry"
+    },
+    "topic": "IUPAC Naming",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### IUPAC Naming\n\nComprehensive theoretical overview of **IUPAC Naming** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### IUPAC Naming\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **IUPAC Naming** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "\\Delta G^\\circ = -nFE^\\circ = -RT \\ln K",
+        "k = A e^{-E_a / RT}",
+        "\\Lambda_m = \\frac{\\kappa \\times 1000}{M}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for IUPAC Naming.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CHE-U02-C007",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Coordination Chemistry",
+      "ta": "Coordination Chemistry"
+    },
+    "topic": "Valence Bond Theory",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Valence Bond Theory\n\nComprehensive theoretical overview of **Valence Bond Theory** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Valence Bond Theory\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Valence Bond Theory** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "\\Delta G^\\circ = -nFE^\\circ = -RT \\ln K",
+        "k = A e^{-E_a / RT}",
+        "\\Lambda_m = \\frac{\\kappa \\times 1000}{M}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Valence Bond Theory.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CHE-U02-C008",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Coordination Chemistry",
+      "ta": "Coordination Chemistry"
+    },
+    "topic": "Crystal Field Theory",
+    "type": "SYLLABUS_CONCEPT",
+    "conceptPayload": {
+      "summaryMarkdownEn": "### Crystal Field Theory\n\nComprehensive theoretical overview of **Crystal Field Theory** according to the Tamil Nadu State Board Class 12 curriculum. This foundational unit covers fundamental principles, standard derivations, and analytical methods. Students must master theoretical definitions, algebraic setups, and KaTeX notations.",
+      "summaryMarkdownTa": "### Crystal Field Theory\n\nதமிழ்நாடு மாநில பாடத்திட்டம் 12-ஆம் வகுப்பு அடிப்படையில் **Crystal Field Theory** பற்றிய விரிவான பாடப்பகுதி. இப்பாடப்பிரிவு அடிப்படை வரையறைகள், சமன்பாடுகள் மற்றும் வழிமுறைகளை விளக்குகிறது.",
+      "keyFormulas": [
+        "\\Delta G^\\circ = -nFE^\\circ = -RT \\ln K",
+        "k = A e^{-E_a / RT}",
+        "\\Lambda_m = \\frac{\\kappa \\times 1000}{M}"
+      ],
+      "commonPitfalls": [
+        "Pay close attention to boundary conditions and units for Crystal Field Theory.",
+        "Ensure proper step-by-step mathematical reasoning and KaTeX notations."
+      ]
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q01",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": 1,
+      "ta": "அலகு 1"
+    },
+    "topic": "Metallurgy / உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Bauxite is an ore of which metal?",
+      "questionTa": "பாக்சைட் என்பது எந்த உலோகத்தின் தாது?",
+      "options": {
+        "a": "Iron",
+        "b": "Aluminium",
+        "c": "Copper",
+        "d": "Zinc"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Bauxite (Al2O3.2H2O) is the principal ore of aluminium.",
+        "ta": "பாக்சைட் (Al2O3.2H2O) என்பது அலுமினியத்தின் முக்கிய தாதுவாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q02",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": 1,
+      "ta": "அலகு 1"
+    },
+    "topic": "Metallurgy / உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which method is commonly used for the concentration of sulphide ores?",
+      "questionTa": "சல்பைடு தாதுக்களை அடர்ப்பிக்க பொதுவாகப் பயன்படும் முறை எது?",
+      "options": {
+        "a": "Gravity separation",
+        "b": "Froth floatation",
+        "c": "Magnetic separation",
+        "d": "Leaching"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Sulphide ores are preferentially wetted by pine oil and concentrated by froth floatation.",
+        "ta": "சல்பைடு தாதுக்கள் பைன் எண்ணெயால் ஈரப்படுத்தப்பட்டு நுரை மிதப்பு முறையில் அடர்ப்பிக்கப்படுகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q03",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": 1,
+      "ta": "அலகு 1"
+    },
+    "topic": "Metallurgy / உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Zone refining process is based on the principle of:",
+      "questionTa": "மண்டல சுத்திகரிப்பு முறை எந்த தத்துவத்தின் அடிப்படையில் செயல்படுகிறது?",
+      "options": {
+        "a": "Fractional crystallization",
+        "b": "Fractional distillation",
+        "c": "Magnetic separation",
+        "d": "Thermal decomposition"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Zone refining relies on fractional crystallization as impurities are more soluble in the molten state than in the solid state.",
+        "ta": "மாசுகள் திண்ம நிலையை விட உருகிய நிலையில் அதிக கரைதிறன் கொண்டவை என்ற பின்ன படிகமாக்கல் தத்துவத்தின் அடிப்படையில் இது செயல்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q04",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": 1,
+      "ta": "அலகு 1"
+    },
+    "topic": "Metallurgy / உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Mond process is used for the refining of which metal?",
+      "questionTa": "மான்ட் செயல்முறை எந்த உலோகத்தை தூய்மையாக்கப் பயன்படுகிறது?",
+      "options": {
+        "a": "Nickel",
+        "b": "Zirconium",
+        "c": "Titanium",
+        "d": "Copper"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Nickel reacts with carbon monoxide at 350 K to form volatile nickel tetracarbonyl, Ni(CO)4.",
+        "ta": "நிக்கல் கார்பன் மோனாக்சைடுடன் 350 K வெப்பநிலையில் வினைபுரிந்து ஆவியாகும் நிக்கல் டெட்ரா கார்பனைலை உருவாக்குகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q05",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": 2,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - I / p-தொகுதி தனிமங்கள் - I",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The hybridisation of boron in diborane (B2H6) is:",
+      "questionTa": "டைபோரேனில் (B2H6) போரானின் இனக்கலப்பு என்ன?",
+      "options": {
+        "a": "sp",
+        "b": "sp2",
+        "c": "sp3",
+        "d": "dsp2"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "In diborane, each boron atom undergoes sp3 hybridisation involving 3c-2e banana bonds.",
+        "ta": "டைபோரேனில் ஒவ்வொரு போரான் அணுவும் sp3 இனக்கலப்புக்கு உட்பட்டு 3c-2e வாழைப்பழ பிணைப்புகளை உருவாக்குகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q06",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": 2,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - I / p-தொகுதி தனிமங்கள் - I",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following is an inorganic benzene?",
+      "questionTa": "பின்வருவனவற்றுள் கனிம பென்சீன் என அழைக்கப்படுவது எது?",
+      "options": {
+        "a": "Borazine (B3N3H6)",
+        "b": "Diborane",
+        "c": "Borax",
+        "d": "Boric acid"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Borazine (B3N3H6) has cyclic structure and electron delocalization similar to benzene.",
+        "ta": "போரசீன் பென்சீனைப் போன்ற வளைய அமைப்பைப் பெற்றுள்ளதால் கனிம பென்சீன் எனப்படும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q07",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": 2,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - I / p-தொகுதி தனிமங்கள் - I",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The thermodynamically most stable allotrope of carbon is:",
+      "questionTa": "கார்பனின் வெப்ப இயக்கவியல் அடிப்படையில் மிகவும் நிலைப்புத்தன்மை வாய்ந்த புறவேற்றுமை வடிவம் எது?",
+      "options": {
+        "a": "Diamond",
+        "b": "Graphite",
+        "c": "Fullerene",
+        "d": "Carbon nanotube"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Standard enthalpy of formation of graphite is taken as zero; it is the most stable allotrope.",
+        "ta": "கிராஃபைட்டின் திட்ட உருவாதல் என்தால்பி பூஜ்ஜியம்; இதுவே வெப்ப இயக்கவியல் ரீதியாக நிலைப்பானது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q08",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": 3,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - II / p-தொகுதி தனிமங்கள் - II",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In the manufacture of nitric acid by Ostwald process, the catalyst used is:",
+      "questionTa": "ஆஸ்ட்வால்ட் முறையில் நைட்ரிக் அமிலம் தயாரிப்பில் பயன்படும் வினையூக்கி எது?",
+      "options": {
+        "a": "Fe / Mo",
+        "b": "Pt / Rh gauze",
+        "c": "V2O5",
+        "d": "Nickel"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Ammonia is oxidised to nitric oxide using platinum-rhodium catalyst at 1100 K.",
+        "ta": "அம்மோனியா பிளாட்டினம்-ரோடியம் வினையூக்கி முன்னிலையில் நைட்ரிக் ஆக்சைடாக ஆக்ஸிஜனேற்றப்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q09",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": 3,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - II / p-தொகுதி தனிமங்கள் - II",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The basicity of orthophosphoric acid (H3PO4) is:",
+      "questionTa": "ஆர்த்தோபாஸ்போரிக் அமிலத்தின் (H3PO4) காரத்துவம் என்ன?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "H3PO4 has three ionisable P-OH groups, so its basicity is 3.",
+        "ta": "H3PO4-ல் மூன்று அயனியாகும் P-OH தொகுதிகள் உள்ளன, எனவே இதன் காரத்துவம் 3 ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q10",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": 3,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - II / p-தொகுதி தனிமங்கள் - II",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which noble gas does not occur in atmosphere?",
+      "questionTa": "வளிமண்டலத்தில் காணப்படாத மந்த வாயு எது?",
+      "options": {
+        "a": "Helium",
+        "b": "Neon",
+        "c": "Radon",
+        "d": "Argon"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Radon is radioactive and formed by the radioactive decay of radium; absent in atmosphere.",
+        "ta": "ரேடான் ஒரு கதிரியக்க வாயுவாகும்; இது வளிமண்டலத்தில் காணப்படுவதில்லை."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q11",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": 4,
+      "ta": "அலகு 1"
+    },
+    "topic": "Transition Elements / இடைநிலை தனிமங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which transition metal ion is colorless in aqueous solution?",
+      "questionTa": "நீர்க்கரைசலில் நிறமற்ற இடைநிலை உலோக அயனி எது?",
+      "options": {
+        "a": "Cu2+",
+        "b": "Fe3+",
+        "c": "Sc3+",
+        "d": "Cr3+"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Sc3+ has 3d0 electronic configuration; absence of d-electrons makes d-d transition impossible.",
+        "ta": "Sc3+ அயனி 3d0 எலக்ட்ரான் அமைப்பைக் கொண்டிருப்பதால் d-d இடப்பெயர்ச்சி நிகழாது, எனவே நிறமற்றது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q12",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": 4,
+      "ta": "அலகு 1"
+    },
+    "topic": "Transition Elements / இடைநிலை தனிமங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The spin-only magnetic moment of Mn2+ (Z = 25) is:",
+      "questionTa": "Mn2+ (Z = 25) அயனியின் சுழற்சி மட்டுமேயான காந்தத் திருப்புத்திறன் மதிப்பு என்ன?",
+      "options": {
+        "a": "5.92 BM",
+        "b": "4.90 BM",
+        "c": "3.87 BM",
+        "d": "1.73 BM"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Mn2+ has 5 unpaired electrons (3d5). mu = sqrt(5(5+2)) = sqrt(35) = 5.92 BM.",
+        "ta": "Mn2+ அயனியில் 5 தனித்த எலக்ட்ரான்கள் (3d5) உள்ளன. mu = sqrt(5(5+2)) = 5.92 BM."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q13",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": 4,
+      "ta": "அலகு 1"
+    },
+    "topic": "Transition Elements / இடைநிலை தனிமங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The cause of Lanthanoid contraction is:",
+      "questionTa": "லாந்தனாய்டு குறுக்கத்திற்கு முக்கிய காரணம் என்ன?",
+      "options": {
+        "a": "Imperfect shielding of 4f electrons",
+        "b": "Poor shielding of 5d electrons",
+        "c": "Increase in nuclear charge only",
+        "d": "Decreasing atomic mass"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Diffused 4f orbitals provide poor shielding effect to the outer electrons from nuclear pull.",
+        "ta": "4f ஆர்பிட்டால்களின் உருவமைப்பு காரணமாக வெளிக்கூட்டு எலக்ட்ரான்கள் மீதான திரைமறைப்பு குறைவாக உள்ளது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q14",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": 5,
+      "ta": "அலகு 1"
+    },
+    "topic": "Coordination Chemistry / அணைவு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "What is the oxidation state of Ni in [Ni(CO)4]?",
+      "questionTa": "[Ni(CO)4] சேர்மத்தில் நிக்கலின் ஆக்ஸிஜனேற்ற எண் என்ன?",
+      "options": {
+        "a": "+2",
+        "b": "0",
+        "c": "+4",
+        "d": "-2"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Carbon monoxide is a neutral ligand (charge = 0), so Ni is in zero oxidation state.",
+        "ta": "கார்பனைல் (CO) என்பது நடுநிலை ஈனி (சுமை = 0), எனவே நிக்கலின் ஆக்ஸிஜனேற்ற நிலை பூஜ்ஜியமாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q15",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": 5,
+      "ta": "அலகு 1"
+    },
+    "topic": "Coordination Chemistry / அணைவு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following ligands is an ambidentate ligand?",
+      "questionTa": "பின்வருவனவற்றுள் இருவழி பிணைப்புறும் (Ambidentate) ஈனி எது?",
+      "options": {
+        "a": "H2O",
+        "b": "NH3",
+        "c": "NO2-",
+        "d": "Cl-"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "NO2- can coordinate through either nitrogen (-NO2) or oxygen (-ONO).",
+        "ta": "NO2- ஈனி நைட்ரஜன் அல்லது ஆக்ஸிஜன் ஆகிய இரு அணுக்கள் வழியே பிணைப்பை ஏற்படுத்த முடியும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q16",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": 5,
+      "ta": "அலகு 1"
+    },
+    "topic": "Coordination Chemistry / அணைவு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The geometry and hybridisation of [Fe(CN)6]4- ion is:",
+      "questionTa": "[Fe(CN)6]4- அயனியின் இனக்கலப்பு மற்றும் வடிவம் யாது?",
+      "options": {
+        "a": "sp3d2, Octahedral",
+        "b": "d2sp3, Octahedral",
+        "c": "dsp2, Square planar",
+        "d": "sp3, Tetrahedral"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "CN- is a strong field ligand causing pairing of electrons in 3d, leaving two 3d orbitals for d2sp3 hybridisation.",
+        "ta": "CN- வலிமைமிகு ஈனி என்பதால் எலக்ட்ரான் இணையாக்கம் ஏற்பட்டு d2sp3 இனக்கலப்பில் எண்முகி வடிவம் பெறுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q17",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": 6,
+      "ta": "அலகு 1"
+    },
+    "topic": "Solid State / திண்ம நிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Schottky defect in crystals is observed when:",
+      "questionTa": "படிகங்களில் ஷாட்கி குறைபாடு எப்போது காணப்படுகிறது?",
+      "options": {
+        "a": "Equal number of cations and anions are missing from the lattice",
+        "b": "An ion moves to an interstitial site",
+        "c": "Density of crystal increases",
+        "d": "Foreign impurity enters lattice"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Schottky defect arises when stoichiometric equal numbers of cations and anions are absent, decreasing crystal density.",
+        "ta": "சம எண்ணிக்கையிலான நேர் மற்றும் எதிர் அயனிகள் விடுபடுவதால் படிகத்தின் அடர்த்தி குறைகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q18",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": 6,
+      "ta": "அலகு 1"
+    },
+    "topic": "Solid State / திண்ம நிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The total number of atoms per unit cell in a face-centred cubic (fcc) lattice is:",
+      "questionTa": "முகப்பு மைய கனசதுர (fcc) அலகுக்கூட்டில் உள்ள மொத்த அணுக்களின் எண்ணிக்கை:",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "4",
+        "d": "6"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "8 corners x (1/8) + 6 faces x (1/2) = 1 + 3 = 4 atoms.",
+        "ta": "8 மூலைகள் x (1/8) + 6 முகப்புகள் x (1/2) = 1 + 3 = 4 அணுக்கள்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q19",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": 6,
+      "ta": "அலகு 1"
+    },
+    "topic": "Solid State / திண்ம நிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Coordination number of an atom in a body-centred cubic (bcc) unit cell is:",
+      "questionTa": "பொருள் மைய கனசதுர (bcc) படிகத்தில் ஓர் அணுவின் அணைவு எண் என்ன?",
+      "options": {
+        "a": "6",
+        "b": "8",
+        "c": "12",
+        "d": "4"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "In bcc, the central atom touches 8 atoms located at the 8 corners of the cube.",
+        "ta": "bcc அமைப்பில் மையத்தில் உள்ள அணு 8 மூலைகளில் உள்ள அணுக்களைத் தொடுவதால் அணைவு எண் 8 ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q20",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": 7,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The unit of rate constant for a first-order reaction is:",
+      "questionTa": "முதல் வகை வினைக்கான வினைவேக மாறிலியின் அலகு யாது?",
+      "options": {
+        "a": "mol L-1 s-1",
+        "b": "s-1",
+        "c": "L mol-1 s-1",
+        "d": "L2 mol-2 s-1"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "For an nth order reaction, unit is (mol/L)^(1-n) s-1. For n = 1, it is s-1.",
+        "ta": "n = 1 எனில் அலகு s-1 அல்லது வினாடி^-1 ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q21",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": 7,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "For a first order reaction, half-life period (t1/2) is equal to:",
+      "questionTa": "முதல் வகை வினைக்கான அரை ஆயுட்காலம் (t1/2) எதற்குச் சமம்?",
+      "options": {
+        "a": "0.6932 / k",
+        "b": "k / 0.6932",
+        "c": "0.6932 x k",
+        "d": "[A]0 / 2k"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Half-life of a first order reaction is independent of initial concentration and equals 0.6932/k.",
+        "ta": "முதல் வகை வினையின் அரை ஆயுட்காலம் தொடக்கச் செறிவைச் சார்ந்திருக்காது; t1/2 = 0.6932/k."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q22",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": 7,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The slope of the line in Arrhenius plot (ln k vs 1/T) gives:",
+      "questionTa": "ஆர்ஹீனியஸ் வரைபடத்தில் (ln k vs 1/T) கிடைக்கும் நேர்கோட்டின் சாய்வு மதிப்பு யாது?",
+      "options": {
+        "a": "-Ea / R",
+        "b": "Ea / R",
+        "c": "-Ea / 2.303 R",
+        "d": "A / R"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "ln k = ln A - Ea/RT. Plotting ln k vs 1/T yields a straight line with slope = -Ea/R.",
+        "ta": "ln k = ln A - Ea/RT சமன்பாட்டில் ln k மற்றும் 1/T வரையும் போது சாய்வு = -Ea/R கிடைக்கும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q23",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 8,
+    "unitTitle": {
+      "en": 8,
+      "ta": "அலகு 1"
+    },
+    "topic": "Ionic Equilibrium / அயனிச் சமநிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The conjugate base of HSO4- is:",
+      "questionTa": "HSO4- அயனியின் இணை காரம் எது?",
+      "options": {
+        "a": "H2SO4",
+        "b": "SO4 2-",
+        "c": "H3SO4+",
+        "d": "SO3 2-"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Loss of a proton (H+) from HSO4- gives its conjugate base SO4 2-.",
+        "ta": "HSO4- ஒரு புரோட்டானை இழக்கும் போது அதன் இணை காரமான SO4 2- உருவாகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q24",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 8,
+    "unitTitle": {
+      "en": 8,
+      "ta": "அலகு 1"
+    },
+    "topic": "Ionic Equilibrium / அயனிச் சமநிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The value of ionic product of water (Kw) at 298 K is:",
+      "questionTa": "298 K வெப்பநிலையில் நீரின் அயனிப் பெருக்கத்தின் (Kw) மதிப்பு என்ன?",
+      "options": {
+        "a": "1 x 10^-7",
+        "b": "1 x 10^-14",
+        "c": "1 x 10^7",
+        "d": "1 x 10^14"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "At 298 K, Kw = [H+][OH-] = 1.0 x 10^-14 mol2 L-2.",
+        "ta": "298 K வெப்பநிலையில் Kw = [H+][OH-] = 1.0 x 10^-14 ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q25",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 8,
+    "unitTitle": {
+      "en": 8,
+      "ta": "அலகு 1"
+    },
+    "topic": "Ionic Equilibrium / அயனிச் சமநிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which equation relates pH of an acidic buffer solution to pKa?",
+      "questionTa": "அமிலத் தாங்கல் கரைசலின் pH மதிப்பைக் கணக்கிடப் பயன்படும் சமன்பாடு எது?",
+      "options": {
+        "a": "Arrhenius equation",
+        "b": "Henderson-Hasselbalch equation",
+        "c": "Nernst equation",
+        "d": "Ostwald's equation"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "pH = pKa + log([Salt]/[Acid]) is the Henderson-Hasselbalch equation.",
+        "ta": "pH = pKa + log([உப்பு]/[அமிலம்]) என்பது ஹெண்டர்சன்-ஹாசல்பாக் சமன்பாடாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q26",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": 9,
+      "ta": "அலகு 1"
+    },
+    "topic": "Electrochemistry / மின்வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The unit of specific conductance (kappa) is:",
+      "questionTa": "தன் மின் கடத்துத்திறனின் (கப்பா) அலகு யாது?",
+      "options": {
+        "a": "ohm-1 cm-1 (S cm-1)",
+        "b": "ohm cm",
+        "c": "ohm-1 cm2 mol-1",
+        "d": "S cm2"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Specific conductance kappa = (l / A) * (1 / R), so unit is S cm-1 or ohm-1 cm-1.",
+        "ta": "தன் மின் கடத்துத்திறனின் அலகு ohm-1 cm-1 அல்லது S cm-1 ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q27",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": 9,
+      "ta": "அலகு 1"
+    },
+    "topic": "Electrochemistry / மின்வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Kohlrausch's law is applied to calculate limiting molar conductivity of:",
+      "questionTa": "கோல்ராஷ் விதி எதன் எல்லையற்ற நீர்த்தலில் மோலார் கடத்துத்திறனைக் கணக்கிடப் பயன்படுகிறது?",
+      "options": {
+        "a": "Strong electrolytes only",
+        "b": "Weak electrolytes",
+        "c": "Non-electrolytes",
+        "d": "Gases"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Kohlrausch's law of independent migration of ions allows determination of limiting molar conductivity of weak electrolytes like CH3COOH.",
+        "ta": "அயனிகளின் சுயேச்சை நகர்வு பற்றிய கோல்ராஷ் விதி அசிட்டிக் அமிலம் போன்ற வலிமை குறைந்த மின்பகுளிகளுக்குப் பயன்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q28",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": 9,
+      "ta": "அலகு 1"
+    },
+    "topic": "Electrochemistry / மின்வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In a galvanic cell, oxidation takes place at:",
+      "questionTa": "கால்வானிக் மின்கலத்தில் ஆக்ஸிஜனேற்றம் நிகழும் மின்முனை எது?",
+      "options": {
+        "a": "Anode",
+        "b": "Cathode",
+        "c": "Salt bridge",
+        "d": "Electrolyte solution"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Oxidation always occurs at the anode (An Ox), where electrons are released.",
+        "ta": "மின்கலத்தில் எலக்ட்ரான்களை இழக்கும் ஆக்ஸிஜனேற்ற வினை எப்போதும் ஆனோடினால் நிகழ்கிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q29",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": 9,
+      "ta": "அலகு 1"
+    },
+    "topic": "Electrochemistry / மின்வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The standard reduction potential of Standard Hydrogen Electrode (SHE) is:",
+      "questionTa": "திட்ட ஹைட்ரஜன் மின்முனையின் (SHE) திட்ட ஒடுக்க மின்னழுத்த மதிப்பு என்ன?",
+      "options": {
+        "a": "1.0 V",
+        "b": "0.0 V",
+        "c": "-1.0 V",
+        "d": "0.76 V"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "By international convention, SHE potential is arbitrarily assigned as 0.00 V at all temperatures.",
+        "ta": "சர்வதேச உடன்படிக்கையின்படி திட்ட ஹைட்ரஜன் மின்முனையின் மின்னழுத்தம் 0.00 V என நிர்ணயிக்கப்பட்டுள்ளது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q30",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 10,
+    "unitTitle": {
+      "en": 10,
+      "ta": "அலகு 1"
+    },
+    "topic": "Surface Chemistry / புறப்பரப்பு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following is an example of associated colloid (micelle)?",
+      "questionTa": "பின்வருவனவற்றுள் இணைந்த கூழ்மத்திற்கு (மைசெல்) சிறந்த உதாரணம் எது?",
+      "options": {
+        "a": "Soap in water",
+        "b": "Starch in water",
+        "c": "Gold sol",
+        "d": "Gelatin"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Soaps form micelles above critical micelle concentration (CMC), acting as associated colloids.",
+        "ta": "சோப்பு மூலக்கூறுகள் ஒரு குறிப்பிட்ட செறிவுக்கு மேல் (CMC) ஒன்றிணைந்து மைசெல்களை உருவாக்குகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q31",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 10,
+    "unitTitle": {
+      "en": 10,
+      "ta": "அலகு 1"
+    },
+    "topic": "Surface Chemistry / புறப்பரப்பு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Tyndall effect is not observed in:",
+      "questionTa": "டின்டால் விளைவு எதில் காணப்படுவதில்லை?",
+      "options": {
+        "a": "Colloidal solution",
+        "b": "True solution",
+        "c": "Emulsion",
+        "d": "Suspension"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "In true solutions, particle size is too small (< 1 nm) to scatter light.",
+        "ta": "உண்மைக் கரைசலில் துகள்களின் அளவு மிகச் சிறியதாக (< 1 nm) இருப்பதால் ஒளியை சிதறடிப்பதில்லை."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q32",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 10,
+    "unitTitle": {
+      "en": 10,
+      "ta": "அலகு 1"
+    },
+    "topic": "Surface Chemistry / புறப்பரப்பு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "According to Hardy-Schulze rule, the coagulating power of an ion increases with:",
+      "questionTa": "ஹார்டி-சுல்ஸ் விதியின்படி, ஒரு அயனியின் வீழ்படிவாக்கும் திறன் எதன் அடிப்படையில் அதிகரிக்கிறது?",
+      "options": {
+        "a": "Magnitude of its valency/charge",
+        "b": "Size of ion only",
+        "c": "Solubility of ion",
+        "d": "Viscosity of solvent"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Greater the valence of the flocculating ion added, the greater is its power to cause precipitation.",
+        "ta": "அயனியின் இணைதிறன் அல்லது மின்சுமை அதிகமாக இருக்கும்போது அதன் வீழ்படிவாக்கும் திறன் மிக அதிகமாக இருக்கும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q33",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": 11,
+      "ta": "அலகு 1"
+    },
+    "topic": "Hydroxy Compounds / ஹைட்ராக்ஸி சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Lucas reagent is a mixture of:",
+      "questionTa": "லூகாஸ் காரணி என்பது எவற்றின் கலவை?",
+      "options": {
+        "a": "Anhydrous ZnCl2 and conc. HCl",
+        "b": "Anhydrous AlCl3 and conc. HCl",
+        "c": "Conc. HNO3 and conc. H2SO4",
+        "d": "Pd/BaSO4"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Lucas reagent (anhydrous ZnCl2 + conc. HCl) differentiates 1°, 2°, and 3° alcohols based on turbidity.",
+        "ta": "நீரற்ற ZnCl2 மற்றும் அடர் HCl கலவையானது ஓரினைய, ஈரினைய, மூவினைய ஆல்கஹால்களை வேறுபடுத்தப் பயன்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q34",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": 11,
+      "ta": "அலகு 1"
+    },
+    "topic": "Hydroxy Compounds / ஹைட்ராக்ஸி சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Phenol reacts with chloroform and aqueous NaOH to give salicylaldehyde. This reaction is:",
+      "questionTa": "பீனால் குளோரோஃபார்ம் மற்றும் சோடியம் ஹைட்ராக்சைடுடன் வினைபுரிந்து சாலிசிலால்டிஹைடைத் தரும் வினை எது?",
+      "options": {
+        "a": "Kolbe's reaction",
+        "b": "Reimer-Tiemann reaction",
+        "c": "Friedel-Crafts reaction",
+        "d": "Cannizzaro reaction"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Phenol + CHCl3 + NaOH gives o-hydroxybenzaldehyde (salicylaldehyde) via Reimer-Tiemann reaction.",
+        "ta": "பீனால் குளோரோஃபார்ம் மற்றும் காரத்துடன் வினைபுரிந்து சாலிசிலால்டிஹைடு தருவது ரீமர்-டீமன் வினையாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q35",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": 11,
+      "ta": "அலகு 1"
+    },
+    "topic": "Hydroxy Compounds / ஹைட்ராக்ஸி சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following gives violet coloration with neutral FeCl3 solution?",
+      "questionTa": "நடுநிலை FeCl3 கரைசலுடன் ஊதா நிறத்தைத் தரும் சேர்மம் எது?",
+      "options": {
+        "a": "Ethanol",
+        "b": "Phenol",
+        "c": "Diethyl ether",
+        "d": "Ethanoic acid"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Phenol forms an iron-phenoxide complex resulting in characteristic violet color.",
+        "ta": "பீனால் நடுநிலை FeCl3-உடன் வினைபுரிந்து ஊதா நிற அணைவுச் சேர்மத்தை உருவாக்குகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q36",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": 11,
+      "ta": "அலகு 1"
+    },
+    "topic": "Ethers / ஈதர்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Williamson ether synthesis involves which mechanism?",
+      "questionTa": "வில்லியம்சன் ஈதர் தொகுப்பு வினை எந்த வழிமுறையில் நிகழ்கிறது?",
+      "options": {
+        "a": "SN1 mechanism",
+        "b": "SN2 mechanism",
+        "c": "E1 mechanism",
+        "d": "E2 mechanism"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Alkoxide ion attacks primary alkyl halide via bimolecular nucleophilic substitution (SN2).",
+        "ta": "அல்காக்சைடு அயனி ஓரினைய ஆல்கைல் ஹாலைடை தாக்கும் இருமூலக்கூறு கருக்கவர் பதிலீட்டு வினையாகும் (SN2)."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q37",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 12,
+    "unitTitle": {
+      "en": 12,
+      "ta": "அலகு 1"
+    },
+    "topic": "Carbonyl Compounds / கார்பனைல் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following compounds undergoes Cannizzaro reaction?",
+      "questionTa": "பின்வருவனவற்றுள் கனிசாரோ வினைக்கு உட்படும் சேர்மம் எது?",
+      "options": {
+        "a": "Acetaldehyde",
+        "b": "Benzaldehyde",
+        "c": "Acetone",
+        "d": "Propionaldehyde"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Aldehydes with no alpha-hydrogen atoms (like benzaldehyde and formaldehyde) undergo Cannizzaro reaction.",
+        "ta": "ஆல்ஃபா-ஹைட்ரஜன் இல்லாத பென்சால்டிஹைடு காரத்தின் முன்னிலையில் கனிசாரோ வினைக்கு உட்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q38",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 12,
+    "unitTitle": {
+      "en": 12,
+      "ta": "அலகு 1"
+    },
+    "topic": "Carbonyl Compounds / கார்பனைல் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Rosenmund reduction converts an acid chloride to aldehyde using:",
+      "questionTa": "ரோசன்மண்ட் ஒடுக்க வினையில் அமிலம் குளோரைடு ஆல்டிஹைடாக மாற்றப்பட பயன்படும் வினையூக்கி எது?",
+      "options": {
+        "a": "Pd / BaSO4 poisoned with quinoline/S",
+        "b": "LiAlH4",
+        "c": "Zn-Hg / conc. HCl",
+        "d": "Sn / HCl"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Lindlar-type palladium on barium sulphate partially poisons the catalyst preventing further reduction to alcohol.",
+        "ta": "Pd/BaSO4 வினையூக்கி ஆல்கஹாலாக மேலும் ஒடுக்கமடைவதைத் தடுக்கிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q39",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 12,
+    "unitTitle": {
+      "en": 12,
+      "ta": "அலகு 1"
+    },
+    "topic": "Carbonyl Compounds / கார்பனைல் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Clemmensen reduction of ketones to hydrocarbons employs:",
+      "questionTa": "கீட்டோன்களை ஹைட்ரோகார்பன்களாக மாற்றும் கிளமென்சன் ஒடுக்கத்தில் பயன்படுவது எது?",
+      "options": {
+        "a": "Hydrazine and KOH",
+        "b": "Zinc amalgam and conc. HCl",
+        "c": "Sodium and ethanol",
+        "d": "H2 / Ni"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Clemmensen reduction uses Zn-Hg/conc. HCl to convert carbonyl >C=O into methylene >CH2 group.",
+        "ta": "கிளமென்சன் ஒடுக்கம் Zn-Hg மற்றும் அடர் HCl பயன்படுத்தி கார்பனைல் தொகுதியை மெத்திலீன் தொகுதியாக மாற்றுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q40",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 12,
+    "unitTitle": {
+      "en": 12,
+      "ta": "அலகு 1"
+    },
+    "topic": "Carboxylic Acids / கார்பாக்சிலிக் அமிலங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which reagent is used in Hell-Volhard-Zelinsky (HVZ) reaction to halogenate carboxylic acids?",
+      "questionTa": "கார்பாக்சிலிக் அமிலங்களை ஆலஜனேற்றம் செய்யும் HVZ வினையில் பயன்படும் காரணி எது?",
+      "options": {
+        "a": "Cl2 / Red Phosphorus",
+        "b": "SOCl2",
+        "c": "PCl5 alone",
+        "d": "Cl2 / Sunlight"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "HVZ reaction halogenates alpha-carbon of aliphatic carboxylic acids using X2 in presence of red phosphorus.",
+        "ta": "சிவப்பு பாஸ்பரஸ் முன்னிலையில் குளோரின் அல்லது புரோமின் ஆல்ஃபா இடத்தில் பதிலீடு செய்யப்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q41",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 13,
+    "unitTitle": {
+      "en": 13,
+      "ta": "அலகு 1"
+    },
+    "topic": "Organic Nitrogen Compounds / கரிம நைட்ரஜன் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Gabriel phthalimide synthesis is exclusively used for the preparation of:",
+      "questionTa": "கேப்ரியல் தாலிமைடு தொகுப்பு முறை எதனைத் தயாரிக்க மட்டுமே பயன்படுகிறது?",
+      "options": {
+        "a": "Aliphatic primary amines",
+        "b": "Aromatic primary amines",
+        "c": "Secondary amines",
+        "d": "Tertiary amines"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Aryl halides do not undergo nucleophilic substitution with potassium phthalimide, so aromatic 1° amines cannot be prepared.",
+        "ta": "அரைல் ஹாலைடுகள் கருக்கவர் பதிலீட்டு வினைக்கு உட்படாததால் அலிஃபாட்டிக் ஓரினைய அமீன்கள் மட்டுமே தயாரிக்க முடியும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q42",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 13,
+    "unitTitle": {
+      "en": 13,
+      "ta": "அலகு 1"
+    },
+    "topic": "Organic Nitrogen Compounds / கரிம நைட்ரஜன் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Carbylamine test is given by:",
+      "questionTa": "கார்பைலமீன் சோதனைக்கு உட்படுவது எது?",
+      "options": {
+        "a": "Primary amines only",
+        "b": "Secondary amines only",
+        "c": "Tertiary amines only",
+        "d": "All amines"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Aliphatic and aromatic primary amines react with CHCl3 and KOH to form foul-smelling isocyanides (carbylamines).",
+        "ta": "அலிஃபாட்டிக் மற்றும் அரோமேட்டிக் ஓரினைய அமீன்கள் மட்டுமே துர்நாற்றமுடைய ஐசோசயனைடைத் தருகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q43",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 13,
+    "unitTitle": {
+      "en": 13,
+      "ta": "அலகு 1"
+    },
+    "topic": "Organic Nitrogen Compounds / கரிம நைட்ரஜன் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In the diazotization of aniline, the temperature must be maintained at:",
+      "questionTa": "அனிலீன் டைஅசோவாக்க வினையில் வெப்பநிலை எவ்வாறு பராமரிக்கப்பட வேண்டும்?",
+      "options": {
+        "a": "0 °C - 5 °C (273 - 278 K)",
+        "b": "50 °C - 60 °C",
+        "c": "100 °C",
+        "d": "Room temperature (25 °C)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Benzene diazonium chloride is unstable and decomposes above 5 °C.",
+        "ta": "பென்சீன் டையசோனியம் குளோரைடு நிலைப்பற்றது என்பதால் 0 °C முதல் 5 °C வரை குளிர்விக்கப்பட வேண்டும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q44",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 13,
+    "unitTitle": {
+      "en": 13,
+      "ta": "அலகு 1"
+    },
+    "topic": "Organic Nitrogen Compounds / கரிம நைட்ரஜன் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Conversion of benzene diazonium chloride to chlorobenzene using Cu2Cl2/HCl is called:",
+      "questionTa": "பென்சீன் டையசோனியம் குளோரைடை Cu2Cl2/HCl பயன்படுத்தி குளோரோபென்சீனாக மாற்றும் வினை எது?",
+      "options": {
+        "a": "Gattermann reaction",
+        "b": "Sandmeyer reaction",
+        "c": "Wurtz reaction",
+        "d": "Balz-Schiemann reaction"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Reaction with cuprous halides (Cu2Cl2/HCl) is the Sandmeyer reaction; with copper powder, it is Gattermann reaction.",
+        "ta": "குப்ரஸ் ஹாலைடு முன்னிலையில் நடைபெறும் இவ்வினை சாண்ட்மேயர் வினை எனப்படும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q45",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 14,
+    "unitTitle": {
+      "en": 14,
+      "ta": "அலகு 1"
+    },
+    "topic": "Biomolecules / உயிர் மூலக்கூறுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Glucose on prolonged heating with HI forms:",
+      "questionTa": "குளுக்கோஸை HI உடன் நீண்ட நேரம் வெப்பப்படுத்தும் போது கிடைப்பது எது?",
+      "options": {
+        "a": "n-Hexane",
+        "b": "Sorbitol",
+        "c": "Gluconic acid",
+        "d": "Saccharic acid"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Formation of n-hexane proves all 6 carbon atoms in glucose are linked in a straight chain.",
+        "ta": "n-ஹெக்சேன் உருவாவதன் மூலம் குளுக்கோஸின் 6 கார்பன் அணுக்களும் நேர்க்கோட்டு அமைப்பில் உள்ளது நிரூபணமாகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q46",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 14,
+    "unitTitle": {
+      "en": 14,
+      "ta": "அலகு 1"
+    },
+    "topic": "Biomolecules / உயிர் மூலக்கூறுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following is a non-reducing sugar?",
+      "questionTa": "பின்வருவனவற்றுள் ஒடுக்கா சர்க்கரை எது?",
+      "options": {
+        "a": "Glucose",
+        "b": "Fructose",
+        "c": "Sucrose",
+        "d": "Maltose"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "In sucrose, reducing groups of glucose and fructose are involved in glycosidic linkage.",
+        "ta": "சுக்ரோஸில் குளுக்கோஸ் மற்றும் பிரக்டோஸின் ஆல்டிஹைடு/கீட்டோன் தொகுதிகள் கிளைகோசைடிக் பிணைப்பில் ஈடுபடுவதால் இது ஒடுக்கும் பண்பற்றது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q47",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 14,
+    "unitTitle": {
+      "en": 14,
+      "ta": "அலகு 1"
+    },
+    "topic": "Biomolecules / உயிர் மூலக்கூறுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Proteins are polymers of:",
+      "questionTa": "புரதங்கள் என்பவை எவற்றின் பலபடி ஆகும்?",
+      "options": {
+        "a": "alpha-Amino acids",
+        "b": "beta-Amino acids",
+        "c": "Fatty acids",
+        "d": "Nucleotides"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Proteins are polypeptide chains consisting of alpha-amino acid residues joined by peptide bonds.",
+        "ta": "புரதங்கள் பெப்டைட் பிணைப்புகளால் இணைக்கப்பட்ட ஆல்ஃபா-அமினோ அமிலங்களின் பாலிபெப்டைடுகள் ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q48",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 14,
+    "unitTitle": {
+      "en": 14,
+      "ta": "அலகு 1"
+    },
+    "topic": "Biomolecules / உயிர் மூலக்கூறுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The nitrogenous base present in RNA but not in DNA is:",
+      "questionTa": "RNA-வில் மட்டும் உள்ள, DNA-வில் இல்லாத நைட்ரஜன் காரம் எது?",
+      "options": {
+        "a": "Adenine",
+        "b": "Guanine",
+        "c": "Thymine",
+        "d": "Uracil"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "DNA contains Adenine, Guanine, Cytosine, and Thymine. In RNA, Thymine is replaced by Uracil.",
+        "ta": "DNA-வில் உள்ள தைமினுக்குப் பதிலாக RNA-வில் யுராசில் உள்ளது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q49",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 15,
+    "unitTitle": {
+      "en": 15,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemistry in Everyday Life / அன்றாட வாழ்வில் வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Aspirin is chemically known as:",
+      "questionTa": "ஆஸ்பிரினின் வேதியியல் பெயர் யாது?",
+      "options": {
+        "a": "Acetyl salicylic acid",
+        "b": "Methyl salicylate",
+        "c": "Salicylaldehyde",
+        "d": "Benzoic acid"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Aspirin is synthesized by acetylating salicylic acid and is an analgesic/antipyretic.",
+        "ta": "ஆஸ்பிரின் என்பது வலி நிவாரணியாகப் பயன்படும் அசிட்டைல் சாலிசிலிக் அமிலமாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-Q50",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 15,
+    "unitTitle": {
+      "en": 15,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemistry in Everyday Life / அன்றாட வாழ்வில் வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following is a biodegradable polymer?",
+      "questionTa": "பின்வருவனவற்றுள் உயிரியச் சிதைவடையும் பலபடி (Biodegradable polymer) எது?",
+      "options": {
+        "a": "PHBV",
+        "b": "Bakelite",
+        "c": "PVC",
+        "d": "Nylon-6,6"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "PHBV (Poly-beta-hydroxybutyrate-co-beta-hydroxyvalerate) is a biodegradable polyester.",
+        "ta": "PHBV என்பது பாக்டீரியாக்களால் சிதைக்கப்படக்கூடிய உயிரியச் சிதைவடையும் பாலியெஸ்டர் பலபடியாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q01",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": 1,
+      "ta": "அலகு 1"
+    },
+    "topic": "Metallurgy / உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Calamine is an ore of which of the following metals?",
+      "questionTa": "காளமைன் என்பது பின்வரும் எந்த உலோகத்தின் தாது?",
+      "options": {
+        "a": "Iron",
+        "b": "Zinc",
+        "c": "Copper",
+        "d": "Aluminium"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Calamine is zinc carbonate (ZnCO3), which is a common carbonate ore of zinc.",
+        "ta": "காளமைன் என்பது துத்தநாகத்தின் கார்பனேட் தாதுவாகும் (ZnCO3)."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q02",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": 1,
+      "ta": "அலகு 1"
+    },
+    "topic": "Metallurgy / உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Blister copper obtained during extraction contains approximately what percentage of pure copper?",
+      "questionTa": "உலோகப் பிரித்தெடுத்தலில் பெறப்படும் கொப்புளக் காப்பரில் உள்ள தூய தாமிரத்தின் தோராயமான சதவீதம் என்ன?",
+      "options": {
+        "a": "90%",
+        "b": "95%",
+        "c": "98%",
+        "d": "75%"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Blister copper contains about 98% pure copper and 2% impurities, primarily appearing blistered due to the evolution of SO2 gas during solidification.",
+        "ta": "கொப்புளக் காப்பர் சுமார் 98% தூய தாமிரத்தைக் கொண்டுள்ளது; SO2 வாயு வெளியேறுவதால் கொப்புளங்கள் போன்ற தோற்றத்தைப் பெறுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q03",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": 1,
+      "ta": "அலகு 1"
+    },
+    "topic": "Metallurgy / உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In the Hall-Héroult electrolytic process for aluminium, cryolite (Na3AlF6) is added to alumina to:",
+      "questionTa": "அலுமினியம் பிரித்தெடுக்கும் ஹால்-ஹெரால்ட் மின்னாற்பகுப்பு முறையில், அலுமினாவுடன் கிரையோலைட் (Na3AlF6) சேர்க்கப்படுவதன் நோக்கம்:",
+      "options": {
+        "a": "Increase the melting point of alumina",
+        "b": "Lower the melting point and increase electrical conductivity",
+        "c": "Act as an oxidising agent",
+        "d": "Remove acidic impurities"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Cryolite lowers the melting point of alumina from ~2050 °C to ~950 °C and enhances its electrical conductivity.",
+        "ta": "கிரையோலைட் அலுமினாவின் உருகுநிலையை 2050 °C-லிருந்து 950 °C வரை குறைத்து அதன் மின் கடத்துத்திறனை அதிகரிக்கிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q04",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": 1,
+      "ta": "அலகு 1"
+    },
+    "topic": "Metallurgy / உலோகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In an Ellingham diagram, the positive slope of the line representing metal oxide formation is due to:",
+      "questionTa": "எலிங்கம் வரைபடத்தில் உலோக ஆக்சைடு உருவாக்கத்தைக் குறிக்கும் கோட்டின் நேர்குறி சாய்விற்குக் காரணம்:",
+      "options": {
+        "a": "Increase in entropy (ΔS > 0)",
+        "b": "Decrease in entropy (ΔS < 0)",
+        "c": "Zero enthalpy of formation",
+        "d": "Formation of gaseous products"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Since oxygen gas is consumed to form solid metal oxide, randomness decreases (ΔS is negative). Because slope = -ΔS, the slope becomes positive.",
+        "ta": "ஆக்ஸிஜன் வாயு திட உலோக ஆக்சைடாக மாறும்போது மூலக்கூறுகளின் ஒழுங்கற்ற தன்மை குறைகிறது (ΔS எதிர்க்குறி), எனவே சாய்வு (-ΔS) நேர்குறி மதிப்பைப் பெறுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q05",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": 2,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - I / p-தொகுதி தனிமங்கள் - I",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following molecules contains a three-centre two-electron (3c-2e) 'banana' bond?",
+      "questionTa": "பின்வருவனவற்றுள் முமைய இரு எலக்ட்ரான் (3c-2e) 'வாழைப்பழப் பிணைப்பைக்' கொண்டுள்ள மூலக்கூறு எது?",
+      "options": {
+        "a": "BF3",
+        "b": "B2H6",
+        "c": "AlCl3",
+        "d": "BCl3"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Diborane (B2H6) contains two B-H-B bridge bonds, each being a 3-centre-2-electron (3c-2e) banana bond.",
+        "ta": "டைபோரேனில் (B2H6) இரண்டு B-H-B பாலப் பிணைப்புகள் உள்ளன, இவை ஒவ்வொன்றும் 3c-2e வாழைப்பழப் பிணைப்பாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q06",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": 2,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - I / p-தொகுதி தனிமங்கள் - I",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which acid is commercially known as the 'Oil of Vitriol'?",
+      "questionTa": "'விட்ரியால் எண்ணெய்' (Oil of Vitriol) என்று வணிக ரீதியாக அழைக்கப்படும் அமிலம் எது?",
+      "options": {
+        "a": "Hydrochloric acid (HCl)",
+        "b": "Nitric acid (HNO3)",
+        "c": "Sulphuric acid (H2SO4)",
+        "d": "Phosphoric acid (H3PO4)"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Sulphuric acid (H2SO4) was historically prepared by roasting green vitriol (FeSO4·7H2O) and is known as oil of vitriol.",
+        "ta": "பச்சை விட்ரியாலை வறுத்து கந்தக அமிலம் தயாரிக்கப்பட்டதால் இது 'விட்ரியால் எண்ணெய்' என அழைக்கப்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q07",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": 2,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - I / p-தொகுதி தனிமங்கள் - I",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following halogens has the highest electron gain enthalpy (electron affinity)?",
+      "questionTa": "பின்வரும் ஆலசன்களில் அதிக எலக்ட்ரான் நாட்டம் (electron gain enthalpy) கொண்ட தனிமம் எது?",
+      "options": {
+        "a": "Fluorine",
+        "b": "Chlorine",
+        "c": "Bromine",
+        "d": "Iodine"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Due to very small size and interelectronic repulsions in the compact 2p subshell of fluorine, chlorine has a higher electron affinity than fluorine.",
+        "ta": "புளூரினின் மிகச்சிறிய 2p ஆர்பிட்டாலில் உள்ள எலக்ட்ரான்களுக்கு இடையேயான விலக்கு விசை காரணமாக, குளோரின் புளூரினை விட அதிக எலக்ட்ரான் நாட்டத்தைக் கொண்டுள்ளது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q08",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": 3,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - II / p-தொகுதி தனிமங்கள் - II",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The geometry and shape of Xenon tetrafluoride (XeF4) molecule is:",
+      "questionTa": "செனான் டெட்ராபுளூரைடு (XeF4) மூலக்கூறின் வடிவம் என்ன?",
+      "options": {
+        "a": "Tetrahedral",
+        "b": "Square planar",
+        "c": "Octahedral",
+        "d": "Trigonal bipyramidal"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "XeF4 has sp3d2 hybridisation with 4 bonding pairs and 2 lone pairs at trans positions, giving a square planar geometry.",
+        "ta": "XeF4 மூலக்கூறு sp3d2 இனக்கலப்பைக் கொண்டு, 4 பிணைப்பு மற்றும் 2 தனித்த எலக்ட்ரான் இரட்டைகளுடன் தள சதுர அமைப்பைக் கொண்டுள்ளது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q09",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": 3,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - II / p-தொகுதி தனிமங்கள் - II",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which noble gas is extensively used in cryogenics and Magnetic Resonance Imaging (MRI) scanners?",
+      "questionTa": "மிகுகுளிர் அறிவியல் மற்றும் காந்த அதிர்வு வரைவு (MRI) கருவிகளில் குளிர்விப்பானாகப் பயன்படும் மந்த வாயு எது?",
+      "options": {
+        "a": "Helium",
+        "b": "Neon",
+        "c": "Argon",
+        "d": "Krypton"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Liquid helium has an extremely low boiling point (4.2 K) and is used to produce superconductivity in MRI superconducting magnets.",
+        "ta": "திரவ ஹீலியம் மிகக் குறைந்த கொதிநிலையைக் (4.2 K) கொண்டுள்ளதால், MRI கருவிகளில் உள்ள மீக்கடத்து காந்தங்களைக் குளிர்விக்கப் பயன்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q10",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 3,
+    "unitTitle": {
+      "en": 3,
+      "ta": "அலகு 1"
+    },
+    "topic": "p-Block Elements - II / p-தொகுதி தனிமங்கள் - II",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following oxides of nitrogen is neutral in nature?",
+      "questionTa": "பின்வரும் நைட்ரஜன் ஆக்சைடுகளில் நடுநிலைத்தன்மை (neutral) கொண்ட ஆக்சைடு எது?",
+      "options": {
+        "a": "N2O",
+        "b": "N2O3",
+        "c": "NO2",
+        "d": "N2O5"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Nitrous oxide (N2O) and Nitric oxide (NO) are neutral oxides, whereas higher oxides like N2O3, NO2, and N2O5 are acidic.",
+        "ta": "நைட்ரஸ் ஆக்சைடு (N2O) மற்றும் நைட்ரிக் ஆக்சைடு (NO) நடுநிலை ஆக்சைடுகளாகும்; ஏனையவை அமிலத்தன்மை கொண்டவை."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q11",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": 4,
+      "ta": "அலகு 1"
+    },
+    "topic": "Transition and Inner Transition Elements / இடைநிலை தனிமங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which 3d transition series element exhibits the maximum number of oxidation states?",
+      "questionTa": "3d இடைநிலைத் தனிம வரிசையில் அதிகபட்ச எண்ணிக்கையிலான ஆக்சிஜனேற்ற நிலைகளை வெளிப்படுத்தும் தனிமம் எது?",
+      "options": {
+        "a": "Titanium (Ti)",
+        "b": "Vanadium (V)",
+        "c": "Manganese (Mn)",
+        "d": "Zinc (Zn)"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Manganese has the configuration [Ar] 3d5 4s2 and exhibits oxidation states from +2 to +7 (maximum in the 3d series).",
+        "ta": "மாங்கனீசு [Ar] 3d5 4s2 என்ற அமைப்பைக் கொண்டு, +2 முதல் +7 வரை அதிகபட்ச ஆக்சிஜனேற்ற நிலைகளை வெளிப்படுத்துகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q12",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": 4,
+      "ta": "அலகு 1"
+    },
+    "topic": "Transition and Inner Transition Elements / இடைநிலை தனிமங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The color of transition metal ions and complexes is primarily attributed to:",
+      "questionTa": "இடைநிலை உலோக அயனிகள் மற்றும் அணைவுச் சேர்மங்களின் நிறத்திற்கு முதன்மைக் காரணம்:",
+      "options": {
+        "a": "d-d electronic transitions",
+        "b": "High density",
+        "c": "Variable oxidation states",
+        "d": "Paramagnetic nature"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "In the presence of ligands, d orbitals split into different energy levels (t2g and eg), and absorption of light causes d-d electron excitation.",
+        "ta": "ஈனிகளின் முன்னிலையில் d ஆர்பிட்டால்கள் பிளவுபடுவதால், புலப்படும் ஒளிக்கதிரை உறிஞ்சி எலக்ட்ரான்கள் d-d இடப்பெயர்ச்சி அடைவதே நிறத்திற்குக் காரணமாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q13",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 4,
+    "unitTitle": {
+      "en": 4,
+      "ta": "அலகு 1"
+    },
+    "topic": "Transition and Inner Transition Elements / இடைநிலை தனிமங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In acidic medium, one mole of potassium dichromate (K2Cr2O7) gains how many electrons to be reduced to Cr3+?",
+      "questionTa": "அமில ஊடகத்தில், ஒரு மோல் பொட்டாசியம் டைக்ரோமேட் (K2Cr2O7) Cr3+ ஆக ஒடுக்கமடையும் போது எத்தனை எலக்ட்ரான்களை ஏற்கிறது?",
+      "options": {
+        "a": "2",
+        "b": "3",
+        "c": "6",
+        "d": "14"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "The half reaction is Cr2O7^2- + 14H+ + 6e- -> 2Cr3+ + 7H2O, requiring 6 electrons.",
+        "ta": "Cr2O7^2- + 14H+ + 6e- -> 2Cr3+ + 7H2O என்ற வினையின்படி 6 எலக்ட்ரான்களை ஏற்கிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q14",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": 5,
+      "ta": "அலகு 1"
+    },
+    "topic": "Coordination Chemistry / அணைவு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "How many total ions are furnished by one formula unit of [Co(NH3)5Cl]Cl2 in aqueous solution?",
+      "questionTa": "[Co(NH3)5Cl]Cl2 என்ற அணைவுச் சேர்மம் நீர்க்கரைசலில் எத்தனை அயனிகளைத் தரும்?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "[Co(NH3)5Cl]Cl2 ionizes to give one complex cation [Co(NH3)5Cl]2+ and two chloride anions 2Cl-, totaling 3 ions.",
+        "ta": "நீரில் கரையும் போது ஒரு அணைவு நேர் அயனி [Co(NH3)5Cl]2+ மற்றும் இரண்டு 2Cl- அயனிகள் என மொத்தம் 3 அயனிகள் கிடைக்கின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q15",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": 5,
+      "ta": "அலகு 1"
+    },
+    "topic": "Coordination Chemistry / அணைவு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The pair of complexes [Co(NH3)5Br]SO4 and [Co(NH3)5SO4]Br represents which type of isomerism?",
+      "questionTa": "[Co(NH3)5Br]SO4 மற்றும் [Co(NH3)5SO4]Br ஆகிய அணைவுச் சேர்மங்கள் எவ்வகை மாற்றியத்திற்கு எடுத்துக்காட்டுகளாகும்?",
+      "options": {
+        "a": "Linkage isomerism",
+        "b": "Coordination isomerism",
+        "c": "Ionisation isomerism",
+        "d": "Hydrate isomerism"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "These isomers exchange the counter ion with a ligand inside the coordination sphere, producing different ions in solution.",
+        "ta": "இவை கரைசலில் வெவ்வேறு அயனிகளைத் தரக்கூடிய வகையில் ஈனி மற்றும் எதிரயனியை பரிமாறிக்கொண்டுள்ளதால் அயனியாதல் மாற்றியங்கள் எனப்படுகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q16",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 5,
+    "unitTitle": {
+      "en": 5,
+      "ta": "அலகு 1"
+    },
+    "topic": "Coordination Chemistry / அணைவு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "EDTA (Ethylenediaminetetraacetate) ion acts as what type of ligand?",
+      "questionTa": "EDTA (எத்திலீன் டைஅமீன் டெட்ரா அசிட்டேட்) அயனி எவ்வகையான ஈனியாக செயல்படுகிறது?",
+      "options": {
+        "a": "Bidentate ligand",
+        "b": "Tetradentate ligand",
+        "c": "Hexadentate ligand",
+        "d": "Monodentate ligand"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "EDTA has two nitrogen donor atoms and four oxygen donor atoms, making it a hexadentate chelating ligand.",
+        "ta": "EDTA இரண்டு நைட்ரஜன் மற்றும் நான்கு ஆக்சிஜன் வழங்கல் அணுக்களைக் கொண்டுள்ளதால் இது அறுமுனை ஈனியாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q17",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": 6,
+      "ta": "அலகு 1"
+    },
+    "topic": "Solid State / திண்ம நிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The percentage packing efficiency of a simple cubic (sc) unit cell is approximately:",
+      "questionTa": "எளிய கனசதுர (sc) படிக அமைப்பின் பொதிவுத்திறன் (packing efficiency) தோராயமாக:",
+      "options": {
+        "a": "52.4%",
+        "b": "68.0%",
+        "c": "74.0%",
+        "d": "32.0%"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "For a simple cubic lattice, packing efficiency = (Volume of 1 sphere / Volume of cube) * 100 = (π/6) * 100 ≈ 52.4%.",
+        "ta": "எளிய கனசதுர படிகத்தின் பொதிவுத்திறன் (π/6) * 100 ≈ 52.4% ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q18",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": 6,
+      "ta": "அலகு 1"
+    },
+    "topic": "Solid State / திண்ம நிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following compounds exhibits both Schottky and Frenkel defects?",
+      "questionTa": "ஷாட்கி மற்றும் பிராங்கல் ஆகிய இரு குறைபாடுகளையும் வெளிப்படுத்தும் படிகச் சேர்மம் எது?",
+      "options": {
+        "a": "NaCl",
+        "b": "CsCl",
+        "c": "AgBr",
+        "d": "KCl"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Silver bromide (AgBr) uniquely exhibits both Schottky and Frenkel defects due to the intermediate size ratio of Ag+ and Br-.",
+        "ta": "வெள்ளி புரோமைடு (AgBr) அதன் அயனி ஆர விகிதத்தின் காரணமாக ஷாட்கி மற்றும் பிராங்கல் ஆகிய இரு குறைபாடுகளையும் காட்டுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q19",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": 6,
+      "ta": "அலகு 1"
+    },
+    "topic": "Solid State / திண்ம நிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The relationship between edge length 'a' and atomic radius 'r' in a face-centred cubic (fcc) unit cell is:",
+      "questionTa": "முகமைய கனசதுர (fcc) அமைப்பில் அலகுக்கூட்டின் விளிம்பு நீளம் 'a' மற்றும் அணுவின் ஆரம் 'r' இடையே உள்ள தொடர்பு:",
+      "options": {
+        "a": "a = 2r",
+        "b": "a = 4r / √3",
+        "c": "a = 2√2 r",
+        "d": "a = √3 r"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Along the face diagonal, 4r = √2 a, which gives a = 4r / √2 = 2√2 r.",
+        "ta": "முக மைய மூலைவிட்டத்தின் வழியே 4r = √2 a என அமைவதால், a = 2√2 r ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q20",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": 7,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "For a reaction with rate law Rate = k [A]^1 [B]^2, what is the overall order of the reaction?",
+      "questionTa": "ஒரு வினையின் வேக விதி Rate = k [A]^1 [B]^2 எனில், அவ்வினையின் ஒட்டுமொத்த வினை வகை என்ன?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "0"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "The overall order of a reaction is the sum of the powers of concentration terms in the rate law: 1 + 2 = 3 (third order).",
+        "ta": "வேக விதியில் உள்ள செறிவு உறுப்புகளின் அடுக்குகளின் கூடுதல் ஒட்டுமொத்த வினை வகையாகும் (1 + 2 = 3)."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q21",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": 7,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Acid-catalysed hydrolysis of ethyl acetate is an example of which type of reaction?",
+      "questionTa": "எத்தில் அசிட்டேட்டின் அமில வினையூக்க நீராற்பகுப்பு எவ்வகை வினைக்கு எடுத்துக்காட்டாகும்?",
+      "options": {
+        "a": "Zero order reaction",
+        "b": "Pseudo first order reaction",
+        "c": "Second order reaction",
+        "d": "Third order reaction"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Water is present in large excess, so its concentration remains essentially constant, making the reaction follow pseudo first-order kinetics.",
+        "ta": "நீர் அதிக அளவில் இருப்பதால் அதன் செறிவு மாறுவதில்லை, எனவே இவ்வினை போலி முதல் வகை வினையாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q22",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": 7,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "When the temperature of a chemical reaction is raised by 10 °C, the rate of reaction approximately:",
+      "questionTa": "ஒரு வேதிவினையின் வெப்பநிலையை 10 °C உயர்த்தும்போது வினையின் வேகம் தோராயமாக:",
+      "options": {
+        "a": "Remains constant",
+        "b": "Doubles",
+        "c": "Halves",
+        "d": "Quadruples"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "For most chemical reactions, the temperature coefficient (k_T+10 / k_T) is around 2 to 3, meaning the rate doubles with a 10 °C rise.",
+        "ta": "பெரும்பாலான வினைகளுக்கு வெப்பநிலை குணகம் 2 முதல் 3 வரை இருப்பதால், 10 °C உயர்வுக்கு வினை வேகம் தோராயமாக இருமடங்காகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q23",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 8,
+    "unitTitle": {
+      "en": 8,
+      "ta": "அலகு 1"
+    },
+    "topic": "Ionic Equilibrium / அயனிச் சமநிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "What is the pH of a 0.001 M aqueous solution of hydrochloric acid (HCl)?",
+      "questionTa": "0.001 M செறிவு கொண்ட ஹைட்ரோகுளோரிக் அமில (HCl) நீர்க்கரைசலின் pH மதிப்பு என்ன?",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "11"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "[H+] = 10^-3 M. pH = -log10[H+] = -log10(10^-3) = 3.",
+        "ta": "[H+] = 10^-3 M என்பதால், pH = -log[H+] = -log(10^-3) = 3."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q24",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 8,
+    "unitTitle": {
+      "en": 8,
+      "ta": "அலகு 1"
+    },
+    "topic": "Ionic Equilibrium / அயனிச் சமநிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "For a sparingly soluble salt of type AB2 with molar solubility 's', the solubility product constant Ksp is:",
+      "questionTa": "AB2 வகை உப்பின் மோலார் கரைதிறன் 's' எனில், அதன் கரைதிறன் பெருக்கம் (Ksp):",
+      "options": {
+        "a": "s^2",
+        "b": "2s^2",
+        "c": "4s^3",
+        "d": "27s^4"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "AB2(s) <=> A^2+ + 2B^-. Ksp = [A^2+][B^-]^2 = (s)(2s)^2 = 4s^3.",
+        "ta": "AB2 -> A^2+ + 2B^-; Ksp = (s)(2s)^2 = 4s^3."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q25",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 8,
+    "unitTitle": {
+      "en": 8,
+      "ta": "அலகு 1"
+    },
+    "topic": "Ionic Equilibrium / அயனிச் சமநிலை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The suppression of the degree of dissociation of a weak electrolyte by adding a strong electrolyte containing a common ion is termed:",
+      "questionTa": "பொதுவான அயனியைக் கொண்ட வலிமைமிகு மின்பகுளியைச் சேர்க்கும்போது, வலிமை குறைந்த மின்பகுளியின் பிரிகை வீதம் குறைவது எவ்வாறு அழைக்கப்படுகிறது?",
+      "options": {
+        "a": "Electromeric effect",
+        "b": "Common ion effect",
+        "c": "Ostwald dilution",
+        "d": "Inductive effect"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "By Le Chatelier's principle, adding an ion common to the equilibrium shifts the dissociation equilibrium backward (Common ion effect).",
+        "ta": "லீ-சாட்லியர் கொள்கையின்படி பொதுவான அயனியைச் சேர்க்கும்போது பிரிகையடைதல் பின்னோக்கி நகர்த்தப்பட்டு பிரிகை வீதம் குறைகிறது (பொது அயனி விளைவு)."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q26",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": 9,
+      "ta": "அலகு 1"
+    },
+    "topic": "Electrochemistry / மின்வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Faraday's first law of electrolysis is mathematically stated as m = Z · I · t, where 'Z' is:",
+      "questionTa": "பாரடேயின் முதல் மின்னாற்பகுப்பு விதி m = Z · I · t என்பதில் 'Z' என்பது எதனைக் குறிக்கிறது?",
+      "options": {
+        "a": "Atomic number",
+        "b": "Electrochemical equivalent",
+        "c": "Impedance",
+        "d": "Faraday constant"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Z represents the electrochemical equivalent of the substance deposited by 1 coulomb of electricity.",
+        "ta": "Z என்பது ஒரு கூலும் மின்னோட்டத்தினால் மின்முனையில் படியும் பொருளின் மின்வேதிச் சமான எடையாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q27",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": 9,
+      "ta": "அலகு 1"
+    },
+    "topic": "Electrochemistry / மின்வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The relationship between standard Gibbs free energy change (ΔG°) and standard cell potential (E°cell) is:",
+      "questionTa": "திட்ட கிப்ஸ் கட்டிலா ஆற்றல் மாற்றம் (ΔG°) மற்றும் திட்ட மின்கல மின்னழுத்தம் (E°cell) இடையேயான தொடர்பு:",
+      "options": {
+        "a": "ΔG° = nFE°cell",
+        "b": "ΔG° = -nFE°cell",
+        "c": "ΔG° = -RT ln E°cell",
+        "d": "ΔG° = -nF / E°cell"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Electrical work done by a reversible galvanic cell equals the decrease in Gibbs free energy: ΔG° = -nFE°cell.",
+        "ta": "மீளக்கூடிய மின்கலத்தால் செய்யப்படும் மின்சார வேலை கட்டிலா ஆற்றலின் குறைவுக்கு சமம்: ΔG° = -nFE°cell."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q28",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": 9,
+      "ta": "அலகு 1"
+    },
+    "topic": "Electrochemistry / மின்வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "During the discharging of a lead storage battery, the anode and cathode are both converted into:",
+      "questionTa": "காரீய அமில சேமிப்பு மின்கலன் மின்னிறக்கம் (discharging) அடையும் போது நேர்மின் மற்றும் எதிர்மின் முனைகள் இரண்டும் எவ்வாறாக மாறுகின்றன?",
+      "options": {
+        "a": "PbO2",
+        "b": "PbSO4",
+        "c": "PbO",
+        "d": "Pb(OH)2"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "At both electrodes, lead sulphate (PbSO4) precipitate is formed while sulphuric acid is consumed.",
+        "ta": "மின்னிறக்கத்தின் போது நேர் மற்றும் எதிர் மின்முனைகள் இரண்டும் காரீய சல்பேட்டாக (PbSO4) மாற்றமடைகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q29",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 10,
+    "unitTitle": {
+      "en": 10,
+      "ta": "அலகு 1"
+    },
+    "topic": "Surface Chemistry / புறப்பரப்பு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Physical adsorption (physisorption) is an exothermic process; therefore, with increase in temperature, physisorption:",
+      "questionTa": "இயற்பியல் பரப்புக்கவர்தல் ஒரு வெப்ப உமிழ் செயல்முறையாகும்; எனவே வெப்பநிலையை உயர்த்தும்போது இயற்பியல் பரப்புக்கவர்தல்:",
+      "options": {
+        "a": "Increases continuously",
+        "b": "Decreases",
+        "c": "Remains unchanged",
+        "d": "First decreases then increases"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Because adsorption is exothermic (ΔH < 0), according to Le Chatelier's principle, higher temperatures favor desorption, decreasing physisorption.",
+        "ta": "பரப்புக்கவர்தல் ஒரு வெப்ப உமிழ் செயல்முறை என்பதால், லீ-சாட்லியர் தத்துவப்படி வெப்பநிலை உயர்வு பரப்புக்கவர்தலைக் குறைக்கும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q30",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 10,
+    "unitTitle": {
+      "en": 10,
+      "ta": "அலகு 1"
+    },
+    "topic": "Surface Chemistry / புறப்பரப்பு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The migration of colloidal particles towards an oppositely charged electrode under an applied electric field is called:",
+      "questionTa": "மின்னழுத்த வேறுபாட்டின் காரணமாக கூழ்மத் துகள்கள் எதிரெதிர் மின்முனைகளை நோக்கி நகரும் நிகழ்வு எவ்வாறு அழைக்கப்படுகிறது?",
+      "options": {
+        "a": "Electro-osmosis",
+        "b": "Electrophoresis (Cataphoresis)",
+        "c": "Dialysis",
+        "d": "Coagulation"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Electrophoresis proves the presence of electrical charge on colloidal particles by observing their motion in an electric field.",
+        "ta": "மின்புலத்தின் கீழ் கூழ்மத் துகள்கள் நகர்வது எலக்ட்ரோபோரசிஸ் எனப்படுகிறது; இது துகள்களின் மின்சுமையை உறுதி செய்கிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q31",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 10,
+    "unitTitle": {
+      "en": 10,
+      "ta": "அலகு 1"
+    },
+    "topic": "Surface Chemistry / புறப்பரப்பு வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Milk is an example of which type of colloidal emulsion?",
+      "questionTa": "பால் என்பது எவ்வகையான கூழ்ம பால்மத்திற்கு (emulsion) எடுத்துக்காட்டாகும்?",
+      "options": {
+        "a": "Water-in-oil (W/O) emulsion",
+        "b": "Oil-in-water (O/W) emulsion",
+        "c": "Solid sol",
+        "d": "Aerosol"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "In milk, liquid fat globules (oil) are dispersed in water, making it an oil-in-water (O/W) emulsion.",
+        "ta": "பாலில் கொழுப்புத் துளிகள் நீரில் பரவியிருப்பதால் இது நீரில் எண்ணெய் (O/W) வகை பால்மமாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q32",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": 11,
+      "ta": "அலகு 1"
+    },
+    "topic": "Hydroxy Compounds and Ethers / ஹைட்ராக்ஸி சேர்மங்கள் மற்றும் ஈதர்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Oxidation of ethylene glycol with periodic acid (HIO4) yields which of the following products?",
+      "questionTa": "எத்திலீன் கிளைக்கால் பெர்அயோடிக் அமிலத்துடன் (HIO4) புரியும் ஆக்சிஜனேற்ற வினையில் கிடைக்கும் முதன்மை விளைபொருள் எது?",
+      "options": {
+        "a": "Formic acid",
+        "b": "Formaldehyde",
+        "c": "Glyoxal",
+        "d": "Oxalic acid"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Periodic acid cleaves vicinal diols: CH2OH-CH2OH + HIO4 -> 2 HCHO + HIO3 + H2O.",
+        "ta": "பெர்அயோடிக் அமிலம் அருகமைந்த டையால்களைப் பிளந்து இரண்டு மூலக்கூறுகள் பார்மால்டிஹைடைத் (HCHO) தருகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q33",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": 11,
+      "ta": "அலகு 1"
+    },
+    "topic": "Hydroxy Compounds and Ethers / ஹைட்ராக்ஸி சேர்மங்கள் மற்றும் ஈதர்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Oxidation of secondary alcohols (e.g., propan-2-ol) with acidified potassium dichromate produces:",
+      "questionTa": "இரண்டாம் நிலை ஆல்கஹால்களை (எ.கா. புரோப்பேன்-2-ஆல்) அமிலங்கலந்த பொட்டாசியம் டைக்ரோமேட்டைக் கொண்டு ஆக்சிஜனேற்றம் செய்யும்போது கிடைப்பது:",
+      "options": {
+        "a": "Aldehyde",
+        "b": "Ketone",
+        "c": "Carboxylic acid directly",
+        "d": "Ester"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Secondary alcohols are oxidized to ketones containing the same number of carbon atoms.",
+        "ta": "இரண்டாம் நிலை ஆல்கஹால்கள் ஆக்சிஜனேற்றமடைந்து அதே எண்ணிக்கையிலான கார்பன்களைக் கொண்ட கீட்டோன்களைத் தருகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q34",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": 11,
+      "ta": "அலகு 1"
+    },
+    "topic": "Hydroxy Compounds and Ethers / ஹைட்ராக்ஸி சேர்மங்கள் மற்றும் ஈதர்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Anisole (methoxybenzene) when heated with excess hydroiodic acid (HI) at 373 K produces:",
+      "questionTa": "அனிசோலை (மெத்தாக்சிபென்சீன்) அதிகப்படியான HI உடன் 373 K வெப்பநிலையில் வெப்பப்படுத்தும்போது கிடைப்பது:",
+      "options": {
+        "a": "Phenol and Methyl iodide",
+        "b": "Iodobenzene and Methanol",
+        "c": "Benzene and Methyl alcohol",
+        "d": "Phenol and Methanol"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Due to resonance, the C(aromatic)-O bond is stronger and does not cleave; thus I- attacks the smaller methyl group forming CH3I and Phenol.",
+        "ta": "உடனிசைவு காரணமாக பென்சீன் வளைய-ஆக்சிஜன் பிணைப்பு வலிமையானது; எனவே மெத்தில் தொகுதி தாக்கப்பட்டு பீனால் மற்றும் CH3I கிடைக்கின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q35",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": 11,
+      "ta": "அலகு 1"
+    },
+    "topic": "Hydroxy Compounds and Ethers / ஹைட்ராக்ஸி சேர்மங்கள் மற்றும் ஈதர்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In Dow's process, chlorobenzene is converted into phenol by heating with aqueous NaOH at:",
+      "questionTa": "டவ் முறையில் குளோரோபென்சீனை பீனாலாக மாற்ற NaOH நீர்க்கரைசலுடன் வெப்பப்படுத்தப்படும் வெப்பநிலை மற்றும் அழுத்தம்:",
+      "options": {
+        "a": "300 K and 1 atm",
+        "b": "623 K and 300 atm",
+        "c": "373 K and 10 atm",
+        "d": "500 K and 100 atm"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Dow's process involves drastic conditions: heating chlorobenzene with 6-8% NaOH at 623 K and 300 atm pressure.",
+        "ta": "டவ் முறையில் குளோரோபென்சீன் 6-8% NaOH உடன் 623 K மற்றும் 300 atm அழுத்தத்தில் வினையாக்கப்பட்டு பீனாலாக மாற்றப்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q36",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 12,
+    "unitTitle": {
+      "en": 12,
+      "ta": "அலகு 1"
+    },
+    "topic": "Carbonyl Compounds and Carboxylic Acids / கார்பனைல் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following carbonyl compounds does NOT reduce Tollens' reagent?",
+      "questionTa": "பின்வரும் கார்பனைல் சேர்மங்களில் டாலன்ஸ் வினைக்காரணியை ஒடுக்காத சேர்மம் எது?",
+      "options": {
+        "a": "Formaldehyde",
+        "b": "Acetaldehyde",
+        "c": "Benzaldehyde",
+        "d": "Acetone"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Tollens' reagent oxidizes all aldehydes (aliphatic and aromatic) but does not react with simple ketones like acetone.",
+        "ta": "டாலன்ஸ் காரணி ஆல்டிஹைடுகளை மட்டுமே ஒடுக்கும்; அசிட்டோன் போன்ற எளிய கீட்டோன்களுடன் வினைபுரிவதில்லை."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q37",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 12,
+    "unitTitle": {
+      "en": 12,
+      "ta": "அலகு 1"
+    },
+    "topic": "Carbonyl Compounds and Carboxylic Acids / கார்பனைல் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Wolff-Kishner reduction converts aldehydes and ketones to corresponding alkanes using which reagent?",
+      "questionTa": "ஆல்டிஹைடுகள் மற்றும் கீட்டோன்களை ஹைட்ரோகார்பன்களாக மாற்றும் வுல்ஃப்-கிஷ்னர் ஒடுக்கத்தில் பயன்படும் வினைக்காரணி எது?",
+      "options": {
+        "a": "Zn-Hg / conc. HCl",
+        "b": "NH2-NH2 / KOH in ethylene glycol",
+        "c": "LiAlH4 in ether",
+        "d": "NaBH4 in ethanol"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Wolff-Kishner reduction uses hydrazine (NH2NH2) followed by heating with a base (KOH) in ethylene glycol.",
+        "ta": "வுல்ஃப்-கிஷ்னர் ஒடுக்கத்தில் ஹைட்ரசீன் மற்றும் எத்திலீன் கிளைக்காலில் கரைக்கப்பட்ட காரம் (KOH) பயன்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q38",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 12,
+    "unitTitle": {
+      "en": 12,
+      "ta": "அலகு 1"
+    },
+    "topic": "Carbonyl Compounds and Carboxylic Acids / கார்பனைல் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Reaction of formaldehyde (HCHO) with methyl magnesium iodide (CH3MgI) followed by acidic hydrolysis gives:",
+      "questionTa": "பார்மால்டிஹைடுடன் (HCHO) மெத்தில் மெக்னீசியம் அயோடைடு (CH3MgI) வினைபுரிந்து நீராற்பகுப்பு அடையும் போது கிடைக்கும் விளைபொருள்:",
+      "options": {
+        "a": "Methanol",
+        "b": "Ethanol",
+        "c": "Propan-2-ol",
+        "d": "Acetone"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Formaldehyde reacts with Grignard reagents to yield primary alcohols; with CH3MgI it gives ethanol (CH3CH2OH).",
+        "ta": "பார்மால்டிஹைடு கிரிக்னார்டு காரணியுடன் வினைபுரிந்து ஓரிணைய ஆல்கஹாலைத் தரும்; மெத்தில் தொகுதியுடன் எத்தனால் (CH3CH2OH) கிடைக்கிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q39",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 12,
+    "unitTitle": {
+      "en": 12,
+      "ta": "அலகு 1"
+    },
+    "topic": "Carbonyl Compounds and Carboxylic Acids / கார்பனைல் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following carboxylic acids exhibits the highest acidic strength?",
+      "questionTa": "பின்வரும் கார்பாக்சிலிக் அமிலங்களில் அதிக அமில வலிமை கொண்ட அமிலம் எது?",
+      "options": {
+        "a": "CH3COOH",
+        "b": "CH2ClCOOH",
+        "c": "CHCl2COOH",
+        "d": "CCl3COOH"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Trichloroacetic acid (CCl3COOH) has three strongly electron-withdrawing chlorine atoms (-I effect), which strongly stabilizes the conjugate base carboxylate ion.",
+        "ta": "ட்ரை குளோரோ அசிட்டிக் அமிலத்தில் (CCl3COOH) மூன்று எலக்ட்ரான் கவரும் குளோரின் அணுக்கள் (-I விளைவு) உள்ளதால் இது அதிக அமில வலிமை பெறுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q40",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 13,
+    "unitTitle": {
+      "en": 13,
+      "ta": "அலகு 1"
+    },
+    "topic": "Organic Nitrogen Compounds / கரிம நைட்ரஜன் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The reaction of aniline with benzoyl chloride in the presence of aqueous NaOH is known as:",
+      "questionTa": "அனிலீன் பென்சாயில் குளோரைடுடன் கார முன்னிலையில் வினைபுரியும் வினை எவ்வாறு அழைக்கப்படுகிறது?",
+      "options": {
+        "a": "Sandmeyer reaction",
+        "b": "Schotten-Baumann reaction",
+        "c": "Gattermann reaction",
+        "d": "Carbylamine reaction"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Acylation of aromatic amines using benzoyl chloride in presence of base is the Schotten-Baumann reaction, producing benzanilide.",
+        "ta": "காரத்தின் முன்னிலையில் அனிலீன் பென்சாயில் குளோரைடுடன் வினைபுரிந்து பென்சானிலைடு தரும் வினை ஷாட்டன்-பௌமன் வினையாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q41",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 13,
+    "unitTitle": {
+      "en": 13,
+      "ta": "அலகு 1"
+    },
+    "topic": "Organic Nitrogen Compounds / கரிம நைட்ரஜன் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Hofmann mustard oil reaction is used to detect and distinguish which class of compounds?",
+      "questionTa": "ஹாஃப்மன் மஸ்டர்டு ஆயில் வினை எவ்வகைச் சேர்மங்களைக் கண்டறியப் பயன்படுகிறது?",
+      "options": {
+        "a": "Primary amines",
+        "b": "Secondary amines",
+        "c": "Tertiary amines",
+        "d": "Nitro compounds"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Primary amines react with carbon disulphide (CS2) and mercuric chloride (HgCl2) to give alkyl isothiocyanates with a mustard oil odor.",
+        "ta": "ஓரிணைய அமீன்கள் CS2 மற்றும் HgCl2 உடன் வினைபுரிந்து கடுகு எண்ணெய் மணமுடைய ஐசோதயோசயனேட்டுகளைத் தருகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q42",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 13,
+    "unitTitle": {
+      "en": 13,
+      "ta": "அலகு 1"
+    },
+    "topic": "Organic Nitrogen Compounds / கரிம நைட்ரஜன் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Reduction of nitrobenzene with zinc dust and ammonium chloride (Zn / NH4Cl) gives:",
+      "questionTa": "நைட்ரோபென்சீனை துத்தநாகத் தூள் மற்றும் அம்மோனியம் குளோரைடுடன் (Zn / NH4Cl) நடுநிலை ஊடகத்தில் ஒடுக்கமடையச் செய்யும்போது கிடைப்பது:",
+      "options": {
+        "a": "Aniline",
+        "b": "Phenylhydroxylamine",
+        "c": "Azobenzene",
+        "d": "Hydrazobenzene"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Neutral reduction of C6H5NO2 with Zn and aqueous NH4Cl yields phenylhydroxylamine (C6H5NHOH).",
+        "ta": "நடுநிலை ஊடகத்தில் Zn/NH4Cl கொண்டு நைட்ரோபென்சீன் ஒடுக்கப்பட்டு பீனைல்ஹைட்ராக்சிலமீனைத் (C6H5NHOH) தருகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q43",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 14,
+    "unitTitle": {
+      "en": 14,
+      "ta": "அலகு 1"
+    },
+    "topic": "Biomolecules / உயிர் மூலக்கூறுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following vitamins is water-soluble?",
+      "questionTa": "பின்வரும் வைட்டமின்களில் நீரில் கரையும் வைட்டமின் எது?",
+      "options": {
+        "a": "Vitamin A",
+        "b": "Vitamin C",
+        "c": "Vitamin D",
+        "d": "Vitamin K"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Vitamins B and C are water-soluble vitamins, whereas Vitamins A, D, E, and K are fat-soluble.",
+        "ta": "வைட்டமின்கள் B மற்றும் C நீரில் கரையக்கூடியவை; வைட்டமின்கள் A, D, E, K கொழுப்பில் கரையக்கூடியவை."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q44",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 14,
+    "unitTitle": {
+      "en": 14,
+      "ta": "அலகு 1"
+    },
+    "topic": "Biomolecules / உயிர் மூலக்கூறுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The linkage that joins individual alpha-amino acid units together in a polypeptide chain is called:",
+      "questionTa": "பாலிபெப்டைடு சங்கிலியில் அமினோ அமிலங்களை ஒன்றாக இணைக்கும் பிணைப்பு எவ்வாறு அழைக்கப்படுகிறது?",
+      "options": {
+        "a": "Glycosidic bond",
+        "b": "Peptide bond",
+        "c": "Phosphodiester bond",
+        "d": "Hydrogen bond"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "The -CO-NH- amide bond formed between the carboxyl group of one amino acid and amino group of another is called a peptide linkage.",
+        "ta": "ஒரு அமினோ அமிலத்தின் -COOH தொகுதியும் மற்றொன்றின் -NH2 தொகுதியும் இணைந்து உருவாகும் -CO-NH- அமைட் பிணைப்பு பெப்டைடு பிணைப்பாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q45",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 14,
+    "unitTitle": {
+      "en": 14,
+      "ta": "அலகு 1"
+    },
+    "topic": "Biomolecules / உயிர் மூலக்கூறுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following base pairs in DNA is linked by three hydrogen bonds?",
+      "questionTa": "DNA இரட்டைச் சுருளில் மூன்று ஹைட்ரஜன் பிணைப்புகளால் இணைக்கப்படும் கார இணை எது?",
+      "options": {
+        "a": "Adenine and Thymine",
+        "b": "Guanine and Cytosine",
+        "c": "Adenine and Uracil",
+        "d": "Cytosine and Thymine"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "In DNA, Guanine pairs with Cytosine via 3 hydrogen bonds (G ≡ C), while Adenine pairs with Thymine via 2 hydrogen bonds (A = T).",
+        "ta": "DNA-வில் குவானைன் மற்றும் சைட்டோசின் 3 ஹைட்ரஜன் பிணைப்புகளாலும் (G ≡ C), அடினைன் மற்றும் தயமின் 2 ஹைட்ரஜன் பிணைப்புகளாலும் இணைகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q46",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 15,
+    "unitTitle": {
+      "en": 15,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemistry in Everyday Life / அன்றாட வாழ்வில் வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following compounds is an artificial sweetener that is approximately 600 times sweeter than cane sugar?",
+      "questionTa": "கரும்பு சர்க்கரையை விட சுமார் 600 மடங்கு அதிக இனிப்புச் சுவை கொண்ட செயற்கை இனிப்பூட்டி எது?",
+      "options": {
+        "a": "Saccharin",
+        "b": "Aspartame",
+        "c": "Sucralose",
+        "d": "Alitame"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Sucralose is a trichloro derivative of sucrose with an appearance and taste like sugar, approximately 600 times sweeter.",
+        "ta": "சுக்ரலோஸ் என்பது சுக்ரோஸின் ட்ரைகுளோரோ வழிப்பொருள் ஆகும், இது சர்க்கரையை விட 600 மடங்கு இனிப்பானது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q47",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 15,
+    "unitTitle": {
+      "en": 15,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemistry in Everyday Life / அன்றாட வாழ்வில் வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Bithionol is commonly added to medicated toilet soaps to act as:",
+      "questionTa": "மருத்துவ சோப்புகளில் பைத்தியோனால் (Bithionol) சேர்க்கப்படுவதன் முக்கிய நோக்கம்:",
+      "options": {
+        "a": "Buffering agent",
+        "b": "Antiseptic",
+        "c": "Detergent builder",
+        "d": "Sweetener"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Bithionol is added to soaps to impart antiseptic properties and reduce skin bacterial odors.",
+        "ta": "தோலில் பாக்டீரியாக்களால் ஏற்படும் துர்நாற்றத்தைக் குறைக்க சோப்புகளில் பைத்தியோனால் கிருமிநாசினியாகச் சேர்க்கப்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q48",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 15,
+    "unitTitle": {
+      "en": 15,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemistry in Everyday Life / அன்றாட வாழ்வில் வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Terylene (Dacron) is a condensation polymer of ethylene glycol and which dicarboxylic acid?",
+      "questionTa": "டெரிலீன் (டாக்ரான்) என்பது எத்திலீன் கிளைக்கால் மற்றும் எந்த டைகார்பாக்சிலிக் அமிலத்தின் குறுக்க பலபடியாகும்?",
+      "options": {
+        "a": "Phthalic acid",
+        "b": "Terephthalic acid",
+        "c": "Adipic acid",
+        "d": "Oxalic acid"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Terylene is a polyester synthesized by condensation polymerization of ethylene glycol and terephthalic acid (benzene-1,4-dicarboxylic acid).",
+        "ta": "டெரிலீன் என்பது எத்திலீன் கிளைக்கால் மற்றும் டெரிதாலிக் அமிலத்திற்கு (1,4-பென்சீன் டைகார்பாக்சிலிக் அமிலம்) இடையே குறுக்க பலபடியாக்கல் மூலம் உருவாக்கப்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q49",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 15,
+    "unitTitle": {
+      "en": 15,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemistry in Everyday Life / அன்றாட வாழ்வில் வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Buna-S synthetic rubber is an addition copolymer of 1,3-butadiene and which monomer?",
+      "questionTa": "பியூனா-எஸ் (Buna-S) செயற்கை ரப்பர் என்பது 1,3-பியூட்டாடையீன் மற்றும் எந்த ஒருபடியின் சேர்க்கைப் பலபடியாகும்?",
+      "options": {
+        "a": "Acrylonitrile",
+        "b": "Styrene",
+        "c": "Isoprene",
+        "d": "Chloroprene"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Buna-S (SBR) is a copolymer formed by the addition polymerization of 1,3-butadiene and styrene in a 3:1 ratio in the presence of sodium catalyst.",
+        "ta": "பியூனா-எஸ் என்பது 1,3-பியூட்டாடையீன் மற்றும் ஸ்டைரீன் ஆகியவை சோடியம் முன்னிலையில் சேர்க்கைப் பலபடியாதலால் உருவாகும் ரப்பர் ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-QCHE12-SET2-Q50",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 15,
+    "unitTitle": {
+      "en": 15,
+      "ta": "அலகு 1"
+    },
+    "topic": "Chemistry in Everyday Life / அன்றாட வாழ்வில் வேதியியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following is an example of an analgesic and antipyretic drug that belongs to non-narcotic analgesics?",
+      "questionTa": "பின்வருவனவற்றில் போதையூட்டாத வலி நிவாரணி மற்றும் காய்ச்சல் தணிக்கும் மருந்திற்கு எடுத்துக்காட்டு எது?",
+      "options": {
+        "a": "Morphine",
+        "b": "Paracetamol",
+        "c": "Heroin",
+        "d": "Codeine"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Paracetamol (4-acetamidophenol) is a popular non-narcotic analgesic and antipyretic drug, whereas morphine, heroin, and codeine are narcotic analgesics.",
+        "ta": "பாராசிட்டமால் போதையூட்டாத வலி நிவாரணி மற்றும் காய்ச்சல் தணிப்பியாகும்; மார்ஃபின், கோடீன் போன்றவை போதையூட்டும் வலி நிவாரணிகளாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Master 100"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q001",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Basic Concepts of Chemistry and Chemical Calculations",
+      "ta": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்"
+    },
+    "topic": "Basic Concepts of Chemistry and Chemical Calculations / வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The number of moles of hydrogen gas present in 22.4 litres of H2 gas at STP is:",
+      "questionTa": "திட்ட வெப்ப அழுத்த நிலையில் 22.4 லிட்டர் H2 வாயுவில் உள்ள மோல்களின் எண்ணிக்கை:",
+      "options": {
+        "a": "0.5 mole",
+        "b": "1.0 mole",
+        "c": "2.0 moles",
+        "d": "6.023 moles"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "At STP, 1 mole of any ideal gas occupies 22.4 litres.",
+        "ta": "திட்ட வெப்ப அழுத்த நிலையில் 22.4 லிட்டர் வாயு 1.0 மோல் ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q002",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Basic Concepts of Chemistry and Chemical Calculations",
+      "ta": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்"
+    },
+    "topic": "Basic Concepts of Chemistry and Chemical Calculations / வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "What is the mass of one single atom of carbon-12 in grams?",
+      "questionTa": "ஒரு கார்பன்-12 அணுவின் உண்மையான நிறை கிராமில்:",
+      "options": {
+        "a": "1.9926 x 10^-23 g",
+        "b": "1.66 x 10^-24 g",
+        "c": "12 g",
+        "d": "6.023 x 10^-23 g"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Mass of 1 atom = 12",
+        "ta": "(6.022 x 10^23) = 1.9926 x 10^-23 g. / 12 ஐ அவகாட்ரோ எண்ணால் வகுக்க 1.9926 x 10^-23 கிராம் கிடைக்கும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q003",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Basic Concepts of Chemistry and Chemical Calculations",
+      "ta": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்"
+    },
+    "topic": "Basic Concepts of Chemistry and Chemical Calculations / வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The empirical formula of a compound containing 40% carbon, 6.7% hydrogen and 53.3% oxygen by mass is:",
+      "questionTa": "40% கார்பன், 6.7% ஹைட்ரஜன் மற்றும் 53.3% ஆக்ஸிஜன் கொண்ட சேர்மத்தின் எளிய விகித வாய்ப்பாடு (Empirical formula):",
+      "options": {
+        "a": "CH2O",
+        "b": "C2H4O2",
+        "c": "CHO",
+        "d": "CH4O"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Molar ratio: C = 40/12 = 3.33; H = 6.7/1 = 6.7; O = 53.3/16 = 3.33. Ratio = 1 : 2 : 1 => CH2O.",
+        "ta": "மோல் விகிதம் C:H:O = 1:2:1, ஆகவே எளிய விகித வாய்ப்பாடு CH2O."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q004",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Basic Concepts of Chemistry and Chemical Calculations",
+      "ta": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்"
+    },
+    "topic": "Basic Concepts of Chemistry and Chemical Calculations / வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The oxidation state of chromium in potassium dichromate (K2Cr2O7) is:",
+      "questionTa": "பொட்டாசியம் டைக்ரோமேட்டில் (K2Cr2O7) குரோமியத்தின் ஆக்ஸிஜனேற்ற எண்:",
+      "options": {
+        "a": "+3",
+        "b": "+6",
+        "c": "+4",
+        "d": "+7"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "2(+1) + 2x + 7(-2) = 0 => 2 + 2x - 14 = 0 => 2x = 12 => x = +6.",
+        "ta": "2(1) + 2x - 14 = 0 => 2x = 12 => x = +6."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q005",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Basic Concepts of Chemistry and Chemical Calculations",
+      "ta": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்"
+    },
+    "topic": "Basic Concepts of Chemistry and Chemical Calculations / வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In the redox reaction MnO4^- + 5Fe^2+ + 8H^+ -> Mn^2+ + 5Fe^3+ + 4H2O, the equivalent weight of KMnO4 is:",
+      "questionTa": "அமில ஊடகத்தில் MnO4^- + 5Fe^2+ + 8H^+ -> Mn^2+ + 5Fe^3+ + 4H2O வினையில் KMnO4-ன் இணைதிறன் நிறை (Equivalent weight):",
+      "options": {
+        "a": "M / 5",
+        "b": "M / 3",
+        "c": "M / 1",
+        "d": "M / 6"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "In acidic medium, Mn changes from +7 to +2, gaining 5 electrons. Equivalent weight = M",
+        "ta": "5. / அமில ஊடகத்தில் மாங்கனீசு 5 எலக்ட்ரான்களை ஏற்பதால் இணைதிறன் நிறை = M / 5."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q006",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Basic Concepts of Chemistry and Chemical Calculations",
+      "ta": "வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்"
+    },
+    "topic": "Basic Concepts of Chemistry and Chemical Calculations / வேதியியலின் அடிப்படைக் கருத்துக்கள் மற்றும் வேதிக்கணக்கீடுகள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The molarity of a solution obtained by mixing 750 mL of 0.5 M HCl with 250 mL of 2 M HCl will be:",
+      "questionTa": "750 மி.லி 0.5 M HCl கரைசலுடன் 250 மி.லி 2 M HCl கரைசலைக் கலக்கும் போது கிடைக்கும் கரைசலின் மொலாரிட்டி:",
+      "options": {
+        "a": "0.875 M",
+        "b": "1.00 M",
+        "c": "1.75 M",
+        "d": "0.50 M"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "M = (M1V1 + M2V2)/(V1 + V2) = (0.5*750 + 2*250)/1000 = (375 + 500)/1000 = 0.875 M.",
+        "ta": "M = (375 + 500)/1000 = 0.875 M."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q007",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The ratio of the mass of an electron to that of a proton is approximately:",
+      "questionTa": "புரோட்டானின் நிறையுடன் எலக்ட்ரானின் நிறையின் தோராயமான விகிதம்:",
+      "options": {
+        "a": "1 : 1836",
+        "b": "1 : 1",
+        "c": "1836 : 1",
+        "d": "1 : 100"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Mass of proton is approximately 1836 times greater than the mass of an electron.",
+        "ta": "புரோட்டான் எலக்ட்ரானை விட 1836 மடங்கு அதிக நிறை கொண்டது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q008",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which experiment established that the mass of an atom is concentrated in a tiny nucleus?",
+      "questionTa": "அணுவின் பெரும்பான்மை நிறை அதன் மிகச்சிறிய உட்கருவில் குவிந்துள்ளது என்பதை நிரூபித்த ஆய்வு எது?",
+      "options": {
+        "a": "Thomson's cathode ray experiment",
+        "b": "Rutherford's alpha-particle scattering experiment",
+        "c": "Millikan's oil drop experiment",
+        "d": "Davisson-Germer experiment"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Rutherford's alpha-particle gold foil experiment discovered the atomic nucleus.",
+        "ta": "ரூதர்போர்டின் ஆல்பா கதிர் சிதறல் ஆய்வு அணுக்கருவைக் கண்டறிய வழிவகுத்தது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q009",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The maximum number of electrons that can be accommodated in a subshell with azimuthal quantum number l = 3 is:",
+      "questionTa": "கோண உந்த குவாண்டம் எண் l = 3 கொண்ட துணைக்கூட்டில் நிரப்பப்படக்கூடிய அதிகபட்ச எலக்ட்ரான்களின் எண்ணிக்கை:",
+      "options": {
+        "a": "6",
+        "b": "10",
+        "c": "14",
+        "d": "18"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Max electrons = 2(2l + 1) = 2(2*3 + 1) = 14 (f-subshell).",
+        "ta": "l = 3 என்பது f-கூடு; அதிகபட்ச எலக்ட்ரான்கள் 2(2l + 1) = 14."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q010",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The total number of orbitals associated with the principal quantum number n = 3 is:",
+      "questionTa": "முதன்மை குவாண்டம் எண் n = 3 உடன் தொடர்புடைய மொத்த ஆர்பிட்டால்களின் எண்ணிக்கை:",
+      "options": {
+        "a": "3",
+        "b": "6",
+        "c": "9",
+        "d": "18"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Total number of orbitals in shell n is n^2 = 3^2 = 9 (1 s + 3 p + 5 d).",
+        "ta": "n கூட்டில் உள்ள ஆர்பிட்டால்கள் = n^2 = 3^2 = 9."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q011",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The de Broglie wavelength associated with a ball of mass 0.1 kg moving with a speed of 10 m/s is (h = 6.626 x 10^-34 J s):",
+      "questionTa": "10 m/s வேகத்தில் செல்லும் 0.1 கிகி நிறையுள்ள பந்தின் டி-பிராய் அலைநீளம் (h = 6.626 x 10^-34 J s):",
+      "options": {
+        "a": "6.626 x 10^-34 m",
+        "b": "6.626 x 10^-33 m",
+        "c": "6.626 x 10^-35 m",
+        "d": "3.313 x 10^-34 m"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "lambda = h",
+        "ta": "(mv) = 6.626 x 10^-34 / (0.1 x 10) = 6.626 x 10^-34 m. / lambda = h/mv = 6.626 x 10^-34 மீ."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q012",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "According to Heisenberg's uncertainty principle, the mathematical relation between position and momentum uncertainty is:",
+      "questionTa": "ஹைசன்பர்க்கின் நிச்சயமற்ற தன்மைக் கொள்கையின்படி நிலை மற்றும் உந்த நிச்சயமற்ற தன்மைக்கான தொடர்பு:",
+      "options": {
+        "a": "Delta x . Delta p >= h / (4 pi)",
+        "b": "Delta x . Delta p >= h / (2 pi)",
+        "c": "Delta x . Delta p <= h / (4 pi)",
+        "d": "Delta x . Delta p = h"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Heisenberg principle: Delta x * Delta p >= h",
+        "ta": "(4 pi). / ஹைசன்பர்க்கின் சமன்பாடு: Delta x . Delta p >= h / (4 pi)."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q013",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The electronic configuration of copper (Z = 29) in its ground state is:",
+      "questionTa": "தாமிரத்தின் (Cu, Z = 29) அடிநிலை எலக்ட்ரான் அமைப்பு:",
+      "options": {
+        "a": "[Ar] 3d^9 4s^2",
+        "b": "[Ar] 3d^10 4s^1",
+        "c": "[Ar] 3d^8 4s^2 4p^1",
+        "d": "[Ar] 3d^10 4s^2"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Completely filled 3d^10 subshell provides extra stability, giving [Ar] 3d^10 4s^1.",
+        "ta": "முழுவதும் நிரப்பப்பட்ட 3d^10 கூடு கூடுதல் நிலைப்புத்தன்மை தருவதால் [Ar] 3d^10 4s^1."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q014",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The orbital angular momentum of an electron in a 2s orbital is:",
+      "questionTa": "2s ஆர்பிட்டாலில் உள்ள எலக்ட்ரானின் ஆர்பிட்டால் கோண உந்தம்:",
+      "options": {
+        "a": "0",
+        "b": "h / (2 pi)",
+        "c": "sqrt(2) h / (2 pi)",
+        "d": "h / (4 pi)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "L = sqrt(l(l + 1)) * (h",
+        "ta": "(2 pi)). For s-orbital, l = 0, so L = 0. / s-ஆர்பிட்டாலுக்கு l = 0 என்பதால் கோண உந்தம் சுழியாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q015",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 1,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which quantum number specifies the spatial orientation of an atomic orbital?",
+      "questionTa": "ஒரு அணு ஆர்பிட்டாலின் முப்பரிமாண வெளியமைவு திசையமைப்பைக் குறிப்பிடும் குவாண்டம் எண்:",
+      "options": {
+        "a": "Principal quantum number (n)",
+        "b": "Azimuthal quantum number (l)",
+        "c": "Magnetic quantum number (m)",
+        "d": "Spin quantum number (s)"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Magnetic quantum number (m) determines the spatial orientation of the orbital.",
+        "ta": "காந்த குவாண்டம் எண் (m) ஆர்பிட்டாலின் வெளியமைவு திசையை நிர்ணயிக்கிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q016",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification of Elements",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு"
+    },
+    "topic": "Periodic Classification of Elements / தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The modern periodic law states that the physical and chemical properties of elements are periodic functions of their:",
+      "questionTa": "நவீன ஆவர்த்தன விதியின்படி தனிமங்களின் இயற்பியல் மற்றும் வேதியியல் பண்புகள் அவற்றின் எதன் ஆவர்த்தன சார்பாக அமைகின்றன?",
+      "options": {
+        "a": "Atomic masses",
+        "b": "Atomic numbers",
+        "c": "Mass numbers",
+        "d": "Neutron numbers"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Moseley's modern periodic law states properties depend periodically on atomic numbers (Z).",
+        "ta": "மோஸ்லேயின் கூற்றுப்படி பண்புகள் அணு எண்களின் ஆவர்த்தன சார்பாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q017",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification of Elements",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு"
+    },
+    "topic": "Periodic Classification of Elements / தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which element has the highest first ionization enthalpy in the entire periodic table?",
+      "questionTa": "ஆவர்த்தன அட்டவணையில் மிக அதிக முதல் அயனியாக்கும் என்தால்பி கொண்ட தனிமம் எது?",
+      "options": {
+        "a": "Hydrogen",
+        "b": "Helium",
+        "c": "Fluorine",
+        "d": "Neon"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Helium has the smallest size and completely filled 1s^2 shell, requiring highest ionization energy (2372 kJ/mol).",
+        "ta": "ஹீலியம் மிகச்சிறிய உருவளவும் முழுமையாக நிரம்பிய 1s^2 அமைப்பும் கொண்டதால் மிக அதிக அயனியாக்கும் ஆற்றல் உடையது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q018",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification of Elements",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு"
+    },
+    "topic": "Periodic Classification of Elements / தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The correct order of increasing electronegativity according to Pauling's scale is:",
+      "questionTa": "பாலிங் அளவீட்டின்படி எலக்ட்ரான் கவர்தன்மையில் சரியான ஏறுவரிசை எது?",
+      "options": {
+        "a": "C < N < O < F",
+        "b": "F < O < N < C",
+        "c": "C < O < N < F",
+        "d": "N < C < O < F"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Electronegativity increases across a period: C (2.5) < N (3.0) < O (3.5) < F (4.0).",
+        "ta": "ஆவர்த்தன வரிசையில் எலக்ட்ரான் கவர்தன்மை அதிகரிக்கிறது: C < N < O < F."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q019",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification of Elements",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு"
+    },
+    "topic": "Periodic Classification of Elements / தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following isoelectronic ions has the smallest ionic radius?",
+      "questionTa": "பின்வரும் ஒத்த எலக்ட்ரான் எண்ணிக்கை கொண்ட அயனிகளில் மிகச்சிறிய அயனி ஆரம் கொண்டது எது?",
+      "options": {
+        "a": "N^3-",
+        "b": "O^2-",
+        "c": "F^-",
+        "d": "Al^3+"
+      },
+      "correctAnswer": "d",
+      "stepByStepSolution": {
+        "en": "Greater nuclear charge (+13) pulls the 10 electrons tighter, giving Al^3+ the smallest radius.",
+        "ta": "அதிக அணுக்கரு மின்சுமை கொண்ட Al^3+ மிகச்சிறிய அயனி ஆரத்தைக் கொண்டிருக்கும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q020",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification of Elements",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு"
+    },
+    "topic": "Periodic Classification of Elements / தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The electron gain enthalpy of noble gases is:",
+      "questionTa": "மந்த வாயுக்களின் எலக்ட்ரான் நாட்டம் / ஏற்பு என்தால்பி மதிப்பு:",
+      "options": {
+        "a": "Highly negative",
+        "b": "Zero",
+        "c": "Positive",
+        "d": "Variable"
+      },
+      "correctAnswer": "c",
+      "stepByStepSolution": {
+        "en": "Noble gases have stable octet configurations; adding an electron requires energy (positive Delta_eg H).",
+        "ta": "நிலையான எலக்ட்ரான் அமைப்பு கொண்டதால் எலக்ட்ரானைச் சேர்க்க ஆற்றல் தேவைப்படும் (நேர்க்குறி)."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q021",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification of Elements",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு"
+    },
+    "topic": "Periodic Classification of Elements / தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "A diagonal relationship is exhibited between which pair of elements?",
+      "questionTa": "மூலைவிட்ட தொடர்பு (Diagonal relationship) காணப்படும் தனிமங்களின் ஜோடி எது?",
+      "options": {
+        "a": "Lithium and Sodium",
+        "b": "Lithium and Magnesium",
+        "c": "Beryllium and Carbon",
+        "d": "Boron and Calcium"
+      },
+      "correctAnswer": "b",
+      "stepByStepSolution": {
+        "en": "Lithium (group 1) and Magnesium (group 2, period 3) exhibit a strong diagonal relationship due to similar charge-to-size ratio.",
+        "ta": "ஒத்த மின்சுமை-ஆர விகிதத்தால் லித்தியம் மற்றும் மெக்னீசியம் மூலைவிட்ட தொடர்பைக் காட்டுகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q022",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Structure of Atom",
+      "ta": "அணுவின் கட்டமைப்பு"
+    },
+    "topic": "Structure of Atom / அணுவின் கட்டமைப்பு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Assertion (A): Half-filled and completely filled subshells possess extra stability. Reason (R): Symmetrical distribution of electrons and greater exchange energy provide stabilization.",
+      "questionTa": "கூற்று (A): பாதி நிரப்பப்பட்ட மற்றும் முழுமையாக நிரப்பப்பட்ட துணைக்கூடுகள் கூடுதல் நிலைப்புத்தன்மை கொண்டுள்ளன. காரணம் (R): சமச்சீரான எலக்ட்ரான் அமைப்பும் அதிக பரிமாற்ற ஆற்றலும் நிலைப்புத்தன்மையை வழங்குகின்றன.",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Symmetry and maximum exchange energy stabilize half-filled and full subshells.",
+        "ta": "சமச்சீர் அமைப்பும் பரிமாற்ற ஆற்றலும் நிலைப்புத்தன்மையை அளிக்கின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q023",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification of Elements",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு"
+    },
+    "topic": "Periodic Classification of Elements / தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Assertion (A): The first ionization enthalpy of nitrogen is greater than that of oxygen. Reason (R): Nitrogen has a stable half-filled 2p^3 electronic configuration.",
+      "questionTa": "கூற்று (A): நைட்ரஜனின் முதல் அயனியாக்கும் என்தால்பி ஆக்ஸிஜனை விட அதிகம். காரணம் (R): நைட்ரஜன் நிலையான பாதி நிரம்பிய 2p^3 எலக்ட்ரான் அமைப்பைப் பெற்றுள்ளது.",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "N (2p^3) has extra stability compared to O (2p^4), so removing an electron from N requires more energy.",
+        "ta": "பாதி நிரம்பிய 2p^3 கூடு நிலைப்புத்தன்மை உடையதால் நைட்ரஜனின் அயனியாக்கும் என்தால்பி அதிகம்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q024",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 2,
+    "unitTitle": {
+      "en": "Periodic Classification of Elements",
+      "ta": "தனிமங்களின் ஆவர்த்தன வகைப்பாடு"
+    },
+    "topic": "Periodic Classification of Elements / தனிமங்களின் ஆவர்த்தன வகைப்பாடு",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Assertion (A): Fluorine has a less negative electron gain enthalpy than chlorine. Reason (R): The incoming electron in fluorine experiences strong interelectronic repulsions in the small 2p subshell.",
+      "questionTa": "கூற்று (A): புளூரினின் எலக்ட்ரான் ஏற்பு என்தால்பி குளோரினை விடக் குறைவான எதிர்க்குறி மதிப்புடையது. காரணம் (R): புளூரினில் சேரும் எலக்ட்ரான் அதன் சிறிய 2p கூட்டில் கடுமையான எலக்ட்ரான்-எலக்ட்ரான் விலக்குவிசைக்கு உள்ளாகிறது.",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Due to compact 2p orbital in fluorine, interelectronic repulsion is high, making Delta_eg H of Cl more negative than F.",
+        "ta": "புளூரினின் சிறிய 2p கூட்டில் விலக்குவிசை அதிகம் என்பதால் கூற்று மற்றும் காரணம் சரி."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q026",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": "Solid State",
+      "ta": "திட நிலைமை"
+    },
+    "topic": "Solid State / திட நிலைமை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The coordination number of constituent atoms in a Body-Centred Cubic (BCC) crystal lattice is:",
+      "questionTa": "பொருளடி மையக் கனச்சதுர (BCC) படிக அமைப்பில் உள்ள ஓர் அணுவின் அணைவு எண் (Coordination Number):",
+      "options": {
+        "a": "8",
+        "b": "6",
+        "c": "12",
+        "d": "4"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: In a BCC unit cell, atoms are situated at the 8 corners of the cube and one single atom is positioned at the very centre of the body. Step 2: The central atom is in direct contact with all 8 corner atoms simultaneously. Step 3: Hence, coordination number is 8.",
+        "ta": "படி 1: BCC அமைப்பில் 8 மூலைகளிலும் ஒரு நடுமையத்திலும் அணுக்கள் உள்ளன. படி 2: மையத்திலுள்ள அணு 8 மூலை அணுக்களையும் சம தூரத்தில் தொட்டுக்கொண்டிருக்கிறது. படி 3: ஆகவே அணைவு எண் 8 ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q027",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": "Solid State",
+      "ta": "திட நிலைமை"
+    },
+    "topic": "Solid State / திட நிலைமை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "For a Face-Centred Cubic (FCC / CCP) unit cell with cube edge length a, the atomic radius r is given by:",
+      "questionTa": "a விளிம்பு நீளம் கொண்ட முகமையக் கனச்சதுர (FCC) படிகத்தில் அணு ஆரம் r-ன் சமன்பாடு:",
+      "options": {
+        "a": "r = (sqrt(2) / 4) * a",
+        "b": "r = (sqrt(3) / 4) * a",
+        "c": "r = a / 2",
+        "d": "r = 4 / (sqrt(2) * a)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: In an FCC unit cell, spheres touch along the face diagonal. Step 2: Length of face diagonal is sqrt(a^2 + a^2) = sqrt(2)*a. Step 3: Four atomic radii span the face diagonal: 4r = sqrt(2)*a => r = (sqrt(2)/4)*a = a",
+        "ta": "(2*sqrt(2)). / படி 1: FCC அமைப்பில் அணுக்கள் முக மூலைவிட்டத்தின் வழியே தொடுகின்றன. படி 2: முக மூலைவிட்ட நீளம் = sqrt(2) * a. படி 3: 4r = sqrt(2)*a => r = (sqrt(2)/4) * a ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q028",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": "Solid State",
+      "ta": "திட நிலைமை"
+    },
+    "topic": "Solid State / திட நிலைமை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which stoichiometric crystal defect creates equal numbers of cation and anion vacancies, thereby decreasing the density of the ionic crystal?",
+      "questionTa": "சம எண்ணிக்கையிலான நேர் மற்றும் எதிர் அயனி வெற்றிடங்களை உருவாக்கி, படிகத்தின் அடர்த்தியைக் குறைக்கும் வேதிவிகிதக் குறைபாடு எது?",
+      "options": {
+        "a": "Schottky defect",
+        "b": "Frenkel defect",
+        "c": "Metal excess defect",
+        "d": "Interstitial defect"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Schottky defect arises when equal numbers of cations and anions leave their regular lattice points, creating paired vacancies (observed in NaCl, KCl, CsCl). Step 2: Because ions leave the crystal, the mass decreases while volume is unchanged. Step 3: This leads to a distinct drop in density.",
+        "ta": "படி 1: படிகத்திலிருந்து சம எண்ணிக்கையிலான நேர் மற்றும் எதிர் அயனிகள் விடுபடுவதால் ஷாட்கி குறைபாடு தோன்றுகிறது. படி 2: அயனிகள் வெளியேறுவதால் நிறை குறைந்து அடர்த்தி குறைகிறது. படி 3: எடுத்துக்காட்டு: NaCl, KCl."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q029",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": "Solid State",
+      "ta": "திட நிலைமை"
+    },
+    "topic": "Solid State / திட நிலைமை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which ionic solid exhibits BOTH Schottky defect and Frenkel defect?",
+      "questionTa": "ஷாட்கி குறைபாடு மற்றும் பிரான்கல் குறைபாடு ஆகிய இரண்டையும் வெளிப்படுத்தும் அயனிச் சேர்மம் எது?",
+      "options": {
+        "a": "Silver Bromide (AgBr)",
+        "b": "Sodium Chloride (NaCl)",
+        "c": "Zinc Sulphide (ZnS)",
+        "d": "Cesium Chloride (CsCl)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: In AgBr, both Ag+ and Br- have intermediate radius ratio and Ag+ ions have high polarizability. Step 2: Consequently, AgBr can either lose pairs of Ag+ and Br- to form Schottky defects or Ag+ can migrate to interstitial sites forming Frenkel defects. Step 3: Thus AgBr displays both defects.",
+        "ta": "படி 1: AgBr-ல் Ag+ மற்றும் Br- அயனிகளின் ஆரம் மற்றும் முனைவுறும் தன்மை காரணமாக இரண்டு குறைபாடுகளும் சாத்தியமாகின்றன. படி 2: ஆகவே AgBr ஷாட்கி மற்றும் பிரான்கல் ஆகிய இரு குறைபாடுகளையும் காட்டுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q030",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": "Solutions",
+      "ta": "கரைசல்கள்"
+    },
+    "topic": "Solutions / கரைசல்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "According to Henry's law, the solubility of a gas in a liquid at constant temperature is directly proportional to the:",
+      "questionTa": "ஹென்றி விதிப்படி, மாறா வெப்பநிலையில் ஒரு திரவத்தில் கரையும் வாயுவின் கரைதிறன் எதற்கு நேர்விகிதத்தில் இருக்கும்?",
+      "options": {
+        "a": "Partial pressure of the gas above the liquid",
+        "b": "Density of the liquid",
+        "c": "Volume of the solvent",
+        "d": "Molar mass of the liquid"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Henry's Law states that at constant temperature, the mass or mole fraction of gas dissolved in a given liquid is proportional to the partial pressure of the gas in equilibrium with the liquid. Step 2: p = K_H * x. Step 3: Hence, solubility increases directly with partial pressure.",
+        "ta": "படி 1: ஹென்றி விதி: p = K_H * x. படி 2: திரவத்தில் கரையும் வாயுவின் அளவு அதன் பகுதி அழுத்தத்திற்கு நேர்விகிதத்தில் இருக்கும். படி 3: ஆகவே வாயுவின் பகுதி அழுத்தம் என்பதே சரியானது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q031",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": "Solutions",
+      "ta": "கரைசல்கள்"
+    },
+    "topic": "Solutions / கரைசல்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "A mixture of ethanol and water shows positive deviation from Raoult's law because:",
+      "questionTa": "எத்தனால் மற்றும் நீர் கலவை ரவுல்ட் விதியிலிருந்து நேர்விலகலைக் காட்டுவதற்குக் காரணம்:",
+      "options": {
+        "a": "Ethanol-water attractive forces are weaker than pure component forces",
+        "b": "Ethanol-water attractive forces are stronger than pure component forces",
+        "c": "Heat is evolved upon mixing (Delta H < 0)",
+        "d": "Volume decreases upon mixing (Delta V < 0)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: In pure ethanol, extensive hydrogen bonding exists. Step 2: Adding water molecules enters between ethanol chains, weakening the intermolecular hydrogen bonds (A-B interactions < A-A and B-B). Step 3: Molecules escape more easily into vapour phase, resulting in higher vapour pressure (positive deviation).",
+        "ta": "படி 1: தூய எத்தனாலில் வலுவான ஹைட்ரஜன் பிணைப்பு உள்ளது. படி 2: நீர் மூலக்கூறுகள் இப்பிணைப்புகளைத் தளர்த்துவதால் ஆவியாதல் அதிகரிக்கிறது. படி 3: ஆகவே இது நேர்விலகலைக் காட்டுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q032",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": "Solutions",
+      "ta": "கரைசல்கள்"
+    },
+    "topic": "Solutions / கரைசல்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The formula for the elevation in boiling point (Delta T_b) of a dilute solution containing a non-volatile solute is:",
+      "questionTa": "ஆவியாகா கரைபொருளைக் கொண்ட நீர்த்த கரைசலின் கொதிநிலை ஏற்றத்தின் (Delta T_b) சமன்பாடு:",
+      "options": {
+        "a": "Delta T_b = K_b * m",
+        "b": "Delta T_b = K_b / m",
+        "c": "Delta T_b = K_f * M",
+        "d": "Delta T_b = m / K_b"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Adding a non-volatile solute lowers solvent vapour pressure, necessitating higher temperature to equal atmospheric pressure. Step 2: Boiling point elevation Delta T_b is proportional to molality m: Delta T_b prop m. Step 3: Delta T_b = K_b * m, where K_b is the molal boiling point elevation constant (ebullioscopic constant).",
+        "ta": "படி 1: ஆவியாகா கரைபொருள் கொதிநிலையை உயர்த்துகிறது. படி 2: கொதிநிலை ஏற்றம் மோலாலிட்டிக்கு (m) நேர்விகிதமாகும். படி 3: Delta T_b = K_b * m (இங்கு K_b எபுலியோஸ்கோபிக் மாறிலி)."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q033",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": "Solutions",
+      "ta": "கரைசல்கள்"
+    },
+    "topic": "Solutions / கரைசல்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "If potassium chloride (KCl) dissociates completely in water (alpha = 1), the van 't Hoff factor i is:",
+      "questionTa": "பொட்டாசியம் குளோரைடு (KCl) நீரில் முழுமையாக பிரிகையடைந்தால் (alpha = 1), வாண்ட் ஹாஃப் காரணி (i) இன் மதிப்பு:",
+      "options": {
+        "a": "2",
+        "b": "1",
+        "c": "3",
+        "d": "0.5"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Potassium chloride dissociates into two ions: KCl -> K+ + Cl- (n = 2 ions). Step 2: van 't Hoff factor formula is i = 1 + (n - 1)*alpha. Step 3: For 100% dissociation (alpha = 1): i = 1 + (2 - 1)*1 = 1 + 1 = 2.",
+        "ta": "படி 1: KCl பிரிகையடைந்து 2 அயனிகளைத் தருகிறது: KCl -> K+ + Cl-. படி 2: வாண்ட் ஹாஃப் காரணி i = 1 + (n - 1) alpha. படி 3: alpha = 1 எனில் i = 1 + (2 - 1)(1) = 2."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q034",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": "Chemical Kinetics",
+      "ta": "வேதி வினைவேகவியல்"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The half-life period (t_1/2) of a first-order chemical reaction with rate constant k is given by:",
+      "questionTa": "k வினைவேக மாறிலி கொண்ட முதல் வகை வினையின் அரை ஆயுட்காலம் (t_1/2) கணக்கிடும் சமன்பாடு:",
+      "options": {
+        "a": "t_1/2 = 0.693 / k",
+        "b": "t_1/2 = k / 0.693",
+        "c": "t_1/2 = [A]_0 / (2*k)",
+        "d": "t_1/2 = 1 / (k * [A]_0)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Integrated rate law for first-order reaction: k = (2.303",
+        "ta": "t) * log([A]_0 / [A]). Step 2: At t = t_1/2, concentration [A] = [A]_0 / 2. Step 3: k = (2.303 / t_1/2) * log(2) = (2.303 * 0.3010) / t_1/2 = 0.693 / t_1/2 => t_1/2 = 0.693 / k. / படி 1: முதல் வகை வினையின் சமன்பாடு: k = (2.303/t) log([A]_0/[A]). படி 2: t = t_1/2-ல் [A] = [A]_0 / 2. படி 3: t_1/2 = 2.303 * 0.3010 / k = 0.693 / k."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q035",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": "Chemical Kinetics",
+      "ta": "வேதி வினைவேகவியல்"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The SI unit of the rate constant k for a zero-order reaction is:",
+      "questionTa": "பூச்சிய வகை வினைக்கான வினைவேக மாறிலி k-ன் SI அலகு எது?",
+      "options": {
+        "a": "mol * L^(-1) * s^(-1)",
+        "b": "s^(-1)",
+        "c": "L * mol^(-1) * s^(-1)",
+        "d": "L^2 * mol^(-2) * s^(-1)"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Rate equation for zero-order is Rate = k * [A]^0 = k. Step 2: The unit of reaction rate is change in concentration per unit time: mol",
+        "ta": "(L * s) = mol * L^(-1) * s^(-1). Step 3: Therefore, the unit of k for zero-order is mol * L^(-1) * s^(-1). / படி 1: பூச்சிய வகை வினைக்கு வினைவேகம் = k [A]^0 = k. படி 2: வினைவேகத்தின் அலகு மோல் லிட்டர்^(-1) விநாடி^(-1). படி 3: ஆகவே k-ன் அலகும் mol L^(-1) s^(-1) ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q036",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": "Chemical Kinetics",
+      "ta": "வேதி வினைவேகவியல்"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "According to the Arrhenius equation, k = A * e^(-E_a / (R*T)), a plot of ln(k) versus 1/T yields a straight line with slope:",
+      "questionTa": "அர்ஹீனியஸ் சமன்பாட்டின்படி k = A e^(-E_a / RT), ln(k) மற்றும் 1/T வரைபடத்தில் கிடைக்கும் நேர்க்கோட்டின் சாய்வு (Slope):",
+      "options": {
+        "a": "-E_a / R",
+        "b": "-E_a / (2.303 * R)",
+        "c": "+E_a / R",
+        "d": "A / R"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Take natural logarithm of Arrhenius equation: ln(k) = ln(A) - (E_a",
+        "ta": "R) * (1/T). Step 2: Compare with straight line equation y = c + mx, where y = ln(k) and x = 1/T. Step 3: Slope m = -E_a / R (if using log_10, slope is -E_a / (2.303*R)). / படி 1: மடக்கை எடுக்க: ln(k) = ln(A) - (E_a / R)(1/T). படி 2: y = mx + c உடன் ஒப்பிட y = ln(k), x = 1/T. படி 3: ஆகவே நேர்க்கோட்டின் சாய்வு m = -E_a / R ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q037",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": "Coordination Compounds",
+      "ta": "அணைவுச் சேர்மங்கள்"
+    },
+    "topic": "Coordination Compounds / அணைவுச் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The IUPAC name of the complex compound [Co(NH3)6]Cl3 is:",
+      "questionTa": "[Co(NH3)6]Cl3 என்ற அணைவுச் சேர்மத்தின் சரியான IUPAC பெயர் எது?",
+      "options": {
+        "a": "Hexaamminecobalt(III) chloride",
+        "b": "Hexaamminecobalt(II) chloride",
+        "c": "Cobalt hexaammine trichloride",
+        "d": "Hexaamminecobalt trichloride"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Name ligands alphabetically: 6 neutral NH3 ligands are 'hexaammine'. Step 2: Cationic complex retains metal name 'cobalt'. Step 3: Oxidation state: Co + 6(0) + 3(-1) = 0 => Co = +3 (Roman numeral III). Step 4: Follow with counter-ion: Hexaamminecobalt(III) chloride.",
+        "ta": "படி 1: நடுநிலை ஈனி NH3 'ஹெக்சாஅம்மைன்' எனப் பெயரிடப்படுகிறது. படி 2: கோபால்ட்டின் ஆக்சிஜனேற்ற எண் +3: Co - 3 = 0 => Co = +3. படி 3: ஆகவே IUPAC பெயர் ஹெக்சாஅம்மைன்கோபால்ட்(III) குளோரைடு."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q038",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": "Coordination Compounds",
+      "ta": "அணைவுச் சேர்மங்கள்"
+    },
+    "topic": "Coordination Compounds / அணைவுச் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In octahedral coordination complexes, Crystal Field Theory (CFT) splits the five degenerate d-orbitals into:",
+      "questionTa": "எண்முகி அணைவுச் சேர்மங்களில், படிகப் புலக் கொள்கைப்படி (CFT) சம ஆற்றலுடைய ஐந்து d-ஆர்பிட்டால்கள் எவ்வாறாகப் பிரிகின்றன?",
+      "options": {
+        "a": "Lower energy t_2g (triply degenerate) and higher energy e_g (doubly degenerate)",
+        "b": "Lower energy e_g and higher energy t_2g",
+        "c": "Four lower and one higher orbital",
+        "d": "Five singly degenerate orbitals"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: In an octahedral field, six ligands approach along Cartesian axes (x, y, z). Step 2: Axial orbitals (d_x2-y2, d_z2) experience intense electrostatic repulsion and rise to higher energy e_g level. Step 3: Inter-axial orbitals (d_xy, d_yz, d_zx) experience less repulsion and stabilize at lower energy t_2g level.",
+        "ta": "படி 1: எண்முகி புலத்தில் 6 ஈனிகள் அச்சுகளின் வழியே அணுகுகின்றன. படி 2: அச்சுகளின் மீதமைந்த ஆர்பிட்டால்கள் விலக்கமடைந்து உயர் ஆற்றல் e_g நிலையை அடைகின்றன. படி 3: அச்சுகளுக்கு இடையே அமைந்தவை குறைந்த ஆற்றல் t_2g நிலையை அடைகின்றன."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q039",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": "Organic Chemistry: Hydroxy Compounds",
+      "ta": "கரிம வேதியியல்: ஹைட்ராக்ஸி சேர்மங்கள்"
+    },
+    "topic": "Organic Chemistry: Hydroxy Compounds / கரிம வேதியியல்: ஹைட்ராக்ஸி சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Treatment of phenol with chloroform and aqueous sodium hydroxide followed by acidification yields salicylaldehyde. This reaction is known as:",
+      "questionTa": "பீனாலை குளோரோபார்ம் மற்றும் சோடியம் ஹைட்ராக்சைடுடன் வினைப்படுத்தி அமிலமாக்கும் போது சாலிசிலால்டிஹைடு கிடைக்கும் வினை:",
+      "options": {
+        "a": "Reimer-Tiemann reaction",
+        "b": "Kolbe's reaction",
+        "c": "Friedel-Crafts acylation",
+        "d": "Cannizzaro reaction"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: In the Reimer-Tiemann reaction, CHCl3 and NaOH generate the electrophilic dichlorocarbene intermediate (:CCl2). Step 2: Dichlorocarbene attacks the ortho-position of the phenoxide ring. Step 3: Hydrolysis and acidification introduce the -CHO formyl group yielding salicylaldehyde (2-hydroxybenzaldehyde).",
+        "ta": "படி 1: ரீமர்-டீமன் வினையில் குளோரோபார்ம் காரத்துடன் இணைந்து டைகுளோரோகார்பீன் (:CCl2) எலக்ட்ரான் கவர் காரணியை உருவாக்குகிறது. படி 2: இது பீனாலின் ஆர்த்தோ நிலையில் தாக்கி சாலிசிலால்டிஹைடைத் தருகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q040",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": "Organic Chemistry: Hydroxy Compounds",
+      "ta": "கரிம வேதியியல்: ஹைட்ராக்ஸி சேர்மங்கள்"
+    },
+    "topic": "Organic Chemistry: Hydroxy Compounds / கரிம வேதியியல்: ஹைட்ராக்ஸி சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "When sodium phenoxide is heated with carbon dioxide gas at 400 K under 4-7 atm pressure, salicylic acid is formed. This is:",
+      "questionTa": "சோடியம் பீனாக்சைடை கார்பன் டை ஆக்சைடுடன் 400 K வெப்பநிலை மற்றும் 4-7 வளிமண்டல அழுத்தத்தில் சூடுபடுத்தி சாலிசிலிக் அமிலம் பெறும் வினை:",
+      "options": {
+        "a": "Kolbe's reaction (Kolbe-Schmitt)",
+        "b": "Reimer-Tiemann reaction",
+        "c": "Wurtz-Fittig reaction",
+        "d": "Clemmensen reduction"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Sodium phenoxide is treated with weak electrophile CO2 under pressure (4-7 atm) at ~400 K. Step 2: Electrophilic aromatic substitution occurs primarily at the activated ortho position to form sodium salicylate. Step 3: Acidification yields 2-hydroxybenzoic acid (salicylic acid). This is Kolbe's synthesis.",
+        "ta": "படி 1: சோடியம் பீனாக்சைடு CO2 உடன் அழுத்தத்தில் வினைபுரியும் போது சோடியம் சாலிசிலேட் உருவாகிறது. படி 2: அமிலமாக்கலின் போது சாலிசிலிக் அமிலம் (2-ஹைட்ராக்சி பென்சாயிக் அமிலம்) பெறப்படுகிறது. படி 3: இவ்வினை கோல்ப் வினை எனப்படுகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q041",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": "Organic Chemistry: Carbonyl Compounds",
+      "ta": "கரிம வேதியியல்: கார்பனைல் சேர்மங்கள்"
+    },
+    "topic": "Organic Chemistry: Carbonyl Compounds / கரிம வேதியியல்: கார்பனைல் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Aldehydes having NO alpha-hydrogen atoms (e.g. Formaldehyde, Benzaldehyde) undergo self oxidation-reduction in concentrated alkali via:",
+      "questionTa": "ஆல்ஃபா-ஹைட்ரஜன் அற்ற ஆல்டிஹைடுகள் (பார்மால்டிஹைடு, பென்சால்டிஹைடு) அடர் காரத்துடன் சுய ஆக்சிஜனேற்ற-ஒடுக்க வினைக்கு உட்படுவது:",
+      "options": {
+        "a": "Cannizzaro reaction",
+        "b": "Aldol condensation",
+        "c": "Perkin reaction",
+        "d": "Benzoin condensation"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Aldol condensation requires enolizable alpha-hydrogens. Step 2: Aldehydes lacking alpha-hydrogens (HCHO, C6H5CHO) undergo hydride transfer upon reaction with 50% NaOH. Step 3: One molecule is reduced to primary alcohol while the other is oxidized to carboxylate salt (disproportionation). This is the Cannizzaro reaction.",
+        "ta": "படி 1: ஆல்ஃபா-ஹைட்ரஜன் அற்ற ஆல்டிஹைடுகள் அடர் காரத்தின் முன்னிலையில் விகிதச்சிதைவு வினையில் ஈடுபடுகின்றன. படி 2: ஒரு மூலக்கூறு ஆல்கஹாலாகவும் மற்றொரு மூலக்கூறு கார்பாக்சிலிக் அமில உப்பாகவும் மாறுகிறது. படி 3: இது கன்னிசாரோ வினை ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q042",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": "Organic Chemistry: Haloalkanes",
+      "ta": "கரிம வேதியியல்: ஹேலோஅல்கேன்கள்"
+    },
+    "topic": "Organic Chemistry: Haloalkanes / கரிம வேதியியல்: ஹேலோஅல்கேன்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The nucleophilic substitution reaction that proceeds through a planar carbocation intermediate with racemization of configuration is:",
+      "questionTa": "சமதள கார்பன் நேர்அயனி (Carbocation) இடைநிலை வழியாக நடைபெற்று, சுழிமக் கலவையைத் (Racemization) தரும் கருக்கவர் பதிலீட்டு வினை:",
+      "options": {
+        "a": "S_N1 mechanism (Substitution Nucleophilic Unimolecular)",
+        "b": "S_N2 mechanism",
+        "c": "E2 elimination",
+        "d": "S_N i mechanism"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: S_N1 is a two-step mechanism. The slow rate-determining step forms an sp2 hybridized, planar carbocation intermediate. Step 2: The nucleophile can attack equally from either the front or rear face. Step 3: This results in 50% inversion and 50% retention, yielding a racemic mixture (racemization).",
+        "ta": "படி 1: S_N1 வினையில் மெதுவான படியில் சமதள கார்பன் நேர்அயனி இடைநிலையாக உருவாகிறது. படி 2: கருக்கவர் காரணி இருபுறத்திலிருந்தும் சமவாய்ப்புடன் தாக்குகிறது. படி 3: இதனால் சுழிமக் கலவை உருவாகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q043",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": "Solid State",
+      "ta": "திட நிலைமை"
+    },
+    "topic": "Solid State / திட நிலைமை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The percentage packing efficiency of spheres in a Simple Cubic (SC) unit cell is approximately:",
+      "questionTa": "எளிய கனச்சதுர (Simple Cubic) படிக அமைப்பில் அணுக்களின் பொதிவுத் திறன் (Packing Efficiency):",
+      "options": {
+        "a": "52.4%",
+        "b": "68.0%",
+        "c": "74.0%",
+        "d": "48.0%"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Packing efficiency = (Volume of spheres in unit cell",
+        "ta": "Total volume of unit cell) * 100. Step 2: Simple cubic has 1 atom: V_sphere = 4/3 * pi * r^3. With a = 2r, V_cube = (2r)^3 = 8r^3. Step 3: Efficiency = [(4/3 * pi * r^3) / (8r^3)] * 100 = (pi / 6) * 100 approx 52.36% approx 52.4%. / படி 1: பொதிவுத் திறன் = (அணுக்களின் பருமன் / அலகு கூட்டின் பருமன்) * 100. படி 2: எளிய கனச்சதுரத்தில் a = 2r. படி 3: பொதிவுத் திறன் = (pi / 6) * 100 = 52.4%."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q044",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": "Solutions",
+      "ta": "கரைசல்கள்"
+    },
+    "topic": "Solutions / கரைசல்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "Which of the following colligative properties is most suitable and widely used for determining the molar masses of polymers and biomolecules?",
+      "questionTa": "பாலிமர்கள் மற்றும் புரதங்களின் மூலக்கூறு நிறையைத் துல்லியமாகக் கணக்கிட மிகவும் ஏற்ற தொகைசார் பண்பு (Colligative Property):",
+      "options": {
+        "a": "Osmotic pressure (pi)",
+        "b": "Elevation in boiling point",
+        "c": "Depression in freezing point",
+        "d": "Relative lowering of vapour pressure"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Macromolecules (proteins, polymers) have very large molar masses and low solubilities, producing miniscule changes in boiling and freezing points (often < 0.001 deg C). Step 2: In contrast, osmotic pressure pi = CRT gives measurable values even at room temperature (298 K) for millimolar concentrations. Step 3: Hence, osmotic pressure is optimal.",
+        "ta": "படி 1: பாலிமர்கள் மற்றும் புரதங்கள் அதிக மூலக்கூறு எடை கொண்டவை என்பதால் அவற்றின் உறைநிலை தாழ்வு மிகக் குறைவு. படி 2: சவ்வூடுபரவல் அழுத்தம் அறை வெப்பநிலையிலும் அளவிடக்கூடிய கணிசமான அழுத்தத்தை வழங்கும். படி 3: ஆகவே சவ்வூடுபரவல் அழுத்தமே சிறந்த முறையாகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q045",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": "Chemical Kinetics",
+      "ta": "வேதி வினைவேகவியல்"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "For a reaction A -> Products, if the initial concentration of reactant is doubled and the half-life period remains completely unchanged, the order of the reaction is:",
+      "questionTa": "A -> விளைபொருட்கள் என்ற வினையில் தொடக்கச் செறிவு இருமடங்காக அதிகரிக்கப்பட்டும் அரை ஆயுட்காலம் மாறாமல் இருப்பின், அவ்வினை எந்த வகையைச் சார்ந்தது?",
+      "options": {
+        "a": "First order",
+        "b": "Zero order",
+        "c": "Second order",
+        "d": "Third order"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: General half-life formula is t_1/2 prop 1",
+        "ta": "[A]_0^(n - 1). Step 2: For half-life to be totally independent of initial concentration [A]_0, exponent n - 1 must equal 0. Step 3: n - 1 = 0 => n = 1 (First order reaction: t_1/2 = 0.693 / k). / படி 1: அரை ஆயுட்காலம் t_1/2 prop 1 / [A]_0^(n - 1). படி 2: தொடக்கச் செறிவைச் சார்ந்திருக்காமல் இருக்க n - 1 = 0 ஆக வேண்டும். படி 3: n = 1, ஆகவே இது முதல் வகை வினை ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q046",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": "Coordination Compounds",
+      "ta": "அணைவுச் சேர்மங்கள்"
+    },
+    "topic": "Coordination Compounds / அணைவுச் சேர்மங்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "According to Werner's Coordination Theory, the secondary valency of a central metal atom corresponds to its:",
+      "questionTa": "வெர்னரின் அணைவுக் கொள்கைப்படி, மைய உலோக அணுவின் இரண்டாம் நிலை இணைதிறன் (Secondary Valency) எதனைக் குறிக்கிறது?",
+      "options": {
+        "a": "Coordination number",
+        "b": "Oxidation state",
+        "c": "Electronegativity",
+        "d": "Atomic weight"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Alfred Werner posited two types of valency for metals: Primary and Secondary. Step 2: Primary valency is ionizable and corresponds to oxidation state. Step 3: Secondary valency is non-ionizable, directional, and satisfies coordination number (number of ligand donor atoms bonded).",
+        "ta": "படி 1: வெர்னர் இரண்டு வகையான இணைதிறன்களைக் கூறினார். படி 2: முதன்மை இணைதிறன் அயனியாகும் தன்மை கொண்டது மற்றும் ஆக்சிஜனேற்ற எண்ணைக் குறிக்கும். படி 3: இரண்டாம் நிலை இணைதிறன் அயனியாகாது மற்றும் அணைவு எண்ணைக் (Coordination number) குறிக்கும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q047",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 6,
+    "unitTitle": {
+      "en": "Solid State",
+      "ta": "திட நிலைமை"
+    },
+    "topic": "Solid State / திட நிலைமை",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "The total number of atoms contained inside one single Face-Centred Cubic (FCC) unit cell is:",
+      "questionTa": "ஒரு முகமையக் கனச்சதுர (FCC) அலகு கூட்டினுள் அடங்கியுள்ள மொத்த அணுக்களின் எண்ணிக்கை:",
+      "options": {
+        "a": "4",
+        "b": "2",
+        "c": "1",
+        "d": "6"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Corner contribution: 8 corners * 1/8 atom per corner = 1 atom. Step 2: Face-centre contribution: 6 faces * 1/2 atom per face = 3 atoms. Step 3: Total atoms per FCC unit cell = 1 + 3 = 4 atoms.",
+        "ta": "படி 1: 8 மூலை அணுக்களின் பங்கு = 8 * (1/8) = 1 அணு. படி 2: 6 முகமைய அணுக்களின் பங்கு = 6 * (1/2) = 3 அணுக்கள். படி 3: மொத்த அணுக்கள் = 1 + 3 = 4 அணுக்கள் ஆகும்."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q048",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 9,
+    "unitTitle": {
+      "en": "Solutions",
+      "ta": "கரைசல்கள்"
+    },
+    "topic": "Solutions / கரைசல்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "An azeotropic mixture that boils at a lower temperature than either of its individual constituents (minimum boiling azeotrope) shows:",
+      "questionTa": "தனது உட்கூறுகளை விடக் குறைந்த வெப்பநிலையில் கொதிக்கும் சிறுமக் கொதிநிலை மாறாக் கலவை ரவுல்ட் விதியிலிருந்து எத்தகைய விலகலைக் காட்டுகிறது?",
+      "options": {
+        "a": "Large positive deviation from Raoult's law",
+        "b": "Large negative deviation from Raoult's law",
+        "c": "Ideal behaviour",
+        "d": "Zero vapour pressure"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: Positive deviation occurs when intermolecular forces between dissimilar molecules are weaker than between identical molecules, causing high total vapour pressure. Step 2: Higher vapour pressure means the liquid reaches atmospheric pressure at a lower temperature. Step 3: Hence, positive deviations lead to minimum boiling azeotropes (e.g. 95% ethanol-water).",
+        "ta": "படி 1: நேர்விலகலில் ஆவி அழுத்தம் அதிகமாகிறது. படி 2: ஆவி அழுத்தம் கூடும்போது கொதிநிலை குறைகிறது. படி 3: ஆகவே நேர்விலகல் சிறுமக் கொதிநிலை மாறாக் கலவையை உருவாக்குகிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q049",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 11,
+    "unitTitle": {
+      "en": "Organic Chemistry: Haloalkanes",
+      "ta": "கரிம வேதியியல்: ஹேலோஅல்கேன்கள்"
+    },
+    "topic": "Organic Chemistry: Haloalkanes / கரிம வேதியியல்: ஹேலோஅல்கேன்கள்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "In an S_N2 bimolecular substitution reaction, the incoming nucleophile attacks the chiral carbon atom leading to:",
+      "questionTa": "S_N2 இருமூலக்கூறு கருக்கவர் பதிலீட்டு வினையில் தாக்கப்படும் கார்பன் எத்தகைய மாற்றத்தை அடைகிறது?",
+      "options": {
+        "a": "Complete Walden inversion of configuration",
+        "b": "Complete retention of configuration",
+        "c": "Racemization",
+        "d": "Loss of optical activity only"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: S_N2 is a concerted, single-step reaction with a pentacoordinate transition state. Step 2: The nucleophile attacks strictly from the backside (180 deg opposite the leaving group) to minimize steric and electrostatic hindrance. Step 3: This rear attack flips the spatial arrangement of the remaining three bonds like an umbrella in a gale, resulting in 100% Walden Inversion.",
+        "ta": "படி 1: S_N2 வினை ஒரே படியில் நிகழும் வினையாகும். படி 2: கருக்கவர் காரணி விடுபடும் தொகுதிக்கு நேர் பின்புறத்திலிருந்து தாக்குகிறது. படி 3: இதனால் குடை காற்றில் தலைகீழாக மாறுவது போன்ற வால்டன் தலைகீழாக்கம் (Walden Inversion) நிகழ்கிறது."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  },
+  {
+    "id": "TN-12-CHE-Q050",
+    "standard": 12,
+    "stream": "CS2612",
+    "subjectCode": "CHE-12",
+    "unitNumber": 7,
+    "unitTitle": {
+      "en": "Chemical Kinetics",
+      "ta": "வேதி வினைவேகவியல்"
+    },
+    "topic": "Chemical Kinetics / வேதி வினைவேகவியல்",
+    "type": "QUESTION_ITEM",
+    "questionPayload": {
+      "marks": 1,
+      "part": "PART_I",
+      "questionEn": "For a pseudo-first-order reaction, such as acid-catalyzed hydrolysis of ethyl acetate (CH3COOC2H5 + H2O -> CH3COOH + C2H5OH):",
+      "questionTa": "எத்தில் அசிட்டேட்டின் அமில நீராற்பகுப்பு போன்ற போலி முதல் வகை வினையில் (Pseudo-first order):",
+      "options": {
+        "a": "Water is present in large excess, so its concentration remains practically constant",
+        "b": "Ethyl acetate is in large excess",
+        "c": "Order is 2 and molecularity is 1",
+        "d": "Reaction rate is zero"
+      },
+      "correctAnswer": "a",
+      "stepByStepSolution": {
+        "en": "Step 1: The reaction is bimolecular (molecularity = 2) involving one molecule of ester and one molecule of water. Step 2: Because water acts as solvent and is present in immense excess (e.g. 55.5 M vs 0.01 M ester), its concentration change during reaction is negligible and stays constant. Step 3: The rate depends solely on ester concentration: Rate = k'[CH3COOC2H5], exhibiting pseudo-first-order kinetics.",
+        "ta": "படி 1: இவ்வினையின் மூலக்கூறு எண் 2 ஆகும். படி 2: நீர் கரைப்பானாக பெருமளவில் இருப்பதால் அதன் செறிவில் ஏற்படும் மாற்றம் புறக்கணிக்கத்தக்கது. படி 3: ஆகவே வினைவேகம் எத்தில் அசிட்டேட்டின் செறிவை மட்டுமே பொறுத்து அமையும் (போலி முதல் வகை வினை)."
+      },
+      "sourceExam": "HSE 12th Chemistry Set 1"
+    }
+  }
+]

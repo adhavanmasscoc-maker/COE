@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AknexAcademicEntity",
+  "description": "Standardized entity for Samacheer Kalvi syllabus concepts and authentic examination questions",
+  "type": "object",
+  "required": [
+    "id",
+    "standard",
+    "subjectCode",
+    "unitNumber",
+    "unitTitle",
+    "topic",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "standard": {
+      "type": "integer",
+      "enum": [
+        10,
+        12
+      ]
+    },
+    "stream": {
+      "type": "string",
+      "enum": [
+        "CS2612",
+        "BZ2612",
+        "GENERAL"
+      ]
+    },
+    "subjectCode": {
+      "type": "string"
+    },
+    "unitNumber": {
+      "type": "integer"
+    },
+    "unitTitle": {
+      "type": "object",
+      "required": [
+        "en",
+        "ta"
+      ],
+      "properties": {
+        "en": {
+          "type": "string"
+        },
+        "ta": {
+          "type": "string"
+        }
+      }
+    },
+    "topic": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "SYLLABUS_CONCEPT",
+        "QUESTION_ITEM"
+      ]
+    },
+    "conceptPayload": {
+      "type": "object",
+      "properties": {
+        "summaryMarkdownEn": {
+          "type": "string"
+        },
+        "summaryMarkdownTa": {
+          "type": "string"
+        },
+        "keyFormulas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "commonPitfalls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "questionPayload": {
+      "type": "object",
+      "properties": {
+        "marks": {
+          "type": "integer"
+        },
+        "part": {
+          "type": "string",
+          "enum": [
+            "PART_I",
+            "PART_II",
+            "PART_III",
+            "PART_IV"
+          ]
+        },
+        "questionEn": {
+          "type": "string"
+        },
+        "questionTa": {
+          "type": "string"
+        },
+        "options": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "type": "string"
+            },
+            "b": {
+              "type": "string"
+            },
+            "c": {
+              "type": "string"
+            },
+            "d": {
+              "type": "string"
+            }
+          }
+        },
+        "correctAnswer": {
+          "type": "string"
+        },
+        "stepByStepSolution": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "string"
+            },
+            "ta": {
+              "type": "string"
+            }
+          }
+        },
+        "sourceExam": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
