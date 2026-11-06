@@ -1,7 +1,8 @@
 // src/app/api/ai/tutor/route.js
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
-import { getGeminiFlashModel, generateEmbedding } from "@/lib/ai/geminiClient";
+import { generateEmbedding } from "@/lib/ai/geminiClient";
+import { routeAiInference } from "@/lib/ai/aknexAiRouter";
 import { searchSimilarChunks } from "@/lib/ai/vectorStore";
 import { searchAcademicEntities, formatEntityForGemini, getAcademicEntity } from "@/lib/ai/jsonDb";
 import { aiResponseCache } from "@/lib/ai/lruCache";
@@ -201,30 +202,33 @@ Provide a focused, helpful response. If the message is a subject question, give 
     });
 
     let finalReply = "";
+    let aiProvider = "gemini_direct";
+    let aiModel = "gemini-1.5-flash";
+    let aiEndpoint = null;
 
-    // 4. Invoke Gemini or Fallback
+    // 4. Invoke Dynamic AKNEX AI Router (with direct Gemini and offline deterministic fallbacks)
     try {
-      const model = getGeminiFlashModel(systemPrompt);
+      const inferenceResult = await routeAiInference({
+        systemPrompt,
+        userPrompt,
+        message,
+        history,
+        subjectCode,
+        language,
+        mode,
+        hintLevel,
+        studentName,
+        currentQuestionContext,
+        contextSnippet,
+      });
 
-      // Build chat history if available
-      let chatSession;
-      if (Array.isArray(history) && history.length > 0) {
-        const validHistory = history
-          .filter((h) => h.role === "user" || h.role === "model" || h.role === "assistant")
-          .map((h) => ({
-            role: h.role === "assistant" ? "model" : h.role,
-            parts: [{ text: h.content }],
-          }));
-
-        chatSession = model.startChat({ history: validHistory.slice(-6) });
-        const res = await chatSession.sendMessage(userPrompt);
-        finalReply = res.response.text();
-      } else {
-        const res = await model.generateContent(userPrompt);
-        finalReply = res.response.text();
-      }
+      finalReply = inferenceResult.text;
+      aiProvider = inferenceResult.provider;
+      aiModel = inferenceResult.model;
+      aiEndpoint = inferenceResult.endpoint || null;
     } catch (genErr) {
-      console.warn("Gemini generation failed, engaging deterministic fallback:", genErr?.message || genErr);
+      console.warn("AI routing inference failed, engaging deterministic fallback:", genErr?.message || genErr);
+      aiProvider = "deterministic_fallback";
 
       // Detect simple/casual messages — no formula dump for these
       const lowerMsg = (message || "").toLowerCase().trim();
@@ -291,6 +295,9 @@ Provide a focused, helpful response. If the message is a subject question, give 
       text: finalReply,
       reply: finalReply,
       cached: false,
+      provider: aiProvider,
+      model: aiModel,
+      endpoint: aiEndpoint,
       sources: matchedChunks.map((c) => ({
         unit: c.unitNumber,
         title: c.chunkTitle,

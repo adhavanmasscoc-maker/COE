@@ -21,19 +21,22 @@ export function isAiFeatureEnabled() {
 }
 
 /**
- * Generative Model: Gemini 1.5 Flash (with fallback to 2.0 Flash)
+ * Generative Model: Gemini 1.5 Flash (or user-specified fine-tuned model)
  * Handles Socratic tutoring, diagnostic post-mortems, and dynamic question synthesis.
  *
  * @param {string} customSystemInstruction
+ * @param {string} customModelName
  * @returns GenerativeModel
  */
-export function getGeminiFlashModel(customSystemInstruction = "") {
+export function getGeminiFlashModel(customSystemInstruction = "", customModelName = "gemini-1.5-flash") {
   if (!apiKey) {
     throw new Error("GEMINI_API_KEY is missing. Please configure it in your environment.");
   }
 
+  const activeModel = customModelName || process.env.AKNEX_AI_MODEL || "gemini-1.5-flash";
+
   return genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: activeModel,
     systemInstruction: customSystemInstruction || undefined,
     generationConfig: {
       temperature: 0.3, // Lower temperature to minimize hallucination on exam facts

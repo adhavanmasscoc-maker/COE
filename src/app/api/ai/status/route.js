@@ -1,6 +1,7 @@
 // src/app/api/ai/status/route.js
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import { getAknexAiConfig } from "@/lib/ai/aknexAiRouter";
 
 export const dynamic = "force-dynamic";
 
@@ -23,6 +24,7 @@ export async function GET() {
       enabled = process.env.AI_FEATURE_ENABLED !== "false" && process.env.AI_FEATURE_ENABLED !== "0";
     }
 
+    const config = await getAknexAiConfig();
     const hasApiKey = Boolean(process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.length > 5);
 
     return NextResponse.json({
@@ -30,8 +32,14 @@ export async function GET() {
       enabled,
       hasApiKey,
       poweredBy: "aknex-official.vercel.app",
+      routing: {
+        provider: config.provider,
+        endpoint: config.endpoint,
+        model: config.model,
+        mode: config.mode,
+      },
       models: {
-        generative: "gemini-1.5-flash",
+        generative: config.model || "gemini-1.5-flash",
         embedding: "text-embedding-004",
       },
     });

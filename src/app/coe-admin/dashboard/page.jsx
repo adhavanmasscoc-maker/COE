@@ -10,7 +10,7 @@ import {
   ShieldCheck, Users, Calendar, FileText, CheckCircle, PlusCircle,
   Eye, Award, Sparkles, RefreshCw, Loader2, AlertCircle,
   Layers, Bell, BarChart3, ClipboardList, UserCheck, Clock, FileJson,
-  Activity, Smartphone, FolderArchive, Bot
+  Activity, Smartphone, FolderArchive, Bot, Sliders, Globe, Save, X
 } from "lucide-react";
 import { ExamLifecycleStepper } from "@/components/admin/ExamLifecycleStepper";
 
@@ -23,6 +23,53 @@ export default function COEAdminDashboardPage() {
   const [updatingId, setUpdatingId] = useState(null);
   const [aiEnabled, setAiEnabled] = useState(true);
   const [togglingAi, setTogglingAi] = useState(false);
+  const [aiConfigModalOpen, setAiConfigModalOpen] = useState(false);
+  const [aiEndpoint, setAiEndpoint] = useState("");
+  const [aiModel, setAiModel] = useState("gemini-1.5-flash");
+  const [aiMode, setAiMode] = useState("hybrid");
+  const [aiSaving, setAiSaving] = useState(false);
+
+  const openAiConfig = async () => {
+    setAiConfigModalOpen(true);
+    try {
+      const res = await fetch("/api/ai/config");
+      const data = await res.json();
+      if (data.success) {
+        setAiEndpoint(data.endpoint || "");
+        setAiModel(data.model || "gemini-1.5-flash");
+        setAiMode(data.mode || "hybrid");
+      }
+    } catch (e) {
+      console.warn("Failed to fetch AI config:", e);
+    }
+  };
+
+  const handleSaveAiConfig = async (e) => {
+    e.preventDefault();
+    setAiSaving(true);
+    try {
+      const res = await fetch("/api/ai/config", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          endpoint: aiEndpoint,
+          model: aiModel,
+          mode: aiMode,
+        }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        showNotice("AKNEX AI Gateway updated in database! Changes take effect immediately with zero Vercel redeployment.");
+        setAiConfigModalOpen(false);
+      } else {
+        showNotice(data.error || "Failed to update AI gateway.");
+      }
+    } catch {
+      showNotice("Network error updating AI gateway.");
+    } finally {
+      setAiSaving(false);
+    }
+  };
 
   useEffect(() => {
     fetch("/api/ai/status")
@@ -172,6 +219,15 @@ export default function COEAdminDashboardPage() {
               {aiEnabled ? "ENABLED" : "DISABLED"}
             </span>
             {togglingAi && <Loader2 className="w-3 h-3 animate-spin text-cyan-400" />}
+          </button>
+          <button
+            type="button"
+            onClick={openAiConfig}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-amber-500/40 bg-amber-950/30 text-amber-300 hover:bg-amber-900/40 hover:border-amber-400 text-xs font-bold transition shadow-sm"
+            title="Configure AKNEX AI Endpoint & Fine-Tuned Model (Zero Redeploy)"
+          >
+            <Sliders className="w-3.5 h-3.5 text-amber-400" />
+            <span>AI Gateway</span>
           </button>
           <Link href="/coe-admin/exam-setter">
             <Button variant="secondary" size="sm" className="gap-1.5 shadow-md">
@@ -468,6 +524,113 @@ export default function COEAdminDashboardPage() {
         </div>
       </div>
       </div>
+
+      {/* AI Gateway Configuration Modal (Zero Vercel Redeployment) */}
+      {aiConfigModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
+          <div className="relative w-full max-w-lg bg-[#0e111a] border border-amber-500/30 rounded-2xl p-6 shadow-2xl shadow-amber-500/10 space-y-5">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+                  <Sliders className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-white flex items-center gap-2">
+                    AKNEX AI Gateway &amp; Routing
+                    <span className="badge badge-amber text-[10px]">Zero Redeploy</span>
+                  </h3>
+                  <p className="text-xs text-slate-400">
+                    Live dynamic configuration stored in Turso database.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setAiConfigModalOpen(false)}
+                className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveAiConfig} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-200 mb-1 flex items-center gap-1.5">
+                  <Globe className="w-3.5 h-3.5 text-cyan-400" />
+                  Custom AKNEX AI Endpoint URL
+                </label>
+                <input
+                  type="url"
+                  value={aiEndpoint}
+                  onChange={(e) => setAiEndpoint(e.target.value)}
+                  placeholder="https://aknex-official.vercel.app/api/ai/tutor or your server"
+                  className="w-full px-3 py-2 text-xs bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 font-mono"
+                />
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Leave blank to route directly to Google Gemini API. When set, requests forward to this endpoint first.
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-200 mb-1 flex items-center gap-1.5">
+                  <Bot className="w-3.5 h-3.5 text-amber-400" />
+                  Model Tag / Fine-Tuned Model ID
+                </label>
+                <input
+                  type="text"
+                  value={aiModel}
+                  onChange={(e) => setAiModel(e.target.value)}
+                  placeholder="gemini-1.5-flash or custom model name"
+                  className="w-full px-3 py-2 text-xs bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 font-mono"
+                />
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Passed to the inference backend or Gemini SDK (e.g. <code className="text-amber-300">gemini-1.5-flash</code>, <code className="text-amber-300">gemini-2.0-flash-exp</code>, etc.).
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-200 mb-1">
+                  Routing Strategy
+                </label>
+                <select
+                  value={aiMode}
+                  onChange={(e) => setAiMode(e.target.value)}
+                  className="w-full px-3 py-2 text-xs bg-slate-900 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-amber-400"
+                >
+                  <option value="hybrid">Hybrid (Endpoint First &rarr; Fallback to Gemini Direct)</option>
+                  <option value="aknex_endpoint">AKNEX Endpoint Only (Strict)</option>
+                  <option value="gemini_direct">Gemini Direct (Bypass Endpoint)</option>
+                </select>
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Hybrid mode guarantees 100% uptime: if your fine-tuned service is sleeping or updating, students get seamless fallback.
+                </p>
+              </div>
+
+              <div className="pt-2 flex items-center justify-end gap-2 border-t border-slate-800">
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setAiConfigModalOpen(false)}
+                  disabled={aiSaving}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  type="submit"
+                  variant="primary"
+                  size="sm"
+                  disabled={aiSaving}
+                  className="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold gap-1.5"
+                >
+                  {aiSaving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Save className="w-3.5 h-3.5" />}
+                  Save Runtime Configuration
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </AdminGuard>
   );
 }
