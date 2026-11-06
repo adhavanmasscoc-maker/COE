@@ -21,6 +21,10 @@ The platform provides deterministic exam scheduling, automated evaluation, proct
 | **Session & Security** | Stateless JOSE JWT + AES-256 | 100-year persistent HTTP-only cookies (`maxAge = 3,153,600,000s`), AES-256-CBC submission sealing |
 | **Admin Authentication** | Single-Key Security Gate | Secret PIN (`1` or `0`) disguised behind "Enter 8-digit key" placeholder |
 | **Bilingual Engine** | Pure React LanguageContext | Global synchronized switching between English and Tamil (தமிழ்) across all views |
+| **Voice AI & Speech Engine** | Web Speech API (STT & TTS) | Live bilingual mic (`ta-IN` / `en-IN`), real-time interim recognition, pulsing waveform, instant vocalization |
+| **AI Academic Coach & RAG** | Gemini 1.5 Flash + LRU Cache | Zero-waste token architecture (< 450 prompt, < 250 completion), compact Socratic hints, offline fallback |
+| **Mega Structured DB** | Unified `json-db/` Engine | 1,705 structured syllabus concepts and exam questions across 11 subjects (Class 10 & 12) |
+| **Question Bank Archives** | Broadsheet Scholarly Layout | 14 official board papers per subject (2020–2026: Annual + Supplementary), KaTeX math, click-to-reveal solutions, 0 CBT timer |
 | **Git & Version Control** | GitHub (`origin/main`) | Commits strictly authored by `adhavanmasscoc-maker <adhavanmasscoc@gmail.com>` |
 
 ---

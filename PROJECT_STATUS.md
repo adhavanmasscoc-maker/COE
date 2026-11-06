@@ -82,22 +82,36 @@
   - **Incorrect Answers**: Displays student's chosen option, the exact correct answer, and step-by-step worked explanations.
 - **Bilingual Review**: Explanations and options display in the candidate's selected language.
 
-### 6. Authentic DGE Question Bank Archives (2020–2026)
-- **12th Mathematics Archive** (`QB/12/MATH/index.html` & `/student/qb/12/math`):
-  - Charter classical style, 7 years of official papers (2020–2026), Parts I–IV, KaTeX math rendering, step-by-step solutions, and CBT mode.
-- **12th Physics Archive** (`QB/12/PHYSICS/index.html` & `/student/qb/12/physics`):
-  - Broadsheet newspaper publication layout, 7 years of official papers (2020–2026), Parts I–IV, bilingual toggle (Bilingual, English, தமிழ்), DGE Blueprint modal, and CBT quiz mode.
-- **Dashboard Quick-Launch**: Student dashboard includes direct launch buttons for both 12th Maths and 12th Physics Question Banks.
+### 6. Authentic DGE Question Bank Archives (2020–2026) — 14 Official Papers Per Subject
+- **Complete Subject Coverage across Class 12 Core Streams**:
+  - **12th Mathematics** (`QB/12/MATH/index.html` & `/student/qb/12/math`): 14 official board papers (Annual + Supplementary from 2020 to 2026), Parts I–IV, KaTeX math rendering, step-by-step worked solutions, and valuation rubrics.
+  - **12th Physics** (`QB/12/PHYSICS/index.html` & `/student/qb/12/physics`): 14 official board papers, Broadsheet newspaper publication layout, bilingual toggle (Bilingual, English, தமிழ்), DGE Blueprint modal, and interactive click-to-reveal answers.
+  - **12th Chemistry** (`QB/12/CHEMISTRY/index.html` & `/student/qb/12/chemistry`): 14 official board papers, Part I (15 MCQs), Part II (6x2 with Q24 compulsory), Part III (6x3 with Q33 compulsory), and Part IV (5x5 Either/Or long questions).
+  - **12th Computer Science** (`QB/12/CS/index.html` & `/student/qb/12/cs`): 14 official board papers from Sep 2020 to March 2026, Python, SQL, CSV and OOP code traces, with marking schemes.
+  - **12th General English** (`QB/12/ENGLISH/index.html` & `/student/qb/12/english`): 14 official board papers, Part I (20 MCQs), Part II (Poetry & Grammar), Part III (ERC & Study Skills), and Part IV (Paragraphs, Letters & Essays).
+  - **12th Tamil** (`QB/12/TAMIL/index.html` & `/student/qb/12/tamil`): 14 official board papers, Part I (14 பலவுள் தெரிக), Part II (குறுவினாக்கள் & கட்டாயத் திருக்குறள்), Part III (சிறுவினாக்கள்), and Part IV (நெடுவினாக்கள்).
+  - **12th Biology** (`QB/12/BIO/index.html` & `/student/qb/12/bio`): 14 official board papers (Bio-Botany 35 Marks + Bio-Zoology 35 Marks), Diagrams, Compulsory problems, and Either/Or long questions.
+- **Pure Learning Environment**: All CBT exam timers removed from QB portals as requested — zero time pressure, click-to-verify MCQ scoring, and complete step-by-step worked solutions.
+- **Mobile First & Zero Layout Shift (CLS = 0)**: Broadsheet layout fully tested and responsive on mobile (< 640px), tablet, and desktop.
+- **Dashboard Quick-Launch**: Student dashboard features direct launch buttons for all 7 subject archives.
 
 ### 7. Dual-View AI Academic Coach & Socratic Tutor System
 - **View 1 (Dedicated Workspace)**: Full 2-column workspace at `/student/ai-coach` featuring weakness radar derived from `priorityRanking.js`, subject switcher (`MAT-12`, `CHE-12`, `PHY-12`, `CSC-12`), scratchpad, and respectful address.
 - **View 2 (Slide-Over Drawer)**: Global interactive side drawer (`AiTutorDrawer.jsx`) mounted in `student/layout.jsx` and in practice exam halls with active question context.
-- **Socratic 3-Level Hint Ladder**: Provides progressive guidance (Level 1: Core Concept, Level 2: First Math Step, Level 3: Common Pitfall) without leaking answer options.
+- **Live Bilingual Speech-to-Text & Text-to-Speech Mic (`LiveVoiceMic.jsx`)**: Real-time voice interaction in Tamil (`ta-IN`) and English (`en-IN`), interim transcript streaming, animated audio waveform, and instant audio playback via SpeechSynthesis.
+- **Zero-Waste Token Economics & LRU Cache (`lruCache.js`)**: In-memory caching for prompt responses (`aiResponseCache`) and vector embeddings (`vectorMemoryCache`), keeping token overhead < 450 prompt, < 250 completion.
+- **Smart Intent Detection**: Greetings and simple arithmetic evaluated immediately without formula walls or textbook dumps.
+- **Socratic 3-Level Hint Ladder**: Progressive guidance without leaking answer options.
 - **KaTeX Mathematical Typesetting**: Crisp formula rendering for inline `$ ... $` and block `$$ ... $$` mathematics via `MathRenderer.jsx`.
-- **Vector Retrieval & Fallback**: Indexed syllabus chunks for `MAT-12` and `CHE-12` in Turso libSQL (`SyllabusVector`); graceful deterministic fallback ensuring zero crashes.
 - **Site-Wide Master Switch**: Controller of Examinations can enable or disable the AI Tutor feature at any time via COE Dashboard button and `/api/ai/toggle`.
 - **Brand Attribution**: Integrated `powered by aknex-official.vercel.app`.
 
-### 8. Git & Repository Management
+### 8. Mega Structured AI Knowledge Database (`json-db/`)
+- Unified structured JSON database partitioned by subject and grade:
+  - Class 12: `MAT-12-MASTER.json` (504 KB), `PHY-12-MASTER.json` (479 KB), `CHE-12-MASTER.json` (231 KB), `CSC-12-MASTER.json` (169 KB), `ENG-12-MASTER.json` (103 KB), `TAM-12-MASTER.json` (232 KB).
+  - Class 10: `MAT-10`, `SCI-10`, `SOC-10`, `ENG-10`, `TAM-10`.
+  - 1,705 structured entities across 11 master files with bilingual taxonomy, KaTeX formulas, and verified solutions.
+
+### 9. Git & Repository Management
 - **Author Identity**: All commits committed and pushed to `https://github.com/adhavanmasscoc-maker/COE.git` under `adhavanmasscoc-maker <adhavanmasscoc@gmail.com>`.
 - **Integrity**: `ai-dom-agent` strictly untracked and untouched.

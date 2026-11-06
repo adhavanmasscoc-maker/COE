@@ -256,54 +256,114 @@ function StudentDashboardContent() {
                   {isTamil ? "தமிழ் / English" : "Bilingual"}
                 </span>
                 <span className="badge badge-cyan text-[10px] font-semibold">
-                  {isTamil ? "அனைத்து வினாத்தாள்கள்" : "7-Year Board Papers"}
+                  {isTamil ? "14 அரசு வினாத்தாள்கள்" : "14 Board Papers / Subject"}
                 </span>
               </div>
               <h3 className="text-base md:text-lg font-black text-[#f0f0ff] mb-1">
                 {isTamil
-                  ? "12-ஆம் வகுப்பு கணிதம் — அரசுத் தேர்வு வினா வங்கி & மாதிரித் தேர்வு (2020–2026)"
-                  : "Class 12 Mathematics — Official Board Question Bank & Practice Portal (2020–2026)"}
+                  ? "12-ஆம் வகுப்பு அரசுப் பொதுத் தேர்வு வினா வங்கிகள் களஞ்சியம் (2020–2026)"
+                  : "Class 12 Public Examination Archive & Question Banks (2020–2026)"}
               </h3>
               <p className="text-xs text-[#a8a8d0] max-w-2xl leading-relaxed">
                 {isTamil
-                  ? "தமிழ்நாடு அரசு தேர்வுகள் இயக்ககம் (DGE) வெளியிட்ட 7 ஆண்டு பொதுத்தேர்வு வினாத்தாள்கள் (மார்ச் மற்றும் துணைத் தேர்வுகள்), நேரடி கணினித் தேர்வு (CBT), குறிப்பேடுகள் மற்றும் படிமுறை தீர்வுகள்."
-                  : "Official TN DGE 7-year board examination archive (March & Supplementary), timed 20-MCQ speed drill, step-by-step valuation rubrics, blueprint weightage, and high-yield formula vault."}
+                  ? "தமிழ்நாடு அரசு தேர்வுகள் இயக்ககம் (DGE) வெளியிட்ட 7 ஆண்டு பொதுத்தேர்வு வினாத்தாள்கள் (மார்ச் மற்றும் துணைத் தேர்வுகள் — 14 தாள்கள்/பாடம்), படிமுறை தீர்வுகள், அதிகாரப்பூர்வ மதிப்பெண் திட்டங்கள் மற்றும் பாடக் கட்டமைப்பு."
+                  : "Official TN DGE 7-year board examination archives (March Annual & Supplementary — 14 Papers per subject), bilingual (Tamil & English) KaTeX step-by-step solutions, and official valuation rubrics."}
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto shrink-0">
+          <div className="flex flex-wrap items-center gap-2 w-full lg:w-auto shrink-0">
             <Link
-              href="/students/qb/12/math"
+              href="/student/qb/12/math"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              className="flex-1 sm:flex-initial"
             >
-              <Button variant="primary" className="w-full sm:w-auto gap-2 text-xs py-2.5 px-4 font-bold shadow-lg shadow-violet-500/25">
-                <Sparkles className="w-4 h-4 text-violet-300" />
-                {isTamil ? "கணிதம் QB (Maths)" : "12th Maths QB"}
-                <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+              <Button variant="primary" className="w-full sm:w-auto gap-1.5 text-xs py-2 px-3 font-bold shadow-lg shadow-violet-500/25">
+                <Sparkles className="w-3.5 h-3.5 text-violet-300" />
+                {isTamil ? "கணிதம்" : "Maths"}
+                <ExternalLink className="w-3 h-3 opacity-80" />
               </Button>
             </Link>
             <Link
-              href="/students/qb/12/physics"
+              href="/student/qb/12/physics"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto"
+              className="flex-1 sm:flex-initial"
             >
-              <Button variant="outline" className="w-full sm:w-auto gap-2 text-xs py-2.5 px-4 font-bold border-violet-400/40 text-violet-200 hover:bg-violet-600/20">
-                <BookOpen className="w-4 h-4 text-cyan-300" />
-                {isTamil ? "இயற்பியல் QB (Physics)" : "12th Physics QB"}
-                <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+              <Button variant="outline" className="w-full sm:w-auto gap-1.5 text-xs py-2 px-3 font-bold border-cyan-400/40 text-cyan-200 hover:bg-cyan-600/20">
+                <BookOpen className="w-3.5 h-3.5 text-cyan-300" />
+                {isTamil ? "இயற்பியல்" : "Physics"}
+                <ExternalLink className="w-3 h-3 opacity-80" />
+              </Button>
+            </Link>
+            <Link
+              href="/student/qb/12/chemistry"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-initial"
+            >
+              <Button variant="outline" className="w-full sm:w-auto gap-1.5 text-xs py-2 px-3 font-bold border-teal-400/40 text-teal-200 hover:bg-teal-600/20">
+                <BookOpen className="w-3.5 h-3.5 text-teal-300" />
+                {isTamil ? "வேதியியல்" : "Chemistry"}
+                <ExternalLink className="w-3 h-3 opacity-80" />
+              </Button>
+            </Link>
+            <Link
+              href="/student/qb/12/cs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-initial"
+            >
+              <Button variant="outline" className="w-full sm:w-auto gap-1.5 text-xs py-2 px-3 font-bold border-indigo-400/40 text-indigo-200 hover:bg-indigo-600/20">
+                <BookOpen className="w-3.5 h-3.5 text-indigo-300" />
+                {isTamil ? "கணினி" : "CS"}
+                <ExternalLink className="w-3 h-3 opacity-80" />
+              </Button>
+            </Link>
+            <Link
+              href="/student/qb/12/english"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-initial"
+            >
+              <Button variant="outline" className="w-full sm:w-auto gap-1.5 text-xs py-2 px-3 font-bold border-amber-400/40 text-amber-200 hover:bg-amber-600/20">
+                <BookOpen className="w-3.5 h-3.5 text-amber-300" />
+                {isTamil ? "ஆங்கிலம்" : "English"}
+                <ExternalLink className="w-3 h-3 opacity-80" />
+              </Button>
+            </Link>
+            <Link
+              href="/student/qb/12/tamil"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-initial"
+            >
+              <Button variant="outline" className="w-full sm:w-auto gap-1.5 text-xs py-2 px-3 font-bold border-rose-400/40 text-rose-200 hover:bg-rose-600/20">
+                <BookOpen className="w-3.5 h-3.5 text-rose-300" />
+                {isTamil ? "தமிழ்" : "Tamil"}
+                <ExternalLink className="w-3 h-3 opacity-80" />
+              </Button>
+            </Link>
+            <Link
+              href="/student/qb/12/bio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-initial"
+            >
+              <Button variant="outline" className="w-full sm:w-auto gap-1.5 text-xs py-2 px-3 font-bold border-emerald-400/40 text-emerald-200 hover:bg-emerald-600/20">
+                <BookOpen className="w-3.5 h-3.5 text-emerald-300" />
+                {isTamil ? "உயிரியல்" : "Biology"}
+                <ExternalLink className="w-3 h-3 opacity-80" />
               </Button>
             </Link>
             <Link
               href="/student/ai-coach"
-              className="w-full sm:w-auto"
+              className="flex-1 sm:flex-initial"
             >
-              <Button variant="outline" className="w-full sm:w-auto gap-2 text-xs py-2.5 px-4 font-bold border-cyan-400/40 text-cyan-200 hover:bg-cyan-600/20 bg-cyan-950/30">
-                <Bot className="w-4 h-4 text-cyan-300" />
-                {isTamil ? "AI கல்வி பயிற்சியாளர்" : "AI Academic Coach"}
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+              <Button variant="outline" className="w-full sm:w-auto gap-1.5 text-xs py-2 px-3 font-bold border-cyan-400/40 text-cyan-200 hover:bg-cyan-600/20 bg-cyan-950/30">
+                <Bot className="w-3.5 h-3.5 text-cyan-300" />
+                {isTamil ? "AI ஆலோசகர்" : "AI Coach"}
+                <Sparkles className="w-3 h-3 text-amber-300" />
               </Button>
             </Link>
           </div>
