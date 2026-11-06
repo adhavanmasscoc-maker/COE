@@ -74,39 +74,7 @@ export default function AiCoachPage() {
       .catch(() => {});
   }, [subjectCode]);
 
-  // Initial welcome message per subject
-  useEffect(() => {
-    const isTa = language === "ta";
-    const welcome = isTa
-      ? `வணக்கம் மதிப்புமிக்க அன்பு மாணவர் ${studentName}! 
-
-நான் உங்கள் தமிழ்நாடு மாநிலக் கல்வி வாரிய (சமச்சீர் கல்வி) **${subjectCode}** தனிப்பயன் AI கல்வி ஆலோசகர். 
-
-உங்களுக்கு உதவக்கூடிய பகுதிகள்:
-1. 🎯 **பாட வாரியான பலவீன பகுதிகளை சரிசெய்தல்** (Weakness Mastery)
-2. 📐 **முக்கிய தேற்றங்கள் & சூத்திரங்களின் விளக்கம்** (KaTeX Formula Cards)
-3. 💡 **படிப்படியான சோக்ரடீஸ் முறை கணக்கீட்டு வழிகாட்டல்**
-
-உங்கள் சந்தேகத்தை கீழே உள்ள பெட்டியில் தட்டச்சு செய்யுங்கள்!`
-      : `Greetings, esteemed student ${studentName}! 
-
-I am your dedicated Tamil Nadu State Board (Samacheer Kalvi) **${subjectCode}** AI Academic Coach. 
-
-How I can empower your preparation:
-1. 🎯 **Targeted Weakness Remediation** based on your diagnostic metrics
-2. 📐 **Step-by-step KaTeX Formula & Proof Derivations**
-3. 💡 **Zero-Leak Socratic Problem Solving**
-
-Type your question below or click on any recommended weak chapter!`;
-
-    setMessages([
-      {
-        role: "assistant",
-        content: welcome,
-        timestamp: Date.now(),
-      },
-    ]);
-  }, [subjectCode, language, studentName]);
+  // No auto-welcome — AI only speaks when student asks
 
   // Scroll to bottom
   useEffect(() => {

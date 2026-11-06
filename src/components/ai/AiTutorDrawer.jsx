@@ -59,31 +59,7 @@ export default function AiTutorDrawer({
       .catch(() => setIsFeatureEnabled(true));
   }, []);
 
-  // Initialize greeting when opened
-  useEffect(() => {
-    if (isOpen && messages.length === 0) {
-      const isTa = language === "ta";
-      const welcome = isTa
-        ? `வணக்கம் அன்பு மாணவர் ${studentName}! நான் உங்கள் சமச்சீர் கல்வி AI கல்வி ஆலோசகர். 
-
-வினாக்களுக்கு நேரடி விடையைக் கூறாமல், படிப்படியான கணித மற்றும் அறிவியல் வழிகாட்டலை உங்களுக்கு வழங்குவேன். 
-
-கீழே உள்ள **நிலை 1, 2, 3 குறிப்புகளைப்** பயன்படுத்தவும் அல்லது உங்கள் சந்தேகங்களை நேரடியாக கேட்கவும்!`
-        : `Greetings, dear student ${studentName}! I am your Samacheer Kalvi AI Academic Coach. 
-
-I provide step-by-step Socratic guidance and mathematical reasoning without spoiling the final answer. 
-
-Use the **3-level hint ladder** below or type your question directly!`;
-
-      setMessages([
-        {
-          role: "assistant",
-          content: welcome,
-          timestamp: Date.now(),
-        },
-      ]);
-    }
-  }, [isOpen, language, studentName, messages.length]);
+  // No auto-greeting — drawer stays silent until student sends a message
 
   // Auto scroll to bottom
   useEffect(() => {
