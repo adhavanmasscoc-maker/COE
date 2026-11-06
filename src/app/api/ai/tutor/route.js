@@ -164,7 +164,21 @@ export async function POST(request) {
         language,
       });
     } else {
-      userPrompt = `
+      // Detect simple/casual intent to avoid injecting irrelevant syllabus context
+      const lowerMsg = (message || "").toLowerCase().trim();
+      const isGreeting = /^(hi|hello|hey|வணக்கம்|helo|hai|good\s*(morning|evening|night)|sup|yo)[\s!?.]*$/.test(lowerMsg);
+      const isSimpleArithmetic = /^\d+\s*[\+\-\*\/]\s*\d+[\s=?]*$/.test(lowerMsg);
+
+      if (isGreeting) {
+        userPrompt = `The student just greeted you. Reply ONLY with a brief, warm, friendly greeting — 1-2 sentences max. Do NOT include any formulas, textbook references, or academic content. Just say hi back naturally.
+Student name: ${studentName}
+Language: ${language}`;
+      } else if (isSimpleArithmetic) {
+        userPrompt = `The student asked: "${message}". Answer directly and concisely. Do NOT add textbook context or formulas beyond what's needed.
+Student name: ${studentName}
+Language: ${language}`;
+      } else {
+        userPrompt = `
 Student Name: ${studentName}
 Subject: ${subjectCode}
 Question or Context: ${currentQuestionContext ? JSON.stringify(currentQuestionContext) : "None"}
@@ -173,8 +187,9 @@ ${contextSnippet || "Official Samacheer Kalvi Class 10/12 Core Concepts"}
 
 Student Message: "${message}"
 
-Please respond warmly, addressing ${studentName} respectfully, and provide clear step-by-step Socratic guidance using KaTeX math symbols ($...$ and $$...$$).
+Provide a focused, helpful response. If the message is a subject question, give Socratic step-by-step guidance using KaTeX math ($...$). If it is a simple or general question, answer directly without injecting formulas.
 `.trim();
+      }
     }
 
     steps.push({
@@ -211,8 +226,34 @@ Please respond warmly, addressing ${studentName} respectfully, and provide clear
     } catch (genErr) {
       console.warn("Gemini generation failed, engaging deterministic fallback:", genErr?.message || genErr);
 
-      // Deterministic pedagogical fallback
-      if (mode === "hint" && currentQuestionContext) {
+      // Detect simple/casual messages — no formula dump for these
+      const lowerMsg = (message || "").toLowerCase().trim();
+      const isGreeting = /^(hi|hello|hey|வணக்கம்|helo|hai|good\s*(morning|evening|night)|sup|yo)[\s!?.]*$/.test(lowerMsg);
+      const isSimpleMath = /^\d+\s*[\+\-\*\/]\s*\d+[\s=?]*$/.test(lowerMsg);
+      const isShortQuery = lowerMsg.length < 15 && !currentQuestionContext;
+
+      if (isGreeting) {
+        finalReply = language === "ta"
+          ? `வணக்கம் ${studentName}! 😊 உங்கள் சமச்சீர் கல்வி சந்தேகங்களை கேளுங்கள்.`
+          : `Hi ${studentName}! 😊 Ask me anything about your Samacheer Kalvi syllabus.`;
+      } else if (isSimpleMath) {
+        // Evaluate simple arithmetic safely
+        try {
+          // eslint-disable-next-line no-new-func
+          const result = Function(`"use strict"; return (${lowerMsg.replace(/[^0-9+\-*/\s().]/g, "")})`)();
+          finalReply = language === "ta"
+            ? `${studentName}, விடை: **${result}** ✓`
+            : `${studentName}, the answer is **${result}** ✓`;
+        } catch {
+          finalReply = language === "ta"
+            ? `${studentName}, அந்த கணக்கை சரிபார்க்க முடியவில்லை.`
+            : `${studentName}, I couldn't evaluate that expression.`;
+        }
+      } else if (isShortQuery) {
+        finalReply = language === "ta"
+          ? `${studentName}, கொஞ்சம் விரிவாக கேளுங்கள் — எந்த பாடம் அல்லது வினா என்று சொல்லுங்கள்!`
+          : `${studentName}, could you elaborate a bit more? Let me know the subject or specific question!`;
+      } else if (mode === "hint" && currentQuestionContext) {
         finalReply = generateDeterministicHint({
           studentName,
           subjectCode,
@@ -222,25 +263,13 @@ Please respond warmly, addressing ${studentName} respectfully, and provide clear
           matchedChunk: matchedChunks[0] || null,
         });
       } else {
-        const salutation = language === "ta"
-          ? `வணக்கம் அன்பு மாணவர் ${studentName}! `
-          : `Greetings, dear student ${studentName}! `;
-
         const refText = matchedChunks[0]
           ? (language === "ta" ? matchedChunks[0].contentTa : matchedChunks[0].contentEn)
           : "";
 
-        finalReply = `${salutation}
-
-${language === "ta"
-  ? `தமிழ்நாடு மாநிலக் கல்வி வாரிய (சமச்சீர் கல்வி) பாடத்திட்டத்தின்படி உங்கள் சந்தேகத்தை ஆராய்வோம்.`
-  : `Let us examine your question strictly according to the Tamil Nadu State Board (Samacheer Kalvi) syllabus.`}
-
-${refText ? `\n> **${language === "ta" ? "பாடப்பகுதி சூத்திரம் & குறிப்பு" : "Textbook Formula Reference"}:**\n> ${refText}\n` : ""}
-
-${language === "ta"
-  ? `கணக்கீட்டை அணுகும் போது, முதலில் கொடுக்கப்பட்ட மாறிகளை தனித்தனியாக எடுத்து எழுதி, அதற்கான அடிப்படை விதியை பொருத்துங்கள். மேலும் விவரமான வழிகாட்டலுக்கு கீழேயுள்ள நிலைக் குறிப்புகளை (Level 1, 2, 3) பயன்படுத்தவும்!`
-  : `When tackling this problem, list out all given quantities, identify the appropriate governing equation, and proceed step-by-step. Use the 3-level hint ladder below for targeted guidance!`}`;
+        finalReply = language === "ta"
+          ? `${studentName}, தமிழ்நாடு சமச்சீர் கல்வி பாடத்திட்டத்தின்படி உங்கள் கேள்விக்கு பதிலளிக்கிறேன்.${refText ? `\n\n> **பாடப்பகுதி குறிப்பு:**\n> ${refText.slice(0, 300)}` : ""}\n\nமேலும் விவரமாக கேட்டால் படிப்படியான விளக்கம் தருகிறேன்!`
+          : `${studentName}, I'm here to help with your Samacheer Kalvi syllabus.${refText ? `\n\n> **Textbook Reference:**\n> ${refText.slice(0, 300)}` : ""}\n\nAsk a specific question for a step-by-step explanation!`;
       }
     }
 
