@@ -270,16 +270,28 @@ function StudentDashboardContent() {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-3 w-full lg:w-auto shrink-0">
+          <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto shrink-0">
             <Link
               href="/students/qb/12/math"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full lg:w-auto"
+              className="w-full sm:w-auto"
             >
-              <Button variant="primary" className="w-full lg:w-auto gap-2 text-xs py-2.5 px-4 font-bold shadow-lg shadow-violet-500/25">
+              <Button variant="primary" className="w-full sm:w-auto gap-2 text-xs py-2.5 px-4 font-bold shadow-lg shadow-violet-500/25">
                 <Sparkles className="w-4 h-4 text-violet-300" />
-                {isTamil ? "வினா வங்கி & பயிற்சி தொடங்கு" : "Open Practice Portal"}
+                {isTamil ? "கணிதம் QB (Maths)" : "12th Maths QB"}
+                <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+              </Button>
+            </Link>
+            <Link
+              href="/students/qb/12/physics"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <Button variant="outline" className="w-full sm:w-auto gap-2 text-xs py-2.5 px-4 font-bold border-violet-400/40 text-violet-200 hover:bg-violet-600/20">
+                <BookOpen className="w-4 h-4 text-cyan-300" />
+                {isTamil ? "இயற்பியல் QB (Physics)" : "12th Physics QB"}
                 <ExternalLink className="w-3.5 h-3.5 opacity-80" />
               </Button>
             </Link>

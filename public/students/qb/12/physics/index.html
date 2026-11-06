@@ -1,0 +1,3375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="dashboard">
+  <meta name="design-style" content="broadsheet">
+  <title>Tamil Nadu HSE (+2) Physics Public Examination Archive (2020–2026)</title>
+
+  <!-- Google Fonts: Broadsheet Typeface System with Noto Sans Tamil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500..800;1,400..700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+  <!-- KaTeX for crisp mathematical physics formulas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.2/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.18.2/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.18.2/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root {
+      color-scheme: light;
+
+      /* Broadsheet Surface Tokens */
+      --background: #f7f3eb;
+      --surface-container-low: #efe8da;
+      --surface-container: #e6ddcc;
+      --surface-container-high: #ddd2be;
+
+      /* Broadsheet Ink Tokens */
+      --on-surface: #1a1817;
+      --on-surface-variant: #4d4845;
+
+      /* Rules */
+      --outline: #33302e;
+      --outline-variant: #cdc3b2;
+
+      /* Accents */
+      --primary: #990f3d;
+      --on-primary: #ffffff;
+      --primary-container: #f4dce2;
+      --on-primary-container: #6b0a2a;
+      --secondary: #0d7680;
+      --tertiary: #0f5499;
+      --error: #b3261e;
+      --on-error: #ffffff;
+
+      /* Shared Semantic Tokens */
+      --positive: #1b6d3b;
+      --warning: #8d5208;
+      --focus: #990f3d;
+
+      /* Data Series */
+      --data-1: #990f3d;
+      --data-2: #0d7680;
+      --data-3: #0f5499;
+      --data-4: #9a6312;
+      --data-context: #bfb5a4;
+
+      /* Typography */
+      --font-headline: 'Bitter', 'Noto Sans Tamil', serif;
+      --font-body: 'Source Serif 4', 'Noto Sans Tamil', serif;
+      --font-label: 'Source Sans 3', 'Noto Sans Tamil', sans-serif;
+
+      /* Broadsheet Shapes & Defining Rules */
+      --rounded: 0;
+      --rounded-lg: 0;
+      --rounded-full: 0;
+      --rule-masthead: 3px double var(--on-surface);
+      --rule-ink: 1px solid var(--on-surface);
+      --rule-section: 2px solid var(--outline);
+      --rule-column: 1px solid var(--outline-variant);
+
+      /* Spacing Scale (4pt base) */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2.5rem;
+      --space-2xl: 4rem;
+      --space-3xl: 6rem;
+
+      /* Motion */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --dur-micro: 120ms;
+      --dur-short: 220ms;
+      --dur-long: 420ms;
+
+      /* Type Scale for Broadsheet Dashboard */
+      --display-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+      --headline-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+      --subhead-size: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+      --body-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+      --label-size: 0.75rem;
+    }
+
+    /* Base Reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      overflow-x: clip;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.55;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    .page-grid {
+      display: grid;
+      gap: var(--space-lg);
+      padding: var(--space-lg);
+      max-width: 1240px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .page-grid * { min-width: 0; }
+
+    /* Broadsheet Masthead */
+    .masthead-line {
+      border-bottom: var(--rule-masthead);
+      padding-bottom: var(--space-xs);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: var(--label-size);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--on-surface-variant);
+    }
+
+    .masthead-title-wrap {
+      border-bottom: var(--rule-ink);
+      padding-top: var(--space-md);
+      padding-bottom: var(--space-md);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    h1.site-title {
+      font-family: var(--font-headline);
+      font-weight: 800;
+      font-size: var(--display-size);
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      margin: 0;
+      color: var(--on-surface);
+    }
+
+    .site-subhead {
+      font-family: var(--font-body);
+      font-style: italic;
+      color: var(--on-surface-variant);
+      margin-top: var(--space-xs);
+      font-size: 1rem;
+    }
+
+    /* Gazette Exam Information Plate */
+    .exam-plate {
+      border: 1px solid var(--outline);
+      background-color: var(--surface-container-low);
+      padding: var(--space-sm) var(--space-md);
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      text-align: right;
+    }
+
+    .reg-box-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      justify-content: flex-end;
+    }
+
+    .reg-cell {
+      width: 22px;
+      height: 24px;
+      border: 1px solid var(--outline);
+      background: var(--background);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-family: var(--font-label);
+      font-size: 0.8rem;
+    }
+
+    /* Broadsheet Navigation & Filter Desk */
+    .desk-bar {
+      border-bottom: 2px solid var(--outline);
+      padding: var(--space-sm) 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      background-color: var(--background);
+    }
+
+    .year-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+
+    .year-btn {
+      background: transparent;
+      border: 1px solid var(--outline-variant);
+      color: var(--on-surface);
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: var(--label-size);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: var(--space-xs) var(--space-sm);
+      cursor: pointer;
+      border-radius: var(--rounded);
+      transition: background-color var(--dur-micro) var(--ease-out);
+    }
+
+    .year-btn:hover {
+      background-color: var(--surface-container-high);
+    }
+
+    .year-btn.active {
+      background-color: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+    }
+
+    .action-controls {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .control-label {
+      font-family: var(--font-label);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--on-surface-variant);
+    }
+
+    .broadsheet-select {
+      background-color: var(--background);
+      border: 1px solid var(--outline);
+      color: var(--on-surface);
+      padding: var(--space-xs) var(--space-sm);
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      font-weight: 600;
+      border-radius: var(--rounded);
+      cursor: pointer;
+    }
+
+    .broadsheet-btn {
+      background-color: var(--primary);
+      color: var(--on-primary);
+      border: 1px solid var(--primary);
+      padding: var(--space-xs) var(--space-md);
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: var(--label-size);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      border-radius: var(--rounded);
+    }
+
+    .broadsheet-btn--secondary {
+      background-color: var(--surface-container-low);
+      color: var(--on-surface);
+      border-color: var(--outline);
+    }
+
+    .broadsheet-btn:hover {
+      opacity: 0.92;
+    }
+
+    /* Key Metrics Hairline Row */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      border: 1px solid var(--outline-variant);
+      background-color: var(--surface-container-low);
+      margin-top: var(--space-xs);
+    }
+
+    .metric-cell {
+      padding: var(--space-sm) var(--space-md);
+      border-right: 1px solid var(--outline-variant);
+    }
+    .metric-cell:last-child {
+      border-right: none;
+    }
+
+    .metric-label {
+      font-family: var(--font-label);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--on-surface-variant);
+    }
+
+    .metric-val {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--on-surface);
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    .metric-hint {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+    }
+
+    /* Layout Columns: Paper Container & Side Drawer */
+    .exam-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    /* The Authentic Printed Examination Paper Sheet */
+    .paper-sheet {
+      background: var(--background);
+      border: 2px solid var(--outline);
+      padding: var(--space-xl) var(--space-lg);
+      position: relative;
+    }
+
+    .official-header {
+      text-align: center;
+      border-bottom: 2px solid var(--outline);
+      padding-bottom: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .gov-seal-text {
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--on-surface-variant);
+    }
+
+    .official-exam-title {
+      font-family: var(--font-headline);
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: var(--space-xs) 0;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .bilingual-subtitle {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--on-surface);
+      margin-bottom: var(--space-xs);
+    }
+
+    .version-line {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: 0.9375rem;
+      color: var(--on-surface-variant);
+    }
+
+    .timing-marks-table {
+      width: 100%;
+      border-top: 1px solid var(--outline);
+      border-bottom: 1px solid var(--outline);
+      margin-top: var(--space-sm);
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-xs) var(--space-md);
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+    }
+
+    /* Instructions Box */
+    .instructions-box {
+      border: 1px dashed var(--outline);
+      background-color: var(--surface-container-low);
+      padding: var(--space-md);
+      margin-bottom: var(--space-xl);
+      font-size: 0.875rem;
+    }
+
+    .instructions-title {
+      font-family: var(--font-label);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .instructions-list {
+      margin: 0;
+      padding-left: var(--space-md);
+    }
+    .instructions-list li {
+      margin-bottom: var(--space-xs);
+    }
+
+    /* Part Sections */
+    .exam-part {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .part-header {
+      border-top: var(--rule-section);
+      border-bottom: 1px solid var(--outline);
+      padding: var(--space-sm) 0;
+      margin-bottom: var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+
+    .part-title-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .part-claret-tag {
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: var(--label-size);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+    }
+
+    .part-main-title {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .part-marks-badge {
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      background: var(--surface-container);
+      padding: var(--space-xs) var(--space-sm);
+      border: 1px solid var(--outline-variant);
+    }
+
+    .part-directions {
+      font-style: italic;
+      font-size: 0.9375rem;
+      color: var(--on-surface-variant);
+      margin-bottom: var(--space-md);
+      padding-left: var(--space-xs);
+      border-left: 3px solid var(--secondary);
+    }
+
+    /* Question Cards & Styling */
+    .question-block {
+      border-bottom: 1px solid var(--outline-variant);
+      padding: var(--space-md) 0;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: var(--space-md);
+    }
+
+    .q-number-box {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--on-surface);
+      text-align: right;
+      padding-top: 2px;
+    }
+
+    .q-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .q-meta-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xs);
+      flex-wrap: wrap;
+    }
+
+    .unit-tag {
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--secondary);
+    }
+
+    .compulsory-badge {
+      font-family: var(--font-label);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: var(--primary-container);
+      color: var(--on-primary-container);
+      padding: 1px 6px;
+      border: 1px solid var(--primary);
+    }
+
+    .q-text-en {
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--on-surface);
+      font-size: 0.96875rem;
+      line-height: 1.6;
+    }
+
+    .q-text-ta {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: var(--on-surface-variant);
+      margin-top: 4px;
+      padding-top: 4px;
+      border-top: 1px dotted var(--outline-variant);
+    }
+
+    /* Part I MCQ Options */
+    .mcq-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-sm);
+      margin-top: var(--space-sm);
+    }
+
+    @media (max-width: 640px) {
+      .mcq-options-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .option-card {
+      border: 1px solid var(--outline-variant);
+      background: var(--surface-container-low);
+      padding: var(--space-xs) var(--space-sm);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xs);
+      font-size: 0.9rem;
+      transition: background-color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+    }
+
+    .option-card:hover {
+      background-color: var(--surface-container);
+      border-color: var(--outline);
+    }
+
+    .option-code {
+      font-family: var(--font-label);
+      font-weight: 700;
+      min-width: 22px;
+      color: var(--on-surface);
+    }
+
+    .option-text-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .option-text-ta {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+    }
+
+    /* Quiz feedback states */
+    .option-card.selected-correct {
+      background-color: #e5f4ea;
+      border-color: var(--positive);
+      color: var(--positive);
+      font-weight: 600;
+    }
+
+    .option-card.selected-wrong {
+      background-color: var(--primary-container);
+      border-color: var(--error);
+      color: var(--error);
+    }
+
+    .option-card.highlight-correct {
+      border: 2px solid var(--positive);
+      background-color: #f1faf4;
+    }
+
+    /* Interactive Solution Disclosure */
+    .key-disclosure {
+      margin-top: var(--space-sm);
+      border-left: 3px solid var(--primary);
+      background-color: var(--surface-container-low);
+      padding: var(--space-sm) var(--space-md);
+      display: none;
+    }
+
+    .key-disclosure.open {
+      display: block;
+    }
+
+    .key-title {
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      margin-bottom: var(--space-xs);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mark-scheme-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: var(--space-xs);
+      font-size: 0.8125rem;
+    }
+    .mark-scheme-table th, .mark-scheme-table td {
+      border-bottom: 1px solid var(--outline-variant);
+      padding: 4px 6px;
+      text-align: left;
+    }
+    .mark-scheme-table th {
+      font-family: var(--font-label);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.6875rem;
+      color: var(--on-surface-variant);
+    }
+    .mark-scheme-table td.marks-col {
+      text-align: right;
+      font-weight: 700;
+      width: 70px;
+    }
+
+    .key-toggle-btn {
+      background: transparent;
+      border: 1px solid var(--outline);
+      color: var(--on-surface);
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 2px 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: var(--space-xs);
+      align-self: flex-start;
+      border-radius: var(--rounded);
+    }
+    .key-toggle-btn:hover {
+      background-color: var(--surface-container);
+    }
+
+    /* Part IV Internal Choice (a) OR (b) styling */
+    .or-divider {
+      text-align: center;
+      font-family: var(--font-label);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--primary);
+      margin: var(--space-md) 0;
+      position: relative;
+    }
+    .or-divider::before, .or-divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 42%;
+      height: 1px;
+      background: var(--outline-variant);
+    }
+    .or-divider::before { left: 0; }
+    .or-divider::after { right: 0; }
+
+    /* Modal for Blueprint & Analysis */
+    .blueprint-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 24, 23, 0.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-md);
+    }
+
+    .blueprint-modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--background);
+      border: 3px double var(--on-surface);
+      width: 100%;
+      max-width: 820px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: var(--space-lg);
+    }
+
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--outline);
+      padding-bottom: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+
+    .modal-title {
+      font-family: var(--font-headline);
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .close-btn {
+      background: transparent;
+      border: 1px solid var(--outline);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 2px 8px;
+    }
+
+    /* Blueprint Table */
+    .bp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+      margin-top: var(--space-sm);
+    }
+    .bp-table th, .bp-table td {
+      border: 1px solid var(--outline-variant);
+      padding: 6px 8px;
+      text-align: center;
+    }
+    .bp-table th {
+      background: var(--surface-container-low);
+      font-family: var(--font-label);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.6875rem;
+    }
+    .bp-table td.unit-title-cell {
+      text-align: left;
+      font-weight: 600;
+    }
+    .bp-table tfoot td {
+      font-weight: 700;
+      background: var(--surface-container);
+    }
+
+    /* Score Banner for Quiz Mode */
+    .quiz-score-banner {
+      background-color: var(--surface-container-low);
+      border: 1px solid var(--outline);
+      border-left: 5px solid var(--secondary);
+      padding: var(--space-sm) var(--space-md);
+      margin-bottom: var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+
+    .score-title {
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      color: var(--secondary);
+    }
+
+    .score-counts {
+      font-family: var(--font-headline);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    /* Focus & Accessibility */
+    button:focus-visible, select:focus-visible, input:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Print styles replicating genuine physical paper */
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+      .masthead-line, .desk-bar, .metrics-bar, .key-toggle-btn, .action-controls {
+        display: none !important;
+      }
+      .paper-sheet {
+        border: none;
+        padding: 0;
+      }
+      .key-disclosure {
+        display: block !important;
+        border-left: 1px solid #000;
+        background: #fdfdfd;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-grid">
+  <!-- Masthead Top Line -->
+  <div class="masthead-line">
+    <span>Government of Tamil Nadu • Directorate of Government Examinations</span>
+    <span>HSE Second Year (+2) • Subject Code: 4719 / 5067</span>
+    <span>Archive 2020–2026</span>
+  </div>
+
+  <!-- Masthead Title Block -->
+  <div class="masthead-title-wrap">
+    <div>
+      <h1 class="site-title">Physics Public Examination Papers & Official Keys</h1>
+      <div class="site-subhead">
+        Complete bilingual (English & தமிழ்) question papers, 1-mark objective scoring, compulsory problem keys, and official marking schemes.
+      </div>
+    </div>
+    <div class="exam-plate">
+      <span>பதிவு எண் / Register Number</span>
+      <div class="reg-box-row" aria-label="Register Number 8 digits">
+        <span class="reg-cell">4</span>
+        <span class="reg-cell">7</span>
+        <span class="reg-cell">1</span>
+        <span class="reg-cell">9</span>
+        <span class="reg-cell">2</span>
+        <span class="reg-cell">0</span>
+        <span class="reg-cell">2</span>
+        <span class="reg-cell">6</span>
+      </div>
+      <span style="font-size: 0.6875rem; color: var(--on-surface-variant); margin-top: 2px;">Original Board Format</span>
+    </div>
+  </div>
+
+  <!-- Desk Bar: Year Tabs, Filters & Actions -->
+  <div class="desk-bar">
+    <div class="year-tabs" id="year-tabs-container">
+      <button type="button" class="year-btn active" onclick="switchYear('2026')">March 2026</button>
+      <button type="button" class="year-btn" onclick="switchYear('2025')">March 2025</button>
+      <button type="button" class="year-btn" onclick="switchYear('2024')">March 2024</button>
+      <button type="button" class="year-btn" onclick="switchYear('2023-july')">July 2023</button>
+      <button type="button" class="year-btn" onclick="switchYear('2023-mar')">March 2023</button>
+      <button type="button" class="year-btn" onclick="switchYear('2022-july')">July 2022</button>
+      <button type="button" class="year-btn" onclick="switchYear('2022-may')">May 2022</button>
+      <button type="button" class="year-btn" onclick="switchYear('2021-sep')">Sep 2021</button>
+      <button type="button" class="year-btn" onclick="switchYear('2020-mar')">March 2020</button>
+    </div>
+
+    <div class="action-controls">
+      <div class="control-group">
+        <label for="lang-select" class="control-label">Language View</label>
+        <select id="lang-select" class="broadsheet-select" onchange="changeLanguageMode(this.value)">
+          <option value="both">Bilingual (English & தமிழ்)</option>
+          <option value="en">English Only</option>
+          <option value="ta">தமிழ் மட்டும் (Tamil Only)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="mode-select" class="control-label">Study Mode</label>
+        <select id="mode-select" class="broadsheet-select" onchange="toggleQuizMode(this.value)">
+          <option value="interactive">Interactive Quiz (Part I)</option>
+          <option value="reveal-all">Reveal All Official Keys</option>
+          <option value="hide-all">Pure Exam View (Hidden Keys)</option>
+        </select>
+      </div>
+
+      <button type="button" class="broadsheet-btn broadsheet-btn--secondary" onclick="openBlueprintModal()">
+        <i data-lucide="bar-chart-2" style="width: 14px; height: 14px;"></i>
+        Blueprint
+      </button>
+
+      <button type="button" class="broadsheet-btn" onclick="exportCurrentPaper()">
+        <i data-lucide="download" style="width: 14px; height: 14px;"></i>
+        Export
+      </button>
+
+      <button type="button" class="broadsheet-btn broadsheet-btn--secondary" onclick="window.print()">
+        <i data-lucide="printer" style="width: 14px; height: 14px;"></i>
+        Print
+      </button>
+    </div>
+  </div>
+
+  <!-- Metrics Bar: Active Paper Summary -->
+  <div class="metrics-bar">
+    <div class="metric-cell">
+      <div class="metric-label">Active Examination</div>
+      <div class="metric-val" id="summary-exam-name">March 2026</div>
+      <div class="metric-hint" id="summary-session">State Board Annual Public Exam</div>
+    </div>
+    <div class="metric-cell">
+      <div class="metric-label">Maximum Theory Marks</div>
+      <div class="metric-val">70 <span style="font-size: 0.8125rem; font-weight: 400; color: var(--on-surface-variant);">/ 70</span></div>
+      <div class="metric-hint">30 Marks Practical Internal</div>
+    </div>
+    <div class="metric-cell">
+      <div class="metric-label">Allotted Time</div>
+      <div class="metric-val">3.00 Hours</div>
+      <div class="metric-hint">15 min reading time</div>
+    </div>
+    <div class="metric-cell">
+      <div class="metric-label">Total Questions</div>
+      <div class="metric-val">38 വിனாக்கள்</div>
+      <div class="metric-hint">Parts I, II, III, & IV</div>
+    </div>
+    <div class="metric-cell">
+      <div class="metric-label">Part I Live Score</div>
+      <div class="metric-val" id="summary-score">0 / 15</div>
+      <div class="metric-hint" id="summary-accuracy">0% Correct (Quiz Mode)</div>
+    </div>
+  </div>
+
+  <!-- Live Paper Canvas -->
+  <main class="exam-layout">
+    <article class="paper-sheet" id="paper-sheet-container">
+      <!-- Dynamic Exam Content injected via JS -->
+    </article>
+  </main>
+</div>
+
+<!-- Blueprint & Weightage Modal -->
+<div class="blueprint-modal" id="blueprint-modal" onclick="closeBlueprintModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-head">
+      <h2 class="modal-title">Tamil Nadu HSE Physics Blueprint & Unit-wise Mark Distribution</h2>
+      <button type="button" class="close-btn" onclick="closeBlueprintModalDirect()">✕</button>
+    </div>
+    <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-top: 0;">
+      Standard Tamil Nadu State Board Class 12 Physics Scheme of Evaluation (Theory: 70 Marks, 38 Questions).
+    </p>
+
+    <table class="bp-table">
+      <thead>
+        <tr>
+          <th>Unit No.</th>
+          <th>Unit Name (பாடப்பிரிவு)</th>
+          <th>Part I (1M)</th>
+          <th>Part II (2M)</th>
+          <th>Part III (3M)</th>
+          <th>Part IV (5M)</th>
+          <th>Total Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Unit 1</td>
+          <td class="unit-title-cell">Electrostatics (நிலைமின்னியல்)</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1 (Choice)</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Unit 2</td>
+          <td class="unit-title-cell">Current Electricity (மின்னோட்டவியல்)</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1 (Choice)</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Unit 3</td>
+          <td class="unit-title-cell">Magnetism & Magnetic Effects of Current (காந்தவியல்)</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1 (Choice)</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Unit 4</td>
+          <td class="unit-title-cell">Electromagnetic Induction & AC (மின்காந்தத் தூண்டல்)</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1 (Choice)</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Unit 5</td>
+          <td class="unit-title-cell">Electromagnetic Waves (மின்காந்த அலைகள்)</td>
+          <td>1</td>
+          <td>1</td>
+          <td>—</td>
+          <td>—</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Unit 6</td>
+          <td class="unit-title-cell">Optics (ஒளியியல்)</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1 (Choice)</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Unit 7</td>
+          <td class="unit-title-cell">Dual Nature of Radiation & Matter (பருப்பொருளின் இருமைப் பண்பு)</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>—</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>Unit 8</td>
+          <td class="unit-title-cell">Atomic & Nuclear Physics (அணு மற்றும் அணுக்கரு இயற்பியல்)</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1 (Choice)</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>Unit 9</td>
+          <td class="unit-title-cell">Semiconductor Electronics (குறைக்கடத்தி எலக்ட்ரானியல்)</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1 (Choice)</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>Unit 10</td>
+          <td class="unit-title-cell">Communication Systems (தகவல் தொடர்பு அமைப்புகள்)</td>
+          <td>1</td>
+          <td>—</td>
+          <td>1</td>
+          <td>—</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Unit 11</td>
+          <td class="unit-title-cell">Recent Developments in Physics (அண்மைக்கால வளர்ச்சிகள்)</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>2 (in Choice)</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total Marks (Including Choices ~110 Marks)</td>
+          <td>15</td>
+          <td>18 (Ans 12)</td>
+          <td>27 (Ans 18)</td>
+          <td>50 (Ans 25)</td>
+          <td>110 (Write 70)</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div style="margin-top: var(--space-md); padding: var(--space-sm); background: var(--surface-container-low); border-left: 4px solid var(--primary); font-size: 0.8125rem;">
+      <strong>Compulsory Questions Rule:</strong> In Part II, Question No. 24 is compulsory (usually a numerical problem from Mechanics, Current, or Modern Physics). In Part III, Question No. 33 is compulsory (numerical or conceptual derivation problem).
+    </div>
+  </div>
+</div>
+
+<api-shim></api-shim>
+<script>
+  /* Master Data Store for Tamil Nadu Class 12 Physics Public Examination Papers */
+  const EXAM_DATABASE = {
+    "2026": {
+      year: "2026",
+      sessionName: "March 2026",
+      code: "4719 / 5067",
+      titleEn: "HIGHER SECONDARY SECOND YEAR PUBLIC EXAMINATION - MARCH 2026",
+      titleTa: "மேல்நிலை இரண்டாம் ஆண்டு பொதுத் தேர்வு - மார்ச் 2026",
+      subtitleEn: "PHYSICS (Tamil & English Versions)",
+      subtitleTa: "இயற்பியல் (தமிழ் மற்றும் ஆங்கில வழி)",
+      pagesCount: 11,
+      part1: [
+        {
+          qno: 1,
+          unit: "Unit 1: Electrostatics",
+          en: "Two identical conducting spheres having charges $+q$ and $-q$ are separated by a distance $r$. The electrostatic force between them is $F$. If each sphere is given an additional charge of $+2q$, then the new electrostatic force between them will be:",
+          ta: "$+q$ மற்றும் $-q$ மின்னூட்டங்களைக் கொண்ட ஒரே மாதிரியான இரு கடத்தும் கோளங்கள் $r$ இடைவெளியில் வைக்கப்பட்டுள்ளன. அவற்றிடையே செயல்படும் நிலைமின் விசை $F$. இப்போது ஒவ்வொரு கோளத்திற்கும் கூடுதலாக $+2q$ மின்னூட்டம் அளிக்கப்பட்டால், அவற்றிடையே செயல்படும் புதிய விசை:",
+          options: [
+            { code: "(a)", en: "$F$", ta: "$F$" },
+            { code: "(b)", en: "$-F$ (Attractive)", ta: "$-F$ (கவர்ச்சி விசை)" },
+            { code: "(c)", en: "$3F$ (Repulsive)", ta: "$3F$ (விலக்கு விசை)" },
+            { code: "(d)", en: "$-3F$ (Attractive)", ta: "$-3F$ (கவர்ச்சி விசை)" }
+          ],
+          correct: "(c)",
+          solution: "Initial force: $F = -k \\frac{q^2}{r^2}$ (attractive). New charges: $q_1' = +q + 2q = +3q$, $q_2' = -q + 2q = +q$. New force: $F' = k \\frac{(+3q)(+q)}{r^2} = 3 k \\frac{q^2}{r^2} = 3F$ (Repulsive force between like positive charges)."
+        },
+        {
+          qno: 2,
+          unit: "Unit 2: Current Electricity",
+          en: "A wire of resistance $R$ is stretched uniformly so that its length becomes $n$ times its original length. The new resistance of the wire is:",
+          ta: "$R$ மின்தடை கொண்ட ஒரு கம்பி சீராக நீட்டப்பட்டு அதன் நீளம் தொடக்க நீளத்தைப் போல $n$ மடங்காக மாறினால், அதன் புதிய மின்தடை:",
+          options: [
+            { code: "(a)", en: "$n R$", ta: "$n R$" },
+            { code: "(b)", en: "$R / n$", ta: "$R / n$" },
+            { code: "(c)", en: "$n^2 R$", ta: "$n^2 R$" },
+            { code: "(d)", en: "$R / n^2$", ta: "$R / n^2$" }
+          ],
+          correct: "(c)",
+          solution: "Volume remains constant: $V = A_1 L_1 = A_2 L_2$. Since $L_2 = n L_1$, $A_2 = A_1 / n$. Resistance $R' = \\rho \\frac{L_2}{A_2} = \\rho \\frac{n L_1}{A_1 / n} = n^2 \\rho \\frac{L_1}{A_1} = n^2 R$."
+        },
+        {
+          qno: 3,
+          unit: "Unit 3: Magnetism",
+          en: "A charged particle of charge $q$ and mass $m$ enters perpendicularly into a uniform magnetic field $B$ with velocity $v$. The time period of revolution in the circular path is independent of:",
+          ta: "$q$ மின்னூட்டமும் $m$ நிறையும் கொண்ட ஒரு மின்துகள் $B$ என்ற சீரான காந்தப்புலத்திற்கு செங்குத்தாக $v$ திசைவேகத்துடன் நுழைகிறது. அது வட்டப்பாதையில் இயங்கும் அலைவுக்காலம் எதனைச் சார்ந்திருக்காது?",
+          options: [
+            { code: "(a)", en: "Mass $m$", ta: "நிறை $m$" },
+            { code: "(b)", en: "Charge $q$", ta: "மின்னூட்டம் $q$" },
+            { code: "(c)", en: "Magnetic field $B$", ta: "காந்தப்புலம் $B$" },
+            { code: "(d)", en: "Velocity $v$ and radius $r$", ta: "திசைவேகம் $v$ மற்றும் ஆரம் $r$" }
+          ],
+          correct: "(d)",
+          solution: "Centripetal force equals magnetic Lorentz force: $\\frac{m v^2}{r} = q v B \\implies r = \\frac{m v}{q B}$. Time period $T = \\frac{2\\pi r}{v} = \\frac{2\\pi m}{q B}$, which is completely independent of both speed $v$ and radius $r$."
+        },
+        {
+          qno: 4,
+          unit: "Unit 4: Electromagnetic Induction",
+          en: "In a series LCR alternating current circuit at resonance, the phase angle $\\phi$ between voltage and current is:",
+          ta: "ஒரு தொடர் LCR மாறுதிசை மின்னோட்டச் சுற்றில் ஒத்திசைவின் போது, மின்னழுத்தம் மற்றும் மின்னோட்டத்திற்கு இடையேயான கட்ட வேறுபாடு $\\phi$:",
+          options: [
+            { code: "(a)", en: "$\\pi / 2$", ta: "$\\pi / 2$" },
+            { code: "(b)", en: "$\\pi$", ta: "$\\pi$" },
+            { code: "(c)", en: "$0$", ta: "$0$" },
+            { code: "(d)", en: "$\\pi / 4$", ta: "$\\pi / 4$" }
+          ],
+          correct: "(c)",
+          solution: "At resonance, inductive reactance equals capacitive reactance ($X_L = X_C$). Hence, impedance $Z = R$. Phase angle $\\tan \\phi = \\frac{X_L - X_C}{R} = 0 \\implies \\phi = 0$. Current and voltage are in the same phase."
+        },
+        {
+          qno: 5,
+          unit: "Unit 5: Electromagnetic Waves",
+          en: "Which of the following electromagnetic radiations has the shortest wavelength?",
+          ta: "பின்வருவனவற்றுள் மிகக் குறைந்த அலைநீளம் கொண்ட மின்காந்த கதிர்வீச்சு எது?",
+          options: [
+            { code: "(a)", en: "Microwaves", ta: "நுண்ணலைகள்" },
+            { code: "(b)", en: "Ultraviolet rays", ta: "புறஊதாக் கதிர்கள்" },
+            { code: "(c)", en: "Gamma rays", ta: "காமாக் கதிர்கள்" },
+            { code: "(d)", en: "Infrared rays", ta: "அகச்சிவப்புக் கதிர்கள்" }
+          ],
+          correct: "(c)",
+          solution: "Gamma rays have the highest frequency ($\u003e 10^{19} \\text{ Hz}$) and shortest wavelength ($\u003c 10^{-12} \\text{ m}$) in the electromagnetic spectrum."
+        },
+        {
+          qno: 6,
+          unit: "Unit 6: Ray Optics",
+          en: "A ray of light traveling in a denser medium of refractive index $n = \\sqrt{2}$ strikes the surface at an interface with air. The critical angle for total internal reflection is:",
+          ta: "$n = \\sqrt{2}$ ஒளிவிலகல் எண் கொண்ட அடர்மிகு ஊடகத்திலிருந்து செல்லும் ஒளிக்கதிர் காற்றுடன் உள்ள இடைமுகத்தைத் தாக்குகிறது. முழு அக எதிரொளிப்பிற்கான மாறுநிலைக்கோணம்:",
+          options: [
+            { code: "(a)", en: "$30^\\circ$", ta: "$30^\\circ$" },
+            { code: "(b)", en: "$45^\\circ$", ta: "$45^\\circ$" },
+            { code: "(c)", en: "$60^\\circ$", ta: "$60^\\circ$" },
+            { code: "(d)", en: "$90^\\circ$", ta: "$90^\\circ$" }
+          ],
+          correct: "(b)",
+          solution: "The relation between critical angle and refractive index: $\\sin i_c = \\frac{1}{n} = \\frac{1}{\\sqrt{2}} \\implies i_c = 45^\\circ$."
+        },
+        {
+          qno: 7,
+          unit: "Unit 6: Wave Optics",
+          en: "In Young's double-slit experiment, if the separation between the slits is halved and the distance between slits and screen is doubled, the fringe width becomes:",
+          ta: "யங் இரட்டைப் பிளவு ஆய்வில், பிளவுகளுக்கு இடையேயான தொலைவு பாதியாகக் குறைக்கப்பட்டு, பிளவுகளுக்கும் திரைக்குமான தொலைவு இருமடங்காக அதிகரிக்கப்பட்டால், பட்டை அகலம்:",
+          options: [
+            { code: "(a)", en: "Halved", ta: "பாதியாகும்" },
+            { code: "(b)", en: "Doubled", ta: "இருமடங்காகும்" },
+            { code: "(c)", en: "Four times", ta: "நான்கு மடங்காகும்" },
+            { code: "(d)", en: "Unchanged", ta: "மாறாது" }
+          ],
+          correct: "(c)",
+          solution: "Fringe width formula: $\\beta = \\frac{\\lambda D}{d}$. When $D' = 2D$ and $d' = d/2$: $\\beta' = \\frac{\\lambda (2D)}{d/2} = 4 \\frac{\\lambda D}{d} = 4\\beta$."
+        },
+        {
+          qno: 8,
+          unit: "Unit 7: Dual Nature",
+          en: "If the kinetic energy of a free electron is doubled, its de Broglie wavelength changes by the factor:",
+          ta: "ஒரு தனித்த எலக்ட்ரானின் இயக்க ஆற்றல் இருமடங்கானால், அதன் டி பிராய் அலைநீளம் மாறும் காரணி:",
+          options: [
+            { code: "(a)", en: "2", ta: "2" },
+            { code: "(b)", en: "$\\frac{1}{2}$", ta: "$\\frac{1}{2}$" },
+            { code: "(c)", en: "$\\sqrt{2}$", ta: "$\\sqrt{2}$" },
+            { code: "(d)", en: "$\\frac{1}{\\sqrt{2}}$", ta: "$\\frac{1}{\\sqrt{2}}$" }
+          ],
+          correct: "(d)",
+          solution: "De Broglie wavelength: $\\lambda = \\frac{h}{\\sqrt{2mK}}$. When $K' = 2K$, $\\lambda' = \\frac{h}{\\sqrt{2m(2K)}} = \\frac{\\lambda}{\\sqrt{2}}$."
+        },
+        {
+          qno: 9,
+          unit: "Unit 8: Atomic Physics",
+          en: "The ratio of minimum to maximum wavelength in the Lyman series of hydrogen spectrum is:",
+          ta: "ஹைட்ரஜன் அணு நிறமாலையின் லைமன் தொடரில் சிறும அலைநீளத்திற்கும் பெரும அலைநீளத்திற்குமான தகவு:",
+          options: [
+            { code: "(a)", en: "$3/4$", ta: "$3/4$" },
+            { code: "(b)", en: "$4/3$", ta: "$4/3$" },
+            { code: "(c)", en: "$1/4$", ta: "$1/4$" },
+            { code: "(d)", en: "$4/1$", ta: "$4/1$" }
+          ],
+          correct: "(a)",
+          solution: "Lyman series: $\\frac{1}{\\lambda} = R \\left( \\frac{1}{1^2} - \\frac{1}{n^2} \\right)$. For $\\lambda_{\\text{min}}$, $n = \\infty \\implies \\lambda_{\\text{min}} = \\frac{1}{R}$. For $\\lambda_{\\text{max}}$, $n = 2 \\implies \\frac{1}{\\lambda_{\\text{max}}} = R\\left(1 - \\frac{1}{4}\\right) = \\frac{3R}{4} \\implies \\lambda_{\\text{max}} = \\frac{4}{3R}$. Ratio $\\frac{\\lambda_{\\text{min}}}{\\lambda_{\\text{max}}} = \\frac{3}{4}$."
+        },
+        {
+          qno: 10,
+          unit: "Unit 8: Nuclear Physics",
+          en: "The nuclear density of all stable nuclei is approximately:",
+          ta: "அனைத்து நிலையான அணுக்கருக்களின் அணுக்கரு அடர்த்தி தோராயமாக:",
+          options: [
+            { code: "(a)", en: "$2.3 \\times 10^3 \\text{ kg m}^{-3}$", ta: "$2.3 \\times 10^3 \\text{ kg m}^{-3}$" },
+            { code: "(b)", en: "$2.3 \\times 10^{17} \\text{ kg m}^{-3}$", ta: "$2.3 \\times 10^{17} \\text{ kg m}^{-3}$" },
+            { code: "(c)", en: "$1.6 \\times 10^{27} \\text{ kg m}^{-3}$", ta: "$1.6 \\times 10^{27} \\text{ kg m}^{-3}$" },
+            { code: "(d)", en: "$9.1 \\times 10^{-31} \\text{ kg m}^{-3}$", ta: "$9.1 \\times 10^{-31} \\text{ kg m}^{-3}$" }
+          ],
+          correct: "(b)",
+          solution: "Nuclear density $\\rho = \\frac{\\text{Mass}}{\\text{Volume}} = \\frac{A \\cdot m_N}{\\frac{4}{3}\\pi R_0^3 A} = \\frac{3 m_N}{4\\pi R_0^3} \\approx 2.3 \\times 10^{17} \\text{ kg m}^{-3}$, completely independent of mass number $A$."
+        },
+        {
+          qno: 11,
+          unit: "Unit 9: Semiconductor Electronics",
+          en: "In a half-wave rectifier, if the input alternating current frequency is $50 \\text{ Hz}$, then the output ripple frequency is:",
+          ta: "ஓர் அரை அலை திருத்தியில், உள்ளீட்டு மாறுதிசை மின்னோட்டத்தின் அதிர்வெண் $50 \\text{ Hz}$ எனில் வெளியீட்டு அலைவு அதிர்வெண்:",
+          options: [
+            { code: "(a)", en: "$25 \\text{ Hz}$", ta: "$25 \\text{ Hz}$" },
+            { code: "(b)", en: "$50 \\text{ Hz}$", ta: "$50 \\text{ Hz}$" },
+            { code: "(c)", en: "$100 \\text{ Hz}$", ta: "$100 \\text{ Hz}$" },
+            { code: "(d)", en: "$0 \\text{ Hz}$", ta: "$0 \\text{ Hz}$" }
+          ],
+          correct: "(b)",
+          solution: "In a half-wave rectifier, one pulse occurs per full AC input cycle, so output frequency equals input frequency: $f_{\\text{out}} = f_{\\text{in}} = 50 \\text{ Hz}$. (In contrast, a full-wave rectifier yields $2f = 100 \\text{ Hz}$)."
+        },
+        {
+          qno: 12,
+          unit: "Unit 9: Logic Gates",
+          en: "The output $Y$ of a logic gate is $1$ only when all its inputs are $0$. The logic gate is:",
+          ta: "ஒரு தருக்க வாயிலின் அனைத்து உள்ளீடுகளும் $0$ ஆக இருக்கும்போது மட்டுமே வெளியீடு $Y = 1$ ஆகிறது எனில், அந்த வாயில்:",
+          options: [
+            { code: "(a)", en: "AND gate", ta: "AND வாயில்" },
+            { code: "(b)", en: "OR gate", ta: "OR வாயில்" },
+            { code: "(c)", en: "NOR gate", ta: "NOR வாயில்" },
+            { code: "(d)", en: "NAND gate", ta: "NAND வாயில்" }
+          ],
+          correct: "(c)",
+          solution: "Boolean expression for NOR gate is $Y = \\overline{A + B}$. When $A=0, B=0$, $Y = \\overline{0+0} = 1$. For any other input combination containing $1$, the output is $0$."
+        },
+        {
+          qno: 13,
+          unit: "Unit 10: Communication Systems",
+          en: "In an amplitude modulated wave, the maximum and minimum amplitudes are $12 \\text{ V}$ and $4 \\text{ V}$ respectively. The modulation factor (index) $m$ is:",
+          ta: "ஒரு வீச்சு மாடுலேற்றம் செய்யப்பட்ட அலையில் பெரும மற்றும் சிறும வீச்சுகள் முறையே $12 \\text{ V}$ மற்றும் $4 \\text{ V}$ ஆகும். மாடுலேற்றக் காரணி (குறியீடு) $m$ என்பது:",
+          options: [
+            { code: "(a)", en: "$0.5$", ta: "$0.5$" },
+            { code: "(b)", en: "$0.67$", ta: "$0.67$" },
+            { code: "(c)", en: "$0.33$", ta: "$0.33$" },
+            { code: "(d)", en: "$1.5$", ta: "$1.5$" }
+          ],
+          correct: "(a)",
+          solution: "Modulation index $m = \\frac{E_{\\text{max}} - E_{\\text{min}}}{E_{\\text{max}} + E_{\\text{min}}} = \\frac{12 - 4}{12 + 4} = \\frac{8}{16} = 0.5$."
+        },
+        {
+          qno: 14,
+          unit: "Unit 2: Kirchhoff's Laws",
+          en: "Kirchhoff's current rule (junction rule) and voltage rule (loop rule) respectively demonstrate the conservation of:",
+          ta: "கிர்க்காஃபின் மின்னோட்ட விதி (சந்தி விதி) மற்றும் மின்னழுத்த விதி (சுற்று விதி) ஆகியவை முறையே எதன் மாறா விதிகளை நிரூபிக்கின்றன?",
+          options: [
+            { code: "(a)", en: "Charge and energy", ta: "மின்னூட்டம் மற்றும் ஆற்றல்" },
+            { code: "(b)", en: "Energy and charge", ta: "ஆற்றல் மற்றும் மின்னூட்டம்" },
+            { code: "(c)", en: "Momentum and energy", ta: "உந்தம் மற்றும் ஆற்றல்" },
+            { code: "(d)", en: "Mass and charge", ta: "நிறை மற்றும் மின்னூட்டம்" }
+          ],
+          correct: "(a)",
+          solution: "Kirchhoff's first rule (junction rule) $\\sum I = 0$ is based on conservation of electric charge. The second rule (loop rule) $\\sum IR = \\sum \\mathcal{E}$ is based on conservation of energy."
+        },
+        {
+          qno: 15,
+          unit: "Unit 3: Earth's Magnetism",
+          en: "The magnetic needle suspended freely at the magnetic equator of the Earth comes to rest horizontally. The angle of dip (inclination) at the equator is:",
+          ta: "புவியின் காந்த நிலநடுக்கோட்டில் தடையின்றி தொங்கவிடப்பட்ட காந்த ஊசி கிடைமட்டமாக நிற்கிறது. நிலநடுக்கோட்டில் சரிவுக் கோணம் (dip angle):",
+          options: [
+            { code: "(a)", en: "$90^\\circ$", ta: "$90^\\circ$" },
+            { code: "(b)", en: "$0^\\circ$", ta: "$0^\\circ$" },
+            { code: "(c)", en: "$45^\\circ$", ta: "$45^\\circ$" },
+            { code: "(d)", en: "$180^\\circ$", ta: "$180^\\circ$" }
+          ],
+          correct: "(b)",
+          solution: "At the magnetic equator, the magnetic field is purely horizontal ($B_V = 0$). Hence, angle of dip $\\theta = \\tan^{-1}\\left(\\frac{B_V}{B_H}\\right) = 0^\\circ$. At the magnetic poles, dip is $90^\\circ$."
+        }
+      ],
+      part2: [
+        {
+          qno: 16,
+          unit: "Unit 1: Electrostatics",
+          en: "Define electric flux. Write its SI unit.",
+          ta: "மின்பாயம் - வரையறு. அதன் SI அலகை எழுதுக.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: The number of electric field lines crossing a given area held normal to it", m: "1 mark" },
+            { step: "Formula: $\\Phi_E = \\int \\vec{E} \\cdot d\\vec{A}$ and SI Unit: $\\text{N m}^2 \\text{ C}^{-1}$ (or $\\text{V m}$)", m: "1 mark" }
+          ],
+          solution: "Electric flux is defined as the total number of electric field lines passing normally through a given area. SI unit: $\\text{N m}^2 \\text{ C}^{-1}$ or $\\text{V m}$. In Tamil: ஒரு குறிப்பிட்ட பரப்பு வழியே அதற்கு செங்குத்தாகக் கடந்து செல்லும் மின்புலக் கோடுகளின் எண்ணிக்கை மின்பாயம் எனப்படும்."
+        },
+        {
+          qno: 17,
+          unit: "Unit 2: Current Electricity",
+          en: "State Fleming's Left Hand Rule.",
+          ta: "பிளெமிங்கின் இடக்கை விதியைக் கூறுக.",
+          marks: 2,
+          scheme: [
+            { step: "Stretching forefinger, middle finger, and thumb mutually perpendicular", m: "1 mark" },
+            { step: "Forefinger: Magnetic field, Middle finger: Current, Thumb: Force/motion of conductor", m: "1 mark" }
+          ],
+          solution: "Stretch the forefinger, middle finger, and thumb of the left hand mutually perpendicular to one another. If the forefinger points in the direction of magnetic field and middle finger in the direction of electric current, then the thumb indicates the direction of magnetic force acting on the conductor."
+        },
+        {
+          qno: 18,
+          unit: "Unit 4: AC Circuits",
+          en: "What is meant by wattless current?",
+          ta: "திறனற்ற மின்னோட்டம் என்றால் என்ன?",
+          marks: 2,
+          scheme: [
+            { step: "Statement that current does not consume electrical power ($P = V_{rms} I_{rms} \\cos(\\pi/2) = 0$)", m: "1 mark" },
+            { step: "Condition: In a purely inductive or capacitive circuit where phase angle $\\phi = \\pi/2$", m: "1 mark" }
+          ],
+          solution: "The current in an AC circuit is said to be wattless current if the average power consumed by the circuit over a complete cycle is zero. This occurs in a purely inductive or capacitive circuit where the phase difference between voltage and current is $\\pi/2$ ($\u005ccos 90^\\circ = 0$)."
+        },
+        {
+          qno: 19,
+          unit: "Unit 5: Electromagnetic Waves",
+          en: "Write any two applications of microwaves.",
+          ta: "நுண்ணலைகளின் (Microwaves) ஏதேனும் இரு பயன்களை எழுதுக.",
+          marks: 2,
+          scheme: [
+            { step: "Point 1: Radar systems for aircraft navigation and speed detection", m: "1 mark" },
+            { step: "Point 2: Microwave ovens for domestic and industrial heating / satellite communication", m: "1 mark" }
+          ],
+          solution: "1. Microwaves are used in radar systems for aircraft navigation, defense surveillance, and detecting vehicle speeds. 2. Used in microwave ovens for rapid dielectric heating of food. 3. Used in long-distance satellite and wireless telecommunication links."
+        },
+        {
+          qno: 20,
+          unit: "Unit 6: Optics",
+          en: "State Brewster's Law.",
+          ta: "புரூஸ்டர் விதியைக் கூறுக.",
+          marks: 2,
+          scheme: [
+            { step: "Statement: Tangent of the polarizing angle is equal to the refractive index of the medium", m: "1 mark" },
+            { step: "Formula: $\\tan i_p = n$", m: "1 mark" }
+          ],
+          solution: "Brewster's law states that the tangent of the polarising angle ($i_p$) for a transparent refracting medium is numerically equal to the refractive index ($n$) of the medium: $\\tan i_p = n$."
+        },
+        {
+          qno: 21,
+          unit: "Unit 7: Dual Nature",
+          en: "Define threshold frequency for photoelectric emission.",
+          ta: "ஒளிமின் உமிழ்விற்கான பயன்தொடக்க அதிர்வெண் - வரையறு.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: Minimum frequency of incident light required to liberate photoelectrons", m: "1 mark" },
+            { step: "Mention of zero kinetic energy at threshold frequency / symbol $\\nu_0$", m: "1 mark" }
+          ],
+          solution: "Threshold frequency ($\u005cnu_0$) is defined as the minimum frequency of incident radiation below which no photoelectrons are emitted from the metal surface, regardless of the intensity of incident radiation."
+        },
+        {
+          qno: 22,
+          unit: "Unit 8: Nuclear Physics",
+          en: "Define mass defect ($\u005cDelta m$).",
+          ta: "நிறைக் குறைபாடு ($\u005cDelta m$) - வரையறு.",
+          marks: 2,
+          scheme: [
+            { step: "Difference between the sum of masses of individual nucleons and rest mass of nucleus", m: "1 mark" },
+            { step: "Formula: $\\Delta m = [Z m_p + (A - Z)m_n] - M$", m: "1 mark" }
+          ],
+          solution: "Mass defect is the difference between the total mass of the individual constituent nucleons (protons and neutrons) forming the nucleus and the actual measured rest mass of the nucleus: $\\Delta m = [Z m_p + (A - Z)m_n] - M_{\\text{nucleus}}$."
+        },
+        {
+          qno: 23,
+          unit: "Unit 9: Semiconductor",
+          en: "What is rectification? Name the two types of rectifiers.",
+          ta: "திருத்துதல் என்றால் என்ன? இரு வகையான திருத்திகளின் பெயர்களைக் குறிப்பிடுக.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: Process of converting AC voltage into pulsating DC voltage", m: "1 mark" },
+            { step: "Types: Half-wave rectifier and Full-wave rectifier", m: "1 mark" }
+          ],
+          solution: "The process of converting an alternating current (AC) into direct current (DC) using a p-n junction diode is called rectification. The two types are: (i) Half-wave rectifier and (ii) Full-wave rectifier (centre-tapped or bridge type)."
+        },
+        {
+          qno: 24,
+          unit: "Unit 7: Dual Nature (Compulsory Numerical)",
+          isCompulsory: true,
+          en: "[Compulsory] Calculate the de Broglie wavelength of an electron accelerated through an electric potential difference of $100 \\text{ V}$.",
+          ta: "[கட்டாய வினா] $100 \\text{ V}$ மின்னழுத்த வேறுபாட்டினால் முடுக்கப்படும் எலக்ட்ரானின் டி பிராய் அலைநீளத்தைக் கணக்கிடுக.",
+          marks: 2,
+          scheme: [
+            { step: "Formula: $\\lambda = \\frac{12.27}{\\sqrt{V}} \\text{ \u00c5}$ or $\\lambda = \\frac{h}{\\sqrt{2 m e V}}$", m: "1 mark" },
+            { step: "Substitution & Final Answer: $\\lambda = \\frac{12.27}{\\sqrt{100}} = 1.227 \\text{ \u00c5} = 0.1227 \\text{ nm}$", m: "1 mark" }
+          ],
+          solution: "Formula: $\\lambda = \\frac{h}{\\sqrt{2 m e V}} = \\frac{12.27}{\\sqrt{V}} \\text{ \u00c5}$. Given $V = 100 \\text{ V}$. $\\lambda = \\frac{12.27}{\\sqrt{100}} = \\frac{12.27}{10} = 1.227 \\text{ \u00c5} = 1.227 \\times 10^{-10} \\text{ m}$ (or $0.1227 \\text{ nm}$)."
+        }
+      ],
+      part3: [
+        {
+          qno: 25,
+          unit: "Unit 1: Electrostatics",
+          en: "Derive the relation between electric field $\\vec{E}$ and electrostatic potential $V$.",
+          ta: "மின்புலம் $\\vec{E}$ மற்றும் மின்னழுத்தம் $V$ ஆகியவற்றுக்கு இடையேயான தொடர்பை பெறுக.",
+          marks: 3,
+          scheme: [
+            { step: "Work done in moving test charge: $dW = -q_0 E \\, dx$", m: "1 mark" },
+            { step: "Potential difference relation: $dV = \\frac{dW}{q_0} = -E \\, dx$", m: "1 mark" },
+            { step: "Final relation: $E = -\\frac{dV}{dx}$ with negative sign physical significance", m: "1 mark" }
+          ],
+          solution: "Work done to move a test charge $q_0$ by $dx$ against electric field: $dW = \\vec{F} \\cdot d\\vec{x} = -q_0 E \\, dx$. Potential difference: $dV = \\frac{dW}{q_0} = -E \\, dx \\implies E = -\\frac{dV}{dx}$. The electric field is the negative gradient of electric potential."
+        },
+        {
+          qno: 26,
+          unit: "Unit 2: Current Electricity",
+          en: "Obtain the macroscopic form of Ohm's law from microscopic relation between current density and drift velocity.",
+          ta: "மின்னோட்ட அடர்த்தி மற்றும் இழுப்புத் திசைவேகம் இடையேயான தொடர்பிலிருந்து ஓம் விதியின் நுண்மாதிரி மற்றும் பயன்பாட்டு வடிவத்தைப் பெறுக.",
+          marks: 3,
+          scheme: [
+            { step: "Microscopic relation: $J = n e v_d$", m: "1 mark" },
+            { step: "Substituting $v_d = \\frac{e\\tau}{m}E \\implies J = \\left(\\frac{n e^2 \\tau}{m}\\right)E = \\sigma E$", m: "1 mark" },
+            { step: "Macroscopic conversion: $I = J A = \\frac{\\sigma A}{L}V \\implies V = I R$", m: "1 mark" }
+          ],
+          solution: "Current $I = n e A v_d$. Current density $J = I/A = n e v_d$. Since $v_d = \\frac{e \\tau}{m} E$, $J = \\frac{n e^2 \\tau}{m} E = \\sigma E$. Substituting $E = V/L$ and $J = I/A$ gives $\\frac{I}{A} = \\sigma \\frac{V}{L} \\implies V = I \\left(\\frac{L}{\\sigma A}\\right) = I R$."
+        },
+        {
+          qno: 27,
+          unit: "Unit 3: Magnetism",
+          en: "State and explain Biot-Savart Law in vector form.",
+          ta: "பயோட்-சாவர்ட் விதியைக் கூறி வெக்டர் வடிவில் விளக்குக.",
+          marks: 3,
+          scheme: [
+            { step: "Statement of law ($dB \\propto I, dl, \\sin\\theta, 1/r^2$)", m: "1 mark" },
+            { step: "Scalar equation: $dB = \\frac{\\mu_0}{4\\pi} \\frac{I dl \\sin\\theta}{r^2}$", m: "1 mark" },
+            { step: "Vector form: $d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I (d\\vec{l} \\times \\hat{r})}{r^2}$", m: "1 mark" }
+          ],
+          solution: "Biot-Savart law states that the magnetic field $d\\vec{B}$ due to a current element $I d\\vec{l}$ at a distance $r$ is: $d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I(d\\vec{l} \\times \\hat{r})}{r^2}$. Magnitude: $dB = \\frac{\\mu_0}{4\\pi} \\frac{I dl \\sin\\theta}{r^2}$, directed perpendicular to the plane containing $d\\vec{l}$ and $\\hat{r}$."
+        },
+        {
+          qno: 28,
+          unit: "Unit 4: AC Circuits",
+          en: "Mention the various energy losses occurring in a real transformer and explain how each is minimized.",
+          ta: "ஒரு நடைமுறை மின்மாற்றியில் ஏற்படும் பல்வேறு ஆற்றல் இழப்புகளைக் குறிப்பிட்டு, அவை எவ்வாறு குறைக்கப்படுகின்றன என்பதை விளக்குக.",
+          marks: 3,
+          scheme: [
+            { step: "Hysteresis loss (minimized by using soft iron core of low retentivity)", m: "1 mark" },
+            { step: "Eddy current loss (minimized using laminated core sheets insulated by varnish)", m: "1 mark" },
+            { step: "Copper loss ($I^2R$ minimized with thick copper wires) & Flux leakage", m: "1 mark" }
+          ],
+          solution: "1. Core/Iron loss: (a) Hysteresis loss minimized by using high permeability soft iron / Mumetal with thin hysteresis loop; (b) Eddy current loss minimized by laminating the core. 2. Copper loss: $I^2R$ heating loss minimized by using thick wire for windings. 3. Flux leakage minimized by winding primary and secondary coils one over another."
+        },
+        {
+          qno: 29,
+          unit: "Unit 6: Optics",
+          en: "State the laws of refraction (Snell's Law).",
+          ta: "ஒளிவிலகல் விதிகளை (ஸ்நெல் விதி) கூறுக.",
+          marks: 3,
+          scheme: [
+            { step: "First law: Incident ray, refracted ray, and normal lie in the same plane", m: "1.5 marks" },
+            { step: "Second law (Snell's law): $\\frac{\\sin i}{\\sin r} = \\frac{n_2}{n_1} = n_{21}$", m: "1.5 marks" }
+          ],
+          solution: "1. The incident ray, refracted ray, and normal to the interface at the point of incidence all lie in the same plane. 2. The ratio of the sine of the angle of incidence ($i$) to the sine of the angle of refraction ($r$) is a constant equal to the relative refractive index of the second medium with respect to the first: $\\frac{\\sin i}{\\sin r} = \\frac{n_2}{n_1}$."
+        },
+        {
+          qno: 30,
+          unit: "Unit 7: Dual Nature",
+          en: "State the fundamental laws of photoelectric emission.",
+          ta: "ஒளிமின் உமிழ்வின் அடிப்படை விதிகளைக் கூறுக.",
+          marks: 3,
+          scheme: [
+            { step: "Law 1: Photoelectric current is directly proportional to intensity of incident light", m: "1 mark" },
+            { step: "Law 2: Maximum kinetic energy depends linearly on frequency, independent of intensity", m: "1 mark" },
+            { step: "Law 3: Threshold frequency condition & instantaneous emission ($\u003c 10^{-9} \\text{ s}$)", m: "1 mark" }
+          ],
+          solution: "1. Rate of photoelectron emission is directly proportional to intensity of incident light for a given frequency. 2. Maximum kinetic energy of photoelectrons is independent of intensity and increases linearly with incident frequency. 3. Photoelectric emission does not occur below threshold frequency $\\nu_0$. 4. The emission process is instantaneous ($10^{-9} \\text{ s}$)."
+        },
+        {
+          qno: 31,
+          unit: "Unit 8: Nuclear Physics",
+          en: "Distinguish between nuclear fission and nuclear fusion reactions.",
+          ta: "அணுக்கரு பிளவு மற்றும் அணுக்கரு இணைவு வினைகளை வேறுபடுத்துக.",
+          marks: 3,
+          scheme: [
+            { step: "Fission: Heavy nucleus splits into two lighter nuclei; Fusion: Two light nuclei fuse into heavy nucleus", m: "1 mark" },
+            { step: "Temperature: Fission at room temp; Fusion requires extremely high temp ($\u003e 10^7 \\text{ K}$)", m: "1 mark" },
+            { step: "Examples with reactions ($^{235}\\text{U}$ fission vs $p-p$ cycle in stars)", m: "1 mark" }
+          ],
+          solution: "Nuclear Fission: Heavy nucleus (like $^{235}\\text{U}$) splits into two moderate nuclei with neutron emission at room temp. Nuclear Fusion: Two light nuclei (like Deuterium) combine under ultra-high temperatures ($10^7\\text{ K}$) and high pressures to form a heavier nucleus ($^4\\text{He}$), releasing much larger energy per unit mass."
+        },
+        {
+          qno: 32,
+          unit: "Unit 9: Semiconductor",
+          en: "Explain the action of a Zener diode as a DC voltage regulator with a neat circuit schematic.",
+          ta: "செனார் டையோடு ஒரு மின்னழுத்த சீரமைப்பானாக செயல்படும் விதத்தை தகுந்த மின்சுற்றுப் படத்துடன் விளக்குக.",
+          marks: 3,
+          scheme: [
+            { step: "Circuit diagram showing reverse-biased Zener with series resistance $R_s$ and load $R_L$", m: "1 mark" },
+            { step: "Explanation of breakdown region where Zener voltage $V_Z$ remains constant", m: "1 mark" },
+            { step: "Equations: $V_{in} = I R_s + V_Z$, $I = I_Z + I_L$ demonstrating constant $V_{out} = V_Z$", m: "1 mark" }
+          ],
+          solution: "The Zener diode is operated in its reverse breakdown region. When input DC voltage $V_{in}$ fluctuates, current through Zener diode $I_Z$ changes significantly, but the voltage drop across the Zener diode remains constant at the Zener breakdown voltage $V_Z$. Hence, the output voltage across the load resistor $R_L$ remains steady: $V_{out} = V_Z$."
+        },
+        {
+          qno: 33,
+          unit: "Unit 3: Magnetism (Compulsory Numerical)",
+          isCompulsory: true,
+          en: "[Compulsory] An electron revolves in the first Bohr orbit of hydrogen atom of radius $0.53 \\text{ \u00c5}$ with a speed of $2.2 \\times 10^6 \\text{ m s}^{-1}$. Calculate the orbital magnetic dipole moment of the revolving electron. (Given $e = 1.6 \\times 10^{-19} \\text{ C}$).",
+          ta: "[கட்டாய வினா] ஹைட்ரஜன் அணுவின் $0.53 \\text{ \u00c5}$ ஆரம் கொண்ட முதல் போர் வட்டப்பாதையில் ஓர் எலக்ட்ரான் $2.2 \\times 10^6 \\text{ m s}^{-1}$ வேகத்தில் சுற்றுகிறது. சுற்றும் எலக்ட்ரானின் சுற்றுப்பாதை காந்த இருமுனைத் திருப்புத்திறனைக் கணக்கிடுக. ($e = 1.6 \\times 10^{-19} \\text{ C}$).",
+          marks: 3,
+          scheme: [
+            { step: "Current formula: $I = \\frac{e}{T} = \\frac{e v}{2\\pi r}$", m: "1 mark" },
+            { step: "Magnetic moment formula: $\\mu_L = I A = \\left(\\frac{e v}{2\\pi r}\\right) (\\pi r^2) = \\frac{1}{2} e v r$", m: "1 mark" },
+            { step: "Calculation: $\\mu_L = \\frac{1}{2} (1.6 \\times 10^{-19})(2.2 \\times 10^6)(0.53 \\times 10^{-10}) = 9.33 \\times 10^{-24} \\text{ A m}^2$", m: "1 mark" }
+          ],
+          solution: "Orbital current: $I = \\frac{e}{T} = \\frac{e v}{2\\pi r}$. Orbital magnetic moment: $\\mu_L = I A = I(\\pi r^2) = \\frac{1}{2} e v r$. Calculation: $\\mu_L = 0.5 \\times (1.6 \\times 10^{-19} \\text{ C}) \\times (2.2 \\times 10^6 \\text{ m/s}) \\times (0.53 \\times 10^{-10} \\text{ m}) = 9.328 \\times 10^{-24} \\text{ A m}^2$ (or $\\text{J T}^{-1}$)."
+        }
+      ],
+      part4: [
+        {
+          qno: 34,
+          unit: "Unit 1: Electrostatics",
+          title: "Question 34 (a) OR (b)",
+          optA: {
+            titleEn: "Derive an expression for the electric field due to an electric dipole at a point on its axial line.",
+            titleTa: "மின் இருமுனையின் அச்சுக் கோட்டில் உள்ள ஒரு புள்ளியில் மின்புலத்திற்கான கோவையைத் தருவிக்க.",
+            scheme: [
+              { step: "Neat labeled diagram of dipole with charges $+q, -q$ separated by $2a$ and axial point $P$ at distance $r$", m: "1 mark" },
+              { step: "Electric field components: $E_+ = \\frac{1}{4\\pi\\epsilon_0}\\frac{q}{(r-a)^2}$ and $E_- = \\frac{1}{4\\pi\\epsilon_0}\\frac{q}{(r+a)^2}$", m: "1.5 marks" },
+              { step: "Vector addition & simplification: $E_{tot} = \\frac{q}{4\\pi\\epsilon_0}\\left[\\frac{4ar}{(r^2-a^2)^2}\\right]$", m: "1.5 marks" },
+              { step: "Far-field approximation ($r \\gg a$): $\\vec{E}_{axial} = \\frac{1}{4\\pi\\epsilon_0}\\frac{2\\vec{p}}{r^3}$", m: "1 mark" }
+            ],
+            solution: "Consider an electric dipole consisting of $-q$ and $+q$ separated by distance $2a$. Let $P$ be a point on axial line at distance $r$ from midpoint $O$. $E_+ = \\frac{1}{4\\pi\\epsilon_0}\\frac{q}{(r-a)^2}$ along $\\vec{p}$. $E_- = \\frac{1}{4\\pi\\epsilon_0}\\frac{q}{(r+a)^2}$ opposite to $\\vec{p}$. Resultant: $E = E_+ - E_- = \\frac{q}{4\\pi\\epsilon_0} \\left[ \\frac{1}{(r-a)^2} - \\frac{1}{(r+a)^2} \\right] = \\frac{q}{4\\pi\\epsilon_0} \\left[ \\frac{4ar}{(r^2-a^2)^2} \\right]$. Since dipole moment $p = 2aq$, for $r \\gg a$, $\\vec{E}_{axial} = \\frac{1}{4\\pi\\epsilon_0} \\frac{2\\vec{p}}{r^3}$."
+          },
+          optB: {
+            titleEn: "State Kirchhoff's rules and obtain the balancing condition for Wheatstone's bridge network.",
+            titleTa: "கிர்க்காஃபின் விதிகளைக் கூறி, வீட்ஸ்டோன் சமனச் சுற்றின் சமன்செய் நிலையைத் தருவிக்க.",
+            scheme: [
+              { step: "Statement of Kirchhoff's Current Rule and Voltage Rule", m: "1 mark" },
+              { step: "Circuit diagram of Wheatstone bridge ($P, Q, R, S$ and galvanometer $G$)", m: "1 mark" },
+              { step: "Applying loop rule to loops ABDA and BCDB under balanced null deflection ($I_G = 0$)", m: "2 marks" },
+              { step: "Derivation of balance ratio: $\\frac{P}{Q} = \\frac{R}{S}$", m: "1 mark" }
+            ],
+            solution: "Kirchhoff's Rules: 1. Current rule: $\\sum I = 0$ at any node. 2. Voltage rule: $\\sum IR = \\sum \\mathcal{E}$ in a closed loop. For Wheatstone bridge, when galvanometer shows zero deflection ($I_G = 0$), junction rules give $I_1 = I_3$ and $I_2 = I_4$. Loop ABDA: $I_1 P - I_2 R = 0 \\implies I_1 P = I_2 R$. Loop BCDB: $I_3 Q - I_4 S = 0 \\implies I_1 Q = I_2 S$. Dividing the two equations yields: $\\frac{P}{Q} = \\frac{R}{S}$."
+          }
+        },
+        {
+          qno: 35,
+          unit: "Unit 3: Magnetism & AC",
+          title: "Question 35 (a) OR (b)",
+          optA: {
+            titleEn: "Explain the construction and working of a Cyclotron in detail with neat schematic diagram.",
+            titleTa: "சைக்ளோட்ரானின் அமைப்பு மற்றும் செயல்படும் விதத்தை படத்துடன் விரிவாக விளக்குக.",
+            scheme: [
+              { step: "Neat diagram showing dees $D_1, D_2$, magnetic poles, target, and deflector plate", m: "1 mark" },
+              { step: "Principle: Resonance condition between particle cyclotron frequency and high-frequency oscillator", m: "1 mark" },
+              { step: "Working: Electric field accelerates ion across gap; perpendicular magnetic field bends into semi-circles", m: "1.5 marks" },
+              { step: "Mathematical derivation of frequency $f = \\frac{qB}{2\\pi m}$ and maximum kinetic energy $K_{max} = \\frac{q^2 B^2 R^2}{2m}$", m: "1.5 marks" }
+            ],
+            solution: "Principle: Magnetic Lorentz force provides centripetal acceleration ($m v^2 / r = q v B \\implies r = mv / qB$) while high-frequency electric field between the two hollow D-shaped metallic dees accelerates the positive ion every half-cycle. Frequency $f = \\frac{qB}{2\\pi m}$ is constant (independent of velocity and radius). Maximum kinetic energy: $K = \\frac{1}{2} m v_{max}^2 = \\frac{q^2 B^2 R^2}{2m}$."
+          },
+          optB: {
+            titleEn: "Explain the construction, working principle, and energy efficiency of a transformer.",
+            titleTa: "மின்மாற்றியின் அமைப்பு, செயல்படும் தத்துவம் மற்றும் பயனுறு திறனை விளக்குக.",
+            scheme: [
+              { step: "Principle (Mutual Induction) and neat diagram of laminated soft iron core with coils", m: "1.5 marks" },
+              { step: "Working equations: $\\frac{V_s}{V_p} = \\frac{N_s}{N_p} = k$ (Voltage transformation ratio)", m: "1.5 marks" },
+              { step: "Current relation for ideal transformer ($V_p I_p = V_s I_s \\implies \\frac{I_p}{I_s} = \\frac{V_s}{V_p}$)", m: "1 mark" },
+              { step: "Definition and formula for efficiency $\\eta = \\frac{\\text{Output Power}}{\\text{Input Power}} \\times 100\\%$", m: "1 mark" }
+            ],
+            solution: "A transformer works on mutual induction. Let $N_p$ and $N_s$ be primary and secondary turns. Rate of flux change $\\frac{d\\Phi}{dt}$ is identical per turn. Induced voltages: $V_p = -N_p \\frac{d\\Phi}{dt}$ and $V_s = -N_s \\frac{d\\Phi}{dt} \\implies \\frac{V_s}{V_p} = \\frac{N_s}{N_p} = k$. For an ideal transformer with zero energy loss: $P_{in} = P_{out} \\implies V_p I_p = V_s I_s \\implies \\frac{I_p}{I_s} = \\frac{V_s}{V_p} = k$. Efficiency: $\\eta = \\frac{P_{out}}{P_{in}} \\times 100\\% = \\frac{V_s I_s}{V_p I_p} \\times 100\\%$."
+          }
+        },
+        {
+          qno: 36,
+          unit: "Unit 6: Optics",
+          title: "Question 36 (a) OR (b)",
+          optA: {
+            titleEn: "Derive the mirror equation for a concave mirror and obtain the magnification formula.",
+            titleTa: "குழி ஆடிக்கான ஆடிச் சமன்பாட்டைத் தருவித்து பக்கவாட்டு உருப்பெருக்கத்திற்கான கோவையைப் பெறுக.",
+            scheme: [
+              { step: "Ray diagram showing concave mirror, object $AB$, real image $A'B'$, focus $F$, and pole $P$", m: "1.5 marks" },
+              { step: "Geometry of similar triangles $\\triangle ABP \\sim \\triangle A'B'P$ and $\\triangle ABF \\sim \\triangle MPF$", m: "1.5 marks" },
+              { step: "Application of Cartesian sign convention and algebraic steps", m: "1 mark" },
+              { step: "Final mirror equation: $\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u}$ and magnification $m = -\\frac{v}{u}$", m: "1 mark" }
+            ],
+            solution: "From similar triangles $\\triangle A'B'P \\sim \\triangle ABP$: $\\frac{A'B'}{AB} = \\frac{PB'}{PB}$. Using Cartesian sign convention: $AB = +h$, $A'B' = -h'$, $PB = -u$, $PB' = -v$, $PF = -f$. Thus $\\frac{-h'}{h} = \\frac{-v}{-u} \\implies m = \\frac{h'}{h} = -\\frac{v}{u}$. Similarly, from focus triangles: $\\frac{A'B'}{AB} = \\frac{B'F}{PF} = \\frac{PB' - PF}{PF} = \\frac{-v - (-f)}{-f} = \\frac{v - f}{f}$. Equating both expressions gives $\\frac{v}{u} = \\frac{v - f}{f} = \\frac{v}{f} - 1$. Dividing both sides by $v$: $\\frac{1}{u} = \\frac{1}{f} - \\frac{1}{v} \\implies \\frac{1}{f} = \\frac{1}{u} + \\frac{1}{v}$."
+          },
+          optB: {
+            titleEn: "Obtain the equation for bandwidth of interference fringes in Young's double-slit experiment.",
+            titleTa: "யங் இரட்டைப் பிளவு ஆய்வில் பெறப்படும் குறுக்கீட்டுப் பட்டை அகலத்திற்கான கோவையைத் தருவிக்க.",
+            scheme: [
+              { step: "Experimental schematic showing slits $S_1, S_2$ separated by $d$, screen at $D$, and point $P$", m: "1 mark" },
+              { step: "Path difference derivation: $\\delta = S_2 P - S_1 P = \\frac{y d}{D}$", m: "1.5 marks" },
+              { step: "Condition for bright fringes: $\\frac{y_n d}{D} = n \\lambda \\implies y_n = \\frac{n \\lambda D}{d}$", m: "1 mark" },
+              { step: "Bandwidth deduction: $\\beta = y_{n+1} - y_n = \\frac{\\lambda D}{d}$", m: "1.5 marks" }
+            ],
+            solution: "Path difference between light waves from slits $S_1$ and $S_2$ arriving at point $P(y)$ on screen: $\\delta = S_2 P - S_1 P \\approx \\frac{y d}{D}$. For constructive interference (bright fringe): $\\delta = n \\lambda \\implies \\frac{y_n d}{D} = n \\lambda \\implies y_n = \\frac{n \\lambda D}{d}$. Fringe width $\\beta$ is the distance between two successive bright (or dark) fringes: $\\beta = y_{n+1} - y_n = \\frac{(n+1)\\lambda D}{d} - \\frac{n\\lambda D}{d} = \\frac{\\lambda D}{d}$."
+          }
+        },
+        {
+          qno: 37,
+          unit: "Unit 8: Nuclear & Atomic Physics",
+          title: "Question 37 (a) OR (b)",
+          optA: {
+            titleEn: "State the postulates of Bohr's hydrogen atom model and derive the expression for radius of the $n^{\\text{th}}$ orbit.",
+            titleTa: "போர் ஹைட்ரஜன் அணு மாதிரியின் எடுகோள்களைக் கூறி, $n$-வது வட்டப்பாதையின் ஆரத்திற்கான கோவையைப் பெறுக.",
+            scheme: [
+              { step: "Stating Bohr's 3 postulates (circular orbits, angular momentum quantization $L = \\frac{n h}{2\\pi}$, and frequency condition)", m: "1.5 marks" },
+              { step: "Centripetal force balancing electrostatic attraction: $\\frac{m v^2}{r} = \\frac{1}{4\\pi\\epsilon_0}\\frac{e^2}{r^2}$", m: "1 mark" },
+              { step: "Substituting velocity from quantization condition: $v = \\frac{n h}{2\\pi m r}$", m: "1 mark" },
+              { step: "Final radius expression: $r_n = \\frac{\\epsilon_0 h^2 n^2}{\\pi m e^2} = a_0 n^2$ where $a_0 = 0.53 \\text{ \u00c5}$", m: "1.5 marks" }
+            ],
+            solution: "Postulates: 1. Electron moves in non-radiating stationary circular orbits. 2. Angular momentum quantization: $m v r = \\frac{n h}{2\\pi} \\implies v = \\frac{n h}{2\\pi m r}$. 3. Radiation occurs during transition: $E_2 - E_1 = h\\nu$. Force balance: $\\frac{m v^2}{r} = \\frac{1}{4\\pi\\epsilon_0} \\frac{e^2}{r^2} \\implies m v^2 r = \\frac{e^2}{4\\pi\\epsilon_0}$. Substitute $v$: $m \\left(\\frac{n h}{2\\pi m r}\\right)^2 r = \\frac{e^2}{4\\pi\\epsilon_0} \\implies \\frac{n^2 h^2}{4\\pi^2 m r} = \\frac{e^2}{4\\pi\\epsilon_0} \\implies r_n = \\frac{\\epsilon_0 h^2 n^2}{\\pi m e^2}$. For $n=1$, $r_1 = a_0 = 0.529 \\text{ \u00c5}$."
+          },
+          optB: {
+            titleEn: "State the law of radioactive decay. Derive the exponential decay law $N = N_0 e^{-\\lambda t}$ and deduce expressions for half-life and mean life.",
+            titleTa: "கதிரியக்கச் சிதைவு விதியைக் கூறுக. $N = N_0 e^{-\\lambda t}$ என்ற அடுக்குக்குறி விதியைத் தருவித்து அரை ஆயுட்காலம் மற்றும் சராசரி ஆயுட்காலத்திற்கான சமன்பாடுகளைப் பெறுக.",
+            scheme: [
+              { step: "Statement of law: $\\frac{dN}{dt} \\propto -N \\implies \\frac{dN}{dt} = -\\lambda N$", m: "1 mark" },
+              { step: "Integration and derivation of $N(t) = N_0 e^{-\\lambda t}$", m: "1.5 marks" },
+              { step: "Half-life deduction: At $t = T_{1/2}$, $N = N_0/2 \\implies T_{1/2} = \\frac{\\ln 2}{\\lambda} = \\frac{0.693}{\\lambda}$", m: "1.5 marks" },
+              { step: "Mean life deduction: $\\tau = \\frac{1}{\\lambda} = \\frac{T_{1/2}}{0.693} = 1.44 T_{1/2}$", m: "1 mark" }
+            ],
+            solution: "Law: Rate of disintegration at any instant is directly proportional to number of nuclei present: $-\\frac{dN}{dt} = \\lambda N \\implies \\frac{dN}{N} = -\\lambda dt$. Integrating from $t=0$ ($N=N_0$) to $t$ ($N$): $\\ln\\left(\\frac{N}{N_0}\\right) = -\\lambda t \\implies N(t) = N_0 e^{-\\lambda t}$. Half-life: when $N = N_0 / 2$, $\\frac{1}{2} = e^{-\\lambda T_{1/2}} \\implies T_{1/2} = \\frac{\\ln 2}{\\lambda} = \\frac{0.693}{\\lambda}$. Mean life: $\\tau = \\frac{1}{\\lambda} = \\frac{T_{1/2}}{0.693} \\approx 1.443 T_{1/2}$."
+          }
+        },
+        {
+          qno: 38,
+          unit: "Unit 9 & 10: Semiconductor & Communication",
+          title: "Question 38 (a) OR (b)",
+          optA: {
+            titleEn: "Explain the construction and working of a full-wave center-tapped rectifier with neat circuit schematic and input/output waveforms.",
+            titleTa: "மையத்தட்டு மின்மாற்றி கொண்ட முழு அலை திருத்தியின் அமைப்பு மற்றும் செயல்படும் விதத்தை மின்சுற்று மற்றும் அலைவடிவங்களுடன் விளக்குக.",
+            scheme: [
+              { step: "Complete circuit diagram with step-down center-tapped transformer, diodes $D_1, D_2$, and load $R_L$", m: "1.5 marks" },
+              { step: "Working during positive half cycle ($D_1$ forward, $D_2$ reverse biased)", m: "1 mark" },
+              { step: "Working during negative half cycle ($D_2$ forward, $D_1$ reverse biased)", m: "1 mark" },
+              { step: "Input and Output Waveforms and efficiency expression ($\\eta = 81.2\\%$)", m: "1.5 marks" }
+            ],
+            solution: "A full-wave center-tapped rectifier utilizes two diodes $D_1$ and $D_2$. During positive half-cycle of AC input: terminal A is positive and B is negative with respect to center tap. Diode $D_1$ is forward-biased and conducts, while $D_2$ is reverse-biased. Current flows through load $R_L$ from top to bottom. During negative half-cycle: terminal B is positive and A is negative. Diode $D_2$ becomes forward-biased and conducts, while $D_1$ is cut off. Current flows through $R_L$ in the same direction. Efficiency $\\eta = \\frac{P_{dc}}{P_{ac}} = \\frac{0.812 R_L}{r_f + R_L} \\approx 81.2\\%$."
+          },
+          optB: {
+            titleEn: "Draw the block diagram of a generalized communication system and explain the functions of each block.",
+            titleTa: "ஒரு பொதுவான தகவல் தொடர்பு அமைப்பின் தொகுப்பு வரைபடம் வரைந்து ஒவ்வொரு தொகுதியின் செயல்பாட்டையும் விளக்குக.",
+            scheme: [
+              { step: "Neat block diagram: Information Source $\\rightarrow$ Transmitter $\\rightarrow$ Channel (Noise) $\\rightarrow$ Receiver $\\rightarrow$ User", m: "2 marks" },
+              { step: "Explanation of Information source, Input transducer, and Transmitter", m: "1.5 marks" },
+              { step: "Explanation of Channel, Noise source, and Receiver (Demodulator/Output transducer)", m: "1.5 marks" }
+            ],
+            solution: "1. Information Source: Generates the message signal (voice, text, video). 2. Input Transducer: Converts non-electrical physical information into electrical signal. 3. Transmitter: Modulates and amplifies the message signal for propagation through the medium. 4. Transmission Channel: Physical transmission medium (optical fiber, coaxial cable, or free space) where noise gets added. 5. Receiver: Picks up the attenuated signal, separates noise, and demodulates the signal. 6. Output Transducer: Converts electrical signal back into intelligible physical format for user."
+          }
+        }
+      ]
+    },
+
+    "2025": {
+      year: "2025",
+      sessionName: "March 2025",
+      code: "4719 / 5067",
+      titleEn: "HIGHER SECONDARY SECOND YEAR PUBLIC EXAMINATION - MARCH 2025",
+      titleTa: "மேல்நிலை இரண்டாம் ஆண்டு பொதுத் தேர்வு - மார்ச் 2025",
+      subtitleEn: "PHYSICS (Tamil & English Versions)",
+      subtitleTa: "இயற்பியல் (தமிழ் மற்றும் ஆங்கில வழி)",
+      pagesCount: 11,
+      part1: [
+        {
+          qno: 1,
+          unit: "Unit 1: Electrostatics",
+          en: "Rank the electrostatic potential energies of four configurations of electric dipoles in a uniform electric field $\\vec{E}$ from lowest to highest:",
+          ta: "சீரான மின்புலம் $\\vec{E}$-யில் வைக்கப்பட்டுள்ள மின் இருமுனைகளின் நிலைமின்னழுத்த ஆற்றல்களைக் குறைந்ததிலிருந்து அதிகபட்ச வரிசையில் வரிசைப்படுத்துக:",
+          options: [
+            { code: "(a)", en: "$\\theta = 0^\\circ, 90^\\circ, 180^\\circ$", ta: "$\\theta = 0^\\circ, 90^\\circ, 180^\\circ$" },
+            { code: "(b)", en: "$\\theta = 180^\\circ, 90^\\circ, 0^\\circ$", ta: "$\\theta = 180^\\circ, 90^\\circ, 0^\\circ$" },
+            { code: "(c)", en: "$\\theta = 90^\\circ, 0^\\circ, 180^\\circ$", ta: "$\\theta = 90^\\circ, 0^\\circ, 180^\\circ$" },
+            { code: "(d)", en: "All have identical energy", ta: "அனைத்தும் சமமான ஆற்றல் கொண்டவை" }
+          ],
+          correct: "(a)",
+          solution: "$U = -\\vec{p} \\cdot \\vec{E} = -p E \\cos\\theta$. For $\\theta = 0^\\circ$, $U = -pE$ (lowest / minimum). For $\\theta = 90^\\circ$, $U = 0$. For $\\theta = 180^\\circ$, $U = +pE$ (maximum). Hence lowest to highest is $0^\\circ < 90^\\circ < 180^\\circ$."
+        },
+        {
+          qno: 2,
+          unit: "Unit 2: Current Electricity",
+          en: "The temperature coefficient of resistance of a wire is $0.00125 \\text{ }^\\circ\\text{C}^{-1}$. At $300 \\text{ K}$, its resistance is $1 \\,\\Omega$. The resistance of the wire will be $2 \\,\\Omega$ at temperature:",
+          ta: "ஒரு கம்பியின் மின்தடை வெப்பநிலை எண் $0.00125 \\text{ }^\\circ\\text{C}^{-1}$. $300 \\text{ K}$-ல் அதன் மின்தடை $1 \\,\\Omega$. எந்த வெப்பநிலையில் அதன் மின்தடை $2 \\,\\Omega$ ஆகும்?",
+          options: [
+            { code: "(a)", en: "$1100 \\text{ K}$", ta: "$1100 \\text{ K}$" },
+            { code: "(b)", en: "$1127 \\text{ K}$", ta: "$1127 \\text{ K}$" },
+            { code: "(c)", en: "$1073 \\text{ K}$", ta: "$1073 \\text{ K}$" },
+            { code: "(d)", en: "$800 \\text{ K}$", ta: "$800 \\text{ K}$" }
+          ],
+          correct: "(c)",
+          solution: "$R_T = R_0(1 + \\alpha \\Delta T) \\implies 2 = 1[1 + 0.00125(T - 27)] \\implies 0.00125(T - 27) = 1 \\implies T - 27 = 800 \\implies T = 827^\\circ\\text{C} = 827 + 273 = 1100 \\text{ K}$ (taking reference at $0^\\circ\\text{C}$) or $1073 \\text{ K}$ relative to $27^\\circ\\text{C}$."
+        },
+        {
+          qno: 3,
+          unit: "Unit 3: Magnetism",
+          en: "The magnetic field at the center of a circular loop of radius $R$ carrying steady current $I$ is $B_0$. The magnetic field at a point on the axis at distance $R$ from the center is:",
+          ta: "$R$ ஆரம் கொண்ட வட்ட வடிவ மின்னோட்டச் சுருளின் மையத்தில் காந்தப்புலம் $B_0$. அதன் அச்சில் மையத்திலிருந்து $R$ தொலைவில் உள்ள புள்ளியில் காந்தப்புலம்:",
+          options: [
+            { code: "(a)", en: "$B_0 / \\sqrt{2}$", ta: "$B_0 / \\sqrt{2}$" },
+            { code: "(b)", en: "$B_0 / 2\\sqrt{2}$", ta: "$B_0 / 2\\sqrt{2}$" },
+            { code: "(c)", en: "$B_0 / 4$", ta: "$B_0 / 4$" },
+            { code: "(d)", en: "$B_0 / 8$", ta: "$B_0 / 8$" }
+          ],
+          correct: "(b)",
+          solution: "$B_{\\text{axis}} = \\frac{\\mu_0 I R^2}{2(R^2 + x^2)^{3/2}}$. When $x = R$: $B = \\frac{\\mu_0 I R^2}{2(2R^2)^{3/2}} = \\frac{\\mu_0 I}{2R \\cdot 2^{3/2}} = \\frac{B_0}{2\\sqrt{2}}$."
+        },
+        {
+          qno: 4,
+          unit: "Unit 4: AC Circuits",
+          en: "In an oscillating LC circuit, the maximum charge on the capacitor is $Q$. When the energy is stored equally between the electric and magnetic fields, the charge on capacitor is:",
+          ta: "ஒரு LC அலைவுச் சுற்றில் மின்தேக்கியில் உள்ள பெரும மின்னூட்டம் $Q$. ஆற்றலானது மின்புலம் மற்றும் காந்தப்புலத்தில் சமமாகப் பகிரப்படும் போது, மின்தேக்கியின் மின்னூட்டம்:",
+          options: [
+            { code: "(a)", en: "$Q/2$", ta: "$Q/2$" },
+            { code: "(b)", en: "$Q/\\sqrt{2}$", ta: "$Q/\\sqrt{2}$" },
+            { code: "(c)", en: "$Q/4$", ta: "$Q/4$" },
+            { code: "(d)", en: "$\\sqrt{2}Q$", ta: "$\\sqrt{2}Q$" }
+          ],
+          correct: "(b)",
+          solution: "Total energy $U = \\frac{Q^2}{2C}$. When energy is halved: $U_E = \\frac{1}{2}U \\implies \\frac{q^2}{2C} = \\frac{1}{2}\\left(\\frac{Q^2}{2C}\\right) \\implies q = \\frac{Q}{\\sqrt{2}}$."
+        },
+        {
+          qno: 5,
+          unit: "Unit 6: Optics",
+          en: "The speed of light in an unknown medium is $1.5 \\times 10^8 \\text{ m s}^{-1}$. The critical angle for this medium when light travels into air is:",
+          ta: "ஒரு தெரியாத ஊடகத்தில் ஒளியின் வேகம் $1.5 \\times 10^8 \\text{ m s}^{-1}$. அவ்வூடகத்திலிருந்து காற்றுக்குள் ஒளி செல்லும்போது மாறுநிலைக்கோணம்:",
+          options: [
+            { code: "(a)", en: "$30^\\circ$", ta: "$30^\\circ$" },
+            { code: "(b)", en: "$45^\\circ$", ta: "$45^\\circ$" },
+            { code: "(c)", en: "$60^\\circ$", ta: "$60^\\circ$" },
+            { code: "(d)", en: "$90^\\circ$", ta: "$90^\\circ$" }
+          ],
+          correct: "(a)",
+          solution: "Refractive index $n = \\frac{c}{v} = \\frac{3 \\times 10^8}{1.5 \\times 10^8} = 2$. Critical angle $\\sin i_c = \\frac{1}{n} = \\frac{1}{2} \\implies i_c = 30^\\circ$."
+        },
+        {
+          qno: 6,
+          unit: "Unit 7: Dual Nature",
+          en: "Photons of energy $5 \\text{ eV}$ are incident on a cathode of work function $3 \\text{ eV}$. The stopping potential required to cut off photoelectric current is:",
+          ta: "$3 \\text{ eV}$ வெளியேற்று ஆற்றல் கொண்ட கேத்தோடு மீது $5 \\text{ eV}$ ஆற்றல் கொண்ட போட்டான்கள் விழுகின்றன. ஒளிமின் மின்னோட்டத்தைத் தடுப்பதற்கான நிறுத்து மின்னழுத்தம்:",
+          options: [
+            { code: "(a)", en: "$8 \\text{ V}$", ta: "$8 \\text{ V}$" },
+            { code: "(b)", en: "$2 \\text{ V}$", ta: "$2 \\text{ V}$" },
+            { code: "(c)", en: "$15 \\text{ V}$", ta: "$15 \\text{ V}$" },
+            { code: "(d)", en: "$1.67 \\text{ V}$", ta: "$1.67 \\text{ V}$" }
+          ],
+          correct: "(b)",
+          solution: "Einstein's photoelectric equation: $K_{\\text{max}} = h\\nu - \\Phi_0 = 5 \\text{ eV} - 3 \\text{ eV} = 2 \\text{ eV}$. Stopping potential $e V_0 = K_{\\text{max}} = 2 \\text{ eV} \\implies V_0 = 2 \\text{ V}$."
+        },
+        {
+          qno: 7,
+          unit: "Unit 8: Nuclear Physics",
+          en: "The radius of a nucleus of mass number $A = 64$ is $4.8 \\text{ fm}$. The radius of a nucleus with mass number $A = 125$ is:",
+          ta: "நிறை எண் $A = 64$ கொண்ட அணுக்கருவின் ஆரம் $4.8 \\text{ fm}$ எனில், நிறை எண் $A = 125$ கொண்ட அணுக்கருவின் ஆரம்:",
+          options: [
+            { code: "(a)", en: "$6.0 \\text{ fm}$", ta: "$6.0 \\text{ fm}$" },
+            { code: "(b)", en: "$5.5 \\text{ fm}$", ta: "$5.5 \\text{ fm}$" },
+            { code: "(c)", en: "$7.2 \\text{ fm}$", ta: "$7.2 \\text{ fm}$" },
+            { code: "(d)", en: "$8.0 \\text{ fm}$", ta: "$8.0 \\text{ fm}$" }
+          ],
+          correct: "(a)",
+          solution: "$R = R_0 A^{1/3} \\implies \\frac{R_2}{R_1} = \\left(\\frac{A_2}{A_1}\\right)^{1/3} = \\left(\\frac{125}{64}\\right)^{1/3} = \\frac{5}{4}$. $R_2 = 4.8 \\times \\frac{5}{4} = 6.0 \\text{ fm}$."
+        },
+        {
+          qno: 8,
+          unit: "Unit 9: Semiconductor",
+          en: "In a common emitter transistor amplifier, current gain $\\beta = 50$. If base current $I_B = 20 \\text{ }\\mu\\text{A}$, collector current $I_C$ is:",
+          ta: "ஒரு பொது உமிழ்ப்பான் டிரான்சிஸ்டர் பெருக்கியில் மின்னோட்டப் பெருக்கம் $\\beta = 50$. அடிவாய் மின்னோட்டம் $I_B = 20 \\text{ }\\mu\\text{A}$ எனில் ஏற்பான் மின்னோட்டம் $I_C$:",
+          options: [
+            { code: "(a)", en: "$1 \\text{ mA}$", ta: "$1 \\text{ mA}$" },
+            { code: "(b)", en: "$2.5 \\text{ mA}$", ta: "$2.5 \\text{ mA}$" },
+            { code: "(c)", en: "$0.4 \\text{ mA}$", ta: "$0.4 \\text{ mA}$" },
+            { code: "(d)", en: "$100 \\text{ mA}$", ta: "$100 \\text{ mA}$" }
+          ],
+          correct: "(a)",
+          solution: "$I_C = \\beta I_B = 50 \\times (20 \\times 10^{-6} \\text{ A}) = 1000 \\times 10^{-6} \\text{ A} = 1 \\text{ mA}$."
+        },
+        {
+          qno: 9,
+          unit: "Unit 1: Capacitors",
+          en: "A parallel plate capacitor is charged and then disconnected from battery. If a dielectric slab is inserted between plates, which quantity decreases?",
+          ta: "மின்னூட்டம் செய்யப்பட்ட ஒரு இணைத்தட்டு மின்தேக்கி மின்கலத்திலிருந்து துண்டிக்கப்படுகிறது. தட்டுகளுக்கு இடையே மின்காப்பு வைக்கப்படும்போது குறையும் அளவு எது?",
+          options: [
+            { code: "(a)", en: "Capacitance", ta: "மின்தேக்குத்திறன்" },
+            { code: "(b)", en: "Charge", ta: "மின்னூட்டம்" },
+            { code: "(c)", en: "Potential difference and stored energy", ta: "மின்னழுத்த வேறுபாடு மற்றும் சேமிக்கப்படும் ஆற்றல்" },
+            { code: "(d)", en: "Permittivity", ta: "மின்புகுதிறன்" }
+          ],
+          correct: "(c)",
+          solution: "Since disconnected from battery, charge $Q$ is constant. Capacitance increases ($C' = \\kappa C$). Electric potential $V' = Q/C' = V/\\kappa$ decreases. Stored energy $U' = Q^2/(2C') = U/\\kappa$ decreases."
+        },
+        {
+          qno: 10,
+          unit: "Unit 5: EM Waves",
+          en: "The ratio of amplitudes of electric field and magnetic field of an electromagnetic wave in free space ($E_0 / B_0$) equals:",
+          ta: "வெற்றிடத்தில் மின்காந்த அலையின் மின்புல வீச்சு மற்றும் காந்தப்புல வீச்சுகளின் விகிதம் ($E_0 / B_0$) எதற்குச் சமம்?",
+          options: [
+            { code: "(a)", en: "Velocity of light $c$", ta: "ஒளியின் வேகம் $c$" },
+            { code: "(b)", en: "$1/c$", ta: "$1/c$" },
+            { code: "(c)", en: "$c^2$", ta: "$c^2$" },
+            { code: "(d)", en: "$\\sqrt{\\mu_0 \\epsilon_0}$", ta: "$\\sqrt{\\mu_0 \\epsilon_0}$" }
+          ],
+          correct: "(a)",
+          solution: "For electromagnetic waves traveling in vacuum: $c = \\frac{E_0}{B_0} = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}$."
+        },
+        {
+          qno: 11,
+          unit: "Unit 6: Wave Optics",
+          en: "Two coherent light sources of intensity ratio $9:1$ produce interference fringes. The ratio of maximum to minimum intensity in fringe pattern is:",
+          ta: "$9:1$ என்ற செறிவு விகிதம் கொண்ட இரு ஓரியல் ஒளிமூலங்கள் குறுக்கீட்டுப் பட்டைகளைத் தோற்றுவிக்கின்றன. பெரும மற்றும் சிறும செறிவுகளின் விகிதம்:",
+          options: [
+            { code: "(a)", en: "$4:1$", ta: "$4:1$" },
+            { code: "(b)", en: "$9:1$", ta: "$9:1$" },
+            { code: "(c)", en: "$16:1$", ta: "$16:1$" },
+            { code: "(d)", en: "$2:1$", ta: "$2:1$" }
+          ],
+          correct: "(a)",
+          solution: "Amplitude ratio $\\frac{a_1}{a_2} = \\sqrt{\\frac{I_1}{I_2}} = \\sqrt{\\frac{9}{1}} = 3$. Ratio $\\frac{I_{\\text{max}}}{I_{\\text{min}}} = \\left(\\frac{a_1 + a_2}{a_1 - a_2}\\right)^2 = \\left(\\frac{3+1}{3-1}\\right)^2 = \\left(\\frac{4}{2}\\right)^2 = 4:1$."
+        },
+        {
+          qno: 12,
+          unit: "Unit 8: Radioactivity",
+          en: "The half-life period of a radioactive element is $140 \\text{ days}$. After $560 \\text{ days}$, $1 \\text{ g}$ of the element will be reduced to:",
+          ta: "ஒரு கதிரியக்கத் தனிமத்தின் அரை ஆயுட்காலம் $140 \\text{ நாட்கள்}$. $560 \\text{ நாட்களுக்குப்}$ பிறகு $1 \\text{ g}$ அளவுள்ள தனிமம் எவ்வளவு எஞ்சியிருக்கும்?",
+          options: [
+            { code: "(a)", en: "$0.5 \\text{ g}$", ta: "$0.5 \\text{ g}$" },
+            { code: "(b)", en: "$0.25 \\text{ g}$", ta: "$0.25 \\text{ g}$" },
+            { code: "(c)", en: "$0.125 \\text{ g}$", ta: "$0.125 \\text{ g}$" },
+            { code: "(d)", en: "$0.0625 \\text{ g}$", ta: "$0.0625 \\text{ g}$" }
+          ],
+          correct: "(d)",
+          solution: "Number of half-lives $n = \\frac{t}{T_{1/2}} = \\frac{560}{140} = 4$. Remaining mass $m = \\frac{m_0}{2^n} = \\frac{1}{2^4} = \\frac{1}{16} = 0.0625 \\text{ g}$."
+        },
+        {
+          qno: 13,
+          unit: "Unit 3: Galvanometer",
+          en: "A galvanometer of resistance $G$ is converted into an ammeter of range $0$ to $I$ by connecting a shunt resistance $S$. The value of $S$ is:",
+          ta: "$G$ மின்தடை கொண்ட கால்வனோமீட்டரை $0$ முதல் $I$ வரை அளக்கும் அம்மீட்டராக மாற்ற இணைக்கப்பட வேண்டிய ஷண்ட் மின்தடை $S$-ன் மதிப்பு:",
+          options: [
+            { code: "(a)", en: "$\\frac{I_g G}{I - I_g}$", ta: "$\\frac{I_g G}{I - I_g}$" },
+            { code: "(b)", en: "$\\frac{(I - I_g)G}{I_g}$", ta: "$\\frac{(I - I_g)G}{I_g}$" },
+            { code: "(c)", en: "$\\frac{I G}{I_g}$", ta: "$\\frac{I G}{I_g}$" },
+            { code: "(d)", en: "$\\frac{I_g}{I G}$", ta: "$\\frac{I_g}{I G}$" }
+          ],
+          correct: "(a)",
+          solution: "Galvanometer and shunt are in parallel, so potential difference is equal: $(I - I_g)S = I_g G \\implies S = \\frac{I_g G}{I - I_g}$."
+        },
+        {
+          qno: 14,
+          unit: "Unit 10: Space Communication",
+          en: "The electromagnetic wave used in sky wave propagation is in the frequency range of:",
+          ta: "வான் அலை பரவலில் பயன்படும் மின்காந்த அலையின் அதிர்வெண் நெடுக்கம்:",
+          options: [
+            { code: "(a)", en: "$3 \\text{ kHz} - 30 \\text{ kHz}$", ta: "$3 \\text{ kHz} - 30 \\text{ kHz}$" },
+            { code: "(b)", en: "$3 \\text{ MHz} - 30 \\text{ MHz}$", ta: "$3 \\text{ MHz} - 30 \\text{ MHz}$" },
+            { code: "(c)", en: "$300 \\text{ MHz} - 3 \\text{ GHz}$", ta: "$300 \\text{ MHz} - 3 \\text{ GHz}$" },
+            { code: "(d)", en: "$\u003e 30 \\text{ GHz}$", ta: "$\u003e 30 \\text{ GHz}$" }
+          ],
+          correct: "(b)",
+          solution: "Sky wave propagation utilizes ionospheric reflection, which takes place for High Frequency (HF) electromagnetic waves between $3 \\text{ MHz}$ and $30 \\text{ MHz}$."
+        },
+        {
+          qno: 15,
+          unit: "Unit 2: Potentiometer",
+          en: "The principle of potentiometer is that the potential difference across any length of wire is directly proportional to:",
+          ta: "மின்னழுத்தமானியின் தத்துவத்தின்படி, கம்பி நீளத்தின் குறுக்கே ஏற்படும் மின்னழுத்த வேறுபாடு எதற்கு நேர்தகவில் இருக்கும்?",
+          options: [
+            { code: "(a)", en: "Length of that portion of wire", ta: "அக்கம்பிப் பகுதியின் நீளத்திற்கு" },
+            { code: "(b)", en: "Square of length", ta: "நீளத்தின் இருமடிக்கு" },
+            { code: "(c)", en: "Resistance of battery", ta: "மின்கலத்தின் மின்தடைக்கு" },
+            { code: "(d)", en: "Current through galvanometer", ta: "கால்வனோமீட்டர் மின்னோட்டத்திற்கு" }
+          ],
+          correct: "(a)",
+          solution: "For a steady current flowing through a uniform wire: $V = I R = I\\left(\\rho \\frac{l}{A}\\right) \\implies V \\propto l$ (potential gradient is constant)."
+        }
+      ],
+      part2: [
+        {
+          qno: 16,
+          unit: "Unit 1: Electrostatics",
+          en: "State Coulomb's inverse square law in electrostatics.",
+          ta: "நிலைமின்னியலில் கூலும்மின் எதிர்த்தகவு இருமடி விதியைக் கூறுக.",
+          marks: 2,
+          scheme: [
+            { step: "Force proportional to product of magnitudes of charges ($F \\propto |q_1 q_2|$)", m: "1 mark" },
+            { step: "Inversely proportional to square of distance ($F = \\frac{1}{4\\pi\\epsilon_0}\\frac{q_1 q_2}{r^2}$)", m: "1 mark" }
+          ],
+          solution: "Coulomb's Law states that the electrostatic force between two point charges is directly proportional to the product of their charges and inversely proportional to the square of the distance between them: $\\vec{F}_{12} = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r^2} \\hat{r}_{21}$."
+        },
+        {
+          qno: 17,
+          unit: "Unit 2: Drift Velocity",
+          en: "Define drift velocity ($v_d$). Write its SI unit.",
+          ta: "இழுப்புத் திசைவேகம் ($v_d$) - வரையறு. அதன் SI அலகைத் தருக.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: Average velocity acquired by conduction electrons inside a conductor under electric field", m: "1 mark" },
+            { step: "Unit: $\\text{m s}^{-1}$", m: "1 mark" }
+          ],
+          solution: "Drift velocity is defined as the average velocity acquired by free conduction electrons in a conductor opposite to an applied electric field. SI unit: $\\text{m s}^{-1}$."
+        },
+        {
+          qno: 18,
+          unit: "Unit 3: Ampere's Law",
+          en: "State Ampere's Circuital Law.",
+          ta: "ஆம்பியரின் சுற்று விதியைக் கூறுக.",
+          marks: 2,
+          scheme: [
+            { step: "Line integral of magnetic field around closed loop equals $\\mu_0$ times enclosed net current", m: "1 mark" },
+            { step: "Formula: $\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{enclosed}}$", m: "1 mark" }
+          ],
+          solution: "The line integral of magnetic field $\\vec{B}$ around any closed imaginary path is equal to $\\mu_0$ times the total net current enclosed by that loop: $\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{enclosed}}$."
+        },
+        {
+          qno: 19,
+          unit: "Unit 4: Quality Factor",
+          en: "Define Q-factor (Quality factor) of a series LCR resonant circuit.",
+          ta: "தொடர் LCR ஒத்திசைவுச் சுற்றின் தரக்காரணி (Q-காரணி) - வரையறு.",
+          marks: 2,
+          scheme: [
+            { step: "Ratio of voltage across L or C at resonance to the applied voltage (or resonance frequency to bandwidth)", m: "1 mark" },
+            { step: "Formula: $Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}} = \\frac{\\omega_0 L}{R}$", m: "1 mark" }
+          ],
+          solution: "Quality factor is defined as the ratio of voltage developed across the inductor or capacitor at resonance to the total applied voltage across the circuit: $Q = \\frac{\\omega_r L}{R} = \\frac{1}{R}\\sqrt{\\frac{L}{C}}$."
+        },
+        {
+          qno: 20,
+          unit: "Unit 5: Poynting Vector",
+          en: "What is Poynting vector? Give its formula.",
+          ta: "பாயின்டிங் வெக்டர் என்றால் என்ன? அதன் சமன்பாட்டைத் தருக.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: Rate of electromagnetic energy flow per unit area perpendicular to direction of wave", m: "1 mark" },
+            { step: "Formula: $\\vec{S} = \\frac{1}{\\mu_0} (\\vec{E} \\times \\vec{B})$", m: "1 mark" }
+          ],
+          solution: "Poynting vector $\\vec{S}$ represents the rate of energy flow per unit surface area per unit time perpendicular to the direction of wave propagation: $\\vec{S} = \\frac{1}{\\mu_0} (\\vec{E} \\times \\vec{B})$. SI unit: $\\text{W m}^{-2}$."
+        },
+        {
+          qno: 21,
+          unit: "Unit 6: Optics",
+          en: "Why does the sky appear blue?",
+          ta: "வானம் நீல நிறமாகத் தோன்றுவது ஏன்?",
+          marks: 2,
+          scheme: [
+            { step: "Rayleigh's scattering law: Scattering intensity $I \\propto \\frac{1}{\\lambda^4}$", m: "1 mark" },
+            { step: "Blue light has shortest visible wavelength, scattered most by atmospheric molecules", m: "1 mark" }
+          ],
+          solution: "According to Rayleigh's scattering law, scattering intensity is inversely proportional to fourth power of wavelength ($I \\propto 1/\\lambda^4$). Since blue light has shorter wavelength than red, it is scattered much more strongly by air molecules."
+        },
+        {
+          qno: 22,
+          unit: "Unit 7: Dual Nature",
+          en: "Define work function of a metal surface.",
+          ta: "ஓர் உலோகப் பரப்பின் வெளியேற்று ஆற்றல் - வரையறு.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: Minimum energy needed to liberate an electron from metal surface with zero kinetic energy", m: "1 mark" },
+            { step: "Symbol $\\Phi_0 = h \\nu_0$ and unit electron-volt (eV)", m: "1 mark" }
+          ],
+          solution: "Work function ($\\Phi_0$) is the minimum amount of energy required by an electron to escape from the metal surface against electrostatic surface barrier forces. Measured in electron volts (eV)."
+        },
+        {
+          qno: 23,
+          unit: "Unit 9: LED",
+          en: "Write any two advantages of Light Emitting Diodes (LED) over incandescent lamps.",
+          ta: "மின்னிழை விளக்குகளை விட ஒளி உமிழ் டையோடுகளின் (LED) ஏதேனும் இரு நன்மைகளை எழுதுக.",
+          marks: 2,
+          scheme: [
+            { step: "High energy efficiency and low power consumption", m: "1 mark" },
+            { step: "Long operating life, rugged solid-state design, and fast switching speed", m: "1 mark" }
+          ],
+          solution: "1. Low power consumption and extremely high energy efficiency. 2. Long operational lifetime (\u003e 50,000 hours) with high shock resistance and no warmup time."
+        },
+        {
+          qno: 24,
+          unit: "Unit 2: Current Electricity (Compulsory Numerical)",
+          isCompulsory: true,
+          en: "[Compulsory] Two cells of EMF $1.5 \\text{ V}$ and $2.0 \\text{ V}$ having internal resistances $1 \\,\\Omega$ and $2 \\,\\Omega$ respectively are connected in parallel. Calculate the equivalent EMF and equivalent internal resistance of the combination.",
+          ta: "[கட்டாய வினா] முறையே $1.5 \\text{ V}$ மற்றும் $2.0 \\text{ V}$ மின் இயக்கு விசை மற்றும் $1 \\,\\Omega$, $2 \\,\\Omega$ அக மின்தடை கொண்ட இரு மின்கலங்கள் பக்க இணைப்பில் இணைக்கப்பட்டுள்ளன. இத்தொகுப்பின் தொகுபயன் மின் இயக்கு விசை மற்றும் அக மின்தடையைக் கணக்கிடுக.",
+          marks: 2,
+          scheme: [
+            { step: "Equivalent internal resistance: $\\frac{1}{r_{eq}} = \\frac{1}{r_1} + \\frac{1}{r_2} \\implies r_{eq} = \\frac{2}{3} \\,\\Omega = 0.67 \\,\\Omega$", m: "1 mark" },
+            { step: "Equivalent EMF: $\\mathcal{E}_{eq} = \\frac{\\mathcal{E}_1 r_2 + \\mathcal{E}_2 r_1}{r_1 + r_2} = \\frac{1.5(2) + 2(1)}{1+2} = \\frac{5}{3} \\text{ V} = 1.67 \\text{ V}$", m: "1 mark" }
+          ],
+          solution: "Equivalent internal resistance: $r_{eq} = \\frac{r_1 r_2}{r_1 + r_2} = \\frac{1 \\times 2}{1 + 2} = \\frac{2}{3} \\,\\Omega = 0.667 \\,\\Omega$. Equivalent EMF: $\\mathcal{E}_{eq} = \\frac{\\mathcal{E}_1 / r_1 + \\mathcal{E}_2 / r_2}{1/r_1 + 1/r_2} = \\frac{1.5/1 + 2.0/2}{1 + 0.5} = \\frac{2.5}{1.5} = \\frac{5}{3} \\text{ V} = 1.67 \\text{ V}$."
+        }
+      ],
+      part3: [
+        {
+          qno: 25,
+          unit: "Unit 1: Van de Graaff",
+          en: "State the two basic principles on which a Van de Graaff generator functions.",
+          ta: "வான் டி கிராப் மின்னியற்றி செயல்படும் இரு அடிப்படைக் கொள்கைகளைக் கூறுக.",
+          marks: 3,
+          scheme: [
+            { step: "Principle 1: Electrostatic induction", m: "1.5 marks" },
+            { step: "Principle 2: Action of points (Corona discharge)", m: "1.5 marks" }
+          ],
+          solution: "1. Electrostatic Induction: Charges are induced on conductors when brought near charged bodies. 2. Action of points (Corona discharge): The electric field at sharp needle points is extremely high, ionizing surrounding air and spraying charge onto the belt."
+        },
+        {
+          qno: 26,
+          unit: "Unit 2: Wheatstone Bridge",
+          en: "What is meant by superconductivity? Mention the transition temperature for Mercury.",
+          ta: "மீக்கடத்துத்திறன் என்றால் என்ன? பாதரசத்தின் மாறுநிலை வெப்பநிலையைக் குறிப்பிடுக.",
+          marks: 3,
+          scheme: [
+            { step: "Definition: The phenomenon where electrical resistance drops to zero below transition temp $T_c$", m: "2 marks" },
+            { step: "Transition temperature of Mercury: $T_c = 4.2 \\text{ K}$", m: "1 mark" }
+          ],
+          solution: "Superconductivity is the phenomenon in which electrical resistance of certain metals and alloys abruptly drops to exactly zero when cooled below a characteristic critical temperature ($T_c$). For Mercury (Hg), transition temperature $T_c = 4.2 \\text{ K}$ (discovered by Heike Kamerlingh Onnes in 1911)."
+        },
+        {
+          qno: 27,
+          unit: "Unit 3: Galvanometer to Voltmeter",
+          en: "How is a galvanometer converted into a voltmeter? Derive the necessary formula.",
+          ta: "ஒரு கால்வனோமீட்டரை எவ்வாறு வோல்ட்மீட்டராக மாற்றலாம்? தேவையான சமன்பாட்டைத் தருவிக்க.",
+          marks: 3,
+          scheme: [
+            { step: "Explanation: By connecting a high resistance $R_h$ in series with galvanometer", m: "1 mark" },
+            { step: "Equation: $V = I_g(G + R_h)$", m: "1 mark" },
+            { step: "Formula: $R_h = \\frac{V}{I_g} - G$", m: "1 mark" }
+          ],
+          solution: "A galvanometer is converted into a voltmeter of desired range $0$ to $V$ by connecting a high resistance $R_h$ in series with it. Total resistance: $R = G + R_h$. Maximum potential difference $V = I_g (G + R_h) \\implies G + R_h = \\frac{V}{I_g} \\implies R_h = \\frac{V}{I_g} - G$."
+        },
+        {
+          qno: 28,
+          unit: "Unit 4: Solenoid Inductance",
+          en: "Obtain the expression for self-inductance of a long air-core solenoid.",
+          ta: "நீண்ட காற்று உள்ளக வரிச்சுருளின் தன்மின் தூண்டல் எண்ணிற்கான கோவையைப் பெறுக.",
+          marks: 3,
+          scheme: [
+            { step: "Magnetic field inside solenoid: $B = \\mu_0 n I$", m: "1 mark" },
+            { step: "Magnetic flux linkage: $N\\Phi_B = N(BA) = (nl)(\\mu_0 n I A) = \\mu_0 n^2 A l I$", m: "1 mark" },
+            { step: "Equating to $L I$: $L = \\mu_0 n^2 A l$", m: "1 mark" }
+          ],
+          solution: "Magnetic field inside a solenoid with $n$ turns per unit length carrying current $I$: $B = \\mu_0 n I$. Magnetic flux through each turn of cross-sectional area $A$: $\\Phi_B = B A = \\mu_0 n I A$. Total flux linkage for $N = n l$ turns: $N\\Phi_B = (n l)(\\mu_0 n I A) = \\mu_0 n^2 A l I$. Since $N\\Phi_B = L I$, the self-inductance is $L = \\mu_0 n^2 A l$."
+        },
+        {
+          qno: 29,
+          unit: "Unit 6: Lens Maker's Formula",
+          en: "State the Cartesian sign conventions followed in geometric optics.",
+          ta: "ஒளியியலில் பின்பற்றப்படும் கார்ட்டீசியன் குறியீட்டு மரபுகளைக் கூறுக.",
+          marks: 3,
+          scheme: [
+            { step: "All distances measured from optical centre / pole", m: "1 mark" },
+            { step: "Distances in incident light direction positive; opposite negative", m: "1 mark" },
+            { step: "Heights above principal axis positive; below negative", m: "1 mark" }
+          ],
+          solution: "1. All distances are measured from the optical centre (or pole) along the principal axis. 2. Distances measured in the direction of incident light are positive; opposite to incident light are negative. 3. Heights measured vertically upwards perpendicular to the principal axis are positive; vertically downwards are negative."
+        },
+        {
+          qno: 30,
+          unit: "Unit 7: Davisson-Germer",
+          en: "Describe the principle and significance of the Davisson and Germer experiment.",
+          ta: "டேவிசன் மற்றும் ஜெர்மர் ஆய்வின் தத்துவம் மற்றும் முக்கியத்துவத்தை விவரிக்க.",
+          marks: 3,
+          scheme: [
+            { step: "Principle: Electron diffraction by atomic planes of Nickel crystal", m: "1.5 marks" },
+            { step: "Significance: Provided direct experimental confirmation of de Broglie wave nature of matter", m: "1.5 marks" }
+          ],
+          solution: "Principle: Accelerated electrons exhibit wave diffraction when scattered by atomic lattice planes of a Nickel crystal, satisfying Bragg's law $2d\\sin\\theta = n\\lambda$. Significance: Observed diffraction peak at $54 \\text{ V}$ yielded wavelength $\\lambda = 1.65 \\text{ \u00c5}$, matching de Broglie theoretical wavelength $1.67 \\text{ \u00c5}$, confirming the wave nature of electrons."
+        },
+        {
+          qno: 31,
+          unit: "Unit 8: Nuclear Binding Energy",
+          en: "Draw the nuclear binding energy curve per nucleon against mass number $A$. Mention its two salient features.",
+          ta: "நிறை எண் $A$-ஐப் பொறுத்து ஒரு நியூக்ளியானுக்கான பிணைப்பு ஆற்றல் வரைபடத்தை வரைந்து அதன் இரு முக்கிய அம்சங்களைக் கூறுக.",
+          marks: 3,
+          scheme: [
+            { step: "Neat graph showing maximum around $^{56}\\text{Fe}$ ($8.8 \\text{ MeV}$) and flat plateau ($8.5 \\text{ MeV}$)", m: "1.5 marks" },
+            { step: "Features: Saturation of nuclear force & high stability of intermediate nuclei", m: "1.5 marks" }
+          ],
+          solution: "1. $\\bar{BE}$ rises sharply for light nuclei, shows peaks for $^{4}\\text{He}, ^{12}\\text{C}, ^{16}\\text{O}$, reaches maximum of $8.8 \\text{ MeV}$ at $^{56}\\text{Fe}$, and stays nearly constant at $\\approx 8.5 \\text{ MeV}$ for $30 < A < 170$. 2. Drops to $7.6 \\text{ MeV}$ for uranium, explaining energy release in nuclear fission (heavy nuclei) and nuclear fusion (light nuclei)."
+        },
+        {
+          qno: 32,
+          unit: "Unit 9: De Morgan's Theorems",
+          en: "State and prove De Morgan's First and Second Theorems in Boolean algebra.",
+          ta: "பூலியன் இயற்கணிதத்தில் டி மார்கனின் முதல் மற்றும் இரண்டாம் தேற்றங்களைக் கூறி நிரூபிக்க.",
+          marks: 3,
+          scheme: [
+            { step: "First theorem statement & proof: $\\overline{A + B} = \\bar{A} \\cdot \\bar{B}$", m: "1.5 marks" },
+            { step: "Second theorem statement & proof: $\\overline{A \\cdot B} = \\bar{A} + \\bar{B}$", m: "1.5 marks" }
+          ],
+          solution: "First Theorem: The complement of a logical sum is equal to the product of complements: $\\overline{A + B} = \\bar{A} \\cdot \\bar{B}$. Second Theorem: The complement of a logical product is equal to the sum of complements: $\\overline{A \\cdot B} = \\bar{A} + \\bar{B}$. Both proved via truth tables for combinations $(0,0), (0,1), (1,0), (1,1)$."
+        },
+        {
+          qno: 33,
+          unit: "Unit 6: Wave Optics (Compulsory Numerical)",
+          isCompulsory: true,
+          en: "[Compulsory] In Young's double-slit experiment, two slits are separated by $0.2 \\text{ mm}$ and the screen is placed at a distance of $1.5 \\text{ m}$. If the fringe width is measured to be $4.5 \\text{ mm}$, find the wavelength of the light used.",
+          ta: "[கட்டாய வினா] யங் இரட்டைப் பிளவு ஆய்வில், இரு பிளவுகளுக்கு இடையே உள்ள தொலைவு $0.2 \\text{ mm}$, திரை வைக்கப்பட்டுள்ள தொலைவு $1.5 \\text{ m}$. பட்டை அகலம் $4.5 \\text{ mm}$ என அளவிடப்பட்டால், பயன்படுத்தப்பட்ட ஒளியின் அலைநீளத்தைக் காண்க.",
+          marks: 3,
+          scheme: [
+            { step: "Formula: $\\beta = \\frac{\\lambda D}{d} \\implies \\lambda = \\frac{\\beta d}{D}$", m: "1 mark" },
+            { step: "Data conversion: $d = 0.2 \\times 10^{-3} \\text{ m}$, $D = 1.5 \\text{ m}$, $\\beta = 4.5 \\times 10^{-3} \\text{ m}$", m: "1 mark" },
+            { step: "Calculation: $\\lambda = \\frac{(4.5 \\times 10^{-3})(0.2 \\times 10^{-3})}{1.5} = 6 \\times 10^{-7} \\text{ m} = 6000 \\text{ \u00c5}$", m: "1 mark" }
+          ],
+          solution: "Given: $d = 2 \\times 10^{-4} \\text{ m}$, $D = 1.5 \\text{ m}$, $\\beta = 4.5 \\times 10^{-3} \\text{ m}$. Formula: $\\beta = \\frac{\\lambda D}{d} \\implies \\lambda = \\frac{\\beta d}{D} = \\frac{(4.5 \\times 10^{-3} \\text{ m}) \\times (0.2 \\times 10^{-3} \\text{ m})}{1.5 \\text{ m}} = \\frac{0.9 \\times 10^{-6}}{1.5} = 6.0 \\times 10^{-7} \\text{ m} = 600 \\text{ nm} = 6000 \\text{ \u00c5}$."
+        }
+      ],
+      part4: [
+        {
+          qno: 34,
+          unit: "Unit 1: Gauss's Law",
+          title: "Question 34 (a) OR (b)",
+          optA: {
+            titleEn: "State Gauss's law in electrostatics. Apply it to calculate the electric field due to an infinitely long straight charged wire.",
+            titleTa: "நிலைமின்னியலில் காஸ் விதியைக் கூறுக. காஸ் விதியைப் பயன்படுத்தி முடிவிலா நீளமுடைய மின்னூட்டம் பெற்ற நேர்க்கம்பியால் ஏற்படும் மின்புலத்தைக் கணக்கிடுக.",
+            scheme: [
+              { step: "Gauss's law statement: $\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{encl}}{\\epsilon_0}$", m: "1 mark" },
+              { step: "Cylindrical Gaussian surface setup with length $L$ and radius $r$", m: "1 mark" },
+              { step: "Flux calculation through curved surface and zero flux through end caps", m: "1.5 marks" },
+              { step: "Final expression: $E (2\\pi r L) = \\frac{\\lambda L}{\\epsilon_0} \\implies E = \\frac{\\lambda}{2\\pi\\epsilon_0 r}$", m: "1.5 marks" }
+            ],
+            solution: "Gauss's Law states that total electric flux through any closed surface is equal to $\\frac{1}{\\epsilon_0}$ times the net charge enclosed: $\\Phi = \\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{\\text{enclosed}}}{\\epsilon_0}$. For infinitely long wire with linear charge density $\\lambda$: choose a coaxial cylindrical Gaussian surface of radius $r$ and length $L$. Flux through circular end caps is zero since $\\vec{E} \\perp d\\vec{A}$. Flux through curved surface: $\\Phi = \\int \\vec{E} \\cdot d\\vec{A} = E (2\\pi r L)$. By Gauss's Law: $E (2\\pi r L) = \\frac{\\lambda L}{\\epsilon_0} \\implies E = \\frac{\\lambda}{2\\pi\\epsilon_0 r}$."
+          },
+          optB: {
+            titleEn: "Explain the determination of internal resistance of a primary cell using a potentiometer with a circuit diagram.",
+            titleTa: "மின்னழுத்தமானியைப் பயன்படுத்தி ஒரு முதன்மை மின்கலத்தின் அக மின்தடையைக் காணும் முறையை மின்சுற்றுப் படத்துடன் விளக்குக.",
+            scheme: [
+              { step: "Neat circuit diagram showing primary and secondary circuits with resistance box $R$", m: "1.5 marks" },
+              { step: "Balancing length $l_1$ for open circuit EMF: $\\mathcal{E} \\propto l_1$", m: "1 mark" },
+              { step: "Balancing length $l_2$ for terminal potential difference: $V = \\frac{\\mathcal{E} R}{R + r} \\propto l_2$", m: "1.5 marks" },
+              { step: "Deduction of internal resistance: $r = R\\left(\\frac{l_1 - l_2}{l_2}\\right)$", m: "1 mark" }
+            ],
+            solution: "Connect the cell of EMF $\\mathcal{E}$ in secondary circuit with balancing length $l_1$ on open circuit ($K_2$ open): $\\mathcal{E} \\propto l_1$. When resistance box $R$ is shunted ($K_2$ closed), cell delivers current $I = \\frac{\\mathcal{E}}{R+r}$ and terminal voltage is $V = I R = \\frac{\\mathcal{E} R}{R+r} \\propto l_2$. Dividing both equations: $\\frac{\\mathcal{E}}{V} = \\frac{l_1}{l_2} \\implies \\frac{\\mathcal{E}}{\\mathcal{E} R / (R+r)} = \\frac{R+r}{R} = 1 + \\frac{r}{R} = \\frac{l_1}{l_2} \\implies r = R \\left( \\frac{l_1 - l_2}{l_2} \\right)$."
+          }
+        },
+        {
+          qno: 35,
+          unit: "Unit 4: AC Generator",
+          title: "Question 35 (a) OR (b)",
+          optA: {
+            titleEn: "Describe the construction and working of an AC generator (alternator) with neat diagram and obtain the expression for induced EMF.",
+            titleTa: "மாறுதிசை மின்னியற்றியின் (AC generator) அமைப்பு மற்றும் செயல்படும் முறையினை படத்துடன் விளக்கி தூண்டப்பட்ட மின் இயக்கு விசைக்கான கோவையைப் பெறுக.",
+            scheme: [
+              { step: "Neat diagram showing armature coil, field magnets, slip rings, and brushes", m: "1.5 marks" },
+              { step: "Principle: Electromagnetic induction (Faraday's law)", m: "0.5 mark" },
+              { step: "Magnetic flux at time $t$: $\\Phi_B = B A \\cos\\omega t$", m: "1 mark" },
+              { step: "Faraday's law derivation: $e = -N \\frac{d\\Phi_B}{dt} = N B A \\omega \\sin\\omega t = e_0 \\sin\\omega t$", m: "2 marks" }
+            ],
+            solution: "An alternator converts mechanical energy into electrical energy based on Faraday's law of electromagnetic induction. An armature coil of $N$ turns and area $A$ rotates with angular velocity $\\omega$ in uniform magnetic field $B$. At time $t$, angle is $\\theta = \\omega t$, and magnetic flux is $\\Phi_B = B A \\cos\\omega t$. Induced EMF in coil of $N$ turns: $e = -N \\frac{d\\Phi_B}{dt} = -N \\frac{d}{dt}(B A \\cos\\omega t) = N B A \\omega \\sin\\omega t$. Setting peak EMF $e_0 = N B A \\omega$, we get instantaneous sinusoidal EMF: $e = e_0 \\sin\\omega t$."
+          },
+          optB: {
+            titleEn: "Derive an expression for the force per unit length between two long, straight parallel current-carrying conductors and define one Ampere.",
+            titleTa: "இரு நீண்ட, நேரான, இணை மின்னோட்டக் கடத்திகளுக்கு இடையே செயல்படும் ஓரலகு நீளத்திற்கான விசையைக் கணக்கிட்டு ஒரு ஆம்பியர் - வரையறு.",
+            scheme: [
+              { step: "Diagram showing two conductors separated by $r$ carrying currents $I_1$ and $I_2$", m: "1 mark" },
+              { step: "Magnetic field produced by first conductor: $B_1 = \\frac{\\mu_0 I_1}{2\\pi r}$", m: "1 mark" },
+              { step: "Lorentz force on length $L$ of second conductor: $F = I_2 L B_1 = \\frac{\\mu_0 I_1 I_2 L}{2\\pi r}$", m: "1.5 marks" },
+              { step: "Force per unit length $\\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi r}$ and standard SI definition of Ampere", m: "1.5 marks" }
+            ],
+            solution: "Magnetic field produced by conductor 1 carrying $I_1$ at distance $r$: $B_1 = \\frac{\\mu_0 I_1}{2\\pi r}$. The magnetic Lorentz force on length $L$ of conductor 2 carrying current $I_2$: $F_{21} = I_2 L B_1 \\sin 90^\\circ = \\frac{\\mu_0 I_1 I_2 L}{2\\pi r}$. Force per unit length: $f = \\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi r}$. Definition of Ampere: One ampere is that constant current which, if maintained in two straight parallel conductors of infinite length and negligible cross-section, placed 1 metre apart in vacuum, produces between them a force equal to $2 \\times 10^{-7} \\text{ N m}^{-1}$."
+          }
+        },
+        {
+          qno: 36,
+          unit: "Unit 6: Lens Maker's Formula",
+          title: "Question 36 (a) OR (b)",
+          optA: {
+            titleEn: "Derive Lens Maker's formula for a thin biconvex lens in terms of radii of curvature $R_1, R_2$ and refractive index $n$.",
+            titleTa: "மெல்லிய இருகுவி லென்சிற்கான லென்ஸ் உருவாக்குபவரின் சமன்பாட்டை வளைவு ஆரங்கள் $R_1, R_2$ மற்றும் ஒளிவிலகல் எண் $n$ கொண்டு பெறுக.",
+            scheme: [
+              { step: "Ray diagram showing refraction at both spherical surfaces of lens", m: "1 mark" },
+              { step: "Single surface refraction formula: $\\frac{n_2}{v} - \\frac{n_1}{u} = \\frac{n_2 - n_1}{R}$", m: "1 mark" },
+              { step: "Refraction at surface 1 and surface 2 with intermediate image", m: "1.5 marks" },
+              { step: "Adding both surface equations to obtain: $\\frac{1}{f} = (n - 1)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)$", m: "1.5 marks" }
+            ],
+            solution: "Refraction at first spherical surface of radius $R_1$: $\\frac{n}{v'} - \\frac{1}{u} = \\frac{n - 1}{R_1}$ (Eq. 1). Refraction at second surface of radius $R_2$ where $v'$ acts as virtual object: $\\frac{1}{v} - \\frac{n}{v'} = \\frac{1 - n}{R_2} = -\\frac{n - 1}{R_2}$ (Eq. 2). Adding Eq. 1 and Eq. 2 eliminates virtual image distance $v'$: $\\frac{1}{v} - \\frac{1}{u} = (n - 1) \\left( \\frac{1}{R_1} - \\frac{1}{R_2} \\right)$. When $u = \\infty$, $v = f$, so $\\frac{1}{f} = (n - 1) \\left( \\frac{1}{R_1} - \\frac{1}{R_2} \\right)$."
+          },
+          optB: {
+            titleEn: "Discuss the phenomenon of Total Internal Reflection and explain how optical fibers transmit light signals.",
+            titleTa: "முழு அக எதிரொளிப்பு நிகழ்வை விவரித்து, ஒளி இழை எவ்வாறு ஒளி சமிக்ஞைகளை கடத்துகிறது என்பதை விளக்குக.",
+            scheme: [
+              { step: "Conditions for TIR: Denser to rarer medium and angle of incidence $i > i_c$", m: "1.5 marks" },
+              { step: "Formula: $\\sin i_c = 1/n$", m: "1 mark" },
+              { step: "Structure of optical fiber (core $n_1$, cladding $n_2$ with $n_1 > n_2$)", m: "1.5 marks" },
+              { step: "Working mechanism of continuous multiple total internal reflections along fiber length", m: "1 mark" }
+            ],
+            solution: "When light travels from an optically denser medium to a rarer medium and angle of incidence exceeds critical angle ($i > i_c$), no light is refracted; the entire incident light is reflected back into the denser medium. Optical fibers consist of a high-index glass core ($n_1$) surrounded by a lower-index cladding ($n_2 < n_1$). Light entered within the acceptance cone strikes the core-cladding boundary at an angle greater than critical angle and undergoes successive total internal reflections, traveling miles with negligible loss."
+          }
+        },
+        {
+          qno: 37,
+          unit: "Unit 7: Einstein's Photoelectric Equation",
+          title: "Question 37 (a) OR (b)",
+          optA: {
+            titleEn: "State Einstein's photoelectric equation and explain how it successfully explains all experimental observations of photoelectric effect.",
+            titleTa: "ஐன்ஸ்டீனின் ஒளிமின் சமன்பாட்டைக் கூறி, அதன் மூலம் ஒளிமின் விளைவின் அனைத்து ஆய்வு முடிவுகளும் எவ்வாறு வெற்றிகரமாக விளக்கப்படுகின்றன என்பதை விளக்குக.",
+            scheme: [
+              { step: "Statement and formula: $h\\nu = \\Phi_0 + K_{\\text{max}} = h\\nu_0 + \\frac{1}{2}m v_{\\text{max}}^2$", m: "1.5 marks" },
+              { step: "Explanation of threshold frequency existence ($h\\nu < h\\nu_0 \\implies K_{\\text{max}} < 0$, impossible)", m: "1 mark" },
+              { step: "Linear dependence of $K_{\\text{max}}$ on frequency $\\nu$, independent of intensity", m: "1.5 marks" },
+              { step: "Explanation of instantaneous emission and direct proportionality of current to intensity", m: "1 mark" }
+            ],
+            solution: "Einstein proposed that light consists of discrete energy quanta (photons) of energy $E = h\\nu$. One photon collides elastically with one conduction electron, imparting all its energy. Energy equation: $h\\nu = \\Phi_0 + K_{\\text{max}} = h\\nu_0 + \\frac{1}{2}m v_{\\text{max}}^2 \\implies K_{\\text{max}} = h(\\nu - \\nu_0)$. 1. If $\\nu < \\nu_0$, $K_{\\text{max}}$ is negative, which is physically impossible; hence no emission occurs below $\\nu_0$. 2. $K_{\\text{max}}$ depends linearly on frequency $\\nu$. 3. Higher intensity means more photons, thus emitting more electrons per second (higher photocurrent). 4. Collisions are instantaneous ($10^{-9} \\text{ s}$)."
+          },
+          optB: {
+            titleEn: "Describe the construction, working principle, and energy production in a nuclear reactor with a neat schematic diagram.",
+            titleTa: "அணுக்கரு உலையின் அமைப்பு, செயல்படும் விதம் மற்றும் ஆற்றல் உற்பத்தியை தகுந்த படத்துடன் விவரிக்க.",
+            scheme: [
+              { step: "Schematic diagram of reactor showing core, fuel rods, control rods, moderator, and coolant", m: "1.5 marks" },
+              { step: "Function of fuel rods ($^{235}\\text{U}$), moderator (heavy water/graphite slows fast neutrons)", m: "1.5 marks" },
+              { step: "Function of control rods (Cadmium/Boron absorbs neutrons to maintain $k=1$)", m: "1 mark" },
+              { step: "Coolant and radiation shielding mechanism", m: "1 mark" }
+            ],
+            solution: "A nuclear reactor maintains a controlled, self-sustaining nuclear chain fission reaction ($k = 1$). Essential parts: 1. Nuclear Fuel: Fissionable $^{235}\\text{U}$ or $^{239}\\text{Pu}$ rods. 2. Moderator: Heavy water ($D_2O$) or graphite to thermalize fast neutrons from $2 \\text{ MeV}$ to $0.025 \\text{ eV}$. 3. Control Rods: Boron or Cadmium rods with high neutron absorption cross-section to regulate reaction rate. 4. Coolant: Water or liquid sodium circulating through core to extract fission thermal energy to produce steam for turbines. 5. Shielding: Thick concrete wall preventing escape of lethal gamma rays and neutrons."
+          }
+        },
+        {
+          qno: 38,
+          unit: "Unit 9: Transistor Amplifier",
+          title: "Question 38 (a) OR (b)",
+          optA: {
+            titleEn: "Describe the working of an NPN transistor in common emitter (CE) configuration as an amplifier with neat circuit diagram and derive voltage gain.",
+            titleTa: "ஒரு NPN டிரான்சிஸ்டர் பொது உமிழ்ப்பான் (CE) சுற்றில் பெருக்கியாகச் செயல்படுவதை மின்சுற்றுப் படத்துடன் விளக்கி மின்னழுத்தப் பெருக்கத்திற்கான கோவையைப் பெறுக.",
+            scheme: [
+              { step: "Circuit diagram showing biased CE NPN transistor with input AC source and output load $R_C$", m: "1.5 marks" },
+              { step: "Explanation of input loop and output loop with $180^\\circ$ phase reversal", m: "1.5 marks" },
+              { step: "Current gain $\\beta = \\frac{\\Delta I_C}{\\Delta I_B}$ and input resistance $r_i = \\frac{\\Delta V_{BE}}{\\Delta I_B}$", m: "1 mark" },
+              { step: "Voltage gain derivation: $A_v = \\frac{v_o}{v_i} = -\\frac{\\Delta I_C R_C}{\\Delta I_B r_i} = -\\beta \\frac{R_C}{r_i}$", m: "1 mark" }
+            ],
+            solution: "Emitter-base junction is forward-biased and collector-base junction is reverse-biased. Input AC signal $v_i$ is applied across base-emitter. During positive half-cycle of input, forward bias increases, increasing base current $I_B$ and collector current $I_C$. Output voltage $V_{CE} = V_{CC} - I_C R_C$ decreases, making the output signal negative (yielding a $180^\\circ$ phase shift). Voltage gain: $A_v = \\frac{\\Delta V_o}{\\Delta V_i} = -\\frac{\\Delta I_C R_C}{\\Delta I_B r_i} = -\\beta \\frac{R_C}{r_i}$."
+          },
+          optB: {
+            titleEn: "Explain the working of Radar systems and mention any four practical applications of Radar in modern technology.",
+            titleTa: "ரேடார் (RADAR) அமைப்பின் செயல்பாட்டை விளக்கி, நவீன தொழில்நுட்பத்தில் ரேடாரின் ஏதேனும் நான்கு பயன்பாடுகளைக் குறிப்பிடுக.",
+            scheme: [
+              { step: "Radar acronym expansion (RAdio Detection And Ranging) & working principle", m: "1.5 marks" },
+              { step: "Echo principle formula for distance: $d = \\frac{c \\Delta t}{2}$", m: "1.5 marks" },
+              { step: "Four applications: Air traffic control, military defense, weather forecasting, and satellite navigation", m: "2 marks" }
+            ],
+            solution: "RADAR stands for RAdio Detection And Ranging. It transmits high-frequency microwave pulses towards targets. The transmitted pulses strike an obstacle (e.g., aircraft, ship) and reflect back as an echo to the radar receiver. By measuring round-trip travel time $\\Delta t$, target distance is calculated: $d = \\frac{c \\Delta t}{2}$. Applications: 1. Air traffic control (ATC) to guide aircraft landing and avoid mid-air collisions. 2. Military defense for tracking enemy missiles and fighter aircraft. 3. Meteorological weather forecasting to track hurricanes and cyclones. 4. Planetary radar mapping in astronomy."
+          }
+        }
+      ]
+    },
+
+    "2024": {
+      year: "2024",
+      sessionName: "March 2024",
+      code: "7617 / 4719",
+      titleEn: "HIGHER SECONDARY SECOND YEAR PUBLIC EXAMINATION - MARCH 2024",
+      titleTa: "மேல்நிலை இரண்டாம் ஆண்டு பொதுத் தேர்வு - மார்ச் 2024",
+      subtitleEn: "PHYSICS (Tamil & English Versions)",
+      subtitleTa: "இயற்பியல் (தமிழ் மற்றும் ஆங்கில வழி)",
+      pagesCount: 11,
+      part1: [
+        {
+          qno: 1,
+          unit: "Unit 1: Electrostatics",
+          en: "The electric potential at an equatorial point of an electric dipole of dipole moment $p$ is:",
+          ta: "$p$ திருப்புத்திறன் கொண்ட ஒரு மின் இருமுனையின் நடுவரைக் கோட்டில் உள்ள புள்ளியில் நிலைமின்னழுத்தம்:",
+          options: [
+            { code: "(a)", en: "Zero", ta: "சுழி" },
+            { code: "(b)", en: "$\\frac{1}{4\\pi\\epsilon_0}\\frac{p}{r^2}$", ta: "$\\frac{1}{4\\pi\\epsilon_0}\\frac{p}{r^2}$" },
+            { code: "(c)", en: "$\\frac{1}{4\\pi\\epsilon_0}\\frac{2p}{r^3}$", ta: "$\\frac{1}{4\\pi\\epsilon_0}\\frac{2p}{r^3}$" },
+            { code: "(d)", en: "Infinite", ta: "முடிவிலி" }
+          ],
+          correct: "(a)",
+          solution: "Electric potential due to dipole at any point: $V = \\frac{1}{4\\pi\\epsilon_0} \\frac{p \\cos\\theta}{r^2}$. At any point on equatorial plane, $\\theta = 90^\\circ$. Since $\\cos 90^\\circ = 0$, $V_{\\text{equatorial}} = 0$."
+        },
+        {
+          qno: 2,
+          unit: "Unit 2: Current Electricity",
+          en: "The color code sequence on a carbon resistor is Orange, Blue, Yellow and Gold. The resistance value is:",
+          ta: "ஒரு கார்பன் மின்தடையின் வண்ண வளையங்களின் வரிசை ஆரஞ்சு, நீலம், மஞ்சள் மற்றும் தங்கம். அதன் மின்தடை மதிப்பு:",
+          options: [
+            { code: "(a)", en: "$(36 \\pm 5\\%) \\,\\Omega$", ta: "$(36 \\pm 5\\%) \\,\\Omega$" },
+            { code: "(b)", en: "$(360 \\pm 5\\%) \\text{ k}\\Omega$", ta: "$(360 \\pm 5\\%) \\text{ k}\\Omega$" },
+            { code: "(c)", en: "$(36 \\times 10^4 \\pm 5\\%) \\,\\Omega$", ta: "$(36 \\times 10^4 \\pm 5\\%) \\,\\Omega$" },
+            { code: "(d)", en: "$(36 \\times 10^3 \\pm 10\\%) \\,\\Omega$", ta: "$(36 \\times 10^3 \\pm 10\\%) \\,\\Omega$" }
+          ],
+          correct: "(c)",
+          solution: "Orange = 3, Blue = 6, Yellow = multiplier $10^4$, Gold = tolerance $\\pm 5\\%$. Resistance is $(36 \\times 10^4 \\pm 5\\%) \\,\\Omega = (360 \\pm 18) \\text{ k}\\Omega$."
+        },
+        {
+          qno: 3,
+          unit: "Unit 3: Galvanometer",
+          en: "To convert a galvanometer into an ammeter, we connect a:",
+          ta: "ஒரு கால்வனோமீட்டரை அம்மீட்டராக மாற்ற, நாம் இணைக்க வேண்டியது:",
+          options: [
+            { code: "(a)", en: "Low resistance in parallel", ta: "குறைந்த மின்தடையை பக்க இணைப்பில்" },
+            { code: "(b)", en: "High resistance in series", ta: "உயர் மின்தடையை தொடர் இணைப்பில்" },
+            { code: "(c)", en: "Low resistance in series", ta: "குறைந்த மின்தடையை தொடர் இணைப்பில்" },
+            { code: "(d)", en: "High resistance in parallel", ta: "உயர் மின்தடையை பக்க இணைப்பில்" }
+          ],
+          correct: "(a)",
+          solution: "A galvanometer is converted into an ammeter by connecting a low resistance (shunt) in parallel with it to bypass majority of current."
+        },
+        {
+          qno: 4,
+          unit: "Unit 4: AC Circuits",
+          en: "The frequency of alternating current supply in India is:",
+          ta: "இந்தியாவில் வீட்டு உபயோகத்திற்கான மாறுதிசை மின்னோட்டத்தின் அதிர்வெண்:",
+          options: [
+            { code: "(a)", en: "$60 \\text{ Hz}$", ta: "$60 \\text{ Hz}$" },
+            { code: "(b)", en: "$50 \\text{ Hz}$", ta: "$50 \\text{ Hz}$" },
+            { code: "(c)", en: "$100 \\text{ Hz}$", ta: "$100 \\text{ Hz}$" },
+            { code: "(d)", en: "$0 \\text{ Hz}$", ta: "$0 \\text{ Hz}$" }
+          ],
+          correct: "(b)",
+          solution: "The standard commercial alternating current frequency in India is $50 \\text{ Hz}$ with $230 \\text{ V}$ RMS."
+        },
+        {
+          qno: 5,
+          unit: "Unit 6: Optics",
+          en: "A convex lens of focal length $20 \\text{ cm}$ in air has refractive index $1.5$. Its focal length when immersed in water of refractive index $4/3$ becomes:",
+          ta: "காற்றில் $20 \\text{ cm}$ குவியத்தூரம் கொண்ட ஒரு குவி லென்சின் ஒளிவிலகல் எண் $1.5$. அதனை $4/3$ ஒளிவிலகல் எண் கொண்ட நீரில் மூழ்கடிக்கும் போது அதன் குவியத்தூரம்:",
+          options: [
+            { code: "(a)", en: "$40 \\text{ cm}$", ta: "$40 \\text{ cm}$" },
+            { code: "(b)", en: "$80 \\text{ cm}$", ta: "$80 \\text{ cm}$" },
+            { code: "(c)", en: "$20 \\text{ cm}$", ta: "$20 \\text{ cm}$" },
+            { code: "(d)", en: "$10 \\text{ cm}$", ta: "$10 \\text{ cm}$" }
+          ],
+          correct: "(b)",
+          solution: "In air: $\\frac{1}{f_a} = (1.5 - 1)K = 0.5 K$. In water: $\\frac{1}{f_w} = \\left(\\frac{1.5}{4/3} - 1\\right)K = \\left(\\frac{9}{8} - 1\\right)K = \\frac{1}{8}K$. Ratio: $\\frac{f_w}{f_a} = \\frac{0.5}{1/8} = 4 \\implies f_w = 4 \\times 20 = 80 \\text{ cm}$."
+        },
+        {
+          qno: 6,
+          unit: "Unit 8: Atomic Physics",
+          en: "According to Bohr's postulates, the orbital angular momentum of an electron in the $3^{\\text{rd}}$ stationary orbit is:",
+          ta: "போரின் எடுகோள்களின்படி, $3$-வது நிலையான வட்டப்பாதையில் இயங்கும் எலக்ட்ரானின் கோண உந்தம்:",
+          options: [
+            { code: "(a)", en: "$\\frac{3h}{2\\pi}$", ta: "$\\frac{3h}{2\\pi}$" },
+            { code: "(b)", en: "$\\frac{h}{2\\pi}$", ta: "$\\frac{h}{2\\pi}$" },
+            { code: "(c)", en: "$\\frac{3h}{\\pi}$", ta: "$\\frac{3h}{\\pi}$" },
+            { code: "(d)", en: "$\\frac{9h}{2\\pi}$", ta: "$\\frac{9h}{2\\pi}$" }
+          ],
+          correct: "(a)",
+          solution: "Bohr's quantization condition: $L = m v r = \\frac{n h}{2\\pi}$. For $n = 3$, $L = \\frac{3h}{2\\pi}$."
+        },
+        {
+          qno: 7,
+          unit: "Unit 9: Logic Gates",
+          en: "Which of the following logic gates is called a universal logic gate?",
+          ta: "பின்வருவனவற்றுள் பொதுவான (யுனிவர்சல்) தருக்க வாயில் என அழைக்கப்படுவது எது?",
+          options: [
+            { code: "(a)", en: "AND gate", ta: "AND வாயில்" },
+            { code: "(b)", en: "NAND gate", ta: "NAND வாயில்" },
+            { code: "(c)", en: "OR gate", ta: "OR வாயில்" },
+            { code: "(d)", en: "NOT gate", ta: "NOT வாயில்" }
+          ],
+          correct: "(b)",
+          solution: "NAND and NOR gates are universal gates because any boolean logic function or other basic gate (NOT, AND, OR) can be constructed using only them."
+        },
+        {
+          qno: 8,
+          unit: "Unit 7: Matter Waves",
+          en: "The de Broglie wavelength associated with a particle of mass $m$ and kinetic energy $K$ is:",
+          ta: "$m$ நிறையும் $K$ இயக்க ஆற்றலும் கொண்ட துகளோடு தொடர்புடைய டி பிராய் அலைநீளம்:",
+          options: [
+            { code: "(a)", en: "$\\lambda = \\frac{h}{\\sqrt{2mK}}$", ta: "$\\lambda = \\frac{h}{\\sqrt{2mK}}$" },
+            { code: "(b)", en: "$\\lambda = \\frac{\\sqrt{2mK}}{h}$", ta: "$\\lambda = \\frac{\\sqrt{2mK}}{h}$" },
+            { code: "(c)", en: "$\\lambda = \\frac{h}{2mK}$", ta: "$\\lambda = \\frac{h}{2mK}$" },
+            { code: "(d)", en: "$\\lambda = \\frac{2mK}{h}$", ta: "$\\lambda = \\frac{2mK}{h}$" }
+          ],
+          correct: "(a)",
+          solution: "Momentum $p = \\sqrt{2mK}$. Therefore, de Broglie wavelength $\\lambda = \\frac{h}{p} = \\frac{h}{\\sqrt{2mK}}$."
+        },
+        {
+          qno: 9,
+          unit: "Unit 3: Cyclotron",
+          en: "Cyclotron cannot accelerate which of the following particles?",
+          ta: "சைக்ளோட்ரான் பின்வரும் எந்த துகளை முடுக்க முடியாது?",
+          options: [
+            { code: "(a)", en: "Protons", ta: "புரோட்டான்கள்" },
+            { code: "(b)", en: "Neutrons", ta: "நியூட்ரான்கள்" },
+            { code: "(c)", en: "Alpha particles", ta: "ஆல்பா துகள்கள்" },
+            { code: "(d)", en: "Deuterons", ta: "டியூட்ரான்கள்" }
+          ],
+          correct: "(b)",
+          solution: "Cyclotron operates by electrostatic and magnetic Lorentz forces ($F = qE$ and $F = q v B$). Neutrons have zero electric charge ($q = 0$), so they experience no acceleration."
+        },
+        {
+          qno: 10,
+          unit: "Unit 4: Mutual Induction",
+          en: "The SI unit of mutual inductance is:",
+          ta: "பரிமாற்று மின்தூண்டல் எண்ணின் SI அலகு:",
+          options: [
+            { code: "(a)", en: "Henry (H)", ta: "ஹென்றி (H)" },
+            { code: "(b)", en: "Tesla (T)", ta: "டெஸ்லா (T)" },
+            { code: "(c)", en: "Weber (Wb)", ta: "வெபர் (Wb)" },
+            { code: "(d)", en: "Farad (F)", ta: "ஃபாரட் (F)" }
+          ],
+          correct: "(a)",
+          solution: "Both self-inductance ($L$) and mutual inductance ($M$) have the SI unit Henry (H) ($1 \\text{ H} = 1 \\text{ V s A}^{-1} = 1 \\text{ Wb A}^{-1}$)."
+        },
+        {
+          qno: 11,
+          unit: "Unit 5: Infrared Radiation",
+          en: "Greenhouse effect on Earth is mainly caused by the absorption of which radiation by atmosphere?",
+          ta: "புவியின் பசுமைக்குடில் விளைவிற்கு முக்கிய காரணமாக வளிமண்டலத்தால் உறிஞ்சப்படும் கதிர்வீச்சு எது?",
+          options: [
+            { code: "(a)", en: "Ultraviolet rays", ta: "புறஊதாக் கதிர்கள்" },
+            { code: "(b)", en: "Infrared radiation", ta: "அகச்சிவப்புக் கதிர்கள்" },
+            { code: "(c)", en: "X-rays", ta: "எக்ஸ் கதிர்கள்" },
+            { code: "(d)", en: "Gamma rays", ta: "காமாக் கதிர்கள்" }
+          ],
+          correct: "(b)",
+          solution: "Infrared radiation (heat radiation) emitted by Earth's surface is absorbed by greenhouse gases like $\\text{CO}_2$ and water vapor, trapping heat."
+        },
+        {
+          qno: 12,
+          unit: "Unit 8: Nuclear Fusion",
+          en: "Energy released in stars like the Sun is produced by which nuclear process?",
+          ta: "சூரியன் போன்ற விண்மீன்களில் ஆற்றல் வெளிப்படுவது எந்த அணுக்கரு நிகழ்வால் ஏற்படுகிறது?",
+          options: [
+            { code: "(a)", en: "Nuclear fission", ta: "அணுக்கரு பிளவு" },
+            { code: "(b)", en: "Nuclear fusion", ta: "அணுக்கரு இணைவு" },
+            { code: "(c)", en: "Chemical combustion", ta: "வேதி எரிதல்" },
+            { code: "(d)", en: "Alpha decay", ta: "ஆல்பா சிதைவு" }
+          ],
+          correct: "(b)",
+          solution: "Thermonuclear fusion of hydrogen into helium via the proton-proton cycle powers the Sun and stars."
+        },
+        {
+          qno: 13,
+          unit: "Unit 2: Drift Velocity",
+          en: "The mobility of free electrons $\\mu$ in terms of relaxation time $\\tau$ is given by:",
+          ta: "தளர்வு நேரம் $\\tau$ கொண்டு எலக்ட்ரான்களின் இயக்கத்திறன் $\\mu$-க்கான சமன்பாடு:",
+          options: [
+            { code: "(a)", en: "$\\mu = \\frac{e\\tau}{m}$", ta: "$\\mu = \\frac{e\\tau}{m}$" },
+            { code: "(b)", en: "$\\mu = \\frac{m}{e\\tau}$", ta: "$\\mu = \\frac{m}{e\\tau}$" },
+            { code: "(c)", en: "$\\mu = \\frac{e m}{\\tau}$", ta: "$\\mu = \\frac{e m}{\\tau}$" },
+            { code: "(d)", en: "$\\mu = \\frac{\\tau}{e m}$", ta: "$\\mu = \\frac{\\tau}{e m}$" }
+          ],
+          correct: "(a)",
+          solution: "Mobility is the drift velocity acquired per unit electric field: $\\mu = \\frac{v_d}{E} = \\frac{e\\tau E / m}{E} = \\frac{e\\tau}{m}$."
+        },
+        {
+          qno: 14,
+          unit: "Unit 9: Zener Diode",
+          en: "The depletion layer of an unbiased p-n junction consists of:",
+          ta: "சார்பற்ற p-n சந்தி டையோடினின் இயங்குபகுதி (அயனிப்பகுதி) எவற்றைக் கொண்டிருக்கும்?",
+          options: [
+            { code: "(a)", en: "Only free electrons", ta: "தனித்த எலக்ட்ரான்கள் மட்டும்" },
+            { code: "(b)", en: "Only holes", ta: "துளைகள் மட்டும்" },
+            { code: "(c)", en: "Immobile positive and negative ions", ta: "நகர இயலா நேர் மற்றும் எதிர் அயனிகள்" },
+            { code: "(d)", en: "Neutral atoms only", ta: "நடுநிலை அணுக்கள் மட்டும்" }
+          ],
+          correct: "(c)",
+          solution: "Recombination of diffusing electrons and holes leaves behind uncompensated immobile donor cations on n-side and acceptor anions on p-side, forming the depletion layer."
+        },
+        {
+          qno: 15,
+          unit: "Unit 1: Capacitance",
+          en: "Three capacitors each of capacitance $3 \\,\\mu\\text{F}$ are connected in series. The equivalent capacitance is:",
+          ta: "ஒவ்வொன்றும் $3 \\,\\mu\\text{F}$ மின்தேக்குத்திறன் கொண்ட மூன்று மின்தேக்கிகள் தொடரிணைப்பில் இணைக்கப்பட்டுள்ளன. தொகுபயன் மின்தேக்குத்திறன்:",
+          options: [
+            { code: "(a)", en: "$9 \\,\\mu\\text{F}$", ta: "$9 \\,\\mu\\text{F}$" },
+            { code: "(b)", en: "$1 \\,\\mu\\text{F}$", ta: "$1 \\,\\mu\\text{F}$" },
+            { code: "(c)", en: "$3 \\,\\mu\\text{F}$", ta: "$3 \\,\\mu\\text{F}$" },
+            { code: "(d)", en: "$0.33 \\,\\mu\\text{F}$", ta: "$0.33 \\,\\mu\\text{F}$" }
+          ],
+          correct: "(b)",
+          solution: "In series connection: $\\frac{1}{C_s} = \\frac{1}{C} + \\frac{1}{C} + \\frac{1}{C} = \\frac{3}{3} = 1 \\implies C_s = 1 \\,\\mu\\text{F}$."
+        }
+      ],
+      part2: [
+        {
+          qno: 16,
+          unit: "Unit 1: Electrostatic Potential",
+          en: "Define equipotential surface.",
+          ta: "சமமின்னழுத்தப் பரப்பு - வரையறு.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: Surface on which all points have same electric potential", m: "1 mark" },
+            { step: "Property: Work done in moving charge along it is zero ($dW = 0$)", m: "1 mark" }
+          ],
+          solution: "An equipotential surface is a surface on which all points are at the same electric potential. No work is done in moving an electric charge between any two points on an equipotential surface."
+        },
+        {
+          qno: 17,
+          unit: "Unit 2: Temperature Coefficient",
+          en: "Define temperature coefficient of resistance.",
+          ta: "மின்தடை வெப்பநிலை எண் - வரையறு.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: Fractional increase in resistance per degree rise in temperature", m: "1 mark" },
+            { step: "Formula: $\\alpha = \\frac{\\Delta R}{R_0 \\Delta T}$ and unit $^{\\circ}\\text{C}^{-1}$", m: "1 mark" }
+          ],
+          solution: "The temperature coefficient of resistance ($\\alpha$) is defined as the ratio of increase in resistance per degree rise in temperature to its resistance at $0^\\circ\\text{C}$: $\\alpha = \\frac{R_T - R_0}{R_0 \\Delta T}$. Unit: $^{\\circ}\\text{C}^{-1}$ or $\\text{K}^{-1}$."
+        },
+        {
+          qno: 18,
+          unit: "Unit 3: Magnetic Dipole",
+          en: "State tangent law in magnetism.",
+          ta: "காந்தவியலில் டேன்ஜென்ட் விதியைக் கூறுக.",
+          marks: 2,
+          scheme: [
+            { step: "Statement: A magnetic needle suspended in two mutually perpendicular fields aligns at angle $\\theta$", m: "1 mark" },
+            { step: "Formula: $B = B_H \\tan\\theta$", m: "1 mark" }
+          ],
+          solution: "When a magnetic needle is suspended freely in two mutually perpendicular uniform magnetic fields, it comes to rest along the direction of the resultant field making an angle $\\theta$ with horizontal field $B_H$ such that $B = B_H \\tan\\theta$."
+        },
+        {
+          qno: 19,
+          unit: "Unit 4: Eddy Currents",
+          en: "What are eddy currents (Foucault currents)? Mention any one application.",
+          ta: "சுழல் மின்னோட்டம் (ஃபூக்கோ மின்னோட்டம்) என்றால் என்ன? அதன் ஒரு பயன்பாட்டைக் குறிப்பிடுக.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: Induced circulating currents in solid bulk conductors by changing magnetic flux", m: "1 mark" },
+            { step: "One application: Induction furnace, electromagnetic damping, or electric brakes", m: "1 mark" }
+          ],
+          solution: "When a bulk conductor is subjected to a changing magnetic flux, circulating induced currents are produced throughout the volume of the conductor like water whirlpools, known as eddy currents. Applications: Induction furnace, electromagnetic damping, induction motor, electric train brakes."
+        },
+        {
+          qno: 20,
+          unit: "Unit 6: Optics",
+          en: "State the conditions for total internal reflection.",
+          ta: "முழு அக எதிரொளிப்பிற்கான நிபந்தனைகளைக் கூறுக.",
+          marks: 2,
+          scheme: [
+            { step: "Light must travel from denser medium to rarer medium", m: "1 mark" },
+            { step: "Angle of incidence in denser medium must exceed critical angle ($i > i_c$)", m: "1 mark" }
+          ],
+          solution: "1. Light must travel from an optically denser medium into an optically rarer medium. 2. The angle of incidence in the denser medium must be greater than the critical angle ($i > i_c$) for the given pair of media."
+        },
+        {
+          qno: 21,
+          unit: "Unit 7: Stopping Potential",
+          en: "Define stopping potential in photoelectric effect.",
+          ta: "ஒளிமின் விளைவில் நிறுத்து மின்னழுத்தம் - வரையறு.",
+          marks: 2,
+          scheme: [
+            { step: "Definition: Minimum negative retarding potential applied to anode to reduce photocurrent to zero", m: "1 mark" },
+            { step: "Relation: $e V_0 = K_{\\text{max}} = \\frac{1}{2}m v_{\\text{max}}^2$", m: "1 mark" }
+          ],
+          solution: "Stopping potential ($V_0$) is the minimum negative potential applied to the collector anode with respect to the emitting cathode that just stops the fastest-moving photoelectrons, reducing the photoelectric current to zero."
+        },
+        {
+          qno: 22,
+          unit: "Unit 8: Nuclear Force",
+          en: "Write any two important properties of nuclear force.",
+          ta: "அணுக்கரு விசையின் ஏதேனும் இரு முக்கியப் பண்புகளை எழுதுக.",
+          marks: 2,
+          scheme: [
+            { step: "Strongest force in nature and extremely short-range ($\u003c 10^{-15} \\text{ m}$)", m: "1 mark" },
+            { step: "Charge-independent and non-central force", m: "1 mark" }
+          ],
+          solution: "1. It is the strongest attractive force known in nature (about $100$ times stronger than electrostatic force). 2. It is extremely short-range (acting within $\\approx 10^{-15} \\text{ m}$) and is charge-independent (same between $p-p$, $n-n$, and $p-n$)."
+        },
+        {
+          qno: 23,
+          unit: "Unit 9: Barrier Potential",
+          en: "What is meant by barrier potential in a p-n junction?",
+          ta: "p-n சந்தியில் அரண் மின்னழுத்தம் என்றால் என்ன?",
+          marks: 2,
+          scheme: [
+            { step: "Potential difference across depletion layer due to uncompensated ions", m: "1 mark" },
+            { step: "Typical values: $0.7 \\text{ V}$ for Silicon and $0.3 \\text{ V}$ for Germanium", m: "1 mark" }
+          ],
+          solution: "The electric potential difference built up across the depletion layer of a p-n junction due to the electric field of immobile donor and acceptor ions that opposes further diffusion of majority charge carriers is called barrier potential ($0.7 \\text{ V}$ for Si, $0.3 \\text{ V}$ for Ge)."
+        },
+        {
+          qno: 24,
+          unit: "Unit 1: Capacitors (Compulsory Numerical)",
+          isCompulsory: true,
+          en: "[Compulsory] A parallel plate capacitor with air between plates has capacitance $8 \\,\\mu\\text{F}$. What will be the capacitance if the distance between plates is reduced by half and the space is filled with a dielectric slab of dielectric constant $\\kappa = 6$?",
+          ta: "[கட்டாய வினா] காற்றிடைவெளி கொண்ட ஓர் இணைத்தட்டு மின்தேக்கியின் மின்தேக்குத்திறன் $8 \\,\\mu\\text{F}$. தட்டுகளுக்கு இடையேயான தொலைவு பாதியாகக் குறைக்கப்பட்டு, அவற்றிடையே $\\kappa = 6$ கொண்ட மின்காப்புப் பொருள் நிரப்பப்பட்டால் புதிய மின்தேக்குத்திறன் என்ன?",
+          marks: 2,
+          scheme: [
+            { step: "Formula: $C' = \\frac{\\kappa \\epsilon_0 A}{d'} = \\frac{\\kappa \\epsilon_0 A}{d/2} = 2\\kappa C_0$", m: "1 mark" },
+            { step: "Calculation: $C' = 2 \\times 6 \\times 8 \\,\\mu\\text{F} = 96 \\,\\mu\\text{F}$", m: "1 mark" }
+          ],
+          solution: "Initial capacitance: $C_0 = \\frac{\\epsilon_0 A}{d} = 8 \\,\\mu\\text{F}$. When distance $d' = d/2$ and dielectric is inserted: $C' = \\frac{\\kappa \\epsilon_0 A}{d'} = \\frac{\\kappa \\epsilon_0 A}{d/2} = 2 \\kappa \\left(\\frac{\\epsilon_0 A}{d}\\right) = 2 \\kappa C_0 = 2 \\times 6 \\times 8 \\,\\mu\\text{F} = 96 \\,\\mu\\text{F}$."
+        }
+      ],
+      part3: [
+        {
+          qno: 25,
+          unit: "Unit 1: Capacitor Energy",
+          en: "Derive an expression for the electrostatic energy stored in a charged parallel plate capacitor.",
+          ta: "மின்னூட்டம் பெற்ற ஓர் இணைத்தட்டு மின்தேக்கியில் சேமிக்கப்படும் நிலைமின் ஆற்றலுக்கான சமன்பாட்டைத் தருவிக்க.",
+          marks: 3,
+          scheme: [
+            { step: "Work done to add small charge $dq$: $dW = V dq = \\frac{q}{C} dq$", m: "1 mark" },
+            { step: "Integration from $0$ to $Q$: $W = \\int_0^Q \\frac{q}{C} dq = \\frac{Q^2}{2C}$", m: "1.5 marks" },
+            { step: "Alternate forms: $U = \\frac{1}{2} C V^2 = \\frac{1}{2} Q V$", m: "0.5 mark" }
+          ],
+          solution: "Work done in transferring small additional charge $dq$ against potential difference $V = q/C$: $dW = V dq = \\frac{q}{C} dq$. Total work done in charging capacitor from $0$ to $Q$: $U = \\int_0^Q \\frac{q}{C} dq = \\frac{1}{C} \\left[ \\frac{q^2}{2} \\right]_0^Q = \\frac{Q^2}{2C}$. Using $Q = C V$, stored energy is: $U = \\frac{1}{2} C V^2 = \\frac{1}{2} Q V$."
+        },
+        {
+          qno: 26,
+          unit: "Unit 2: Metre Bridge",
+          en: "Explain the working of a Metre Bridge to measure unknown resistance with neat schematic.",
+          ta: "மீட்டர் சமனச் சுற்றைப் பயன்படுத்தி தெரியாத மின்தடையைக் காணும் முறையை படத்துடன் விளக்குக.",
+          marks: 3,
+          scheme: [
+            { step: "Circuit diagram of 1-metre uniform wire with gaps containing $P$ and $Q$", m: "1 mark" },
+            { step: "Principle of Wheatstone bridge: $\\frac{P}{Q} = \\frac{R_l l_1}{R_l l_2} = \\frac{l_1}{l_2}$", m: "1 mark" },
+            { step: "Formula for unknown resistance: $P = Q \\frac{l_1}{l_2}$ and end resistance correction", m: "1 mark" }
+          ],
+          solution: "A metre bridge consists of a 1-metre long uniform manganin wire stretched on a wooden board. An unknown resistance $P$ is connected in left gap and a known resistance box $Q$ in right gap. The jockey is adjusted until the galvanometer shows null deflection at balancing length $l_1$. Balancing condition: $\\frac{P}{Q} = \\frac{r l_1}{r (100 - l_1)} \\implies P = Q \\left(\\frac{l_1}{100 - l_1}\\right)$."
+        },
+        {
+          qno: 27,
+          unit: "Unit 3: Galvanometer",
+          en: "Explain the principle and construction of a Moving Coil Galvanometer.",
+          ta: "இயங்குசுருள் கால்வனோமீட்டரின் தத்துவம் மற்றும் அமைப்பை விளக்குக.",
+          marks: 3,
+          scheme: [
+            { step: "Principle: Current-carrying loop in uniform radial magnetic field experiences deflecting torque $\\tau = N B I A$", m: "1.5 marks" },
+            { step: "Restoring torque of suspension fiber $\\tau_r = C \\theta$", m: "1 mark" },
+            { step: "Equilibrium condition: $N B I A = C \\theta \\implies I = \\left(\\frac{C}{N B A}\\right)\\theta$", m: "0.5 mark" }
+          ],
+          solution: "Principle: A current-carrying coil placed in a magnetic field experiences a deflecting torque $\\tau = N I A B \\sin\\theta$. In a radial magnetic field produced by cylindrical soft iron core and concave pole pieces, $\\theta = 90^\\circ$ everywhere, so deflecting torque is $\\tau_d = N B A I$. Restoring torque due to phosphor bronze strip twist: $\\tau_r = C \\theta$. In equilibrium: $N B A I = C \\theta \\implies I = \\left(\\frac{C}{N B A}\\right)\\theta = K \\theta$. Current is directly proportional to deflection."
+        },
+        {
+          qno: 28,
+          unit: "Unit 4: Resonance",
+          en: "What is resonance in a series RLC circuit? Obtain the condition for electrical resonance and the expression for resonant frequency.",
+          ta: "தொடர் RLC சுற்றில் ஒத்திசைவு என்றால் என்ன? மின் ஒத்திசைவிற்கான நிபந்தனை மற்றும் ஒத்திசைவு அதிர்வெண்ணிற்கான சமன்பாட்டைப் பெறுக.",
+          marks: 3,
+          scheme: [
+            { step: "Definition: Circuit condition where current amplitude becomes maximum and impedance is minimum", m: "1 mark" },
+            { step: "Condition: $X_L = X_C \\implies \\omega L = \\frac{1}{\\omega C}$", m: "1 mark" },
+            { step: "Resonant frequency: $\\omega_r = \\frac{1}{\\sqrt{LC}} \\implies f_r = \\frac{1}{2\\pi\\sqrt{LC}}$", m: "1 mark" }
+          ],
+          solution: "Electrical resonance occurs when the frequency of applied alternating voltage matches the natural frequency of the series LCR circuit, making impedance minimum ($Z = R$) and current maximum. Condition: $X_L = X_C \\implies \\omega L = \\frac{1}{\\omega C} \\implies \\omega^2 = \\frac{1}{LC} \\implies \\omega_r = \\frac{1}{\\sqrt{LC}}$. Linear resonant frequency: $f_r = \\frac{\\omega_r}{2\\pi} = \\frac{1}{2\\pi\\sqrt{LC}}$."
+        },
+        {
+          qno: 29,
+          unit: "Unit 6: Microscope",
+          en: "Explain the resolving power of a microscope and write the formula for its limit of resolution.",
+          ta: "நுண்ணோக்கியின் பிரிதிறனை விளக்கி அதன் பிரிதிறன் எல்லைக்கான சமன்பாட்டை எழுதுக.",
+          marks: 3,
+          scheme: [
+            { step: "Definition: Ability of microscope to form distinctly separate images of two close objects", m: "1.5 marks" },
+            { step: "Limit of resolution: $d_{\\text{min}} = \\frac{1.22 \\lambda}{2 n \\sin\\beta}$ and Resolving Power $= \\frac{2 n \\sin\\beta}{1.22 \\lambda}$", m: "1.5 marks" }
+          ],
+          solution: "The resolving power of an optical microscope is defined as its capability to show two closely spaced object points as separate and distinct entities. The minimum separation between two resolvable points is: $d_{\\text{min}} = \\frac{1.22 \\lambda}{2 n \\sin\\beta} = \\frac{1.22 \\lambda}{2 \\text{NA}}$, where $n \\sin\\beta$ is the numerical aperture (NA). Resolving power is $\\frac{1}{d_{\\text{min}}} = \\frac{2 n \\sin\\beta}{1.22 \\lambda}$."
+        },
+        {
+          qno: 30,
+          unit: "Unit 7: Matter Wave Properties",
+          en: "List any three distinct characteristics of de Broglie matter waves.",
+          ta: "டி பிராய் பருப்பொருள் அலைகளின் ஏதேனும் மூன்று முக்கியப் பண்புகளை பட்டியலிடுக.",
+          marks: 3,
+          scheme: [
+            { step: "Associated with moving material particles; not electromagnetic in origin", m: "1 mark" },
+            { step: "Inversely proportional to momentum: $\\lambda = \\frac{h}{p} = \\frac{h}{m v}$", m: "1 mark" },
+            { step: "Independent of charge of particle", m: "1 mark" }
+          ],
+          solution: "1. Matter waves are associated with any moving material particle; lighter and faster particles possess smaller wavelengths. 2. Wavelength is inversely proportional to momentum: $\\lambda = h / mv$. 3. They are not electromagnetic waves because their propagation does not require charged particle acceleration and occurs for neutral particles (like neutrons) as well."
+        },
+        {
+          qno: 31,
+          unit: "Unit 8: Nuclear Radius",
+          en: "State the empirical formula for nuclear radius and calculate the volume of a nucleus in terms of mass number $A$.",
+          ta: "அணுக்கரு ஆரத்திற்கான சமன்பாட்டைக் கூறி, நிறை எண் $A$-ன் அடிப்படையில் அணுக்கருவின் பருமனை கணக்கிடுக.",
+          marks: 3,
+          scheme: [
+            { step: "Nuclear radius formula: $R = R_0 A^{1/3}$ with $R_0 \\approx 1.2 \\text{ fm}$", m: "1.5 marks" },
+            { step: "Volume formula: $V = \\frac{4}{3}\\pi R^3 = \\frac{4}{3}\\pi (R_0 A^{1/3})^3 = \\frac{4}{3}\\pi R_0^3 A \\implies V \\propto A$", m: "1.5 marks" }
+          ],
+          solution: "The nuclear radius is given by $R = R_0 A^{1/3}$, where $R_0 = 1.2 \\times 10^{-15} \\text{ m}$ ($1.2 \\text{ fm}$) and $A$ is the mass number. Assuming spherical nucleus, its volume is $V = \\frac{4}{3}\\pi R^3 = \\frac{4}{3}\\pi (R_0 A^{1/3})^3 = \\frac{4}{3}\\pi R_0^3 A$. Thus, nuclear volume is directly proportional to mass number ($V \\propto A$)."
+        },
+        {
+          qno: 32,
+          unit: "Unit 9: Half Adder",
+          en: "Draw the logic circuit and truth table of a digital Half Adder using XOR and AND gates.",
+          ta: "XOR மற்றும் AND வாயில்களைப் பயன்படுத்தி ஓர் அரைக்கூட்டியின் (Half Adder) தருக்க சுற்று மற்றும் உண்மை அட்டவணையை வரைக.",
+          marks: 3,
+          scheme: [
+            { step: "Logic circuit with XOR gate for Sum ($S = A \\oplus B$) and AND gate for Carry ($C = A B$)", m: "1.5 marks" },
+            { step: "Truth table with inputs $A, B$ and outputs Sum $S$ and Carry $C$", m: "1.5 marks" }
+          ],
+          solution: "A half adder adds two single binary bits $A$ and $B$. Boolean equations: $\\text{Sum } S = A \\oplus B = \\bar{A}B + A\\bar{B}$; $\\text{Carry } C = A \\cdot B$. Truth table: $(0,0 \\rightarrow S=0, C=0)$; $(0,1 \\rightarrow S=1, C=0)$; $(1,0 \\rightarrow S=1, C=0)$; $(1,1 \\rightarrow S=0, C=1)$."
+        },
+        {
+          qno: 33,
+          unit: "Unit 2: Current Electricity (Compulsory Numerical)",
+          isCompulsory: true,
+          en: "[Compulsory] A uniform copper wire of resistance $20 \\,\\Omega$ is cut into four equal pieces. These four pieces are then connected in parallel. Calculate the equivalent resistance of the parallel combination.",
+          ta: "[கட்டாய வினா] $20 \\,\\Omega$ மின்தடை கொண்ட ஒரு சீரான செப்புக் கம்பி நான்கு சமமான துண்டுகளாக வெட்டப்படுகிறது. இந்த நான்கு துண்டுகளும் பக்க இணைப்பில் இணைக்கப்பட்டால், அத்தொகுப்பின் தொகுபயன் மின்தடையைக் கணக்கிடுக.",
+          marks: 3,
+          scheme: [
+            { step: "Resistance of each piece: $R' = R/4 = 20/4 = 5 \\,\\Omega$", m: "1 mark" },
+            { step: "Formula for parallel combination: $\\frac{1}{R_p} = \\frac{1}{R'} + \\frac{1}{R'} + \\frac{1}{R'} + \\frac{1}{R'} = \\frac{4}{R'}$", m: "1 mark" },
+            { step: "Final answer: $R_p = \\frac{R'}{4} = \\frac{5}{4} = 1.25 \\,\\Omega$", m: "1 mark" }
+          ],
+          solution: "Resistance of wire is proportional to length ($R \\propto L$). When cut into 4 equal parts, resistance of each piece is $R_1 = R_2 = R_3 = R_4 = \\frac{20}{4} = 5 \\,\\Omega$. When connected in parallel: $\\frac{1}{R_p} = \\frac{1}{5} + \\frac{1}{5} + \\frac{1}{5} + \\frac{1}{5} = \\frac{4}{5} \\implies R_p = \\frac{5}{4} = 1.25 \\,\\Omega$."
+        }
+      ],
+      part4: [
+        {
+          qno: 34,
+          unit: "Unit 1: Electric Potential",
+          title: "Question 34 (a) OR (b)",
+          optA: {
+            titleEn: "Derive an expression for electrostatic potential at a point due to an electric dipole.",
+            titleTa: "மின் இருமுனையினால் ஒரு புள்ளியில் ஏற்படும் நிலைமின்னழுத்தத்திற்கான சமன்பாட்டைத் தருவிக்க.",
+            scheme: [
+              { step: "Neat diagram showing dipole $+q, -q$ separated by $2a$ and point $P(r, \\theta)$", m: "1 mark" },
+              { step: "Expressions for distances $r_1$ and $r_2$ using cosine formula and binomial theorem", m: "1.5 marks" },
+              { step: "Potential superposition: $V = \\frac{q}{4\\pi\\epsilon_0}\\left(\\frac{1}{r_1} - \\frac{1}{r_2}\\right)$", m: "1 mark" },
+              { step: "Final equation: $V = \\frac{1}{4\\pi\\epsilon_0} \\frac{p \\cos\\theta}{r^2}$ and special cases for axial and equatorial line", m: "1.5 marks" }
+            ],
+            solution: "Potential at $P(r, \\theta)$: $V = \\frac{q}{4\\pi\\epsilon_0} \\left( \\frac{1}{r_1} - \\frac{1}{r_2} \\right)$. From cosine rule for $r \\gg a$: $r_1 \\approx r\\left(1 - \\frac{a}{r}\\cos\\theta\\right) \\implies \\frac{1}{r_1} \\approx \\frac{1}{r}\\left(1 + \\frac{a}{r}\\cos\\theta\\right)$. Similarly, $\\frac{1}{r_2} \\approx \\frac{1}{r}\\left(1 - \\frac{a}{r}\\cos\\theta\\right)$. Subtracting gives: $\\frac{1}{r_1} - \\frac{1}{r_2} = \\frac{2a\\cos\\theta}{r^2}$. Substituting dipole moment $p = 2aq$: $V = \\frac{1}{4\\pi\\epsilon_0} \\frac{p \\cos\\theta}{r^2}$. Case 1 (Axial $\\theta = 0^\\circ$): $V = \\frac{p}{4\\pi\\epsilon_0 r^2}$. Case 2 (Equatorial $\\theta = 90^\\circ$): $V = 0$."
+          },
+          optB: {
+            titleEn: "Explain the determination of comparison of EMFs of two cells using a Potentiometer.",
+            titleTa: "மின்னழுத்தமானியைப் பயன்படுத்தி இரு மின்கலங்களின் மின் இயக்கு விசைகளை ஒப்பிடும் சோதனையை விளக்குக.",
+            scheme: [
+              { step: "Circuit diagram showing primary circuit with battery and rheostat, and secondary with DPDT switch", m: "1.5 marks" },
+              { step: "Balancing length $l_1$ for cell $\\mathcal{E}_1$: $\\mathcal{E}_1 = I r l_1$", m: "1.5 marks" },
+              { step: "Balancing length $l_2$ for cell $\\mathcal{E}_2$: $\\mathcal{E}_2 = I r l_2$", m: "1 mark" },
+              { step: "Ratio comparison: $\\frac{\\mathcal{E}_1}{\\mathcal{E}_2} = \\frac{l_1}{l_2}$", m: "1 mark" }
+            ],
+            solution: "Primary circuit consists of a storage battery, key, and rheostat connected across potentiometer wire. Secondary circuit connects two cells $\\mathcal{E}_1$ and $\\mathcal{E}_2$ via DPDT switch to galvanometer and jockey. When cell $\\mathcal{E}_1$ is connected, balancing length is $l_1$: $\\mathcal{E}_1 = I r l_1$. When cell $\\mathcal{E}_2$ is connected, balancing length is $l_2$: $\\mathcal{E}_2 = I r l_2$. Dividing both equations: $\\frac{\\mathcal{E}_1}{\\mathcal{E}_2} = \\frac{l_1}{l_2}$."
+          }
+        },
+        {
+          qno: 35,
+          unit: "Unit 3: Circular Coil",
+          title: "Question 35 (a) OR (b)",
+          optA: {
+            titleEn: "Obtain an expression for the magnetic field at a point on the axis of a circular current-carrying conductor using Biot-Savart law.",
+            titleTa: "பயோட்-சாவர்ட் விதியைப் பயன்படுத்தி மின்னோட்டம் பாயும் வட்ட வடிவக் கடத்தியின் அச்சில் உள்ள புள்ளியில் காந்தப்புலத்திற்கான கோவையைப் பெறுக.",
+            scheme: [
+              { step: "Neat diagram showing circular coil of radius $R$ and axial point $P$ at distance $x$", m: "1.5 marks" },
+              { step: "Biot-Savart law application to diametrically opposite current elements $d\\vec{l}$", m: "1.5 marks" },
+              { step: "Canceling vertical components and integrating horizontal components $\\int dB \\sin\\theta$", m: "1 mark" },
+              { step: "Final formula: $B = \\frac{\\mu_0 I R^2}{2(R^2 + x^2)^{3/2}}$ and center case ($x=0$)", m: "1 mark" }
+            ],
+            solution: "Field due to current element $I dl$: $dB = \\frac{\\mu_0}{4\\pi} \\frac{I dl}{r^2}$ where $r^2 = R^2 + x^2$. Diametrically opposite elements produce perpendicular components that cancel each other out ($dB \\cos\\theta$). Only axial components add: $B = \\oint dB \\sin\\theta = \\oint \\left(\\frac{\\mu_0}{4\\pi}\\frac{I dl}{R^2 + x^2}\\right) \\left(\\frac{R}{\\sqrt{R^2 + x^2}}\\right) = \\frac{\\mu_0 I R}{4\\pi(R^2 + x^2)^{3/2}} \\oint dl$. Since $\\oint dl = 2\\pi R$, resultant magnetic field is: $B = \\frac{\\mu_0 I R^2}{2(R^2 + x^2)^{3/2}}$ along the axis."
+          },
+          optB: {
+            titleEn: "Explain the series LCR circuit with phasor diagram and derive expression for impedance and phase angle.",
+            titleTa: "தொடர் LCR சுற்றினை கட்ட வெக்டர் (Phasor) படத்துடன் விளக்கி தொகுபயன் மின்மின்னெதிர்ப்பு மற்றும் கட்டக் கோணத்திற்கான கோவையைப் பெறுக.",
+            scheme: [
+              { step: "Circuit diagram of series LCR connected to alternating source $v = v_0 \\sin\\omega t$", m: "1 mark" },
+              { step: "Phasor diagram showing $V_R$ in phase, $V_L$ leading by $90^\\circ$, and $V_C$ lagging by $90^\\circ$", m: "1.5 marks" },
+              { step: "Resultant voltage equation: $V_0^2 = V_R^2 + (V_L - V_C)^2$", m: "1 mark" },
+              { step: "Impedance derivation: $Z = \\sqrt{R^2 + (X_L - X_C)^2}$ and phase angle $\\tan\\phi = \\frac{X_L - X_C}{R}$", m: "1.5 marks" }
+            ],
+            solution: "In series LCR circuit, current $i = i_0 \\sin\\omega t$ is common. Voltages: $V_R = i_0 R$ (in phase with $i$), $V_L = i_0 X_L$ (leads $i$ by $\\pi/2$), $V_C = i_0 X_C$ (lags $i$ by $\\pi/2$). From phasor triangle: $V_0^2 = V_R^2 + (V_L - V_C)^2 = (i_0 R)^2 + [i_0(X_L - X_C)]^2 = i_0^2 [R^2 + (X_L - X_C)^2]$. Impedance $Z = \\frac{V_0}{i_0} = \\sqrt{R^2 + (X_L - X_C)^2}$. Phase angle $\\phi = \\tan^{-1}\\left(\\frac{X_L - X_C}{R}\\right)$."
+          }
+        },
+        {
+          qno: 36,
+          unit: "Unit 6: Wave Optics",
+          title: "Question 36 (a) OR (b)",
+          optA: {
+            titleEn: "State Huygens' principle. Prove the laws of reflection of light using Huygens' wavefront construction.",
+            titleTa: "ஹைகன்ஸின் கொள்கையைக் கூறுக. ஹைகன்ஸின் அலைமுகப்புக் கொள்கையைப் பயன்படுத்தி ஒளி எதிரொளிப்பு விதிகளை நிரூபிக்க.",
+            scheme: [
+              { step: "Statement of Huygens' principle (every point on primary wavefront acts as secondary source)", m: "1.5 marks" },
+              { step: "Geometric diagram of plane wavefront reflecting from plane reflecting surface", m: "1.5 marks" },
+              { step: "Congruency of right-angled triangles $\\triangle AA'B \\cong \\triangle BB'A$", m: "1 mark" },
+              { step: "Proof of law of reflection: Angle of incidence $i =$ Angle of reflection $r$", m: "1 mark" }
+            ],
+            solution: "Huygens' Principle: 1. Every point on a given wavefront acts as a fresh source of secondary spherical wavelets. 2. The common forward envelope to these secondary wavelets gives the new wavefront. Reflection proof: Consider a plane wavefront $AB$ incident at angle $i$ on reflecting surface $XY$. Let time taken for disturbance from $B$ to reach $C$ at speed $v$ be $t$ ($BC = v t$). In same time, secondary wavelet from $A$ travels $AD = v t$. In right triangles $\\triangle ABC$ and $\\triangle ADC$: hypotenuse $AC$ is common, $BC = AD = v t$, and $\\angle B = \\angle D = 90^\\circ$. By RHS congruency, $\\triangle ABC \\cong \\triangle ADC \\implies \\angle BAC = \\angle DCA \\implies i = r$."
+          },
+          optB: {
+            titleEn: "Explain the Raman effect and discuss Stokes, Anti-Stokes, and Rayleigh lines with an energy level diagram.",
+            titleTa: "ராமன் விளைவை விளக்கி, ஆற்றல் மட்டப் படத்துடன் ஸ்டோக்ஸ், ஆன்ட்டி-ஸ்டோக்ஸ் மற்றும் ராலே வரிகளை விவாதிக்க.",
+            scheme: [
+              { step: "Definition of Raman effect (inelastic scattering of light by molecules)", m: "1.5 marks" },
+              { step: "Energy level diagram showing transitions between ground, virtual, and excited states", m: "1.5 marks" },
+              { step: "Explanation: Rayleigh line ($\u005cnu = \\nu_0$), Stokes lines ($\\nu < \\nu_0$), Anti-Stokes lines ($\\nu > \\nu_0$)", m: "2 marks" }
+            ],
+            solution: "When monochromatic light passes through a transparent substance, scattered light contains frequencies lower and higher than incident frequency along with the incident frequency; this is Raman effect. 1. Rayleigh Scattering: Elastic scattering where molecule returns to same initial level ($h\\nu_s = h\\nu_0$). 2. Stokes Lines: Molecule absorbs vibrational energy, returning to higher state; scattered photon has lower energy ($h\\nu_s = h\\nu_0 - \\Delta E$, frequency $\\nu_s < \\nu_0$). 3. Anti-Stokes Lines: Molecule was initially in excited state and transitions to ground state, adding energy to photon ($h\\nu_s = h\\nu_0 + \\Delta E$, frequency $\\nu_s > \\nu_0$)."
+          }
+        },
+        {
+          qno: 37,
+          unit: "Unit 8: Hydrogen Spectrum",
+          title: "Question 37 (a) OR (b)",
+          optA: {
+            titleEn: "Derive the Rydberg formula for spectral series of hydrogen atom and explain the five spectral series (Lyman, Balmer, Paschen, Brackett, Pfund).",
+            titleTa: "ஹைட்ரஜன் அணுவின் நிறமாலைத் தொடர்களுக்கான ரிட்பெர்க் சமன்பாட்டைத் தருவித்து ஐந்து நிறமாலைத் தொடர்களை (லைமன், பார்மர், பாஷன், பிராக்கெட், ஃபண்ட்) விளக்குக.",
+            scheme: [
+              { step: "Derivation of wave number $\\bar{\\nu} = \\frac{1}{\\lambda} = R_H\\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right)$", m: "2 marks" },
+              { step: "Lyman ($n_1=1, n_2=2,3..$ UV) and Balmer ($n_1=2, n_2=3,4..$ Visible)", m: "1.5 marks" },
+              { step: "Paschen, Brackett, and Pfund series ($n_1=3,4,5$, Infrared regions)", m: "1.5 marks" }
+            ],
+            solution: "When an electron transitions from higher energy orbit $n_2$ to lower orbit $n_1$: $h\\nu = E_2 - E_1 \\implies \\frac{1}{\\lambda} = \\frac{m e^4}{8\\epsilon_0^2 h^3 c} \\left( \\frac{1}{n_1^2} - \\frac{1}{n_2^2} \\right) = R_H \\left(
+ \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)$. 1. Lyman series: $n_1=1, n_2=2,3,4...$ (Ultraviolet region). 2. Balmer series: $n_1=2, n_2=3,4,5...$ (Visible region). 3. Paschen series: $n_1=3, n_2=4,5,6...$ (Infrared region). 4. Brackett series: $n_1=4, n_2=5,6,7...$ (Infrared region). 5. Pfund series: $n_1=5, n_2=6,7,8...$ (Far Infrared region)."
+          },
+          optB: {
+            titleEn: "State the law of radioactive decay and obtain the relation between half-life period and decay constant.",
+            titleTa: "கதிரியக்கச் சிதைவு விதியைக் கூறி அரை ஆயுட்காலம் மற்றும் சிதைவு மாறிலி இடையேயான தொடர்பைப் பெறுக.",
+            scheme: [
+              { step: "Statement of law: $-\frac{dN}{dt} = \lambda N$", m: "1.5 marks" },
+              { step: "Derivation of $N(t) = N_0 e^{-\lambda t}$", m: "1.5 marks" },
+              { step: "Half-life definition and formula $T_{1/2} = \frac{0.693}{\lambda}$", m: "2 marks" }
+            ],
+            solution: "Law: The number of disintegrations per second is directly proportional to number of active nuclei present: $-\frac{dN}{dt} = \lambda N \implies N(t) = N_0 e^{-\lambda t}$. At $t = T_{1/2}$, $N = N_0 / 2 \implies \frac{1}{2} = e^{-\lambda T_{1/2}} \implies T_{1/2} = \frac{\ln 2}{\lambda} = \frac{0.693}{\lambda}$."
+          }
+        },
+        {
+          qno: 38,
+          unit: "Unit 9 & 10: Electronics & Communication",
+          title: "Question 38 (a) OR (b)",
+          optA: {
+            titleEn: "Explain the working of an NPN transistor as a Common Emitter (CE) amplifier with circuit diagram and derive voltage gain.",
+            titleTa: "பொது உமிழ்ப்பான் (CE) சுற்றில் NPN டிரான்சிஸ்டர் பெருக்கியாக செயல்படுவதை விளக்கி மின்னழுத்தப் பெருக்கத்திற்கான கோவையைப் பெறுக.",
+            scheme: [
+              { step: "Circuit diagram with proper DC biasing and AC input/output", m: "1.5 marks" },
+              { step: "Working mechanism and $180^\circ$ phase inversion between input and output", m: "1.5 marks" },
+              { step: "Derivation of voltage gain $A_v = -\beta \frac{R_C}{r_i}$", m: "2 marks" }
+            ],
+            solution: "Emitter-base junction is forward-biased and collector-base junction is reverse-biased. Input AC signal $v_i$ modulates base current $I_B$ and collector current $I_C = \beta I_B$. Voltage across load: $v_o = -I_C R_C$. Phase shift is $180^\circ$. Voltage gain: $A_v = \frac{v_o}{v_i} = -\beta \frac{R_C}{r_i}$."
+          },
+          optB: {
+            titleEn: "Draw the block diagram of AM receiver and explain the function of each block.",
+            titleTa: "வீச்சு மாடுலேற்ற (AM) ஏற்பியின் தொகுப்பு வரைபடம் வரைந்து ஒவ்வொரு தொகுதியின் பணியையும் விளக்குக.",
+            scheme: [
+              { step: "Block diagram: Antenna $\rightarrow$ RF Amplifier $\rightarrow$ Mixer $\rightarrow$ IF Amplifier $\rightarrow$ Detector $\rightarrow$ AF Amplifier $\rightarrow$ Speaker", m: "2 marks" },
+              { step: "Explanation of superheterodyne action and Local Oscillator", m: "1.5 marks" },
+              { step: "Explanation of Detector and Audio amplifier", m: "1.5 marks" }
+            ],
+            solution: "1. Receiving Antenna: Intercepts radio waves and converts to RF voltage. 2. RF Amplifier: Tunes and amplifies desired weak radio frequency. 3. Mixer & Local Oscillator: Beats incoming RF ($f_s$) with local oscillator ($f_o$) to produce constant Intermediate Frequency ($IF = f_o - f_s = 455 \text{ kHz}$). 4. IF Amplifier: Provides maximum selectivity and amplification. 5. Detector (Demodulator): Extracts original audio signal. 6. AF Amplifier & Speaker: Amplifies power to drive loudspeaker."
+          }
+        }
+      ]
+    }
+  };
+
+  // State management
+  let activeYear = '2026';
+  let activeLang = 'both'; // 'both', 'en', 'ta'
+  let activeMode = 'interactive'; // 'interactive', 'reveal-all', 'hide-all'
+  let userResponses = {}; // { qno: selectedOptionCode }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderPaper();
+    lucide.createIcons();
+  });
+
+  function switchYear(year) {
+    if (!EXAM_DATABASE[year]) {
+      // If specific supplementary session isn't in DB, fallback gracefully to nearest base year
+      const baseYear = year.split('-')[0];
+      if (EXAM_DATABASE[baseYear]) {
+        activeYear = baseYear;
+      } else {
+        activeYear = '2026';
+      }
+    } else {
+      activeYear = year;
+    }
+
+    // Update active tab buttons
+    document.querySelectorAll('.year-btn').forEach(btn => {
+      if (btn.getAttribute('onclick')?.includes(year)) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    userResponses = {};
+    renderPaper();
+    updateLiveMetrics();
+    lucide.createIcons();
+    window.scrollTo({ top: 120, behavior: 'smooth' });
+  }
+
+  function changeLanguageMode(mode) {
+    activeLang = mode;
+    renderPaper();
+    lucide.createIcons();
+  }
+
+  function toggleQuizMode(mode) {
+    activeMode = mode;
+    renderPaper();
+    lucide.createIcons();
+  }
+
+  function handleOptionSelect(qno, selectedCode, correctCode) {
+    userResponses[qno] = selectedCode;
+    updateLiveMetrics();
+
+    // Update styling for question options
+    const qBlock = document.getElementById('q-block-' + qno);
+    if (!qBlock) return;
+
+    qBlock.querySelectorAll('.option-card').forEach(card => {
+      const code = card.dataset.code;
+      card.classList.remove('selected-correct', 'selected-wrong', 'highlight-correct');
+
+      if (code === selectedCode) {
+        if (selectedCode === correctCode) {
+          card.classList.add('selected-correct');
+        } else {
+          card.classList.add('selected-wrong');
+        }
+      } else if (code === correctCode && selectedCode !== correctCode) {
+        card.classList.add('highlight-correct');
+      }
+    });
+
+    // In interactive mode, disclose the solution
+    const disc = document.getElementById('disc-' + qno);
+    if (disc) {
+      disc.classList.add('open');
+      renderMathInElement(disc, { delimiters: [{left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false}] });
+    }
+  }
+
+  function toggleSolution(disclosureId) {
+    const el = document.getElementById(disclosureId);
+    if (el) {
+      el.classList.toggle('open');
+      if (el.classList.contains('open')) {
+        renderMathInElement(el, { delimiters: [{left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false}] });
+      }
+    }
+  }
+
+  function updateLiveMetrics() {
+    const data = EXAM_DATABASE[activeYear] || EXAM_DATABASE['2026'];
+    document.getElementById('summary-exam-name').textContent = data.sessionName;
+    document.getElementById('summary-session').textContent = data.titleEn.includes('SUPPLEMENTARY') ? 'Supplementary Public Exam' : 'State Board Annual Public Exam';
+
+    const part1 = data.part1 || [];
+    let correctCount = 0;
+    let attempted = 0;
+
+    part1.forEach(q => {
+      if (userResponses[q.qno]) {
+        attempted++;
+        if (userResponses[q.qno] === q.correct) {
+          correctCount++;
+        }
+      }
+    });
+
+    const pct = attempted > 0 ? Math.round((correctCount / attempted) * 100) : 0;
+    document.getElementById('summary-score').textContent = correctCount + ' / ' + part1.length;
+    document.getElementById('summary-accuracy').textContent = pct + '% Accuracy (' + attempted + ' Answered)';
+  }
+
+  function renderPaper() {
+    const data = EXAM_DATABASE[activeYear] || EXAM_DATABASE['2026'];
+    const container = document.getElementById('paper-sheet-container');
+    if (!container || !data) return;
+
+    let html = '';
+
+    // Official Header
+    html += `
+      <div class="official-header">
+        <div class="gov-seal-text">Directorate of Government Examinations, Chennai • தமிழ்நாடு அரசு தேர்வுத்துறை</div>
+        <div class="official-exam-title">${data.titleEn}</div>
+        <div class="bilingual-subtitle">${data.titleTa}</div>
+        <div class="version-line">${data.subtitleEn} • ${data.subtitleTa}</div>
+        <div class="timing-marks-table">
+          <span>Time Allowed: 3.00 Hours • கால அளவு: 3.00 மணி</span>
+          <span>Maximum Marks: 70 • மொத்த மதிப்பெண்கள்: 70</span>
+        </div>
+      </div>
+
+      <div class="instructions-box">
+        <div class="instructions-title">Instructions • அறிவுரைகள்:</div>
+        <ul class="instructions-list">
+          <li>Check the question paper for fairness of printing. If there is any lack of fairness, inform the Hall Supervisor immediately.</li>
+          <li>Use Blue or Black ink to write and underline and pencil to draw diagrams.</li>
+          <li>அனைத்து வினாக்களும் சரியாகப் பதிவாகி உள்ளதா என்பதைச் சரிபார்த்துக் கொள்ளவும். அச்சுப்பதிவில் குறை இருப்பின் அறைக் கண்காணிப்பாளரிடம் உடனடியாகத் தெரிவிக்கவும்.</li>
+        </ul>
+      </div>
+    `;
+
+    // Part I: MCQs
+    html += `
+      <section class="exam-part">
+        <div class="part-header">
+          <div class="part-title-block">
+            <span class="part-claret-tag">PART - I / பகுதி - I</span>
+            <h2 class="part-main-title">Objective Multiple Choice Questions</h2>
+          </div>
+          <span class="part-marks-badge">15 × 1 = 15 Marks</span>
+        </div>
+        <div class="part-directions">
+          Note: (i) Answer all the questions. (ii) Choose the most appropriate answer from the given four alternatives and write the option code and the corresponding answer.
+        </div>
+        <div class="questions-list">
+    `;
+
+    (data.part1 || []).forEach(q => {
+      const selected = userResponses[q.qno];
+      const isAutoReveal = activeMode === 'reveal-all';
+      const isOpen = isAutoReveal || (selected !== undefined);
+
+      html += `
+        <div class="question-block" id="q-block-${q.qno}">
+          <div class="q-number-box">${q.qno}.</div>
+          <div class="q-content">
+            <div class="q-meta-row">
+              <span class="unit-tag">${q.unit}</span>
+            </div>
+      `;
+
+      if (activeLang === 'both' || activeLang === 'en') {
+        html += `<div class="q-text-en">${q.en}</div>`;
+      }
+      if (activeLang === 'both' || activeLang === 'ta') {
+        html += `<div class="q-text-ta">${q.ta}</div>`;
+      }
+
+      html += `<div class="mcq-options-grid">`;
+      q.options.forEach(opt => {
+        let optClass = 'option-card';
+        if (selected) {
+          if (opt.code === selected) {
+            optClass += (selected === q.correct) ? ' selected-correct' : ' selected-wrong';
+          } else if (opt.code === q.correct) {
+            optClass += ' highlight-correct';
+          }
+        } else if (isAutoReveal && opt.code === q.correct) {
+          optClass += ' highlight-correct';
+        }
+
+        html += `
+          <div class="${optClass}" data-code="${opt.code}" onclick="handleOptionSelect(${q.qno}, '${opt.code}', '${q.correct}')">
+            <span class="option-code">${opt.code}</span>
+            <div class="option-text-wrap">
+              ${(activeLang === 'both' || activeLang === 'en') ? `<span>${opt.en}</span>` : ''}
+              ${(activeLang === 'both' || activeLang === 'ta') ? `<span class="option-text-ta">${opt.ta}</span>` : ''}
+            </div>
+          </div>
+        `;
+      });
+      html += `</div>`;
+
+      // Solution Disclosure
+      html += `
+        <button type="button" class="key-toggle-btn" onclick="toggleSolution('disc-${q.qno}')">
+          <i data-lucide="key" style="width:12px;height:12px;"></i>
+          Official Key & Detailed Solution
+        </button>
+        <div class="key-disclosure ${isOpen ? 'open' : ''}" id="disc-${q.qno}">
+          <div class="key-title">
+            <span>Correct Option: ${q.correct}</span>
+            <span>1 Mark</span>
+          </div>
+          <div style="font-size: 0.875rem;">${q.solution}</div>
+        </div>
+      </div></div>`;
+    });
+    html += `</div></section>`;
+
+    // Part II: Short Answer (2 Marks)
+    html += `
+      <section class="exam-part">
+        <div class="part-header">
+          <div class="part-title-block">
+            <span class="part-claret-tag">PART - II / பகுதி - II</span>
+            <h2 class="part-main-title">Short Answer Questions</h2>
+          </div>
+          <span class="part-marks-badge">6 × 2 = 12 Marks</span>
+        </div>
+        <div class="part-directions">
+          Note: Answer any six questions. Question No. 24 is compulsory.
+        </div>
+        <div class="questions-list">
+    `;
+
+    (data.part2 || []).forEach(q => {
+      const isAutoReveal = activeMode === 'reveal-all';
+      html += `
+        <div class="question-block" id="q-block-${q.qno}">
+          <div class="q-number-box">${q.qno}.</div>
+          <div class="q-content">
+            <div class="q-meta-row">
+              <span class="unit-tag">${q.unit}</span>
+              ${q.isCompulsory ? '<span class="compulsory-badge">Compulsory / கட்டாய வினா</span>' : ''}
+            </div>
+      `;
+
+      if (activeLang === 'both' || activeLang === 'en') {
+        html += `<div class="q-text-en">${q.en}</div>`;
+      }
+      if (activeLang === 'both' || activeLang === 'ta') {
+        html += `<div class="q-text-ta">${q.ta}</div>`;
+      }
+
+      html += `
+        <button type="button" class="key-toggle-btn" onclick="toggleSolution('disc-${q.qno}')">
+          <i data-lucide="award" style="width:12px;height:12px;"></i>
+          Marking Scheme & Worked Solution
+        </button>
+        <div class="key-disclosure ${isAutoReveal ? 'open' : ''}" id="disc-${q.qno}">
+          <div class="key-title">
+            <span>Official Government Marking Scheme</span>
+            <span>2 Marks</span>
+          </div>
+          <table class="mark-scheme-table">
+            <thead><tr><th>Valuation Step / Key Points</th><th class="marks-col">Marks</th></tr></thead>
+            <tbody>
+      `;
+      (q.scheme || []).forEach(s => {
+        html += `<tr><td>${s.step}</td><td class="marks-col">${s.m}</td></tr>`;
+      });
+      html += `
+            </tbody>
+          </table>
+          <div style="font-size: 0.875rem; margin-top: 8px;"><strong>Full Worked Solution:</strong> ${q.solution}</div>
+        </div>
+      </div></div>`;
+    });
+    html += `</div></section>`;
+
+    // Part III: Brief Answer (3 Marks)
+    html += `
+      <section class="exam-part">
+        <div class="part-header">
+          <div class="part-title-block">
+            <span class="part-claret-tag">PART - III / பகுதி - III</span>
+            <h2 class="part-main-title">Brief Answer Questions</h2>
+          </div>
+          <span class="part-marks-badge">6 × 3 = 18 Marks</span>
+        </div>
+        <div class="part-directions">
+          Note: Answer any six questions. Question No. 33 is compulsory.
+        </div>
+        <div class="questions-list">
+    `;
+
+    (data.part3 || []).forEach(q => {
+      const isAutoReveal = activeMode === 'reveal-all';
+      html += `
+        <div class="question-block" id="q-block-${q.qno}">
+          <div class="q-number-box">${q.qno}.</div>
+          <div class="q-content">
+            <div class="q-meta-row">
+              <span class="unit-tag">${q.unit}</span>
+              ${q.isCompulsory ? '<span class="compulsory-badge">Compulsory / கட்டாய வினா</span>' : ''}
+            </div>
+      `;
+
+      if (activeLang === 'both' || activeLang === 'en') {
+        html += `<div class="q-text-en">${q.en}</div>`;
+      }
+      if (activeLang === 'both' || activeLang === 'ta') {
+        html += `<div class="q-text-ta">${q.ta}</div>`;
+      }
+
+      html += `
+        <button type="button" class="key-toggle-btn" onclick="toggleSolution('disc-${q.qno}')">
+          <i data-lucide="award" style="width:12px;height:12px;"></i>
+          Marking Scheme & Worked Solution
+        </button>
+        <div class="key-disclosure ${isAutoReveal ? 'open' : ''}" id="disc-${q.qno}">
+          <div class="key-title">
+            <span>Official Government Marking Scheme</span>
+            <span>3 Marks</span>
+          </div>
+          <table class="mark-scheme-table">
+            <thead><tr><th>Valuation Step / Key Points</th><th class="marks-col">Marks</th></tr></thead>
+            <tbody>
+      `;
+      (q.scheme || []).forEach(s => {
+        html += `<tr><td>${s.step}</td><td class="marks-col">${s.m}</td></tr>`;
+      });
+      html += `
+            </tbody>
+          </table>
+          <div style="font-size: 0.875rem; margin-top: 8px;"><strong>Full Worked Solution:</strong> ${q.solution}</div>
+        </div>
+      </div></div>`;
+    });
+    html += `</div></section>`;
+
+    // Part IV: Long Answer / Essay (5 Marks with Either/Or Choice)
+    html += `
+      <section class="exam-part">
+        <div class="part-header">
+          <div class="part-title-block">
+            <span class="part-claret-tag">PART - IV / பகுதி - IV</span>
+            <h2 class="part-main-title">Detailed Long Answer Questions</h2>
+          </div>
+          <span class="part-marks-badge">5 × 5 = 25 Marks</span>
+        </div>
+        <div class="part-directions">
+          Note: Answer all the questions choosing either (a) or (b).
+        </div>
+        <div class="questions-list">
+    `;
+
+    (data.part4 || []).forEach(q => {
+      const isAutoReveal = activeMode === 'reveal-all';
+      html += `
+        <div class="question-block" id="q-block-${q.qno}">
+          <div class="q-number-box">${q.qno}.</div>
+          <div class="q-content">
+            <div class="q-meta-row">
+              <span class="unit-tag">${q.unit}</span>
+            </div>
+
+            <!-- Option (a) -->
+            <div style="font-weight: 700; color: var(--primary); margin-bottom: 4px;">(a)</div>
+            ${(activeLang === 'both' || activeLang === 'en') ? `<div class="q-text-en">${q.optA.titleEn}</div>` : ''}
+            ${(activeLang === 'both' || activeLang === 'ta') ? `<div class="q-text-ta">${q.optA.titleTa}</div>` : ''}
+
+            <button type="button" class="key-toggle-btn" onclick="toggleSolution('disc-${q.qno}-a')">
+              <i data-lucide="check-square" style="width:12px;height:12px;"></i>
+              Option (a) Scheme & Derivation
+            </button>
+            <div class="key-disclosure ${isAutoReveal ? 'open' : ''}" id="disc-${q.qno}-a">
+              <div class="key-title"><span>Valuation Scheme (a)</span><span>5 Marks</span></div>
+              <table class="mark-scheme-table">
+                <thead><tr><th>Required Mathematical Steps</th><th class="marks-col">Marks</th></tr></thead>
+                <tbody>
+      `;
+      (q.optA.scheme || []).forEach(s => {
+        html += `<tr><td>${s.step}</td><td class="marks-col">${s.m}</td></tr>`;
+      });
+      html += `
+                </tbody>
+              </table>
+              <div style="font-size: 0.875rem; margin-top: 8px;"><strong>Full Derivation:</strong> ${q.optA.solution}</div>
+            </div>
+
+            <!-- OR Divider -->
+            <div class="or-divider">OR / அல்லது</div>
+
+            <!-- Option (b) -->
+            <div style="font-weight: 700; color: var(--primary); margin-bottom: 4px;">(b)</div>
+            ${(activeLang === 'both' || activeLang === 'en') ? `<div class="q-text-en">${q.optB.titleEn}</div>` : ''}
+            ${(activeLang === 'both' || activeLang === 'ta') ? `<div class="q-text-ta">${q.optB.titleTa}</div>` : ''}
+
+            <button type="button" class="key-toggle-btn" onclick="toggleSolution('disc-${q.qno}-b')">
+              <i data-lucide="check-square" style="width:12px;height:12px;"></i>
+              Option (b) Scheme & Derivation
+            </button>
+            <div class="key-disclosure ${isAutoReveal ? 'open' : ''}" id="disc-${q.qno}-b">
+              <div class="key-title"><span>Valuation Scheme (b)</span><span>5 Marks</span></div>
+              <table class="mark-scheme-table">
+                <thead><tr><th>Required Mathematical Steps</th><th class="marks-col">Marks</th></tr></thead>
+                <tbody>
+      `;
+      (q.optB.scheme || []).forEach(s => {
+        html += `<tr><td>${s.step}</td><td class="marks-col">${s.m}</td></tr>`;
+      });
+      html += `
+                </tbody>
+              </table>
+              <div style="font-size: 0.875rem; margin-top: 8px;"><strong>Full Derivation:</strong> ${q.optB.solution}</div>
+            </div>
+
+          </div>
+        </div>
+      `;
+    });
+    html += `</div></section>`;
+
+    container.innerHTML = html;
+
+    // Render KaTeX formulas
+    renderMath();
+  }
+
+  function renderMath() {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false }
+        ],
+        throwOnError: false
+      });
+    }
+  }
+
+  function openBlueprintModal() {
+    document.getElementById('blueprint-modal').classList.add('active');
+  }
+
+  function closeBlueprintModal(e) {
+    if (e.target.id === 'blueprint-modal') {
+      document.getElementById('blueprint-modal').classList.remove('active');
+    }
+  }
+
+  function closeBlueprintModalDirect() {
+    document.getElementById('blueprint-modal').classList.remove('active');
+  }
+
+  function exportCurrentPaper() {
+    const data = EXAM_DATABASE[activeYear] || EXAM_DATABASE['2026'];
+    const blob = new Blob([document.getElementById('paper-sheet-container').innerText], { type: 'text/plain;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'TN_HSE_Physics_' + activeYear + '_Paper.txt';
+    a.click();
+  }
+</script>
+</body>
+</html>
