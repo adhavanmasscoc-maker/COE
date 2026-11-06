@@ -22,6 +22,9 @@ import {
   Award,
   Users,
   BarChart3,
+  BookOpen,
+  Sparkles,
+  ExternalLink,
 } from "lucide-react";
 
 function SubjectCard({ sub, isPreview, previewRoll }) {
@@ -231,6 +234,59 @@ function StudentDashboardContent() {
         emptyReason={data?.emptyReason}
         noticeText={notices?.[0]?.content}
       />
+      {/* HSE Class 12 Maths Question Bank & CBT Practice Hub (2020-2026) */}
+      <div className="relative glass rounded-2xl p-5 md:p-6 border border-violet-500/30 overflow-hidden card-glow animate-float-up bg-gradient-to-r from-violet-950/40 via-slate-900/50 to-indigo-950/40 my-2">
+        <div className="orb w-48 h-48 bg-violet-600/20 -top-12 -right-12 blur-3xl pointer-events-none" />
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 relative z-10">
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl bg-violet-600/20 border border-violet-400/30 flex items-center justify-center shrink-0 text-violet-300 shadow-inner">
+              <BookOpen className="w-6 h-6" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 flex-wrap mb-1.5">
+                <span className="badge badge-violet text-[10px] font-mono tracking-wide uppercase font-bold">
+                  HSE Class 12 • 2020–2026
+                </span>
+                <span className="badge badge-emerald text-[10px] font-semibold">
+                  {isTamil ? "CBT பயிற்சி முறை" : "Interactive CBT Drill"}
+                </span>
+                <span className="badge badge-amber text-[10px] font-semibold">
+                  {isTamil ? "தமிழ் / English" : "Bilingual"}
+                </span>
+                <span className="badge badge-cyan text-[10px] font-semibold">
+                  {isTamil ? "அனைத்து வினாத்தாள்கள்" : "7-Year Board Papers"}
+                </span>
+              </div>
+              <h3 className="text-base md:text-lg font-black text-[#f0f0ff] mb-1">
+                {isTamil
+                  ? "12-ஆம் வகுப்பு கணிதம் — அரசுத் தேர்வு வினா வங்கி & மாதிரித் தேர்வு (2020–2026)"
+                  : "Class 12 Mathematics — Official Board Question Bank & Practice Portal (2020–2026)"}
+              </h3>
+              <p className="text-xs text-[#a8a8d0] max-w-2xl leading-relaxed">
+                {isTamil
+                  ? "தமிழ்நாடு அரசு தேர்வுகள் இயக்ககம் (DGE) வெளியிட்ட 7 ஆண்டு பொதுத்தேர்வு வினாத்தாள்கள் (மார்ச் மற்றும் துணைத் தேர்வுகள்), நேரடி கணினித் தேர்வு (CBT), குறிப்பேடுகள் மற்றும் படிமுறை தீர்வுகள்."
+                  : "Official TN DGE 7-year board examination archive (March & Supplementary), timed 20-MCQ speed drill, step-by-step valuation rubrics, blueprint weightage, and high-yield formula vault."}
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 w-full lg:w-auto shrink-0">
+            <Link
+              href="/students/qb/12/math"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full lg:w-auto"
+            >
+              <Button variant="primary" className="w-full lg:w-auto gap-2 text-xs py-2.5 px-4 font-bold shadow-lg shadow-violet-500/25">
+                <Sparkles className="w-4 h-4 text-violet-300" />
+                {isTamil ? "வினா வங்கி & பயிற்சி தொடங்கு" : "Open Practice Portal"}
+                <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+
 
       {/* Subjects section */}
       <div>

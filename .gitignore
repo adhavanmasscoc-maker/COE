@@ -39,3 +39,7 @@ incidents_fallback.json
 *.bak
 backup/
 scratch/
+
+# Reference PDF dumps
+12/
+

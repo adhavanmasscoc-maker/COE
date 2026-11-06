@@ -16,6 +16,11 @@ export async function middleware(request) {
   const isAdminApiRoute = pathname.startsWith("/api/admin");
   const isStudentApiRoute = pathname.startsWith("/api/student");
 
+  // Allow public access to Question Bank portals without authentication
+  if (pathname.startsWith("/students/qb") || pathname.startsWith("/student/qb")) {
+    return NextResponse.next();
+  }
+
   if (!isStudentRoute && !isCOERoute && !isAdminApiRoute && !isStudentApiRoute) {
     return NextResponse.next();
   }

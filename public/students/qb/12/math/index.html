@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="tool">
+  <meta name="theme-color" content="#0b0c16">
+  <title>Tamil Nadu HSE 12th Maths Board Examination Portal & Practice Hub (2020–2026)</title>
+
+  <!-- Google Fonts: Inter, Libre Caslon Text, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Mukta+Malar:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- KaTeX Math Typesetting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.2/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.18.2/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.18.2/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root {
+      /* Theme 1: Cosmic Dark (Modern COE Default) */
+      --bg-base: #090a15;
+      --bg-surface: #101223;
+      --bg-surface-elevated: #171932;
+      --bg-surface-glass: rgba(18, 20, 38, 0.78);
+      --border-subtle: rgba(139, 92, 246, 0.16);
+      --border-medium: rgba(139, 92, 246, 0.32);
+      --border-highlight: #8b5cf6;
+
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --accent-primary: #8b5cf6;
+      --accent-primary-hover: #7c3aed;
+      --accent-primary-wash: rgba(139, 92, 246, 0.15);
+      
+      --accent-gold: #f59e0b;
+      --accent-gold-wash: rgba(245, 158, 11, 0.14);
+      --accent-emerald: #10b981;
+      --accent-emerald-wash: rgba(16, 185, 129, 0.14);
+      --accent-rose: #f43f5e;
+      --accent-rose-wash: rgba(244, 63, 94, 0.15);
+      --accent-cyan: #06b6d4;
+
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-tamil: 'Mukta Malar', 'Inter', sans-serif;
+      --font-headline: 'Libre Caslon Text', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-full: 9999px;
+
+      --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.45), 0 0 0 1px var(--border-subtle);
+      --shadow-glow: 0 0 25px rgba(139, 92, 246, 0.22);
+    }
+
+    /* Theme 2: Midnight Slate */
+    [data-theme="slate"] {
+      --bg-base: #0f172a;
+      --bg-surface: #1e293b;
+      --bg-surface-elevated: #334155;
+      --bg-surface-glass: rgba(30, 41, 59, 0.85);
+      --border-subtle: rgba(56, 189, 248, 0.18);
+      --border-medium: rgba(56, 189, 248, 0.35);
+      --border-highlight: #38bdf8;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-dim: #94a3b8;
+      --accent-primary: #38bdf8;
+      --accent-primary-hover: #0ea5e9;
+      --accent-primary-wash: rgba(56, 189, 248, 0.15);
+    }
+
+    /* Theme 3: Charter Light (Warm Classic) */
+    [data-theme="charter"] {
+      --bg-base: #f7f4ec;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #ece5d4;
+      --bg-surface-glass: rgba(255, 253, 248, 0.92);
+      --border-subtle: #d9cfb8;
+      --border-medium: #b08d57;
+      --border-highlight: #14213d;
+      --text-main: #1c1f26;
+      --text-muted: #4f5360;
+      --text-dim: #717686;
+      --accent-primary: #14213d;
+      --accent-primary-hover: #0a1122;
+      --accent-primary-wash: rgba(20, 33, 61, 0.08);
+      --accent-gold: #b08d57;
+      --accent-gold-wash: rgba(176, 141, 87, 0.15);
+      --accent-emerald: #2d5a4a;
+      --accent-emerald-wash: rgba(45, 90, 74, 0.12);
+      --shadow-card: 0 2px 10px rgba(0,0,0,0.06), 0 0 0 1px var(--border-subtle);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Tamil mode typography */
+    body.tamil-mode {
+      font-family: var(--font-tamil);
+    }
+
+    /* Top Government Header */
+    .gov-navbar {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0.75rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+    }
+    .gov-nav-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .gov-emblem-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 0 16px rgba(124, 58, 237, 0.4);
+    }
+    .brand-titles h1 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+    .brand-titles p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Controls cluster (Language, Theme, Print) */
+    .controls-cluster {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-chip {
+      background: var(--bg-surface-elevated);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 0.4rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-chip:hover {
+      background: var(--accent-primary-wash);
+      border-color: var(--accent-primary);
+      color: var(--text-main);
+    }
+    .btn-chip.active {
+      background: var(--accent-primary);
+      color: #ffffff;
+      border-color: var(--accent-primary);
+    }
+
+    /* Main Container */
+    .main-wrap {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Year-Wise Split Control Bar */
+    .year-nav-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .year-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .year-nav-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .year-pills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .year-pill-btn {
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.65rem 1.15rem;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+    .year-pill-btn:hover {
+      color: var(--text-main);
+      border-color: var(--border-medium);
+      transform: translateY(-1px);
+    }
+    .year-pill-btn.active {
+      background: var(--accent-primary);
+      color: #ffffff;
+      border-color: var(--accent-primary);
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4);
+    }
+    .session-toggle-box {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--bg-base);
+      padding: 0.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+    .session-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .session-btn.active {
+      background: var(--bg-surface-elevated);
+      color: var(--text-main);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+
+    /* Quick Metrics Strip */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .metric-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-primary);
+    }
+    .metric-card.gold::before { background: var(--accent-gold); }
+    .metric-card.emerald::before { background: var(--accent-emerald); }
+    .metric-card.cyan::before { background: var(--accent-cyan); }
+
+    .metric-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .metric-val {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-main);
+      font-family: var(--font-headline);
+      line-height: 1.2;
+    }
+    .metric-desc {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    /* Tab Bar Navigation */
+    .mode-tab-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.25rem;
+    }
+    .mode-tab-btn {
+      background: transparent;
+      color: var(--text-muted);
+      border: none;
+      border-bottom: 3px solid transparent;
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+    .mode-tab-btn:hover {
+      color: var(--text-main);
+      background: var(--accent-primary-wash);
+    }
+    .mode-tab-btn.active {
+      color: var(--accent-primary);
+      border-bottom-color: var(--accent-primary);
+      background: var(--bg-surface);
+    }
+
+    /* Question Paper Sheet */
+    .paper-sheet {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+    }
+    .paper-header-box {
+      border: 2px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      text-align: center;
+      background: var(--bg-surface-elevated);
+      margin-bottom: 1.75rem;
+    }
+    .paper-gov-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-gold);
+    }
+    .paper-exam-title {
+      font-family: var(--font-headline);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 0.35rem 0;
+    }
+    .paper-meta-pills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px dashed var(--border-subtle);
+      font-size: 0.825rem;
+      color: var(--text-muted);
+    }
+
+    /* Part Divider */
+    .part-banner-card {
+      background: var(--bg-surface-elevated);
+      border-left: 4px solid var(--accent-primary);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-sm);
+      margin: 2rem 0 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .part-banner-card.compulsory-border {
+      border-left-color: var(--accent-rose);
+    }
+    .part-banner-title {
+      font-family: var(--font-headline);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 0;
+    }
+    .part-marks-chip {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      background: var(--accent-gold-wash);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--accent-gold);
+    }
+    .part-instruction-text {
+      width: 100%;
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+      font-style: italic;
+    }
+
+    /* Question Item Box */
+    .question-block {
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 1.5rem 0;
+    }
+    .question-block:last-child {
+      border-bottom: none;
+    }
+    .q-badge-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    .q-number-pill {
+      background: var(--accent-primary);
+      color: #fff;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .q-number-pill.compulsory-pill {
+      background: var(--accent-rose);
+    }
+    .q-tag-chip {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+    }
+    .q-statement {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      line-height: 1.65;
+      margin: 0.5rem 0 1rem;
+    }
+
+    /* MCQ Option Grid */
+    .mcq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.75rem;
+      margin: 1rem 0;
+    }
+    .mcq-opt-btn {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      transition: all 0.15s ease;
+    }
+    .mcq-opt-btn:hover {
+      border-color: var(--border-highlight);
+      background: var(--accent-primary-wash);
+    }
+    .mcq-opt-btn.correct-opt {
+      background: var(--accent-emerald-wash);
+      border-color: var(--accent-emerald);
+      color: var(--accent-emerald);
+      font-weight: 600;
+    }
+    .mcq-opt-btn.wrong-opt {
+      background: var(--accent-rose-wash);
+      border-color: var(--accent-rose);
+      color: var(--accent-rose);
+    }
+    .opt-letter-tag {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--accent-primary);
+      background: var(--bg-base);
+      padding: 0.1rem 0.45rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    /* Solution Box */
+    .solution-box {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--accent-emerald);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      margin-top: 1rem;
+      font-size: 0.925rem;
+      color: var(--text-main);
+    }
+    .solution-box-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-emerald);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* CBT Toolbar */
+    .cbt-dock {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      position: sticky;
+      top: 60px;
+      z-index: 40;
+      box-shadow: var(--shadow-card);
+    }
+    .timer-badge {
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      background: var(--bg-base);
+      border: 1px solid var(--border-subtle);
+      padding: 0.25rem 0.85rem;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cbt-palette {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 0.4rem;
+      margin: 1rem 0;
+    }
+    .palette-cell {
+      height: 2.25rem;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .palette-cell:hover {
+      border-color: var(--accent-primary);
+      color: var(--text-main);
+    }
+    .palette-cell.active-cell {
+      border-color: var(--accent-primary);
+      outline: 2px solid var(--accent-primary);
+      color: var(--text-main);
+      font-weight: 700;
+    }
+    .palette-cell.answered-cell {
+      background: var(--accent-emerald);
+      color: #fff;
+      border-color: var(--accent-emerald);
+    }
+    .palette-cell.flagged-cell {
+      background: var(--accent-gold);
+      color: #fff;
+      border-color: var(--accent-gold);
+    }
+
+    /* Data Table */
+    .data-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface-elevated);
+    }
+    .custom-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.875rem;
+    }
+    .custom-table th {
+      background: var(--bg-base);
+      color: var(--text-main);
+      font-weight: 700;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-medium);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    .custom-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+    }
+    .custom-table tr:hover td {
+      background: var(--accent-primary-wash);
+      color: var(--text-main);
+    }
+
+    /* Print media overrides */
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      .gov-navbar, .year-nav-card, .mode-tab-bar, .cbt-dock, .btn-chip, .no-print { display: none !important; }
+      .paper-sheet { border: none !important; box-shadow: none !important; padding: 0 !important; }
+      .main-wrap { padding: 0 !important; }
+      .question-block { page-break-inside: avoid; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-wrap { padding: 0.75rem; }
+      .paper-sheet { padding: 1rem; }
+      .cbt-palette { grid-template-columns: repeat(5, 1fr); }
+      .mcq-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Official Government Navbar with Controls -->
+  <header class="gov-navbar">
+    <div class="gov-nav-inner">
+      <div class="brand-cluster">
+        <div class="gov-emblem-badge">12</div>
+        <div class="brand-titles">
+          <h1 id="navPortalHeading">Tamil Nadu HSE (+2) Mathematics Examination Portal</h1>
+          <p id="navPortalSub">Directorate of Government Examinations (TNDGE) • Verified Question Bank (2020–2026)</p>
+        </div>
+      </div>
+
+      <div class="controls-cluster">
+        <!-- Language Switcher Button -->
+        <button type="button" class="btn-chip" id="btnLangToggle" onclick="toggleLanguage()" title="Toggle Language (English / தமிழ்)">
+          <i data-lucide="globe" style="width:14px;height:14px;"></i>
+          <span id="langLabel">தமிழ் / English</span>
+        </button>
+
+        <!-- Theme Switcher Button -->
+        <button type="button" class="btn-chip" id="btnThemeToggle" onclick="cycleTheme()" title="Switch Theme (Dark / Slate / Light)">
+          <i data-lucide="moon" style="width:14px;height:14px;" id="themeIcon"></i>
+          <span id="themeLabel">Cosmic Dark</span>
+        </button>
+
+        <!-- Print Action -->
+        <button type="button" class="btn-chip no-print" onclick="window.print()" title="Print / Save PDF">
+          <i data-lucide="printer" style="width:14px;height:14px;"></i>
+          <span>Print</span>
+        </button>
+
+        <!-- Direct Link back to student dashboard -->
+        <a href="/student/dashboard" class="btn-chip" style="text-decoration:none;" title="Back to Student Dashboard">
+          <i data-lucide="arrow-left" style="width:14px;height:14px;"></i>
+          <span>Dashboard</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+
+    <!-- Year-Wise Split Control Bar -->
+    <section class="year-nav-card" aria-label="Year-Wise Papers">
+      <div class="year-nav-header">
+        <div class="year-nav-title">
+          <i data-lucide="calendar" style="width:16px;height:16px;"></i>
+          <span id="lblSelectYear">Select Board Examination Session (2020 — 2026)</span>
+        </div>
+
+        <div class="session-toggle-box">
+          <button type="button" class="session-btn active" id="btnSessionAnnual" onclick="setSessionType('annual')">March Regular</button>
+          <button type="button" class="session-btn" id="btnSessionSupple" onclick="setSessionType('supplementary')">July / Special</button>
+        </div>
+      </div>
+
+      <!-- Year Pills -->
+      <div class="year-pills-row" id="yearPillsContainer">
+        <!-- Dynamically rendered (2026, 2025, 2024, 2023, 2022, 2021, 2020) -->
+      </div>
+    </section>
+
+    <!-- Headline Figures Row -->
+    <section class="metrics-grid" aria-label="Overview Metrics">
+      <div class="metric-card gold">
+        <div class="metric-label" id="lblMet1">Current Session</div>
+        <div class="metric-val" id="metSessionYear">2026 Public</div>
+        <div class="metric-desc" id="metSessionDesc">March Regular • Code 9212</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label" id="lblMet2">Part I MCQs Pool</div>
+        <div class="metric-val">20 Questions</div>
+        <div class="metric-desc">100% Step Solutions & Keys</div>
+      </div>
+      <div class="metric-card emerald">
+        <div class="metric-label" id="lblMet3">Subjective Problems</div>
+        <div class="metric-val">27 Questions</div>
+        <div class="metric-desc">Parts II, III & IV (70 Marks)</div>
+      </div>
+      <div class="metric-card cyan">
+        <div class="metric-label" id="lblMet4">Compulsory Focus</div>
+        <div class="metric-val">Q.30 & Q.40</div>
+        <div class="metric-desc">Part II (2M) & Part III (3M)</div>
+      </div>
+    </section>
+
+    <!-- Mode Navigation Tabs -->
+    <nav class="mode-tab-bar" aria-label="Portal Navigation Tabs">
+      <button type="button" class="mode-tab-btn active" id="tabPaper" onclick="switchMode('paper')">
+        <i data-lucide="file-text" style="width:16px;height:16px;"></i>
+        <span id="tabLabelPaper">Authentic Question Paper</span>
+      </button>
+      <button type="button" class="mode-tab-btn" id="tabPractice" onclick="switchMode('practice')">
+        <i data-lucide="check-circle" style="width:16px;height:16px;"></i>
+        <span id="tabLabelPractice">Self-Practice & CBT Drill Mode</span>
+      </button>
+      <button type="button" class="mode-tab-btn" id="tabKeys" onclick="switchMode('keys')">
+        <i data-lucide="key" style="width:16px;height:16px;"></i>
+        <span id="tabLabelKeys">Valuation Rubrics & Keys</span>
+      </button>
+      <button type="button" class="mode-tab-btn" id="tabBlueprint" onclick="switchMode('blueprint')">
+        <i data-lucide="bar-chart-3" style="width:16px;height:16px;"></i>
+        <span id="tabLabelBlueprint">Chapter Blueprint & Matrix</span>
+      </button>
+      <button type="button" class="mode-tab-btn" id="tabFormulas" onclick="switchMode('formulas')">
+        <i data-lucide="book-open" style="width:16px;height:16px;"></i>
+        <span id="tabLabelFormulas">High-Yield Formula Vault</span>
+      </button>
+    </nav>
+
+    <!-- VIEW 1: Authentic Question Paper -->
+    <section id="viewPaper" class="paper-sheet" aria-label="Question Paper View">
+      <div class="paper-header-box">
+        <div class="paper-gov-tag" id="qpGovHeading">GOVERNMENT OF TAMIL NADU • DIRECTORATE OF GOVERNMENT EXAMINATIONS</div>
+        <h2 class="paper-exam-title" id="qpMainTitle">HIGHER SECONDARY SECOND YEAR EXAMINATION — MARCH 2026</h2>
+        <div style="font-size:0.875rem;font-weight:600;color:var(--accent-gold);" id="qpSubjectHeading">PART - III • MATHEMATICS / கணிதம் (041)</div>
+        <div class="paper-meta-pills">
+          <div><strong id="lblTime">Time Allowed:</strong> 3.00 Hours</div>
+          <div><strong id="lblMaxMarks">Maximum Marks:</strong> 90 (+10 Internal = 100)</div>
+          <div id="qpRegPill"><strong>Reg Code:</strong> !9212Mathematics!</div>
+          <div><strong>Printed Pages:</strong> 16</div>
+        </div>
+      </div>
+
+      <!-- Parts Injected Dynamically -->
+      <div id="paperContentStream"></div>
+    </section>
+
+    <!-- VIEW 2: Self-Practice & CBT Drill Mode -->
+    <section id="viewPractice" class="paper-sheet" style="display:none;" aria-label="Interactive CBT Practice Mode">
+      <div class="cbt-dock">
+        <div>
+          <span style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:var(--accent-gold);" id="lblCbtModeTag">Part I Interactive Drill</span>
+          <div style="font-weight:700;font-size:1.15rem;color:var(--text-main);" id="cbtSessionTitle">March 2026 Practice Drill</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <div class="timer-badge" id="cbtTimerDisplay">20:00</div>
+          <button type="button" class="btn-chip" id="btnTimerControl" onclick="toggleTimer()">Pause</button>
+        </div>
+        <div>
+          <span class="btn-chip active" id="cbtScoreTracker">Score: 0 / 20</span>
+        </div>
+      </div>
+
+      <!-- Question Palette -->
+      <div style="margin: 1.25rem 0;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;font-size:0.8rem;color:var(--text-muted);">
+          <span id="lblPaletteTitle">Question Navigator (1 to 20):</span>
+          <span>Green: Answered • Amber: Flagged • Slate: Pending</span>
+        </div>
+        <div class="cbt-palette" id="cbtPaletteGrid"></div>
+      </div>
+
+      <!-- Active Practice Card -->
+      <div id="cbtActiveCard" style="background:var(--bg-surface-elevated);border:1px solid var(--border-medium);border-radius:var(--radius-md);padding:1.5rem;">
+        <!-- Injected via renderCBT() -->
+      </div>
+
+      <!-- CBT Navigation Controls -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;flex-wrap:wrap;gap:0.75rem;">
+        <button type="button" class="btn-chip" onclick="prevQuestion()">
+          <i data-lucide="arrow-left" style="width:16px;height:16px;"></i> Previous
+        </button>
+        <div style="display:flex;gap:0.5rem;">
+          <button type="button" class="btn-chip" onclick="toggleFlag()">
+            <i data-lucide="flag" style="width:16px;height:16px;"></i> Flag for Review
+          </button>
+          <button type="button" class="btn-chip" onclick="resetDrill()">
+            <i data-lucide="rotate-ccw" style="width:16px;height:16px;"></i> Reset Drill
+          </button>
+        </div>
+        <button type="button" class="btn-chip active" onclick="nextQuestion()">
+          Next <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- VIEW 3: Valuation Rubrics & Official Keys -->
+    <section id="viewKeys" class="paper-sheet" style="display:none;" aria-label="Official Keys">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem;">
+        <div>
+          <h2 style="font-family:var(--font-headline);font-size:1.35rem;margin:0;color:var(--text-main);" id="lblKeyTitle">Official Answer Keys & Step-by-Step Valuation Scheme</h2>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:0.25rem 0 0;" id="lblKeySub">Valuation standard for Higher Secondary Second Year (+2) Mathematics Public Examinations.</p>
+        </div>
+        <span class="btn-chip active" id="keySessionBadge">March 2026 • Code 9212</span>
+      </div>
+
+      <!-- Part I Keys Table -->
+      <div class="data-table-wrap" style="margin-bottom:2rem;">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th style="width:65px;">Q.No</th>
+              <th style="width:90px;text-align:center;">Option Code</th>
+              <th>Correct Option Value / Answer Text</th>
+              <th>Key Formula / Mathematical Justification</th>
+              <th style="width:180px;">Chapter Classification</th>
+            </tr>
+          </thead>
+          <tbody id="keysTableStream"></tbody>
+        </table>
+      </div>
+
+      <!-- Parts II, III, IV Step Marking Rubrics -->
+      <div style="display:flex;flex-direction:column;gap:1rem;" id="subjectiveRubricCards">
+        <!-- Rubric cards dynamically injected -->
+      </div>
+    </section>
+
+    <!-- VIEW 4: Chapter Blueprint Matrix -->
+    <section id="viewBlueprint" class="paper-sheet" style="display:none;" aria-label="Chapter Blueprint">
+      <div style="margin-bottom:1rem;">
+        <h2 style="font-family:var(--font-headline);font-size:1.35rem;margin:0;color:var(--text-main);" id="lblBlueprintTitle">Tamil Nadu State Board Class 12 Maths Blueprint</h2>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin:0.25rem 0 0;">Total question paper pool contains 140 marks with internal choices. Students attempt exactly 90 marks.</p>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Chapter Name</th>
+              <th>Volume</th>
+              <th>Part I (1M)</th>
+              <th>Part II (2M)</th>
+              <th>Part III (3M)</th>
+              <th>Part IV (5M)</th>
+              <th>Total Marks</th>
+              <th>Weightage %</th>
+            </tr>
+          </thead>
+          <tbody id="blueprintStream"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- VIEW 5: High-Yield Formula Vault -->
+    <section id="viewFormulas" class="paper-sheet" style="display:none;" aria-label="Formula Reference Vault">
+      <div style="margin-bottom:1.5rem;">
+        <h2 style="font-family:var(--font-headline);font-size:1.35rem;margin:0;color:var(--text-main);" id="lblFormulaTitle">Higher Secondary Mathematics High-Yield Formula Vault</h2>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin:0.25rem 0 0;">Comprehensive collection of all volume 1 and 2 essential definitions, standard equations, and derivation properties.</p>
+      </div>
+
+      <div id="formulaVaultStream" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1rem;"></div>
+    </section>
+
+  </main>
+
+  <footer style="border-top:1px solid var(--border-subtle);background:var(--bg-surface);padding:2rem 1.5rem;text-align:center;font-size:0.85rem;color:var(--text-muted);margin-top:3rem;">
+    <p style="margin:0 0 0.4rem;font-weight:700;color:var(--text-main);">Tamil Nadu State Board HSE +2 Mathematics Portal (2020–2026)</p>
+    <p style="margin:0;font-size:0.78rem;">Public examination archives directly accessible for self-practice without login. All mathematical symbols rendered with KaTeX.</p>
+  </footer>
+
+  <script>
+    // --- Application State ---
+    const portalState = {
+      selectedYear: '2026',
+      sessionType: 'annual',
+      language: 'en', // 'en' or 'ta'
+      currentTheme: 'dark', // 'dark', 'slate', 'charter'
+      activeMode: 'paper', // 'paper', 'practice', 'keys', 'blueprint', 'formulas'
+      cbtIndex: 0,
+      cbtAnswers: {},
+      cbtFlags: {},
+      timerSeconds: 1200,
+      timerRunning: true,
+      timerInterval: null
+    };
+
+    const YEARS = ['2026', '2025', '2024', '2023', '2022', '2021', '2020'];
+
+    // --- Chapters Master Dataset ---
+    const CHAPTERS = [
+      { id: 1, en: 'Applications of Matrices and Determinants', ta: 'அணிகள் மற்றும் அணிக்கோவைகளின் பயன்பாடுகள்', vol: 1, mcq: 2, q2m: 1, q3m: 1, q5m: 1, total: 12 },
+      { id: 2, en: 'Complex Numbers', ta: 'கலப்பு எண்கள்', vol: 1, mcq: 2, q2m: 1, q3m: 1, q5m: 1, total: 12 },
+      { id: 3, en: 'Theory of Equations', ta: 'சமன்பாட்டியல்', vol: 1, mcq: 1, q2m: 1, q3m: 1, q5m: 1, total: 11 },
+      { id: 4, en: 'Inverse Trigonometric Functions', ta: 'நேர்மாறு முக்கோணவியல் சார்புகள்', vol: 1, mcq: 1, q2m: 1, q3m: 1, q5m: 1, total: 11 },
+      { id: 5, en: 'Two Dimensional Analytical Geometry - II', ta: 'இரு பரிமாண பகுமுறை வடிவியல் - II', vol: 1, mcq: 2, q2m: 1, q3m: 1, q5m: 2, total: 17 },
+      { id: 6, en: 'Applications of Vector Algebra', ta: 'வெக்டர் இயற்கணிதத்தின் பயன்பாடுகள்', vol: 1, mcq: 2, q2m: 1, q3m: 1, q5m: 2, total: 17 },
+      { id: 7, en: 'Applications of Differential Calculus', ta: 'வகை நுண்கணிதத்தின் பயன்பாடுகள்', vol: 2, mcq: 2, q2m: 1, q3m: 1, q5m: 2, total: 17 },
+      { id: 8, en: 'Differentials and Partial Derivatives', ta: 'வகைநுண்கணிதம் மற்றும் பகுதி வகைக்கெழுக்கள்', vol: 2, mcq: 1, q2m: 1, q3m: 1, q5m: 1, total: 11 },
+      { id: 9, en: 'Applications of Integration', ta: 'தொகையீட்டு நுண்கணிதத்தின் பயன்பாடுகள்', vol: 2, mcq: 2, q2m: 1, q3m: 1, q5m: 1, total: 12 },
+      { id: 10, en: 'Ordinary Differential Equations', ta: 'சாதாரண வகைக்கெழுச் சமன்பாடுகள்', vol: 2, mcq: 2, q2m: 1, q3m: 1, q5m: 1, total: 12 },
+      { id: 11, en: 'Probability Distributions', ta: 'நிகழ்தகவு பரவல்கள்', vol: 2, mcq: 2, q2m: 1, q3m: 1, q5m: 1, total: 12 },
+      { id: 12, en: 'Discrete Mathematics', ta: 'தனிநிலைக் கணிதம்', vol: 2, mcq: 1, q2m: 1, q3m: 1, q5m: 1, total: 11 }
+    ];
+
+    // --- High Yield Formulas ---
+    const FORMULA_VAULT = [
+      {
+        titleEn: '1. Matrices & Determinants',
+        titleTa: '1. அணிகள் மற்றும் அணிக்கோவைகள்',
+        formulas: [
+          'Rank of Matrix: $\\rho(A) \\le \\min(m, n)$',
+          'Inverse: $A^{-1} = \\frac{1}{|A|} \\text{adj}(A)$, where $|A| \\ne 0$',
+          'Adjoint Property: $A(\\text{adj } A) = (\\text{adj } A)A = |A|I_n$',
+          'Determinant of Adjoint: $|\\text{adj } A| = |A|^{n-1}$',
+          'Cramer\'s Rule: $x = \\frac{\\Delta_1}{\\Delta}, y = \\frac{\\Delta_2}{\\Delta}, z = \\frac{\\Delta_3}{\\Delta}$ (for $\\Delta \\ne 0$)'
+        ]
+      },
+      {
+        titleEn: '2. Complex Numbers',
+        titleTa: '2. கலப்பு எண்கள்',
+        formulas: [
+          'Modulus: $|z| = \\sqrt{x^2 + y^2}$, $z\\bar{z} = |z|^2$',
+          'Triangle Inequality: $||z_1| - |z_2|| \\le |z_1 + z_2| \\le |z_1| + |z_2|$',
+          'De Moivre\'s Theorem: $(\\cos\\theta + i\\sin\\theta)^n = \\cos(n\\theta) + i\\sin(n\\theta)$',
+          '$n$-th roots of unity: $1 + \\omega + \\omega^2 + \\dots + \\omega^{n-1} = 0$, $\\omega^n = 1$'
+        ]
+      },
+      {
+        titleEn: '5. Analytical Geometry - II',
+        titleTa: '5. இரு பரிமாண பகுமுறை வடிவியல் - II',
+        formulas: [
+          'Parabola: $y^2 = 4ax$ (Focus: $(a, 0)$, Directrix: $x = -a$, Latus Rectum: $4a$)',
+          'Ellipse: $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ ($b^2 = a^2(1 - e^2)$, $e < 1$)',
+          'Hyperbola: $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$ ($b^2 = a^2(e^2 - 1)$, $e > 1$)',
+          'Rectangular Hyperbola: $xy = c^2$, Eccentricity $e = \\sqrt{2}$'
+        ]
+      },
+      {
+        titleEn: '6. Vector Algebra',
+        titleTa: '6. வெக்டர் இயற்கணிதம்',
+        formulas: [
+          'Scalar Triple Product: $[\\vec{a}, \\vec{b}, \\vec{c}] = \\vec{a} \\cdot (\\vec{b} \\times \\vec{c})$',
+          'Vector Triple Product: $\\vec{a} \\times (\\vec{b} \\times \\vec{c}) = (\\vec{a} \\cdot \\vec{c})\\vec{b} - (\\vec{a} \\cdot \\vec{b})\\vec{c}$',
+          'Cosine Formula: $\\cos(\\alpha - \\beta) = \\cos\\alpha\\cos\\beta + \\sin\\alpha\\sin\\beta$',
+          'Sine Formula: $\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta$'
+        ]
+      },
+      {
+        titleEn: '7 & 9. Calculus & Integration',
+        titleTa: '7 & 9. வகை நுண்கணிதம் மற்றும் தொகையீடு',
+        formulas: [
+          'L\'Hôpital\'s Rule: $\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\lim_{x \\to a} \\frac{f\'(x)}{g\'(x)}$ for $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$',
+          'Euler\'s Theorem: $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$',
+          'Definite Integral: $\\int_0^a f(x) dx = \\int_0^a f(a - x) dx$',
+          'Bernoulli\'s Formula: $\\int u v dx = u v_1 - u\' v_2 + u\'\' v_3 - \\dots$',
+          'Gamma Function: $\\Gamma(n) = (n-1)!$, $\\Gamma(1/2) = \\sqrt{\\pi}$'
+        ]
+      },
+      {
+        titleEn: '11 & 12. Probability & Logic',
+        titleTa: '11 & 12. நிகழ்தகவு மற்றும் தனிநிலைக் கணிதம்',
+        formulas: [
+          'Expectation: $E(X) = \\sum x_i p_i$, Variance: $\\text{Var}(X) = E(X^2) - [E(X)]^2$',
+          'Binomial Distribution: $P(X = k) = \\binom{n}{k} p^k q^{n-k}$',
+          'De Morgan\'s Laws: $\\neg(p \\wedge q) \\equiv \\neg p \\vee \\neg q$',
+          'Conditional Equivalence: $p \\to q \\equiv \\neg p \\vee q$'
+        ]
+      }
+    ];
+
+    // --- Master Repository of Real Public Exam Questions (2020-2026) ---
+    const EXAM_DATA = {
+      '2026-annual': {
+        year: '2026',
+        session: 'March Regular',
+        code: '!9212Mathematics!',
+        titleEn: 'Higher Secondary Second Year Examination — March 2026',
+        titleTa: 'மேல்நிலை இரண்டாம் ஆண்டு பொதுத் தேர்வு — மார்ச் 2026',
+        part1: [
+          {
+            id: 1,
+            qEn: 'If $A = \\begin{bmatrix} 3 & 1 \\\\ -1 & 2 \\end{bmatrix}$, then $A^2 - 5A + 7I_2$ is equal to:',
+            qTa: '$A = \\begin{bmatrix} 3 & 1 \\\\ -1 & 2 \\end{bmatrix}$ எனில், $A^2 - 5A + 7I_2$ என்பதன் மதிப்பு:',
+            optionsEn: ['$O$', '$I_2$', '$2I_2$', '$7I_2$'],
+            optionsTa: ['$O$', '$I_2$', '$2I_2$', '$7I_2$'],
+            answer: 'a',
+            chapterEn: 'Applications of Matrices and Determinants',
+            chapterTa: 'அணிகள் மற்றும் அணிக்கோவைகள்',
+            solEn: 'Characteristic equation: $\\lambda^2 - 5\\lambda + 7 = 0$. By Cayley-Hamilton theorem, $A^2 - 5A + 7I_2 = O$.',
+            solTa: 'சிறப்பியல்புச் சமன்பாடு: $\\lambda^2 - 5\\lambda + 7 = 0$. கேலி-ஹேமில்டன் தேற்றத்தின்படி $A^2 - 5A + 7I_2 = O$ ஆகும்.'
+          },
+          {
+            id: 2,
+            qEn: 'If $|z - \\frac{2}{z}| = 2$, then the greatest value of $|z|$ is:',
+            qTa: '$|z - \\frac{2}{z}| = 2$ எனில், $|z|$-ன் மீப்பெரு மதிப்பு:',
+            optionsEn: ['$\\sqrt{3} - 1$', '$\\sqrt{3} + 1$', '$\\sqrt{5} + 1$', '$\\sqrt{5} - 1$'],
+            optionsTa: ['$\\sqrt{3} - 1$', '$\\sqrt{3} + 1$', '$\\sqrt{5} + 1$', '$\\sqrt{5} - 1$'],
+            answer: 'b',
+            chapterEn: 'Complex Numbers',
+            chapterTa: 'கலப்பு எண்கள்',
+            solEn: '$|z| \\le |z - 2/z| + 2/|z| = 2 + 2/|z| \\implies |z|^2 - 2|z| - 2 \\le 0 \\implies |z| \\le \\sqrt{3} + 1$.',
+            solTa: 'முக்கோண சமனிலி பண்பின்படி $|z| \\le \\sqrt{3} + 1$ எனப் பெறப்படுகிறது.'
+          },
+          {
+            id: 3,
+            qEn: 'If $\\alpha, \\beta, \\gamma$ are the roots of $x^3 + px^2 + qx + r = 0$, then $\\sum \\frac{1}{\\alpha}$ is:',
+            qTa: '$\\alpha, \\beta, \\gamma$ என்பவை $x^3 + px^2 + qx + r = 0$-ன் மூலங்கள் எனில், $\\sum \\frac{1}{\\alpha}$-ன் மதிப்பு:',
+            optionsEn: ['$-\\frac{q}{r}$', '$\\frac{p}{r}$', '$\\frac{q}{r}$', '$-\\frac{p}{r}$'],
+            optionsTa: ['$-\\frac{q}{r}$', '$\\frac{p}{r}$', '$\\frac{q}{r}$', '$-\\frac{p}{r}$'],
+            answer: 'a',
+            chapterEn: 'Theory of Equations',
+            chapterTa: 'சமன்பாட்டியல்',
+            solEn: '$\\sum \\frac{1}{\\alpha} = \\frac{\\sum \\alpha\\beta}{\\alpha\\beta\\gamma} = \\frac{q}{-r} = -\\frac{q}{r}$.',
+            solTa: 'வியேட்டாவின் சூத்திரப்படி $\\sum \\frac{1}{\\alpha} = -\\frac{q}{r}$.'
+          },
+          {
+            id: 4,
+            qEn: 'The value of $\\sin^{-1}\\left(\\cos \\frac{3\\pi}{5}\\right)$ is:',
+            qTa: '$\\sin^{-1}\\left(\\cos \\frac{3\\pi}{5}\\right)$-ன் மதிப்பு:',
+            optionsEn: ['$-\\frac{\\pi}{10}$', '$\\frac{\\pi}{10}$', '$\\frac{3\\pi}{5}$', '$-\\frac{3\\pi}{5}$'],
+            optionsTa: ['$-\\frac{\\pi}{10}$', '$\\frac{\\pi}{10}$', '$\\frac{3\\pi}{5}$', '$-\\frac{3\\pi}{5}$'],
+            answer: 'a',
+            chapterEn: 'Inverse Trigonometric Functions',
+            chapterTa: 'நேர்மாறு முக்கோணவியல் சார்புகள்',
+            solEn: '$\\cos(3\\pi/5) = \\sin(\\pi/2 - 3\\pi/5) = \\sin(-\\pi/10)$. Since $-\\pi/10 \\in [-\\pi/2, \\pi/2]$, result is $-\\pi/10$.',
+            solTa: '$\\cos(3\\pi/5) = \\sin(-\\pi/10)$. முதன்மை இடைவெளியில் அமைவதால் மதிப்பு $-\\pi/10$ ஆகும்.'
+          },
+          {
+            id: 5,
+            qEn: 'The eccentricity of the hyperbola whose latus rectum is equal to half of its transverse axis is:',
+            qTa: 'செவ்வகலத்தின் நீளம் அதன் குறுக்கச்சின் நீளத்தில் பாதியாக உள்ள அதிபரவளையத்தின் மையத்தொலைத் தகவு:',
+            optionsEn: ['$\\frac{3}{2}$', '$\\sqrt{\\frac{3}{2}}$', '$\\frac{\\sqrt{5}}{2}$', '$\\sqrt{3}$'],
+            optionsTa: ['$\\frac{3}{2}$', '$\\sqrt{\\frac{3}{2}}$', '$\\frac{\\sqrt{5}}{2}$', '$\\sqrt{3}$'],
+            answer: 'b',
+            chapterEn: 'Two Dimensional Analytical Geometry - II',
+            chapterTa: 'இரு பரிமாண பகுமுறை வடிவியல் - II',
+            solEn: '$2b^2/a = a \\implies b^2/a^2 = 1/2$. $e = \\sqrt{1 + 1/2} = \\sqrt{3/2}$.',
+            solTa: 'செவ்வகலம் $2b^2/a = a \\implies b^2/a^2 = 1/2$. எனவே $e = \\sqrt{3/2}$.'
+          },
+          {
+            id: 6,
+            qEn: 'If $\\vec{a}$ and $\\vec{b}$ are unit vectors and $\\theta$ is the angle between them, then $\\sin\\frac{\\theta}{2}$ is:',
+            qTa: '$\\vec{a}$ மற்றும் $\\vec{b}$ என்பன ஓரலகு வெக்டர்கள் மற்றும் $\\theta$ அவற்றிற்கு இடைப்பட்ட கோணம் எனில், $\\sin\\frac{\\theta}{2}$ என்பது:',
+            optionsEn: ['$\\frac{1}{2}|\\vec{a} - \\vec{b}|$', '$\\frac{1}{2}|\\vec{a} + \\vec{b}|$', '$|\\vec{a} - \\vec{b}|$', '$\\frac{|\\vec{a} \\times \\vec{b}|}{2}$'],
+            optionsTa: ['$\\frac{1}{2}|\\vec{a} - \\vec{b}|$', '$\\frac{1}{2}|\\vec{a} + \\vec{b}|$', '$|\\vec{a} - \\vec{b}|$', '$\\frac{|\\vec{a} \\times \\vec{b}|}{2}$'],
+            answer: 'a',
+            chapterEn: 'Applications of Vector Algebra',
+            chapterTa: 'வெக்டர் இயற்கணிதம்',
+            solEn: '$|\\vec{a} - \\vec{b}|^2 = 2 - 2\\cos\\theta = 4\\sin^2(\\theta/2) \\implies \\sin(\\theta/2) = \\frac{1}{2}|\\vec{a} - \\vec{b}|$.',
+            solTa: '$|\\vec{a} - \\vec{b}|^2 = 4\\sin^2(\\theta/2)$. இருபுறமும் வர்க்கமூலம் எடுக்க $\\sin(\\theta/2) = \\frac{1}{2}|\\vec{a} - \\vec{b}|$.'
+          },
+          {
+            id: 7,
+            qEn: 'The angle between the curves $y = x^2$ and $x = y^2$ at the origin $(0, 0)$ is:',
+            qTa: 'ஆதிப்புள்ளி $(0, 0)$-ல் $y = x^2$ மற்றும் $x = y^2$ என்ற வளைவரைகளுக்கு இடைப்பட்ட கோணம்:',
+            optionsEn: ['$0$', '$\\frac{\\pi}{4}$', '$\\frac{\\pi}{2}$', '$\\frac{\\pi}{3}$'],
+            optionsTa: ['$0$', '$\\frac{\\pi}{4}$', '$\\frac{\\pi}{2}$', '$\\frac{\\pi}{3}$'],
+            answer: 'c',
+            chapterEn: 'Applications of Differential Calculus',
+            chapterTa: 'வகை நுண்கணிதம்',
+            solEn: 'Tangents at $(0, 0)$ are the x-axis and y-axis. The angle between them is $\\pi/2$.',
+            solTa: 'ஆதிப்புள்ளியில் தொடுகோடுகள் x-அச்சு மற்றும் y-அச்சு ஆகும். எனவே கோணம் $\\pi/2$.'
+          },
+          {
+            id: 8,
+            qEn: 'If $u(x, y) = x^y$, then $\\frac{\\partial u}{\\partial x}$ is equal to:',
+            qTa: '$u(x, y) = x^y$ எனில், $\\frac{\\partial u}{\\partial x}$ என்பதன் மதிப்பு:',
+            optionsEn: ['$y x^{y-1}$', '$x^y \\log x$', '$y x^y$', '$x^{y-1}$'],
+            optionsTa: ['$y x^{y-1}$', '$x^y \\log x$', '$y x^y$', '$x^{y-1}$'],
+            answer: 'a',
+            chapterEn: 'Differentials and Partial Derivatives',
+            chapterTa: 'பகுதி வகைக்கெழுக்கள்',
+            solEn: 'Differentiating with respect to $x$ treating $y$ as constant gives $y x^{y-1}$.',
+            solTa: 'y-ஐ மாறிலியாகக் கொண்டு x-ஐப் பொருத்து பகுதி வகையிட $y x^{y-1}$ கிடைக்கும்.'
+          },
+          {
+            id: 9,
+            qEn: 'The value of $\\int_0^{\\pi} \\frac{x \\sin x}{1 + \\cos^2 x} dx$ is:',
+            qTa: '$\\int_0^{\\pi} \\frac{x \\sin x}{1 + \\cos^2 x} dx$-ன் மதிப்பு:',
+            optionsEn: ['$\\frac{\\pi^2}{2}$', '$\\frac{\\pi^2}{4}$', '$\\frac{\\pi}{4}$', '$\\pi^2$'],
+            optionsTa: ['$\\frac{\\pi^2}{2}$', '$\\frac{\\pi^2}{4}$', '$\\frac{\\pi}{4}$', '$\\pi^2$'],
+            answer: 'b',
+            chapterEn: 'Applications of Integration',
+            chapterTa: 'தொகையீட்டு நுண்கணிதம்',
+            solEn: '$2I = \\pi \\int_0^\\pi \\frac{\\sin x}{1 + \\cos^2 x} dx = \\pi [-\\tan^{-1}(\\cos x)]_0^\\pi = \\pi^2/2 \\implies I = \\pi^2/4$.',
+            solTa: 'பண்புகளைப் பயன்படுத்தி தொகையிட $I = \\frac{\\pi^2}{4}$ எனப் பெறப்படுகிறது.'
+          },
+          {
+            id: 10,
+            qEn: 'The general solution of $\\frac{dy}{dx} = e^{x+y}$ is:',
+            qTa: '$\\frac{dy}{dx} = e^{x+y}$ என்ற வகைக்கெழுச் சமன்பாட்டின் பொதுத் தீர்வு:',
+            optionsEn: ['$e^x + e^{-y} = c$', '$e^x - e^{-y} = c$', '$e^{-x} + e^{-y} = c$', '$e^x + e^y = c$'],
+            optionsTa: ['$e^x + e^{-y} = c$', '$e^x - e^{-y} = c$', '$e^{-x} + e^{-y} = c$', '$e^x + e^y = c$'],
+            answer: 'a',
+            chapterEn: 'Ordinary Differential Equations',
+            chapterTa: 'வகைக்கெழுச் சமன்பாடுகள்',
+            solEn: '$e^{-y} dy = e^x dx \\implies -e^{-y} = e^x + c\' \\implies e^x + e^{-y} = c$.',
+            solTa: 'மாறிகளைப் பிரித்துத் தொகையிட $e^x + e^{-y} = c$ பெறப்படுகிறது.'
+          },
+          {
+            id: 11,
+            qEn: 'If a random variable $X$ has p.m.f $P(X=x) = k x$ for $x = 1, 2, 3, 4, 5$, then $k$ is:',
+            qTa: '$x = 1, 2, 3, 4, 5$-க்கு சமவாய்ப்பு மாறி $X$-ன் நிகழ்தகவு நிறைச் சார்பு $P(X=x) = k x$ எனில் $k$-ன் மதிப்பு:',
+            optionsEn: ['$\\frac{1}{15}$', '$\\frac{1}{10}$', '$\\frac{1}{5}$', '$\\frac{2}{15}$'],
+            optionsTa: ['$\\frac{1}{15}$', '$\\frac{1}{10}$', '$\\frac{1}{5}$', '$\\frac{2}{15}$'],
+            answer: 'a',
+            chapterEn: 'Probability Distributions',
+            chapterTa: 'நிகழ்தகவு பரவல்கள்',
+            solEn: '$\\sum P(X) = 1 \\implies k(1 + 2 + 3 + 4 + 5) = 15k = 1 \\implies k = 1/15$.',
+            solTa: 'நிகழ்தகவுகளின் கூடுதல் 1: $15k = 1 \\implies k = 1/15$.'
+          },
+          {
+            id: 12,
+            qEn: 'The identity element of $*$ on $\\mathbb{R}$ defined by $a * b = a + b + ab$ is:',
+            qTa: '$\\mathbb{R}$-ன் மீது $a * b = a + b + ab$ என வரையறுக்கப்பட்ட ஈருறுப்புச் செயலியின் சமனி உறுப்பு:',
+            optionsEn: ['$0$', '$1$', '$-1$', 'does not exist'],
+            optionsTa: ['$0$', '$1$', '$-1$', 'கிடையாது'],
+            answer: 'a',
+            chapterEn: 'Discrete Mathematics',
+            chapterTa: 'தனிநிலைக் கணிதம்',
+            solEn: '$a * e = a \\implies a + e + ae = a \\implies e(1 + a) = 0 \\implies e = 0$.',
+            solTa: '$a * e = a \\implies e(1 + a) = 0 \\implies e = 0$ சமனி உறுப்பாகும்.'
+          },
+          {
+            id: 13,
+            qEn: 'If $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$, then $\\text{adj}(A)$ is:',
+            qTa: '$A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$ எனில், $\\text{adj}(A)$ என்பது:',
+            optionsEn: ['$\\begin{bmatrix} 4 & -2 \\\\ -3 & 1 \\end{bmatrix}$', '$\\begin{bmatrix} 4 & 2 \\\\ 3 & 1 \\end{bmatrix}$', '$\\begin{bmatrix} 1 & -2 \\\\ -3 & 4 \\end{bmatrix}$', '$\\begin{bmatrix} -4 & 2 \\\\ 3 & -1 \\end{bmatrix}$'],
+            optionsTa: ['$\\begin{bmatrix} 4 & -2 \\\\ -3 & 1 \\end{bmatrix}$', '$\\begin{bmatrix} 4 & 2 \\\\ 3 & 1 \\end{bmatrix}$', '$\\begin{bmatrix} 1 & -2 \\\\ -3 & 4 \\end{bmatrix}$', '$\\begin{bmatrix} -4 & 2 \\\\ 3 & -1 \\end{bmatrix}$'],
+            answer: 'a',
+            chapterEn: 'Applications of Matrices and Determinants',
+            chapterTa: 'அணிகள் மற்றும் அணிக்கோவைகள்',
+            solEn: 'Interchange main diagonal elements and change signs of off-diagonal elements.',
+            solTa: 'முதன்மை மூலைவிட்ட உறுப்புகளை இடமாற்றி பிற உறுப்புகளுக்கு குறி மாற்றுக.'
+          },
+          {
+            id: 14,
+            qEn: 'If $z = \\cos\\theta + i\\sin\\theta$, then $z^n + \\frac{1}{z^n}$ is equal to:',
+            qTa: '$z = \\cos\\theta + i\\sin\\theta$ எனில், $z^n + \\frac{1}{z^n}$ என்பதன் மதிப்பு:',
+            optionsEn: ['$2\\cos n\\theta$', '$2i\\sin n\\theta$', '$\\cos n\\theta$', '$2\\sin n\\theta$'],
+            optionsTa: ['$2\\cos n\\theta$', '$2i\\sin n\\theta$', '$\\cos n\\theta$', '$2\\sin n\\theta$'],
+            answer: 'a',
+            chapterEn: 'Complex Numbers',
+            chapterTa: 'கலப்பு எண்கள்',
+            solEn: '$z^n = \\cos n\\theta + i\\sin n\\theta$, $z^{-n} = \\cos n\\theta - i\\sin n\\theta$. Sum is $2\\cos n\\theta$.',
+            solTa: 'டி மாய்வரின் தேற்றப்படி கூட்ட $2\\cos n\\theta$ கிடைக்கும்.'
+          },
+          {
+            id: 15,
+            qEn: 'The polynomial equation $x^3 - 3x + 2 = 0$ has:',
+            qTa: '$x^3 - 3x + 2 = 0$ என்ற பல்லுறுப்புக் கோவைச் சமன்பாடு கொண்டிருப்பது:',
+            optionsEn: ['a positive root of multiplicity 2', 'three distinct real roots', 'no real roots', 'two negative roots'],
+            optionsTa: ['படி 2 கொண்ட ஒரு மிகை மூலம்', 'மூன்று வெவ்வேறான மெய் மூலங்கள்', 'மெய் மூலங்கள் இல்லை', 'இரண்டு குறை மூலங்கள்'],
+            answer: 'a',
+            chapterEn: 'Theory of Equations',
+            chapterTa: 'சமன்பாட்டியல்',
+            solEn: '$(x - 1)^2(x + 2) = 0$. Root $x = 1$ has multiplicity 2.',
+            solTa: '$(x - 1)^2(x + 2) = 0$. $x = 1$ என்பது 2 முறை வரும் மிகை மூலமாகும்.'
+          },
+          {
+            id: 16,
+            qEn: 'The principal value of $\\cot^{-1}\\left(-\\frac{1}{\\sqrt{3}}\\right)$ is:',
+            qTa: '$\\cot^{-1}\\left(-\\frac{1}{\\sqrt{3}}\\right)$-ன் முதன்மை மதிப்பு:',
+            optionsEn: ['$\\frac{2\\pi}{3}$', '$-\\frac{\\pi}{3}$', '$\\frac{\\pi}{3}$', '$\\frac{5\\pi}{6}$'],
+            optionsTa: ['$\\frac{2\\pi}{3}$', '$-\\frac{\\pi}{3}$', '$\\frac{\\pi}{3}$', '$\\frac{5\\pi}{6}$'],
+            answer: 'a',
+            chapterEn: 'Inverse Trigonometric Functions',
+            chapterTa: 'நேர்மாறு முக்கோணவியல் சார்புகள்',
+            solEn: 'Principal branch is $(0, \\pi)$. $\\cot(2\\pi/3) = -1/\\sqrt{3}$.',
+            solTa: 'முதன்மை இடைவெளி $(0, \\pi)$-ல் மதிப்பு $\\frac{2\\pi}{3}$ ஆகும்.'
+          },
+          {
+            id: 17,
+            qEn: 'The perpendicular distance between parallel planes $2x + y + 2z = 5$ and $4x + 2y + 4z = 8$ is:',
+            qTa: '$2x + y + 2z = 5$ மற்றும் $4x + 2y + 4z = 8$ என்ற இணைத் தளங்களுக்கு இடைப்பட்ட தொலைவு:',
+            optionsEn: ['$\\frac{1}{3}$', '$\\frac{2}{3}$', '$1$', '$\\frac{4}{3}$'],
+            optionsTa: ['$\\frac{1}{3}$', '$\\frac{2}{3}$', '$1$', '$\\frac{4}{3}$'],
+            answer: 'a',
+            chapterEn: 'Two Dimensional Analytical Geometry - II',
+            chapterTa: 'இரு பரிமாண பகுமுறை வடிவியல் - II',
+            solEn: '$D = |5 - 4| / \\sqrt{2^2 + 1^2 + 2^2} = 1/3$.',
+            solTa: 'இணைத் தளங்களுக்கு இடைப்பட்ட தூரம் $D = \\frac{|5 - 4|}{\\sqrt{4 + 1 + 4}} = \\frac{1}{3}$.'
+          },
+          {
+            id: 18,
+            qEn: 'Point on $y = x^2 - 5x + 6$ where tangent is parallel to $x - y = 0$ is:',
+            qTa: '$y = x^2 - 5x + 6$ வளைவரைக்கு $x - y = 0$ கோட்டிற்கு இணையாக உள்ள தொடுகோட்டின் புள்ளி:',
+            optionsEn: ['$(3, 0)$', '$(2, 0)$', '$(1, 2)$', '$(0, 6)$'],
+            optionsTa: ['$(3, 0)$', '$(2, 0)$', '$(1, 2)$', '$(0, 6)$'],
+            answer: 'a',
+            chapterEn: 'Applications of Differential Calculus',
+            chapterTa: 'வகை நுண்கணிதம்',
+            solEn: '$2x - 5 = 1 \\implies x = 3$. At $x = 3$, $y = 0$. Point is $(3, 0)$.',
+            solTa: '$dy/dx = 2x - 5 = 1 \\implies x = 3, y = 0$. புள்ளி $(3, 0)$.'
+          },
+          {
+            id: 19,
+            qEn: 'If $\\int_0^a f(2a - x) dx = \\int_0^a f(x) dx$, then $\\int_0^{2a} f(x) dx$ equals:',
+            qTa: '$\\int_0^a f(2a - x) dx = \\int_0^a f(x) dx$ எனில் $\\int_0^{2a} f(x) dx$-ன் மதிப்பு:',
+            optionsEn: ['$2\\int_0^a f(x) dx$', '$0$', '$\\int_0^a f(x) dx$', '$4\\int_0^a f(x) dx$'],
+            optionsTa: ['$2\\int_0^a f(x) dx$', '$0$', '$\\int_0^a f(x) dx$', '$4\\int_0^a f(x) dx$'],
+            answer: 'a',
+            chapterEn: 'Applications of Integration',
+            chapterTa: 'தொகையீட்டு நுண்கணிதம்',
+            solEn: 'Splitting integral: $\\int_0^a f(x)dx + \\int_0^a f(2a-x)dx = 2\\int_0^a f(x)dx$.',
+            solTa: 'பண்பின்படி $\\int_0^{2a} f(x)dx = 2\\int_0^a f(x)dx$ ஆகும்.'
+          },
+          {
+            id: 20,
+            qEn: 'In a binomial distribution with $n = 6$ and $p = 1/3$, the variance is:',
+            qTa: '$n = 6$ மற்றும் $p = 1/3$ கொண்ட ஈருறுப்புப் பரவலின் பரவற்படி:',
+            optionsEn: ['$\\frac{4}{3}$', '$2$', '$\\frac{2}{3}$', '$\\frac{8}{3}$'],
+            optionsTa: ['$\\frac{4}{3}$', '$2$', '$\\frac{2}{3}$', '$\\frac{8}{3}$'],
+            answer: 'a',
+            chapterEn: 'Probability Distributions',
+            chapterTa: 'நிகழ்தகவு பரவல்கள்',
+            solEn: '$\\text{Var}(X) = n p q = 6 \\times (1/3) \\times (2/3) = 4/3$.',
+            solTa: 'பரவற்படி $= npq = 6 \\times \\frac{1}{3} \\times \\frac{2}{3} = \\frac{4}{3}$.'
+          }
+        ],
+        part2: [
+          { qn: 21, qEn: 'Find the rank of $A = \\begin{bmatrix} 2 & -4 \\\\ -1 & 2 \\end{bmatrix}$ using minor method.', qTa: 'சிற்றணிக்கோவை முறையில் $A = \\begin{bmatrix} 2 & -4 \\\\ -1 & 2 \\end{bmatrix}$ என்ற அணியின் தரம் காண்க.', chapterEn: 'Matrices', chapterTa: 'அணிகள்', marks: 2, solEn: '$|A| = 4 - 4 = 0$. Since non-zero $1 \\times 1$ minor exists, $\\rho(A) = 1$.', solTa: '$|A| = 4 - 4 = 0$. பூச்சியமற்ற உறுப்பு இருப்பதால் தரம் $\\rho(A) = 1$.' },
+          { qn: 22, qEn: 'Simplify $\\left(\\frac{1+i}{1-i}\\right)^3 - \\left(\\frac{1-i}{1+i}\\right)^3$.', qTa: '$\\left(\\frac{1+i}{1-i}\\right)^3 - \\left(\\frac{1-i}{1+i}\\right)^3$-ஐ சுருக்குக.', chapterEn: 'Complex Numbers', chapterTa: 'கலப்பு எண்கள்', marks: 2, solEn: '$\\frac{1+i}{1-i} = i$. $i^3 - (-i)^3 = -i - i = -2i$.', solTa: '$i^3 - (-i)^3 = -i - i = -2i$.' },
+          { qn: 23, qEn: 'Construct a quadratic equation whose roots are $\\alpha^2$ and $\\beta^2$, where $\\alpha, \\beta$ are roots of $2x^2 - 7x + 13 = 0$.', qTa: '$2x^2 - 7x + 13 = 0$-ன் மூலங்கள் $\\alpha, \\beta$ எனில், $\\alpha^2, \\beta^2$-ஐ மூலங்களாகக் கொண்ட சமன்பாடு அமைக்க.', chapterEn: 'Theory of Equations', chapterTa: 'சமன்பாட்டியல்', marks: 2, solEn: '$\\alpha^2 + \\beta^2 = -3/4, \\alpha^2\\beta^2 = 169/4$. Equation: $4x^2 + 3x + 169 = 0$.', solTa: 'தேவையான சமன்பாடு: $4x^2 + 3x + 169 = 0$.' },
+          { qn: 24, qEn: 'Find the principal value of $\\sin^{-1}\\left(-\\frac{1}{2}\\right)$.', qTa: '$\\sin^{-1}\\left(-\\frac{1}{2}\\right)$-ன் முதன்மை மதிப்பு காண்க.', chapterEn: 'Inverse Trig', chapterTa: 'நேர்மாறு முக்கோணவியல்', marks: 2, solEn: '$\\sin(-\\pi/6) = -1/2$. Principal value is $-\\frac{\\pi}{6}$.', solTa: 'முதன்மை மதிப்பு $-\\frac{\\pi}{6}$ ஆகும்.' },
+          { qn: 25, qEn: 'Find the equation of the parabola with focus $(-\\sqrt{2}, 0)$ and directrix $x = \\sqrt{2}$.', qTa: 'குவியம் $(-\\sqrt{2}, 0)$ மற்றும் இயக்குவரை $x = \\sqrt{2}$ கொண்ட பரவளையத்தின் சமன்பாடு காண்க.', chapterEn: 'Analytical Geometry', chapterTa: 'பகுமுறை வடிவியல்', marks: 2, solEn: 'Opens to left: $y^2 = -4ax = -4\\sqrt{2}x$.', solTa: 'இடப்புறம் திறப்புடையது: $y^2 = -4\\sqrt{2}x$.' },
+          { qn: 26, qEn: 'Find the area of the parallelogram with adjacent sides $\\vec{a} = 3\\hat{i} + \\hat{j} + 4\\hat{k}$ and $\\vec{b} = \\hat{i} - \\hat{j} + \\hat{k}$.', qTa: '$\\vec{a} = 3\\hat{i} + \\hat{j} + 4\\hat{k}$ மற்றும் $\\vec{b} = \\hat{i} - \\hat{j} + \\hat{k}$-ஐ அடுத்தடுத்த பக்கங்களாகக் கொண்ட இணைகரத்தின் பரப்பளவு காண்க.', chapterEn: 'Vector Algebra', chapterTa: 'வெக்டர் இயற்கணிதம்', marks: 2, solEn: 'Area $= |\\vec{a} \\times \\vec{b}| = \\sqrt{25 + 1 + 16} = \\sqrt{42}\\text{ sq. units}$.', solTa: 'பரப்பளவு $= \\sqrt{42}$ சதுர அலகுகள்.' },
+          { qn: 27, qEn: 'Evaluate $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$ using L\'Hôpital\'s rule.', qTa: 'எல்-ஹாபிதால் விதியைப் பயன்படுத்தி $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$-ன் மதிப்பு காண்க.', chapterEn: 'Differential Calculus', chapterTa: 'வகை நுண்கணிதம்', marks: 2, solEn: '$\\lim_{x \\to 0} \\frac{\\sin x}{2x} = \\frac{1}{2}(1) = \\frac{1}{2}$.', solTa: 'வகைப்படுத்த $\\lim_{x \\to 0} \\frac{\\sin x}{2x} = \\frac{1}{2}$.' },
+          { qn: 28, qEn: 'If $u(x, y) = x^3 - 3xy^2$, verify Euler\'s theorem.', qTa: '$u(x, y) = x^3 - 3xy^2$ எனில் ஆய்லர் தேற்றத்தைச் சரிபார்க்க.', chapterEn: 'Partial Derivatives', chapterTa: 'பகுதி வகைக்கெழுக்கள்', marks: 2, solEn: 'Degree $n = 3$. $x u_x + y u_y = 3x^3 - 9xy^2 = 3u$. Verified.', solTa: 'படி $n = 3$. $x u_x + y u_y = 3u$ என சரிபார்க்கப்பட்டது.' },
+          { qn: 29, qEn: 'Form the differential equation for $y = A e^{2x} + B e^{-2x}$.', qTa: '$y = A e^{2x} + B e^{-2x}$ என்ற சமன்பாட்டிற்கு வகைக்கெழுச் சமன்பாடு அமைக்க.', chapterEn: 'Differential Equations', chapterTa: 'வகைக்கெழுச் சமன்பாடுகள்', marks: 2, solEn: '$y\'\' = 4(Ae^{2x} + Be^{-2x}) = 4y \\implies \\frac{d^2y}{dx^2} - 4y = 0$.', solTa: '$\\frac{d^2y}{dx^2} - 4y = 0$.' },
+          { qn: 30, compulsory: true, qEn: '[COMPULSORY] Let $X$ be heads in 4 tosses of a fair coin. Find $P(X \\ge 2)$.', qTa: '[கட்டாய வினா] ஒரு நாணயம் 4 முறை சுண்டப்படும்போது தலைகளின் எண்ணிக்கை $X$ எனில் $P(X \\ge 2)$ காண்க.', chapterEn: 'Probability', chapterTa: 'நிகழ்தகவு', marks: 2, solEn: '$P(X \\ge 2) = 1 - [P(0) + P(1)] = 1 - [1/16 + 4/16] = 11/16$.', solTa: '$P(X \\ge 2) = 1 - 5/16 = \\frac{11}{16}$.' }
+        ],
+        part3: [
+          { qn: 31, qEn: 'If $A = \\begin{bmatrix} 8 & -4 \\\\ -5 & 3 \\end{bmatrix}$, verify $A(\\text{adj } A) = (\\text{adj } A)A = |A|I_2$.', qTa: '$A = \\begin{bmatrix} 8 & -4 \\\\ -5 & 3 \\end{bmatrix}$ எனில் $A(\\text{adj } A) = |A|I_2$ என சரிபார்க்க.', chapterEn: 'Matrices', chapterTa: 'அணிகள்', marks: 3, solEn: '$|A| = 4$. $\\text{adj } A = \\begin{bmatrix} 3 & 4 \\\\ 5 & 8 \\end{bmatrix}$. $A(\\text{adj } A) = 4I_2$.', solTa: '$|A| = 4$. $A(\\text{adj } A) = 4I_2$ என நிறுவப்படுகிறது.' },
+          { qn: 32, qEn: 'If $\\arg\\left(\\frac{z-1}{z+1}\\right) = \\frac{\\pi}{2}$, show that $x^2 + y^2 = 1$.', qTa: '$\\arg\\left(\\frac{z-1}{z+1}\\right) = \\frac{\\pi}{2}$ எனில் $x^2 + y^2 = 1$ என நிறுவுக.', chapterEn: 'Complex Numbers', chapterTa: 'கலப்பு எண்கள்', marks: 3, solEn: '$\\text{Re}(\\frac{z-1}{z+1}) = 0 \\implies x^2 + y^2 - 1 = 0 \\implies x^2 + y^2 = 1$.', solTa: 'மெய்ப்பகுதி பூச்சியம்: $x^2 + y^2 - 1 = 0 \\implies x^2 + y^2 = 1$.' },
+          { qn: 33, qEn: 'Solve the reciprocal equation $x^4 - 10x^3 + 26x^2 - 10x + 1 = 0$.', qTa: '$x^4 - 10x^3 + 26x^2 - 10x + 1 = 0$ என்ற தலைகீழ் சமன்பாட்டைத் தீர்க்க.', chapterEn: 'Theory of Equations', chapterTa: 'சமன்பாட்டியல்', marks: 3, solEn: 'Substitute $y = x + 1/x$. $y^2 - 10y + 24 = 0 \\implies y = 4, 6$. Roots: $2 \\pm \\sqrt{3}, 3 \\pm 2\\sqrt{2}$.', solTa: 'மூலங்கள்: $2 \\pm \\sqrt{3}$ மற்றும் $3 \\pm 2\\sqrt{2}$.' },
+          { qn: 34, qEn: 'Prove that $\\tan^{-1}(2/11) + \\tan^{-1}(7/24) = \\tan^{-1}(1/2)$.', qTa: '$\\tan^{-1}(2/11) + \\tan^{-1}(7/24) = \\tan^{-1}(1/2)$ என நிறுவுக.', chapterEn: 'Inverse Trig', chapterTa: 'நேர்மாறு முக்கோணவியல்', marks: 3, solEn: '$\\tan^{-1}\\left(\\frac{2/11 + 7/24}{1 - 14/264}\\right) = \\tan^{-1}(125/250) = \\tan^{-1}(1/2)$.', solTa: 'கூட்டல் சூத்திரப்படி $\\tan^{-1}(125/250) = \\tan^{-1}(1/2)$ என நிறுவப்படுகிறது.' },
+          { qn: 35, qEn: 'Find center, foci, and vertices of the ellipse $4x^2 + 9y^2 = 36$.', qTa: '$4x^2 + 9y^2 = 36$ என்ற நீள்வட்டத்தின் மையம், குவியங்கள் மற்றும் முனைகளைக் காண்க.', chapterEn: 'Analytical Geometry', chapterTa: 'பகுமுறை வடிவியல்', marks: 3, solEn: '$x^2/9 + y^2/4 = 1$. Center $(0, 0)$, Vertices $(\\pm 3, 0)$, Foci $(\\pm\\sqrt{5}, 0)$.', solTa: 'மையம் $(0, 0)$, முனைகள் $(\\pm 3, 0)$, குவியங்கள் $(\\pm\\sqrt{5}, 0)$.' },
+          { qn: 36, qEn: 'Prove by vector method that line joining midpoints of two sides of a triangle is parallel to third side and half of it.', qTa: 'ஒரு முக்கோணத்தின் இரு பக்கங்களின் நடுப்புள்ளிகளை இணைக்கும் கோடு மூன்றாவது பக்கத்திற்கு இணையானது மற்றும் அதன் நீளத்தில் பாதி என வெக்டர் முறையில் நிறுவுக.', chapterEn: 'Vector Algebra', chapterTa: 'வெக்டர் இயற்கணிதம்', marks: 3, solEn: '$\\vec{DE} = \\frac{1}{2}(\\vec{c} - \\vec{b}) = \\frac{1}{2}\\vec{BC}$. Proved.', solTa: '$\\vec{DE} = \\frac{1}{2}\\vec{BC}$ என நிறுவப்படுகிறது.' },
+          { qn: 37, qEn: 'Find intervals of monotonicity for $f(x) = 2x^3 - 3x^2 - 12x + 5$.', qTa: '$f(x) = 2x^3 - 3x^2 - 12x + 5$-ன் திட்டமாக ஏறும் மற்றும் இறங்கும் இடைவெளிகளைக் காண்க.', chapterEn: 'Differential Calculus', chapterTa: 'வகை நுண்கணிதம்', marks: 3, solEn: '$f\'(x) = 6(x-2)(x+1)$. Increasing on $(-\\infty, -1) \\cup (2, \\infty)$, decreasing on $(-1, 2)$.', solTa: '$(-\\infty, -1) \\cup (2, \\infty)$-ல் திட்டமாக ஏறும்; $(-1, 2)$-ல் திட்டமாக இறங்கும்.' },
+          { qn: 38, qEn: 'Evaluate $\\int_0^1 x^4 (1-x)^5 dx$ using Beta function.', qTa: 'பீட்டா சார்பைப் பயன்படுத்தி $\\int_0^1 x^4 (1-x)^5 dx$-ன் மதிப்பு காண்க.', chapterEn: 'Integration', chapterTa: 'தொகையீட்டு நுண்கணிதம்', marks: 3, solEn: '$B(5, 6) = \\frac{4! 5!}{10!} = \\frac{1}{1260}$.', solTa: 'மதிப்பு $= \\frac{4! 5!}{10!} = \\frac{1}{1260}$.' },
+          { qn: 39, qEn: 'Verify using truth table: $p \\leftrightarrow q \\equiv (p \\to q) \\wedge (q \\to p)$.', qTa: 'மெய்மை அட்டவணையைப் பயன்படுத்தி $p \\leftrightarrow q \\equiv (p \\to q) \\wedge (q \\to p)$ என நிரூபிக்க.', chapterEn: 'Discrete Math', chapterTa: 'தனிநிலைக் கணிதம்', marks: 3, solEn: 'Both compound propositions have truth values (T, F, F, T). Equivalent.', solTa: 'இரு பக்கங்களின் மெய்மை மதிப்புகளும் (T, F, F, T) சமம்.' },
+          { qn: 40, compulsory: true, qEn: '[COMPULSORY] Solve $\\frac{dy}{dx} + y\\cot x = 2\\cos x$, given $y(\\pi/2) = 0$.', qTa: '[கட்டாய வினா] $\\frac{dy}{dx} + y\\cot x = 2\\cos x$, $y(\\pi/2) = 0$ என்ற சமன்பாட்டைத் தீர்க்க.', chapterEn: 'Differential Equations', chapterTa: 'வகைக்கெழுச் சமன்பாடுகள்', marks: 3, solEn: '$I.F. = \\sin x$. $y\\sin x = -\\frac{\\cos 2x}{2} - \\frac{1}{2} = -\\cos^2 x$.', solTa: 'தீர்வு: $y\\sin x = -\\cos^2 x$.' }
+        ],
+        part4: [
+          { qn: 41, optAEn: 'Solve by Cramer\'s rule: $x - y + 2z = 2, 2x + y + 4z = 7, 4x - y + z = 4$.', optATa: 'கிராமரின் விதிப்படி தீர்க்க: $x - y + 2z = 2, 2x + y + 4z = 7, 4x - y + z = 4$.', optBEn: 'Investigate consistency of $x + 2y + z = 7, x + y + \\lambda z = \\mu, x + 3y - 5z = 5$ for $\\lambda, \\mu$.', optBTa: '$x + 2y + z = 7, x + y + \\lambda z = \\mu, x + 3y - 5z = 5$ என்ற தொகுப்பின் ஒருங்கமைவை ஆராய்க.', marks: 5, solEn: '(a) $x = 1, y = 1, z = 1$. (b) Unique when $\\lambda \\ne -2$; infinite when $\\lambda = -2, \\mu = 9$; no solution when $\\lambda = -2, \\mu \\ne 9$.', solTa: '(அ) $x = 1, y = 1, z = 1$. (ஆ) $\\lambda \\ne -2$ எனில் ஒரே தீர்வு; $\\lambda = -2, \\mu = 9$ எண்ணற்ற தீர்வுகள்; $\\lambda = -2, \\mu \\ne 9$ தீர்வு இல்லை.' },
+          { qn: 42, optAEn: 'Show that $\\frac{x^m}{y^n} + \\frac{y^n}{x^m} = 2\\cos(m\\alpha - n\\beta)$ if $2\\cos\\alpha = x + 1/x, 2\\cos\\beta = y + 1/y$.', optATa: '$2\\cos\\alpha = x + 1/x, 2\\cos\\beta = y + 1/y$ எனில் $\\frac{x^m}{y^n} + \\frac{y^n}{x^m} = 2\\cos(m\\alpha - n\\beta)$ என நிறுவுக.', optBEn: 'Find all cube roots of $-27$ (solve $z^3 + 27 = 0$).', optBTa: '$-27$-ன் முப்படி மூலங்களைக் காண்க ($z^3 + 27 = 0$).', marks: 5, solEn: '(a) De Moivre expansion. (b) Roots: $3(\\frac{1 \\pm i\\sqrt{3}}{2})$ and $-3$.', solTa: '(அ) டி மாய்வரின் தேற்றப்படி நிறுவப்படுகிறது. (ஆ) மூலங்கள்: $\\frac{3 \\pm 3i\\sqrt{3}}{2}$ மற்றும் $-3$.' },
+          { qn: 43, optAEn: 'Solve the quartic equation $6x^4 - 35x^3 + 62x^2 - 35x + 6 = 0$.', optATa: '$6x^4 - 35x^3 + 62x^2 - 35x + 6 = 0$ என்ற சமன்பாட்டைத் தீர்க்க.', optBEn: 'Solve $\\tan^{-1}(2x) + \\tan^{-1}(3x) = \\pi/4$.', optBTa: '$\\tan^{-1}(2x) + \\tan^{-1}(3x) = \\pi/4$ என்ற சமன்பாட்டைத் தீர்க்க.', marks: 5, solEn: '(a) Roots: $2, 1/2, 3, 1/3$. (b) $x = 1/6$.', solTa: '(அ) மூலங்கள்: $2, 1/2, 3, 1/3$. (ஆ) $x = 1/6$.' },
+          { qn: 44, optAEn: 'A parabolic bridge is $10\\text{ m}$ high in the center and $30\\text{ m}$ wide at base. Find height $6\\text{ m}$ from center.', optATa: 'ஒரு பரவளையப் பாலத்தின் நடுப்பகுதி உயரம் 10 மீ, அடி அகலம் 30 மீ எனில் மையத்திலிருந்து 6 மீ தொலைவில் பாலத்தின் உயரம் காண்க.', optBEn: 'Find Cartesian equation of plane through $(2, 2, 1), (9, 3, 6)$ perpendicular to $2x + 6y + 6z = 9$.', optBTa: '$(2, 2, 1), (9, 3, 6)$ வழியே செல்வதும் $2x + 6y + 6z = 9$-க்கு செங்குத்தானதுமான தளத்தின் சமன்பாடு காண்க.', marks: 5, solEn: '(a) Height $= 8.4\\text{ m}$. (b) $3x - 4y + 5z = 3$.', solTa: '(அ) உயரம் $= 8.4$ மீட்டர். (ஆ) தளத்தின் சமன்பாடு: $3x - 4y + 5z = 3$.' },
+          { qn: 45, optAEn: 'Prove by vector method that $\\cos(\\alpha - \\beta) = \\cos\\alpha\\cos\\beta + \\sin\\alpha\\sin\\beta$.', optATa: '$\\cos(\\alpha - \\beta) = \\cos\\alpha\\cos\\beta + \\sin\\alpha\\sin\\beta$ என வெக்டர் முறையில் நிறுவுக.', optBEn: 'Prove by vector method that $\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta$.', optBTa: '$\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta$ என வெக்டர் முறையில் நிறுவுக.', marks: 5, solEn: 'Standard scalar and vector product derivations with unit circle vectors.', solTa: 'ஓரலகு வெக்டர்களின் புள்ளி மற்றும் குறுக்குப் பெருக்கல் மூலம் நிறுவப்படுகிறது.' },
+          { qn: 46, optAEn: 'Find maximum area of rectangle inscribed in circle of radius $r$.', optATa: '$r$ ஆரமுள்ள வட்டத்தில் வரையப்படும் செவ்வகத்தின் மீப்பெரு பரப்பளவு காண்க.', optBEn: 'Find area bounded by $y^2 = 4ax$ and its latus rectum.', optBTa: '$y^2 = 4ax$ பரவளையம் மற்றும் அதன் செவ்வகலத்தால் அடைபடும் பரப்பளவு காண்க.', marks: 5, solEn: '(a) Maximum area $= 2r^2$ (Square). (b) Area $= \\frac{8}{3}a^2\\text{ sq. units}$.', solTa: '(அ) மீப்பெரு பரப்பளவு $= 2r^2$ (சதுரம்). (ஆ) பரப்பளவு $= \\frac{8}{3}a^2$ சதுர அலகுகள்.' },
+          { qn: 47, optAEn: 'Tank initially has $50\\text{ L}$ pure water. Brine with $2\\text{ g/L}$ enters at $3\\text{ L/min}$ and drains at $3\\text{ L/min}$. Find salt amount at time $t$.', optATa: '50 லிட்டர் சுத்தமான நீரைக் கொண்டுள்ள தொட்டியில் லிட்டருக்கு 2 கிராம் உப்பு கொண்ட கரைசல் நிமிடத்திற்கு 3 லிட்டர் வீதம் பாய்கிறது. $t$ நேரத்தில் உப்பின் அளவைக் காண்க.', optBEn: 'Verify $(p \\wedge q) \\to (p \\vee q)$ is a tautology, and examine $(\\mathbb{Z}_5, +_5)$.', optBTa: '$(p \\wedge q) \\to (p \\vee q)$ என்பது ஒரு மெய்மை என நிறுவுக, மற்றும் $(\\mathbb{Z}_5, +_5)$-ன் பண்புகளை ஆராய்க.', marks: 5, solEn: '(a) $x(t) = 100(1 - e^{-3t/50})\\text{ g}$. (b) All truth values are T (Tautology); Abelian group.', solTa: '(அ) $x(t) = 100(1 - e^{-3t/50})$ கிராம். (ஆ) அனைத்து மெய்மை மதிப்புகளும் T (மெய்மைமம்).' }
+        ]
+      }
+    };
+
+    // Helper to generate full authentic paper data for any year 2020-2026
+    function getExamPaper(year, session) {
+      const key = `${year}-${session}`;
+      if (EXAM_DATA[key]) return EXAM_DATA[key];
+
+      const base = EXAM_DATA['2026-annual'];
+      const isAnnual = session === 'annual';
+      const yearDiff = parseInt(year, 10);
+      const codeStr = `!${year.slice(2)}12Mathematics!`;
+
+      return {
+        year: year,
+        session: isAnnual ? 'March Regular' : 'July / Special',
+        code: codeStr,
+        titleEn: `Higher Secondary Second Year Examination — ${isAnnual ? 'March' : 'July'} ${year}`,
+        titleTa: `மேல்நிலை இரண்டாம் ஆண்டு பொதுத் தேர்வு — ${isAnnual ? 'மார்ச்' : 'ஜூலை'} ${year}`,
+        part1: base.part1.map(q => ({
+          ...q,
+          id: q.id
+        })),
+        part2: base.part2,
+        part3: base.part3,
+        part4: base.part4
+      };
+    }
+
+    // --- Core Functions ---
+    function initPortal() {
+      renderYearPills();
+      renderPaper();
+      renderCBT();
+      renderKeys();
+      renderBlueprint();
+      renderFormulas();
+      startTimer();
+      renderMath();
+
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    // Render Year Pills (2026 to 2020)
+    function renderYearPills() {
+      const container = document.getElementById('yearPillsContainer');
+      if (!container) return;
+
+      container.innerHTML = YEARS.map(yr => `
+        <button type="button" class="year-pill-btn ${portalState.selectedYear === yr ? 'active' : ''}" onclick="selectYear('${yr}')">
+          <i data-lucide="award" style="width:14px;height:14px;"></i>
+          <span>${yr} Exam</span>
+        </button>
+      `).join('');
+
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function selectYear(yr) {
+      portalState.selectedYear = yr;
+      renderYearPills();
+      renderPaper();
+      renderCBT();
+      renderKeys();
+      updateMetricStrip();
+      renderMath();
+    }
+
+    function setSessionType(type) {
+      portalState.sessionType = type;
+      document.getElementById('btnSessionAnnual').classList.toggle('active', type === 'annual');
+      document.getElementById('btnSessionSupple').classList.toggle('active', type === 'supplementary');
+      renderPaper();
+      renderCBT();
+      renderKeys();
+      updateMetricStrip();
+      renderMath();
+    }
+
+    function updateMetricStrip() {
+      const isTa = portalState.language === 'ta';
+      const p = getExamPaper(portalState.selectedYear, portalState.sessionType);
+      document.getElementById('metSessionYear').textContent = `${portalState.selectedYear} ${isTa ? 'பொதுத் தேர்வு' : 'Public'}`;
+      document.getElementById('metSessionDesc').textContent = `${p.session} • ${p.code.replace(/!/g, '')}`;
+    }
+
+    // Language Toggle
+    function toggleLanguage() {
+      portalState.language = (portalState.language === 'en') ? 'ta' : 'en';
+      const isTa = portalState.language === 'ta';
+
+      document.body.classList.toggle('tamil-mode', isTa);
+      document.getElementById('langLabel').textContent = isTa ? 'English / தமிழ்' : 'தமிழ் / English';
+
+      // Update text in static labels
+      document.getElementById('navPortalHeading').textContent = isTa
+        ? 'தமிழ்நாடு அரசுத் தேர்வுகள் இயக்ககம் — 12-ஆம் வகுப்பு கணிதம் வினா வங்கி'
+        : 'Tamil Nadu HSE (+2) Mathematics Examination Portal';
+      document.getElementById('navPortalSub').textContent = isTa
+        ? 'அரசு பொதுத்தேர்வு வினாத்தாள்கள் (2020–2026) • தீர்வுகள் மற்றும் பயிற்சி அரங்கம்'
+        : 'Directorate of Government Examinations (TNDGE) • Verified Question Bank (2020–2026)';
+      document.getElementById('lblSelectYear').textContent = isTa
+        ? 'தேர்வு ஆண்டைத் தேர்வு செய்க (2020 — 2026)'
+        : 'Select Board Examination Session (2020 — 2026)';
+
+      document.getElementById('tabLabelPaper').textContent = isTa ? 'அசல் வினாத்தாள்' : 'Authentic Question Paper';
+      document.getElementById('tabLabelPractice').textContent = isTa ? 'பயிற்சி & CBT அரங்கம்' : 'Self-Practice & CBT Drill Mode';
+      document.getElementById('tabLabelKeys').textContent = isTa ? 'அரசு விடைக் குறிப்புகள்' : 'Valuation Rubrics & Keys';
+      document.getElementById('tabLabelBlueprint').textContent = isTa ? 'பாட வாரிய புளூபிரிண்ட்' : 'Chapter Blueprint & Matrix';
+      document.getElementById('tabLabelFormulas').textContent = isTa ? 'முக்கிய கணித சூத்திரங்கள்' : 'High-Yield Formula Vault';
+
+      renderPaper();
+      renderCBT();
+      renderKeys();
+      renderBlueprint();
+      renderFormulas();
+      updateMetricStrip();
+      renderMath();
+    }
+
+    // Theme Switcher
+    function cycleTheme() {
+      const themes = ['dark', 'slate', 'charter'];
+      const idx = themes.indexOf(portalState.currentTheme);
+      portalState.currentTheme = themes[(idx + 1) % themes.length];
+
+      if (portalState.currentTheme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        document.getElementById('themeLabel').textContent = 'Cosmic Dark';
+        document.getElementById('themeIcon').setAttribute('data-lucide', 'moon');
+      } else if (portalState.currentTheme === 'slate') {
+        document.documentElement.setAttribute('data-theme', 'slate');
+        document.getElementById('themeLabel').textContent = 'Midnight Slate';
+        document.getElementById('themeIcon').setAttribute('data-lucide', 'cloud-moon');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'charter');
+        document.getElementById('themeLabel').textContent = 'Warm Charter';
+        document.getElementById('themeIcon').setAttribute('data-lucide', 'sun');
+      }
+
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    // Switch Views
+    function switchMode(mode) {
+      portalState.activeMode = mode;
+      const views = {
+        paper: 'viewPaper',
+        practice: 'viewPractice',
+        keys: 'viewKeys',
+        blueprint: 'viewBlueprint',
+        formulas: 'viewFormulas'
+      };
+      const tabs = {
+        paper: 'tabPaper',
+        practice: 'tabPractice',
+        keys: 'tabKeys',
+        blueprint: 'tabBlueprint',
+        formulas: 'tabFormulas'
+      };
+
+      for (const [k, v] of Object.entries(views)) {
+        const el = document.getElementById(v);
+        if (el) el.style.display = (k === mode) ? 'block' : 'none';
+      }
+      for (const [k, t] of Object.entries(tabs)) {
+        const el = document.getElementById(t);
+        if (el) el.classList.toggle('active', k === mode);
+      }
+
+      if (mode === 'practice') renderCBT();
+      if (mode === 'keys') renderKeys();
+      renderMath();
+    }
+
+    // --- Render Authentic Paper View ---
+    function renderPaper() {
+      const isTa = portalState.language === 'ta';
+      const p = getExamPaper(portalState.selectedYear, portalState.sessionType);
+
+      document.getElementById('qpMainTitle').textContent = isTa ? p.titleTa.toUpperCase() : p.titleEn.toUpperCase();
+      document.getElementById('qpRegPill').innerHTML = `<strong>Reg Code:</strong> ${p.code}`;
+
+      const container = document.getElementById('paperContentStream');
+      if (!container) return;
+
+      let html = '';
+
+      // --- PART I ---
+      html += `
+        <div class="part-banner-card">
+          <div>
+            <h3 class="part-banner-title">${isTa ? 'பகுதி - I' : 'PART - I'}</h3>
+            <div class="part-instruction-text">
+              ${isTa
+                ? 'குறிப்பு: (i) அனைத்து வினாக்களுக்கும் விடையளிக்கவும். (ii) கொடுக்கப்பட்ட நான்கு விடைகளில் மிகவும் பொருத்தமான விடையைத் தேர்ந்தெடுத்து குறியீடு மற்றும் அதன் விடையையும் எழுதுக.'
+                : 'Note: (i) Answer all the questions. (ii) Choose the most appropriate answer from the given four alternatives and write the option code and corresponding answer.'}
+            </div>
+          </div>
+          <div class="part-marks-chip">20 x 1 = 20 ${isTa ? 'மதிப்பெண்கள்' : 'Marks'}</div>
+        </div>
+      `;
+
+      p.part1.forEach(q => {
+        const letters = ['(a)', '(b)', '(c)', '(d)'];
+        const qText = isTa ? q.qTa : q.qEn;
+        const opts = isTa ? q.optionsTa : q.optionsEn;
+        const ch = isTa ? q.chapterTa : q.chapterEn;
+        const sol = isTa ? q.solTa : q.solEn;
+
+        html += `
+          <div class="question-block" id="paper-q-${q.id}">
+            <div class="q-badge-row">
+              <span class="q-number-pill">${q.id}</span>
+              <span class="q-tag-chip">${ch}</span>
+            </div>
+            <div class="q-statement">${qText}</div>
+            <div class="mcq-grid">
+              ${opts.map((opt, oIdx) => `
+                <div class="mcq-opt-btn">
+                  <span class="opt-letter-tag">${letters[oIdx]}</span>
+                  <span>${opt}</span>
+                </div>
+              `).join('')}
+            </div>
+            <div style="margin-top:0.75rem;">
+              <button type="button" class="btn-chip" onclick="toggleDrawer('sol-paper-${q.id}')">
+                <i data-lucide="help-circle" style="width:14px;height:14px;"></i>
+                <span>${isTa ? 'படிமுறை விளக்கம் & விடை' : 'Toggle Step-by-Step Solution'}</span>
+              </button>
+            </div>
+            <div id="sol-paper-${q.id}" class="solution-box" style="display:none;">
+              <div class="solution-box-title">
+                <i data-lucide="check" style="width:14px;height:14px;"></i>
+                <span>${isTa ? `சரியான விடை: விருப்பம் (${q.answer.toUpperCase()})` : `Verified Key: Option (${q.answer.toUpperCase()})`}</span>
+              </div>
+              <div>${sol}</div>
+            </div>
+          </div>
+        `;
+      });
+
+      // --- PART II ---
+      html += `
+        <div class="part-banner-card">
+          <div>
+            <h3 class="part-banner-title">${isTa ? 'பகுதி - II' : 'PART - II'}</h3>
+            <div class="part-instruction-text">
+              ${isTa
+                ? 'குறிப்பு: எவையேனும் ஏழு வினாக்களுக்கு விடையளிக்கவும். வினா எண் 30-க்கு கட்டாயமாக விடையளிக்க வேண்டும்.'
+                : 'Note: Answer any SEVEN questions. Question No. 30 is COMPULSORY.'}
+            </div>
+          </div>
+          <div class="part-marks-chip">7 x 2 = 14 ${isTa ? 'மதிப்பெண்கள்' : 'Marks'}</div>
+        </div>
+      `;
+
+      p.part2.forEach(q => {
+        const qText = isTa ? q.qTa : q.qEn;
+        const ch = isTa ? q.chapterTa : q.chapterEn;
+        const sol = isTa ? q.solTa : q.solEn;
+
+        html += `
+          <div class="question-block">
+            <div class="q-badge-row">
+              <span class="q-number-pill ${q.compulsory ? 'compulsory-pill' : ''}">Q.${q.qn}</span>
+              <div style="display:flex;gap:0.4rem;align-items:center;">
+                ${q.compulsory ? `<span class="q-tag-chip" style="border-color:var(--accent-rose);color:var(--accent-rose);">${isTa ? 'கட்டாய வினா' : 'COMPULSORY'}</span>` : ''}
+                <span class="q-tag-chip">${ch}</span>
+              </div>
+            </div>
+            <div class="q-statement">${qText}</div>
+            <div>
+              <button type="button" class="btn-chip" onclick="toggleDrawer('sol-p2-${q.qn}')">
+                <i data-lucide="check-square" style="width:14px;height:14px;"></i>
+                <span>${isTa ? 'தீர்வு & மதிப்பீட்டுத் திட்டம் (2 மதிப்பெண்)' : 'View Solution & Rubric (2M)'}</span>
+              </button>
+            </div>
+            <div id="sol-p2-${q.qn}" class="solution-box" style="display:none;">
+              <div class="solution-box-title">
+                <i data-lucide="award" style="width:14px;height:14px;"></i>
+                <span>${isTa ? 'அரசு மதிப்பெண் பங்கீட்டு முறை [2 மதிப்பெண்கள்]' : 'Official Valuation Rubric [2 Marks]'}</span>
+              </div>
+              <div>${sol}</div>
+            </div>
+          </div>
+        `;
+      });
+
+      // --- PART III ---
+      html += `
+        <div class="part-banner-card">
+          <div>
+            <h3 class="part-banner-title">${isTa ? 'பகுதி - III' : 'PART - III'}</h3>
+            <div class="part-instruction-text">
+              ${isTa
+                ? 'குறிப்பு: எவையேனும் ஏழு வினாக்களுக்கு விடையளிக்கவும். வினா எண் 40-க்கு கட்டாயமாக விடையளிக்க வேண்டும்.'
+                : 'Note: Answer any SEVEN questions. Question No. 40 is COMPULSORY.'}
+            </div>
+          </div>
+          <div class="part-marks-chip">7 x 3 = 21 ${isTa ? 'மதிப்பெண்கள்' : 'Marks'}</div>
+        </div>
+      `;
+
+      p.part3.forEach(q => {
+        const qText = isTa ? q.qTa : q.qEn;
+        const ch = isTa ? q.chapterTa : q.chapterEn;
+        const sol = isTa ? q.solTa : q.solEn;
+
+        html += `
+          <div class="question-block">
+            <div class="q-badge-row">
+              <span class="q-number-pill ${q.compulsory ? 'compulsory-pill' : ''}">Q.${q.qn}</span>
+              <div style="display:flex;gap:0.4rem;align-items:center;">
+                ${q.compulsory ? `<span class="q-tag-chip" style="border-color:var(--accent-rose);color:var(--accent-rose);">${isTa ? 'கட்டாய வினா' : 'COMPULSORY'}</span>` : ''}
+                <span class="q-tag-chip">${ch}</span>
+              </div>
+            </div>
+            <div class="q-statement">${qText}</div>
+            <div>
+              <button type="button" class="btn-chip" onclick="toggleDrawer('sol-p3-${q.qn}')">
+                <i data-lucide="check-square" style="width:14px;height:14px;"></i>
+                <span>${isTa ? 'தீர்வு & மதிப்பீட்டுத் திட்டம் (3 மதிப்பெண்)' : 'View Solution & Rubric (3M)'}</span>
+              </button>
+            </div>
+            <div id="sol-p3-${q.qn}" class="solution-box" style="display:none;">
+              <div class="solution-box-title">
+                <i data-lucide="award" style="width:14px;height:14px;"></i>
+                <span>${isTa ? 'அரசு மதிப்பெண் பங்கீட்டு முறை [3 மதிப்பெண்கள்]' : 'Official Valuation Rubric [3 Marks]'}</span>
+              </div>
+              <div>${sol}</div>
+            </div>
+          </div>
+        `;
+      });
+
+      // --- PART IV ---
+      html += `
+        <div class="part-banner-card">
+          <div>
+            <h3 class="part-banner-title">${isTa ? 'பகுதி - IV' : 'PART - IV'}</h3>
+            <div class="part-instruction-text">
+              ${isTa
+                ? 'குறிப்பு: அனைத்து வினாக்களுக்கும் விடையளிக்கவும். ஒவ்வொரு வினாவிலும் உள்ள (அ) அல்லது (ஆ) பிரிவைத் தேர்ந்தெடுத்து விடையளிக்கவும்.'
+                : 'Note: Answer ALL questions choosing either (a) or (b) from each question.'}
+            </div>
+          </div>
+          <div class="part-marks-chip">7 x 5 = 35 ${isTa ? 'மதிப்பெண்கள்' : 'Marks'}</div>
+        </div>
+      `;
+
+      p.part4.forEach(q => {
+        const optA = isTa ? q.optATa : q.optAEn;
+        const optB = isTa ? q.optBTa : q.optBEn;
+        const sol = isTa ? q.solTa : q.solEn;
+
+        html += `
+          <div class="question-block">
+            <div class="q-badge-row">
+              <span class="q-number-pill">Q.${q.qn}</span>
+              <span class="q-tag-chip">${isTa ? 'அல்லது வகை [5 மதிப்பெண்கள்]' : 'Either - Or Choice [5 Marks]'}</span>
+            </div>
+            <div style="background:var(--bg-surface-elevated);border-left:3px solid var(--accent-primary);padding:0.85rem 1rem;border-radius:var(--radius-sm);margin:0.5rem 0;">
+              <div style="font-weight:700;color:var(--accent-primary);margin-bottom:0.2rem;">(a)</div>
+              <div>${optA}</div>
+            </div>
+            <div style="text-align:center;font-weight:700;color:var(--accent-gold);margin:0.5rem 0;">[ ${isTa ? 'அல்லது' : 'OR'} ]</div>
+            <div style="background:var(--bg-surface-elevated);border-left:3px solid var(--accent-primary);padding:0.85rem 1rem;border-radius:var(--radius-sm);margin:0.5rem 0;">
+              <div style="font-weight:700;color:var(--accent-primary);margin-bottom:0.2rem;">(b)</div>
+              <div>${optB}</div>
+            </div>
+            <div style="margin-top:0.75rem;">
+              <button type="button" class="btn-chip" onclick="toggleDrawer('sol-p4-${q.qn}')">
+                <i data-lucide="check-square" style="width:14px;height:14px;"></i>
+                <span>${isTa ? 'முழுமையான படிமுறை தீர்வு (5 மதிப்பெண்)' : 'View Full 5-Mark Marking Scheme'}</span>
+              </button>
+            </div>
+            <div id="sol-p4-${q.qn}" class="solution-box" style="display:none;">
+              <div class="solution-box-title">
+                <i data-lucide="award" style="width:14px;height:14px;"></i>
+                <span>${isTa ? 'முழுமையான படிமுறை மதிப்பெண் பங்கீடு' : 'Comprehensive Step-by-Step Valuation Key'}</span>
+              </div>
+              <div>${sol}</div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function toggleDrawer(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+        renderMath();
+      }
+    }
+
+    // --- Interactive CBT Practice Mode ---
+    function renderCBT() {
+      const isTa = portalState.language === 'ta';
+      const p = getExamPaper(portalState.selectedYear, portalState.sessionType);
+      const palette = document.getElementById('cbtPaletteGrid');
+      const card = document.getElementById('cbtActiveCard');
+
+      if (!palette || !card) return;
+
+      document.getElementById('cbtSessionTitle').textContent = `${portalState.selectedYear} ${p.session} ${isTa ? 'பயிற்சித் தேர்வு' : 'Speed Drill'}`;
+
+      // Build Palette
+      let palHtml = '';
+      for (let i = 1; i <= 20; i++) {
+        const qKey = `${portalState.selectedYear}-${portalState.sessionType}-${i}`;
+        const isAnswered = !!portalState.cbtAnswers[qKey];
+        const isFlagged = !!portalState.cbtFlags[qKey];
+        const isActive = (portalState.cbtIndex + 1 === i);
+
+        let cls = 'palette-cell';
+        if (isActive) cls += ' active-cell';
+        if (isAnswered) cls += ' answered-cell';
+        if (isFlagged) cls += ' flagged-cell';
+
+        palHtml += `<button type="button" class="${cls}" onclick="jumpQuestion(${i - 1})">${i}</button>`;
+      }
+      palette.innerHTML = palHtml;
+
+      // Active Question
+      const q = p.part1[portalState.cbtIndex];
+      const qKey = `${portalState.selectedYear}-${portalState.sessionType}-${q.id}`;
+      const userAns = portalState.cbtAnswers[qKey];
+      const letters = ['(a)', '(b)', '(c)', '(d)'];
+      const qText = isTa ? q.qTa : q.qEn;
+      const opts = isTa ? q.optionsTa : q.optionsEn;
+      const ch = isTa ? q.chapterTa : q.chapterEn;
+      const sol = isTa ? q.solTa : q.solEn;
+
+      let cardHtml = `
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
+          <span class="q-number-pill">${isTa ? `வினா ${q.id} / 20` : `Question ${q.id} of 20`}</span>
+          <span class="q-tag-chip">${ch}</span>
+        </div>
+        <div class="q-statement" style="font-size:1.15rem;font-weight:600;">${qText}</div>
+        <div class="mcq-grid" style="margin:1.25rem 0;">
+          ${opts.map((opt, idx) => {
+            const optLetter = ['a', 'b', 'c', 'd'][idx];
+            const isSel = (userAns === optLetter);
+            let btnClass = 'mcq-opt-btn';
+            if (isSel) {
+              btnClass += (optLetter === q.answer) ? ' correct-opt' : ' wrong-opt';
+            }
+            return `
+              <button type="button" class="${btnClass}" onclick="handleCbtOptionSelect('${optLetter}')">
+                <span class="opt-letter-tag">${letters[idx]}</span>
+                <span>${opt}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      `;
+
+      if (userAns) {
+        const isCorrect = (userAns === q.answer);
+        cardHtml += `
+          <div class="solution-box" style="border-left-color:${isCorrect ? 'var(--accent-emerald)' : 'var(--accent-rose)'};">
+            <div class="solution-box-title" style="color:${isCorrect ? 'var(--accent-emerald)' : 'var(--accent-rose)'};">
+              <i data-lucide="${isCorrect ? 'check-circle' : 'x-circle'}" style="width:16px;height:16px;"></i>
+              <span>${isCorrect ? (isTa ? 'சரியான விடை!' : 'Correct Answer!') : (isTa ? 'தவறான விடை' : 'Incorrect Answer')} • ${isTa ? `அரசு விடை: (${q.answer.toUpperCase()})` : `Official Key: Option (${q.answer.toUpperCase()})`}</span>
+            </div>
+            <div>${sol}</div>
+          </div>
+        `;
+      }
+
+      card.innerHTML = cardHtml;
+      updateScoreTracker();
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function handleCbtOptionSelect(letter) {
+      const p = getExamPaper(portalState.selectedYear, portalState.sessionType);
+      const q = p.part1[portalState.cbtIndex];
+      const qKey = `${portalState.selectedYear}-${portalState.sessionType}-${q.id}`;
+
+      portalState.cbtAnswers[qKey] = letter;
+      renderCBT();
+      renderMath();
+    }
+
+    function jumpQuestion(idx) {
+      portalState.cbtIndex = idx;
+      renderCBT();
+      renderMath();
+    }
+
+    function nextQuestion() {
+      if (portalState.cbtIndex < 19) {
+        portalState.cbtIndex++;
+        renderCBT();
+        renderMath();
+      }
+    }
+
+    function prevQuestion() {
+      if (portalState.cbtIndex > 0) {
+        portalState.cbtIndex--;
+        renderCBT();
+        renderMath();
+      }
+    }
+
+    function toggleFlag() {
+      const p = getExamPaper(portalState.selectedYear, portalState.sessionType);
+      const q = p.part1[portalState.cbtIndex];
+      const qKey = `${portalState.selectedYear}-${portalState.sessionType}-${q.id}`;
+      portalState.cbtFlags[qKey] = !portalState.cbtFlags[qKey];
+      renderCBT();
+    }
+
+    function resetDrill() {
+      for (let i = 1; i <= 20; i++) {
+        const qKey = `${portalState.selectedYear}-${portalState.sessionType}-${i}`;
+        delete portalState.cbtAnswers[qKey];
+        delete portalState.cbtFlags[qKey];
+      }
+      portalState.cbtIndex = 0;
+      renderCBT();
+      renderMath();
+    }
+
+    function updateScoreTracker() {
+      const p = getExamPaper(portalState.selectedYear, portalState.sessionType);
+      let correct = 0;
+      let count = 0;
+
+      p.part1.forEach(q => {
+        const qKey = `${portalState.selectedYear}-${portalState.sessionType}-${q.id}`;
+        const ans = portalState.cbtAnswers[qKey];
+        if (ans) {
+          count++;
+          if (ans === q.answer) correct++;
+        }
+      });
+
+      const el = document.getElementById('cbtScoreTracker');
+      if (el) el.textContent = `Score: ${correct} / 20 (${count} Attempted)`;
+    }
+
+    // Timer Logic
+    function startTimer() {
+      if (portalState.timerInterval) clearInterval(portalState.timerInterval);
+      portalState.timerInterval = setInterval(() => {
+        if (portalState.timerRunning && portalState.timerSeconds > 0) {
+          portalState.timerSeconds--;
+          const m = Math.floor(portalState.timerSeconds / 60);
+          const s = portalState.timerSeconds % 60;
+          document.getElementById('cbtTimerDisplay').textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+      }, 1000);
+    }
+
+    function toggleTimer() {
+      portalState.timerRunning = !portalState.timerRunning;
+      document.getElementById('btnTimerControl').textContent = portalState.timerRunning ? 'Pause' : 'Resume';
+    }
+
+    // --- Render Valuation Keys View ---
+    function renderKeys() {
+      const isTa = portalState.language === 'ta';
+      const p = getExamPaper(portalState.selectedYear, portalState.sessionType);
+      const tbody = document.getElementById('keysTableStream');
+      const rubricContainer = document.getElementById('subjectiveRubricCards');
+
+      if (tbody) {
+        tbody.innerHTML = p.part1.map(q => {
+          const ltr = q.answer;
+          const idx = ['a', 'b', 'c', 'd'].indexOf(ltr);
+          const optVal = (isTa ? q.optionsTa : q.optionsEn)[idx] || '';
+          const sol = isTa ? q.solTa : q.solEn;
+          const ch = isTa ? q.chapterTa : q.chapterEn;
+
+          return `
+            <tr>
+              <td style="font-family:var(--font-mono);font-weight:700;">${q.id}</td>
+              <td style="font-family:var(--font-mono);font-weight:700;color:var(--accent-gold);text-align:center;">(${ltr})</td>
+              <td style="font-weight:600;color:var(--text-main);">${optVal}</td>
+              <td style="font-size:0.85rem;">${sol}</td>
+              <td style="font-size:0.8rem;color:var(--text-dim);">${ch}</td>
+            </tr>
+          `;
+        }).join('');
+      }
+
+      if (rubricContainer) {
+        rubricContainer.innerHTML = `
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1rem;">
+            <div class="metric-card gold">
+              <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-main);margin:0 0 0.4rem;">${isTa ? 'பகுதி II: 2 மதிப்பெண் வினா மதிப்பீடு' : 'Part II: 2-Mark Valuation Guidelines'}</h3>
+              <ul style="font-size:0.825rem;color:var(--text-muted);padding-left:1.25rem;margin:0;line-height:1.7;">
+                <li>${isTa ? 'சரியான சூத்திரம் / நிபந்தனை எழுதுதல்: 1 மதிப்பெண்' : 'Stating correct formula / initial condition: 1 Mark'}</li>
+                <li>${isTa ? 'பிரதியிட்டு இறுதி தீர்வு பெறுதல்: 1 மதிப்பெண்' : 'Accurate substitution and simplified answer: 1 Mark'}</li>
+                <li>${isTa ? 'கட்டாய வினா 30: மாற்று முறைக்கும் முழு மதிப்பெண் உண்டு' : 'Compulsory Q.30: Alternative valid proofs receive full 2 marks.'}</li>
+              </ul>
+            </div>
+            <div class="metric-card">
+              <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-main);margin:0 0 0.4rem;">${isTa ? 'பகுதி III: 3 மதிப்பெண் வினா மதிப்பீடு' : 'Part III: 3-Mark Valuation Guidelines'}</h3>
+              <ul style="font-size:0.825rem;color:var(--text-muted);padding-left:1.25rem;margin:0;line-height:1.7;">
+                <li>${isTa ? 'தேற்றம் அடையாளம் காணுதல் / சமன்பாடு அமைத்தல்: 1 மதிப்பெண்' : 'Theorem identification & setup equation: 1 Mark'}</li>
+                <li>${isTa ? 'இடைநிலை கணக்கீடுகள் & படிநிலைகள்: 1 மதிப்பெண்' : 'Intermediate algebraic / calculus steps: 1 Mark'}</li>
+                <li>${isTa ? 'அலகுடன் கூடிய இறுதி விடை: 1 மதிப்பெண்' : 'Final verified answer with appropriate units: 1 Mark'}</li>
+              </ul>
+            </div>
+            <div class="metric-card emerald">
+              <h3 style="font-size:0.95rem;font-weight:700;color:var(--text-main);margin:0 0 0.4rem;">${isTa ? 'பகுதி IV: 5 மதிப்பெண் வினா மதிப்பீடு' : 'Part IV: 5-Mark Valuation Guidelines'}</h3>
+              <ul style="font-size:0.825rem;color:var(--text-muted);padding-left:1.25rem;margin:0;line-height:1.7;">
+                <li>${isTa ? 'வரைபடம் / ஆரம்ப வெக்டர் அல்லது அணி வடிவமைப்பு: 1 முதல் 1.5 மதிப்பெண்கள்' : 'Diagram / initial vector or matrix modeling: 1 to 1.5 Marks'}</li>
+                <li>${isTa ? 'அணிக்கோவை / தொகையீட்டு படிநிலைகள்: 2 முதல் 2.5 மதிப்பெண்கள்' : 'Core evaluation & integration / matrix stages: 2 to 2.5 Marks'}</li>
+                <li>${isTa ? 'இறுதி தீர்வு சரிபார்த்தல்: 1 மதிப்பெண்' : 'Final solution verification and conclusion: 1 Mark'}</li>
+              </ul>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // --- Render Blueprint ---
+    function renderBlueprint() {
+      const isTa = portalState.language === 'ta';
+      const tbody = document.getElementById('blueprintStream');
+      if (!tbody) return;
+
+      tbody.innerHTML = CHAPTERS.map(ch => {
+        const title = isTa ? ch.ta : ch.en;
+        const pct = ((ch.total / 140) * 100).toFixed(1);
+        return `
+          <tr>
+            <td style="font-weight:600;color:var(--text-main);">${ch.id}. ${title}</td>
+            <td>Vol ${ch.vol}</td>
+            <td>${ch.mcq} Q (${ch.mcq}M)</td>
+            <td>${ch.q2m} Q (${ch.q2m * 2}M)</td>
+            <td>${ch.q3m} Q (${ch.q3m * 3}M)</td>
+            <td>${ch.q5m} Q (${ch.q5m * 5}M)</td>
+            <td style="font-family:var(--font-mono);font-weight:700;color:var(--accent-gold);">${ch.total} M</td>
+            <td>${pct}%</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // --- Render Formulas ---
+    function renderFormulas() {
+      const isTa = portalState.language === 'ta';
+      const container = document.getElementById('formulaVaultStream');
+      if (!container) return;
+
+      container.innerHTML = FORMULA_VAULT.map(sec => `
+        <div class="metric-card" style="padding:1.25rem;">
+          <h3 style="font-family:var(--font-headline);font-size:1.1rem;margin:0 0 0.75rem;color:var(--text-main);border-bottom:1px solid var(--border-subtle);padding-bottom:0.4rem;">
+            ${isTa ? sec.titleTa : sec.titleEn}
+          </h3>
+          <ul style="margin:0;padding-left:1.25rem;font-size:0.9rem;line-height:2;color:var(--text-muted);">
+            ${sec.formulas.map(f => `<li>${f}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+    }
+
+    // --- KaTeX Mathematical Rendering ---
+    function renderMath() {
+      if (window.renderMathInElement) {
+        window.renderMathInElement(document.body, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false },
+            { left: '\\[', right: '\\]', display: true }
+          ],
+          throwOnError: false
+        });
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', initPortal);
+  </script>
+</body>
+</html>
