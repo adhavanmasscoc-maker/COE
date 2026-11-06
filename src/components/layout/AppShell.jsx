@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import { ActivityTracker } from "@/components/telemetry/ActivityTracker";
 import { useTheme } from "@/components/theme/ThemeProvider";
+import { getPermanentStudentSession, savePermanentStudentSession, clearPermanentStudentSession } from "@/lib/offlineStudentDb";
 
 // ─── Auth Context ──────────────────────────────────────────────────────
 const AuthContext = createContext(null);
@@ -321,22 +322,52 @@ export function AppShell({ children }) {
   const isExamMode = pathname?.includes("/exam-mock");
   const isPublicPage = pathname === "/" || pathname?.startsWith("/api");
 
-  // Fetch session
+  // Fetch session and persist in local offline DB
   useEffect(() => {
     setHydrated(true);
+    const cachedStudent = getPermanentStudentSession();
+    if (cachedStudent && !user) {
+      setUser(cachedStudent);
+    }
+
     fetch("/api/auth/me")
       .then((r) => (r.ok ? r.json() : null))
       .then((data) => {
-        if (data?.authenticated) setUser(data.user);
-        else setUser(null);
+        if (data?.authenticated) {
+          setUser(data.user);
+          if (data.user.role === "STUDENT") {
+            savePermanentStudentSession(data.user);
+          }
+        } else if (cachedStudent && cachedStudent.role === "STUDENT") {
+          // Auto-reconnect session in background
+          fetch("/api/auth/login-student", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ rollNo: cachedStudent.username || cachedStudent.rollNo }),
+          })
+            .then((r) => r.json())
+            .then((res) => {
+              if (res?.user) {
+                setUser(res.user);
+                savePermanentStudentSession(res.user);
+              }
+            })
+            .catch(() => {});
+        } else {
+          setUser(null);
+        }
       })
-      .catch(() => setUser(null));
+      .catch(() => {
+        if (cachedStudent) setUser(cachedStudent);
+        else setUser(null);
+      });
   }, [pathname]);
 
   const handleLogout = async () => {
     await fetch("/api/auth/logout", { method: "POST" });
+    await clearPermanentStudentSession();
     setUser(null);
-    router.push("/");
+    router.push("/?switch=1");
     router.refresh();
   };
 

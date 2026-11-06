@@ -9,17 +9,30 @@ const COOKIE_NAME = "exam_portal_session";
 
 export async function middleware(request) {
   const { pathname } = request.nextUrl;
+  const sessionToken = request.cookies.get(COOKIE_NAME)?.value;
+
+  // Allow public access to Question Bank portals without authentication
+  if (pathname.startsWith("/students/qb") || pathname.startsWith("/student/qb")) {
+    return NextResponse.next();
+  }
+
+  // Auto-redirect already authenticated students from root "/" straight to dashboard
+  if (pathname === "/" && sessionToken && !request.nextUrl.searchParams.has("switch") && !request.nextUrl.searchParams.has("tab")) {
+    try {
+      const { payload } = await jwtVerify(sessionToken, SESSION_SECRET);
+      if (payload.role === "STUDENT") {
+        return NextResponse.redirect(new URL("/student/dashboard", request.url));
+      }
+    } catch {
+      // Proceed to root if token is invalid
+    }
+  }
 
   // Protect all /student, /coe-admin, and /api/admin + /api/student paths
   const isStudentRoute = pathname.startsWith("/student");
   const isCOERoute = pathname.startsWith("/coe-admin");
   const isAdminApiRoute = pathname.startsWith("/api/admin");
   const isStudentApiRoute = pathname.startsWith("/api/student");
-
-  // Allow public access to Question Bank portals without authentication
-  if (pathname.startsWith("/students/qb") || pathname.startsWith("/student/qb")) {
-    return NextResponse.next();
-  }
 
   if (!isStudentRoute && !isCOERoute && !isAdminApiRoute && !isStudentApiRoute) {
     return NextResponse.next();
@@ -30,8 +43,6 @@ export async function middleware(request) {
   if ((isStudentRoute || isStudentApiRoute) && hasPreviewRoll) {
     return NextResponse.next();
   }
-
-  const sessionToken = request.cookies.get(COOKIE_NAME)?.value;
 
   if (!sessionToken) {
     if (isAdminApiRoute || isStudentApiRoute) {
@@ -100,12 +111,6 @@ export async function middleware(request) {
 
 export const config = {
   matcher: [
-    "/coe-admin",
-    "/coe-admin/:path*",
-    "/student",
-    "/student/:path*",
-    "/api/admin/:path*",
-    "/api/student/:path*",
+    "/((?!_next/static|_next/image|favicon.ico|manifest.json|icons/|.*\\.svg|.*\\.png|.*\\.jpg|.*\\.pdf).*)",
   ],
 };
-

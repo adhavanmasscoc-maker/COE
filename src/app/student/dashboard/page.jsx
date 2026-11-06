@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { StatCard } from "@/components/ui/Card";
 import { ExamTimetableSection } from "@/components/student/ExamTimetableSection";
+import { savePermanentDashboardCache, getPermanentDashboardCache, savePermanentStudentSession } from "@/lib/offlineStudentDb";
 import {
   GraduationCap,
   Calendar,
@@ -78,7 +79,7 @@ function SubjectCard({ sub, isPreview, previewRoll }) {
 function StudentDashboardContent() {
   const searchParams = useSearchParams();
   const { isTamil, setLanguage, t } = useLanguage();
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(() => (typeof window !== "undefined" ? getPermanentDashboardCache() : null));
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [previewRoll, setPreviewRoll] = useState(searchParams.get("previewRollNo") || null);

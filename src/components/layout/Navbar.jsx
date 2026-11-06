@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { useLanguage } from "@/context/LanguageContext";
 import { Badge } from "@/components/ui/Badge";
+import { clearPermanentStudentSession } from "@/lib/offlineStudentDb";
 import { Button } from "@/components/ui/Button";
 import { 
   GraduationCap, 
@@ -90,8 +91,9 @@ export function Navbar() {
   const handleLogout = async () => {
     try {
       await fetch("/api/auth/logout", { method: "POST" });
+      await clearPermanentStudentSession();
       setCurrentUser(null);
-      router.push("/");
+      router.push("/?switch=1");
       router.refresh();
     } catch (err) {
       console.error("Logout error:", err);

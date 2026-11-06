@@ -4,6 +4,7 @@ import React, { useState, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/Button";
+import { savePermanentStudentSession, getPermanentStudentSession, getPermanentStudentSessionFromIdb } from "@/lib/offlineStudentDb";
 import {
   GraduationCap,
   ShieldCheck,
@@ -141,6 +142,7 @@ function RegisterForm({ onBack, initialRollNo = "" }) {
       }
       setRollNo(finalRollNo);
       setDob(finalDob);
+      savePermanentStudentSession({ rollNo, fullName: name, currentClass, examPrepClass, medium: language });
       setDone(true);
     } catch {
       setError("Network error contacting registration server. Please try again.");
@@ -401,6 +403,50 @@ function LoginPanel() {
   const [success, setSuccess] = useState("");
   const [isUnregisteredCandidate, setIsUnregisteredCandidate] = useState(false);
   const [registerRollNo, setRegisterRollNo] = useState("");
+  const [autoRestoring, setAutoRestoring] = useState(false);
+
+  // Permanent Offline DB: Auto-sign in if device has an enrolled student session
+  useEffect(() => {
+    if (searchParams.get("switch") === "1" || searchParams.get("tab") === "admin") {
+      return;
+    }
+
+    let active = true;
+    const restoreDeviceSession = async () => {
+      let saved = getPermanentStudentSession();
+      if (!saved) {
+        saved = await getPermanentStudentSessionFromIdb();
+      }
+
+      if (active && saved && (saved.rollNo || saved.username)) {
+        const targetRoll = saved.rollNo || saved.username;
+        setAutoRestoring(true);
+        try {
+          const res = await fetch("/api/auth/login-student", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ rollNo: targetRoll }),
+          });
+          const data = await res.json();
+          if (active && res.ok && data.user) {
+            await savePermanentStudentSession(data.user);
+            router.replace("/student/dashboard");
+            return;
+          }
+        } catch {
+          // Offline mode resilience: proceed with stored local offline DB
+          if (active) {
+            router.replace("/student/dashboard");
+            return;
+          }
+        }
+        if (active) setAutoRestoring(false);
+      }
+    };
+
+    restoreDeviceSession();
+    return () => { active = false; };
+  }, [searchParams, router]);
 
   useEffect(() => {
     const reason = searchParams.get("reason");
@@ -432,6 +478,7 @@ function LoginPanel() {
         setLoading(false);
         return;
       }
+      if (data.user) { await savePermanentStudentSession(data.user); }
       setSuccess("Authenticated! Redirecting…");
       setTimeout(() => { router.push("/student/dashboard"); router.refresh(); }, 600);
     } catch { setError("Network error. Try again."); setLoading(false); }
@@ -490,6 +537,13 @@ function LoginPanel() {
           </button>
         ))}
       </div>
+
+      {autoRestoring && (
+        <div className="flex items-center gap-2 p-3 mb-4 rounded-xl bg-violet-500/15 border border-violet-500/30 text-xs text-violet-200 animate-pulse">
+          <Loader2 className="w-4 h-4 animate-spin text-violet-400" />
+          <span>{isTamil ? "உங்கள் நிரந்தர கணக்கு திறக்கப்படுகிறது..." : "Restoring your permanent student session on this device..."}</span>
+        </div>
+      )}
 
       {/* Alerts */}
       {error && (
