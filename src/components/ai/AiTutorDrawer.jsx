@@ -18,6 +18,7 @@ import {
 import ChatBubble from "./ChatBubble";
 import SocraticHintButton from "./SocraticHintButton";
 import MathRenderer from "./MathRenderer";
+import LiveVoiceMic from "./LiveVoiceMic";
 
 export default function AiTutorDrawer({
   isOpen: controlledIsOpen,
@@ -38,6 +39,11 @@ export default function AiTutorDrawer({
   const [isFeatureEnabled, setIsFeatureEnabled] = useState(true);
   const [activeHintLevel, setActiveHintLevel] = useState(1);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [activeLang, setActiveLang] = useState(language);
+
+  useEffect(() => {
+    setActiveLang(language);
+  }, [language]);
 
   const messagesEndRef = useRef(null);
 
@@ -135,7 +141,7 @@ Use the **3-level hint ladder** below or type your question directly!`;
                 questionNumber: activeQuestion.questionNumber || activeQuestion.id,
               }
             : null,
-          language,
+          language: activeLang,
           history: messages,
           mode,
           hintLevel,
@@ -329,8 +335,64 @@ Use the **3-level hint ladder** below or type your question directly!`;
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Footer Input Area */}
-            <div className="p-3.5 border-t border-slate-800/80 bg-slate-900/80 shrink-0">
+            {/* Footer Input Area with Quick Action Chips & Live Mic */}
+            <div className="p-3.5 border-t border-slate-800/80 bg-slate-900/90 shrink-0">
+              {/* Quick Action Chips */}
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-2 mb-2 no-scrollbar">
+                <button
+                  type="button"
+                  onClick={() => handleTriggerHint(1)}
+                  disabled={isLoading}
+                  className="px-2.5 py-1 rounded-lg bg-cyan-950/60 border border-cyan-800/40 text-[10px] font-bold text-cyan-300 hover:bg-cyan-900/60 whitespace-nowrap transition"
+                >
+                  💡 {activeLang === "ta" ? "நிலை 1 சூத்திரம்" : "Level 1 Rule"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleTriggerHint(2)}
+                  disabled={isLoading}
+                  className="px-2.5 py-1 rounded-lg bg-blue-950/60 border border-blue-800/40 text-[10px] font-bold text-blue-300 hover:bg-blue-900/60 whitespace-nowrap transition"
+                >
+                  ⚡ {activeLang === "ta" ? "நிலை 2 நீக்குதல்" : "Level 2 Elimination"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleTriggerHint(3)}
+                  disabled={isLoading}
+                  className="px-2.5 py-1 rounded-lg bg-indigo-950/60 border border-indigo-800/40 text-[10px] font-bold text-indigo-300 hover:bg-indigo-900/60 whitespace-nowrap transition"
+                >
+                  📐 {activeLang === "ta" ? "நிலை 3 படிமுறை" : "Level 3 Setup"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    handleSendMessage(
+                      activeLang === "ta"
+                        ? "இப்பாடப்பகுதிக்கான முக்கிய சூத்திரங்களை சுருக்கமாகக் கூறுக."
+                        : "State the core formulas and key governing equations for this topic."
+                    )
+                  }
+                  disabled={isLoading}
+                  className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-[10px] font-medium text-slate-300 hover:text-white whitespace-nowrap transition"
+                >
+                  {activeLang === "ta" ? "சூத்திரங்கள்" : "Formulas"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    handleSendMessage(
+                      activeLang === "ta"
+                        ? "மாணவர்கள் பொதுவாக செய்யும் தவறுகள் அல்லது பொறிகளை அடையாளம் காண்க."
+                        : "Identify the common student traps and pitfalls for this problem."
+                    )
+                  }
+                  disabled={isLoading}
+                  className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-[10px] font-medium text-amber-300 hover:text-amber-200 whitespace-nowrap transition"
+                >
+                  {activeLang === "ta" ? "பொறிகள் (Traps)" : "Traps"}
+                </button>
+              </div>
+
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -338,15 +400,28 @@ Use the **3-level hint ladder** below or type your question directly!`;
                 }}
                 className="flex items-center gap-2"
               >
+                {/* Live Mic Button (Tamil / English + TTS Audio) */}
+                <LiveVoiceMic
+                  language={activeLang}
+                  onLanguageChange={setActiveLang}
+                  onTranscript={(transcript) => {
+                    setInputMessage((prev) => (prev ? `${prev} ${transcript}` : transcript));
+                  }}
+                  lastAiResponse={
+                    messages.filter((m) => m.role === "assistant").slice(-1)[0]?.content
+                  }
+                  size="sm"
+                />
+
                 <input
                   type="text"
                   value={inputMessage}
                   disabled={isLoading || !isFeatureEnabled}
                   onChange={(e) => setInputMessage(e.target.value)}
                   placeholder={
-                    language === "ta"
-                      ? "உங்கள் சந்தேகத்தை கேளுங்கள் (எ.கா: சூத்திரம், முதல் படி)..."
-                      : "Ask your academic question (e.g. formula, first step)..."
+                    activeLang === "ta"
+                      ? "கேளுங்கள் அல்லது மைக்கை அழுத்திப் பேசுங்கள்..."
+                      : "Type or click mic to speak live..."
                   }
                   className="flex-1 bg-slate-950/80 border border-slate-700/80 focus:border-cyan-500 rounded-xl px-3.5 py-2.5 text-xs text-slate-100 placeholder-slate-500 outline-none transition disabled:opacity-50"
                 />

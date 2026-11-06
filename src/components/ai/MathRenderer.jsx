@@ -5,23 +5,25 @@ import "katex/dist/katex.min.css";
 
 /**
  * Renders mixed Markdown and LaTeX equations ($inline$ and $$display$$) safely.
+ * Accepts either `content` or `text` prop.
  */
-export default function MathRenderer({ content = "", className = "" }) {
+export default function MathRenderer({ content = "", text = "", className = "" }) {
+  const rawText = (text || content || "").toString();
+
   const parts = useMemo(() => {
-    if (!content || typeof content !== "string") return [];
+    if (!rawText) return [];
 
     // Split text by display math $$...$$ and inline math $...$
-    // Regex handles both $$...$$ and $...$
     const tokens = [];
-    const regex = /(\$\$[\s\S]*?\$\$|\$[^$\n]+?\$)/g;
+    const regex = /(\$\$[\s\S]*?\$\$|\$[^\$\n]+?\$)/g;
     let lastIndex = 0;
     let match;
 
-    while ((match = regex.exec(content)) !== null) {
+    while ((match = regex.exec(rawText)) !== null) {
       if (match.index > lastIndex) {
         tokens.push({
           type: "text",
-          value: content.slice(lastIndex, match.index),
+          value: rawText.slice(lastIndex, match.index),
         });
       }
 
@@ -41,15 +43,15 @@ export default function MathRenderer({ content = "", className = "" }) {
       lastIndex = regex.lastIndex;
     }
 
-    if (lastIndex < content.length) {
+    if (lastIndex < rawText.length) {
       tokens.push({
         type: "text",
-        value: content.slice(lastIndex),
+        value: rawText.slice(lastIndex),
       });
     }
 
     return tokens;
-  }, [content]);
+  }, [rawText]);
 
   return (
     <div className={`prose-sm leading-relaxed ${className}`}>
@@ -69,7 +71,7 @@ export default function MathRenderer({ content = "", className = "" }) {
             );
           } catch {
             return (
-              <div key={idx} className="my-2 p-2 bg-slate-900 rounded font-mono text-xs text-amber-300">
+              <div key={idx} className="my-2 p-2 bg-slate-900 rounded font-mono text-xs text-rose-400 overflow-x-auto">
                 $${part.value}$$
               </div>
             );
@@ -91,7 +93,7 @@ export default function MathRenderer({ content = "", className = "" }) {
             );
           } catch {
             return (
-              <span key={idx} className="font-mono text-xs text-amber-300 px-1 bg-slate-900/40 rounded">
+              <span key={idx} className="font-mono text-xs text-rose-400 px-1 bg-slate-900/40 rounded">
                 ${part.value}$
               </span>
             );
@@ -108,4 +110,3 @@ export default function MathRenderer({ content = "", className = "" }) {
     </div>
   );
 }
-

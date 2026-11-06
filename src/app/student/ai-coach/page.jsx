@@ -22,6 +22,7 @@ import {
 import ChatBubble from "@/components/ai/ChatBubble";
 import MathRenderer from "@/components/ai/MathRenderer";
 import SocraticHintButton from "@/components/ai/SocraticHintButton";
+import LiveVoiceMic from "@/components/ai/LiveVoiceMic";
 
 export default function AiCoachPage() {
   const [subjectCode, setSubjectCode] = useState("MAT-12");
@@ -457,6 +458,19 @@ Type your question below or click on any recommended weak chapter!`;
               }}
               className="flex items-center gap-2"
             >
+              {/* Live Bilingual Voice Mic & TTS read-aloud */}
+              <LiveVoiceMic
+                language={language}
+                onLanguageChange={setLanguage}
+                onTranscript={(transcript) => {
+                  setInputMessage((prev) => (prev ? `${prev} ${transcript}` : transcript));
+                }}
+                lastAiResponse={
+                  messages.filter((m) => m.role === "assistant").slice(-1)[0]?.content
+                }
+                size="md"
+              />
+
               <input
                 type="text"
                 value={inputMessage}
@@ -464,8 +478,8 @@ Type your question below or click on any recommended weak chapter!`;
                 onChange={(e) => setInputMessage(e.target.value)}
                 placeholder={
                   language === "ta"
-                    ? "உங்கள் கணித / அறிவியல் வினாவை தட்டச்சு செய்யுங்கள்..."
-                    : "Type your mathematics or science query..."
+                    ? "உங்கள் வினாவை தட்டச்சு செய்க அல்லது மைக்கில் பேசுக..."
+                    : "Type your query or click mic to speak live..."
                 }
                 className="flex-1 bg-slate-950 border border-slate-700 focus:border-cyan-500 rounded-xl px-4 py-3 text-xs text-slate-100 placeholder-slate-500 outline-none transition disabled:opacity-50"
               />

@@ -3,7 +3,9 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getGeminiFlashModel, generateEmbedding } from "@/lib/ai/geminiClient";
 import { searchSimilarChunks } from "@/lib/ai/vectorStore";
-import { searchAcademicEntities, formatEntityForGemini } from "@/lib/ai/jsonDb";
+import { searchAcademicEntities, formatEntityForGemini, getAcademicEntity } from "@/lib/ai/jsonDb";
+import { aiResponseCache } from "@/lib/ai/lruCache";
+import { serializeForAiContext, compressSyllabusChunk } from "@/lib/types/academicSchema";
 import {
   buildSystemPrompt,
   buildHintPrompt,
@@ -16,15 +18,59 @@ export async function POST(request) {
   try {
     const body = await request.json();
     const {
+      questionId,
+      studentChoice = "none",
+      lang,
       message = "",
-      subjectCode = "MAT-12",
-      currentQuestionContext = null,
-      language = "ta",
+      subjectCode: rawSubjectCode = "MAT-12",
+      currentQuestionContext: rawContext = null,
+      language: rawLang = "ta",
       history = [],
-      mode = "chat", // "chat", "hint", "diagnostic"
+      mode = "chat", // "chat", "hint", "diagnostic", "level_1", "level_2", "level_3"
       hintLevel = 1,
       studentName = "மாணவர்",
     } = body;
+
+    const language = lang || rawLang || "ta";
+    let subjectCode = rawSubjectCode;
+    let currentQuestionContext = rawContext;
+
+    // 0. Cache Key Check (Identical question/query + studentChoice + language + mode)
+    const cacheKey = questionId
+      ? `${questionId}:${studentChoice}:${language}:${mode}`
+      : `${subjectCode}:${message}:${language}:${mode}`;
+
+    const cachedResponse = aiResponseCache.get(cacheKey);
+    if (cachedResponse) {
+      return NextResponse.json({
+        success: true,
+        text: cachedResponse,
+        cached: true,
+        steps: [
+          {
+            id: "cache",
+            label: language === "ta" ? "⚡ நினைவகத்திலிருந்து உடனடியாக மீட்டெடுக்கப்பட்டது (LRU Cache)" : "⚡ Retrieved from zero-waste LRU memory cache",
+            timestamp: Date.now(),
+          },
+        ],
+      });
+    }
+
+    // Look up question if questionId is provided without full context
+    if (questionId && !currentQuestionContext) {
+      const entity = getAcademicEntity(questionId);
+      if (entity && entity.questionPayload) {
+        currentQuestionContext = {
+          id: entity.id,
+          questionText: language === "ta" ? (entity.questionPayload.questionTa || entity.questionPayload.questionEn) : entity.questionPayload.questionEn,
+          options: entity.questionPayload.options,
+          correctAnswer: entity.questionPayload.correctAnswer,
+          userAnswer: studentChoice,
+          topic: entity.topic,
+        };
+        subjectCode = entity.subjectCode || subjectCode;
+      }
+    }
 
     // 1. Check feature toggle
     const setting = await db.systemSetting.findUnique({
@@ -206,9 +252,16 @@ ${language === "ta"
       timestamp: Date.now(),
     });
 
+    // Store in LRU cache
+    if (finalReply && cacheKey) {
+      aiResponseCache.set(cacheKey, finalReply);
+    }
+
     return NextResponse.json({
       success: true,
+      text: finalReply,
       reply: finalReply,
+      cached: false,
       sources: matchedChunks.map((c) => ({
         unit: c.unitNumber,
         title: c.chunkTitle,
