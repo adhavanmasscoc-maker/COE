@@ -307,3 +307,7 @@ DYNAMIC EXAM SITE/
 3. **Data Isolation Audit**: Class 10 candidates never receive Class 12 exams; candidate results and submissions remain cryptographically isolated.
 4. **Permanent Offline Resiliency**: Device persistence guarantees candidates stay logged in across system restarts, power interruptions, and offline sessions.
 5. **Git Attribution Integrity**: Commits strictly authored by repository owner `adhavanmasscoc-maker <adhavanmasscoc@gmail.com>` with `ai-dom-agent` strictly untracked.
+6. **12th Mathematics Official Examination Archive (2020–2026)**:
+   - Full 14-paper comprehensive collection: 2 papers per year (Annual March/May Public + June/July/August/September Supplementary) for each academic cycle from 2020 to 2026.
+   - 100% Learning & Revision Focus: Zero timed CBT countdown timers or test-taking pressure; designed for study, step-by-step formula exploration, and self-paced revision.
+   - Mobile-First & Accessible Layout: Warm paper theme (`#fbf9f4`) with high-contrast scholarly typography, responsive KaTeX math rendering, and resilient question number pills (`min-width: 44px; height: 32px`) preventing any badge truncation or clipping on compulsory questions (Q30, Q40, Q41–Q47).
