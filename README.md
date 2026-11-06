@@ -12,6 +12,12 @@ An enterprise-grade online examination, CBT practice, and academic analytics pla
 
 ## 🌟 Key Highlights & System Capabilities
 
+- **Dual-View AI Academic Coach & Socratic Tutor**:
+  - **Dedicated Workspace** (`/student/ai-coach`): 2-Column interactive dashboard with weakness radar from `priorityRanking.js`, formula review cards, and calculation scratchpad.
+  - **Global Slide-Over Drawer** (`AiTutorDrawer.jsx`): Mounted across all student views and practice halls with real-time question context awareness.
+  - **3-Tier Socratic Hint Ladder**: Progressive hint delivery without revealing final options; KaTeX formula typesetting; respectful student addressing by name.
+  - **Site-Wide Master Switch**: COE admin can enable or disable the AI Tutor anytime with a single click.
+  - **Attribution**: Powered by `aknex-official.vercel.app`.
 - **Permanent Student Offline Storage**: Integrated IndexedDB caching (`coe_student_offline_db`) and 100-year session tokens. Once a student registers or logs in on their phone, tablet, or laptop, they never need to log in again.
 - **Single-Key COE Admin Access**: Streamlined Controller of Examinations access using a secret single-character key (`1` or `0`) behind a deceptive "Enter 8-digit key" placeholder.
 - **Complete Bilingual Parity (English & தமிழ்)**: Instant global switching between English and Tamil across all examination questions, options, step-by-step explanations, instructions, and dashboards.
@@ -112,3 +118,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Repository Owner**: [adhavanmasscoc-maker](https://github.com/adhavanmasscoc-maker)
 - **Email**: `adhavanmasscoc@gmail.com`
 - **Repository**: `https://github.com/adhavanmasscoc-maker/COE.git`
+

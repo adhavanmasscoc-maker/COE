@@ -26,6 +26,7 @@ import {
   BookOpen,
   Sparkles,
   ExternalLink,
+  Bot,
 } from "lucide-react";
 
 function SubjectCard({ sub, isPreview, previewRoll }) {
@@ -293,6 +294,16 @@ function StudentDashboardContent() {
                 <BookOpen className="w-4 h-4 text-cyan-300" />
                 {isTamil ? "இயற்பியல் QB (Physics)" : "12th Physics QB"}
                 <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+              </Button>
+            </Link>
+            <Link
+              href="/student/ai-coach"
+              className="w-full sm:w-auto"
+            >
+              <Button variant="outline" className="w-full sm:w-auto gap-2 text-xs py-2.5 px-4 font-bold border-cyan-400/40 text-cyan-200 hover:bg-cyan-600/20 bg-cyan-950/30">
+                <Bot className="w-4 h-4 text-cyan-300" />
+                {isTamil ? "AI கல்வி பயிற்சியாளர்" : "AI Academic Coach"}
+                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
               </Button>
             </Link>
           </div>

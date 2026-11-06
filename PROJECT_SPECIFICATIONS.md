@@ -163,7 +163,32 @@ High-fidelity interactive question bank portals compiled directly from real Dire
 
 ---
 
-## 6. Complete Workspace Directory Tree
+## 6. Dual-View AI Academic Coach & Socratic Tutor Architecture
+
+### 6.1 Dual-View Strategy
+1. **View 1: Dedicated Academic Workspace (`/student/ai-coach`)**:
+   - 2-Column responsive dashboard.
+   - Left Column: Candidate profile, respectful address, target weakness units derived from `priorityRanking.js`, and quick formula cards.
+   - Right Column: Interactive Socratic conversation engine with KaTeX mathematical equation typesetting, scratchpad, and multi-step generation status.
+2. **View 2: Global Slide-Over Drawer (`AiTutorDrawer.jsx`)**:
+   - Mounted globally across student layout (`src/app/student/layout.jsx`) and in practice halls (`src/app/student/practice/[subject]/[set]`).
+   - Floating trigger `[AI Tutor / உதவி]` in bottom-right corner.
+   - Context-Aware: Captures the active question, option choices, and student's selected answer.
+   - Socratic Hint Ladder: 3 progressive tiers without revealing the final answer:
+     - Level 1: Core textbook concept & formula.
+     - Level 2: First algebraic / numerical substitution step.
+     - Level 3: Common pitfall to avoid.
+
+### 6.2 Vector Retrieval & Fallback Pipeline
+- **Vector Embeddings**: 768-dimensional normalized float vectors generated via `text-embedding-004` and indexed in Turso libSQL (`SyllabusVector`).
+- **Cosine Similarity Engine**: $O(K)$ in-memory similarity search ranking top syllabus chunks.
+- **Graceful Deterministic Fallback**: In case of rate limits (HTTP 429) or offline state, automatically falls back to keyword matching and curated Samacheer Kalvi textbook excerpts without crashing.
+- **Site-Wide Master Switch**: COE admin can enable or disable the AI Tutor feature at any time via `/api/ai/toggle` and dashboard toggle pill.
+- **Attribution**: Transparently powered by `aknex-official.vercel.app`.
+
+---
+
+## 7. Complete Workspace Directory Tree
 
 ```
 DYNAMIC EXAM SITE/

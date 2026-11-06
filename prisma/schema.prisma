@@ -321,4 +321,36 @@ model ExamDateAuditLog {
   @@index([examScheduleId])
 }
 
+model SyllabusVector {
+  id          String   @id @default(cuid())
+  subjectCode String   // e.g. "MAT-12", "CHE-12", "PHY-12"
+  unitNumber  Int
+  chunkTitle  String
+  contentEn   String
+  contentTa   String
+  embedding   String   // JSON stringified float[] (768 dimensions from text-embedding-004)
+  createdAt   DateTime @default(now())
+
+  @@index([subjectCode, unitNumber])
+}
+
+model StudentAiSession {
+  id          String   @id @default(cuid())
+  studentId   String
+  subjectCode String
+  messages    String   // JSON array: [{role: "user"|"assistant", content: string, timestamp: number}]
+  weakAreas   String   // JSON array of identified tags: ["differentiation_chain_rule"]
+  updatedAt   DateTime @updatedAt
+
+  @@index([studentId, subjectCode])
+}
+
+model SystemSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+
 

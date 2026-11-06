@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { getLocalizedQuestion, getLocalizedOption, getLocalizedExplanation } from "@/lib/questionTranslations";
 import { pick, pickQuestion, pickOption, pickExplanation } from "@/lib/config/engine.config";
+import AiTutorDrawer from "@/components/ai/AiTutorDrawer";
 
 export default function PracticeExamPage() {
   const params = useParams();
@@ -54,6 +55,7 @@ export default function PracticeExamPage() {
   const [answers, setAnswers] = useState({});
   const [reviewed, setReviewed] = useState({});
   const [showExplanation, setShowExplanation] = useState(false);
+  const [isAiTutorOpen, setIsAiTutorOpen] = useState(false);
 
   // Timing
   const [secondsElapsed, setSecondsElapsed] = useState(0);
@@ -591,17 +593,29 @@ export default function PracticeExamPage() {
 
           {/* Learning Phase / Explanation & Audio toggle */}
           <div className="pt-2 border-t border-border flex items-center justify-between flex-wrap gap-2">
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => setShowExplanation(!showExplanation)}
-              className="text-xs font-bold gap-1.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/10"
-            >
-              <HelpCircle className="w-3.5 h-3.5 text-violet-400" />
-              {showExplanation
-                ? isTamil ? "விளக்கத்தை மறைக்க" : "Hide Explanation"
-                : isTamil ? "விடை & கற்றல் குறிப்பு காண்க" : "View Explanation & Key"}
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => setShowExplanation(!showExplanation)}
+                className="text-xs font-bold gap-1.5 border-violet-500/30 text-violet-300 hover:bg-violet-500/10"
+              >
+                <HelpCircle className="w-3.5 h-3.5 text-violet-400" />
+                {showExplanation
+                  ? isTamil ? "விளக்கத்தை மறைக்க" : "Hide Explanation"
+                  : isTamil ? "விடை & கற்றல் குறிப்பு காண்க" : "View Explanation & Key"}
+              </Button>
+
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => setIsAiTutorOpen(true)}
+                className="text-xs font-bold gap-1.5 border-cyan-500/40 text-cyan-300 bg-cyan-950/30 hover:bg-cyan-900/40"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+                {isTamil ? "AI சோக்ரடீஸ் குறிப்பு" : "AI Socratic Hint"}
+              </Button>
+            </div>
 
             <div className="flex items-center gap-2">
               <Button
@@ -981,6 +995,27 @@ export default function PracticeExamPage() {
           </div>
         </Card>
       )}
+
+      {/* Socratic AI Tutor Drawer connected to active question */}
+      <AiTutorDrawer
+        isOpen={isAiTutorOpen}
+        onClose={() => setIsAiTutorOpen(false)}
+        activeQuestion={
+          questions[currentIdx]
+            ? {
+                questionText: isTamil
+                  ? questions[currentIdx].question_ta || questions[currentIdx].questionText
+                  : questions[currentIdx].question_en || questions[currentIdx].questionText,
+                options: questions[currentIdx].options,
+                userAnswer: answers[questions[currentIdx].id],
+                questionNumber: currentIdx + 1,
+              }
+            : null
+        }
+        subjectCode={subjectDisplay.code}
+        studentName={candidate?.fullName || "மாணவர்"}
+        language={isTamil ? "ta" : "en"}
+      />
     </div>
   );
 }

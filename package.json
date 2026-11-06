@@ -17,12 +17,14 @@
     "seed": "node prisma/seed.js"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@libsql/client": "^0.8.1",
     "@prisma/adapter-libsql": "^5.22.0",
     "@prisma/client": "^5.21.1",
     "bcryptjs": "^2.4.3",
     "clsx": "^2.1.1",
     "jose": "^6.2.13",
+    "katex": "^0.19.1",
     "lucide-react": "^0.453.0",
     "next": "14.2.15",
     "pdf-parse": "^2.4.5",

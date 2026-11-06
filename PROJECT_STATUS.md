@@ -89,6 +89,15 @@
   - Broadsheet newspaper publication layout, 7 years of official papers (2020–2026), Parts I–IV, bilingual toggle (Bilingual, English, தமிழ்), DGE Blueprint modal, and CBT quiz mode.
 - **Dashboard Quick-Launch**: Student dashboard includes direct launch buttons for both 12th Maths and 12th Physics Question Banks.
 
-### 7. Git & Repository Management
+### 7. Dual-View AI Academic Coach & Socratic Tutor System
+- **View 1 (Dedicated Workspace)**: Full 2-column workspace at `/student/ai-coach` featuring weakness radar derived from `priorityRanking.js`, subject switcher (`MAT-12`, `CHE-12`, `PHY-12`, `CSC-12`), scratchpad, and respectful address.
+- **View 2 (Slide-Over Drawer)**: Global interactive side drawer (`AiTutorDrawer.jsx`) mounted in `student/layout.jsx` and in practice exam halls with active question context.
+- **Socratic 3-Level Hint Ladder**: Provides progressive guidance (Level 1: Core Concept, Level 2: First Math Step, Level 3: Common Pitfall) without leaking answer options.
+- **KaTeX Mathematical Typesetting**: Crisp formula rendering for inline `$ ... $` and block `$$ ... $$` mathematics via `MathRenderer.jsx`.
+- **Vector Retrieval & Fallback**: Indexed syllabus chunks for `MAT-12` and `CHE-12` in Turso libSQL (`SyllabusVector`); graceful deterministic fallback ensuring zero crashes.
+- **Site-Wide Master Switch**: Controller of Examinations can enable or disable the AI Tutor feature at any time via COE Dashboard button and `/api/ai/toggle`.
+- **Brand Attribution**: Integrated `powered by aknex-official.vercel.app`.
+
+### 8. Git & Repository Management
 - **Author Identity**: All commits committed and pushed to `https://github.com/adhavanmasscoc-maker/COE.git` under `adhavanmasscoc-maker <adhavanmasscoc@gmail.com>`.
 - **Integrity**: `ai-dom-agent` strictly untracked and untouched.

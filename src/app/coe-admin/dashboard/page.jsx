@@ -10,7 +10,7 @@ import {
   ShieldCheck, Users, Calendar, FileText, CheckCircle, PlusCircle,
   Eye, Award, Sparkles, RefreshCw, Loader2, AlertCircle,
   Layers, Bell, BarChart3, ClipboardList, UserCheck, Clock, FileJson,
-  Activity, Smartphone, FolderArchive
+  Activity, Smartphone, FolderArchive, Bot
 } from "lucide-react";
 import { ExamLifecycleStepper } from "@/components/admin/ExamLifecycleStepper";
 
@@ -21,6 +21,37 @@ export default function COEAdminDashboardPage() {
   const [loading, setLoading]     = useState(true);
   const [notice, setNotice]       = useState("");
   const [updatingId, setUpdatingId] = useState(null);
+  const [aiEnabled, setAiEnabled] = useState(true);
+  const [togglingAi, setTogglingAi] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/ai/status")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.enabled !== undefined) setAiEnabled(data.enabled);
+      })
+      .catch(() => {});
+  }, []);
+
+  const handleToggleAiFeature = async () => {
+    setTogglingAi(true);
+    try {
+      const next = !aiEnabled;
+      const res = await fetch("/api/ai/toggle", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ enabled: next }),
+      });
+      if (res.ok) {
+        setAiEnabled(next);
+        showNotice(next ? "AI Tutor & Socratic Hints are now ENABLED site-wide." : "AI Tutor & Socratic Hints are now DISABLED site-wide.");
+      }
+    } catch {
+      showNotice("Failed to update AI feature status.");
+    } finally {
+      setTogglingAi(false);
+    }
+  };
 
   const fetchAll = async () => {
     setLoading(true);
@@ -120,6 +151,28 @@ export default function COEAdminDashboardPage() {
               AI Exam Setter
             </Button>
           </Link>
+          <button
+            type="button"
+            onClick={handleToggleAiFeature}
+            disabled={togglingAi}
+            className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border text-xs font-bold transition shadow-sm ${
+              aiEnabled
+                ? "bg-cyan-950/60 border-cyan-500/50 text-cyan-300 hover:bg-cyan-900/60 shadow-cyan-500/20"
+                : "bg-slate-900 border-slate-700 text-slate-400 hover:text-slate-200"
+            }`}
+            title="Click to toggle AI Tutor feature site-wide"
+          >
+            <Bot className="w-3.5 h-3.5 text-cyan-400" />
+            <span>AI Tutor:</span>
+            <span
+              className={`px-1.5 py-0.5 rounded text-[10px] uppercase font-mono font-bold ${
+                aiEnabled ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" : "bg-rose-500/20 text-rose-300 border border-rose-500/30"
+              }`}
+            >
+              {aiEnabled ? "ENABLED" : "DISABLED"}
+            </span>
+            {togglingAi && <Loader2 className="w-3 h-3 animate-spin text-cyan-400" />}
+          </button>
           <Link href="/coe-admin/exam-setter">
             <Button variant="secondary" size="sm" className="gap-1.5 shadow-md">
               <FileJson className="w-4 h-4 text-cyan-300" />Exam Setter (JSON)
